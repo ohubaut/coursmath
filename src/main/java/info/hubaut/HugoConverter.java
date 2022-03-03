@@ -79,7 +79,7 @@ public class HugoConverter implements FileVisitor<Path> {
 
     private void convertContent(Path file, Path outputFolder) throws IOException {
         Document document = Jsoup.parse(Files.newInputStream(file), StandardCharsets.UTF_8.name(), "");
-        String frontMatter = generateFrontMatter(document);
+        String frontMatter = generateFrontMatter(document, getRelativePath(file));
         Elements elements = document.select(".central > .texte");
         if (elements.isEmpty()) {
             System.out.println("No main content for " + file);
@@ -100,14 +100,21 @@ public class HugoConverter implements FileVisitor<Path> {
         }
     }
 
-    private String generateFrontMatter(Document document) {
+    private String generateFrontMatter(Document document, Path originalPath) {
+        Map<String, Object> frontMatter = new HashMap<>();
         List<Map<String, String>> metadata = document.head()
                                                      .select("meta")
                                                      .stream()
                                                      .filter(element -> element.hasAttr("name"))
                                                      .map(element -> Map.of("name", element.attr("name"), "value", element.attr("content")))
                                                      .toList();
-        Map<String, Object> frontMatter = Map.of("title", document.title(), "meta", metadata);
+        Map<String, Object> genericData = Map.of(
+                "title", document.title(),
+                "meta", metadata);
+        frontMatter.putAll(genericData);
+        if (!isIndexPage(originalPath)) {
+            frontMatter.put("aliases", List.of("/" + originalPath));
+        }
         return yamlDump.dumpToString(frontMatter);
     }
 
@@ -115,15 +122,25 @@ public class HugoConverter implements FileVisitor<Path> {
         Path fileName = file.getFileName();
         String originalName = fileName.toString();
         String newName = originalName.substring(0, originalName.lastIndexOf(".")) + ".md";
+        newName = isIndexPage(file) ? "_" + newName : newName;
         return outputFolder.resolve(newName);
     }
 
     private Path getOutputFolder(Path file) {
-        Path relativePath = baseDir.relativize(file);
+        Path relativePath = getRelativePath(file);
         Path parentPath = relativePath.getParent();
         return parentPath == null
                 ? output
                 : folders.computeIfAbsent(parentPath.toString(), this::createOutputFolder);
+    }
+
+    private boolean isIndexPage(Path file) {
+        String pageName = file.getFileName().toString();
+        return "index.html".equals(pageName) || "index.htm".equals(pageName);
+    }
+
+    private Path getRelativePath(Path file) {
+        return baseDir.relativize(file);
     }
 
     private Path createOutputFolder(String relativeFolder) {

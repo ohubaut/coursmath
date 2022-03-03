@@ -1,3 +1,4 @@
 .idea/
 target/
 .hugo_build.lock
+public/
