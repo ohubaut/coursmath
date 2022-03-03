@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Qu'y a-t-il à l'infini d'un plan ? - Mathématique linéaire - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut">
+<meta name="description" content="Plan projectif, conforme, non-euclidien">
+<meta name="keywords" content="algèbre, géométrie, compact, achevé">
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen">
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen">
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print">
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico">
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+<!--</script>-->
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Qu'y a-t-il à l'infini d'un plan ?
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Voilà une bonne question qui mérite mieux que la réponse traditionnelle : "On n'en sait rien, ceux qui sont allés voir là-bas ne sont toujours pas revenus !"</p>
+
+<p>Tout le monde a entendu parler de "points à l'infini"; du moins en Belgique, car en France, on les appelle "points impropres", comme s'ils n'étaient pas bien lavés.</p>
+
+<p>La question est pourtant bien intéressante. Elle s'est posée, il y a plus d'un demi-millénaire, lors de la Renaissance. A l'époque, les peintres se sont intéressés à la perspective et on a ainsi parlé de points "à l'infini"(*). Le plan horizontal était alors complété par ces points situés sur une droite appelée "ligne d'horizon".</p>
+
+<p class="ni">(*)Sur les schémas qui suivent, les éléments "à l'infini" seront dessinés en rouge.</p>
+
+<p class="st">Une droite à l'infini</p>
+
+<p><img class="droite" alt="carrelage" src="plan/projectif.png">
+Attardons-nous à cette première situation. Le problème était posé lors de la projection de la réalité spatiale sur un plan, le plan de la toile de l'artiste, à partir d'un point: l'œil du peintre. Celui-ci voyait les droites parallèles se rencontrer au loin en un point de l'horizon. Ainsi était né le plan projectif, ou plus généralement l'<a href= "project.htm">espace projectif</a>, et la <a href="perspec.htm">géométrie projective,</a> extension de la géométrie affine ou linéaire.</p>
+
+<p>Dans le plan, on avait deux propriétés, tellement importantes qu'on les choisissait généralement comme axiomes:</p>
+
+<div class="lh">
+deux points distincts appartiennent à une seule droite<br />
+deux droites distinctes ont en commun un seul point.
+</div>
+
+<p>Toutefois, il y avait une <u>exception</u> : les deux droites pouvaient être parallèles. Mais cela n'arrivait pas souvent. D'ailleurs, Euclide qui avait rencontré la difficulté et avait ajouté son fameux cinquième postulat qui affirmait l'unicité de la parallèle. Pour les peintres, qui se moquaient évidemment d'Euclide et de ses postulats, cela posait un vrai problème. Lorsqu'il y avait deux parallèles, leurs yeux voyaient pourtant les deux droites se couper au loin. De là, naquit l'idée de compléter l'espace. Ici, nous nous limiterons au plan que nous compléterons par des nouveaux points "à l'infini" aux propriétés bien précises. Toutes les droites d'une même direction, autrement dit une famille de parallèles ont en commun un point à l'infini. De plus, tous ces points à l'infini sont alignés (sur la fameuse ligne d'horizon).</p>
+
+<p>Pour les mathématiciens cette solution était très séduisante. En effet, si l'on complète le plan par les points d'une droite à l'infini, on peut alors énoncer les deux propriétés:</p>
+
+<div class="lh">
+deux points distincts appartiennent à une seule droite<br />
+deux droites distinctes ont en commun un seul point.
+</div>
+
+<p>Et cette fois il n'y a plus aucune exception !<br />
+La géométrie projective était née mais il fallut encore attendre le XIXe siècle pour la voir prendre son essor.</p>
+
+<p class="st">Un point à l'infini</p>
+
+<p>Une autre situation se présenta au début du  XIXe. Les <a href="../com/imagin.htm">nombres complexes</a>, eux aussi découverts à la Renaissance, suscitent l'intérêt de nombreux mathématiciens. Le Danois Caspar Wessel est le premier, en 1787, à donner une représentation géométrique des nombres complexes dans le plan (euclidien). Argand, Cauchy et Gauss utilisent également la même représentation géométrique des nombres complexes.</p> 
+
+<p>L'addition \(z\rightarrow z + b \) correspond à la translation de vecteur \(\vec{0b}\), la multiplication \(z\rightarrow az\) à une similitude centrée en 0. 
+Le passage à l'inverse est la composée d'une inversion et d'une symétrie. Les éléments d'un corps possèdent classiquement tous un inverse; tous, à l'exception de 0. En algèbre, on peut mettre fin à cette exception en complétant le corps par un  <a href="infini.htm">élément infini</a>, \(\infty\). Il est donc logique d'adjoindre au plan un élément "à l'infini", un point \(\infty\). Cela se justifie car les applications \(z\rightarrow az+b\) correspondent aux similitudes directes du plan et \(z\rightarrow a\bar{z}+b\) aux similitudes indirectes. Ces transformations conservent les droites, les cercles et les angles. Après l'adjonction d'un point à l'infini, l'<a href="../com/invers.htm">inversion</a>, est devenue une permutation. Cependant, elle transforme parfois une droite en un cercle et vice-versa. En regroupant droites et cercles sous la même dénomination : "cycles", on peut dès lors affirmer que l'inversion est une permutation du plan complété qui conserve l'ensemble des <a href="../com/cycles.htm">cycles</a>. Signalons que de plus elle conserve également les angles.</p>
+
+<p>Certes, si le regroupement des droites (courbes du premier degré) et des cercles (courbes du second degré) peut heurter, à la réflexion, cela ne pose guère de problème. Au contraire; l'adjonction d'un (unique) point à l'infini au plan, point commun à toutes les droites, permet d'éviter des exceptions.</p>
+
+<p>En effet, dans le plan 3 points distincts appartiennent à un unique cercle. Mais attention, il y a à nouveau exception si ces trois points sont alignés. Le regroupement droites et cercles permet d'affirmer que 3 points distincts appartiennent toujours à un unique cycle.<br />
+De même si deux cycles ont un point commun, ils en possèdent un second, éventuellement confondu et dans ce cas, ils sont dits tangents. Bref, toutes ces exceptions, tant algébriques que géométriques, disparaissent.</p>
+
+<p><img class="droite" alt="projection stéréographique" src="plan/conforme.png">
+Le nouveau plan, plan complété par un point à l'infini, est appelé plan conforme ou encore sphère de Riemann. Il suffit de penser à  la <a href="../app/geogr.htm">projection stéréographique</a> d'une sphère sur un plan pour voir qu'on évite l'exception du centre de projection qui n'a pas d'image; il correspond tout simplement au point à l'infini. La géométrie associée est la géométrie conforme.</p>
+
+<p>Ce plan est très proche d'une géométrie non-euclidienne. En effet, si on identifie sur la sphère les paires de points antipodes et on arrive alors à la géométrie "elliptique". Les points sont les <u>paires de points antipodes</u> et les droites les <u>grands cercles</u>. On vérifie sans peine que sur une sphère:</p>
+
+<div class="lh">
+deux points distincts appartiennent toujours à une et une seule droite<br />
+deux droites distinctes se coupent toujours en un seul point.</div>
+
+<p>Il n'y a donc pas de parallèle, le postulat d'Euclide est nié.</p>
+
+<p class="st">Une conique ou un cercle à l'infini</p>
+
+<p>Toutefois, il existe une autre manière de rejeter ce postulat en supposant que, par un point extérieur à une droite, il existe plusieurs parallèles (non-sécantes). Historiquement, c'est ce cas qui a été étudié en premier lieu. La géométrie "hyperbolique" est le résultat des travaux de Lobatchevski, Bolyay et Gauss.</p>
+
+<p>Soit, dans un tel plan, une droite (que, pour des facilités de langage, nous supposerons horizontale) et un point extérieur. Partons d'une des sécantes. Lorsque le point d'intersection avec l'horizontale s'éloigne, soit vers la droite, soit vers la gauche, la droite pivotera et cessera à un certain moment de couper l'horizontale. Comme on suppose que la parallèle n'est plus unique, on aura une parallèle à droite et une autre à gauche. Dans l'angle formé par ces deux parallèles "limites", toutes les droites seront des non-sécantes. Tout comme en analyse, on complète les réels par deux éléments +\(\infty\) et -\(\infty\), il est donc logique de compléter la droite par deux points à l'infini: l'un "à droite" et l'autre "à gauche". Toutes les droites seront complétées de la même manière.</p>
+
+<p><img class="gauche" alt="klein" src="plan/klein.png"><img class="droite" alt="projection stéréographique" src="plan/poincare.png">L'ensemble des points à l'infini formera une courbe convexe que l'on peut représenter par un cercle.</p>
+
+<p> Cela conduit à deux modèles de la <a href="../var/planhyp.htm">géométrie hyperbolique</a>. Le premier, intérieur d'une conique d'un plan projectif, où les droites sont les segments intérieurs, a été utilisé par Félix Klein. Le second, le demi plan complexe, où les droites sont des demi-cercles orthogonaux à l'axe réel, par Henri Poincaré.</p>
+
+<p class="st">Et autre chose itou</p>
+
+<p>En résumé, nous avons vu qu'un plan peut être complété de diverses manières: une doite, un point, une courbe ovale. Il existe encore d'autres possibilités et notamment, dans le cas d'un <a href="../app/relativi.htm">plan de la relativité</a>, une complétion par une paire de sécantes, ce qui lui donne une structure de quadrique réglée.</p>
+
+<p>Il est évidement que toute complétion n'est pas arbitraire et doit pouvoir être justifiée par un souci de simplification lors de l'étude de certaines propriétés.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

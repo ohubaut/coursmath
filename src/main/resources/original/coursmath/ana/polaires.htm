@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Coordonnées polaires - Analyse - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="graphiques, formule de Moivre, droite, axe polaire" />
+<meta name="keywords" content="analyse, coordonées polaires, fonctions, graphiques, Moivre" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Coordonnées polaires
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	
+	<div class="central">
+		<div class="texte">
+<p>La plupart des fonctions étudiées sont données sous la forme \(y = f(x)\) et leur graphique est une courbe représentée dans un système d'axes \(Oxy,   \Bbb R × \Bbb R.\)</p>
+
+<p>Si l'on s'intéresse au mouvement d'un point dans le plan, sa trajectoire est souvent représentée par une courbe définie sous la forme \(x = x(t), y = y(t)\) où \(t\) est le temps ; à chaque instant \(t_0\) correspond le point de coordonnées \((x_0, y_0)\)  où \(x_0 = x(t_0\)) et \(y_0 = y(t_0)\).</p>
+
+<p>Il existe également des problèmes pour lesquels un autre système de coordonnées est mieux adapté. Il s'agit des coordonnées polaires.</p>
+
+<p>Tout d'abord, s'il s'agit d'étudier une fonction d'une variable qui représente un angle \(\theta\), il n'est pas très logique de travailler avec un système de coordonnées cartésiennes, c'est-à-dire dans \(\Bbb R × \Bbb R \). En effet, la valeur de la fonction varie dans \(\Bbb R\) (sur un axe), mais la variable varie dans \( \Bbb R /2\pi\), c'est-à-dire sur un cercle. La logique demanderait de travailler dans \(\Bbb R × R/2\pi\), produit d'une droite par un cercle, un cylindre, ce qui n'est toutefois pas très commode, bien qu'on puisse le dérouler sur un plan.</p>
+
+<p>Il existe une autre solution ; il s'agit des coordonnées polaires.</p>
+
+<p>Ce système de coordonnées polaires est défini par une origine (parfois appelée pôle) et un axe (passant par l'origine). Un point peut alors y être représenté par deux nombres \(\rho\) et \(\theta\) où \(\rho\) est la distance à l'origine calculée sur un axe passant par le point et \(\theta\) l'angle que cet axe forme avec l'axe de référence. Nous avons déjà rencontré le <a href="sincos.htm">graphe de \(\mathbf{sin~}\theta\) et de \(\mathbf{cos~}\theta\)</a> qui prend une forme particulièrement agréable dans ce système de coordonnées.</p>
+
+<p>Ces deux coordonnées dans un plan font penser à la représentation goniométrique des nombres complexes par la <a href="../com/moivre.htm">formule de Moivre</a> où tout nombre complexe peut être défini à l'aide de son module \(r\) (distance à l'origine) et son argument \(\omega\) (angle du vecteur avec l'axe des réels). Toutefois, il y a une différence essentielle avec les coordonnées \(\rho , \theta\) car \(\rho\) peut être éventuellement négatif ! En effet, \(\rho\) représente la distance à l'origine sur un axe, donc sur une droite orientée.</p>
+
+<p>Avec les coordonnées polaires, tout point du plan (à l'exception de l'origine) peut être décrit de 2 manières différentes : (\(\rho, \theta\)) ou (-\(\rho , \theta + \pi)\). Le fait qu'un même point puisse être représenté par deux couples gêne parfois certains. Pourtant cette situation est tout à fait normale et rend mieux compte de la réalité dans l'étude de courbes.</p>
+
+<img alt="" src="pola/copo.gif" width=253 height=150>
+
+<p><i>Une manière intuitive de voir les choses est de s'imaginer le plan en tant que plan de symétrie d'un cône de révolution centré à l'origine.<br /> 
+<img class="droite" alt="" src="pola/copox.gif" width=240 height=250>
+Dans le schéma ci-contre, nous avons exagéré l'inclinaison de l'axe afin de mieux voir la situation. Un point du cône sera repéré par la distance au sommet sur la génératrice (on supposera que toutes les génératrices sont orientées vers le haut) et l'angle formé par la génératrice avec l'image de l'axe du plan. A tout point p du plan, correspondent 2 points du cône : les intersections avec la perpendiculaire au plan passant par p. Soit p' et p" ces deux points de percée ; au point p' correspondront les coordonnées (ρ, θ) et au point p" les coordonnées (-ρ, θ+π).</i></p>
+
+<p>Voici la courbe dont l'équation en coordonnées polaires est :</p>
+
+\[\rho = 1 - 2 \mathbf{sin~}\theta \]
+
+<img alt="" src="pola/1-2sintpos.gif" width=288 height=288><img alt="" src="../dot.png" width=20 height=20><img alt="" src="pola/1-2sint.gif" width=288 height=288>
+
+<p>Si l'on exigeait que \(\rho\) soit toujours positif, le tracé s'interromprait chaque fois que \(1-2 \mathbf{sin~}\theta &lt; 0\), c'est-à-dire lorsque \(\pi/6 &lt; \theta &lt; 5\pi/6\) et on obtiendrait la courbe de gauche.<br />
+On remarque qu'à l'origine, la seconde courbe présente un point anguleux. L'origine correspond à la valeur 0 de  \(\rho\), ou encore \(\theta = \pi/6\) et \(\theta = 5\pi/6 \) ; la courbe possède en ce point 2 tangentes distinctes. Bien que la fonction qui définit la courbe soit continue, tout comme ses dérivées, la pente de la tangente présente  une discontinuité !</p>
+
+<p>Par contre, si l'on n'impose pas cette condition, on obtiendra la courbe de droite qui est parfaitement continue et dont la tangente varie également continûment.</p>
+
+<p>Un autre exemple : la courbe dont l'équation en coordonnées polaires est :</p>
+
+\[ \rho = \mathbf{cos~}2\theta / \mathbf{cos~}\theta \]
+
+<img alt="" src="pola/stropos.gif" width=276 height=287>
+
+<p>La courbe est tracée en faisant varier \(\theta\) de 0 à \(2\pi\).
+Si l'on exige \(\theta &gt; 0\), le tracé s'interrompt chaque fois que \(\mathbf{cos~}2\theta / \mathbf{cos~}\theta  &lt; 0\).
+Cette situation se produira  lorsque :</p>
+
+\(\pi/4 &lt; \theta &lt; \pi/2  \text{  ou  }  3\pi/4 &lt; \theta &lt; 5\pi/4  \text{   ou  }  3\pi/2 &lt; \theta &lt; 7\pi/4\)
+
+<p>Par contre, si l'on admet que ρ puisse être négatif, la situation est toute différente :</p>
+
+<img alt="" src="pola/cos2tdivcost.gif" width=276 height=287>
+
+<p>On constate alors que cette courbe appelée strophoïde, possède une tangente dont la pente varie continûment. On remarque également que le tracé de la courbe est effectué deux fois.
+On peut donc borner la variation de \(\theta\) à un intervalle d'amplitude \(\pi\). En effet, si \(\theta\) augmente de \(\pi\), on vérifie que \(\mathbf{cos~}2(\theta + \pi )/\mathbf{cos~}(\theta +\pi) = -\mathbf{cos~}2\theta / \mathbf{cos~}\theta \).<br />
+On voit ainsi que \(\rho (\theta + \pi) = -\rho (\theta)\). Il en résulte que le point de coordonnées \((\rho,\theta)\) est identique au point \((-\rho, \theta + \pi)\).</p>
+
+<p>La situation est donc bien plus agréable lorsqu'on admet toutes les valeurs réelles de  \(\rho\).</p>
+
+<p>Affichons quelques exemples de jolies courbes définies en coordonnées polaires par des équations fort simples :</p>
+<table class="centre">
+<td><img class="enc" alt="rosace" src="pola/sin(2tdiv3).gif" width=145 height=126></td>
+<td>    <img class="enc" alt="svastika" src="pola/rac(tg2t).gif" width=145 height=126></td>
+<td><img class="enc" alt="fleur" src="pola/1div4+cos5t.gif" width=145 height=126></td>
+</tr><tr>
+<td>\( \rho = \mathbf{sin~}2t/3\)</td>
+<td>\( \rho = \sqrt{ \mathbf{tg~}2t}\)</td>
+<td>\( \rho = 1/4 + \mathbf{cos~}5t\)</td>
+</tr><tr>
+<td> </td><td> </td><td> </td>
+</tr><tr>
+<td><img class="enc" alt="poisson" src="pola/sin(4t)divsin(t).gif" width=145 height=126></td>
+<td>    <img class="enc" alt="lemniscate" src="pola/rac(cos2t).gif" width=145 height=126></td>
+<td><img class="enc" alt="buisson fleuri" src="pola/sint+sin5tdiv2exp3.gif" width=145 height=126></td>
+</tr><tr>
+<td>\( \rho = \mathbf{sin~}4t/\mathbf{sin~}t\)</td>
+<td>\( \rho = \sqrt{\mathbf{cos~}2t}\)</td>
+<td>\( \rho = \mathbf{sin} t+(\mathbf{sin~~ }(5t/2)^3\)</td>
+</tr></table>
+
+<a id="E"> </a>
+<p>Terminons en signalant que ce système de coordonnées est très utile dans des problèmes de mécanique où un seul point est privilégié ; par exemple l'orbite des planètes ou des comètes autour du soleil.</p>
+
+<p>L'équation de ces trajectoires <a href="../2de/belges.htm">coniques</a> est fort simple lorsqu'on utilise le soleil comme origine : avec un bon choix de l'unité, elles peuvent s'écrire :</p>
+
+\[\rho =  \frac{1}{1 -\varepsilon~\mathbf{cos~}\theta}\]
+
+où \(\varepsilon\) est l'excentricité de la trajectoire.
+
+<p>Si \(\varepsilon = 0\), on obtient le cercle, \( 0\lt \varepsilon \lt 1\)  donne les différentes ellipses, pour \(\varepsilon = 1\) on obtient la parabole (toutes les paraboles sont semblables !) et \( \varepsilon\gt 1\) donne toutes les hyperboles.</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

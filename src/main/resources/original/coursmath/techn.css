@@ -1,0 +1,19 @@
+#texte {
+	background: #ffffe0;
+	background:url("techn.gif") bottom left no-repeat;
+}
+#texte h3 {
+	background:url("techn.gif") top left no-repeat;
+}	
+#texte .contenu	{
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	background: #ffffe3;
+	border: solid #c08000;
+	border-left-width: 2px;
+	border-bottom-width: 0px;
+	border-right-width: 5px;
+	border-top-width: 0px;
+}
+#texte .contenu hr{
+	color: #c08000; 
+}

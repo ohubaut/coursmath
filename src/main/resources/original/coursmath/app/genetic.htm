@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Maladies génétiques - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="maladies orphelines" />
+<meta name="keywords" content="maladies, reproduction, décès" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Maladies génétiques
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>La génétique progresse à pas de géant et on arrive à l'heure actuelle à déceler de nombreuses maladies associées à un gène "déformé". Si N désigne le gène normal, que nous supposerons dominant, et M le gène mutant ou "malade" et récessif, il y aura trois types d'individus dans la population: ceux de type (N,N) qui seront sains, ceux de type (N,M) qui seront porteurs et ceux de type (M,M) qui seront malades. Certaines de ces maladies sont fort graves et les enfants qui en sont atteints ont une espérance de vie fort réduite: quelques mois, voire quelques années. Ils décéderont avant d'être en âge de procréer.
+Cette situation aura donc une incidence dans l'évolution de la population.</p>
+
+<p>Dans un autre article sur la <a href="blonde.htm">couleur des yeux</a>, nous avions étudié l'évolution d'une population où la modification d'un gène était sans conséquence sur la durée de vie. Nous avions vu qu'après une génération, la répartition des individus était stabilisée. C'était la fameuse loi de Hardy-Weinberg.</p>
+
+<p>Ce résultat n'est évidemment pas valable dans le cas où l'on s'intéresse à un gène N dont l'allèle M entraîne une mortalité précoce. Remarquons immédiatement que ce gène doit être récessif sinon les individus de type (M,M) et (N,M) disparaîtraient tous deux sans progéniture et la population-mère restante serait uniquement composée d'individus de type (N,N).
+Nous supposerons, comme dans l'autre article, que la présence de l'un ou l'autre gène ne dépend pas du sexe et que les mariages se feront "au hasard".</p>
+
+<p>Le gène M étant récessif, les individus de type (M,M) seront atteints et ne feront pas partie de la population-mère. Celle-ci ne comportera cette fois que deux types d'individus: les sains, que nous désignerons par S, de type (N,N), et les porteurs, désignés par P, de type (N,M).</p>
+
+<p>Les individus S transmettront toujours un gène N. Par contre les individus P transmettront une fois sur deux un gène N et une fois sur deux un gène M. Ceci nous conduit à désigner par <b>a</b>, le nombre de S et par 2<b>b</b>, le nombre de P.</p>
+
+<p>Faisons un petit diagramme pour voir ce qui se passera dans la population-fille.</p>
+
+<div><img alt="" src="gene/gene1.gif"></div>
+
+<p>En rouge, nous aurons les individus de type (M,M) qui ne survivront pas assez longtemps pour se reproduire.</p>
+
+<p>La population totale vaut \((a+2b)^2-b^2=(a+b)(a+3b)\); le nombre d'individus sains vaut: \((a+b)^2\) et celui de porteurs: \(2(a+b)b\).</p>
+
+<p>Le rapport porteurs : sains qui était \(a:2b\) dans la population-mère devient \(a':2b'\) avec \(a'=(a+b)/(a+3b)\) et \(2b'=2b/(a+3b)\)<br />
+Il passe donc de la valeur \(a:2b\) à la valeur \(a':2b'=(a+b):2b\)<br />
+À la génération suivante, il sera égal à \((a+2b):2b\), ensuite, il vaudra \((a+3b):2b\) et ainsi de suite.</p>
+
+<p>Si on préfère travailler en pourcentages, celui d'individus sains vaut au départ : \(a/(a+2b)\); une génération plus tard, il passe à la valeur \((a+b)/(a+3b)\), puis à la deuxième génération, il vaudra \((a+2b)/(a+4b)\) et à la n<sup>e</sup> génération, \((a+nb)/(a+(n+2)b)\). Ce rapport a pour limite 1 (100%) lorsque n tend vers l'infini.
+On voit donc que dans la situation envisagée, la loi de Hardy-Weinberg n'est plus valable.</p>
+
+<p>Cette loi constatait que les rapports entre les différents types d'individus restaient constants tout au long des générations. Pour l'instant, ces rapports évoluent, et ceci, dans un sens favorable. La population d'individus porteurs diminue et, par conséquent, la proportion de malades diminue également.
+Ce résultat pose un problème éthique.<br /></p>
+
+<p>Si on arrive à augmenter la durée de vie des malades jusqu'à dépasser l'âge de procréation, la situation globale ne s'améliorera plus. Au contraire, ne rien faire, diminuera la proportion des malades.</p>
+
+<p>La mathématique n'apporte pas de réponse à ce pénible dilemme.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Documents - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résumés" />
+<meta name="keywords" content="groupes, musique, algèbre, géométrie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="doc.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript">
+    function pdf(fichier) 
+{window.open(fichier,'pdf','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-11', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+<br>
+<div class="droite"><a href="javascript:pdf('pavages.pdf');">Télécharger la version pdf (10 pages)</a></div>
+<br>
+	<div class="titre">
+<br />
+Pavages du plan
+<br />
+	</div>
+	<div class="stitre">
+par<br><br>
+<b>Xavier Hubaut</b><br><br>
+Professeur émérite - Université Libre de Bruxelles - Département de Mathématique
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p class="st">Introduction</p>
+
+<p>Nous allons déterminer tous les pavages du plan associés à chacun des <a href="cristal.htm">17 groupes cristallographiques</a>.<br>
+Une classification en a été donnée à la fin des années 1960 par Heinrich Heesch, mais elle aboutissait à un nombre important de cas, certains pouvant être vus comme cas particuliers d'autres. Son travail a fait l'objet de simplifications dans un mémoire de Me Geneviève Dufey que j'ai dirigé en 1984. Nous sommes arrivés à associer pour 15 des 17 groupes un seul type de "pavé" et pour les deux groupes restants deux types, soit au total 19 types de "pavés".<br>
+<p><i>Il n'entre pas dans nos intentions de donner tous les détails, parfois fastidieux, de la démonstration, mais plutôt d'en donner la ligne de conduite</i>
+
+<p class="st">Position du problème</p>
+
+<p>Nous allons chercher les "pavés" qui permettent, sous l'action d'un groupe cristallographique, de recouvrir le plan. Les oeuvres de M.C.Escher nous montrent déjà  qu'il y en a une infinité et le problème est d'y mettre un peu d'ordre.</p>
+<p>D'une manière intuitive, on recherche la forme des pièces d'un puzzle dont toutes les pièces (supposées d'un seul tenant) sont identiques, et avec lesquelles on peut recouvrir la table (et même plus...) en respectant un des 17 groupes.<br>
+Cette dernière condition est essentielle. En effet, si on n'en tient pas compte, on peut, par exemple, prendre des pièces carrées; on peut en faire des rangées et superposer celles-ci en en décalant de temps à autre l'une ou l'autre. C'est évidemment un recouvrement du plan, mais il n'est conservé par aucun des 17 groupes cristallographiques.</p>
+<p>Remarquons que, tout comme les pièces d'un puzzle ne se superposent pas, les pavés ne peuvent pas se recouvrir; seule une partie de la frontière peut être commune. On en déduit que si on choisit un pavé <b>P</b> comme référence, tous les pavés sont en bijection (correspondance biunivoque) avec les éléments du groupe cristallographique.</p>
+
+<p>Notation: à l'isométrie <i>i</i>, correspond le pavé <b>P</b><sub><i>i</i></sub> = <i>i</i> (<b>P</b>) et inversement, à ce pavé, correspond l'unique isométrie <i>i</i> qui amène <b>P</b> sur <b>P</b><sub><i>i</i></sub>.<br>
+
+<p class="st">Cas du groupe des translations p1</p>
+
+<p>C'est le groupe le plus simple. Mais, étant donné sa simplicité, il ne fournit pas beaucoup de contraintes et ce cas est donc à la fois le plus simple et le plus compliqué !</p>
+<p>Partons d'une pièce <b>P</b>. Il doit bien y en avoir une autre avec laquelle elle a une frontière commune. Puisqu'on recouvre tout le plan, par tout point de la frontière, il y a une autre pièce. Il se pourrait toutefois qu'elle n'ait en commun avec <b>P</b> que ce seul point, mais évidemment, ce cas ne peut survenir pour tous les points de la frontière. Nous ne détaillerons pas le raisonnement que nous laissons à ceux qui aiment ce genre de démonstrations.<br>
+<img class="gauche enc" alt="" src="pava/paves.gif">Soit <b>P'</b> un pavé ayant avec <b>P</b> une frontière commune (nous laissons en flou le reste du contour qui n'est pas encore déterminé). A nouveau, il faut vérifier que la frontière est formée d'un seul arc <b>ab</b> (sinon les pièces ne seraient pas d'un seul tenant).<br>
+<img class="droite enc" alt="" src="pava/2paves.gif">Comme les seules isométries du groupe sont des translations, il existe une translation amenant <b>P</b> sur <b>P'</b>. Cette translation envoie l'arc <b>ab</b> sur l'arc <b>a'b'</b>. On obtient donc une nouvelle information sur la forme du pavé.</p>
+<p>Répétons cette translation et son inverse en l'appliquant à <b>P</b>.
+Nous obtenons une "bande" infinie que vous pouvez voir ci-dessous.</p>
+<img class="gauche enc" alt="" src="pava/bande.gif">
+<p>Voilà une partie du plan recouverte.</p>
+<p>Nous allons utiliser les translations dans d'autres directions pour compléter le revêtement du plan. De nouveau, quand nous obtiendrons deux pièces adjacentes, la pièce comportera deux arcs translatés.<br>
+Le bord gauche de cette bande ...<b>a a' a"</b>... va s'appliquer sur le bord droit ...<b>b b' b"</b>...
+<img class="droite enc" alt="" src="pava/2bandes.gif">
+Il serait "miraculeux" que les images des points ...<b>a, a', a"</b>... coïncident avec les points ...<b>b, b', b"</b>... <br>
+<p>Désignons les images par ...<b>a<sub>0</sub>, a<sub>1</sub>, a<sub>2</sub></b>... et corrigeons éventuellement la translation pour que le point <b>a<sub>0</sub></b> soit situé entre <b>b</b> et <b>b'</b>. Le translation inverse de celle utilisée amènera les points ...<b>b, b',b"</b>... sur des points ...<b>b<sub>0</sub>, b<sub>1</sub>, b<sub>2</sub></b>.... Nous avons ainsi obtenu un recouvrement complet du plan par les pièces de notre puzzle qui seront toutes les  translatées d'une pièce initiale (quelconque).</p>
+<p>Mais à présent, nous disposons d'informations complètes sur la structure des frontières des pavés.<br>
+<img class="gauche enc" alt="" src="pava/nbandes.gif">
+L'arc <b>ab<sub>1</sub></b> est un translaté de <b>a<sub>0</sub>b'</b> et l'arc <b>b<sub>1</sub>a'</b> est un autre translaté de <b>ba<sub>0</sub></b>.<br>
+Nous obtenons ainsi comme pavé (ou pièce de notre puzzle) une forme limitée par 6 arcs, deux arcs opposés étant translatés l'un de l'autre.<br>
+<img class="droite enc" alt="" src="pava/piece.gif">
+La pièce obtenue est évidemment largement indéterminée, car nous sommes libres (dans certaines limites) de choisir la forme des arcs qui la limitent.<br>
+En résumé on obtient tous les pavés pour le groupe <b>p1</b> en partant d'un hexagone à côtés opposés parallèles et égaux. On fait alors subir à ses côtés rectilignes des déformations que l'on répercute à chaque fois sur les côtés opposés.</p>
+<p>Nous dirons plus brièvement que:<br>
+<blockquote><p>Un pavé pour le groupe <b>p1</b> est un "hexagone" dont les "côtés" opposés sont translatés. (Les guillemets sont là pour rappeler qu'il s'agit d'"hexagones" dont les "côtés" ne sont pas des segments, mais bien des arcs de courbes.)</blockquote>
+<p>Voici un exemple emprunté à l'artiste Maurits Cornelis Escher où l'on voit ce type de déformation. Après déformation, l'artiste décore l'intérieur de la pièce du puzzle de manière à faire apparaître une ou plusieurs figures (dans le cas un oiseau et un poisson) qui serviront à décorer le plan.<br>
+<br>
+<div>
+<img class="gauche enc" alt="pavé" src="pava/esch.gif">
+<img class="droite enc" alt="pavage" src="pava/e1.gif">
+</div>
+<img alt="" src="../dot.png" width=1 height=260>
+<div>
+Construction du pavé et remplissage du plan
+</div>
+
+<p>Notons que lorsque deux côtés opposés de l'hexagone sont nuls, l'hexagone se réduit à un parallélogramme. C'est malheureusement trop souvent le seul cas qui est décrit.</p>
+<p>Il est d'ailleurs difficile de trouver dans l'œuvre de Escher des cas où le pavé dérive d'un hexagone et représente une seule figure. Par contre, dans le cas d'un pavé de type hexagonal, on trouve plusieurs exemples, mais le pavé représente deux, voire trois figures; il n'y a évidemment aucune contrainte sur la division et la décoration intérieure et le graphisme est ainsi rendu plus aisé.</p>
+
+<p class="st">Que se passe-t-il quand il y a des rotations ou des symétries axiales ?</p>
+
+<p>Si l'on voit les choses de manière intuitive (un puzzle à pièces identiques) les pavés doivent s'emboîter et ne peuvent évidemment pas se chevaucher.<br>
+Quand le groupe cristallographique possède des centres de rotations, ceux-ci ne peuvent être intérieurs aux pavés. Si un pavé contenait dans son intérieur un centre de rotation, un transformé par rotation autour de ce point donnerait un pavé qui le chevaucherait; donc le(s) centre(s) de rotation doivent être situés sur les bords des pavés.<br>
+On peut faire le même raisonnement quand il y a des axes de symétrie. Là encore, pour une raison analogue, ils ne peuvent pas traverser les pavés mais doivent donc être situés en frontière de ceux-ci.</p>
+
+<p class="st">Un exemple: les pavages associés au p2</p>
+
+<p>La remarque faite au sujet des éléments de symétrie nous indique que les centres de rotation d'ordre 2 sont situés sur la frontière du pavé.</p>
+<p>Prenons un pavé <b>P</b> et construisons son symétrique <b>P'</b> par rapport à <b>o</b>, un des centres d'ordre 2 de sa frontière.<br>
+Comme nous l'avons vu plus haut, si nous choisissons <b>P</b> comme pavé de référence, il correspond dans le groupe à l'identité et <b>P'</b> correspond à une symétrie centrale.<br>
+Comme toutes les symétries centrales peuvent s'obtenir en composant l'une d'entre elles avec toutes les translations, nous en déduisons que la réunion des pavés <b>P</b> et <b>P'</b> donne un domaine qui est un pavé pour le sous-groupe des translations. Or, les domaines de <b>p1</b> viennent d'être déterminés.</p>
+<p>Nous en connaissons la forme: des "hexagones" à "côtés" opposés translatés.<br>
+<img class="gauche enc" alt="p2" src="pava/p2.gif">Les "côtés" sont en fait des arcs de courbe, ce qui rend une visualisation un peu compliquée; nous conviendrons de dessiner simplement des segments de droite tout en conservant à l'esprit qu'il s'agit d'arcs de courbe.<br>
+Examinons à présent les arcs qui limitent le domaine <b>P</b>:<br>
+ - l'arc <b>xox'</b> possède évidemment un centre de symétrie.<br>
+ - l'arc <b>ac</b> est translaté de <b>c'a'</b> mais <b>c'a'</b> a pour image dans la symétrie par rapport à <b>o</b> l'arc <b>ca</b>. Donc, en composant la translation avec la symétrie, on voit que <b>ac</b> est amené sur <b>ca</b> par une symétrie centrale et l'arc <b>ac</b> possède donc un centre de symétrie.<br>
+ - il en est évidemment de même pour l'arc <b>bc</b>.<br>
+ - reste l'arc <b>xa</b> que nous décomposons en les deux arcs <b>xy</b> et <b>ya</b>. Par un raisonnement identique à ceux qui précèdent, on voit que l'arc <b>xy</b> possède un centre de symétrie. Quant à l'arc <b>ya</b>, la seule information relative au pavé <b>P</b> est qu'il est translaté de <b>x'b</b>.</p>
+<p>Nous pouvons résumer en disant que :
+<blockquote><p>Un pavé pour le groupe <b>p2</b> est un "hexagone" dont deux "côtés" opposés sont translatés et les 4 autres "côtés" possèdent un centre de symétrie. (N'oublions pas que "côté" est pris dans le sens "arc de courbe")</blockquote>
+<p>Pour les autres groupes contenant des centres de rotation ou des axes de symétrie, la méthode est la même; de plus, les contraintes dues au groupe deviennent de plus en plus fortes et rendent par conséquent la solution de plus en plus aisée.<br>
+Nous nous bornerons à donner les résultats pour les groupes <b>p3</b>, <b>p4</b> et <b>p6</b> et nous laissons comme exercice (simple) le cas où le groupe contient en plus des axes de symétries.</p>
+<blockquote>
+<p>Pour le groupe <b>p3</b>, le pavé est limité par un "hexagone" dont chacune des 3 paires de "côtés" consécutifs est formée d'un arc et de son transformé par une rotation d'1/3 de tour. Les 3 centres d'ordre 3 sont les sommets d'un triangle équilatéral.<br>
+<br>
+Le pavé correspondant au groupe <b>p4</b> est constitué d'un "pentagone". Un des arcs possède un centre de symétrie et chacune des deux paires d'arcs consécutifs est formée d'un arc et de son transformé par 1/4 de tour.<br>
+<br>
+Enfin, pour le groupe <b>p6</b>, le pavé est également un "pentagone". Un des arcs possède un centre de symétrie, la paire d'arcs consécutifs est formée d'un arc et de son transformé par une rotation d'1/3 de tour et la dernière paire d'arcs est formée d'un arc et de son transformé par une rotation d'1/6 de tour.
+</blockquote>
+<p>Nous montrons ci-dessous, pour chacun des groupes <b>p2</b>, <b>p3</b>, <b>p4</b> et <b>p6</b>, un exemple emprunté à Escher.</p>
+<table class="centre">
+<tr><th>p2</th><th><img alt="" src="../dot.png" width="30" height="1"></th><th>p3</th></tr>
+<tr><td><img alt="" src="pava/2.gif"></td><td> </td><td><img alt="" src="pava/3.gif"></td></tr>
+<tr><td><img alt="" src="pava/e2.gif"></td><td> </td><td><img alt="" src="pava/e3.gif"></td></tr>
+</table>
+<br><br>
+<table class="centre">
+<tr><th>p4</th><th><img alt="" src="../dot.png" width="30" height="1"></th><th>p6</th></tr>
+<tr><td><img alt="" src="pava/4.gif"></td><td> </td><td><img alt="" src="pava/6.gif"></td></tr>
+<tr><td><img alt="" src="pava/e4.gif"></td><td> </td><td><img alt="" src="pava/e6.gif"></td></tr>
+</table>
+<p>Attention, les couleurs n'interviennent qu'à titre artistique !</p>
+<br>
+
+<p class="st">Le cas de symétries glissées</p>
+
+<p>Restent les deux groupes <b>pg</b> et <b>pgg</b> qui contiennent des retournements (anti-déplacements) mais pas d'axe de symétrie.</p>
+<p>Commençons par <b>pg</b> et partons d'un pavé <b>P</b>. Prenons un axe de symétrie glissée traversant <b>P</b> et considérons la réunion de <b>P</b> et son transformé <b>P'</b> par la symétrie glissée <i>g</i> d'amplitude minimale, de manière à ce que <b>P</b> et <b>P'</b> aient une portion de frontière commune <b>xy</b>.</p>
+<p>Comme dans le cas du groupe <b>p2</b> traité plus haut, nous obtenons un pavé pour le groupe des translations. Mais la différence essentielle avec le cas <b>p2</b> réside dans le fait que ce pavé n'est pas invariant par la symétrie glissée <i>g</i>.<br>
+Partant de <b>P'</b>, on peut construire <b>P"</b>, transformé de <b>P'</b> par <i>g</i>; la réunion de <b>P'</b> et <b>P"</b> est également un pavé pour le groupe <b>p1</b>. Ce pavé est tout simplement le transformé du premier par <i>g</i>.</p>
+<p>Nous allons raisonner sur un dessin qui pourrait être complètement faux, (ne dit-on pas que la géométrie est également l'art de raisonner correctement sur des figures fausses ?), mais pour ne pas trop désorienter le lecteur, nous prendrons un dessin que nous savons être correct.<br>
+Le pavé <b>P<img alt="union" src="../cup.png">P'</b> est un "hexagone" <b>abcdef</b> avec <b>ab</b>||<b>ed</b>, <b>bc</b>||<b>fe</b> et <b>cd</b>||<b>fa</b>. Son transformé par <i>g</i> est <b>P'<img alt="union" src="../cup.png">P"</b>, un "hexagone" du même type.<br>
+Intéressons-nous à la position de la frontière <b>xy</b>. Deux cas peuvent se présenter: <b>xy</b> coupe les "côtés" servant de frontière à deux "hexagones" consécutifs ou bien alors <b>xy</b> coupent deux "côtés" de l'hexagone ne faisant pas frontière.</p>
+<p>Premier cas</p>
+<p>Supposons que l'arc <b>xy</b> coupe les "côtés" faisant frontière entre les "hexagones".</p>
+<img class="gauche enc" alt="" src="pava/gl1.gif">
+<p>Désignons par <b>y<sub>0</sub></b> l'image de <b>y</b> dans la translation amenant <b>ab</b> sur <b>ed</b> et <b>x<sub>0</sub></b> l'image de <b>x</b> dans la translation inverse.<br>
+De la sorte, on obtient une décomposition plus fine de l'"hexagone" en 10 arcs <b>ax<sub>0</sub>ybcd<sub>0</sub>xef</b>; la frontière de son transformé par <i>g</i> est également décomposée en 10 arcs (attention! il faut tourner en sens inverse puisque <i>g</i> change l'orientation) que l'on obtient en primant les lettres.<br>
+En écrivant les relations existant entre les différents arcs qui bordent le pavé <b>P</b>, on voit que:<br>
+ - <b>yb</b> est le translaté de <b>y<sub>0</sub>d</b><br>
+ - <b>bc</b> est le translaté de <b>fe</b> = <b>c'd'</b> image de <b>cd</b> par <i>g</i><br>
+ - <b>xy</b> = <b>y'<sub>0</sub>x'</b> est l'image de <b>y<sub>0</sub>x</b> par <i>g</i><br>
+<p>Deuxième cas</p>
+<p>Supposons que l'arc <b>xy</b> ne coupe pas les "côtés" faisant frontière entre les "hexagones"; supposons qu'il coupe <b>cd</b> et son parallèle <b>af</b>.</p>
+<img class="gauche enc" alt="" src="pava/gl2.gif"><p>Notons <b>x<sub>0</sub></b> l'image de <b>x</b> dans la translation amenant <b>cd</b> sur <b>af</b> et <b>y<sub>0</sub></b> l'image de <b>y</b> dans la translation inverse.<br>
+<br>
+A nouveau, on considère la frontière de la réunion de <b>P</b> et <b>P'</b>, <b>abcy<sub>0</sub>xdefx<sub>0</sub>y</b>, et celle de la réunion de <b>P'</b> et <b>P"</b> où il suffit de prendre les mêmes lettres primées.<br>
+En écrivant les relations existant entre les différents arcs qui bordent le pavé <b>P</b> on voit que:<br>
+ - <b>xy</b> est transformé par <i>g</i> en <b>x'y'</b> = <b>ab</b>, translaté de <b>cd</b><br>
+ - <b>yx<sub>0</sub></b> est translaté de <b>y<sub>0</sub>x</b> = <b>f'e'</b> qui est l'image de <b>fe</b> par <i>g</i><br>
+ - <b>x<sub>0</sub>f</b> est translaté de <b>xd</b><br>
+<p> On en tire le résultat suivant:</p>
+<blockquote>
+<p>Un pavé pour le groupe <b>pg</b> possède une frontière formée de 6 arcs et est de l'un des deux types suivants:
+<ul>
+<li>deux arcs se déduisant par translation sont encadrés par deux paires d'arcs se correspondant dans des symétries glissées, d'axes parallèles à la direction de la translation<br>
+<li>deux paires d'arcs se correspondant dans des symétries glissées sont encadrés par deux arcs se déduisant par une translation dans une direction perpendiculaire.
+</ul>
+</blockquote>
+<p>Pour le groupe <b>pgg</b>, on traite le cas de manière analogue, mais plus simple, puisqu'il existe des centres de symétrie.</p>
+On obtient le résultat suivant:<br>
+<blockquote>
+<p>Un pavé pour le groupe <b>pgg</b> possède une frontière formée de 6 arcs et est de l'un des deux types suivants:
+<ul>
+<li>deux arcs adjacents se correspondent dans une symétrie glissée; les deux adjacents sont translatés l'un de l'autre et les deux derniers arcs possèdent un centre de symétrie.
+<li>deux arcs opposés se correspondent dans une symétrie glissée; deux arcs attenant à l'un d'eux sont transformés par une symétrie glissée d'axe perpendiculaire et les 2 arcs attenant à l'autre possèdent chacun un centre de symétrie.
+</ul>
+</blockquote>
+<p>Nous donnons ci-dessous des exemples, pour <b>pg</b> empruntés à Escher. </p>
+<div class="centre">
+<table>
+<tr><th>pg (1<sup>er</sup>type)</th><th>pg (2<sup>e</sup>type)</th></tr>
+<tr><td><img alt="" src="pava/g1.gif"></td><td><img alt="" src="pava/g2.gif"></td></tr>
+<tr><td><img alt="" src="pava/eg1.gif"></td><td><img alt="" src="pava/eg2.gif"></td></tr>
+</table>
+</div>
+<p>Pour le groupe <b>pgg</b>, nous n'avons pas trouvé d'exemples du cas général chez Escher. Heureusement, Dominique Ribault, mathématicien et artiste, graphiste et sculpteur, en a construits.<br>
+Nous vous les présentons ci-dessous.</p>
+<div class="centre">
+<table>
+<tr><th>pgg (1<sup>er</sup>type)</th><th><img alt="" src="../dot.png" width="30" height="1"></th><th>pgg(2<sup>e</sup>type)</th></tr>
+<tr><td><img alt="" src="pava/pgg1.gif"></td><td> </td><td><img alt="" src="pava/pgg2.gif"></td></tr>
+<tr><td><img alt="" src="pava/rgg1.jpg"></td><td> </td><td><img alt="" src="pava/rgg2.jpg"></td></tr>
+</table>
+</div>
+<br>
+
+<p class="st">Et s'il y a des axes de symétrie ?</p>
+
+<p>Nous ne décrirons pas ces cas; les résultats dérivent immédiatement de ce qui précède. La présence d'axes de symétrie permet de compléter le pavé par son symétrique et il suffit alors d'utiliser les résultats mentionnés plus haut. Dans ces cas, il y a évidemment plus de contraintes et la décoration devient plus "rigide"; à la limite, pour le groupe <b>p6m</b>, le pavé est un demi-triangle équilatéral !</p>
+<p>Escher a fort peu utilisé ces groupes dont l'effet esthétique est bien moindre que les autres. Les figures ne vivent pas !</p>
+
+<p class="st">Un peu d'histoire</p>
+
+<p>L'origine de ces décorations est due au fait que les religions sémites, notamment l'Islam, interdisent la représentation d'êtres vivants. Les artistes se sont alors tournés vers des motifs abstraits et le plus célèbre exemple est l'Alhambra de Grenade où l'on peut (paraît-il) retrouver des motifs utilisant les 17 groupes cristallographiques.</p>
+<p>M.C.Escher l'a visité au cours d'un de ses nombreux voyages. Il a été très impressionné et a pris beaucoup de notes. A son retour, il a exploité sa découverte et développé de nouveaux motifs qui correspondaient mieux à sa personnalité.<br>
+Escher n'était pas mathématicien, mais le hasard a fait que son épouse était compatriote et amie de la femme du grand mathématicien H.S.M.Coxeter. C'est par ce biais qu'Escher a reçu des compléments d'informations et vraisemblablement une orientation vers une généralisation de ses pavages à celui du <a href="../var/planhyp.htm">plan hyperbolique</a>.</p>
+
+<p class="st">A vous de jouer</p>
+<p>Maintenant vous détenez la clé, ajoutez-y votre talent !</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="docd.htm">Documents</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+		<div class="centre"><hr style="width:70%;"></div>
+<br>
+Pour toute remarque ou commentaire, écrire à <script type="text/javascript">
+// JavaScript pris sur le site: "http://www.java.scripts-fr.com" 
+var nom = "xhubaut";
+var domaine = "ulb.ac.be"; 
+var deb = "<";
+var fin = ">";
+document.write('<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + deb + '/a' + fin); 
+</script>.<br>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Le jour et la nuit - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="durée du jour, ensoleillement, latitude, colatitude, solstice, équinoxe" />
+<meta name="keywords" content="durée, jour, nuit, latitude, longitude" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+<script type="application/javascript">
+function degrees_to_radians(degrees) {
+	return degrees * (Math.PI / 180);
+}
+
+function clamp(value, min, max) {
+	return Math.min(Math.max(value, min), max);
+}
+
+function getDayLength(latitude, date) {
+	var normalizedDay = 360 * (date / 365);
+	//normalizedDay += 180;
+	var sinProduct = 0.3979 * Math.sin(degrees_to_radians(normalizedDay));
+	var tanProduct = Math.tan(latitude) * Math.tan(Math.asin(sinProduct));
+	var result = -2 * Math.acos(clamp(tanProduct, -1, 1));
+	// Result is within -2pi and 0, so we normalize into 0 and 24.
+	var hour = clamp(-24 * (result / (2 * Math.PI)), 0, 24);
+	return hour;
+}
+
+function draw(dayOfTheYear) {
+	var canvas = document.getElementById("canvas");
+	if (canvas.getContext) {
+		var ctx = canvas.getContext("2d");
+
+		var origin = { 'x': 300, 'y': 300 };
+		var earthRadius = 100;
+		var innerRadius = earthRadius * 1.5;
+		var externalRadius = earthRadius * 2;
+		var externalTraitsRadius = earthRadius * 2.5;
+
+		ctx.beginPath();
+		ctx.arc(origin.x, origin.y, earthRadius, 0, 2 * Math.PI);
+		ctx.stroke();
+		
+		ctx.setLineDash([5, 15]);
+		ctx.beginPath();
+		ctx.arc(origin.x, origin.y, innerRadius, 0, 2 * Math.PI);
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.arc(origin.x, origin.y, externalRadius, 0, 2 * Math.PI);
+		ctx.stroke();
+
+		var angle = 45;
+		var fullCircle = 360;
+		for (var i = 0; i != fullCircle / angle; ++i) {
+			ctx.beginPath();
+			var cosx = Math.cos(degrees_to_radians(i * angle));
+			var sinx = Math.sin(degrees_to_radians(i * angle));
+			ctx.moveTo(origin.x + cosx * earthRadius, origin.y + sinx * earthRadius);
+			ctx.lineTo(origin.x + cosx * externalTraitsRadius, origin.y + sinx * externalTraitsRadius);
+			var toShow = (i * angle) % 180;
+			if (toShow > 90)
+				toShow = 180 - toShow;
+			ctx.fillText(toShow, origin.x + cosx * externalTraitsRadius, origin.y + sinx * externalTraitsRadius + Math.sign(sinx) * 10);
+			ctx.stroke();
+		}
+
+		ctx.setLineDash([]);
+		var numberOfLines = 45;
+		var quarterOfCircle = 90;
+		var angle = quarterOfCircle / numberOfLines;
+		for (var i = 0; i <= numberOfLines; ++i) {
+			ctx.beginPath();
+			var cosx = Math.cos(degrees_to_radians(i * angle));
+			var sinx = Math.sin(degrees_to_radians(i * angle));
+
+			var dayLength = getDayLength(degrees_to_radians(i * angle), dayOfTheYear);
+			var ratio = ((externalRadius - earthRadius) * (dayLength / 24)) + earthRadius;
+			var inverseRatio = ((externalRadius - earthRadius) * ((24 - dayLength) / 24)) + earthRadius;
+			
+			ctx.moveTo(origin.x + cosx * earthRadius, origin.y + sinx * earthRadius);
+			ctx.lineTo(origin.x + cosx * ratio, origin.y + sinx * ratio);
+			
+			ctx.moveTo(origin.x + -cosx * earthRadius, origin.y + sinx * earthRadius);
+			ctx.lineTo(origin.x + -cosx * ratio, origin.y + sinx * ratio);
+
+			ctx.moveTo(origin.x + cosx * earthRadius, origin.y + -sinx * earthRadius);
+			ctx.lineTo(origin.x + cosx * inverseRatio, origin.y + -sinx * inverseRatio);
+			
+			ctx.moveTo(origin.x + -cosx * earthRadius, origin.y + -sinx * earthRadius);
+			ctx.lineTo(origin.x + -cosx * inverseRatio, origin.y + -sinx * inverseRatio);
+			
+			ctx.stroke();
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Le jour et la nuit
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Nous allons nous intéresser à la durée du jour, plus exactement à la portion de journée où nous sommes éclairés par le soleil, par rapport à la nuit où nous nous trouvons dans l'ombre.</p>
+
+<p>La terre tourne autour du soleil et décrit une orbite presque circulaire (en réalité une ellipse); en même temps elle tourne sur elle-même autour de son axe qui est incliné d'environ \(23°27'\) par rapport à la verticale sur le plan de son orbite (l'écliptique).</p>
+
+<img alt="terre" src="jour/terre_sol.gif">
+
+<p><i>Une remarque préliminaire: il est évident qu'étant donnée la complexité du problème, nous le simplifierons: nous prendrons une orbite circulaire, nous ne nous occuperons pas des variations (précession, nutation) de l'axe de rotation de la terre, nous supposerons que le soleil est réduit à un point (pas d'aurore, ni de crépuscule, etc.)</i></p>
+
+<p>Représentons la terre avec son axe de rotation vertical; en conséquence l'équateur sera situé dans un plan horizontal.</p>
+
+<p>Supposons que ce jour-là, la terre soit dans une position telle que les rayons du soleil forment un angle \(\alpha \) avec le plan de l'équateur. Les spécialistes diront que l'angle \(\alpha \) mesure la "hauteur" de l'écliptique (plan de rotation du soleil) par rapport au plan de l'horizon. Remarquons que cet angle \(\alpha \) sera toujours compris entre \(-23°27'\) et \(+ 23°27'\).<br />
+Pour que les choses soient plus gaies, nous avons choisi un des jours de l'année où <i>α</i> est positif. Dans l'hémisphère nord, nous sommes proches du solstice d'été !</p>
+
+<p>Quelle sera la durée du jour à un endroit situé à une latitude \(\lambda \) ? Pour fixer les idées, plaçons-nous dans les environs de Bruxelles à 50° de latitude Nord.</p>
+
+<p><img class="droite" alt="jour et nuit" src="jour/jour_nuit.gif">
+Désignons par <b>C</b> le centre de la terre, et <b>O</b> le centre du parallèle de Bruxelles.<br />
+Fixons un instant et désignons par <b>M</b> (matin) et <b>S</b> (soir) les deux points du parallèle de Bruxelles où le soleil se lève et se couche, tandis que <b>J</b> (jour) et <b>N</b> (nuit) seront ceux où il est respectivement midi et minuit.<br />
+<b>P</b> sera le point où le plan du méridien de midi coupe la droite <b>CO</b>.<br />
+Enfin, \(\gamma \) désignera l'angle <b>MOS</b> qui sous-tend la partie éclairée par le soleil.<br />
+Pour simplifier le problème, supposons que pendant 24 heures la terre tourne sur elle-même sans modifier la position de son axe par rapport au soleil.</p>
+
+<p>L'angle \(\gamma \) peut se calculer en remarquant que <b>OP</b> vaut, en valeur absolue, \(r\mathbf{cos~}(\pi-\gamma/2)\) où \(r\) représente le rayon du parallèle de Bruxelles.<br />
+Connaissant la latitude \(\lambda \) de Bruxelles, on peut calculer \(r\) = <b>OJ</b> = <b>R</b> \(\mathbf{cos~}\lambda \) où <b>R</b> désigne le rayon terrestre. 
+On a aussi <b>CO</b> = <b>R</b>.\(\mathbf{sin~}\lambda \) et dans le triangle <b>COP</b>, on a la relation <b>OP</b> = <b>CO</b>.\(\mathbf{tan~}\alpha \) = <b>R</b>.\(\mathbf{sin~}\lambda \mathbf{tan~}\alpha\).<br />
+Enfin, en comparant les valeurs obtenues pour <b>OP</b>, on obtient :
+<b>R</b> \(\mathbf{cos~}\lambda.\mathbf{cos~}(\pi-\gamma/2)\)<br />
+= <b>R</b>.\(\mathbf{sin~}\lambda.\mathbf{tan~}\alpha \) et \(\gamma\) est donné par la relation:</p>
+
+\[ \mathbf{cos~}(\pi-\gamma/2) = \mathbf{tan~}\lambda.\mathbf{tan~}\alpha ~~~~\text {ou encore}~~~~ \gamma=-2~\mathbf{arccos~}(\mathbf{tan~}\lambda.\mathbf{tan~}\alpha)  \]
+
+<p>Aux équinoxes \(\alpha=0\) et \(\pi-\gamma/2=\pi/2\) c'est-à-dire \(\gamma=\pi \). La durée du jour est bien égale à celle de la nuit.</p>
+
+<p>Au solstice d'été, \(\alpha=23°27'\). La latitude \(\lambda\) de Bruxelles est \(50°50'\) ; \(\mathbf{tan~}\lambda.\mathbf{tan~}\alpha\) \(=0,51695...=\mathbf{cos~}(\pi-\gamma/2)\) ce qui donne approximativement \(180°-\gamma/2=58°52'\) et \(\gamma=242°16'\), ce qui, traduit en nombre d'heures, vaut 16h 18 minutes.</p>
+
+<p>En résumé pour calculer la durée du jour, il suffit de connaître deux choses: la latitude du lieu et l'angle \(\alpha\) selon lequel les rayons solaires tombent sur le plan de l'équateur à la date choisie. La valeur de cet angle est bien connue aux équinoxes (il vaut \(0°\)) et aux solstices (il vaut \(+23°27'\) et \(-23°27'\)).<br />
+Mais aux autres dates ?</p>
+
+<p>La réponse est fort simple. Au cours de sa rotation autour du soleil, l'axe de rotation de la terre reste parallèle à lui-même.</p>
+
+<img alt="" src="jour/terre-ecliptique.png">
+
+<p>Imaginons-nous à présent, assis sur le soleil (rassurez-vous ce n'est qu'une fiction) et regardant tout au long de l'année en direction du centre de la terre. Cet axe nous paraîtra tourner autour d'une normale au plan de l'écliptique et décrira donc un cône dont le demi-angle au sommet vaut \(23°27'\).</p>
+
+<p>Soit <b>C</b> le centre de la terre, <b>A</b> l'extrémité du vecteur unité <b>CA</b> dirigé suivant l'axe de rotation de la terre (dessiné en bleu) et <b>CS</b> un vecteur unité dirigé vers le soleil.</p>
+
+<p>Rappelons que \(\alpha \) est l'angle formé par les rayons solaires, dirigés suivant le vecteur <b>CS</b>, et l'équateur; toutefois, il est techniquement plus commode de travailler avec la perpendiculaire <b>CA</b> au plan de l'équateur qui forme alors avec le vecteur <b>C</b> l'angle complémentaire de \(\alpha\). Comme les vecteurs <b>CS</b> et <b>CA</b> sont unitaires, le produit scalaire <b>CS.CA</b> = \(\mathbf{sin~}\alpha \).</p>
+
+<p>Le but est donc d'établir la valeur d'un produit sclaire par le vecteur <b>CS</b> situé dans le plan de l'écliptique. Tout vecteur orthogonal à <b>CS</b> et, en particulier, ceux perpendiculaires à l'écliptique n'interviennent donc pas. Cette constatation nous permet de ramener le problème tridimensionnel à un problème plan par projection orthogonale sur le plan de l'écliptique.</p>
+
+<img class="gauche" alt="" src="jour/ecliptique.png">
+
+<p>La terre munie de son axe (dessiné en bleu) décrit l'écliptique que nous avons convenu d'approcher par un cercle. Sur le schéma, nous avons supposé que la position initiale était à l'équinoxe (ici, celui de printemps); son axe est donc orthogonal à <b>CS</b>. Supposons qu'elle parcourt un arc de cercle d'amplitude \(\delta \); cet angle sera déterminé par la date comptée à partir de l'équinoxe de printemps.<br />
+Si pour l'observateur situé au-dessus du plan de l'écliptique, elle ne change pas d'orientation, pour un observateur situé au soleil elle semblera avoir effectué une rotation d'amplitude \(\delta \) autour d'un axe perpendiculaire au plan de l'écliptique.</p>
+
+<p>Afin de mieux voir ce qui se passe, zoomons sur ces deux positions et représentons les avec le vecteur <b>CS</b> orienté de la même manière. On obtient:</p>
+
+<img alt="" src="jour/variation-date.png">
+
+<p>Le vecteur <b>CA</b> fait toujours le même angle \(23°27'\) par rapport à une perpendiculaire au plan de l'écliptique. La projection orthogonale de ce vecteur unité aura toujours le même module, à savoir \(\mathbf{sin~}(23°27')\).<br />
+Pour obtenir le produit scalaire recherché, il nous reste à le multiplier par le cosinus de l'angle formé par <b>CS</b> et <b>CA</b>. Or cet angle est le complément de \(\delta \). Il en résulte que:</p>
+
+\( \mathbf{sin~} \alpha= \)<b>CS.CA</b> \(=\mathbf{sin~}(23°27').\mathbf{sin~}\delta\)   ou encore    \(\mathbf{sin~}\alpha=0.3979.\mathbf{sin~}\delta \)<br />
+
+<p>À présent le problème est résolu et la durée du jour peut s'exprimer en fonction des deux variables: la date \(\delta \) (convertie de l'intervalle [0, 365) à [0, \(2\pi\))) et la latitude \(\lambda \) entre \([-\pi/2, \pi/2]\).</p>
+
+<p>On aboutit à l'affreuse formule:</p>
+
+\[ \gamma = -2\mathbf{arccos~}(\mathbf{tan }\lambda.\mathbf{tan~}(\mathbf{arcsin~}(0.3979.\mathbf{sin~}\delta ))) \]
+
+<p>Heureusement, les outils informatiques sont à notre disposition pour calculer la valeur de \(\gamma \) qui sera transformée en vue d'être exprimée en heure depuis l'intervalle \([-2\pi, 0]\). Nous représenterons ci-dessous les variations de la durée du jour sur une année à des latitudes allant de \(0\) à \(90°\) réparties de \(10\) en \(10°\)</p>
+
+<img alt="durée du jour" src="jour/jour.gif">
+
+<p>À partir de la latitude du cercle polaire, nous observons, en été, des périodes avec soleil ininterrompu (soleil de minuit) et, en hiver, des journées entières de nuit.</p>
+
+<p>Ci-dessous vous trouverez une animation montrant les variations de la durée du jour en fonction de la latitude Nord (coin supérieur droit). La date comptée en jours à partir de l'équinoxe de printemps est reprise en abscisse et la durée figure en ordonnée.<br />
+Remarque: pour la latitude Sud, les jours sont comptés à partir de l'équinoxe d'automne.</p>
+
+<img alt="" src="jour/duree.gif" onClick="javascript:permute_statique_anime(this);"><br />
+<i>Cliquez sur l'image pour démarrer ou arrêter l'animation.</i>
+
+<p>Pour Bruxelles (latitude = \(50°50'\)) on voit sur le graphique que la durée du jour varie approximativement entre les valeurs de 16h (solstice d'été) et 8h (solstice d'hiver). Si on souhaite plus de précision, le calcul de l'ensoleillement pour le solstice d'été (\(\delta=90°\) et \(\lambda=50,84°\)) donne un ensoleillement de 16h18m  ce qui, compte tenu des nombreuses approximations, est fort proche des données des éphémérides (16h30m en 2013) soit moins de 2% d'écart.</p>
+
+<p>Juste en dessous, vous pouvez apercevoir une autre visualisation de la durée du jour en fonction de la latitude. Le cercle extérieur représente 24h de durée du jour, celui au milieu 12h et le cercle central représente 0h ou 24h de nuit. Chaque trait correspond à la durée du jour en fonction de la latitude et du jour dans l'année (que vous pouvez modifier grâce au curseur situé juste en dessous). Il y a quelques problèmes de représentations liées à la stabilité numérique des équations pour les pôles lors de la transition entre la nuit polaire et le soleil de minuit lors des équinoxes.</p>
+
+<canvas id="canvas" width="600" height="600"></canvas>
+   
+<div>
+	<input type="range" min="0" max="365" value="40" class="slider" id="myRange" style="width: 50%">
+	<p style="text-align: center">Jour de l'année: <span id="demo"></span></p>
+</div>
+
+
+<p class="ni">Voir également l'article de <a href="http://mapage.noos.fr/r.ferreol/atelecharger/textes/jour/duree%20du%20jour.html" target="lien">Robert Ferréol</a>.</p>
+
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>   
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+	var context = canvas.getContext('2d');
+	context.clearRect(0, 0, canvas.width, canvas.height);
+	draw(this.value);
+	output.innerHTML = this.value;
+}
+
+draw(slider.value);
+</script>	
+</div>
+</body>
+</html>

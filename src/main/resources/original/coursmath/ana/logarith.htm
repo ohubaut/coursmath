@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Logarithme naturel - Analyse - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Lebesgue, Napier, hyperbole, produit, somme" />
+<meta name="keywords" content="analyse, fonction, logarithme, 1/x, népérien, Napier" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Logarithme naturel
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<p>Soit l'hyperbole d'équation \(xy = 1\) ou encore la fonction \(y = 1/x\). Considérons l'aire comprise sous l'hyperbole limitée par la droite \(x = 1\) et par la droite \(x = t\) (et supposons \(t &gt; 0\)</p>
+
+<img alt="" src="loga/aire.gif" width=224 height=137>
+
+<p>Pour qui connaît l'interprétation géométrique des intégrales, cette aire a pour valeur :</p>
+
+\[ \int_{1}^{t} {\frac {1}{x}} dx \]
+
+<p>Quant à calculer cette intégrale, ceux qui ne connaissent pas la fonction logarithme népérien ne peuvent résoudre le problème. (Qu'ils  se consolent; en général, on ne sait pas <a title="Fonctions rationelles" href="integrat.htm">calculer une intégrale</a>, mises à part celles qu'on donne comme exercices !).</p>
+
+<p>Cette aire est l'intégrale de 1 à \(t\) de la fonction \(1/x\) et est par conséquent fonction de la valeur de \(t\). On a donc ainsi défini une fonction \(L(t)\), et c'est d'ailleurs cette méthode que <a title="Biographie" href="../bio/lebesgue.htm">Lebesgue</a> préconisait pour l'introduction de la fonction logarithme. Plus généralement de "nouvelles" fonctions peuvent être définies par des intégrales.</p>
+
+<p>Quelles sont les propriétés de cette fonction \(L(t)\) ?</p>
+
+<p>Elle est définie pour toutes les valeurs strictement positives de \(t\). Par définition même, on a:</p>
+
+<ul>
+<li> \(L(1) = 0\)</li>
+<li> \(t &gt; 1 \implies L(t) &gt; 0\)</li>
+<li> \(t &lt; 1 \implies L(t) &lt; 0\)</li>
+</ul>
+
+<p>\(L(t)\) est une fonction strictement croissante.</p>
+
+<p>Si \(t\) tend vers l'infini, alors \(L(t)\) tend également vers  l'infini. Dans le cas où \(t\) croît, si on subdivise par les valeurs  entières, l'aire est inférieure à la somme 1/2 + 1/3 + 1/4 + 1/5 + ...  Or c'est la somme des termes d'une <a title="Et ainsi de suite..." href="limites.htm">suite harmonique</a> et cette somme  tend vers \(+\infty\).</p>
+
+<p>D'une manière analogue, en utilisant le rôle symétrique joué par \(x\) et \(y\) dans l'équation de l'hyperbole, on peut vérifier que lorsque \(x\) tend vers 0, la limite de L vaut \(-\infty\).</p>
+
+<p><img class="gauche" alt="" src="loga/logab.gif" width=276 height=137>Nous allons montrer une propriété remarquable de cette fonction.</p>
+
+<p>Calculons \(L(ab)\); c'est, par définition l'aire sous l'hyperbole comprise entre \(x=1\) et \(x=ab\). Cette aire peut être partagée par la droite \(x=a\).</p>
+
+<p>On a \(L(ab) = L(a)\) augmenté de l'aire comprise entre les droites \(x=a\) et \(x=ab\). Pour en calculer la valeur, nous allons effectuer successivement deux transformations.</p>
+
+<p>La première consiste à diviser les abscisses par \(a\); \(x\) devient \(ax\). L'hyperbole \(y=1/x\) devient l'hyperbole \(y=1/ax\), et toutes les aires sont divisées par \(a\).</p>
+
+<p><img class="droite" alt="" src="loga/loga.gif" width=273 height=138> La deuxième transformation consiste à multiplier les ordonnées par \(a\); \(y\) devient \(y/a\). Toutes les aires sont multipliées par \(a\) et l'hyperbole \(y=1/ax\) devient l'hyperbole \(y/a = 1/ax\) ou encore \(y = 1/x\), c'est-à-dire que l'on retrouve l'hyperbole de départ.</p>
+
+<p>Au cours de la première transformation les points d'abscisses \(a\) et \(ab\) sont devenus les points d'abscisses 1 et \(b\), abscisses qui n'ont pas été modifiées par la seconde transformation. L'aire initiale limitée par les droites \(x=a\) et \(x=ab\) est équivalente à celle limitée par les droites \(x=1\) et \(x=b\). Elle a donc pour valeur \(L(b)\).</p>
+
+<p>En fait, on a composé la première transformation \(x'=x/a, y'=y\) avec la deuxième \(x"=x', y"=ay'\). Le résultat est la transformation d'équations: \(x"= x/a, y"=ay\) qui conserve évidemment l'hyperbole. Il s'agit d'une application linéaire nommée <a href="../mat/applin.htm">"rotation hyperbolique"</a> dont le <a href="../mat/determ.htm">déterminant</a> vaut 1 et conserve donc les aires.</p>
+
+<p>On obtient ainsi la propriété fondamentale de la fonction \(L\).</p>
+
+\[L(ab) = L(a) + L(b)\]
+
+<p>On en déduit immédiatement que pour tout naturel \(n\), \(L(a^n) = nL(a)\). En travaillant encore un peu, on montre que cette formule reste valable pour tout \(n\) rationnel.</p>
+
+<p>Si on a étudié les logarithmes en base 10, ou même en base \(k\), on reconnaît toutes les propriétés de la fonction logarithme. Mais quelle est la base de ceux-ci ?</p>
+
+<p>Il suffit de déterminer la valeur de \(t\) pour laquelle l'aire située sous la courbe vaut 1. On peut procéder par approximation, en estimant des bornes inférieures et supérieures pour cette aire et on arrive ainsi facilement à voir que cette valeur est comprise entre 2,5 et 3. En fait elle vaut environ 2,71828... et est notée \(e\). C'est la base des logarithmes népériens (dus à <a title="Biographie" href="../bio/napier.htm">Napier</a>).<br />
+La fonction \(L\) est généralement notée \(\mathbf{ln}\).<br />
+On rencontre également \(\mathbf{Log}\) ou bien encore \(\mathbf{log_e}\) ; dans ce cas \(\mathbf{log}\) est réservé au logarithme en base 10.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

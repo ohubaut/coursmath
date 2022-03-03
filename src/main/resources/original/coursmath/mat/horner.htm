@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Méthode de Horner - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="polynomes, base, changement de base, divisibilité" />
+<meta name="keywords" content="Mathématiques, enseignement, secondaire, algèbre, géométrie, probabilités, analyse, applications" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Méthode de Horner
+<br />
+	</div>
+	<div class="stitre">
+Calcul d'un polynôme
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Rappelons la méthode utilisée pour diviser un polynôme par un binôme de la forme 
+\(x-a\) qui est appelée: "méthode de <a title="Biographie de Horner" href="../bio/horner.htm">Horner</a>".</p>
+
+<p>On utilise tout d'abord une disposition des calculs semblable à celle utilisée pour la division écrite des nombres.<br />
+Pour rendre les choses le plus clair possible, nous prendrons un exemple numérique.<br />
+Soit le polynôme \(3x^5 - 6x^4 + x^3 + 5x^2 - 3x - 4\) à diviser par \(x - 1\).</p>
+
+<p>De manière un peu surprenante, bien que nous sachions qu'il n'existe pas, nous allons d'abord essayer de déterminer le terme en \(x^5\) du quotient, ensuite celui en \(x^4\), etc.<br />
+Nous en verrons la raison un peu plus loin.</p>
+
+<p>On dispose soigneusement les calculs:</p>
+
+<table class="centre">
+<tr><td>  \(3x^5\)</td><td>\(- 6x^4\)</td><td>\(+ x^3\)</td><td>\(+ 5x^2\)</td><td>\(- 3x\)</td><td>\(- 4\)</td><td rowspan=3><img alt="barre" src="../noir.gif" width=1 height=60></td><td>\(x - 1\)</td></tr>
+<tr><td colspan=6></td><td><img alt="barre" src="../noir.gif" width=240 height=1></td></tr>
+<tr><td>\(  0x^5\)</td><td colspan=5></td><td>\(0x^5 + 3x^4 -3x^3 - 2x^2 + 3x + 0\)</td></tr>
+<tr><td><img alt="barre" src="../noir.gif" width=40 height=1></td><td colspan=7></td></tr>
+<tr><td>\(  3x^5\)</td><td>\(- 6x^4\)</td><td colspan=6></td></tr>
+<tr><td>\(- 3x^5\)</td><td>\(+ 3x^4\)</td><td colspan=6></td></tr>
+<tr><td colspan=2><img alt="barre" src="../noir.gif" width=80 height=1></td><td colspan=6></td></tr>
+<tr><td></td><td>\(- 3x^4\)</td><td>\(+ x^3\)</td><td colspan=5></td></tr>
+<tr><td></td><td>\(+ 3x^4\)</td><td>\(- 3x^3\)</td><td colspan=5></td></tr>
+<tr><td></td><td colspan=2><img alt="barre" src="../noir.gif" width=80 height=1></td><td colspan=5></td></tr>
+<tr><td colspan=2></td><td>\(- 2x^3\)</td><td>\(+ 5x^2\)</td><td colspan=4></td></tr>
+<tr><td colspan=2></td><td>\(+ 2x^3\)</td><td>\(- 2x^2\)</td><td colspan=4></td></tr>
+<tr><td colspan=2><td colspan=2><img alt="barre" src="../noir.gif" width=80 height=1></td><td colspan=4></td></tr>
+<tr><td colspan=3></td><td>\(+ 3x^2\)</td><td>\(- 3x\)</td><td colspan=3></td></tr>
+<tr><td colspan=3></td><td>\(- 3x^2\)</td><td>\(+ 3x\)</td><td colspan=3></td></tr>
+<tr><td colspan=3></td><td colspan=2><img alt="barre" src="../noir.gif" width=80 height=1></td><td colspan=3></td></tr>
+<tr><td colspan=4></td><td>\(  0x\)</td><td>\(- 4\)</td><td colspan=2></td></tr>
+<tr><td colspan=4></td><td>\(  0x\)</td><td>\(- 0\)</td><td colspan=2></td></tr>
+<tr><td colspan=4></td><td colspan=2><img alt="barre" src="../noir.gif" width=60 height=1></td><td colspan=2></td></tr>
+<tr><td colspan=5></td><td>\(- 4\)</td><td colspan=2></td></tr>
+</table>
+
+<p>À présent quelques remarques qui simplifieront la mise en page:</p>
+
+<ul>
+<li>à chaque étape, par définition même de la division écrite, le premier terme de la seconde ligne  est l'opposé de celui de la première ligne: on peut donc se dispenser de l'écrire,</li>
+<li>au lieu d'écrire au départ le polynôme complet, on peut se borner à écrire les seuls termes nécessaires et à n'écrire les autres qu'au fur et à mesure des nécessités,</li>
+<li>enfin, puisqu'on a pris soin de bien aligner les termes, on peut se permettre de ne pas écrire les puissances de \(x\).</li>
+</ul>
+
+<p>Avec ces remarques la division écrite ci-dessus devient:</p>
+
+<table class="centre">
+<tr><td>\((3x^5\)</td><td>\(- 6x^4\)</td><td>\(+ x^3\)</td><td>\(+ 5x^2\)</td><td>\(- 3x\)</td><td>\(- 4)\)</td><td>\(:\)</td><td>\((x - 1)\)</td></tr>
+<tr><td colspan=8><img alt="barre" src="../noir.gif" width=420 height=1></td></tr>
+<tr><td>\(  3\)</td><td colspan=5></td><td rowspan=3><img alt="barre" src="../noir.gif" width=1 height=60></td><td>\(x - 1\)</td></tr>
+<tr><td colspan=6></td><td><img alt="barre" src="../noir.gif" width=180 height=1></td></tr>
+<tr><td>\(  0\)</td><td colspan=5></td><td>\(0x^5 +\)<span class="rouge">\(3\)</span>\(x^4\) <span class="rouge">\(- 3\)</span>\(x^3\) <span class="rouge">\(- 2\)</span>\(x^2\) <span class="rouge">\(+ 3\)</span>x + <span class="rouge">\(0\)</span></td></tr>
+<tr><td><img alt="barre" src="../noir.gif" width=25 height=1></td><td colspan=7></td></tr>
+<tr><td><span class="rouge">\(  3\)</span></td><td>\(-6\)</td><td colspan=6></td></tr>
+<tr><td>\(\)</td><td>\(+ 3\)</td><td colspan=6></td></tr>
+<tr><td>\(\)</td><td><img alt="barre" src="../noir.gif" width=30 height=1></td><td colspan=6></td></tr>
+<tr><td>\(\)</td><td><span class="rouge">\(-3\)</span></td><td>\(+ 1\)</td><td colspan=5></td></tr>
+<tr><td>\(\)</td><td>\(\)</td><td>\(-3\)</td><td colspan=5></td></tr>
+<tr><td colspan=2></td><td><img alt="barre" src="../noir.gif" width=30 height=1></td><td colspan=5></td></tr>
+<tr><td colspan=2></td><td><span class="rouge">\(-2\)</span></td><td>\(+5\)</td><td colspan=4></td></tr>
+<tr><td colspan=2></td><td></td><td>\(- 2\)</td><td colspan=4></td></tr>
+<tr><td colspan=3><td><img alt="barre" src="../noir.gif" width=30 height=1></td><td colspan=4></td></tr>
+<tr><td colspan=3></td><td><span class="rouge">\(   +3\)</span></td><td>\(-3\)</td><td colspan=3></td></tr>
+<tr><td colspan=3></td><td>\(\)</td><td>\(  +3\)</td><td colspan=3></td></tr>
+<tr><td colspan=4></td><td><img alt="barre" src="../noir.gif" width=30 height=1></td><td colspan=3></td></tr>
+<tr><td colspan=4></td><td><span class="rouge">\(  0\)</span></td><td>\(-4\)</td><td colspan=2></td></tr>
+<tr><td colspan=4></td><td>\(\)</td><td>\(  0\)</td><td colspan=2></td></tr>
+<tr><td colspan=5></td><td><img alt="barre" src="../noir.gif" width=30 height=1></td><td colspan=2></td></tr>
+<tr><td colspan=5></td><td>\(- 4\)</td><td colspan=2></td></tr>
+</table>
+
+<p>A nouveau quelques petites remarques:</p>
+
+<ul>
+<li>il suffit de connaître le terme indépendant du diviseur,</li>
+<li>pas la peine d'écrire le quotient; les coefficients du polynôme quotient figurent chaque fois sous la barre,</li>
+<li>pas la peine, non plus, d'écrire le(s) premier(s) zéro(s),</li>
+<li>le dernier nombre qui apparaît est le reste de la division.</li>
+</ul>
+
+<p>Réécrivons la division en condensant le tout sur 3 lignes:</p>
+
+<table class="centre">
+<tr><td>\(3\)</td><td>\(- 6\)</td><td>\(+ 1\)</td><td>\(+ 5\)</td><td>\(- 3\)</td><td>\(- 4\)</td><td rowspan=4><img alt="barre" src="../noir.gif" width=1 height=80></td><td>\(- 1\)</td></tr>
+<tr><td></td><td>\(+ 3\)</td><td>\(- 3\)</td><td>\(- 2\)</td><td>\(+ 3\)</td><td>\(  0\)</td><td></td></tr>
+<tr><td colspan=6><img alt="barre" src="../noir.gif" width=170 height=1></td><td><img alt="barre" src="../noir.gif" width=20 height=1></td></tr>
+<tr><td>\(3\)</td><td>\(- 3\)</td><td>\(- 2\)</td><td>\(+ 3\)</td><td>\(  0\)</td><td>\(- 4\)</td><td></td></tr>
+</table>
+
+<p>L'usage veut que l'on supprime la dernière colonne et qu'on écrive en première position l'opposé du terme indépendant du diviseur juste au-dessus de la barre de séparation.
+De plus on trace une barre verticale séparant les coefficients du polynôme quotient du reste de la division.<br />
+On obtient finalement la disposition suivante:</p>
+
+<table class="centre">
+<tr><td></td><td rowspan=4><img alt="barre" src="../noir.gif" width=1 height=80></td><td>\(3\)</td><td>\( - 6\)</td><td>\(+ 1\)</td><td>\(+ 5\)</td><td>\(- 3\)</td><td rowspan=4><img alt="barre" src="../noir.gif" width=1 height=80></td><td>\(- 4\)</td></tr>
+<tr><td>\(+ 1\)</td><td></td><td>\(+ 3\)</td><td>\(- 3\)</td><td>\(- 2\)</td><td>\(+ 3\)</td><td>\(  0\)</td></tr>
+<tr><td><img alt="barre" src="../noir.gif" width=20 height=1></td><td colspan=5><img alt="barre" src="../noir.gif" width=130 height=1></td><td><img alt="barre" src="../noir.gif" width=20 height=1></td></tr>
+<tr><td></td><td>\(3\)</td><td>\(- 3\)</td><td>\(- 2\)</td><td>\(+ 3\)</td><td>\(  0\)</td><td>\(- 4\)</td></tr>
+</table>
+
+<p class="ni">qui est appelée méthode de Horner.</p>
+
+<p><i style="line-height:150%;">Un élément de la ligne inférieure s'obtient en multipliant l'élément qui le précède par le nombre figurant dans la première colonne, en plaçant le résultat dans sa colonne et en effectuant la somme de deux premiers nombres de la colonne.</i></p>
+
+<p>Le résultat de cette division est :</p> 
+
+\[ 3x^5-6x^4+x^3+5x^2-3x-4=(3x^4-3x^3-2x^2+3x+0)(x-1)-4\]
+
+<p>Après ce long rappel, voici quelques remarques plus intéressantes.</p>
+
+<p>La méthode décrite peut se généraliser sans difficulté à la division d'un polynôme par un binôme de degré quelconque; il suffit de décaler correctement les coefficients qui apparaissent à la deuxième ligne.</p>
+
+<p>La méthode de Horner est, la plupart du temps, utilisée à des fins de factorisation. On vérifie si un polynôme est divisible par \(x-a\).<br />
+Si tel est le cas, le reste de la division est nul et on factorise le polynôme \(P(x)=Q(x).(x-a)\)<br />
+Si ce n'est pas le cas, que le reste n'est pas nul et vaut \(R\), il peut sembler superflu d'avoir effectué ce travail pour rien; le mieux qu'on puisse faire est d'écrire: \(P(x) = Q(x).(x-a)+R\) !</p>
+
+<p>Entêtons-nous et continuons à vérifier la divisibilité du polynôme Q(x) par (x - a), et ainsi de suite pour les quotients successivement obtenus.<br />
+Effectuons ce travail sur notre exemple initial.</p>
+
+<table class="centre">
+<tr><td></td><td rowspan=19><img alt="barre" src="../noir.gif" width=1 height=450></td><td>\(  3\)</td><td></td><td>\( - 6\)</td><td></td><td>\(+ 1\)</td><td></td><td>\(+ 5\)</td><td></td><td>\(- 3\)</td><td rowspan=4><img alt="barre" src="../noir.gif" width=1 height=90></td><td>\(- 4\)</td></tr>
+<tr><td>\(+ 1\)</td><td></td><td></td><td>\(  3\)</td><td></td><td>\(- 3\)</td><td></td><td>\(- 2\)</td><td></td><td>\(+ 3\)</td><td>\(  0\)</td></tr>
+<tr><td><img alt="barre" src="../noir.gif" width=24 height=1></td><td colspan=9><img alt="barre" src="../noir.gif" width=160 height=1></td><td><img alt="barre" src="../noir.gif" width=24 height=1></td></tr>
+<tr><td></td><td>\(  3\)</td><td></td><td>\(- 3\)</td><td></td><td>\(- 2\)</td><td></td><td>\(+ 3\)</td><td rowspan=4><img alt="barre" src="../noir.gif" width=1 height=90></td><td>\(  0\)</td><td><span class="rouge">\(- 4\)</span></td></tr>
+<tr><td>\(+ 1\)</td><td></td><td></td><td>\(  3\)</td><td></td><td>\(  0\)</td><td></td><td>\(- 2\)</td><td>\(  1\)</td><td colspan=2></td></tr>
+<tr><td><img alt="barre" src="../noir.gif" width=24 height=1></td><td colspan=7><img alt="barre" src="../noir.gif" width=128 height=1></td><td><img alt="barre" src="../noir.gif" width=24 height=1></td><td colspan=2></td></tr>
+<tr><td></td><td>\(3\)</td><td></td><td>\(0\)</td><td></td><td>\(-2\)</td><td rowspan=4><img alt="barre" src="../noir.gif" width=1 height=90></td><td>\(1\)</td><td><span class="rouge">\(1\)</span></td><td colspan=2></td></tr>
+<tr><td>\(+1\)</td><td></td><td></td><td>\(3\)</td><td></td><td>\(3\)</td><td>\(1\)</td><td colspan=4></td></tr>
+<tr><td><img alt="barre" src="../noir.gif" width=24 height=1></td><td colspan=5><img alt="barre" src="../noir.gif" width=96 height=1></td><td><img alt="barre" src="../noir.gif" width=24 height=1></td><td colspan=4></td></tr>
+<tr><td></td><td>\(3\)</td><td></td><td>\(3\)</td><td rowspan=4><img alt="barre" src="../noir.gif" width=1 height=90></td><td>\(1\)</td><td><span class="rouge">\(
+2\)</span></td><td colspan=4></td></tr>
+<tr><td>\(+1\)</td><td></td><td></td><td>\(3\)</td><td>\(6\)</td><td colspan=6></td></tr>
+<tr><td><img alt="barre" src="../noir.gif" width=24 height=1></td><td colspan=3><img alt="barre" src="../noir.gif" width=64 height=1></td><td><img alt="barre" src="../noir.gif" width=24 height=1></td><td colspan=6></td></tr>
+<tr><td></td><td>\(3\)</td><td rowspan=4><img alt="barre" src="../noir.gif" width=1 height=90></td><td>\(6\)</td><td><span class="rouge">\(7\)</span></td><td colspan=6></td></tr>
+<tr><td>\(+1\)</td><td></td><td></td><td colspan=8></td></tr>
+<tr><td><img alt="barre" src="../noir.gif" width=24 height=1></td><td><img alt="barre" src="../noir.gif" width=32 height=1></td><td><img alt="barre" src="../noir.gif" width=20 height=1></td><td colspan=8></td></tr>
+<tr><td></td><td>\(3\)</td><td><span class="rouge">\(9\)</span></td><td colspan=8></td></tr>
+<tr><td>\(+1\)</td><td></td><td colspan=10></td></tr>
+<tr><td><img alt="barre" src="../noir.gif" width=24 height=1></td><td><img alt="barre" src="../noir.gif" width=24 height=1></td><td colspan=10></td></tr>
+<tr><td></td><td><span class="rouge">\(3\)</span></td><td colspan=10></td></tr>
+</table>
+
+<p>A nouveau, rien d'intéressant, bien que...</p>
+
+<p>En utilisant les restes successifs nous pouvons écrire:</p>
+
+\[\small 
+\begin{align} 3x^5-6x^4+x^3+5x^2-3x-4&amp;=(3x^4-3x^3-2x^2+3x+0)(x-1)-4\\
+&amp;=((3x^3+0x^2-2x+1)(x-1)+1)(x-1)-4\\
+&amp;=(((3x^2+3x+1)(x-1)+2)(x-1)+1)(x-1)-4\\
+&amp;=((((3x+6)(x-1)+7)(x-1)+2)(x-1)+1)(x-1)-4\\
+&amp;=(((((3(x-1)+9)(x-1)+7)(x-1)+2)(x-1)+1)(x-1)-4\\
+\end{align}\]
+
+<p>Le polynôme :</p>
+\[3x_5-6x_4+x_3+5x_2-3x-4\]
+<p class="ni">peut donc également s'écrire sous la forme:</p>
+
+<div><span class="rouge">\(3\)</span>\((x-1)^5+\)<span class="rouge">9</span>\((x-1)^4+\)<span class="rouge">\(7\)</span>\((x-1)^3+\) <span class="rouge">\(2\)</span>\((x-1)^2+\)<span class="rouge">\(1\)</span>\((x-1)\)<span class="rouge">\(- 4\)</span></div>
+
+<p class="ni">ce qui correspond à remplacer dans l'espace vectoriel des polynômes, la base "naturelle" formée des puissances de \(x\) \((1, x, x^2, x^3,...)\) par une base formée des puissances de \(x-1\) \((1, x-1, (x-1)^2, (x-1)^3, ...)\).</p>
+
+<p>Voila donc l'écriture du polynôme initial dans cette <a href="interpol.htm">nouvelle base</a> et ses coefficients ne sont autres que les restes successifs que nous avons obtenus dans les divisions effectuées.</p>
+
+<p>Une autre remarque:<br />
+Dans l'exemple donné, si l'on souhaite calculer la valeur du polynôme pour \((x-1)=-2\), il suffit de multiplier le premier coefficient \(3\) par \(-2\), lui ajouter \(9\), multiplier le résultat par \(-2\) lui ajouter \(7\), et ainsi de suite. Cette méthode est bien plus rapide que celle qui consisterait à calculer chaque terme du polynôme et en faire la somme.</p>
+
+<p>En résumé, on voit qu'il est très simple de calculer la valeur numérique d'un polynôme en l'écrivant sous la forme obtenue plus haut. S'il est donné sous la forme habituelle dans la base formée des puissances de \(x\), comme celui donné initialement, il suffit de l'écrire:</p>
+
+\[3x^5-6x^4+x^3+5x^2-3x-4  \text{ peut s'}\acute{e}\text{crire } (((((3x) - 6)x + 1)x + 5)x - 3)x - 4\]
+
+<p>Le calcul de sa valeur numérique, pour une valeur donnée de \(x\), ne nécessite que deux opérations: la multiplication par un nombre et l'addition d'un nombre. 
+Cette méthode est particulièrement bien adaptée au calcul par ordinateur.</p>
+
+<p>C'est en particulier cette méthode de calcul qui a rendu célèbre Horner ainsi que, par voie de conséquence, sa disposition simplifiée de la division d'un polynôme par un binôme.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

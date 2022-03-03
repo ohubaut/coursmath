@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Sondage, contrôle de qualité... - Statistique - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="probabilités, test, sondage" />
+<meta name="keywords" content="test d'hypothèse, quality control" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Sondage, contrôle de qualité...
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Des élections vont avoir lieu la semaine prochaine. Les instituts de sondages s'en donnent à coeur joie, et... les résultats diffèrent.<br />
+Comment expliquer cela ?<br />
+Tout simplement parce qu'il est impossible d'interroger tous les électeurs (c'est justement pour cela qu'il y a des élections). On choisit un échantillon représentatif d'électeurs et d'après leurs avis on en déduit la tendance générale de la population.</p>
+
+<p>La situation est pareille dans le cas de contrôle de qualité.<br />
+Un producteur fournit des milliers de pièces en garantissant au maximum 2% de pièces défectueuses. Comme il est impossible de contrôler toute la fourniture on choisit un échantillon et en fonction des résultats on accepte ou on refuse le lot.</p>
+
+<p>Voyons cela de plus près dans le cas d'un sondage préélectoral.<br />
+Pour simplifier les choses nous supposerons que la population est très grande et que l'échantillon est formé de \(10\) personnes. Pour des raisons de commodité nous supposerons ces \(10\) personnes tirées indépendamment au hasard: il est donc possible de retrouver plusieurs fois la même personne. C'est évidemment hautement improbable si la population est importante.</p>
+
+<p>Supposons que 90% de la population vote pour moi.<br />
+Dans ce cas la probabilité \(p\) de tomber sur un "bon" électeur est de \(0,9\) et la probabilité \(q\) de tomber sur un "mauvais" est de 0,1.</p>
+
+<p>Dans notre cas prenons un échantillon de (très petite) taille: \(n=10\) et réferons-nous à la <a href="binomial.htm">distribution binomiale</a>. On obtient la probabilité d'avoir \(k\) "bons" électeurs par la formule \(P_n(k)={n\choose k}p^{k}q^{n-k}\)  avec \(p=0,9\) et \(q=0,1\)<br />
+Il est facile de calculer la probabilité d'avoir \(10\) "bons", c'est-à-dire de relever une fréquence égale à \(1\); elle vaut \(1.0,9^{10}.0,1^0=0,349\). (en arrondissant à la troisième décimale)<br />
+Un rien plus difficile : la probabilité d'avoir \(9\) "bons", c'est-à-dire d'avoir une fréquence \(0,9\), vaut \(10.0,1^9.0,9^1=0,387\).<br />
+Avec un rien de patience (et une petite calculatrice !) on obtient le tableau suivant:</p>
+
+<table class="n">
+<tr>
+<td>Fréquence \(f\)<br />relevée dans<br /> l'échantillon</td>
+<td>\(0\)</td><td>\(0,1\)</td><td>\(0,2\)</td><td>\(0,3\)</td><td>\(0,4\)</td><td>\(0,5\)</td><td>\(0,6\)</td><td>\(0,7\)</td><td>\(0,8\)</td><td>\(0,9\)</td><td>\(1\)</td></tr>
+<tr><td>\(p=0,9\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(.001\)</td><td>\(.011\)</td><td>\(.057\)</td><td>\(.194\)</td><td>\(.387\)</td><td>\(.349\)</td></tr>
+</table>
+<p>Dans ce tableau nous lisons que, \(p\) valant \(0,9\), la probabilité d'observer une fréquence \(f=0,8\) (c'est-à-dire d'avoir \(8\) "bons" électeurs sur les \(10\)) vaut \(0,194\).<br />
+Nous pouvons également affirmer qu'il y a moins de \(10\)% de risque d'erreur d'avoir \(8, 9\) ou \(10\) "bons" électeurs dans l'échantillon choisi. En effet, la probabilité de relever une fréquence comprise entre \(0,8\) et \(1\) vaut \(0,194+0,387+0,349=0,930\gt 0,9\).<br />
+Poursuivons les calculs pour d'autres valeurs de \(p\); nous nous limiterons ici aux valeurs décroissant de dixième en dixième.</p>
+
+<p>On obtient le tableau suivant; la valeur \(p\) est disposée verticalement et les fréquences \(f\) observées sont reprises dans les lignes :</p>
+
+<table class="n">
+<tr><th>\(p/f\)</th><th>0</th><th>0,1</th><th>0,2</th><th>0,3</th><th>0,4</th><th>0,5</th><th>0,6</th><th>0,7</th><th>0,8</th><th>0,9</th><th >1</th></tr>
+<tr>
+<th>1</th><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(1\)</td></tr>
+<tr>
+<th>0,9</th><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(.001\)</td><td>\(.011\)</td><td>\(.057\)</td><td>\(.194\)</td><td>\(.387\)</td><td>\(.349\)</td></tr>
+<tr>
+<th>0,8</th><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(.001\)</td><td>\(.006\)</td><td>\(.026\)</td><td>\(.088\)</td><td>\(.201\)</td><td>\(.302\)</td><td>\(.268\)</td><td>\(.107\)</td></tr>
+<tr>
+<th>0.7</th><td>\(0\)</td><td>\(0\)</td><td>\(.001\)</td><td>\(.009\)</td><td>\(.037\)</td><td>\(.103\)</td><td>\(.2\)</td><td>\(.267\)</td><td>\(.233\)</td><td>\(.121\)</td><td>\(.028\)</td></tr>
+<tr>
+<th>0.6</th><td>\(0\)</td><td>\(.002\)</td><td>\(.011\)</td><td>\(.042\)</td><td>\(.111\)</td><td>\(.201\)</td><td>\(.251\)</td><td>\(.215\)</td><td>\(.121\)</td><td>\(.04\)</td><td>\(.006\)</td></tr>
+<tr>
+<th>0.5</th><td>\(.001\)</td><td>\(.01\)</td><td>\(.044\)</td><td>\(.117\)</td><td>\(.205\)</td><td>\(.246\)</td><td>\(.205\)</td><td>\(.117\)</td><td>\(.044\)</td><td>\(.01\)</td><td>\(.001\)</td></tr>
+<tr>
+<th>0.4</th><td>\(.006\)</td><td>\(.04\)</td><td>\(.121\)</td><td>\(.215\)</td><td>\(.251\)</td><td>\(.201\)</td><td>\(.111\)</td><td>\(.042\)</td><td>\(.011\)</td><td>\(.002\)</td><td>\(0\)</td></tr>
+<tr>
+<th>0.3</th><td>\(.028\)</td><td>\(.121\)</td><td>\(.233\)</td><td>\(.267\)</td><td>\(.2\)</td><td>\(.103\)</td><td>\(.037\)</td><td>\(.009\)</td><td>\(.001\)</td><td>\(0\)</td><td>\(0\)</td></tr>
+<tr>
+<th>0.2</th><td>\(.107\)</td><td>\(.268\)</td><td>\(.302\)</td><td>\(.201\)</td><td>\(.088\)</td><td>\(.026\)</td><td>\(.006\)</td><td>\(.001\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td></tr>
+<tr>
+<th>0.1</th><td>\(.349\)</td><td>\(.387\)</td><td>\(.194\)</td><td>\(.057\)</td><td>\(.011\)</td><td>\(.001\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td></tr>
+<tr>
+<th>0</th><td>\(1\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td><td>\(0\)</td></tr>
+</table>
+
+<p>Que pouvons-nous conclure grâce à ce tableau ? Pour une probabilité \(p=0,6\), il y a moins de \(10\)% de risque d'erreur d'affirmer qu'il y aura plus de \(3\) "bons" électeurs, et moins de \(10\)% de risque d'erreur qu'il y en ait moins de \(9\) dans l'échantillon choisi.<br />
+Si on tolère un risque d'erreur de \(10\)% en plus ou en moins, on acceptera le fait que pour \(p=0,6\), il y aura entre \(4\) et \(8\) "bons" électeurs. S'il n'en est pas ainsi on rejettera l'hypothèse faite sur la valeur supposée de \(p\).</p>
+
+<p>Résumons ces conclusions dans un tableau où nous ne garderons que les valeurs acceptables (avec un risque d'erreur de 10% en plus ou en moins).</p>
+
+<img class="droite" alt="" src="test/infe.gif">
+
+<p>En lisant ce tableau "verticalement", on peut donc dire, par exemple, que  si sur les \(10\) personnes interrogées, \(9\) affirment qu'elles voteront pour  moi, la probabilité \(p\) est comprise entre \(0,7\( et \(0,9\( (à \(0,1\) près et un risque d'erreur de \(10\)%).</p>
+
+<p>Il va de soi que cette méthode risque de devenir rapidement impraticable si l'échantillon est plus important. Heureusement, dans ce cas, on sait que l'on peut approcher la loi binomiale par une <a href="normale.htm">loi normale</a>.</p>
+
+<p>On dispose d'abaques reprenant les données avec le risque d'erreur toléré.</p>
+
+<img class="gauche" alt="" src="test/qualcont.gif">
+
+<p>Ci-contre  vous voyez une table correspondant à un risque d'erreur de \(10\)% (\(5\)% en trop, \(5\)% en moins). Sur les courbes sont indiquées les tailles des échantillons testés.<br />
+A titre d'exemple, supposons un échantillon de \(50\) unités, et la fréquence \(f=0,7\) relevée. On en déduit, avec un risque d'erreur de \(10\)%, que \(p\) est compris entre 0.53 et 0.81.</p>
+
+<p>On constate que la précision augmente évidemment avec la taille de l'échantillon; les courbes se resserrent lorsque \(n\) augmente.<br />
+Par contre si on abaissait le risque d'erreur en le ramenant par exemple à \(5\)%, il est évident qu'il faudrait tester un échantillon de plus grande taille. Dans ce cas, on obtiendrait un système de courbes plus espacées.</p>
+
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Équation du second degré - 2e degré - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résolution, Galois, bilinéaire, quadratique, fontions symétriques" />
+<meta name="keywords" content="équation, second degré, algèbre, conjugués harmoniques" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="2de.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-7', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Équation du second degré
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Que peut-on ajouter à propos des équations du second degré&nbsp;? Tout semble avoir été dit et redit. Mais pourtant ...</p>
+
+<p>Les Assyriens et les Egyptiens savaient déjà résoudre l'équation du second degré et il semble que nous n'avons guère fait de progrès dans ce domaine. Nous appliquons encore maintenant une recette: mettre un coefficient en facteur, compléter un carré, factoriser, pour enfin arriver à la fameuse formule donnant les solutions.
+Pourtant il y a déjà plus d'un siècle un certain Evariste <a title="La vie et l'oeuvre d'Evariste Galois" href="../bio/galois.htm">Galois</a> a établi les bases de la théorie des groupes précisément à l'occasion de la résolution des équations algébriques. Comment procédait-il ?</p>
+
+<p>Soit l'équation \(ax^2 + bx + c = 0\) ; si \(x_1\) et \(x_2\) sont des racines (éventuellement complexes) on obtient par identification:</p>
+
+\[ x_1 +x_2 = -\frac{b}{a}\] 
+\[ x_1 x_2 = \frac{c}{a} \]
+
+<p>Ces deux expressions sont des fonctions symétriques des racines (invariantes par permutation de celles-ci).</p>
+
+<p>Résoudre une équation revient à obtenir des fonctions essentiellement non symétriques des racines. Pour une équation du second degré il n'existe qu'une permutation non triviale des racines et par conséquent une fonction non symétrique prendra deux valeurs qui seront solutions d'une équation du deuxième degré. Celle-ci sera résoluble par extraction d'une racine carrée si elle est de la forme \( X^2 = A \); ses deux racines seront opposées.
+Cette fonction doit donc changer de signe lorsqu'on permute les racines \(x_1\) et \(x_2\).</p>
+
+<p>La fonction la plus simple de ce type est \(x_1 - x_2\); son carré est une fonction symétrique des racines et peut donc s'exprimer à l'aide des coefficients \(a, b, c\). On a:</p>
+
+\[ \begin{align} 
+(x_1 - x_2)^2 & = (x_1 + x_2)^2 -4x_1 x_2 \\
+& = \left(-\frac {b}{a}\right)^2  - 4\left(\frac{c}{a}\right)\\
+& = \frac{b^2-4ac} {a^2} 
+\end{align} \]
+
+<p>On obtient:</p>
+
+\[ x_1 - x_2 = \pm\frac { \sqrt{b^2-4ac} }{a}  \]
+
+<p>Cette relation, ajoutée à la relation  \( x_1 + x_2 \ = - \frac{b}{a} \),  permet d'obtenir les deux racines \(x_1\) et \(x_2\).</p>
+
+<p>A propos des fonctions symétriques des racines, on voit apparaître les fonctions symétriques dites élémentaires: somme et produit, qui s'obtiennent sans "résoudre" l'équation, c'est-à-dire rationnellement en fonctions des coefficients.</p>
+
+<p>Nous connaissons la condition pour que 2 paires \((a ,b)\) et \((c, d)\) soient <a title="La relation d'harmonie" href="../mat/harmoni.htm">conjuguées harmoniques</a>:</p>
+
+\[ (a + b)(c + d) = 2(ab + cd)\]
+
+<p>Là aussi, n'interviennent que les fonctions symétriques de \((a ,b)\) et de \((c, d)\).</p>
+
+<a id="B"> </a>
+<p>Si \(x_1\), \(x_2\) sont les solutions de l'équation \(ax^2+bx+c=0\), la condition pour que les deux nombres \((x_3, x_4\) soient conjugués par rapport aux deux racines de l'équation est:</p>
+
+\[(x_1 + x_2)(x_3 + x_4)=2(x_1x_2+x_3x_4)\]
+
+ c'est-à-dire: 
+\[-(\frac{b}{a})(x_3+x_4) = 2(\frac{c}{a} + x_3+x_4)\]
+
+ce qui peut s'écrire:
+
+\[ a x_3 x_4 + b(x_3+x_4)/2 + c  = 0\]
+
+<p>C'est la <a title="Forme bilinéaire associée à une conique" href="conique.htm#B">forme bilinéaire symétrique</a> associée à la forme quadratique  \(ax^2+bx+c\). (Cette notion se généralise lorsque l'on étudie les <a href="conique.htm">coniques</a>.)<br />
+Si de plus \((x_3, x_4)\) sont les racines d'une deuxième équation \(a'x^2 + b'x + c'=0\), on aura:</p>
+\[ a(c'/a') + (b/2)(-b'/a') +c = 0 \]
+
+ou encore 
+
+\[ bb' - 2(ac'+a'c) = 0 \]
+
+<p class="ni">ce qui est la forme bilinéaire symétrique associée cette fois à la forme quadratique  \( b^2-4ac  \).</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="2degrd.htm">Second degré</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

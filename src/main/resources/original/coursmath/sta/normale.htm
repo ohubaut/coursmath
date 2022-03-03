@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Loi normale - Statistique - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="probabilités et statistique" />
+<meta name="keywords" content="binomiale, normale, variance, écart " />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Loi normale
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Partons d'une <a href="binomial.htm">distribution binomiale</a> et faisons tendre le nombre \(n\) d'épreuves vers l'infini.</p>
+
+<p>Si \(p\) est fixé au départ, la moyenne \(np\) tend également vers l'infini; de plus l'écart \(npq\) tend également vers l'infini.<br />
+(Le cas où <i>p</i> varie et tend vers 0 tout en laissant fixe la moyenne <i>m = np</i> sera étudié par ailleurs et donnera lieu à la <a href="poisson.htm">distribution de Poisson</a>).</p>
+
+<p>Si on veut calculer la limite de la distribution binomiale, il s'agira donc de faire un changement d'origine qui stabilise la moyenne, en 0 par exemple, et un changement d'unité qui stabilise l'écart, à 1 par exemple.</p>
+
+<p>Voyons tout d'abord comment varie \(P_n(k)\) en fonction de \(k\) et calculons la différence:</p>
+
+\[  \begin{align} P_n(k+1)-P_n(k)& ={n\choose{k+1}}p^{k+1}q^{n-k-1}-{n\choose{k}}p^kq^{n-k} \\
+& ={n\choose{k}}p^ka^{n-k}\left[\frac{(n-k)p}{(k+1)q}-1\right] \\
+& =P_n(k)\frac{np-k-q}{(k+1)q}
+\end{align}  \]
+
+<p>On en conclut que \(P_n(k)\) est une fonction croissante de \(k\), tant que \(np-k-q\) est positif.<br />
+Remarquons que \(q\lt 1\) et que par conséquent les deux valeurs de \(k\) voisines de la moyenne \(np\) constituent les maxima de \(P_n(k)\).<br />
+D'autre part la différence \(P_n(k+1)-P_n(k)\) est le taux d'accroissement de la fonction \(P_n(k)\) ; il peut s'écrire sous la forme:</p>
+
+\[  \frac{\Delta P_n(k)}{\Delta k} = \frac{P_n(k+1)-P_n(k)}{(k+1)-k}  \]
+
+<p>Si \(n\) devient grand, \(k\) l'est également, pour autant que \(p\) soit fixé et que l'on s'intéresse aux valeurs de la fonction proches de la moyenne; les variations de \(k\) deviennent négligeables par rapport à \(k\). Si l'on effectue un changement de variable adéquat, la variation de la nouvelle variable tend vers 0 et l'on est conduit à effectuer un passage à la limite.<br />
+Remplaçons \(k\) par une nouvelle variable \(x\) dont la moyenne soit \(0\) et telle que son écart vaille \(1\); on a \(x=\Large \frac{k-np}{\sqrt{npq}}\) ; appelons \(F(x)\) l'expression de \(P_n(k)\) en fonction de la nouvelle variable. Le taux d'accroissement de \(F(x)\) vaut:</p>
+
+\[  \frac{\Delta F(x)}{\Delta x}=\frac{\Delta P_n(k)}{\Delta k}\frac{\Delta k}{\Delta x}=\frac{\Delta P_n(k)}{\Delta k}\sqrt{npq} \]
+
+et, en appliquant le résultat trouvé précédemment, on obtient:<br />
+
+\[ \begin{align}
+	\frac{\Delta F(x)}{\Delta x}& =\frac{-(k-np)-q}{(k+1)q}P_n(k)\sqrt{npq} \\
+& =\frac{-[(k-np)+q]np}{\sqrt{npq}}P_n(k) \end{align} \]
+
+<p>Après un passage à la limite pour \(n\) tendant vers l'infini, tenant compte de ce que \(q\lt 1\) et du fait que les valeurs de \(k\) considérées se trouvent au voisinage de la moyenne \(np\), on obtient:</p>
+
+\[ \frac{dF(x)}{dx} = -xF(x) \]
+
+<p>Cette équation peut encore s'écrire: \(\frac{dF(x)}{F(x)} = -x.dx\) et en intégrant les deux membres de cette égalité on obtient \(\mathbf{ln~}F(x)=-\frac{x^2}{2}+K\). Les solutions sont les fonctions \(F(x)=\lambda e^-\frac{x^2}{2}\). 
+La constante est déterminée par la condition que \(\int_{-\infty} ^{+\infty} F(x)dx\), qui représente la somme de toutes les probabilités, vaut 1. On peut montrer que \(\lambda=\large\frac{1}{\sqrt{2\pi}}\) et on obtient donc la loi de <a title="Celui qui a donné son nom à la courbe normale" href="../bio/gauss.htm">Gauss</a>, dite loi normale.</p>
+
+<img alt="" src="norm/fig.gif"><br />
+
+\[  F(x)=\frac{1}{\sqrt{2\pi}}e^-\frac{x^2}{2} \]
+
+
+
+<p>En revenant aux variables non normées, on obtient:</p>
+<br />
+\[ \large\frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} {(\frac{x-m}{\sigma})^2}} \]
+
+<p>Cette loi régit sous des conditions très générales, et souvent rencontrées, beaucoup de <a title="On utlise la loi normale en athlétisme!" href="../app/decathl.htm">phénomènes aléatoires</a>.</p>
+
+<!--<p>Ci-dessous, nous vous présentons la "<b>Planche de Galton</b>" qui visualise le lien entre une distribution binomiale avec p=q=1/2 et la loi normale ; la valeur de n peut être choisie parmi les nombres pairs de 2 à 14.</p>
+
+<applet codebase="jgalton" code="pyramide2.class" width=400 height=420>
+<param name="nombre_rangee" value=8>
+<p style="color:red;">Désolé, cette application nécessite java; vérifiez si <u><a href="../3di/index.html#J" target="_blank">Java est installé</a></u> sur votre poste de travail.
+</applet>
+
+<p>Cette très belle <a href="http://www-sop.inria.fr/mefisto/java/tutorial1/node10.html" target="_blank">réalisation</a> provient de l'Université Sophia Antipolis.</p>
+-->
+<p>Ci-dessous, nous vous présentons la "<b>Planche de Galton</b>" qui visualise le lien entre une distribution binomiale avec p=q=1/2 et la loi normale. </p>
+
+<div class="centre" style="width:600px; border:none;">
+<iframe width="575" height="600" src="http://blog.vctr.me/experiments/central-limit-theorem.html"></iframe>
+</div>
+
+<p>Cette <a href="http://blog.vctr.me/" target="_blank">réalisation</a> provient de Victor Powell.</p>
+
+<p>Pour ceux qui souhaiteraient reproduire cette expérience, signalons que le problème que l'on rencontre est la nécessité qu'à chaque niveau, les billes tombent exactement au milieu de l'obstacle situé au niveau inférieur.<br />
+Pour cela, nous vous conseillons de ne surtout pas utiliser des clous(!) mais plutôt des boulons à tête hexagonale. Ils doivent être régulièrement espacés d'une distance très légèrement supérieure à la taille des billes comme indiqué sur le figure ci dessous.</p>
+
+<img alt="" src="norm/galton.gif">
+
+<p>Il est indispensable que les billes soient introduites une à une et avec un intervalle de temps suffisant grand. Cela peut être facilement réalisé à l'aide d'un dispositif qui débloque à intervalle régulier l'accès initial.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

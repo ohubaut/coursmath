@@ -1,0 +1,16 @@
+Dimensions
+
+1 - http://www.youtube.com/watch?v=abvtNhvFM4c dimension 2
+2 - http://www.youtube.com/watch?v=DvCCz4MJJhA  dimension 3
+3 - http://www.youtube.com/watch?v=ZZEdE2g_YDM dimension 4
+4 - http://www.youtube.com/watch?v=gLGyd7CcVC8 dimension 4 suite
+5 - http://www.youtube.com/watch?v=BosTQT4smJA nombres complexes
+6 - http://www.youtube.com/watch?v=NdpArmitQjo nombres complexes suite
+7 - http://www.youtube.com/watch?v=tX_NUlO_tbw fibration
+8 - http://www.youtube.com/watch?v=ECHNPCTLL8c  fibration suite
+9 - http://www.youtube.com/watch?v=05eQLnxsTd0 Preuve
+
+
+pour insérer le 2 :
+
+<iframe width="480" height="360"  src="http://www.youtube.com/embed/DvCCz4MJJhA" frameborder="0" allowfullscreen></iframe>

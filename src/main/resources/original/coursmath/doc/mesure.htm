@@ -1,0 +1,460 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Documents - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résumés" />
+<meta name="keywords" content="groupes, musique, algèbre, géométrie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="doc.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript">
+    function pdf(fichier) 
+{window.open(fichier,'pdf','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-11', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<br>
+<div class="droite" style="text-align:right;"><a href="javascript:pdf('mesure-pdf.pdf');">Télécharger la version pdf (13 pages)</a><br>
+<a href="javascript:pdf('mesure-1.pdf');">Annexe 1 (2 pages)</a><br>
+<a href="javascript:pdf('mesure-2.pdf');">Annexe 2 (1 pages)</a>
+</div>
+<br><br><br>
+	<div class="titre">
+	<br />
+	Mesure des grandeurs
+<br />
+	</div>
+	<div class="stitre">
+par<br><br>
+<b>Xavier Hubaut</b><br><br>
+Professeur émérite - Université Libre de Bruxelles - Département de Mathématique
+	</div>
+<br /><br />
+<a id="H"></a>
+	<div class="central">
+		<div class="texte">
+<p>Depuis la plus haute antiquité les hommes ont été amenés à quantifier les choses.<br>
+<p>Deux situations très distinctes se présentaient:
+<ul>
+<li>on <b>dénombrait</b> (nombre de bêtes dans un troupeau, nombre d'hommes en mesure de mener une attaque, nombre de jours, etc...), c'est-à-dire que le résultat était un <b>naturel</b>.
+<li>on <b>mesurait</b> (un terrain, des quantités de grains, des distances à parcourir, etc...), ce qui signifie qu'on comparait à une grandeur de même nature prise comme référence (unité) et le résultat était un <b>réel</b>.
+</ul>
+<p>Nous nous intéresserons plus particulièrement aux mesures, sans pour autant en faire l'historique, mais tout simplement pour y relever quelques points qui nous ont semblé intéressants.<br>
+
+<P>Pour un physicien, on utilise des unités fondamentales et des unités dérivées, c'est-à-dire construites à partir des fondamentales. On utilise le système MKS (mètre, kilogramme, seconde), mais aussi le système MKSA (constitué des mêmes unités auxquelles on adjoint l'ampère). On a standardisé ces choses, quoi qu'il subsiste encore une exception aux Etats-Unis, où on continue à utiliser les anciennes mesures anglo-saxonnes.<br>
+Le système international comporte 7 <a href="#base">unités de base</a> (longueur, masse, temps, intensité électrique, température, intensité lumineuse et quantité de matière) et beaucoup d'<a href="#deri">unités dérivées</a>; par exemple la fréquence qui est le nombre de périodes par unité de temps, etc...<br>
+De plus on utilise évidemment des multiples et sous-multiples décimaux de ces unités dénommées à l'aide de <a href="#pref">préfixes</a> dont nous donnons plus loin la liste.<br>
+
+<P>Remarquons que parmi les unités dérivées on ne trouve pas d'unité de surface, de volume. Cela résulte que depuis très longtemps on s'est rendu compte que pour mesurer ces grandeurs il suffisait de connaître des méthodes permettant de calculer celles-ci à partir de certaines longueurs et cela donne évidemment naissance à des unités <i>directement</i> dérivées, le mètre carré, le mètre cube.<br>
+Il en est de même pour des grandeurs telles vitesse, accélération.<br>
+
+<p>D'autre part on continue à utiliser certaines unités spécifiques qui ne font pas partie du système international, tel le mille marin, le litre, etc...<br>
+Par exemple en médecine, on vous annonce une tension de 13-8, ce qui est en fait 130-80 (en <b>mm de mercure</b>), mais on n'utilise pas les hectopascals qui donneraient approximativement 173-106. Peut-être ne veut-on pas effrayer les patients ?<br>
+De même vous regardez cette page sur votre écran de 15", 17" peut-être 21" ou même 27". Ici on utilise le <b>pouce</b>. Mais ceci dit, vérifiez si la diagonale de votre écran est effectivement celle indiquée ? Si vous ne possédez pas un écran plat, cette dimension n'est-elle pas plutôt celle de la diagonale de la plus petite boîte pouvant contenir l'écran ? (auquel il faut encore ajouter l'emballage en polystyrène expansé pour faire plus impressionnant !)<br>
+Le pétrole est encore toujours coté au <b>baril</b>, qui vaut 42 <b>gallons</b>.<br>
+On taxe votre voiture d'après sa puissance exprimée en chevaux-vapeur (CV ou HP), alors qu'il faudrait parler de Watts. Remarquons au passage qu'un <b>cheval-vapeur</b> vaut approximativement 736W, mais que les chevaux de sa gracieuse majesté sont plus puissants et qu'un HP vaut environ 750W !<br>
+La vitesse du vent en mer est encore toujours annoncée en <b>beaufort</b> et pour les supersoniques en <b>mach</b>.<br>
+Et que dire quant aux mesures des vêtements...<br>
+
+<p>De toutes manières, se limiter aux mesures du SI est une vision trop simpliste. En effet, on mesure bien d'autres grandeurs, des prix, des intensités sonores, des pointures de chaussures, des tailles de vêtements, etc... qui, bien que faisant partie de notre quotidien, ne sont pas encore standardisées.<br>
+
+<p>Ceci dit il n'est pas inintéressant de reprendre certaines mesures classiques.<br>
+
+<p>Les unités d'électromagnétisme, d'éclairement, de quantité de matière sont trop récentes pour qu'il y ait beaucoup de divergences. Il n'en est pas de même pour d'autres.<br>
+
+<p class="st">Mesure des longueurs</p>
+<p>Pour mesurer des longueurs, la première idée a été d'utiliser les parties du corps et plus précisément les mains, voire les bras, et les pieds.<br>
+C'est ainsi qu'on parle de <b>pouce</b>, de <b>palme</b>, d'<b>empan</b>, de <b>coudée</b>, d'<b>aune</b>, de <b>pied</b>, de <b>pas</b>, etc...<br>
+Bien vite on s'est rendu compte qu'il fallait "standardiser" ces mesures, car les êtres humains diffèrent trop les uns des autres, et les remplacer par des instruments.<br>
+De plus les grandeurs mesurées étaient très variables, allant d'une partie du corps à la longueur d'un champ et même la distance terre-lune! Il fallait donc introduire des multiples ou des sous-multiples des unités utilisées.<br>
+Actuellement il nous paraîtrait "naturel" de prendre des unités 10 fois, 100 fois, 1000 fois,... plus grande ou plus petites. Mais ce serait oublier que le système décimal ne date que de la révolution française et que d'ailleurs il ne s'est pas imposé partout. Certains domaines résistent (mesure du temps, des angles,...) certains pays également (les USA).<br>
+Mais, anciennement d'autres multiples et sous-multiples étaient utilisés.<br>
+
+<p>Prenons l'exemple des mesures anglo-saxonnes:<br>
+<ul>
+<li>le <b>pouce</b> (inch) (environ 2,54 cm) est subdivisé en 16, mais également en 12 lignes;
+<li>le <b>pied</b> (foot) vaut 12 pouces ;
+<li>la <b>verge</b> (yard) vaut 3 pieds ;
+<li>la <b>toise</b> (fathom) vaut 2 pieds ;
+<li>la <b>chaîne</b> (chain) vaut 22 yards ;
+<li>le <b>stade</b> (furlong) vaut 10 chaînes ;
+<li>le <b>mille</b> (mile) vaut 1760 yards ou 80 chaînes.
+</ul>
+<p>Signalons qu'on trouve également 1 <b>pied</b> valant 4 <b>palmes</b> ou 16 <b>doigts</b> !<br>
+
+<p>La chaîne (d'arpenteur) avait été inventée en 1624 par un mathématicien anglais Edmund Gunther. Elle est toujours en usage actuellement pour l'arpentage. Elle mesure 22 yards de long et est divisée en 100 <b>maillons</b> (links) d'environ 20,12 cm. Par conséquent, la chaîne de Gunther décimalisait les mesures d'arpentage existantes sans les perturber.<br>
+
+<p>On constate la diversité des multiples, la présence de 10 lié à l'écriture (et au nombre de doigts), de 12 qui a l'avantage de posséder beaucoup de diviseurs et, curieusement, de 11 dont nous ignorons la raison.<br>
+Par contre pour les sous-multiples il a été naturel de diviser le pouce en 2, puis encore en 2 (ce qui a parfois été fait avec le pied). La suite varie. Sur les lattes des écoliers, on trouvait les pouces divisés en 8 lignes; peut-être que la représentation d'un seizième de pouce aurait posé des problèmes de lisibilité. Mais on utilise également une subdivision en 12.<br>
+
+<p>Nous n'entreprendrons pas une analyse détaillée des origines de ce système que l'on retrouvait dans beaucoup de pays et qui proviennent de systèmes parfois fort anciens.<br>
+En France, jusqu'à la révolution, les mesures étaient régionales. Il y avait l'aune de Bordeaux, de Troyes, de Paris,... avec des différences pouvant atteindre 80%.<br>
+Devant cette anarchie la révolution voulut rationaliser le système de mesures (pas seulement celles de longueur, mais également de surface, de volume de capacité, ..) et les décimaliser.
+La décimalisation du système métrique a heureusement mis (partiellement) fin à la diversité des mesures utilisées.<br>
+
+<p>N'oublions pourtant pas que d'autres mesures restent bien vivantes:
+<ul>
+<li>le <b>mille marin</b> (1852 mètres) qui représente (approximativement) la longueur d'une minute d'arc à l'équateur: 1852m*60*360 est très proche de 40000 km, approximativement la longueur d"un grand cercle.
+<li>bien plus grand, l'<b>année-lumière</b> (distance parcourue par la lumière en un an) utilisée par les astronomes (l'étoile la plus proche est située à 4 années-lumière. Une année lumière vaut environ 9,46.10<sup>15</sup>m
+<li>toujours plus grand, le <b>parsec</b>. C'est la distance à laquelle la distance de la Terre au Soleil (apparaît sous un angle apparent de 1 seconde d'arc; il vaut environ 3,08.10<sup>16</sup>m
+<li>en descendant vers les petites longueurs, on trouve le <b>point</b> qui vaut 1/72 de pouce (ou 1/6 de ligne) et le <b>pica</b> qui équivaut à l/6 pouce; ces mesures sont utilisées par les informaticiens et les imprimeurs.
+<li>toujours plus petit; l'<b>Ångström</b> utilisé par les spectroscopistes qui vaut 10<sup>-10</sup>m
+</ul>
+
+<p class="st">Mesures de poids</p>
+<p>La même anarchie régnait parmi les mesures de poids. On trouvait différentes unités: la <b>livre</b>, l'<b>once</b>, le <b>gros</b>, le <b>denier</b>, le <b>grain</b>. Non seulement ces mesures variaient de région à région, mais, bien que portant le même nom, elles différaient suivant la nature de la grandeur pesée (et cette distinction n'était pas innocente: l'unité de mesure pour un produit rare était généralement plus petite que celle utilisée pour un produit plus courant).<br>
+<br>
+En 1803 on précisa que: <br><i>"La livre nouvelle pèse mille grammes. Le gramme est égal au poids d'un centimètre cube d'eau distillée pris à son maximum de densité et pesé dans le vide".</i><br>
+Madame Anne Debroise, journaliste scientifique, nous a très aimablement communiqué les précisions suivantes :<br>
+Le gouvernement n'arrivait pas à imposer sa réforme du système métrique. Napoléon eut donc l'idée de revenir aux noms anciens, mais en gardant les valeurs nouvelles (d'où une livre valant un kg). Mais cela ne fonctionna pas non plus. Il retourna en 1812 aux anciens noms désignant les valeurs anciennes. La livre a donc, à l'époque, retrouvé sa valeur d'à peu près 500 g (en fait les livres des différentes régions oscillaient entre 404g et 552g).<br>
+En 1837, la Restauration supprime définitivement les mesures autres que celles du système métrique, les poids sont calculés en grammes.<br>
+La livre continue cependant d'exister (non officiellement) avec une valeur de 500g (et non 1000g); on parle encore d'une demi-livre de beurre pour désigner un paquet de 250g.<br>
+<p class="st">Mesures de temps</p>
+<p>Ici la décimalisation n'a pas tenté de s'imposer. Tout le monde (sauf peut-être au delà du cercle polaire) était d'accord sur ce qu'était un jour. Restait à le subdiviser, mais cela était déjà fait depuis l'antiquité.</p>
+
+<p>La Convention, par la voix de Prieur de la Côte d'Or, reconnaît que la décimalisation du jour et de l'heure n'apporterait <i>"qu'une confusion infiniment gênante dans les usages les plus familiers, sans donner en compensation des avantages proportionnés.</i>.<br>
+
+<p>Par contre la subdivision de l'année fut remise en question.<br>
+En gros il y avait deux types d'années: l'année lunaire (chez les Juifs et les Musulmans) et l'année solaire (chez les Chrétiens). On n'allait pas changer cela, mais pour l'année solaire qui était en vigueur en Europe (que le calendrier soit julien ou grégorien) restait la subdivision.<br>
+Il y eut le célèbre calendrier républicain qui continuait à subdiviser l'année en 12 mois dont les noms avaient été choisis par le poète Philippe Fabre d'Eglantine (1750-1794):<br>
+<br>
+<table class="n">
+<tr><td><b>Printemps</b></td><td><b>Eté </b></td><td><b>Automne </b></td><td><b>Hiver </b></td></tr>
+<tr><td>Germinal</td><td>Messidor</td><td>Vendémiaire</td><td>Nivôse</td></tr>
+<tr><td>Floréal</td><td>Thermidor</td><td>Brumaire</td><td>Pluviôse</td></tr>
+<tr><td>Prairial</td><td>Fructidor</td><td>Frimaire</td><td>Ventôse</td></tr>
+</table>
+<br>
+<p>La Convention nationale, après avoir entendu son comité de l'instruction publique, décrète ce qui suit:<br>
+<i>L'ère des Français compte de la fondation de la république, qui a eu lieu le 22 septembre 1792 de l'ère vulgaire, jour où le soleil est arrivé à l'équinoxe vrai d'automne, en entrant dans le signe de la balance à l heures 18 minutes 30 secondes du matin, pour l'observatoire de Paris.</i><br>
+
+<p>Le mois comptera 3 décades de 10 jours et il faudra évidemment leur adjoindre 5 jours complémentaires, jours des fêtes de la vertu, du génie, du travail, de l'opinion, des récompenses (et même un 6ème les années bissextiles).<br> 
+
+<p>L'idée de Bonaparte était de faire de la religion catholique une religion d'état. C'est ce qui marqua la fin du calendrier républicain. Le 22 fructidor an XIII (9 septembre 1805), un peu avant l'arrivée de Pie VII, le Sénat décrète que <i>"à dater du 11 nivôse prochain, le calendrier grégorien sera remis en usage dans tout l'Empire français"</i>.<br>
+
+<p>A titre anecdotique signalons le calendrier <b>pataphysique</b><br>
+Rappelons que le collège de pataphysique était formé d'une bande de joyeux drilles pour la plupart, mathématiciens, physiciens ou ingénieurs. Mentionnons Raymond Queneau, Boris Vian, François Le Lionnais, Claude Berge, Georges Perec, Olivier Salon et bien d'autres.<br>
+L'idée n'est pas aussi farfelue que ce à quoi on aurait pu s'attendre; bien au contraire.<br>
+L'année solaire compte 365 jours (un rien plus en réalité) et le mois lunaire 28 jours (et des poussières). Or 13*28 = 364 d'ou:<br>
+12 mois de 28 jours + 1 mois de 29 jours (= 365 jours); les années bissextiles on ajoute le 29 Gidouille<br>
+Les noms sont les suivants:</p>
+<ul>
+<li>Absolu (du 8 septembre au 5 octobre), 
+<li>Haha (du 6 octobre au 2 novembre),
+<li>As (du 3 novembre au 30 novembre),
+<li>Sable (du 1er décembre au 28 décembre),
+<li>Décervelage (du 29 décembre au 25 janvier),
+<li>Gueules ( du 26 janvier au 22 ou 23 février),
+<li>Pédale (du 23 ou 24 février au 22 mars)
+<li>Clinamen (du 23 mars au 19 avril),
+<li>Palotin (du 20 avril au 17 mai),
+<li>Merdre (du 18 mai au 14 juin),
+<li>Gidouille (du 15 juin au 13 juillet = 29 jours),
+<li>Tatane (du 14 juillet au 10 août),
+<li>Phalle (du 11 août au 7 septembre).
+</ul>
+<p class="ni">Rappelons que la nativité (celle d'Alfred Jarry) se fête le 8 septembre !</p>
+
+<p class="st">Mesure des températures</p>
+<p>Le premier thermomètre véritable a été inventé à Florence en 1654 par le grand duc de Toscane. L'appareil, à alcool, portait 50 graduations. 
+Ce thermomètre, divisé en 50 degrés, ne dépassait pas 40 degrés l'été à Florence; l'hiver, il y descendait parfois jusqu'à 7; dans la glace fondante, il marquait 13,5 degrés.<br>
+Puis en 1702, l'astronome danois Ole Roemer (1644-1710) fabrique un thermomètre à alcool marquant l'eau bouillante à 60° et la glace pilée à 8°.<br>
+<p>En 1717, le savant allemand <b>Fahrenheit</b> (1686-1736) remplace l'alcool par du mercure. Il fixa à 0° la température d'un mélange de glace fondante et de sel à l00° la température normale du sang. Il donne au thermomètre sa forme définitive.<br>
+<p>En 1730, <b>Réaumur</b>, physicien et naturaliste français, construisit le thermomètre à alcool pour lequel il utilisait l'échelle 0-80.<br>
+<p><b>Celsius</b>, physicien suédois (1701-1744) construisit en 1742 un thermomètre à mercure qui marquait 100° au point de congélation de l'eau et 0° au point d'ébullition de l'eau ! Mais en 1745, <b>Linné</b> (1707-1778) inversa l'échelle des températures et présenta à l'Académie suédoise un thermomètre à mercure qui marquait 0° pour la glace fondante et 100° pour l'eau bouillante.<br>
+<p>En 1794, la Convention a décidé que le <i>"degré thermométrique serait la centième partie de la distance entre le terme de la glace et celui de l'eau bouillante"</i>. En octobre 1948, le nom de degré Celsius a été choisi par la 9<sup>e</sup> Conférence Internationale des Poids et Mesures.<br>
+
+<p>Choisir une échelle de 0 à l00, fut très difficile car le choix d'une telle échelle impliquait l'utilisation de nombres négatifs. Au XVII<sup>e</sup> siècle on ne maîtrisait pas encore les nombres négatifs.<br>
+
+<p>Nous avons donc plusieurs échelles de mesure des températures : l'échelle Celsius nommée centigrade jusqu'en 1948 adoptée par la plupart des nations, l'échelle Fahrenheit adoptée par les pays anglo-saxons, et l'échelle Réaumur à peu près abandonnée.<br>
+Nous avons également l'échelle absolue, utilisée par les scientifiques dont l'unité est le Kelvin ou K (lord <b>Kelvin</b>, 1824-1907) : glace fondante 273.15°C, ébullition 373.15°C. Un degré K correspond à un degré Celsius, mais 0 K, le zéro absolu, est -273.15° Celsius, limite approchée de très près aujourd'hui.<br>
+
+<p class="st">Mesure des prix</p>
+<p>A nouveau une très ancienne nécessité qui s'est imposée pour substituer la monnaie au troc fort incommode.<br>
+En France l'unité était:
+<ul>
+<li>la <b>livre</b> (tournoi); ses sous multiples étaient:
+<li>le <b>sol</b> ou <b>gros</b>: 20 sols = 1 livre,
+<li>le <b>liard</b>: 4 liards = 1 sol
+<li>le <b>denier</b>: 12 deniers = 1 sol
+<li>l'<b>obole</b>: 2 oboles = 1 denier, 
+<li>ainsi qu'un multiple de la livre, l'écu: 1 <b>écu</b> = 3 livres
+</ul>
+<p>Dans le système britannique on retrouvait jusque dans les années 1960 cette subdivision: 1 <b>livre sterling</b> = 20 shillings (sols ou sous) et 1 <b>shilling</b> = 12 pence pluriel de <b>penny</b> (abrégé en d, initiale de denier). On trouvait également la <b>guinée</b> = 21 shillings utilisée surtout pour le prix des vêtements.<br>
+
+<p>En France, la livre est devenue le <b>franc</b>; on parle encore de liards et de deniers et de sous (quatre sous, vingt sous et cent sous).<br>
+
+<p class="st">Mesure des angles</p>
+<p>Un échec de la décimalisation: la mesure des angles ! La mesure en <b>degré</b>, <b>minute</b>, <b>seconde</b> était trop bien implantée depuis l'antiquité.<br>
+
+<p>Les Babyloniens (18 siècles avant JC) avaient divisé le cercle en 360 parties et 4 siècles avant JC, les Chinois le divisaient autant de parties que l'année comptait de jours (12 mois de 30 jours) soit 360.<br>
+Les Grecs désignaient le degré par "moira", mot exprimant l'idée de partage du cercle, traduit par les Arabes par le mot " daraja" signifiant "marche d'escalier" ; ce mot est devenu " gradus" en latin médiéval. Le mot "degré" vient donc de "gradus" signifiant "marche d'escalier" également. <br>
+Les mots "minutes" et "secondes" proviennent des traductions latines d'expressions grecques signifiant "premier soixantième" et "deuxième soixantième" : "pars minuta prima" (première petite part) et "pars minuta seconda" (seconde petite part). Ceci explique que ces mêmes mots sont aussi les premiers et seconds soixantièmes de l'heure.<br>
+Les notations du degré, minute et seconde sont relativement modernes : le "petit rond du degré" est dû à Jacques Peletier (1517-1582)<br>
+
+<p>Bref, puis des siècles l'angle droit mesurait 90 <b>degrés</b>, et lors de la décimalisation on s'imagina qu'il n'y aurait pas trop de difficultés à le diviser en 100 <b>grades</b>. Par son décret du 1<sup>er</sup> août 1793, la Convention sautait le pas: le degré d'angle était remplacé par le grade ou degré décimal, valant 0,9 degré sexagésimal.<br>
+S'attaquer à une tradition tellement ancienne était voué à l'échec, mais il faut admettre qu'elle était assez cohérente avec le reste de la décimalisation. En effet le mètre avait été défini comme la 10 millionième partie du quart du méridien terrestre.<br>
+Le quart du méridien terrestre correspond à un angle de 90°, soit 100 grades. Cela signifie que sur un grand cercle, par exemple l'équateur, 1 grade représentait 100 000m, un centième de grade 1km. Avec les degrés un degré correspond à 111 111m et une minute à 1.852km (un <b>mille marin</b>).<br>
+Hélas on ne modifie pas facilement une tradition vieille de 20 siècles et, à l'heure actuelle, il n'y a plus guère que les géodésiens et les topographes qui utilisent le grade.<br>
+
+<p>L'unité "officielle" est le <b>radian</b>, angle (environ 57.295°) qui soutend un arc de cercle dont la longueur vaut le rayon.<br>
+Ce n'est évidemment pas l'unité qu'utilisera monsieur ou madame tout-le-monde, mais elle présente d'incontestables avantages sur le plan scientifique. Par exemple la dérivée de sin<i>x</i> ne vaut cos<i>x</i> que si <i>x</i> est exprimé en radians ! Autrement il faut corriger par un facteur multiplicatif.<br>
+Ce n’est qu’en 1873 qu’apparaît pour la première fois le mot radian, imprimé dans des textes d’examens proposés au Queen’s College de Belfast par James Thomson, même si cette émergence était préparée par plus d’un demi-siècle d’utilisation implicite.<br>
+
+<p>En bref une seule unité officielle que 99% des gens n'utilisent pas et une unité hors-système, le degré, que tous les autres continuent à employer.<br>
+
+<p class="st">Mesure de la lumière</p>
+<p>Les propriétés lumineuses n'ont été quantifiées que fort tard. Les premières unités datent de la fin du XVIII<sup>e</sup> siècle.<br>
+A titre du curiosité mentionnons le <b>carcel</b>, du nom du Français Bertrand Carcel (1750-1812), inventeur de la lampe Carcel (lampe à huile avec mouvement d'horlogerie) : c'était la luminosité d'une lampe à huile dont la mèche avait 7 mm de diamètre et qui brûlait 42 g d'huile de colza à l'heure.<br>
+Fin du XIX<sup>e</sup> siècle on faisait référence aux sources lumineuses de l'époque. Elles étaient dénommées <b>bougie</b>, décimale et ensuite nouvelle. Elles utilisaient la luminosité du platine (métal fort en vogue dans les définition des unités de mesure).<br>
+On trouvait également le phot, le nit, le stilb et le lambert.<br>
+
+<p>D'une manière plus concrète, on peut facilement imaginer les grandeurs nécessaires à la description d'une situation où intervient la lumière.<br>
+Une source lumineuse éclaire une surface : il faut connaître son intensité qu'on mesurera en <b>candela</b>. Cette source envoie dans un angle solide un flux qu'on mesurera en <b>lumen</b>. Ce flux éclaire la surface ; l'éclairement est mesuré en <b>lux</b> (lumen par mètre carré). Cette surface est éclairée, donc possède une luminance qui se mesurera en candela par mètre carré.<br>
+
+<p>Bien que son unité ne fasse pas partie du système international, on utilise la vergence d'un système optique. Si le terme "vergence" ne fait pas partie du langage commun (quoi que divergence, convergence,..), son unité est bien connue et utilisée par tout le monde : la <b>dioptrie</b>, qui est la vergence d'un système optique ayant un mètre de distance focale dans un milieu dont l'indice de réfraction est 1.<br>
+
+<p class="st">Mesure du son</p>
+<p>Contrairement à ce que l'on pense le <b>décibel</b> n'est pas une mesure, telle que le mètre ou bien encore le kilo, mais un rapport. Les décibels constituent une échelle numérique utilisée pour comparer les valeurs de quantités semblables, (habituellement puissance ou intensité) et sont en fait indépendants de la nature de la grandeur.<br>
+Si v<sub>1</sub> et v<sub>2</sub> sont deux valeurs, le nombre de db vaut 10 fois le logarithme en base 10 du rapport v<sub>1</sub>/v<sub>2</sub><br>
+
+<p>Il se fait que le décibel est essentiellement utilisé en électronique et en acoustique.<br>
+Notre oreille perçoit des bruits allant du bruissement du feuillage d'un arbre jusqu'à celui des réacteurs au décollage, ce qui correspond à d'énormes différence de pression sur le tympan; l'oreille est capable de percevoir une pression allant de 20 µPa à 1 million de fois plus.<br>
+
+<p>Physiologiquement on estime que la sensation est approximativement proportionnelle au logarithme de l'intensité. On a donc choisi de prendre une échelle logarithmique. La base des logarithmes utilisés est la base 10. A une intensité doublée, c'est-à-dire multipliée par 2, devrait donc correspondre une mesure augmentée de log<sub>10</sub>2 = 0.30103..<br>
+On a préféré multiplier cette mesure par 10 et c'est ce qui définit le décibel, ou tout au moins l'écart en dB. Une intensité sonore doublée correspond à une augmentation de 3dB.<br>
+Reste à définir le zéro.<br>
+0 dB est la limite inférieure de perception sonore humaine pour une fréquence de 1 000 Hz, correspondant à une pression de 20 µPa (micro Pascals).<br>
+
+<p class="st">Mesure des chaussures</p>
+<p>Pour indiquer la pointure, il existe plusieurs normes utilisées par les fabricants :
+<ul>
+<li>Le point de Paris ou <b>pointure française</b> s'exprime en 2 chiffres. Il y a 3 pointures dans 2 centimètres. C'est une mesure employée par les anciens bottiers. Cela explique que les fabricants de sport utilisent des tiers de pointures quand il indiquent les pointures dans plusieurs mesures. Une pointure représente 6,66 millimètres, une demi pointure fait donc 3,33 millimètres.
+<li>La <b>pointure anglaise</b>: la grille part du 0, zéro, qui correspond à la pointure 15 du point français et va jusqu'au 13,5 (soit le 32 et demi en point français) et recommence au 1 (33 en point français) jusqu'au 15 (50 en point français).
+<li>Le <b>point américain</b> correspond à la pointure anglaise à laquelle on ajoute 1 en femme et 1 demi en homme.
+<li>Le <b>point italien</b> correspond au point de Paris plus une taille.
+<li>La <b>pointure centimétrique</b> n'est pratiquement pas utilisée sauf dans des fabrications très spéciales destinées à certaines professions. 
+<li>Le <b>mondo point</b> est une nouvelle norme ISO internationale pour tenter d'unifier les autres grilles. Les demi-pointures anglaises passent de 4.23 à 1 millimètre et les pointures françaises passent de 6.66 à 1.50 millimètre. Cela permet aux fabricants de gagner 2 pointures dans les assortiments homme et femme sans perte de confort.
+</ul>
+
+<p class="st">Mesure des vêtements</p>
+<p>La situation est tellement mouvante que nous renonçons à la décrire.<br>
+Des études sont en cours pour déterminer l'homme, la femme moyen(ne) afin d'uniformiser les tailles qui varient de pays à pays.<br>
+Nous nous bornerons à décrire les mesures d'un seul vêtement, à savoir le soutien-gorge.<br>
+
+<p class="st">Mesure des soutiens-gorge</p>
+<p>1. Mesure de la taille<br>
+<br>
+La taille d'un soutien-gorge est constitué d'un nombre et d'une lettre. Le nombre correspond au tour de poitrine et la lettre à la profondeur de la poitrine. La mesure du tour de poitrine se prend au niveau de la pointe des seins. Le tour de buste (ou tour de dos) se prend juste sous les seins.<br>
+Dans les tailles euros le nombre correspond au tour de buste.<br>
+<p>2. Mesure de la taille des bonnets<br>
+<br>
+La différence entre le tour de poitrine et le tour de buste permet de calculer la profondeur de bonnet adaptée : <br>
+<ul>
+<li>10 cm = bonnets A
+<li>15 cm = bonnets B
+<li>17.5 cm = bonnets C 
+<li>20 cm = bonnets D 
+<li>22.5 cm = bonnets E
+<li>25 cm = bonnets F
+</ul>
+<p>Il semble toutefois qu'actuellement on abandonne cette façon de faire au profit de la méthode anglo-saxonne décrite ci-dessous  (quelle régression !)</p>
+
+<p>Dans les pays anglo-saxons on procède d'une manière un peu différente, et les échelles varient légèrement.<br>
+Il faut mesurer le tour de dessous de buste (ou de dos), juste sous les seins, en pouces bien entendu. Si c'est un nombre pair, on ajoute 6 pouces; si c'est un nombre impair, on n'ajoute que 5 pouces (car il n'existe que des tailles paires). C'est la taille de la base du soutien-gorge. En fait on a donné pour la poitrine un forfait de 5 ou 6 pouces.<br>
+Il faut ensuite mesurer le tour de poitrine, au niveau de la pointe des seins, pour déterminer la taille des bonnets. Cette mesure doit être soustraite de la taille de la base (c'est une sorte de correction) et on détermine la taille des bonnets d'après la différence.
+<ul>
+<li>&lt;1/2 pouce = AA
+<li>1 pouce = A
+<li>2 pouces = B
+<li>3 pouces = C
+<li>4 pouces = D
+<li>5 pouces = DD.
+</ul>
+<p>Pour clôturer sur un clin d'œil, signalons que la méthode mnémotechnique est évidemment plus simple.</p>
+<ul>
+<li>AA = Absolument absent
+<li> A = Amusant
+<li> B = Bien
+<li> C = Chouette
+<li> D = Dément
+<li> E = Enorme
+<li> F = Faux
+</ul>
+<br> 
+<div class="centre"><hr style="width:70%;"></div>
+<br>
+
+<p class="st">Appendice 1: Le Système International d'unités (SI)</p>
+<p>En 1960, lors de la onzième Conférence générale des poids et mesures, apparaît le Système International d'unités qui comprend aujourd'hui deux classes d'unités :<br>
+<ul>
+<li>les unités de base, (au nombre de sept) 
+<li>les unités dérivées 
+</ul>
+<p>Ce système reste évidemment ouvert aux progrès de la science et des technologies ainsi qu'aux besoins en termes d'exactitude.<br>
+
+<a id="base"></a>
+<div class="centre">
+<p class="st">Unités de base</p>
+</div>
+
+<table class="n">
+<tr><td><b>Nature</b></td><td><b>Unité</b></td><td><b>Symbole</b></td><td><b>Définition</b></td></tr>
+<tr><td>Longueur</td><td>mètre</td><td>m</td><td>Le mètre est la longueur du trajet parcouru dans le vide par la lumière pendant une durée de 1/299 792 458 de seconde. (<i>17<sup>e</sup> Conférence Générale des Poids et Mesures de 1983</i>)</td></tr>
+<tr><td>Masse</td><td>kilogramme</td><td>kg</td><td>Le kilogramme (est la masse du prototype en platine iridié qui a été sanctionné par la Conférence générale des poids et mesures tenue à Paris en 1889 et qui est déposé au Bureau International des Poids et Mesures.&nbsp; (<i>3<sup>e</sup> CGPM de 1901</i>)</td></tr>
+<tr><td>Temps</td><td>seconde</td><td>s</td><td>La seconde est la durée de 9 192 631 770 périodes de la radiation correspondant à la transition entre les deux niveaux hyperfins de l'état fondamental de l'atome de césium 133. (<i>13<sup>e</sup> CGPM de 1967</i>)</td></tr>
+<tr><td>Intensité de courant électrique</td><td>ampère</td><td>A</td><td>L'ampère est l'intensité d'un courant constant qui, maintenu dans deux conducteurs parallèles, rectilignes, de longueur infinie, de section circulaire négligeable et placées à une distance de 1 mètre l'un de l'autre dans le vide, produirait entre ces conducteurs une force égale à 2.10<sup>-7</sup> newton par mètre de longueur (<i>CIPM, 1946, approuvé par la 9<sup>e</sup> CGPM de 1948</i>)</td></tr>
+<tr><td>Température thermodynamique</td><td>kelvin</td><td>K</td><td>Le kelvin est la fraction 1/273,16 de la température thermodynamique du point triple de l'eau. (<i>13<sup>e</sup> CGPM de 1967; il est décidé également que l'unité Kelvin et son symbole K sont utilisés pour exprimer un intervalle ou une différence de température)</i>)</td></tr>
+<tr><td>Intensité lumineuse</td><td>candela</td><td>cd</td><td>La candela est l'intensité lumineuse, dans une direction donnée d'une source qui émet un rayonnement monochromatique de fréquence 540.10<sup>12</sup> hertz et dont l'intensité énergétique dans cette direction est 1/683 watt par stéradian (<i>16<sup>e</sup> CGPM de 1979</i>)</td></tr>
+<tr><td>Quantité de matière</td><td>mole</td><td>mol</td><td>La mole est la quantité de matière d'un système contenant autant d'entités élémentaires qu'il y a d'atomes dans 0,012 kilogramme de carbone 12. (<i>14<sup>e</sup> CGPM de 1971</i>)</td></tr>
+</table>
+
+<br><br>
+
+<a id="deri"></a>
+<div class="centre"><p class="st">Unités dérivées</p></div>
+
+<table class="n">
+<tr><td><b>Grandeur</b></td><td><b>Unité</b></td><td><b>Symbole</b></td><td><b>Dimensions</b></td></tr>
+<tr><td>angle plan</td><td>radian</td><td>rad</td><td>rad (sans)</td></tr>
+<tr><td>angle solide</td><td>stéradian</td><td>sr</td><td>sr (sans)</td></tr>
+<tr><td>fréquence</td><td>hertz</td><td>Hz</td><td>s<sup>-1</sup></td></tr>
+<tr><td>force</td><td>newton</td><td>N</td><td>m.kg.s<sup>-2</sup></td></tr>
+<tr><td>pression, contrainte</td><td>pascal</td><td>Pa = N/m<sup>2</sup></td><td>m<sup>-1</sup>.kg.s<sup>-2</sup></td></tr>
+<tr><td>énergie, travail, quantité de chaleur</td><td>joule</td><td>J = N.m</td><td>m<sup>2</sup>.kg.s<sup>-2</sup></td></tr>
+<tr><td>puissance, flux énergétique</td><td>watt</td><td>W = J/s</td><td>m<sup>2</sup>.kg.s<sup>-3</sup></td></tr>
+<tr><td>quantité d'électricité, charge électrique</td><td>coulomb</td><td>C</td><td>s.A</td></tr>
+<tr><td>différence de potentiel, force électromotrice</td><td>volt</td><td>V = W/A</td><td>m<sup>2</sup>.kg.s<sup>-3</sup>.A<sup>-1</sup></td></tr>
+<tr><td>capacité électrique</td><td>farad</td><td>F = C/V</td><td>m<sup>-2</sup>.kg<sup>-1</sup>.s<sup>4</sup>.A<sup>2</sup></td></tr>
+<tr><td>résistance électrique</td><td>ohm</td><td>&Omega; = V/A</td><td>m<sup>2</sup>.kg.s<sup>-3</sup>.A<sup>-2</sup></td></tr>
+<tr><td>conductance électrique</td><td>siemens</td><td>S = A/V</td><td>m<sup>-2</sup>.kg<sup>-1</sup>.s<sup>3</sup>.A<sup>-2</sup></td></tr>
+<tr><td>flux d'induction magnétique</td><td>weber</td><td>Wb = V·s</td><td>m<sup>2</sup>.kg.s<sup>-2</sup>.A<sup>-1</sup></td></tr>
+<tr><td>induction magnétique</td><td>tesla</td><td>T = Wb/m<sup>2</sup></td><td>kg.s<sup>-2</sup>.A<sup>-1</sup></td></tr>
+<tr><td>inductance</td><td>henry</td><td>H = Wb/A</td><td>m<sup>2</sup>.kg.s<sup>-2</sup>.A<sup>-2</sup></td></tr>
+<tr><td>flux lumineux</td><td>lumen</td><td>lm = cd.sr</td><td>cd.sr</td></tr>
+<tr><td>éclairement lumineux</td><td>lux</td><td>lx = lm/m<sup>2</sup></td><td>m<sup>-2</sup>.cd</td></tr>
+</table>
+<br>
+<a id="pref"></a>
+<div class="centre"><p class="st">Préfixes</p></div>
+<p>Comme ces unités peuvent dans certains cas se révéler être trop grandes (ou trop petites), on utilise également leurs multiples et sous-multiples décimaux en faisant précéder le nom d'un préfixe:<br>
+<div>
+<table class="n gauche">
+<tr><td><b>   Multiple   </b></td><td><b>Nom</b></td><td><b>Abréviation</b></td></tr>
+<tr><td>10<sup>24</sup></td><td>yotta</td><td>Y</td></tr>
+<tr><td>10<sup>21</sup></td><td>zetta</td><td>Z</td></tr>
+<tr><td>10<sup>18</sup></td><td>exa</td><td>E</td></tr>
+<tr><td>10<sup>15</sup></td><td>peta</td><td>P</td></tr>
+<tr><td>10<sup>12</sup></td><td>tera</td><td>T</td></tr>
+<tr><td>10<sup>9</sup></td><td>giga</td><td>G</td></tr>
+<tr><td>10<sup>6</sup></td><td>méga</td><td>M</td></tr>
+<tr><td>10<sup>3</sup></td><td>kilo</td><td>k</td></tr>
+<tr><td>10<sup>2</sup></td><td>hecto</td><td>h</td></tr>
+<tr><td>10<sup>1</sup></td><td>déca</td><td>da</td></tr>
+</table>
+
+<table class="n droite">
+<tr><td><b>Sous-multiple</b></td><td><b>Nom</b></td><td><b>Abréviation</b></td></tr>
+<tr><td>10<sup>-24</sup></td><td>yocto</td><td>y</td></tr>
+<tr><td>10<sup>-21</sup></td><td>zepto</td><td>z</td></tr>
+<tr><td>10<sup>-18</sup></td><td>atto</td><td>a</td></tr>
+<tr><td>10<sup>-15</sup></td><td>femto</td><td>f</td></tr>
+<tr><td>10<sup>-12</sup></td><td>pico</td><td>p</td></tr>
+<tr><td>10<sup>-9</sup></td><td>nano</td><td>n</td></tr>
+<tr><td>10<sup>-6</sup></td><td>micro</td><td>µ</td></tr>
+<tr><td>10<sup>-3</sup></td><td>milli</td><td>m</td></tr>
+<tr><td>10<sup>-2</sup></td><td>centi</td><td>c</td></tr>
+<tr><td>10<sup>-1</sup></td><td>déci</td><td>d</td></tr>
+</table>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr style="width:70%;">
+<br>
+<p class="st">Appendice 2</p>
+<p>Dans les dénominations attribuées aux unités, on a tenu à rendre hommage à de nombreux savants dont vous trouverez ci-dessous une liste (non exhaustive).<br>
+<table class="centre"><tr>
+<td style="line-height:1.6em; text-align:left;">
+André Marie <b>Ampère</b>, France (1775-1836)<br>
+Sir William Thomson, Lord <b>Kelvin</b>, Irlande - Ecosse (1824-1907)<br>
+Heinrich Rudolf <b>Hertz</b>, Allemagne (1857-1894)<br>
+Isaac <b>Newton</b>, Angleterre (1642-1727)<br>
+Blaise <b>Pascal</b>, France (1623-1662)<br>
+James Prescott <b>Joule</b>, Grande-Bretagne (1818-1889)<br>
+James <b>Watt</b>, Ecosse (1736-1819)<br>
+Charles de <b>Coulomb</b>, France (1736-1806)<br>
+Alessandro <b>Volta</b>, Italie (1745-1827)<br>
+Michael <b>Faraday</b>, Grande-Bretagne (1791-1867)<br>
+Georg Simon <b>Ohm</b>, Allemagne (1787-1854)<br>
+Wilhelm <b>Weber</b>, Allemagne (1804 -1891)<br>
+Nikola <b>Tesla</b>, Autriche-Hongrie - USA (1856-1943)<br>
+Joseph <b>Henry</b>, USA (1797-1878)<br>
+Henri <b>Becquerel</b>, France (1852-1908)<br>
+Louis Harold <b>Gray</b>, Angleterre (1905-1965)<br>
+Rolf Maximilian <b>Sievert</b>, Suède (1896-1966)<br>
+Anders <b>Celsius</b>, Suède (1701-1744)<br>
+Anders Jonas <b>Ångström</b>, Suède (1814-1874)<br>
+François Louis <b>Arago</b>, France (1786-1853)<br>
+Antoine <b>Baumé</b>, France (1728-1804)<br>
+Francis <b>Beaufort</b>, Irlande (1774-1857)<br>
+Alexander Graham <b>Bell</b>, Ecosse - USA (1847-1922)<br>
+Marie Sklodowska-<b>Curie</b>, Pologne - France (1867-1934)<br>
+Daniel Gabriel <b>Fahrenheit</b>, Allemagne (1686-1736)<br>
+Carl Friedrich <b>Gauss</b>, Allemagne (1777-1855)<br>
+Ernst <b>Mach</b>, Autriche (1838-1916)<br>
+Hans Christian <b>Oersted</b>, Danemark (1777-1851)<br>
+René Antoine Ferchault, seigneur de <b>Réaumur</b>, France (1683-1757)<br>
+Wilhelm Conrad <b>Roentgen</b>, Allemagne (1845-1923)<br>
+Werner von <b>Siemens</b> et ses 3 frères, Allemagne (1816-1892)<br>
+</td></tr></table>	
+<br>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="docd.htm">Documents</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+		<div class="centre"><hr style="width:70%;"></div>
+<br>
+Pour toute remarque ou commentaire, écrire à <script type="text/javascript">
+// JavaScript pris sur le site: "http://www.java.scripts-fr.com" 
+var nom = "xhubaut";
+var domaine = "ulb.ac.be"; 
+var deb = "<";
+var fin = ">";
+document.write('<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + deb + '/a' + fin); 
+</script>.<br>
+	</div>
+</div>
+</body>
+</html>

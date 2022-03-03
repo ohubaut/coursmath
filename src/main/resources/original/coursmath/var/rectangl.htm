@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Rectangles - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="papier A4, rectngle d'or, nombre d'or, format A, irrationalité de pi" />
+<meta name="keywords" content="racine carrée, format de papier" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Rectangles
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Construisons une suite de rectangles définie de la manière suivante.<br />
+On part d'un rectangle quelconque. Sur son grand côté on construit un carré; ensuite en tournant toujours dans le même sens, on accole un carré sur le grand côté du rectangle obtenu à l'étape précédente; on poursuit indéfiniment l'opération. 
+Que peut-on dire des figures obtenues ?</p>
+
+<img alt="" src="rect/fibo.gif">
+
+<p>Si \(a_0\) et \(a_1\) sont les côtés du rectangle initial, les côtés du deuxième rectangle seront \(a_1\) et \(a_2=a_1+a_0\); de proche en proche on obtient \(a_n+1=a_n + a_n-1\). 
+En particulier si \(a_0 = a_1 = 1\) on reconnaît la célèbre suite de <a title="Biographie" href="../bio/fibonacc.htm">Fibonacci</a>: 1, 1, 2, 3, 5, 8, 13, 21...</p>
+
+<p>Quel que soit le rectangle de départ, à une étape suffisamment grande de la construction on ne pourra plus "distinguer" celui-ci; le rectangle obtenu possédera une propriété particulière: si on lui enlève un carré construit sur son petit côté, il reste un rectangle semblable au rectangle précédent.</p>
+
+<img alt="" src="rect/fibo1.gif">
+
+<p>Calculons les proportions de ce rectangle, dit "rectangle d'or". 
+Soit \(x\) le rapport du grand côté au petit côté. 
+En choisissant ce dernier comme unité, et en retranchant un carré de côté \(1\), on obtient un rectangle de côtés \(1, x-1\) semblable au rectangle initial de côtés \(x, 1\). 
+On a donc:</p>
+
+\[ x-1=\frac 1 x ~~~~ou~~~~x^2-x-1=0 \]
+
+<p class="ni">dont la solution positive est \(\tau=\Large\frac{\sqrt5 + 1}{2}\), appelé le nombre d'or.</p>
+
+<p>On voit que de \(x-1=1/x\) on déduit \(x=1+1/x\); en remplaçant \(x\) par sa valeur on obtient:</p>
+
+\[ x=\frac{1}{1+\frac{1}{x}} \]
+
+<p class="ni">et en répétant on arrive à l'expression :</p>
+
+\[ x=\frac{1}{1+\frac{1}{1+\frac{1}{1+...}}} \]
+
+<p>Des approximations de \(\tau \) s'obtiennent comme "réduites" en arrêtant la fraction à un étage donné: on a successivement \(1, 2, 3/2, 5/3, 8/5,...\) c'est-à-dire les rapports de 2 termes consécutifs de la suite de Fibonacci.<br />
+On voit ainsi que le rapport de 2 termes consécutifs de la suite tend vers le nombre d'or.</p>
+
+<p><img class="droite" alt="" src="rect/fibozoom.gif">Si d'un rectangle d'or, disposé sur son grand côté, on retranche sur la gauche un carré on obtient un rectangle semblable, mais disposé sur son petit côté. En retranchant un carré au-dessus de ce rectangle, on obtient un rectangle non seulement semblable, mais homothétique au premier. On obtient une suite infinie de tels carrés, ce qui se voit en zoomant sur le coin inférieur droit du rectangle initial.</p>
+
+<p>De manière analogue construisons une suite de rectangles obtenus d'une manière semblable: la seule modification est qu'au lieu d'ajouter un carré, nous ajouterons à chaque étape, deux carrés égaux.</p>
+
+<img alt="" src="rect/rac2.gif">
+
+<p>On aura alors la relation \(a_{n+1}=2a_n+a_{n-1}\). 
+En particulier si \(a_0 = a_1=1\) on obtient la suite \(1, 1, 3, 7, 17, 41,...\) 
+On peut également s'intéresser à la limite du rapport de 2 termes consécutifs de cette suite. 
+Un calcul analogue à celui fait précédemment nous conduit à l'équation :</p>
+
+\[ x^2-2x-1=0 \]
+
+<p class="ni">qui admet pour solution positive \(x=\sqrt{2}+1\).</p>
+
+<p>On obtient pour expression :</p>
+
+\[ \sqrt{2}+1=2+\frac{1}{2+\frac{1}{2+\frac{1}{2+...}}}~~~\text{ou}~~~~\sqrt{2}=1+\frac{1}{2+\frac{1}{2+\frac{1}{2+...}}} \]
+
+<p class="ni">d'où, pour \(\sqrt 2\), les approximations successives \(1, 3/2, 7/5, 17/12, 41/29,... \)</p>
+
+<a id="irrat"></a>
+<p>Par analogie avec le <a href="pgcd.htm">PGCD</a> on voit que dans les deux cas ci-dessus ces rectangles ont des côtés incommensurables; en particulier \(\sqrt 2\) est un nombre irrationnel. Cette démonstration de l'irrationalité de \(\sqrt 2\) est très proche de celle des Grecs. En fait ils construisaient la figure suivante: </p>
+
+<img alt="" src="rect/grec.gif">
+
+<p>On a \(ac/ab = \sqrt 2\) et \(ae/ab=\sqrt 2 + 1\). 
+Les triangles \(abe\) et \(afb\) sont semblables; en effet on a l'égalité des angles \(abf\) et \(cbe\) (par rotation d'1/4 de tour) et celle des angles \(cbe\) et \(ceb\) (triangle isocèle ayant pour côté le rayon du cercle). 
+On en déduit que si l'on applique l'algorithme d'Euclide aux segments \(ae\) et \(ab\), on est conduit aux segments \(ab\) et \(af\) qui leur sont semblables. 
+Dès lors l'algorithme ne se terminera jamais et \(\sqrt 2 + 1\), et par suite \(\sqrt 2\) sont irrationnels.</p>
+
+<p>A propos de rectangles remarquables, signalons le format des papiers A4, 21 × 29.7 cm. 
+Le problème était de trouver un format tel que la juxtaposition de deux rectangles donne un rectangle semblable au rectangle initial afin, par exemple, de pouvoir réaliser des photocopies en réduction.<br />
+Si <i>x</i> désigne le rapport du grand côté au petit côté du rectangle cherché, on obtient de manière évidente la condition :</p>
+
+\[ 1/x=x/2 \]
+
+<p class="ni">d'où l'on déduit \(x=\sqrt 2\).</p>
+
+<p>La construction d'un tel rectangle à partir d'un carré ABCD est évidente:</p>
+
+<img alt="" src="rect/Ax.gif">
+
+<p>Le format A0 est défini comme un tel rectangle d'aire égale à \(1~m^2\); soit un petit côté de \(a~cm\); le grand côté \(b\) vaut \(a\sqrt 2~cm\). On a donc : \(a~cm × a\sqrt 2~cm = 1~m^2\). D'où, en centimètres, \(a=84,09...~~~\text{et}~~~b=118,92...\)<br />
+Les autres formats sont obtenus en divisant chaque feuille en deux parties égales; en arrondissant, on obtient entre autres le format A4 \((21 × 29,7)\) qui divisé en deux donne le format A5 \((14,5 × 21)\) qui divisé à son tour donne le format A6 dit "carte postale" \(10,5 × 14.8\).</p>
+
+<p>Les formats de la famille B sont également des rectangles de mêmes proportions. Le format B0 est défini par la dimension du plus petit côté qui vaut \(1m\) ; l'autre côté vaut \(1,414 m\). Ces papiers sont essentielement employés en imprimerie.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Distribution binomiale - Statistique - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="distribution, épreuve répétée" />
+<meta name="keywords" content="normale, application, écart, variance" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Distribution binomiale
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Si un événement a une probabilité \(p\) de se produire, et par conséquent une probabilité \(q=1-p\) de ne pas se produire, on sait que la probabilité d'avoir \(k\) réussites au cours de \(n\) expériences est donnée par la loi :</p>
+
+\[ P_n(k) = {n\choose k}  p^kq^{n-k} \]
+
+<p class="ni">appelée loi binomiale, car la somme des \(P_n(k)\) est le développement du binôme \((p+q)^n\):</p>
+
+\[  (p + q)^n = \sum_{k=0}^{n} P_n(k) = \sum_{k=0}^{n} {n\choose k} p^kq^{n-k} \]
+
+<p>Il n'est pas très difficile de calculer la moyenne et l'écart pour cette loi.</p> 
+
+<p>La moyenne est:</p>
+
+\[  { \mu = \sum_{k=0}^{n} k {n\choose k} p^kq^{n-k} =  \sum_{k=1}^{n}  {{n-1}\choose k} p^{k-1}q^{n-k} = np }\]
+
+<p>Le résultat est bien celui attendu; si l'on effectue \(n\) expériences et que chacune d'elles à une probabilité \(p\) de réussite on aura en moyenne \(np\) réussites. 
+Bien entendu la probabilité d'avoir exactement \(np\) réussites est en général faible.</p>
+
+<p>L'écart se calcule d'une manière assez semblable:</p>
+
+\[ \begin{aligned}
+\sigma^2& =\sum_{k=0}^{n} k^2  {n\choose k} p^kq^{n-k} - n^2p^2 \\
+& = \sum_{k=1}^{n} k {{n-1}\choose {k-1}} p^{k-1}q^{n-k}np - n^2p^2  \\
+& = (\sum_{k=1}^{n} k {{n-1}\choose {k-1}} p^{k-1}q^{n-k}-np).np \\
+& = (\sum_{k=1}^{n}(k-1) {{n-1}\choose {k-1}} p^{k-1}q^{n-k} + \sum_{k=0}^{n-1} {{n-1}\choose {k-1}} p^{k-1}q^{n-k}-np).np \\ \\
+& = (((n-1)p+1-np ).np) \\ \\
+& = npq
+  \end{aligned}  \]
+
+<p>Dans le cas où la probabilité <i>p</i> est très faible, on peut approcher la distribution binomiale par une autre, appelée <a href="poisson.htm">loi de Poisson</a>.</p>
+
+<p>Si on dessine l'histogramme d'une loi binomiale on obtient un graphique qui fait songer à la courbe en cloche, c'est-à-dire à la <a href="normale.htm">loi normale</a> qui, elle, est continue. En fait, on s'en rapproche d'autant plus que le nombre <i>n</i> d'épreuves est grand.</p>
+
+<img alt="" src="bino/fig.gif"> 
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

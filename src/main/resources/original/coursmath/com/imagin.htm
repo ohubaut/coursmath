@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>L'imaginaire au pouvoir ! - Complexes - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="découverte des nombres complexes" />
+<meta name="keywords" content="imaginaires, cardan, Tartaglia, Bombelli, équation du 3e degré" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="com.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-10', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+L'imaginaire au pouvoir !
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>De la manière dont les nombres complexes sont généralement introduits, tout laisse à supposer qu'ils ont été découverts à l'occasion de l'étude des <a href="../2de/2edegre.htm">équations du deuxième degré</A>. Rien n'est moins vrai ! En effet quel inconvénient y a-t-il à travailler sur les réels ( sans faire de complexes ! ) lorsque l'on se borne au second degré ? Les équations ont 0, 1 ou 2 racines; une droite ne coupe-t-elle pas une conique en 0, 1 ou 2 points ? Rien dans tout cela ne suggère une extension du corps des réels.</p>
+
+<p>En fait c'est à l'occasion de l'étude des équations du 3e et 4e degré au XVIe siècle ( <a title="Biographie" href="../bio/cardan.htm">Cardan</A>, <a title="Biographie" href="../bio/tartagli.htm">Tartaglia</A>, Bombelli,... ) que naquirent les nombres complexes. Bien plus tard <a title="Biographie" href="../bio/hamilton.htm">Hamilton</A> inventa les quaternions qui généralisent, d'une autre manière, les nombres complexes. Voyons la méthode qu'on utilisait à l'époque pour résoudre une équation du 3e degré \(ax^3+bx^2+cx+d=0\).</p>
+
+<p>Remarquons tout d'abord que \(a\) n'est pas nul ( sinon l'équation est du 2e degré ! ) et que la somme des racines vaut \(-b/a\); il suffit donc d'augmenter chaque racine de \(b/3a\) pour que la somme soit nulle; on peut ainsi finalement se ramener à l'équation \(x^3 + px + q = 0\). Posons, sans grande justification, \(x = u + v\); il vient:</p>
+
+\[u^3 + 3u^2v + 3uv^2 + v^3 + p( u + v ) + q = 0 \]
+
+<p class="ni">c'est-à-dire:</p>
+
+\[ u^3 + v^3 + ( 3uv + p )( u + v ) + q = 0 \]
+
+<p>Utilisons à présent la souplesse que nous avons introduite, en remplaçant l'inconnue \(x\) par les 2 inconnues \(u, v\). Pour simplifier cette équation; annulons le terme en \(u+v\) et il reste :</p>
+
+\[ 3uv+p=0\\u^3 + v^3 + q = 0 \]
+
+<p class="ni">ce qui peut s'écrire :</p>
+
+\[ u^3v^3 = -p^3/27 \\ u^3 + v^3 = -q \]
+
+<p>Connaissant la somme et le produit de \(u^3\) et \(v^3\), on les obtient comme solutions d'une équation auxiliaire du 2e degré :</p>
+
+\[ t^2+qt-p^3/27 = 0 \]
+
+<p>Connaissant \(u^3\) (par exemple), chacune des racines cubiques correspondra à une racine cubique de \(v^3\), car \(uv=-p/3\). On obtiendra ainsi les 3 racines de l'équation.<br /> 
+Oui ! mais... nous avons parlé des 3 racines cubiques et cela implique l'utilisation des complexes, sinon on n'obtient qu'une seule racine et encore, pour cela, faut-il que \(u^3\) soit réel !</p>
+
+<p>Pour mieux voir ce qui se passe nous allons choisir 3 exemples d'équations du 3e degré (sans terme du 2e degré) en partant de leurs racines. Tout d'abord une équation n'ayant qu'une racine réelle :</p>
+
+\[ (x+2)(x^2-2x+2)=0 ~~~~~\text{ou}~~~~~ x^3-2x+4=0 \] 
+
+<p class="ni">ensuite une équation ayant une racine réelle et une deuxième racine réelle double :</p>
+\[ (x+2)(x-1)^2=0 ~~~~~\text{ou}~~~~~ x^3-3x+2=0 \]
+
+<p class="ni">et enfin une équation ayant 3 racines réelles :</p>
+
+\[ (x+2)(x-3)(x+1)=0 ~~~~~\text{ou}~~~~~ x^3-7x-6=0 \]
+
+<p>Appliquons la méthode décrite plus haut à la première équation \(x^3-2x+4=0\). On obtient \(u^3\) et \(v^3\) comme solutions de l'équation: \(t^2+4t+8/27=0\), d'où les 2 racines \(-2\pm 10\sqrt{3}/9\), dont les racines cubiques valent \(-1\pm \sqrt{3}/3\), donnent pour somme -2, la racine réelle l'équation. Tout se passe bien !</p>
+
+<p>Passons à l'équation \(x^3-3x+2=0\). L'équation auxiliaire est \(t^2+2t+1=0\) qui possède -1 comme racine double \(u=v=-1\) et \(x=-2\). Mais où est passée la racine double \(x=1\) ? Bizarre !</p>
+
+<p>Considérons finalement l'équation \(x^3-7x-6=0\) qui possède 3 racines réelles \(x=-1,-2\) et \(3\). L'équation auxiliaire est: \(t^2-6t+343/27=0\) et, catastrophe, cette équation n'a pas de racine réelle ! Pourtant l'équation du 3e degré possède 3 racines.<br />
+Que se passe-t-il ?<br />
+Si l'on tente de résoudre l'équation en \(t\) en travaillant formellement, on trouve les solutions \(t=3\pm 10\sqrt{-3}/9\) dont il faut extraire les racines cubiques. Calculons-les, mécaniquement, sans trop nous soucier du sens à attribuer à \(\sqrt{-3}\). On obtient pour \(u\):</p>
+ 
+\[ 3/2+\sqrt{-3}/6, ~~~~~~~ -1/2-5\sqrt{-3}/6 ~~~~~\text{et}~~~~ -1+2\sqrt{-3}/3 \]
+
+<p>En calculant les valeurs correspondantes pour \(v\) et en sommant on trouve bien les 3 racines \(3,-1,-2\).</p>
+
+<p>Bien entendu, il a fallu prendre des précautions et, par exemple, ne pas trop manipuler le symbole \(\sqrt{-1}\). Chacun connaît le paradoxe:</p>
+
+\[ \small{ \frac{1}{\sqrt{-1}}=\frac{\sqrt{-1}}{\sqrt{-1}\sqrt{-1}}=\frac{\sqrt{-1}}{\sqrt{1}}=\sqrt{-1} ~~~~ \text{donc} ~~~~ \sqrt{-1}\sqrt{-1}=1} \]  
+
+<a id="POS"></a>
+<p>Cela mis à part, les nombres complexes se manient comme les réels. Cependant, une propriété des réels disparaît: il n'y a plus d'ordre !<br />
+Avec deux réels \(a\) et \(b\), on disait que \(a\) était supérieur à \(b\) si \(a-b&gt;0\). Cela n'a plus de sens avec les complexes; en effet prenons un exemple et calculons comme s'il s'agissait encore toujours de nombres réels.</p>
+
+<p>Supposons que \(i\) soit positif: \(i&gt;0\). Puisque i est positif, nous pouvons multiplier les deux membres de cette inégalité et nous obtenons \(i^2&gt;0\) ou encore \(-1&gt;0\). Donc nous nous sommes trompés et \(i&lt;0\). Peut-être, mais...<br /> 
+Si \(i&lt;0\), quand nous multiplions les deux membres de cette inégalité par \(i\), il faut alors changer le sens de l'inégalité et nous obtenons \(i^2&gt;0\) et à nouveau ce n'est pas possible. Il est donc impossible d'établir sur les nombres complexes un ordre compatible avec les propriétés habituelles des réelles. Ce n'est pas un drame; nous perdons l'ordre mais en revanche nous gagnons bien d'autres facilités.</p>
+
+<p>Il se fait qu'historiquement, c'est la contradiction entre d'une part, l'existence des 3 racines, et d'autre part la non-existence des racines de l'équation auxiliaire, qui a conduit à la découverte des nombres complexes.</p>
+
+<p>Remarquons que cette voie n'est pas un cas isolé dans l'histoire des sciences; que l'on songe au principe d'inertie de <a title="Biographie" href="../bio/galilee.htm">Galilée</A>, à la <a title="Remise en cause de la notion de simultanéité" href="../app/relativi.htm">relativité restreinte</A> d'<a title="Biographie" href="../bio/einstein.htm">Einstein</A> (invariance de la vitesse de la lumière), à la mécanique quantique (seuils d'énergie), à la théorie des ensembles (hypothèses du continu) etc.</p>
+
+<p>Il semble, hélas, qu'à l'heure actuelle les mathématiciens évitent trop souvent de s'intéresser aux contradictions; ils ont tendance à les rejeter. Pourtant elles sont génératrices de progrès et, heureusement, existeront toujours.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="compld.htm">Complexes</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

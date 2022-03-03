@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>La corde à 13 nœuds - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="curiosités, amusant, varia, Fibonacci" />
+<meta name="keywords" content="Pythagore, nombre d'or, durée du jour" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+La corde à 13 nœuds
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>La corde à treize nœuds est parfois appelée "corde des druides" ou  "corde égyptienne". Il s'agit tout simplement d'une corde où l'on a effectué 13 nœuds consécutifs situés à des intervalles réguliers.</p>
+
+<p>Son origine est mal connue ; elle a certainement été utilisée dans l'Egypte antique. Dans nos pays, on retrouve son emploi au Moyen âge chez les bâtisseurs.</p>
+
+<p>Une utilisation très immédiate consiste en la construction d'angles droits. Tout maçon connaît la règle : "60 cm, 80 cm, 1 m" Pour vérifier la perpendicularité de deux murs, il suffit de mesurer à partir du sommet de leur angle : 60 cm sur l'un, 80 cm sur l'autre et de vérifier si les deux points obtenus sont bien distants de 1 m. La réciproque du <a href="pytha.htm">théorème de Pythagore</a>, nous dit que si \(a^2+b^2= c^2\), alors le triangle est droit et en effet \(60^2+80^2=100^2\).<br />
+Remarquons que le pgcd de \(60, 80, 100\) vaut 20 et que ce triangle est semblable au triangle, 20 fois plus petit, de côtés \(3, 4\) et \(5\). La corde à 13 nœuds (qui présente 12 intervalles égaux) permet de construire immédiatement ce triangle \((3 + 4 + 5 = 12)\).</p>
+
+<p>Ce célèbre triangle se retrouve sur des <a href="../vie/philat.htm">timbres-poste</a> ; il doit sa célébrité au fait que c'est le "plus petit" triangle rectangle dont les mesures des côtés peuvent s'exprimer par des entiers.</p>
+
+<p>Nous allons retrouver ce triangle d'une autre manière.</p>
+
+<p><img class="gauche" alt="carre" src="13no/carre.gif">Voici un carré de côté \(C\) partagé par 3 segments de droites, chacun passe par un sommet et aboutit au milieu d'un côté opposé.<br />
+Beaucoup de triangles rectangles apparaissent sur cette figure. Par construction, nous avons en particulier plusieurs triangles rectangles dont les côtés de l'angle droit sont \(C\) et \(C/2\). Le petit triangle du coin inférieur droit est semblable à ces triangles.<br />
+Si nous prenons le petit côté de l'angle droit comme unité de longueur, l'autre côté mesure donc \(2\) et l'hypoténuse (qui est égale à \(C/2\))  vaut \(\sqrt{5}\) ; \(C\) vaut donc \(2\sqrt{5}\).</p>
+
+<img class="droite" alt="corde" src="13no/corde.gif"><p>Partant de ce résultat on voit que chacun des 3 segments que nous avons tracés est l'hypoténuse d'un triangle rectangle de côtés \(C\) et \(C/2\) ; son carré vaut \(C^2+C^2/4=5C^2/4=25\) et l'hypoténuse mesure 5.<br />On en déduit alors les mesures des autres segments de la figure qui valent 1, 2, 3, 4 et 5.</p>
+
+<p>On retrouve, au centre de la figure, le fameux triangle de côtés 3, 4 et 5 qui peut être construit à l'aide de la corde à 13 nœuds.</p>
+
+<p><img class="gauche" alt="5 morceaux" src="13no/5carres.gif">Intéressons-nous à ces segments de mesure 5.<br />
+Construisons l'un d'eux et ajoutons ceux obtenus à partir des rotations de quarts de tour. On obtient la figure ci-contre qui contient, au centre, un carré. Chacun des segments de longueur 5 est partagé en 2 segments de longueur 2 et un segment de longueur 1.<br />
+Les 8 morceaux restants s'assemblent 2 par 2 pour former 4 autres carrés de côté 2. Le carré initial a été ainsi partagé en 5 figures égales.</p>
+
+<p>On pourrait varier sur ce thème en partageant chaque côté en n parties égales.</p>
+
+<p><img class="gauche" alt="29 morceaux" src="13no/29carres.gif">On joint alors un sommet à un point du côté opposé et ensuite on trace toutes le parallèles passant par les points de subdivision.<br />
+On fait tourner d'un quart de tour et on obtient ainsi une figure formée de carrés ainsi que de morceaux de carrés qui, comme dans le cas précédent, s'assemblent 2 par 2 pour former d'autres carrés égaux. A nouveau, on obtient une division en parties égales. Sur l'exemple ci-contre, on a subdivisé chaque côté en 5 parties et on a joint un sommet du carré au deuxième point de subdivision du côté opposé. Dans ce cas, on obtient après réunion des morceaux du puzzle, 29 pièces identiques. Pourquoi 29 ? Serait-ce parce que \(29 = 5^2 + 2^2\) ?</p>
+
+<p>Il existe évidemment d'autres subdivisions d'un carré en parties égales, par exemple en construisant un simple damier, ou bien encore en joignant les milieux des 4 côtés. Mais serait-il possible de le partager en un nombre quelconque de parties égales ; en 3 par exemple ?</p>
+
+	<div id="question1" style="display:block;">
+Voulez-vous voir la réponse ? <a href="#" onclick="affiche('reponse1'); cache('question1'); return false;"><img alt="voir" src="../plus.gif"></a>
+</div>
+<div id="reponse1" style="display: none;">
+Cacher la réponse <a href="#" onclick="cache('reponse1');affiche('question1');return false;"><img alt="cacher" src="../moins.gif"></a>
+<div style="background-color:#eff; padding: 10px; border:1px solid black;">
+<p>C'est tout simple : il suffit de partager deux côtés opposés en 3 parties égales et de joindre; on obtient 3 rectangles égaux. Relisez bien la question : vous verrez que je ne vous ai parlé que de <b>parties</b> égales. Mais comme je n'avais montré que des décompositions en carrés, inconsciemment, vous n'avez pas pensé à d'autres formes !</p>
+</div>
+	</div>
+	<p>Voici une toute autre utilisation de la corde à 13 nœuds.</p>
+
+<p>Nous avons rencontré un carré de côté \(C=2\sqrt{5}\). N'oublions pas que dans les constructions anciennes, on utilisait bien souvent le <a href="rectangl.htm">nombre d'or</a>. Celui-ci vaut : \(\tau=(\sqrt{5} + 1)/2\)<br />
+Il est donc aisé de l'obtenir en utilisant la corde à 13 nœuds.</p>
+
+<div class="centre"><img alt="nombre d'or" src="13no/or.gif"></div>
+
+<p>Le triangle de côtés 3, 4, 5 fournit l'angle droit ; on utilise alors le triangle rectangle de côtés 1, 2 dont l'hypoténuse vaut \(\sqrt{5}\) et on la prolonge d'une unité. Le segment ainsi construit vaut  \(2\tau\).</p>
+
+<p>La simplicité de cette construction explique probablement l'engouement suscité par le nombre d'or.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

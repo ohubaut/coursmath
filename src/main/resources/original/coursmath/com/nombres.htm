@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Les "nombres" - Complexes - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Corps des nombres complexes" />
+<meta name="keywords" content="naturels, entiers, rationnels réels, complexes, quaternions" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="com.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-10', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Les "nombres"
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Certains ont tendance à présenter les nombres comme une "матрёшка", une poupée russe où l'on trouverait, partant des naturels (historiquement les premiers nombres utilisés) une suite ascendante formée des: entiers, rationnels, réels, complexes (on ajoutera éventuellement quaternions, octaves de Cayley,...).</p>
+
+<p>C'est une caricature de la réalité; en effet dans l'Antiquité les naturels étaient évidemment présents (dénombrement) ainsi que les réels, peut-être pas en tant que nombres mais plutôt en tant que rapports (mesure de grandeurs à l'aide d'une unité). En particulier, dans les "Eléments d'Euclide" souvent présentés comme la première étude moderne de la géométrie, 5 des 13 livres sont consacrés à l'étude des proportions ou <a href="../var/pgcd.htm">rapports</a> et, à l'heure actuelle, on les qualifierait plutôt de livres d'algèbre.</p>
+
+<p>Il s'agit de l'étude des rapports, c'est-à-dire l'étude des réels (implicitement positifs). Toutefois, les anciens ont longtemps pensé que les rationnels suffisaient à décrire tous les rapports. La découverte de nombres irrationnels, inaugurée par la découverte de l'irrationalité de \(\sqrt{2}\) fut un choc. De là, à croire qu'on avait découvert les réels, il y avait un pas à franchir.</p>
+
+<p>Attardons nous quelque peu sur la découverte de l'irrationalité de \(\sqrt{2}\) qui est <a href="../var/rectangl.htm#irrat"> démontrée par ailleurs</a>.<br />
+Habituellement, on montre l'irrationalité de \(\sqrt{2}\) d'une manière purement algébrique, peu élégante, mais plus compréhensible pour certains.<br />
+Si \(\sqrt{2}\) est rationnel, on peut alors écrire \(\sqrt{2}\) = a/b où a et b sont deux entiers sans facteur commun (autrement dit la fraction a/b est écrite sous forme irréductible). En élevant les deux membres au carré et en multipliant par b², on obtient a² = 2b². Puisque le carré de a est un nombre pair, a est également pair. On peut donc poser a = 2a'; en remplaçant a, il vient 4a'² = 2b² d'où 2a'² = b² et on en conclut que b est aussi un nombre pair, ce qui contredit l'hypothèse d'irréductibilité faite sur la fraction a/b. Par conséquent \(\sqrt{2}\) n'est pas rationnel.</p>
+
+<p>Essayons de nous remettre dans l'ambiance de l'époque. Nous venons de découvrir un rapport curieux, celui de la diagonale d'un carré au côté de celui-ci. Voila donc deux segments avec lesquels nous allons jouer.<br />
+Si nous disposons d'un seul segment, le côté par exemple, nous pouvons le répéter plusieurs fois par translation et nous obtiendrons un segment 2, 3, ... fois plus grand: voila les naturels qui apparaissent en tant que facteurs multiplicatifs. Grâce au théorème de Thalès, nous pouvons également le partager en un nombre quelconque de parties égales, 2, 3, ... et voila les dénominateurs naturels.</p>
+
+<div><img alt="" src="nomb/ratio.gif"></div>
+
+<p>Bref, en manipulant un segment, nous construisons tous les multiples rationnels (positifs) de celui-ci mais, jamais, nous ne trouverons un segment égal à la diagonale de notre carré !<br />
+Utilisons à présent cette diagonale et d'une manière analogue, nous construirons des segments multiples rationnels de cette diagonale.<br />
+En rassemblant ces deux familles de segments, nous obtiendrons les segments dont la mesure (le rapport au côté du carré pris comme unité) vaut la somme d'un rationnel et d'un multiple rationnel de \(\sqrt{2}\).</p>
+
+<p>Traduisons en langage plus actuel ce que nous venons de faire: nous avons construit tous les nombres positifs de la forme a + b\(\sqrt{2}\), où a et b sont deux rationnels positifs.<br />
+Jouons maintenant le jeu de la modernité et supprimons cette hypothèse de positivité et posons \(\rho = \sqrt{2}\).<br />
+Que pouvons-nous dire de l'ensemble des nombres \(a + b\rho\), où \(a~et~b \in \mathbb Q\) (sont deux rationnels) ?</p>
+
+<p>Deux opérations à définir. Laissons-nous guider par le principe de permanence (<a href="../bio/cartan.htm">Élie Cartan</a>) et voyons tout d'abord l'addition.<br />
+Posons de manière évidente la somme \((a + b\rho) + (c + d\rho) = (a + c) + (b + d)\rho\). On vérifiera que toutes les propriétés de l'addition qui lui confèrent une structure de groupe commutatif restent valables.<br />
+Passons à la multiplication. Là encore, travaillons comme toujours et définissons \((a + b\rho)(c + d\rho) = ac + (ad + bc)\rho + bd\rho^2 \). Comme \(\rho^2\) est un naturel non-carré (dans notre cas 2), nous obtenons:<br />
+(\(a + b\rho)(c + d\rho) = (ac + \rho^2 bd) + (ad + bc)\rho\). Vérifions à présent les propriétés de la multiplication. Tout fonctionne bien, mais une petite difficulté subsiste toutefois pour le calcul de l'inverse d'un élément non nul (c'est-à-dire avec a et b non simultanément nuls).<br />
+Comment calculer \(1/(a + b\rho)\) ? Utilisons une petite astuce pour nous débarrasser de cet encombrant dénominateur: multiplions numérateur et dénominateur par \(a - b\rho\).<br />
+\((a + b\rho)(a - b\rho) = a² - \rho^2 b\) et on obtient ainsi: \(1/(a + b \rho) = (a - b\rho)/(a² - \rho²b²)\). Rien à craindre, le dénominateur ne sera jamais nul puisqu'il faudrait que \((a/b)^2 = \rho^2\); ceci est impossible puisque, par hypothèse,  \(\rho\) est irrationnel.<br />
+Enfin, la vérification de la distributivité  ne pose pas de problème non plus.<br />
+Nous voila en présence d'un "bon" ensemble de nombres, un corps commutatif comme disent les mathématiciens. Il est d'habitude noté \(\mathbb Q\)[\(\sqrt{2}\)]</p>
+
+<p>Avec le nouvel ensemble de nombres \(\mathbb Q\)[\(\sqrt{2}\)] que nous venons de construire, peut-être avons-nous trouvé un ensemble qui contient toutes les racines carrées qui nous manquaient ? Hélas, ce n'est pas encore le cas.<br />
+Supposons que \(\sqrt{3}\) appartienne à cet ensemble. Nous pourrions donc écrire \(\sqrt{3}\) = a + b\(\sqrt{2}\). D'une manière analogue à celle utilisée pour prouver l'irrationalité de \(\sqrt{2}\), élevons les deux membres de cette égalité au carré. Nous arrivons à \(3 = a² +2 b² + 2ab\sqrt{2}\) d'où nous déduisons \(\sqrt{2} = (3 - a^2 - 2b^2)/2ab\) ce qui contredit l'irrationalité de \(\sqrt{2}\) ! Nous sommes donc bien loin d'avoir obtenu tous les nombres que nous connaissons.</p>
+
+<p>Retournons à la construction de \(\mathbb Q[\sqrt{2}]\).<br />
+Tout ce que nous venons de faire reste valable si nous remplaçons 2 par un naturel non carré parfait. Cela fait déjà pas mal d'ensembles de nombres intéressants.<br />
+Essayons d'en trouver d'autres. Prenons \(\mathbb Q\)[\(\sqrt{2}\)] et \(\mathbb Q\)[\(\sqrt{3}\)]. En calculant les produits, nous voyons apparaître \(\sqrt{6}\), mais cela s'arrête là. Nous avons des nombres de la forme a + b\(\sqrt{2}\)  + c\(\sqrt{3}\) + d\(\sqrt{6}\). A nouveau un bon ensemble !<br />
+Conclusion: il y a beaucoup d'ensembles de nombres contenant \(\mathbb Q\) qui sont des corps commutatifs.</p>
+
+<p>Remarquons que les nouveaux éléments introduits sont tous solutions d'équations algébriques, c'est à dire d'un polynôme à coefficients rationnels égalé à 0. Par exemple, \(\sqrt{2}\) est solution de l'équation \(x^2 - 2 = 0\).<br />
+Sans démonstration, signalons que l'ensemble des nombres solutions d'équations algébriques forme encore un corps commutatif appelé corps des nombres algébriques.</p>
+
+<p>On pourrait ainsi croire avoir ainsi construit tous les nombres réels. Il n'en est rien. Par exemple, chacun connaît le nombre \(\pi\), rapport de la circonférence d'une cercle à son diamètre. Eh bien, on a démontré, à la fin du XIXe siècle, que ce nombre n'est pas un nombre algébrique. C'est ce qu'on appelle un nombre transcendant.</p>
+
+<p>Une autre remarque: nous avons étendu l'ensemble des rationnels \(\mathbb Q\) en lui ajoutant un nombre \(\rho\), tel que \(\rho ^2\) est un naturel non-carré. Il nous a paru évident de dire "naturel" et non pas "entier". Pourtant que se passerait-il en étendant les rationnels par un nombre \(\rho\) tel que \(\rho^2\) soit un entier négatif ?  Tous les calculs faits précédemment restent valables et nous obtenons à nouveau un corps commutatif. Prenons par exemple \(\rho\), tel que \(\rho^2 = -1\). Dans ce cas particulier, on note habituellement \(i\) au lieu de \(\rho\). Les nombres \(a + bi\) forment un corps commutatif noté \(\mathbb Q[i]\).</p>
+
+<p>Terminons en remarquant que si nous remplaçons \(\mathbb Q\) par \(\mathbb R\), les premiers exemples deviennent sans objet puisque \(\mathbb R\) contient déjà tous les irrationnels.</p>
+
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="compld.htm">Complexes</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

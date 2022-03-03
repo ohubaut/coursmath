@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Développement en série - Analyse - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="approximation, polynome, Vandermonde, développement, série" />
+<meta name="keywords" content="analyse, développement en série, approximation, sinus, logarithme, exponentielle, Vandermonde" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Développement en série
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Par deux points distincts passe une unique droite; par trois points distincts passe une unique parabole! Si la première affirmation est toujours vraie, il n'en est pas de même pour la seconde; on peut tenter de formuler les choses de manière légèrement différente afin que le second énoncé soit valable.</p>
+
+<p>Supposons que l'on connaisse la valeur d'une fonction pour deux réels distincts. On a dans le plan \(x, y\) deux points distincts par lesquels passe une droite unique. Etant donné l'hypothèse faite, cette droite n'est pas parallèle à l'axe \(y\) et son équation peut s'écrire \(y = ax + b\). A présent si l'on se donne trois réels distincts et les valeurs correspondantes de la fonction, on peut vérifier s'il existe une unique parabole \(y = ax^2 + bx + c\) passant par ces trois points.</p>
+
+<img alt="" src="appr/para.gif" width=184 height=183>
+
+<p>Les inconnues <i>a, b, c</i> sont déterminées par le système:</p>
+
+\[\begin{aligned}
+y_0 = a x_0^2 +b x_0 + c \\
+y_1 = a x_1^2 +b x_1 + c \\
+y_2 = a x_2^2 +b x_2 + c 
+\end{aligned} \]
+
+<p>La matrice du système est:</p>
+
+\[ \left\lgroup
+\matrix {x_0^2 & x_0 & 1 \\x_1^2 & x_1 & 1 \\x_2^2 & x_2 & 1}
+\right \rgroup \]
+
+<p>Que vaut son déterminant? C'est manifestement un polynôme en \(x_0, x_1, x_2\); ce polynôme est homogène du 3e degré. De plus le déterminant s'annule si \(x_0 = x_1\); il en résulte qu'il est divisible par \(x_0 - x_1\), et de même par \(x_1 - x_2\) et \(x_2 - x_0\). Mais voilà précisément trois facteurs linéaires!
+Le polynôme est donc connu à un facteur près; un simple coup d'œil montre qu'il vaut \(
+- (x_0 - x_1)(x_1 - x_2)(x_2 - x_0)\).</p>
+
+<p>Ce déterminant n'est donc jamais nul car les trois valeurs de la variable \(x\) sont distinctes et le système possède une solution unique. (Attention! la parabole peut éventuellement être une droite).</p>
+
+<p>De même si l'on se donne la valeur de la fonction pour quatre réels distincts \(x_0, x_1, x2 et x_3\), il existe une unique parabole cubique \(y = a x^3 + b x^2 + cx + d\) passant par ces 4 points. La démonstration ne fait que généraliser celle donnée plus haut; le déterminant des inconnues \(a, b, c, d\) vaut:</p>
+
+\[\begin{vmatrix}x_0^3 & x_0^2 & x_0 & 1 \\x_1^3 & x_1^2 & x_1 & 1 \\x_2^3 & x_2^2 & x_2 & 1\\ x_3^3 & x_3^2 & x_3 & 1\end{vmatrix} \]
+
+<p>C'est un déterminant de Vandermonde et pour une raison analogue il vaut :</p>
+
+\[ \prod_{i&lt;j} (x_i - x_j) \] 
+
+<p class="ni">c'est un polynôme de degré <i>n</i>(<i>n</i>+1)/2 qui est nécessairement non nul.</p>
+
+<p>On en conclut que si on désire approcher une fonction donnée on peut faire coïncider une fonction \(y = P(x)\), polynomiale de degré <i>n</i> en <i>n</i> + 1 points. On conçoit dès lors un espoir d'approcher une fonction par un polynôme de degré infini, ou ce que l'on appelle plus précisément une série.</p>
+
+<p>Toutefois entre les points choisis le comportement de la fonction polynomiale (ou série) peut différer fortement de la fonction donnée. On a donc intérêt à choisir les points extrêmement rapprochés; mais ceci nous conduit à choisir une infinité de points infiniment voisins les uns des autres, c'est-à-dire en fin de compte à n'approcher la fonction qu'au voisinage d'un de ses points.</p>
+
+<p>Analytiquement la donnée de la valeur de la fonction en un point voisin du point \(x_0, f(x_0)\) consistera à se donner la valeur de la dérivée première \(f '(x_0)\) ; la donnée de la valeur en un deuxième point voisin correspondra à la valeur de la dérivée seconde, et ainsi de suite.</p>
+
+<p>On voit ainsi comment motiver le concept de développement en série de <a title="Qui était Taylor ?" href="../bio/taylor.htm">Taylor</a> au voisinage de \(x_0\), ou d'abord plus simplement un développement de <a title="Qui était MacLaurin ?" href="../bio/maclauri.htm">MacLaurin</a> au voisinage de l'origine. On approche \(y = f(x)\) au voisinage de 0 par un polynôme de degré infini (une série):</p>
+
+\[ y = a + bx + cx^2 + dx^3 +... \]
+
+<p>Si l'on exige qu'en zéro les valeurs de la fonction et de ses dérivées successives coïncident avec celle de la série, on obtient:</p>
+
+\[ f(x) = f(0)+ f'(0)x + f''(0)\frac{x^2}{2!} + f'''(0)\frac{x^3}{3!} + ...\]
+
+<p>Les figures suivantes montrent des approximations de \(\boldsymbol\sin x, \boldsymbol\exp x\) et \(\boldsymbol\ln (1+x)\) par des développements en série respectivement limités aux cinq premiers ordres. Sur ces figures on pressent que pour  \(\boldsymbol\sin x\) et \(\boldsymbol\exp x\), le développement convergera partout.
+Pour \(\boldsymbol\exp (1+x)\), on devine que le développement ne convergera que dans un voisinage d'amplitude 1 de l'origine (la seule considération de parité des développements successifs montre la divergence pour \(x > 1\). Le problème de la convergence sera étudié avec un peu plus de détails dans l'article consacré aux <a href="taylor.htm">développements en série</a> de Taylor ou de MacLaurin.</p>
+
+<img alt="" src="appr/sin.gif" width=272 height=218><img alt="" src="../dot.png" width=80 height=80><img alt="" src="appr/exp.gif" width=272 height=218>
+<p> </p>
+<img alt="" src="appr/ln.gif" width=272 height=218>
+
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

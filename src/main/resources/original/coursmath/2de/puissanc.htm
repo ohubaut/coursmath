@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Distance d'un point à un cercle - 2e degré - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="puissance, cercle, distance point-droite, distance point-cercle" />
+<meta name="keywords" content="second degré, algèbre, géométrie, cercles, puissance" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="2de.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-7', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />Distance d'un point à un cercle<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Le cercle \(\mathbf{C}\) est défini par son centre  \(c (a, b)\) et son rayon \(R\).<br />
+Un point \(p\)\((x, y)\) appartient au cercle \(\mathbf{C}\) si et seulement si \(cp^2= R^2\). Les coordonnées du vecteur  \(cp\) sont \((x-a,y-b)\) ; par conséquent l'équation peut s'écrire :</p>
+
+\[(x-a)^2+(y-b)^2 = R^2\]
+
+<p class="ni">En particulier, si le centre est à l'origine des coordonnées, le cercle a pour équation \(x^2+y^2=R^2\).</p>
+
+<p>En développant l'équation, on obtient :</p>
+
+\[x^2+y^2-2ax-2by+a^2+b^2-R^2 = 0\]
+
+<p>Inversement étant donné une équation : \(A(x^2+y^2)+Bx+Cy+D=0\), essayons de la mettre sous la forme ci-dessus.</p>
+
+<p>Si \(A\) = 0, il s'agit de l'équation d'une droite (à condition que \(B\) et \(C\) ne soient pas simultanément nuls). Dans le cas général où \(A\) n'est pas nul,l'équation peut s'écrire :</p>
+
+<p>Cette équation est celle d'un cercle de centre \(C(-\frac{B}{2A},-\frac{C}{2A})\) et de rayon \(\frac{\sqrt{B^2+C^2-4AD}}{2A}\). Ce résultat est à rapprocher de la résolution de l'<a href="2edegre.htm">équation  du second degré</a>.</p>
+
+<p>Le cercle n'a pas de point à coordonnées réelles si le radicand est négatif ; il est de rayon nul (réduit à un point) si \(B^2+C^2-4AD=0\). Cette forme quadratique joue un rôle fondamental dans l'<a href="../com/cycles.htm">étude des cercles</a>.</p>
+
+<p>Lorsque le premier membre de l'équation d'un cercle est écrit de manière à ce que le coefficient de \((x^2+y^2)\) soit égal à 1, on dit que l'équation est mise sous forme normale.</p>
+
+<p>Calculons les intersections du cercle  \(\mathbf{C}\) avec une droite passant par le point \(p\) de vecteur directeur unité \(u\).</p>
+
+<p><img class="gauche" alt="" src="puis/puis.gif" width=236 height=162> Un point quelconque \(q\) situé sur la  droite est déterminé par un vecteur \(cq=cp+ \lambda u\)  où \(\lambda\) représente la distance du point \(b\)\(p\). Les points d'intersection \(q_1\) et \(q_2\) avec le cercle de centre \(c\)  vérifient la condition \(cq^2=R^2\). Les valeurs de \(\lambda\) correspondant aux points d'intersection son déterminées par l'équation :</p>
+
+\[R^2=cq^2=(cp+\lambda u)^2=cp^2+2\lambda cp.u + \lambda^2\]
+ou encore
+\[\lambda^2+ 2\lambda cp.u+cp^2-R^2=0\]
+
+<p>Les deux valeurs de \(\lambda\) correspondent aux distances du point \(p\) aux deux points d'intersection \(q_1\) et \(q_2\). On constate que le produit de ces distances est constant et vaut \(cp^2-R^2\). Cette constante est appelée puissance du point \(p\) par rapport au cercle \(\mathbf{C}\).</p>
+
+<p>Si le cercle est de centre \(c(a,b)\), on a \(cp^2=(x-a)^2+(y-b)^2\) et la puissance \(\mathbf{P}\) du point \(p\) de coordonnées \(x_0,y_0\) par rapport à \(\mathbf{C}\) vaut :</p>
+
+\[\mathbf{P}=(x_0-a)^2+(y_0-b)^2-R^2\]
+
+<p>On voit qu'il suffit de remplacer les coordonnées \((x,y)\) par celles du point \(p\) dans l'équation normale du cercle.</p>
+
+<p>Ce résultat est à rapprocher avec celui donnant la distance d'un point à une droite.</p>
+
+<p>Dans le cas où le cercle est de rayon nul, c'est-à-dire réduit à un point, la puissance n'est autre que le carré de la distance au point. On pourrait donc dire que la puissance est le carré de la distance du point au cercle. Toutefois cette grandeur peut être négative. Cela gêne peut-être certains mathématiciens mais il suffit d'accepter les nombres complexes. Une situation analogue est d'ailleurs rencontrée en relativité.</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="2degrd.htm">Second degré</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Un anneau de tétraèdres - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="kaléidocycle, tétraèdres, relief, flexible" />
+<meta name="keywords" content="kaléidocycle, tétraèdre, anneau, 3D, relief" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Un anneau de tétraèdres
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Une idée amusante pour fabriquer des bagues ou des colliers, consiste à utiliser des formes géométriques différentes: sphères, cylindres,...</p>
+
+<p>On pourrait également essayer d'employer d'autres formes simples et en particulier, des polyèdres, notamment des tétraèdres.<br />
+Mais comment les assembler ?<br />
+Tout simplement par leurs arêtes autour desquelles ils pourront se mouvoir. Pourtant, certains problèmes vont rapidement se poser : il faut s'assurer que leur nombre soit suffisant pour éviter qu'ils ne coincent.</p>
+
+<p>Si nous utilisons des tétraèdres réguliers, il en faudra assez bien : trois, quatre, cinq ne suffiront pas. Par contre, 6 tétraèdres permettent de refermer l'anneau mais malheureusement, cela coince ! A partir de 8 tétraèdres réguliers cela fonctionnera.<br />
+Pourtant, avec 6 tétraèdres, nous n'étions pas loin de réussir. N'abandonnons pas si vite.<br />
+Pour y remédier, conservons les arêtes "charnières" et étirons les arêtes "libres" de manière à augmenter le diamètre de l'anneau. Evidemment, les tétraèdres ne resteront plus réguliers, mais semi-réguliers en ce sens qu'ils auront deux arêtes opposées égales (les pivots) et les 4 autres arêtes égales également. Il est évident que si celles-ci sont suffisamment grandes, tout se passera bien.</p>
+
+<p>Essayons de voir à partir de quel moment cet anneau, appelé kaléidocycle, pourra varier librement sans malencontreux coincement.</p>
+
+<video class="enc" width="360" height="360" controls>
+<source src="anne/anneau.mp4" type="video/mp4">
+</video>
+
+<p style="text-align:center; font-size::0.8em;">(fichier de données aimablement communiqué par <a href="http://www.ac-noumea.nc/maths/amc/polyhedr/" target="ext">Maurice Starck</a>)</p>
+
+<p>Voici la solution.</p>
+
+<p>Mais... comment y sommes-nous arrivés ? Quelle longueur avons-nous choisie pour les arêtes libres ?</p>
+
+<p><img class="gauche" alt="hexagone" src="anne/hex.png"><img class="droite" alt="perspective" src="anne/persp.png">
+Pour cela, plaçons-nous dans la situation critique ; la voici en perspective :</p>
+
+<p>Si nous regardons l'objet par le dessus, nous voyons un hexagone régulier:<br />
+Dans cet hexagone, trois des arêtes passant par le centre - les "charnières" - sont vues en vraie grandeur car elles sont parallèles au plan horizontal. Soit \(L\) leur longueur.<br />
+Les trois autres arêtes passant par le centre sont inclinées et donc raccourcies.<br />
+Quant aux six arêtes formant le contour de l'hexagone, elles sont toutes vues en raccourci, mais elles sont bien intéressantes. Une arête représente un triangle, car cette face d'un tétraèdre est située, par raison de symétrie, dans un plan vertical. 
+Sa longueur vue, \(L\), vaut exactement la hauteur relative de ce triangle par rapport au côté "charnière".<br />
+Par conséquent, les faces sont toutes des triangles isocèles dont la base est égale à la hauteur correspondant à cette base.</p>
+
+<img alt="face" src="anne/face.png">
+
+<p>La base de ce triangle isocèle vaut \(L\) et, par le théorème de Pythagore, on voit que les côtés égaux ont une longueur égale à \(L\sqrt{5}/2 = 1.118...L\).<br />
+Voila ainsi la plus petite possibilité afin que l'anneau puisse tourner librement sans coincer.</p>
+
+<p>Nous vous conseillons toutefois de ne pas confondre "anneau" et "bague" ; vous risqueriez de vous coincer le doigt !</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

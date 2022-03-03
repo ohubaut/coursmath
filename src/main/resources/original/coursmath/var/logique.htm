@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Logique - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="probabilités, ensemble, ou exclusif, implication" />
+<meta name="keywords" content="logique, conjonction, union, ou, et, ou exclusif, ensemble, probabilité" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Logique
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Dans une première approche très manichéenne de la logique, toute proposition est vraie ou bien fausse. On lui attribue soit la valeur \(0\) si elle est fausse, soit la valeur \(1\) si elle est vraie.<br />
+Désignons par \(p\), \(q\),... la valeur des propositions \(P\), \(Q\),...</p>
+
+<p class="st">La négation</p>
+
+<p>La négation d'une proposition \(P\) est notée \(\lnot P\); cette proposition est évidemment fausse si \(P\) est vraie et vraie si \(P\) est fausse. Si \(p\) est la valeur de \(P\), alors la valeur de \(\lnot P\) est \(1-p\).</p>
+
+<p class="st">La conjonction</p>
+
+<p>Soit \(P\) et \(Q\) deux propositions; la conjonction est la proposition \(P\) et \(Q\), où le "et" signifie qu'on affirme simultanément la proposition \(P\) et la proposition \(Q\); elle est notée \(P\land Q\).<br />
+Attention! Le "et" utilisé n'est toutefois pas le  "et " du langage courant. Au cinéma on offre des réductions pour étudiants  "et " troisième âge!<br />
+La proposition \(P\land Q\) n'est évidemment vraie que si \(P\) et \(Q\) le sont simultanément. Autrement dit, elle est fausse dès que l'une des deux propositions l'est, c'est-à-dire si la valeur d'une des deux propositions vaut \(0\). Cette situation conduit à attribuer la valeur \(pq\) à \(P\land Q\)<br />
+C'est pourquoi la conjonction est également appelée produit logique. Remarquons que comme les variables \(p\), \(q\),... ne prennent que les valeurs \(0\) ou \(1\), on a toujours \(p\)² = \(p\)</p>
+
+<p class="st">La disjonction</p>
+
+<p>Soit \(P\) et \(Q\) deux propositions; la disjonction est la proposition \(P\) ou \(Q\), où le  "ou " signifie qu'on affirme l'une des deux propositions \(P\) ou \(Q\); elle est notée \(P\lor Q\).<br />
+Attention! A nouveau, le  "ou " utilisé n'est pas toujours le  "ou " du langage courant. Dans la langue française le terme ou possède deux sens différents; il peut signifier soit l'un, soit l'autre (c'est le  "ou " inclusif) mais aussi soit l'un, soit l'autre, mais pas les deux simultanément (c'est le  "ou " exclusif). En logique le  "ou " est le ou inclusif.<br />
+La proposition \(P\lor Q\) est vraie dès que l'une des deux propositions \(P\) ou \(Q\) l'est. Autrement dit, la valeur de \(P\lor Q\) n'est \(0\) que si la valeur de \(P\) et de \(Q\) est 0. On est tenté d'attribuer la valeur \(p+q\), mais si \(P\) et \(Q\) sont toutes deux vraies (si \(p\) = \(q\) = \(1\)) alors on aurait pour valeur 2 ! On attribue donc à la proposition \(P\lor Q\) la valeur \(p+q-pq\); la disjonction est appelée somme logique.</p>
+
+<p class="st">L'implication</p>
+
+<p>On note \(P\implies Q\), l'implication de \(Q\) par la proposition \(P\). Il n'est pas possible qu'une proposition vraie implique une proposition fausse; la valeur d'une implication n'est \(0\) que si \(p=1\) et \(q=0\). Une autre manière de voir les choses et de dire que la proposition \(P\implies Q\) est équivalente à \(\lnot(P\land \lnot Q)\). On peut facilement calculer la valeur de \(P \implies Q\); elle vaut 1 - (\(p\)(1 - \(q\))) = 1 - \(p\) + <i>pq</i>.</p>
+
+<p class="st">L'équivalence</p> 
+
+<p>On note \(P\iff Q\), l'équivalence des propositions \(P\) et \(Q\). L'équivalence est vraie si les deux propositions sont simultanément vraies ou simultanément fausses. On doit avoir \((P\implies Q)\land (Q\implies P)\). Cette remarque permet de calculer la valeur d'une équivalence:</p>
+
+\[(1-p+pq)(1-q+qp)=1-q+qp-p+pq-p^2q+pq-pq^2+p^2q^2 \]
+
+<p>Mais il faut remarquer que \(p^2=p\) (la valeur de \(p\) est soit \(0\) soit \(1\)) ! On peut donc simplifier l'expression et on obtient: \(1-p-q+2pq\)<br />
+On peut ainsi remarquer qu'une équivalence est vraie si \(1-p-q+2pq=1\), ce qui revient à écrire \(pq=p+q-pq\) (c'est-à-dire que la conjonction et la disjonction de \(P\) et \(Q\) sont simultanément vraies ou fausses) ou encore en multipliant soit par \(p\), soit par \(q\) et en effectuant les calculs que \(P\) et \(Q\) sont simultanément vraies ou fausses.</p>
+
+<p class="st">Les tautologies</p>
+
+<p>Il s'agit de propositions qui sont toujours vraies. Un exemple simple est \(P\lor \lnot P\); en effet ou bien \(P\) est vraie sinon \(\lnot P\) est vraie.<br />
+La valeur d'une tautologie est 1.<br />
+Dans l'exemple on a \(p+(1-p)-p(1-p)=p+1-p-p+p^2=1\) (n'oublions pas que \(p^2=p\)).</p>
+
+<p>Un autre exemple classique est celui du syllogisme:</p>
+
+\[ ((P\implies Q)\land (Q\implies R))\implies (P\implies R) \]
+
+<p>Calculons:</p>
+
+<p>La valeur de \(P\implies Q\) vaut \((1-p+pq)\); celle de \(Q\implies R\) est égale à \((1-q+qr)\). On en déduit que la première parenthèse vaut le produit \((1-p+pq)(1-q+qr)\) \(=1-p-q+pq+qr\).<br />
+La valeur de la deuxième parenthèse vaut \(1-p+pr\)<br />
+La valeur de l'expression vaut donc:<br />
+\(1-(1-p-q+pq+qr)+(1-p-q+pq+qr)(1-p+pr)\), ce qui après calcul donne 1.<br />
+Remarquons qu'un peu de "bon sens" nous aurait évité de fastidieux calculs.</p>
+
+<p>En effet l'expression ne peut être fausse que si la prémisse est vraie et la conclusion fausse; cette conclusion ne peut être fausse que si \(P\) est vrai et \(R\) faux. Or si \(Q\) est vrai, (et \(R\) faux) le premier membre est faux car \(Q\implies R\) est faux, et si \(Q\) est faux il l'est également car c'est alors \(P\implies Q\) qui est faux.</p>
+
+<p>Parmi toutes ces opérations sur les propositions, il est naturel de se poser la question de savoir si certaines d'entre elles ne peuvent pas s'exprimer à l'aide d'autres.<br />
+Par exemple il est évident qu'avec la négation ("non ") et la disjonction ("ou"), on est à même de définir la conjonction ("et"). En effet
+\(P\land Q=\lnot (\lnot P\lor \lnot Q)\).</p>
+
+<p>Mais il y a mieux : l'opération correspondant à la "barre de Scheffer". Aux propositions \(P\) et \(Q\) on associe l'opération "incompatibilité" de \(P\) et \(Q\) : \(P\)|\(Q\) qui n'est fausse que si \(P\) et \(Q\) sont toutes deux vraies (c'est le NAND des  électroniciens).<br />
+La valeur de l'incompatibilité de \(P\) et de \(Q\) vaut \(1 -pq\)</p>
+
+<p>Une simple observation : \(P|P=\lnot P\) (en effet \(1-pp=1-p\)) montre que la barre de Scheffer permet de définir la négation et, en poursuivant, on voit ainsi comment définir toutes les opérations sur les propositions.</p>
+
+<p>Dans la réalité tout n'est pas nécessairement blanc ou noir; les choses sont plus nuancées. Une proposition \(P\) peut être fort probablement vraie, ou peut-être vraie, ou très peu vraisemblablement vraie... On doit donc lui accorder une valeur de vérité \(p\) qui est comprise entre 0 et 1. On peut parler de la probabilité de véracité de la proposition \(P\).<br />De plus dans un ensemble, les éléments d'un sous-ensemble peuvent rendre une proposition vraie (dans l'ensemble des réels \(x^2 \lt 1\) est vraie pour le sous-ensemble \(-1 \lt x \lt 1\)).</p>
+
+<p>On voit le lien étroit qui existe entre logique, <a href="proba.htm">probabilités</a> et <a href="ensem.htm">ensembles</a>.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿/*___________________________ TITRE ________________________*/
+
+.titre {
+	color: #080;
+}
+.stitre {
+	color: #080;
+}
+/*___________________________ CENTRAL ________________________*/
+
+.central {
+	background: #fffff0;
+	border: 2px solid #080; 
+}
+
+.mid {
+	vertical-align:middle; 
+}

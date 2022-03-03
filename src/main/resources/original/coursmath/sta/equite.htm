@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Y a-t-il des jeux "honnêtes" ? - Statistique - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="jeux de hasard, equitable, honnête" />
+<meta name="keywords" content="équité, espérance mathématique" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Y a-t-il des jeux "honnêtes" ?
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Après tout le mal qui a été dit des <a href="jackpot.htm">jeux de hasard</a> (tombola, bandit manchot, tiercé, etc.), où tout est calculé pour que nous y perdions (plus ou moins), il nous reste quand même des jeux dits "équitables", c'est-à-dire où il n'y a pas systématiquement un biais en défaveur du joueur.<br />
+Songeons aux jeux de cartes (entre joueurs de même force) ou même plus simplement au pile ou face, où de manière évidente le jeu est honnête.</p>
+
+<p>Eh bien, malgré tout, ne vous risquez jamais à jouer à un jeu de hasard, même  dit "équitable" si vous n'êtes pas plus riche que votre adversaire !</p>
+
+<p>Prenons l'exemple particulièrement simple, du pile ou face (honnête, pas <a href="../app/pilface.htm">menteur</a>). Chaque joueur choisit un côté de la pièce, <b>face</b> (pour autant qu'il y ait une face, une tête, ce qui existe encore dans les monarchies constitutionnelles) ou l'avers dénommé <b>pile</b>.<br />
+La pièce (supposée non truquée) est lancée et suivant le résultat affiché, soit l'un , soit l'autre, récupère une mise égale.</p>
+
+<p>Voilà un jeu équitable et inoffensif (bien qu'inintéressant) ! Que du contraire ! En effet, si votre adversaire est plus fortuné que vous, vous risquez de vous ruiner.</p>
+
+<p>Intuitivement, on sent bien que si l'on joue 10 fois, le plus souvent le score sera de 5/5, mais toutefois il peut être 6/4 ou 4/6 ou pire. Si on joue 1000 fois, le score le plus fréquent est de 500/500, mais cela devient extrêment rare et il y aura des écarts avec cette valeur la plus probable. Imaginez un instant que vous jouiez 1000000 de fois; ce serait un miracle de terminer par un score de 500000/500000. Donc il y aura toujours des écarts qui deviendront de plus en plus importants à mesure que le nombre de parties augmentera.<br />
+Le drame est que, si cet écart atteint votre fortune initiale, vous n'avez plus rien et vous êtes incapable de poursuivre le jeu. Certains, pris par le démon du jeu, vont jusqu'à emprunter, voire voler ! dans l'espoir illusoire de se refaire.<br />
+Comme l'écart peut être en (dé)faveur de l'un ou de l'autre, on devine bien que c'est celui qui possède au départ le plus d'argent qui s'en tirera.</p>
+
+<p>Soyons à présent plus précis et mesurons le risque encouru.<br />
+Supposons les deux joueurs munis, l'un d'un capital \(A\), l'autre d'un capital \(B\) et désignons par \(F(x)\) le risque d'être ruiné possédant un capital \(x\). Supposons également que la somme mise en jeu soit égale à 1.<br />
+Après le lancer de la pièce, le joueur au capital \(x\) aura \(1\) chance sur \(2\) (comme le jeu est "honnête") de voir son capital devenir \(x+1\) s'il gagne ou \(x-1\) s'il perd. On peut en déduire la relation:</p>
+
+\[ F(x)= \frac{1}{2}F(x+1)+\frac{1}{2}F(x-1) \]
+
+<p>\(F(x)\) est la moyenne arithmétique entre \(F(x+1)\) et \(F(x-1)\). Cela se traduit par le fait que si l'on dessine le graphique de \(F(x)\) en fonction de \(x\) (attention ! \(x\) est un entier), les points seront alignés.<br />
+De manière plus formelle :</p>
+
+\[ \begin{align}
+\Delta_2F(x)& =\Delta_1F(x+1)-\Delta_1F(x) \\ & =F(x+1)-F(x)-(F(x)-F(x-1)) \\ & =F(x+1)+F(x-1)-2F(x) \\ & =0
+\end{align} \]
+
+Comme \(\Delta_2F(x)=0\), \(\Delta_1F(x)\) est constant et \(F(x)\) est linéaire et on obtient \(F(x)=\alpha x+\beta \).<br />
+
+<p>Les valeurs de \(\alpha \) et \(\beta \) sont facilement déterminées.<br />
+Si \(x=0\) (capital nul) on est certainement ruiné: \(F(0)=1\) ;<br />
+si \(x=A+B\) (on possède tout, plus de risques!) alors \(F(A+B)=0\).<br />
+On obtient \(\beta=1\) et \(\alpha= 1/(A+B)\).</p>
+
+<p>En regroupant les résultats obtenus, il vient:</p>
+\[ F(x)=-x/(A+B)+1=(A+B-x)/(A+B) \]
+
+<p>Par conséquent la probabilité d'être ruiné, pour le joueur qui possède un capital \(A\), vaut \(B/(A+B)\) et, pour celui qui possède un capital \(B\), vaut \(A/(A+B)\).<br />
+En d'autres termes la probabilité d'être ruiné en jouant à un jeu "honnête" est inversement proportionnelle au capital des joueurs.<br />
+Cela démontre notre affirmation de départ: "Ne vous risquez jamais à jouer à un jeu de hasard, même  dit "équitable" si vous n'êtes pas plus riche que votre adversaire"</p>
+
+<p>Remarquons enfin que même si le jeu est favorable, c'est-à-dire que votre probabilité de gain est supérieure à votre probabilité de perte, le résultat reste, mutando mutandis, valable.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

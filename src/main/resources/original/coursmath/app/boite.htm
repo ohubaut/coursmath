@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mise en boîte - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="conditionnement" />
+<meta name="keywords" content="conserves, boites, économie, dérivation" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Mise en boîte
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Dans un supermarché, on rencontre pas mal de produits conditionnés en boîtes métalliques. Le problème qui se pose aux fabricants est de produire des boîtes à conserve de la manière la plus économique.</p>
+
+<p>Abordons tout d'abord le problème de manière très classique. Une boîte est une portion de cylindre fermée par deux disques circulaires. Ses dimensions sont déterminées dès que l'on connaît la hauteur \(h\) de la boîte et le rayon \(R\) du couvercle.<br />
+Calculons la quantité de métal utilisée pour stocker un volume donné. Tout d'abord, le volume \(V\) vaut  \(\pi R^2h\).<br />
+Quant à la quantité de métal utilisée, elle vaut \(2\pi R^2\) (pour les deux disques) et \(2\pi Rh\) (pour la face latérale, soit au total \(2\pi R(R+h)\).</p>
+
+<p>Essayons de minimiser la quantité de métal, et pour cela déterminons \(R\) et \(h\). Une première condition est \(h=V/\pi R^2\). La quantité de métal utilisée vaut \(2\pi R(R+V/\pi R^2)\) et doit être minimisée. Il s'agit d'une fonction de \(R\) dont la dérivée vaut \(2\pi (2R-V/\pi R^2)\); elle s'annule si \(2R-V/\pi R^2=0\). À partir de là on peut évidemment calculer \(R\) et \(h\). On obtient tout de suite la valeur du volume \(V=2\pi R^3\); et par conséquent \(h=2R\).</p>
+
+<p>Les mathématiciens sont satisfaits mais un technicien me fait remarquer que lorsqu'on découpe des disques dans une plaque métallique il y a nécessairement des chutes inutilisables. Comment tenir compte de son avis ?</p>
+
+<p>Un nouveau problème se pose. Comment découper les disques dans une plaque afin d'avoir un minimum de chutes ? Une première idée est de quadriller la plaque et de découper à l'intérieur de chaque carré un disque.</p>
+
+<div><img alt="" src="boit/car.gif"></div>
+
+<p>Il y a beaucoup de pertes. En effet dans un carré de côté \(2R\) on fait un disque de rayon \(R\). On utilise une surface de \(4R^2\) pour une surface utile de \(\pi R^2\). On n'utilise que \(\pi/4\) de la surface disponible, soit environ 78,5%.<br />
+Il y a une meilleure solution. Traçons un réseau d'hexagones réguliers d'apothème \(R\), et à l'intérieur de chacun d'eux découpons un disque de rayon \(R\).</p>
+
+<div><img alt="" src="boit/hex.gif"></div>
+
+<p>Pour la même surface utile \(\pi R^2\), on n'utilise que la surface de l'hexagone, \(2R^2\sqrt3\). Dans ce cas, la partie utile représente \(\pi/2\sqrt3\) de la surface disponible soit environ 90,6%.<br />
+Voilà, en fait, la meilleure solution.</p>
+
+<p>Dès lors on peut améliorer la solution du problème obtenue plus haut.</p>
+
+<p>Si l'expression du volume n'a pas changé et vaut toujours \(V=\pi R^2h\), la surface métallique nécessaire vaut à présent \(2\pi Rh\) (pour la surface latérale) à laquelle il faut ajouter deux hexagones, c'est-à-dire \(4R^2\sqrt3\). On utilise une surface totale de \(2R(2R\sqrt3+\pi h)\). En utilisant la relation \(h=V/\pi R^2\), on obtient pour un volume \(V\) donné une surface égale à \(2R(2R\sqrt3 + V/R^2)\) dont la dérivée par rapport à R vaut \(8R\sqrt3 - 2V/R^2\) doit être nulle. On en déduit que \(V=4R^3\sqrt3\); par conséquent la hauteur \(h=4R\sqrt3/ \pi\), c'est-à-dire à peu près \(2,205 R\).</p>
+
+<p>Cette proportion est effectivement vérifiée pour les boîtes de grande capacité. (Il est clair que les asperges seront conditionnées différemment !).</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

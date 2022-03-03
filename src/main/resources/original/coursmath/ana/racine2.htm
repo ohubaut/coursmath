@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Racine carrée - Analyse - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="racine carrée, Platon, Héron, Newton, itération" />
+<meta name="keywords" content="analyse, racine carrée, Platon, Héron, itération, Newton" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Racine carrée
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<p>Une méthode fort ancienne (abusivement attribuée à <a title="Biographie" href="../bio/platon.htm">Platon</a>) permettait d'extraire la racine carrée d'un nombre par un procédé itératif. Pour calculer la racine carrée \(x\) d'un nombre \(n\)> on partait d'une valeur approchée \(x_0\) de \(x\), et on utilisait la formule:</p>
+
+\[ x_{j+1} = \frac{x_j + n}{x_j +1} \] 
+
+<p>Si le procédé converge, pour \(j\) suffisamment grand, on a:</p>
+
+\[ x_{j+1}\simeq x_j \simeq x \] 
+et
+\[ x = \frac{x+n}{x+1} \] 
+
+<p class="ni">ou encore \(x^2 + x = x + n\), c'est-à-dire que \(x\) vaut donc la racine carrée de \(n\).</p>
+
+<p>Si on part d'une valeur positive \(x_0\) on obtiendra la racine carrée positive de \(n\). Toutefois la convergence est lente: à titre d'exemple, calculons la racine carrée de 2 en partant de 1; on obtient successivement 1, 3/2, 7/5, 17/12, 41/29, 99/70, 239/169, 577/408,... Ne pourrait-on pas améliorer la vitesse de convergence ?</p>
+
+<p>On a utilisé une tranformation dont l'équation est de la forme:</p>
+
+\[ x = \frac{ax + b}{cx +d}\] 
+
+<p>C'est une fonction homographique qui représente une projectivité (une permutation) sur la droite coordonnée complétée par l'infini. Si l'on cherche les points fixes, on est amené à résoudre l'équation \(x(cx + d) = ax + b\), ce qui peut s'écrire:</p>
+
+\[cx^2 + (d - a)x - b = 0\]
+
+<p>Si l'on souhaite que les deux solutions soient \(\sqrt{n}\) et \(-\sqrt{n}\), il faut que l'équation soit équivalente à \(x^2 = n\). Par conséquent, en posant \(c=1\), on doit avoir \(a = d\text{ et } b = n\) ; soit \(k\) la valeur commune de \(a\) et \(d\).</p>
+
+<p><i>Intuitivement, si on part d'un point quelconque (non fixe) dans cette permutation on obtient pour image un point qui est plus "proche" d'un des deux points fixes; le segment compris entre le point et le point fixe est transformé en un segment (point image et point fixe) plus petit. Une répétition de la transformation le rendra encore plus petit et les coordonnées des points successifs se rapprocheront de celle du point fixe.</i></p>
+
+<p>On voit que la fonction</p> 
+
+\[ x = \frac{kx+n}{x+k} \] 
+
+<p class="ni">possède les mêmes valeurs fixes ou, si l'on préfère, les mêmes points fixes.</p>
+
+<p>Puisque nous disposons d'un paramètre \(k\), peut-être pourrions-nous jouer sur le choix de \(k\) afin d'améliorer la convergence? L'idéal serait évidemment d'aboutir au résultat après une seule <a href="itere.htm">itération</a>; on aurait:</p>
+
+\[ x_1 = \frac{kx_0+n}{x_0+k} = x_0 = \sqrt{n} \]
+
+<p>Ainsi, quelle que soit la valeur de \(i\) les approximations seraient toujours les mêmes et égales à la racine carrée cherchée. La valeur de \(k\) est alors déterminée par l'équation:</p>
+
+\[ \sqrt{n}= \frac{kx_i+n}{x_i+k} \] 
+
+<p class="ni">ou encore </p>
+
+\[ k (\sqrt n -x_i) = \sqrt n (\sqrt n -x_i)\]
+
+<p>Il faudrait donc choisir \(k\) égal à la racine carrée de \(n\).
+Malheureusement, c'est précisément ce que l'on cherche à calculer. Alors, faute de mieux, on peut choisir pour \(k\) la meilleure valeur connue à cette étape c'est-à-dire \(x_i\), l'approximation d'ordre \(i\) La formule d'itération devient:</p>
+
+\[ x_{i+1} = \frac {x_i^2 + n}{2 x_i} \] 
+
+<p>En reprenant l'exemple du calcul de la racine carrée de 2 à partir de 1 on obtient 1, 3/2, 17/12, 577/408,... et la convergence est nettement plus rapide.</p>
+
+<p>Une autre manière d'arriver à cette formule (dite de Héron) est de raisonner comme suit: soit \(x_0\)> une valeur de départ pour le calcul de la racine carrée de \(n\). Pour vérifier si elle convient calculons le quotient de \(n\) par \(x_0\); en général on trouvera une valeur différente de \(x_0\), mais cette valeur et \(x_0\) encadreront la racine carrée cherchée. On améliorera la valeur en prenant la moyenne arithmétique de ces deux nombres:</p>
+
+\[ x_1 = \frac{x_0 + \frac n x_0}{2} = \frac {x_0^2 + n}{2 x_0} \] 
+et ainsi de suite.
+
+<p>Si l'on voit les choses sous cet angle on peut évidemment se demander pourquoi avoir choisi la moyenne arithmétique et non une autre moyenne, harmonique, géométrique ou même arithmétique pondérée. En fait si \(x_i\), l'approximation d'ordre \(i\), vaut \((1 +  \epsilon)\) fois la valeur exacte, le quotient de \(n\) par \(x_i\) vaut approximativement \((1 -  \epsilon)\) fois cette valeur \( \epsilon\) est l'erreur relative commise); par conséquent la moyenne arithmétique convient parfaitement (de même que la moyenne harmonique).</p>
+
+<p>On peut appliquer la même idée pour la recherche d'une racine cubique. Soit \(x_0\) une approximation de la racine cubique de \(n\); on obtient un encadrement par l'intervalle:</p>
+
+\[ \left[ {x_0, \frac {n}{x_0^2} } \right ]\] 
+
+<p>On peut, à nouveau, améliorer l'approximation en choisissant une valeur intermédiaire; mais dans ce cas quelle moyenne adopter? Si \(x_0\) vaut \((1 +  \epsilon)\) fois la valeur exacte, le quotient de \(n\) par \(x_0\) vaudra approximativement \((1 - 2 \epsilon)\) fois cette valeur. On approchera donc le mieux la racine cubique en prenant cette fois la moyenne pondérée (2, 1) des deux extrémités de l'intervalle soit:</p>
+
+\[x_1 = \frac{2x_0 + \frac {n} {x_0^2}} {3} = \frac {2x_0^3 + n}{3x_0^2} \] 
+
+<p>Plus généralement pour extraire la racine d'ordre \(k\) de \(n\) la formule d'itération est:</p>
+
+\[ x_{j+1} = \frac {(k-1) {x_j^k} + n} {k {x_j}^{k-1}} \]
+
+<p>Enfin une autre manière de voir les choses conduit à la formule de Newton qui possède un champ d'application plus large: soit \(x_i\) une approximation d'ordre \(i\) de la racine carrée de \(n\); la valeur exacte est \(x_i + \epsilon\); cherchons à déterminer \( \epsilon\):</p>
+
+\[ (x_j + \epsilon )^2 = n \] \[x_j^2 + 2 \epsilon x_j + \epsilon ^2 = n \] 
+
+<p class="ni">mais le carré de l'erreur \(\epsilon\) peut être considéré comme négligeable, d'où:</p>
+
+\[ \epsilon = \frac{n - x_j^2}{2 x_j} \] et\[x_{j+1} = x_j + \epsilon = \frac{x_j^2 + n}{2x_j} \] 
+
+<p>Cette méthode se généralise à la recherche d'une solution de l'équation \(f(x) = k\).
+Si \(x_i\) est une approximation et \(x_i + \epsilon\) la valeur exacte, on obtient en développant en série:</p>
+
+\[f(x_j + \epsilon ) = k = f(x_j) + \epsilon f ' (x_j) + \frac {\epsilon ^2}{2} f ''(x_j) + ... \] 
+
+<p class="ni">et en négligeant les termes carrés en \(\epsilon\) on a:</p>
+
+\[ \epsilon = \frac{k - f(x_j)}{f '(x_j)} \] \[ x_{j+1} = x_j + \frac { k - f(x_j)}{f ' (x_j)} = \frac{k - f(x_j) + x_j f ' (x_j)}{k - f (x_j)}\] 
+
+<p>La convergence de cette méthode est assez bonne et dépend du signe de la dérivée seconde. Dans le cas d'une extraction de racine on est assuré de la validité de la méthode de Newton.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

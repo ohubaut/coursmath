@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Les carrés magiques - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="vectoriel, base, combinaison linéaire" />
+<meta name="keywords" content="algèbre, carré magique, espace vectoriel, base, construction" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Les carrés magiques
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Il s'agit d'un petit jeu mathématique fort ancien (rien à voir avec le sudoku qui fait fureur pour l'instant)<br />
+On prend un quadrillage de \(n×n\) carrés dans lesquels il faut placer les \(n^2\) premiers nombres naturels à partir de \(1\), afin que la somme des nombres de chaque rangée (ligne ou colonne) soit la même et vaille \(k\).<br />
+Remarquons déjà que la condition de partir de \(1\) n'a rien d'essentiel; il suffirait d'ajouter une même constante à chaque élément du carré. On pourrait également demander de ne considérer qu'une suite d'entiers en progression arithmétique.<br />
+Comme ce problème n'est pas très difficile, on peut le raffiner en lui imposant des conditions supplémentaires.<br />
+On peut exiger en outre que la somme des éléments de leurs deux diagonales vaille également \(k\), et on les appellera "magiques". Ce nombre \(k\) sera appelé la constante du carré.</p>
+
+<p>Un exemple est donné par un carré 6×6 (datant du XIIIe siècle) dont chaque rangée ainsi que chaque diagonale a pour somme 111.</p>
+
+<img class="gauche" alt="carré arabe" src="carr/arabe.jpg"><br />
+<table class="n droite">
+<tr><td>28</td><td> 4</td><td> 3</td><td>31</td><td>35</td><td>10</td></tr>
+<tr><td>36</td><td>18</td><td>21</td><td>24</td><td>11</td><td> 1</td></tr>
+<tr><td> 7</td><td>23</td><td>12</td><td>17</td><td>22</td><td>30</td></tr>
+<tr><td> 8</td><td>13</td><td>26</td><td>19</td><td>16</td><td>29</td></tr>
+<tr><td> 5</td><td>20</td><td>15</td><td>14</td><td>25</td><td>32</td></tr>
+<tr><td>27</td><td>33</td><td>34</td><td> 6</td><td> 2</td><td> 9</td></tr>
+</table>
+<br /><br /><br /><br />
+ce qui équivaut,<br />dans nos notations, à :
+<br /><br /><br /><br /><br /><br /> 
+
+<p><img class="droite" alt="carre" src="carr/carre_durer.jpg">
+<br /><br />Un autre exemple: on trouve dans la gravure "<a href="../vie/graphiq.htm">Melancholia</a>" (1514) de Dürer un carré magique 4×4. Quelle que soit la rangée (ligne ou colonne), la somme des éléments vaut toujours 34. De plus, les nombres sur les diagonales et dans chacun des 4 petits carrés 2×2 situés aux quatre coins du grand, ainsi que celui situé au centre, ont toujours la même somme: 34.</p>
+
+<p>Soyons plus modestes et intéressons-nous aux carrés \(3×3\).</p>
+
+<p>L'exemple le plus connu consiste à n'utiliser que les \(9\) premiers nombres naturels, et un résultat est par exemple:</p>
+
+<table class="n">
+<tr><td> \(8\) </td><td> \(1\) </td><td> \(6\) </td></tr>
+<tr><td>\(3\)</td><td>\(5\)</td><td>\(7\)</td></tr>
+<tr><td>\(4\)</td><td>\(9\)</td><td>\(2\)</td></tr>
+</table>
+
+<p>Mais élargissons le problème en levant la condition que les nombres figurant dans ce tableau \(3×3\) soient des naturels, et supposons qu'ils puissent  être rationnels ou même réels.</p>
+
+<p>Si l'on convient de dire que \(m\) fois un carré est simplement le carré magique dont tous les éléments ont été multipliés par \(m\), le carré obtenu est évidemment encore magique ! Comme \(m\) peut  être un rationnel ou un réel, voila bien une raison nécessaire de se libérer des naturels.<br />
+De plus, le carré somme de carrés magiques (c'est-à-dire le carré obtenu en sommant les éléments correspondants de chaque case) est également magique.</p>
+
+<p>Désignons les neuf éléments du carré magique, de constante \(k\), par les 9 premières lettres de l'alphabet.</p>
+
+<table class="n">
+<tr><td> \(a\) </td><td> \(b\) </td><td> \(c\) </td></tr>
+<tr><td>\(d\)</td><td>\(e\)</td><td>\(f\)</td></tr>
+<tr><td>\(g\)</td><td>\(h\)</td><td>\(i\)</td></tr>
+</table>
+
+<p>On peut écrire 8 relations entre ces 9 éléments inconnus: la somme est constante dans chaque ligne (3 équations), chaque colonne (3 équations), et sur chaque diagonale (2 équations).<br />
+Pour quelqu'un habitué aux mathématiques (mais qui ne réfléchirait pas trop), il serait tentant de dire qu'il ne reste qu'une seule inconnue, puisqu'il existe 8 équations entre les 9 éléments inconnus.</p>
+
+<p>Grave erreur, car les relations ne sont pas indépendantes !</p>
+
+<p>En effet, la somme de tous les éléments du carré est égale à \(3k\). Mais on peut regrouper les termes de cette somme et voir cette équation comme la somme des termes de chacune des lignes, mais aussi la somme des termes de chacune des colonnes.<br />
+Il nous reste donc bien plus qu'un seul paramètre.</p>
+
+<p>En écrivant la somme des éléments situés sur les 2 rangées et des 2 diagonales contenant le nombre \(e\) situé au centre du carré, c'est à dire les sommes \(d+e+f\), \(b+e+h\), \(a+e+i\) et \(c+e+g\), toutes égales à \(k\), on obtient \(4k\). Dans cette somme, chaque élément une seule fois à l'exception de l'élément central \(e\) qui apparaît 4 fois. On en déduit que la somme de tous les autres éléments vaut donc \(4k-3e=3k\). On obtient donc \(k=3e\)</p>
+
+<p>Munis de cette information, essayons de construire un carré dont la constante vaut \(k\).<br />
+L'élément \(e\) est bien déterminé : \(e = k/3\).<br />
+Il est évident que si on soustrait \(k/3\) de chacun des éléments, le carré reste magique et que sa constante vaut \(0\).</p>
+
+<p>Nous sommes ramenés à un problème plus simple. La somme des éléments de chaque rangée et de chaque diagonale doit  être nulle. Il en résulte que deux éléments symétriques par rapport au centre sont opposés. Ce carré doit  être de la forme:</p>
+
+<table class="n">
+<tr><td> \(p\) </td><td> \(q\) </td><td> \(r\) </td></tr>
+<tr><td>\(s\)</td><td>\(0\)</td><td>\(-s\)</td></tr>
+<tr><td>\(-r\)</td><td>\(-q\)</td><td>\(-p\)</td></tr>
+</table>
+
+<p>Mais il faut également que \(p+q+r=0\) et de même \(p+s-r=0\).</p>
+
+<p>Les deux autres rangées n'apportent plus de nouvelles conditions.<br />
+Comme \(p\) et \(r\) apparaissent dans ces deux équations, on voit qu'on peut librement choisir ces deux nombres et calculer \(q\) et \(s\) en fonction d'eux.<br />
+On a \(q=-p-r\) et \(s=r-p\) et, dès lors, le carré magique doit  être de la forme:</p>
+
+<table class="n">
+<tr><td>\(p\)</td><td>\(-p-r\)</td><td>\(r\)</td></tr>
+<tr><td>\(r-p\)</td><td>\(0\)</td><td>\(p-r\)</td></tr>
+<tr><td>\(-r\)</td><td>\(p+r\)</td><td>\(-p\)</td></tr>
+</table>
+
+<p>Pour revenir au problème initial, un carré magique de constante \(k\), il suffit d'ajouter \(e=k/3\) à tous les éléments, et on obtient:</p>
+
+<table class="n">
+<tr><td>\(e+p\)</td><td>\(e-p-r\)</td><td>\(e+r\)</td></tr>
+<tr><td>\(e-p+r\)</td><td>\(e\)</td><td>\(e+p-r\)</td></tr>
+<tr><td>\(e-r\)</td><td>\(e+p+r\)</td><td>\(e-p\)</td></tr>
+</table>
+
+<p>En nous rappelant comment multiplier un carré par un nombre et comment les additionner, tout carré magique \(3×3\) peut s'écrire:</p>
+
+<table class="centre">
+<tr><td style="border:0;">
+\(e\) 
+</td><td style="border:0;">
+<table class="n">
+<tr><td> \(1\) </td><td> \(1\) </td><td> \(1\) </td></tr>
+<tr><td>\(1\)</td><td>\(1\)</td><td>\(1\)</td></tr>
+<tr><td>\(1\)</td><td>\(1\)</td><td>\(1\)</td></tr>
+</table>
+</td><td style="border:0;">
+ + \(p\) 
+</td><td style="border:0;">
+<table class="n">
+<tr><td> \(1\) </td><td> \(-1\) </td><td> \(0\) </td></tr>
+<tr><td>\(-1\)</td><td>\(0\)</td><td>\(1\)</td></tr>
+<tr><td>\(0\)</td><td>\(1\)</td><td>\(-1\)</td></tr>
+</table>
+</td><td style="border:0;">
+ + \(r\) 
+</td><td style="border:0;">
+<table class="n">
+<tr><td> \(0\) </td><td> \(-1\) </td><td> \(1\) </td></tr>
+<tr><td>\(1\)</td><td>\(0\)</td><td>\(-1\)</td></tr>
+<tr><td>\(-1\)</td><td>\(1\)</td><td>\(0\)</td></tr>
+</table>
+</td></tr>
+</table>
+
+<p class="ni">et, en particulier, l'exemple de carré magique donné plus haut peut s'écrire sous cette forme avec \(e=5\), \(p=3\) et \(r=1\).</p>
+
+<p>Voila un exemple inattendu d'espace vectoriel à 3 dimensions (défini par une de ses bases).</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td<a href="#H">Haut de la page</a></td>
+		<td<a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

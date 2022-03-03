@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Chaises musicales - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="programmation linéaire" />
+<meta name="keywords" content="choix, optimisation, minimalisation coûts" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Chaises musicales
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Un orchestre symphonique s'adresse à un atelier de menuiserie où l'on fabrique des chaises et des pupitres.<br />
+Deux ouvriers y travaillent à temps partiel, car pour des raisons de disponibilité de matériel, les deux ne peuvent travailler simultanément.<br />
+Tous deux savent confectionner des chaises et des pupitres, mais Albert est spécialisé dans la confection de pupitres et Bernard dans celle de chaises.<br />
+Bernard, qui est plus ancien dans la maison, est mieux payé qu'Albert.<br />
+De manière précise, voici les données par semaine.</p>
+<table class="n">
+<tr>
+<td></td>
+<td><b>Salaire</b></td>
+<td># <b>pupitres</b></td>
+<td># <b>chaises</b></td>
+</tr>
+<tr>
+<td><b>Albert</b></td>
+<td>1000</td>
+<td>10</td>
+<td>4</td>
+</tr>
+<tr>
+<td><b>Bernard</b></td>
+<td>1500</td>
+<td>5</td>
+<td>7</td>
+</tr>
+</table>
+<p>L'atelier reçoit commande de \(50\) pupitres et \(50\) chaises à livrer au plus tard dans \(11\) semaines.<br />
+Comment répartir le travail ?</p>
+
+<p>Désignons respectivement par \(x\) et \(y\) le nombre de semaines de travail pour Albert et Bernard.<br />
+L'échéance impose que \(x+y \le 11\)<br />
+On doit produire \(50\) pupitres, donc \(10x+5y\ge 50\) et \(50\) chaises, donc \(4x+7y\ge 50\)<br />
+Faut-il le dire, \(x\) et \(y\) sont tous deux positifs.</p>
+
+<p>En résumé nous obtenons un système d'inéquations linéaires:</p>
+
+\[ \begin{array}{lllll}
+x+y \le 11 \\
+10x+5y\ge 50 \\
+4x+7y\ge 50 \\
+x\ge 0 \\
+y\ge 0
+\end{array} \]
+
+<img class="droite" alt="" src="chai/dom.gif"><p>Si nous représentons sur un graphique les contraintes, la partie colorée est l'ensemble de toutes les solutions.<br />
+Bien entendu, on cherchera à obtenir un bénéfice maximum. On doit minimiser le coût de production: \(1000x+ 1500y\)</p>
+
+<p>Étudions graphiquement la variation du coût.<br />
+Pour cela supposons que nous nous fixions un coût bien déterminé soit, par exemple, \(3000\). On a donc \(1000x\) \(+1500y=3000\) ce qui est l'équation d'une droite.</p>
+
+<p>Si nous modifions ce coût, par exemple \(4500\), on obtient \(1000x+1500y=4500\), c'est-à-dire l'équation d'une autre droite. Pour toute autre valeur du coût, on obtient une droite et  toutes ces droites sont parallèles (on pouvait le prévoir en se rendant compte que les droites ne pouvaient se couper).</p>
+
+<div><img alt="" src="chai/proglin.gif"></div>
+
+<p>La variation du coût se représente donc, graphiquement, par la translation de la droite \(1000x + 1500x = k\). A l'origine \(x=y=0\) et le coût est nul; au plus la droite s'écarte de l'origine, au plus le coût augmente.<br />
+On doit donc choisir dans le domaine le point "le plus proche" de l'origine, qui dans notre cas est le point de coordonnées \(x=2\) et \(y=6\).</p>
+
+<p>La solution consiste donc à faire travailler Albert 2 semaines et Bernard 6 semaines. Il en coûtera \(11000\) et le délai sera largement respecté.</p>
+
+<p>Modifions légèrement les données. Supposons que Bernard ne fabrique que \(6\) chaises par semaine. Dans tout ce qui précède, il suffit de remplacer \(7\) par \(6\). Que se passe-t-il ?</p>
+
+<p>Une des droites frontières du domaine est modifiée et la solution optimale devient \(x=1,25\) et \(y=7,5\).</p>
+
+<p>Malheureusement, il y a un problème: toute semaine entamée doit être entièrement payée; autrement dit, il ne faut tenir compte que des solutions en nombres entiers. Que faut-il faire ?<br />
+Une première réaction est de prendre la solution entière "la plus proche", c'est-à-dire \(x=1\) et \(y=8\).<br />
+Mais est-ce vraiment la meilleure solution?</p>
+
+<p>Regardons les choses de plus près. Nous ne pouvons en fait considérer que les points à coordonnées entières contenus dans le domaine; nous devrons donc déplacer la droite correspondant au coût minimum parallèlement à elle-même jusqu'à ce qu'elle rencontre un point à coordonnées entières. Ce n'est, en général, pas chose aisée, mais dans notre cas nous pouvons regarder les possibilités point par point.<br />
+Pour le point de coordonnées (\(1,8\)), le coût est de \(13000\).</p>
+
+<p>Un autre point, qui semble beaucoup plus éloigné est le point (\(2,7\)).<br />
+Pourtant, surprise ! Le coût est de \(12500\). On peut vérifier sans beaucoup de peine que c'est la solution optimale.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

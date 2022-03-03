@@ -1,0 +1,60 @@
+﻿body{
+	margin: 0;
+	padding:0;
+	/*scrollbar-face-color: #f3f3cd;
+	scrollbar-highlight-color: #fffee0;
+	scrollbar-shadow-color: #c0ba02;
+	scrollbar-3dlight-color: #fefdd0;
+	scrollbar-arrow-color: #c0c000;
+	scrollbar-track-color: #ffffe0;
+	scrollbar-darkshadow-color: #a09000;*/
+	background-color : #ffffe0;
+	text-align:center;
+}
+#container {
+	text-align: center;
+	width: 600px;
+	padding: 0;
+	margin: 0 auto;
+	background-color : #ffffe0;
+	position: relative;
+}
+#titre{
+	margin-top: 10px;
+	height: 40px;
+	color: #04690e;
+	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 240%;
+	font-weight: bolder;
+	text-align: center;
+	background-color: transparent;
+}
+#texte {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	width: 550px;
+	padding: 0px;
+	background: #e0ffff;
+	color: #000000;
+	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	border-style: dotted;
+	border-color: #00c0c0;
+	border-width: 2px;
+}
+#texte .contenu{
+	padding: 10px;
+	background: #e0ffff;
+	color: #000000;
+	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+#fermeture{
+	text-align: center;
+}
+p {
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-indent: 20pt;
+	line-height: 24px;
+}

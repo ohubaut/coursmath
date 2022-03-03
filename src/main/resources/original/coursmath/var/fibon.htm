@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Suites récurrentes (suite) - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="suite de Fibonacci, application linéaire, vecteurs propres, suite récurrente, deuxième ordre" />
+<meta name="keywords" content="suite, Fibonacci, limite, application linéaire, vecteurs propres" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Suites récurrentes (suite)
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Nous avons déjà rencontré la célèbre suite de <a href="../bio/fibonacc.htm">Fibonacci</a> en tant que <a href="fibo.htm">suite récurrente</a> du second ordre. Chacun de ses termes x_n est défini en fonction des deux précédents :</p>
+
+\[ x_n=ax_{n-1}+bx_{n-2} \]
+
+<p>D'un certain point de vue cette relation n'est pas entièrement satisfaisante. En effet, elle nous livre un terme en fonction des deux précédents. Mais ce terme ne nous suffit pas pour calculer le suivant; nous devons aller rechercher le pénultième. Alors pourquoi pas une relation qui nous donnerait deux termes en fonction de deux autres ? Cette situation serait plus "symétrique".</p>
+
+<p>Partant de \(x_{n-1}\) et \(x_{n-2}\), calculons deux termes consécutifs \(x_n\) et \(x_{n-1}\).</p>
+
+<p>Nous obtenons:</p>
+
+\[ \begin{align} x_n & =x_{n-1}+x_{n-2} \\ x_{n-1} & =x_{n-1} \end{align} \]
+
+<p>Le résultat est l'obtention de deux nombres en fonction (combinaison linéaire) de deux autres. Cela peut s'écrire matriciellement:</p>
+
+\[ \left\lgroup\matrix{x_n \\ x_{n-1}}\right\rgroup = \left\lgroup\matrix{1 & 1\\1 & 0}\right\rgroup \left\lgroup\matrix{x_{n-1}\\ x_{n-2}}\right\rgroup  \]
+
+<p>Comme deux nombres peuvent être vus comme les coordonnées d'un point dans le plan, en les appelant \(x\) et \(y\), on obtient:</p>
+
+\[ \left\lgroup\matrix{x'\\y'}\right\rgroup = \left\lgroup\matrix{1 & 1\\1 & 0}\right\rgroup \left\lgroup\matrix{x\\y}\right\rgroup  \]
+
+<p class="ni"> c'est-à-dire les équations d'une <a href="../mat/applin.htm">application 
+linéaire</a>, d'une affinité centrée.</p>
+
+<p>On recherche les directions invariantes (ou propres) en résolvant le système :</p>
+
+\[ \begin{cases} kx=x+y \\ ky=x \end{cases} \]
+
+<p>Ce système admet des solutions non nulles si et seulement si le déterminant du système est nul. Ce dernier vaut \(k(1-k)-1\). Le nombre \(k\) satisfait donc à l'équation \(k^2-k+1=0\)<br />
+Les deux solutions de cette équation sont \(½(1\pm\sqrt{5})\), et on retrouve le célèbre <a href="rectangl.htm">nombre d'or</a>. Les équations des droites invariantes sont:</p>
+
+\[ x-½(1+\sqrt{5})y=0\\x-½(1-\sqrt{5})y=0 \]
+
+ <p>En posant \(\varphi= ½(1+\sqrt{5})\) et, par conséquent, \(\varphi^{-1}=-½(1-\sqrt{5}\)), si on choisit pour nouveaux axes coordonnés \(X,Y\) les droites invariantes, on a:</p>
+
+ \[ \begin{cases} X=x-\varphi y \\ Y=x+\varphi^{-1}y \end{cases} \]
+
+<p> L'étude des <a href="../mat/applin.htm">applications linéaires</a> nous permet d'écrire la transformation sous la forme: </p>
+
+\[ \begin{cases} X'=-\varphi^{-1}X \\ Y'=\varphi Y \end{cases} \]
+
+<p>Dans le système de coordonnées (\(X, Y)\), le point de coordonnées \((x,y)=(0, 1)\) possède les coordonnées \((-\varphi,\varphi^{-1})\) ; ses images successives seront \((1, 1)\), \((-\varphi^{-1},\varphi)\),\((\varphi^{-2},\varphi^2)\), \((\varphi^{-3},\varphi^3)\), etc...</p>
+
+<p>Dans les anciennes coordonnées, les images successives du point \((0, 1)\) seront \((1, 1), (1, 2), (2, 3), (3, 5)\)...soit les couples consécutifs de la suite de Fibonacci.<br />
+En passant des coordonnées (X, Y) aux coordonnées (x, y), on voit que le terme d'ordre <i>n</i> de la suite de Fibonacci peut s'écrire :</p>
+
+\[ \frac{\varphi^n - (-\varphi^{-n})}{\sqrt 5} \]
+
+<p class="ni">ou encore :</p>
+
+\[ \frac {{\left ( { \frac {1 + \sqrt 5} {2}} \right ) }^n - {\left ( { \frac {1 - \sqrt 5} {2}} \right ) }^n} {\sqrt 5} \]
+
+<p>Enfin comme \(\varphi &gt;1\), les transformés successifs du point \((X, Y)\) se rapprochent de plus en plus de la droite \(X=0\) ou, dans les anciennes coordonnées, de la droite \(x-\varphi y=0 \).<br />
+Le rapport \(y/x\) de deux termes consécutifs de la suite tend bien vers le nombre d'or \(\varphi\).</p>
+
+<p>Jetons à présent un coup d'oeil sur le cas général:</p>
+
+\[ x_n=ax_{n-1}+bx_{n-2} \]
+
+<p>Dans ce cas l'appliction linéaire correspondante a pour équation:</p>
+
+\[ \left(\begin{array}{c}x'\\y' \end{array}\right) = \left(\begin{array}{c}a& b\\1& 0\end{array}\right) \left(\begin{array}{c}x\\y\end{array}\right) \]
+
+<p>L'équation caractéristique, donnant les valeurs propres est : \((a-k)(-k)-b = 0\) ou
+\(k^2-ak-b=0\)</p>
+
+<p>Si nous nous reportons à la description des <a href="../mat/applin.htm">applications linéaires</a> du plan, nous voyons que dans le cas où l'équation en \(k\) possède deux solutions réelles (éventuellement confondues), une droite non fixe passant par l'origine tend vers une des deux droites fixes: le rapport de deux termes consécutifs de la suite (la pente de la droite par l'origine passant par le point \((x,y))\) a donc pour limite une constante.</p>
+
+<p>Dans le cas où l'équation en \(k\) ne possède pas de solution réelle, les transformées d'une droite quelconque par l'origine "tournent". Le rapport de deux termes consécutifs de la suite ne tend plus vers une limite. Toutefois si la transformée d'une droite tourne d'un diviseur \(n\) entier de \(\pi\), alors la suite des rapports est périodique de période \(n\). Cela se passera lorsque l'argument de \(k\) vaudra \(\pi/n\).<br />
+La résolution de l'équation nous donne \(½(a\pm\sqrt{a^2+4b})\). Le cas où les solutions sont complexes est celui où \(a^2+4b&lt;0\) (et évidemment \(b\) doit être négatif).</p>
+
+<p>Pour obtenir une variation périodique du rapport de deux termes consécutifs, on doit calculer l'argument des solutions complexes; la partie réelle vaut ½a et la partie imaginaire \(½\sqrt{-a^2-4b}\).<br />
+Le carré du module du complexe vaut \(¼a^2+¼(-a^2- 4b)=-b\). Ceci permet la détermination de \(\mathbf{cos~}\theta=½a/\sqrt{-b}\). On voit à nouveau que seul importe le rapport \(a^2/b\), et on peut donc poser \(a=1\).</p>
+
+<p>Les valeurs de périodicité \(n\) sont données par l'équation : \(\mathbf{cos~}\pi/n = 1/2\sqrt{-b}\) d'où on tire :</p> 
+\[ b=-1/4\mathbf{cos~}^2{(\pi/n)} \]
+
+<p>On obtient:</p>
+
+\[ \begin{array}{lll}
+n~~~~ & \mathbf{cos~}{\pi/n}&  b \\
+3~~~~ & 0.5                 & -1           \\
+4~~~~ & 0.707106...         & -0.5         \\
+5~~~~ & 0.809017...         & -0.381966... \\
+6~~~~ & 0.866025...         & -0.333333... \\
+7~~~~ & 0.900968...         & -0.307978... \\
+8~~~~ & 0.923879...         & -0.292893... \\
+9~~~~ & 0.939692...         & -0.283118... \\
+10~~~ & 0.951056...         & -0.276393... \\
+...~~ & ....                & ...
+\end{array} \]
+
+<p>On retrouve ainsi, par une voie très différente, les résultats  sur les <a href="fibo.htm">suites récurrentes</a> obtenus précédemment.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

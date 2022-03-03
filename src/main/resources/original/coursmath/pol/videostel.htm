@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Polyèdres étoilés (vidéos) - Polyèdres - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Polyèdres semi-réguliers" />
+<meta name="keywords" content="platoniciens, archimédiens, étoilés groupes de symétries, plan, sphère" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="pol.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-12', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Polyèdres étoilés (vidéos)
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+<div class="central" style="background-color:#fff;padding:10px 10px;">
+	<div class="texte">
+	<br>Patience ; le chargement peut être assez lent !<br>
+
+	<table class="centre">
+		<tr><th><img alt="" src="../dot.png" width=380 height=1><br>Grand dodécaèdre</th>
+		<th><img alt="" src="../dot.png" width=380 height=1><br>Grand dodécaèdre étoilé</th></tr>
+	</table>
+
+<div style="float:left; border:2px solid red;">
+	<a style="float: left;" href="#" title="Lancer la lecture"><img src="play.png" width=29 height=20 alt="Lecture" id="btnplay2"></a>
+	<a style="float: right;" href="#" title="Mettre en pause"><img src="pause.png" width=29 height=20 alt="Pause" id="btnpause2"></a><br>
+	<video width=360 height=360 loop id="player2"><source src="stel/kepler2.mp4" type="video/mp4"></video>
+	<script>
+		document.getElementById('btnplay2').onclick = function() {
+		document.getElementById('player2').play();
+		return false;
+		}
+		document.getElementById('btnpause2').onclick = function() {
+		document.getElementById('player2').pause();
+		return false;
+		}
+	</script>
+</div>
+
+<div style="float:right; border:2px solid green;">
+	<a style="float: left;" href="#" title="Lancer la lecture"><img src="play.png" width=29 height=20 alt="Lecture" id="btnplay0"></a>
+	<a style="float: right;" href="#" title="Mettre en pause"><img src="pause.png"  width=29 height=20 alt="Pause" id="btnpause0"></a><br>
+	<video width=360 height=360 loop id="player0"><source src="stel/kepler0.mp4" type="video/mp4"></video>
+	<script>
+		document.getElementById('btnplay0').onclick = function() {
+		document.getElementById('player0').play();
+		return false;
+		}
+		document.getElementById('btnpause0').onclick = function() {
+		document.getElementById('player0').pause();
+		return false;
+		}
+	</script>
+</div>
+	<table class="centre">
+		<tr><th><img alt="" src="../dot.png" width=380 height=1><br>Petit dodécaèdre étoilé</th>
+		<th><img alt="" src="../dot.png" width=380 height=1><br>Grand icosaèdre</th></tr>
+	</table>
+<div style="float:left; border:2px solid blue;">
+	<a style="float: left;" href="#" title="Lancer la lecture"><img src="play.png" width=29 height=20 alt="Lecture" id="btnplay1"></a>
+	<a style="float: right;" href="#" title="Mettre en pause"><img src="pause.png"  width=29 height=20 alt="Pause" id="btnpause1"></a><br>
+	<video width=360 height=360 loop id="player1"><source src="stel/kepler1.mp4" type="video/mp4"></video>
+	<script>
+		document.getElementById('btnplay1').onclick = function() {
+		document.getElementById('player1').play();
+		return false;
+		}
+		document.getElementById('btnpause1').onclick = function() {
+		document.getElementById('player1').pause();
+		return false;
+		}
+	</script>
+</div>
+
+<div style="float:right; border:2px solid #eb0;">
+	<a style="float: left;" href="#" title="Lancer la lecture"><img src="play.png" width=29 height=20 alt="Lecture" id="btnplay3"></a>
+	<a style="float: right;" href="#" title="Mettre en pause"><img src="pause.png"  width=29 height=20 alt="Pause" id="btnpause3"></a><br>
+	<video width=360 height=360 loop id="player3"><source src="stel/kepler3.mp4" type="video/mp4"></video>
+	<script>
+		document.getElementById('btnplay3').onclick = function() {
+		document.getElementById('player3').play();
+		return false;
+		}
+		document.getElementById('btnpause3').onclick = function() {
+		document.getElementById('player3').pause();
+		return false;
+		}
+	</script>
+</div>
+
+
+</div>
+<br>
+
+
+<br><img alt="" src="../dot.png" width=700 height=10><br>
+
+		</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="polyd.htm">Polyèdres</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

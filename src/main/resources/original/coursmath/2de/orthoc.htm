@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Triangle et orthocentre - 2e degré - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="relation de Stewart, hauteurs d'un triangle, orthocentre" />
+<meta name="keywords" content="algèbre, géométrie, Stewart, orthocentre" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="2de.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-7', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />Triangle et orthocentre<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>A l'occasion de l'étude des <a href="../mat/dessin2.htm">projections orthogonales</a>, nous avons utilisé le fait que si un point est l'orthocentre d'un triangle, chacun des sommets du triangle est l'orthocentre du triangle formé par les 2 autres sommets et l'orthocentre de l'ancien triangle.</p>
+
+<p>On peut obtenir une très jolie démonstration vectorielle de cette propriété. 
+Soient \(a, b, c, d\), 4 points quelconques ; on a :</p>
+
+\[ab.cd + ac.db + ad.bc = 0\]
+
+<p>En effet en introduisant un point arbitraire \(p\) on a :</p>
+
+\[(pb - pa).(pd - pc) + (pc - pa).(pb - pd) + (pd - pa).(pc - pb) = 0\]
+
+<p>Cette relation est une identité : si les 4 points \(a, b, c, d\) sont alignés, elle est appelée <b>relation de Stewart</b>.</p>
+
+<p>Lorsque les 4 points sont situés dans un plan, on voit que pour un triangle ayant 3 des points comme sommets (par exemple \(a, b, c\), si le point \(bd\) est à l'intersection de deux hauteurs, par exemple \(cd\), la hauteur relative à \(ab\) et \(bd\) celle relative à \(ac\), les deux premiers produits scalaires sont nuls.<br />
+Il en résulte que \(ad.bc = 0\) et par conséquent \(ad\) est la hauteur relative au côté \(bc\). Le point <b><i>d</i></b> est donc l'orthocentre du triangle <b><i>abc</i></b>.
+On a donc la propriété remarquable :</p>
+
+<blockquote><p><i>Etant donné 4 points d'un plan, si l'un est l'orthocentre du triangle formé par les 3 autres, chacun des points est l'orthocentre du triangle ayant pour sommets les trois autres</i></p></blockquote>
+
+<img alt="" src="orth/fig1.gif" width=223 height=191>
+
+<p>Remarquons enfin que cette relation ne suppose pas que les 4 points \(a, b, c, d\) soient coplanaires ; on peut en déduire que si dans un tétraèdre \(abcd\), 2 paires de côtés opposés, par exemple \((ab, cd)\) et \((ac, db)\) sont orthogonales, alors il en est de même pour la troisième paire \((ad, bc)\).</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="2degrd.htm">Second degré</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

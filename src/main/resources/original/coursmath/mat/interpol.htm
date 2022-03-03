@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Fonctions polynômes - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="polynome, degré n, vectoriel, base" />
+<meta name="keywords" content="algèbre, espace vectoriel, base, polynôme, Horner" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Fonctions polynômes
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Nous savons qu'il existe une unique fonction du premier degré prenant des valeurs données pour deux valeurs distinctes de \(x\).<br />
+Géométriquement, cela signifie que par deux points (d'abcisses distinctes) passe une seule droite.</p>
+
+<p>De même, il existe une unique fonction polynôme du second degré prenant des valeurs données pour trois valeurs distinctes de \(x\).<br />
+A nouveau, la traduction géométrique est la suivante: par 3 points d'abscisses distinctes passe une seule parabole d'axe parallèle à l'axe \(Oy\) (ou éventuellement une droite). Et ainsi de suite ...</p>
+
+<p>Au plus le nombre de valeurs prédéterminées de la fonction est grande, au plus le degré du polynôme sera grand. Plus précisément, si on se donne \(N\) valeurs, le degré du polynôme vaudra \(N-1\) (voir l'article relatif aux <a href="../ana/approxi.htm">approximations</a>).</p>
+
+<p>Pour déterminer cette fonction polynôme, on peut partir d'un polynôme de degré \(N-1\) comportant \(N\) coefficients indéterminés et exprimer que cette fonction prend les \(N\) valeurs données.<br />
+Cela conduira à un système de \(N\) équations à \(N\) inconnues qui possèdera toujours une solution unique.<br />
+Nous avons utilisé cette remarque et prouvé l'unité des solutions dans l'article sur les <a href="../ana/approxi.htm">développements en série</a>.</p>
+
+<p>Résoudre un système \(N × N\) est une solution assez lourde. Toutefois, il existe une autre méthode, bien plus simple, pour calculer ces fonctions polynomes.<br />
+En effet, il suffit de remarquer que si on arrive à déterminer un ensemble de \(N\) polynômes nuls pour toutes les valeurs données de \(x\), sauf une où pour laquelle il sera égal à \(1\), on obtiendra la solution en combinant linéairement ces \(N\) polynômes.<br />
+Voyons cela plus concrètement.</p>
+
+<p>Soit à déterminer la fonction \(F(x)\) du premier degré en \(x\) prenant la valeur \(A\) pour \(x=a\) et la valeur \)B\) pour \(x=b\) (évidemment \(a\) et \(b\) sont différents)<br />
+Calculons \(f(x)\) polynôme du premier degré, tel que \(f(a)\) = 1 et \(f(b)\) = 0.<br />
+Si le polynôme s'annule pour \(x = b\), c'est qu'il est de la forme \(k(x-b)\). Pour \(x = a\) il vaut \(f(a) = k(a-b)\) = 1, d'où \(k\) = 1/(a-b)\).<br />
+La fonction \(f(x)=(x-b)/(a-b)\) répond donc aux conditions.<br />
+Par analogie \(g(x)=(x-a)/(b-a)\) est nulle pour \(x=a\) et prend la valeur \(1\) pour \(x=b\)</p>
+
+<div><img alt="" src="inte/1deg.gif"></div>
+
+<p>La fonction \(F(x)\) cherchée s'écrit donc:</p>
+
+\[F(x) = Af(x) + Bg(x)\]
+
+<p>Plaçons-nous dans le cas des fonctions polynômes du deuxième degré.<br />
+Soit une fonction \(F(x)\) prenant les valeurs données \(A\), \(B\) et \(C\) pour les valeurs de \(x\) égales à \(a\), \(b\) et \(c\).<br />
+Nous allons déterminer trois fonctions s'annulant pour deux de ces trois valeurs et valant 1 pour la troisième valeur.</p>
+
+<p>Commençons par déterminer la fonction \(f(x)\) telle que \(f(a) = 1\), \(f(b)=f(c)=0\).<br />
+Cette fonction s'annule pour \(x=b\) et \(x=c\) et sera donc de la forme \(f(x)=k(x-b)(x-c)\). La condition \(f(a)=1\) déterminera la constante \(k\).<br />\(k(a-b)(a-c)=1\), d'où \(k=1/(a-b)(a-c)\)</p>
+
+<p>On a ainsi déterminé la fonction :</p>
+
+\[ f(x)=(x-b)(x-c)/(a-b)(a-c) \]
+
+<p class="ni">et de même, la fonction \(g(x)\) s'annulant en \(a\) et \(c\) et valant \(1\) pour \(x=b\) sera :</p>
+
+\[ g(x)=(x-a)(x-c)/(b-a)(b-c) \]
+
+<p>Enfin, la dernière fonction que nous cherchons est \(h(x)\); elle est nulle pour \(x=a\) et \(x=b\) et elle prend la valeur \(1\) pour \(x=c\). On obtient :</p>
+
+\[ h(x)=(x-a)(x-b)/(c-a)(c-b) \]
+
+<div><img alt="" src="inte/2deg.gif"></div>
+
+<p>La fonction cherchée \(F(x)\) sera la combinaison linéaire des 3 fonctions calculées \(f\), \(g\) et \(h\), c'est-à-dire:</p>
+
+\[ F(x) = Af(x) + Bg(x) + Ch(x) \]
+
+<p>Remarquons que cette formule s'écrit très élégamment sous la forme:</p>
+
+\[ F(x)=\frac{A(x-b)(b-c)(c-x)+B(a-x)(x-c)(c-a)+C(a-b)(b-x)(x-a)}{(a-b)(b-c)(c-a)} \]
+
+<p>On peut procéder ainsi avec des polynômes de degré quelconque.<br />
+Pour des polynômes de degré inférieur à \(n\), on sait qu'ils constituent un espace vectoriel de dimension \(n+1\); la base la plus évidente est formée des polynômes \(1, x, x^2,..., x^n\). Avec la méthode décrite plus haut, nous obtenons une autre base, mieux adaptée au problème posé.</p>
+
+<p>A l'occasion de la <a href="horner.htm">règle de Horner</a>, nous rencontrerons encore une autre base pour l'ensemble de ces polynômes.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

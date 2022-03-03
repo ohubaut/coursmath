@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Coordonnées trilinéaires - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="représentation graphique, trois variables" />
+<meta name="keywords" content="algèbre, géométrie, coordonnées, trilinéaires, Viviani" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Coordonnées trilinéaires
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Ce théorème, dû à <a title="Biographie de Viviani" href="../bio/viviani.htm">Viviani</a>, s'énonce:</p>
+
+<div class="lh"><i>Dans un triangle équilatéral la somme des distances d'un point intérieur<br />aux trois côtés est constante et vaut la hauteur.</i></div>
+
+<p>La démonstration de cette propriété est fort simple:</p>
+
+<div><img alt="" src="vivi/des.gif"></div>
+
+<p>Dans le triangle \(abc\) on choisit un point intérieur \(p\) quelconque; soient \(h', h''\) et \(h'''\) les distances aux 3 côtés \(bc, ca\) et \(ab\).
+L'aire \(T\) du triangle \(abc\) vaut la somme des aires des 3 triangles \(pbc, pca\) et \(pab\), ce qui donne:</p>
+
+\[ T = \frac{h'.bc + h''.ca + h'''.ab}{2}\]
+
+<p class="ni">et, en désignant par \(C\) la longueur du côté du triangle équilatéral et par \(h\) la hauteur:</p>
+
+\[ T = \frac{(h' + h'' + h''')C}{2} = \frac{h.C}{2}\]
+
+<p>On remarque que ce théorème se généralise en dimension quelconque et est également valable pour un point \(p\) extérieur au triangle à condition de tenir compte des signes.</p>
+
+<p>On voit ainsi qu'un point quelconque du plan peut être repéré par ses 3 "distances" aux côtés du triangle ou, puisque leur somme est fixée, par les rapports mutuels de ces distances c'est-à-dire par 3 nombres donnés à un facteur près.</p>
+
+<p>Cette propriété remarquable donne naissance à un système de 3 coordonnées, dit "trilinéaires", données à un facteur près, c'est-à-dire des <a title="Comment coordoner l'infini ?" href="homogene.htm">coordonnées homogènes</a>.</p>
+
+<p>On peut voir les choses un peu différemment. Soient trois réels positifs \(x, y, z\) de somme fixée valant \(k\). Comme il s'agit de trois nombres réels, on peut les regarder comme points d'un vectoriel à 3 dimensions; mais la relation \(x + y + z = k\) signifie que les points sont situés dans un plan. De plus comme ces trois quantités sont positives, les points sont à l'intérieur du premier octant. 
+Il s'agit donc des points intérieurs au triangle.</p>
+
+<div><img alt="" src="vivi/fig.gif"></div>
+
+<p>De plus on voit que toute relation linéaire entre \(x, y\) et \(z\) correspond dans l'espace à un plan et par conséquent, dans le plan du triangle à une droite.</p>
+
+<p>Ces coordonnées sont fort utiles, en particulier, si l'on est face à un problème où les êtres étudiés sont caractérisés par les rapports de trois grandeurs. On peut les représenter par des points intérieurs à un triangle équilatéral.</p>
+
+<p>Cette situation se présente dans de nombreux problèmes: citons par exemple, la <a title="Les nefast-foods" href="../app/nefast.htm">valeur énergétique des éléments</a> (protides, glucides et lipides), les matériaux de construction (sable, argile et calcaire), les <a title="Nous votons; mais après que se passe-t-il ? Les coulisses des élections." href="../app/elect.htm">élections</a> (lorsque trois partis sont en présence), les <a title="De toutes les couleurs; mais au fait qu'est-ce qu'une couleur ?" href="../vie/couleurs.htm">couleurs</a> en synthèse additive (rouge, vert, bleu) ou soustractive (jaune, cyan et magenta), les <a title="Alors choisissez: A, B ou C; vous avez une chance sur trois de réussir !" href="../app/qcm.htm">questionnaires  à choix multiple</a> (vrai, faux ou abstention).</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Distribution de Poisson - Statistique - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="distribution, probabilités et statistique" />
+<meta name="keywords" content="binomiale, normale, Poisson, test d'hypothèse, cas rares" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Distribution de Poisson
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Pour certains événements peu fréquents, la probabilité \(p\) est très faible et tend vers zéro. Toutefois la valeur moyenne \(np\) tend vers une valeur fixe lorsque \(n\) tend vers l'infini.</p>
+
+<p>Nous partirons donc d'une <a href="binomial.htm">distribution binomiale</a> de moyenne \(m=np\) que nous supposerons finie lorsque \(n\) tend vers l'infini.</p>
+
+<p>La probabilité de \(k\) réussites lors de \(n\) épreuves vaut: \(P_n(k)={n\choose k}p^kq^{n-k}\).<br />
+En posant \(p=m/n\), cette expression peut s'écrire: </p>
+
+ \[ {\frac {n!}{k!(n-k)!} {( \frac m n)}^k \left(1-{\frac m n}\right)^{(n-k)}} \]
+
+<p>En regroupant les termes on peut mettre la valeur de <i>P<sub>n</sub></i>(<i>k</i>) sous la forme:</p>
+
+\[ \frac {m^k} {k!} {(1 - \frac m n)}^n \frac {n!}{{(n-k)}! {n^k} {(1-{\frac m n})}^k } \]
+
+<p>On sait que, lorsque \(n\) tend vers l'infini, le deuxième facteur du produit a pour limite \(e^{-m}\).<br />
+Quant au troisième facteur, puisque l'on s'intéresse aux petites valeurs de \(k\) (probabilité de réussite est très faible), la limite pour \(n\) tendant vers l'infini vaut 1.</p>
+
+<p>On obtient ainsi la loi de Poisson:</p>
+
+<i>P</i>(<i>k</i>) = <i>m<sup>k</sup>.e<sup>-m</sup>/k</i>!
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

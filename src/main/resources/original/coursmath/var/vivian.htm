@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Le dôme de Viviani - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="sphère cylindre, lemniscate, hyperbole équilatère, inversion" />
+<meta name="keywords" content="dome, Viviani, lemniscate, inversion" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Le dôme de Viviani
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Cette figure, étudiée par <a title="Biographie" href="../bio/viviani.htm">Viviani</a>, a été utilisée en architecture pour la construction de coupoles. Elle est définie par l'intersection d'une sphère et d'un cylindre tangent dont le diamètre vaut le rayon de la sphère.</p>
+
+<p>Soit une sphère \(S\) de rayon \(R\) et un cylindre \(C\) de rayon R/2 tangent à la sphère \(S\). La courbe \(S\cap C\) intersection de ces deux surfaces est appelée courbe de Viviani.<br />
+<img class="droite" alt="" src="dome/vivi.png" > En choisissant un système de coordonnées dont l'origine est au centre de \(S\) tel que l'axe de \(C\) soit parallèle à \(ox\) et le point de contact sur l'axe \(oy\), on obtient:</p>
+
+<table><tr><td>
+<img alt="" src="../dot.png" height=1 width=80>
+</td><td>
+\(S \equiv x^2+y^2+z^2=R^2  \\ C \equiv y^2+z^2=Ry \)
+</td></tr></table>
+
+
+<p>La projection de la courbe sur le plan \(xoy\) est la courbe d'équation: \(x^2+Ry=R^2\) c'est-à-dire une parabole.<br />
+Quant aux équations paramétriques de la courbe d'intersection de \(S\) et de \(C\), elles valent:</p>
+
+\[ \begin{cases} x = u \\ y = R~(1+\mathbf{cos~}\theta)/2 \\ z = R~\mathbf{sin~}\theta/2 \end{cases} \]
+
+<p class="ni">ce qui correspond aux équations de \(C\), avec la condition \(u^2=R^2(1-\mathbf{cos~}\theta)\) qui exprime que les points appartiennent à \(S\).</p>
+
+<p>Projetons à présent cette courbe à partir du point \((0, -R, 0)\) sur le plan \(>xoz\). On obtient la courbe d'équation:</p>
+
+\[ (x^2+z^2)^2-R^2(x^2-z^2) = 0 \]
+
+<p>Cette équation est celle de la lemniscate de Bernoulli.<br />
+Cette courbe remarquable représente l'ensemble des points d'un plan dont le produit des distances à 2 points fixes est constant et vaut le carré de leur demi-distance. En effet, soient dans le plan \(xoz\) les deux points d'abscisse \(\pm c\) sur l'axe \(ox\). Le carré du produit des distances d'un point de coordonnées \((x, z)\) vaut \(((x - c)^2 + z^2)((x + c)^2 + z^2)\), ce qui peut s'écrire \((x^2 + z^2 + c^2)^2 - 4c^2x^2\). Si le carré du produit des distances vaut \(c^4\), on obtient: \((x^2 + z^2)^2- 2c^2(x^2-z^2)=0\).<br />
+Dans le cas présent \(c = R\sqrt{2}/2\)</p>
+
+<img class="droite" alt="" src="dome/hyle.gif"><br />
+
+<p>Projetons à présent la courbe de Viviani à partir de son point double \((0,R,0)\) sur le plan \(xoz\).<br />
+On obtient cette fois \(x^2-z^2=R^2\). C'est l'équation  d'une hyperbole équilatère. D'autre part, on sait que les projections  à partir des deux points diamétralement opposés d'une sphère sur le plan  diamétral perpendiculaire à la droite qui les joint, donnent des figures  transformées par <a title="Cycles: cercles ou droites ?" href="../com/invers.htm">inversion</a>.</p>
+
+<p>On a ainsi prouvé que l'inverse d'une lemniscate de Bernoulli par rapport à son point double est une hyperbole.</p>
+
+<p>Remarquons qu'un raisonnement plus synthétique peut conduire au fait que la projection à partir du point double est une hyperbole. En effet \(S\) et \(C\) sont deux quadriques. Dans le faisceau qu'elles déterminent, il existe 4 cônes (ou cylindres); l'un est \(C\), un autre est le cylindre projetant la parabole; les deux derniers cônes sont confondus puisque la courbe de Viviani possède un point double qui est d'ailleurs le sommet du cône.</p>
+
+<p>La projection est donc une section conique, une hyperbole dans ce cas.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

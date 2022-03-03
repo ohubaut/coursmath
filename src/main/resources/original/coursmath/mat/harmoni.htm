@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Birapport et harmonie - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="rapport de section, birapport, projectivité, conjugué harmonique" />
+<meta name="keywords" content="algèbre, géométrie, conjugués harmoniques, relation, harmonie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Birapport et harmonie
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Etant donnés trois points alignés \(\boldsymbol {a, b, c}\), on peut leur associer un nombre, le rapport de section \(\boldsymbol{ca/cb}\). 
+Ce nombre est un invariant pour les projections parallèles, mais non pour les projectivités (par exemple les projections centrales)</p>
+
+<div><img alt="" src="harm/fig1.gif"></div>
+
+<p>On peut toujours par composition d'une translation et d'une projection centrale (ou parallèle) amener un triple aligné sur un triple aligné. 
+Pour définir un invariant projectif il est dès lors indispensable de considérer plus de trois points.</p>
+
+<p>Si \(\boldsymbol{a, b, c, d}\) sont quatre points alignés, on définit le birapport  
+(appelé également rapport anharmonique) comme le quotient des deux rapports de section de \(\boldsymbol c\) et \(\boldsymbol d\) sur \(\boldsymbol {ab}\):</p>
+
+\[ \boldsymbol{\frac{ca}{cb} / \frac{da}{db}} \]
+
+
+<p>Ce nombre réel est invariant par <a href="project.htm">projection centrale</a> et constitue donc un invariant projectif. 
+Si l'on utilise des coordonnées et que l'on désigne par \(a, b, c, d\) les abscisses des 4 points \(\boldsymbol{a, b, c, d}\), on a:</p>
+
+\[ \large{r= \frac{\frac{c-a}{c-b}}{\frac{d-a}{d-b}}} \]
+
+<p>Par la structure même de cette expression, et comme il s'agit de quotients de rapports de section, on voit qu'elle est invariante pour les affinités qui appliquent \(x\) sur \(ax + b\) ; un calcul élémentaire montre qu'elle est également conservée par l'application qui envoie \(x\) sur \(1/x\). 
+En groupant ces deux résultats, on voit que le birapport \(r\) est invariant pour les transformations homographiques, projectivités, qui appliquent \(x\) sur \((ax + b)/(cx + d)\).</p>
+
+<p>Géométriquement, cette invariance correspond à l'invariance par projection centrale. En effet soient les 4 points \(a , b, c , d\) alignés sur \(D\) et une projection à partir de \(s\) sur une droite \(D'\) en les points \(a', b', c', d'\).</p>
+
+<p>On peut d'emblée écarter le cas où \(D\) et \(D'\) sont parallèles, ainsi que celui où le centre \(s\) de projection est à l'infini. 
+Dans ces deux cas l'invariance est une simple conséquence du théorème de Thalès. 
+Considérons le cas d'une projection à partir d'un point \(s\) de \(D\) sur \(D'\) non parallèle.</p>
+
+<div><img alt="" src="harm/fig2.gif"></div>
+
+<p>Si on choisit \(D\) et \(D'\) comme axes coordonnés et le point \(s\) comme point \((1, 1)\), on vérifie immédiatement que le point \(p\) de coordonnées \((x, 0)\) est projeté sur le point \(p'\)  de coordonnées \((0, x/(x - 1))\).</p>
+
+<p>Cette transformation est décrite par une fonction homographique et il en résulte que le birapport est invariant. 
+Remarquons qu'il est possible, par projection centrale, d'envoyer un point, par exemple \(d\), à l'infini. 
+Dans ce cas le birapport se ramène au rapport de section. 
+En particulier si \(d\) est à l'infini et \(c\) au milieu de \(ab\), le birapport des quatre points vaut -1.</p>
+
+<p>Lorsque 4 points ont un birapport égal à -1 , on dit qu'ils forment un quaterne harmonique.</p> 
+
+<p>Algébriquement leurs coordonnées vérifient \(r= \frac{c-a}{c-b}/\frac{d-a}{d-b} = -1\) ou encore: \(\frac{c-a}{c-b}+\frac{d-a}{d-b}=0\) ce qui se ramène à:</p>
+
+\[(a + b)(c + d) = 2(ab + cd)\]
+
+<p>Cette relation, appelée relation d'harmonie est manifestement symétrique en \(a\) et\(b\), en \(c\) et \(d\) et en les paires \(ab\) et \(cd\); on voit ainsi qu'elle exprime que deux paires de points sont conjuguées l'une par rapport à l'autre.</p>
+
+<p>On dit qu'un point \(d\) d'une paire est conjugué harmonique par rapport au point \(c\) de la paire par rapport à l'autre paire \(ab\).</p>
+
+<p>Envisageons quelques cas particuliers, et tout d'abord celui où \(d\) est infini; en divisant les deux membres par \(d\), et en tenant compte du fait qu'un réel divisé par l'infini vaut 0, il vient \(a + b = 2c\) ou :</p>
+
+\[ c =\frac{a+b}{2}\]
+
+<p>Le point \(c\) est le milieu du segment \(ab\), le nombre \(c\) est la moyenne arithmétique des nombres \(a\) et \(b\).</p>
+
+<a id="Ha"></a>
+<p>Supposons à présent que d est à l'origine, c'est-à-dire que \(d\) est nul; la relation d'harmonie devient: \((a + b)c = 2ab\) ou \(2/c = (1/a + 1/b)\) ce qui peut s'écrire:</p>
+
+\[ 1/c = \frac{1/a + 1/b}{2} \]
+
+<p>En fait, le nombre \(c\) est la moyenne harmonique des deux nombres \(a\) et \(b\). 
+(C'est la moyenne qui est, ou devrait, être utilisée pour calculer la vitesse moyenne). Remarquons qu'en posant a = p, b = p' et c = R = 2f, la relation devient:</p>
+\[ 1/p + 1/p' = 1/f \]
+
+<p class="ni">ce qui est la loi des miroirs sphériques étudiée en optique.</p>
+
+<div><img alt="" src="harm/fig3.gif"></div>
+
+<a id="G"></a>
+<p>Enfin, un autre cas intéressant est celui où l'origine se trouve au milieu de \(c\) et \(d\). 
+On a \(d = -c\) et la relation s'écrit: \(0 = (ab-c^2)\) ce qui est équivalent à:</p>
+
+\[ c = \sqrt{ab} \]
+
+<p>Le nombre \(c\) est alors la moyenne géométrique de \(a\) et \(b\).</p>
+
+<p>Remarquons enfin que l'on en déduit immédiatement la propriété des trois moyennes (classiques) de deux nombres positifs \(a\) et \(b\); la moyenne arithmétique est supérieure à la moyenne géométrique qui est supérieure à la moyenne harmonique; ceci résulte de la position du conjugué harmonique \(c\) de \(c\) par rapport aux deux points \(a\) et \(b\) lorsque \(d\) est à l'infini, sur la partie négative de l'axe, et en l'origine.</p>
+
+<p>Si l'on prend le conjugué harmonique de l'infini par rapport à \(1\) et \(0\), on obtient la moyenne \(1/2\); en prenant le conjugué de \(1\) par rapport à \(1/2\) et \(0\) on obtient \(1/3\), et ainsi de suite: le conjugué de \(1/(n - 1)\) par rapport à \(1/n\) et \(0\) est \(1/(n + 1)\).</p>
+
+<div><img alt="" src="harm/fig4.gif"></div>
+
+<p>La suite des termes \(1, 1/2, 1/3,...\) ainsi obtenue est appelée suite <a title="Un paradoxe lié à la suite harmonique" href="../ana/limites.htm">harmonique</a> et le terme harmonique est liée à la <a title="Les maths s'appliquent aussi à la musique" href="../app/musique.htm">théorie musicale</a>.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

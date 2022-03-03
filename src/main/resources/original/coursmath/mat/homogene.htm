@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Coordonner l'infini ! - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="vectoriel, souis-vectoriel, trois dimensions, deux dimensions, infini" />
+<meta name="keywords" content="algèbre, géométrie, coordonnées, homogènes, plan, projectif" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Coordonner l'infini !
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Les coordonnées dites cartésiennes conviennent parfaitement lorsqu'il s'agit de repérer des points situés à distance finie. Toutefois dès qu'il s'agit de travailler avec des points à l'infini elles se révèlent inadaptées. Il existe des coordonnées mieux adaptées, en particulier les <a title="Un système de coordonnées mal connu" href="viviani.htm">coordonnées trilinéaires</a>.</p>
+
+<p>L'utilisation des points à l'infini est indispensable pour l'étude de <a href="project.htm">propriétés projectives</a>, et en particulier si l'on veut faire de manière simple, économique et concise une théorie des <a title="Une théorie générale des coniques" href="../2de/conique.htm">coniques</a>.</p>
+
+<p>L'idée de base pour introduire les points à l'infini est celle de projection centrale (ou projection conique). 
+La projection d'un plan \(\alpha\) sur un autre plan \(\beta\) à partir d'un centre de projection \(o\) est "à peu près" une bijection.</p>
+
+<div><img alt="" src="homo/fig1.gif"></div>
+
+<p>Seule une droite \(D\) de \(\alpha\) (l'intersection du plan parallèle à \(\beta\) par \(o\)) ne possède pas d'image, et seule une droite \(D'\) de \(\beta\) (l'intersection du plan parallèle à \(\alpha\) par \(p\)) n'est l'image d'aucun point de \(\alpha\).<br />
+Cette projection devient une bijection si l'on ajoute à chacun des deux plans \(\alpha\) et \(\beta\) une droite de points à l'infini.<br />
+Dès lors à chaque point du plan (y compris les points à l'infini) correspond une projetante par \(o\).</p>
+
+<p>Pour introduire des coordonnées pour ces points il nous suffira donc d'en introduire pour les projetantes par \(o\). Mais alors notre plan se présente comme plongé dans un vectoriel V de dimension 3 de neutre \(o\).</p>
+
+<div><img alt="" src="homo/fig2.gif"></div>
+
+<p>Le plan \(\alpha\) étant coordonné, d'origine \(o'\) et doté d'une base \((\imath, \jmath)\), munissons le vectoriel d'une base formée des vecteurs \(\imath\) et \(\jmath\) ainsi que du vecteur \(k = oo'\). 
+Dès lors le plan \(\alpha\) a pour équation \(z = 1\), et tout point de coordonnées \((x, y)\) (à distance finie de \(\alpha\) possède 3 coordonnées \((x, y, 1)\) dans le vectoriel. 
+Sa projetante est le sous-vectoriel \((kx, ky, k)\). 
+Quant aux points à l'infini de \(\alpha\) , ils sont déterminés par leur direction. 
+Soit un point à l'infini dans la direction du vecteur \((X, Y)\) de \(\alpha\); sa projetante est parallèle à \(\alpha\) et correspond au sous-vectoriel \((kX, kY, 0)\).</p> 
+
+<p>En résumé tous les sous-vectoriels sont des projetantes, et ceux ayant leur dernière coordonnée nulle correspondent aux points à l'infini.</p>
+
+<p>Nous avons ainsi défini pour tous les points du plan, y compris les points à l'infini, des coordonnées: il s'agit de 3 nombres non simultanément nuls. 
+Les coordonnées \((X, Y, Z)\) sont données à un facteur non nul \(k\). 
+Si \(Z\) est nul, le point est le point à l'infini dans la direction du vecteur \((X, Y)\); si \(Z\) est non nul, le point est le point de coordonnées cartésiennes \((x = X/Z, y = Y/Z)\).</p> 
+
+<p>Etant donné la construction de ces coordonnées à partir d'un vectoriel, on trouve immédiatement les équations des droites. 
+Les sous-vectoriels à deux dimensions sont les combinaisons linéaires de deux sous-vectoriels à une dimension.<br />
+On a:</p>
+\[ \begin{cases}X = \lambda X ' + \mu X '' \\ Y = \lambda Y ' + \mu Y '' \\Z = \lambda Z ' + \mu Z '' \end{cases} \]
+
+<p>On peut également dire que le vecteur \((X, Y, Z)\) est combinaison linéaire des deux vecteurs \((X', Y', Z')\) et \((X'', Y'', Z'')\), ce qui s'exprime par le fait que le <a href="determ.htm">déterminant</a> \(D\) est nul.</p>
+
+\[ D = \left|\begin{array}{cc}X& Y& Z\\X '& Y '& Z '\\X ''& Y ''& Z '' \end{array} \right| \]
+
+<p>On voit ainsi qu'une droite possède une équation homogène du premier degré en \(X, Y, Z\), ce qui justifie le nom de coordonnées homogènes.</p>
+
+<p>Elle doit toujours être homogène en les trois coordonnées. Plus généralement, toute relation écrite en coordonnées homogènes doit toujours, pour avoir du sens, être homogène; cela évite bien des fautes d'attention !</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

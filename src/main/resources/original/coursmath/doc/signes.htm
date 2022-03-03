@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Documents - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résumés" />
+<meta name="keywords" content="groupes, musique, algèbre, géométrie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="doc.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript">
+    function pdf(fichier) 
+{window.open(fichier,'pdf','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-11', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+<br>
+<div class="droite"><a href="javascript:pdf('signes.pdf');">Télécharger la version pdf (3 pages)</a></div>
+<br>
+	<div class="titre">
+<br />
+La règle des signes
+<br />
+	</div>
+	<div class="stitre">
+par<br><br>
+<b>Xavier Hubaut</b><br><br>
+Professeur émérite - Université Libre de Bruxelles - 
+Département de Mathématique
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Que vient faire cet article élémentaire dans un cours du secondaire? Sa présence est la réaction à un constat navrant.</p>
+<p>Lorsqu'on demande à un élève ayant terminé ses études secondaires: ": "Pourquoi dit-on que (-2)*(-3) = +6 ?"  la plupart du temps il répond "Parce que - par - égale +", ce qui prouve que cette "règle des signes" a, ou bien été présentée comme un dogme, ou bien été mal assimilée.</p>
+
+<p class="st">Approche algébrique (bien trop abstraite)</p>
+
+<p>Les entiers sont définis par des couples de naturels (a, b) munis d'une relation d'équivalence (a, b)~(c, d) <img alt="équivalent" src="../hArr.png"> a + d  =b + c. Ce charabia deviendra plus compréhensible quand on aura expliqué que quand on écrit (a, b), on pense en réalité à l’expression a-b, (ce qui, pour l'instant, n'a de sens que si b est inférieur ou égal à a). On applique les mêmes règles que celles valables avec les naturels (principe de permanence). On définit le produit (a, b)*(c, d) = (ac +bd, ad + bc). Comme tout cela est intuitif !</p>
+
+<p class="st">Approche géométrique (ce n'est certes pas la plus simple)</p>
+
+<p>Soit un rectangle dont les côtés sont donnés par les vecteurs <b>a</b> (parallèles à l'axe x), de coordonnées (a, 0) et <b>b</b> (parallèles à l'axe y) de coordonnées (0, b). Quelle est son aire? Pour cela, la valeur absolue de l'aire est évidente: c'est a* b, mais qu'en est-il de son signe? Arrangeons-nous pour que l'extrémité de <b>a</b> soit l'origine de <b>b</b>. Cela induit un sens de rotation autour du rectangle. Suivant que ce sens est horlogique ou contre-horlogique, nous dirons que l'aire est positive ou négative. </p>
+
+<p class="st">Approche intuitive (mais artificielle)</p>
+
+<p>On étudie les gains et les pertes d'un commerçant.<br>
+Voila une méthode parfaitement bien adaptée pour comprendre l'addition (la soustraction) des nombres positifs et négatifs. <br>
+Par contre, la multiplication est plus difficile à aborder par cette voie. Bien sûr, on peut retirer une perte et cela procure un gain; on peut retirer trois fois la perte et cela est équivalent à un gain triple, mais tout cela est fort artificiel et confus.</p>
+
+<p class="st">Approche géométrico-algébrique élémentaire</p>
+
+<p>On sait, depuis l'école primaire, que l'aire d'un rectangle de côtés A et B vaut AB.<br>
+On modifie les côtés du rectangle en ajoutant a au côté A, et b au côté B. Que vaut l'aire du nouveau rectangle ? Evidemment, elle vaut (A + a)(B + b) ce qui peut s'écrire AB + aB + Ab + ab. Parfait ; mais si les corrections a et b sont négatives, les produits Ab et aB sont produits d'une nombre positif par un nombre négatif et il est vraisemblable que leur produit soit négatif. Il est un peu moins évident que le produit de a et b, tous deux négatifs soit positif. Et pourtant !</p>
+<img class="centre" alt="rectangles" src="sign/rect.png">
+<p>L'aire du nouveau rectangle s'obtiendra à partir de l'ancienne (A B) en retranchant tout d'abord un rectangle de côtés A et b, d'aire A b ; ensuite on retranche un rectangle de côtés a et B d'aire a B. Ce faisant on remarque qu'on a retranché deux fois le petit rectangle de côtés a et b d'aire a b! Pour réparer les dégâts, il faut évidemment en rajouter un. L'aire du rectangle de côtés A-a et B-b est donc AB - Ab - aB + ab.
+<p>Grâce à ces observations simples et intuitives, on comprend la fameuse "règle des signes".</p>
+
+
+<p class="st">Approche physique</p>
+
+<p>Dans le cours de physique, on apprend que l'espace parcouru (lors d'un mouvement rectiligne uniforme) est le produit de la vitesse par le temps. Ces trois grandeurs possèdent un signe. L'espace, le temps, ainsi que la vitesse, peuvent tous trois être positifs, nuls ou négatifs.<br>
+Voila quelque chose de concret qui semblera plus naturel aux élèves.</p>
+
+<p>L'espace est mesuré à partir de la borne 0. Si l'on oriente la route de la gauche vers la droite (pour fixer les idées), un endroit situé à droite de la borne 0 aura une abscisse positive alors que, situé à gauche, son abscisse sera négative.<br>
+Le temps est mesuré à partir de l'heure 0. Les événements postérieurs ont lieu à un instant positif, les événements antérieurs à un instant négatif.<br>
+La vitesse est obtenue en mesurant la distance parcourue pendant l'unité de temps choisie; cette distance est positive ou négative suivant que le mobile se déplace de la gauche vers la droite ou en sens inverse.<br>
+On peut également dire que la vitesse est le rapport entre l'espace parcouru et le temps mis pour le parcourir. Toutefois pour l'instant, nous laisserons cette définition de côté car elle pourrait faire appel à la "règle des signes".</p>
+
+<p>Dès lors, il est très facile de faire des petits exercices avec les élèves.</<br>
+On donne, par exemple, la vitesse (avec son signe qui indique le sens du mouvement) ainsi que le temps (avec son signe également qui indique si on va dans le passé ou dans le futur) et on cherche la position du mobile.<br>
+Il suffit de connaître la loi du mouvement rectiligne uniforme, ce qui est d'ailleurs connu dès l'école primaire.<br>
+Au cours de physique, le professeur dira que l'espace parcouru est égal au produit de la vitesse par le temps et écrira e = v*t .  Dans cette formule élémentaire, il ne faut jamais oublier que e, v, t ne sont pas des nombres, mais des grandeurs ! </p>
+<p><i>Soit dit en passant, il est curieux de voir la répugnance de certains professeurs de physique à utiliser des grandeurs plutôt que des nombres. Et pourtant que d'erreurs évitées dans les changements d'unités (p.ex. si on demande un résultat exprimé en km alors que la vitesse est exprimée en m/s et le temps en heures) et surtout vérification du résultat qui doit avoir la bonne dimension , c'est-à-dire celle d'une longueur!</i></p>
+
+<p>Un quadruple exemple.</p>
+<ol>
+<li>A l'instant t=0, je me trouve à la borne e=0.<br>
+Si je roule à 80 km/h pendant 3 heures j'aurai parcouru 80 km/h*3 h.<br>
+Au risque de nous entendre dire stupidement: "<i>On ne divise pas des pommes par des poires !</i>" ou avec plus d'humour: "<i>On ne multiplie pas des euros par des euros, sinon on obtiendrait des euros carrés, alors que tout le monde sait que les euros sont ronds</i>", n'oublions pas que km/h signifie 1 kilomètre divisé par 1 heure. En simplifiant par 1 h on obtient 240 km. Je serai donc à la borne 240 km<br>
+<li>Que se passe-t-il si je roule dans l'autre sens, à la même vitesse et également pendant 3 heures ? J'aurai parcouru une distance égale à (-80 km/h)*3 h = -240 km (je me trouverai 240 km avant (ou à gauche de) la borne 0)<br>
+<li>Si je roule à 80 km/h où étais-je 3 heures auparavant ? 80 km/h*(-3 h) = -240 km; avant la borne 0 évidemment.<br>
+<li>Et finalement, si je roule vers la gauche où me trouvais-je il y a 3 heures ?<br>
+(-80 km/h)*(-3 h) = 240 km (donc 240 km à droite de la borne 0)<br>
+</ol>
+<p>Et voila pourquoi "- par - égale +"</p>
+
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="docd.htm">Documents</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+		<div class="centre"><hr style="width:70%;"></div>
+<br>
+Pour toute remarque ou commentaire, écrire à <script type="text/javascript">
+// JavaScript pris sur le site: "http://www.java.scripts-fr.com" 
+var nom = "xhubaut";
+var domaine = "ulb.ac.be"; 
+var deb = "<";
+var fin = ">";
+document.write('<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + deb + '/a' + fin); 
+</script>.<br>
+	</div>
+</div>
+</body>
+</html>

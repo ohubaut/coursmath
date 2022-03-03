@@ -1,0 +1,25 @@
+﻿#texte {
+	width: 560px;
+	background: #fcfce0;
+	background:url("cadre404.gif") bottom left no-repeat;
+}
+#texte .contenu	{
+	background: #fcfce0;
+	text-align: center;
+	border: solid #ff0000;
+	border-left-width: 2px;
+	border-bottom-width: 0px;
+	border-right-width: 5px;
+	border-top-width: 0px;
+}
+#texte h2 {
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+#texte h3 {
+	background:url("cadre404.gif") top left no-repeat;
+}
+#texte .contenu hr {
+	color: #c08000;
+	text-align: center;
+}

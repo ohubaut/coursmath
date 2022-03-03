@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>La peur du zéro et le tabou de l'infini - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="diviser par zéro, corps complété" />
+<meta name="keywords" content="algèbre, géométrie, zéro, infini" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+La peur du zéro et le tabou de l'infini
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>On est parfois étonné de l'origine fort tardive du zéro. Le zéro n'existait pas dans les notations anciennes (sumériennes, assyriennes, grecques, romaines,...) bien que des savants comme Archimède posédaient certainement une méthode de notation qui leur permettait d'effectuer des calculs compliqués. Sinon, aucun symbole pour 0; chez les Sumériens un simple espacement.</p>
+
+<p>Il est difficile d’imaginer avoir peur d’un chiffre. Pourtant, le zéro était inexorablement lié au vide et au rien, dont tout le monde avait peur. Rappelons que l'année 0 n'existe pas dans notre calendrier: c'est l'année -1 qui précédait l'an 1 !</p>
+
+<p>L'usage du zéro ne commence à s'imposer qu'avec le développement du commerce. Le zéro arrive par l'Est (Inde). Le mot indien désignant le zéro était śūnya, qui signifie "vide" ou "espace". Il se retrouve ensuite chez les arabes. Avec le retour du commerce intensif, consécutif aux Croisades, les Européens généralisent, au XIIe siècle, l'usage du zéro. Pourtant, l’Occident ne put accepter le zéro jusqu’au XVIe siècle. Le terme "zéro" nous vient de Fibonacci qui a traduit l'arabe "sifr" (qui signifiait zéro mais qui nous a donné "chiffre") par l'italien Zephirus, à partir duquel il a formé zevero qui est devenu zéro.</p>
+
+<p>Cette crainte du zéro n'a pas encore totalement disparu.<br />
+Rappelez-vous la transition du XXe au XXIe siècle; après la peur de l'an 1000, nous avons eu la peur de l'an 2000 camouflé sous la peur (non justifiée) du "bug de l'an 2000".<br />
+A l'heure actuelle, regardez les ascenseurs: chez nous, la plupart du temps, le 0 est remplacé par RC (rez-de-chaussée). Lorsque les occidentaux lancent une fusée, le compte à rebours se termine par 5, 4, 3, 2, 1, ignition ! Certains formulaires administratifs contiennent une case: nombre d'enfants à charge. Qu'écrivent les gens ? Ils en indiqueront le nombre, 2, 1, 4,... mais pratiquement jamais 0; ils diront aucun ou plus simplement ils mettront une barre dans la case.</p>
+
+<p>Il faut longtemps pour changer les mentalités.<br />
+Même en mathématiques, il semble exister un commandement divin: "Par zéro, point ne diviseras". La peur, généralement inconsciente, liée au zéro se retrouve à propos de l'infini. Le rejet de \(\infty\) est toujours présent. Et pourtant...</p>
+
+<p>Essayons de voir les choses le plus simplement possible.</p>
+
+<p>A nouveau, c'est Archimède qu'il faut citer; son axiome "Pour deux grandeurs inégales, il existe toujours un multiple entier de la plus petite, supérieur à la plus grande" exprime clairement l'existence de l'infini.</p>
+
+<p>Suite aux recherches en perspective, les peintres de la Renaissance ont été conduits à compléter le plan par une droite de points à l'infini.<br />
+Remarquons qu'à l'heure actuelle, la peur est toujours là. Certains n'osent pas utiliser l'expression points "à l'infini" mais parlent de points "impropres", comme s'ils étaient mal lavés !<br />
+Pourtant, cette notion géométrique d'éléments à l'infini ne s'est pas propagée dans le domaine des nombres. La raison en est probablement la confusion, encore actuelle, entre l'algèbre et l'analyse (ne parle-t-on pas de "géométrie analytique" alors que l'analyse est absente).</p>
+
+<p>S'il est progressiste, l'algébriste parlera parfois de \(\infty\) mais l'analyste préférera parler de deux infinis: \(+\infty\) et \(-\infty\) s'il étudie des fonctions d'une variable réelle, mais par contre d'un seul \(\infty\) dans le cas de fonction d'une variable complexe.<br />
+Cette différence est due au fait que pour les réels, l'algèbre étudie essentiellement la structure de corps commutatif et son extension à d'autres ensembles, par exemple les entiers modulo p (un nombre premier) ou bien encore les nombres complexes. Dans ces cas, il y a parfois intérêt à compléter ces ensembles par un élément \(\infty\). Par contre, l'analyse étudie surtout des propriétés topologiques des réels, des limites et des fonctions non seulement algébriques mais aussi transcendantes (goniométriques, exponentielles et logarithmiques). Dans ce cas, il sera plus utile de compléter les réels par deux éléments \(+\infty\) et \(-\infty\).<br />
+Que fera le géomètre ? Celui-ci sera heureux de <a href="plan-complete.htm">compléter</a> son plan par <a href="perspec.htm">une droite de points à l'infini</a>; il pourra ainsi, comme Desargues et Poncelet, parler de propriétés projectives; les propriétés linéaires deviendront plus simples, les exceptions disparaîtront. Mais lorsqu'il étudiera le plan de la variable complexe, il trouvera plus simple de le fermer en ajoutant <a href="../com/cycles.htm">un seul point à l'infini</a> commun à toutes les droites. Cette fois, c'est le plan muni des cycles (cercles et droites) qui permettra d'énoncer simplement les propriétés conformes.<br />
+Signalons le mathématicien et philosophe Louis Couturat qui publia en 1896 un ouvrage intitulé "De l'infini mathématique". Hélas, mélangeant algèbre, analyse et géométrie, ses travaux n'eurent guère d'écho.</p>
+
+
+<p>Mais alors qu'y a-t-il à l'infini ? Mauvaise question ! On y répond parfois par une boutade: Personne n'y a jamais été voir. Mauvaise réponse ! En réalité, le mathématicien ajoutera les éléments qui lui permettront de présenter de manière plus simple et plus générale le domaine des mathématiques qu'il étudie.</p>
+
+<p>Nous prendrons le point de vue de l'algébriste et du géomètre (linéaire) qui nous a paru plus simple à exprimer.</p>
+
+<p>La notion de rapport de section, notion fondamentale liée au théorème de Thales, s'étudie fort tôt. C'est l'occasion de mesurer toute l'utilité de parler d'élément infini et de point à l'infini.<br />
+Etant donné un couple \((A, B)\) de points d'une droite et un point \(M\) de cette droite, on définit le rapport de section \(k=AM/MB\). D'habitude, on l'exprime à l'aide de vecteurs; pour le calculer, on passe à l'algèbre et on utilise des coordonnées.<br />
+Si \(a, b\) et \(m\) sont les abscisses des points \(A, B et M,  k=(m-a)/(b-m)\).<br />
+Que constate-t-on ?</p>
+
+<p>A tout point \(M\) de la droite correspond un nombre \(k\) (son rapport de section) et réciproquement. <br />
+Faux ! Il y a des exceptions:<br />
+Si le point \(M\) est en \(B, m=b, b-m=0\) et comme on a toujours dit: "on ne divise pas par 0", le rapport de section n'est pas défini.<br />
+Si \(k = -1, m-a = -(b-m)\) d'où \(m-a = m-b\) et \(0*m = a-b\); à nouveau \(m\) serait égal à un quotient "impossible": \((a-b)/0\) !</p>
+
+<p>Répétons-le encore: "on ne divise pas par 0" mais on voit évidemment toute l'absurdité de cette situation.<br />
+Ne serait-il pas tellement plus simple de se débarrasser du tabou de l'infini ?</p>
+
+<p>Nous avons utilisé des coordonnées, prenons donc le point de vue de l'algébriste. Les coordonnées sont des éléments d'un corps commutatif. Il s'agit, au moment où le rapport de section est enseigné, des réels mais ce pourrait être n'importe quel corps commutatif. Préparons l'avenir et parlons de manière générale.<br />
+Tout d'abord, un corps est un ensemble d'éléments  structuré par:<br />
+ <img alt="" src="../puce.gif"> L'addition qui est un groupe commutatif<br />
+ <img alt="" src="../puce.gif"> Pour les éléments non nuls, par la multiplication qui est un groupe commutatif<br />
+ <img alt="" src="../puce.gif"> Une propriété de distributivité qui relie ces deux structures.</p>
+
+<p>Attachons-nous à l'exception causée par le 0.<br />
+Que se passe-t-il avec 0 ? On dit que 0 est un "absorbant", c'est à dire pour tout autre élément a, 0*a = a*0 = 0. Remarquons que c'est cela qui entraine l'indétermination 0/0 et l'impossibilité de trouver un sens à a/0 et l'interdiction de diviser par 0.<br />
+Notre connaissance des nombres réels, notre intuition semble nous dire que si on divise par quelque chose de plus en plus petit le résultat est de plus en plus grand.<br />
+Ce n'est pas très convaincant car l'argument utilise la structure d'ordre des réels; or cette structure d'ordre disparaît avec la plupart des autres corps, en particulier avec les complexes !<br />
+Qu'importe, continuons et voyons si cela simplifie les choses.</p>
+
+<p>Il faut bien donner un nom à \(a/0\) appelons-le infini et notons-le: \(\infty\).<br />
+A présent traitons \(\infty\) comme 0, son petit frère. Nous complétons ainsi les éléments du corps par un élément \(\infty\) qui aura des propriétés multiplicatives analogues: les deux éléments 0 et \(\infty\) sont absorbants.</p>
+
+<p><img alt="puce" src="../puce.gif">Pour tout élément \(a\) différent de \(\infty\) : \(0*a = a*0 = 0\)     et de même:</p>
+<p><img alt="puce" src="../puce.gif">Pour tout élément \(a\) différent de \(0\): \(\infty *a = a*\infty = \infty\).</p>
+<p class="ni">Quant à leur comportement mutuel:</p>
+<p><img alt="puce" src="../puce.gif"> \(0/0, \infty/\infty\) et 0 * \(\infty\) sont indéterminés.</p>
+
+<p class="ni">En ce qui concerne le comportement additif \(\infty\) est absorbant, c'est-à-dire:</p>
+<p><img alt="puce" src="../puce.gif">Pour tout \(a\) différent de \(\infty\) : 
+\(\infty\) + a = \(\infty\) et \(\infty\) + \(\infty\) et \(\infty\) - \(\infty\) sont indéterminés.</p>
+
+<p> Revenons à notre motivation initiale: supprimer les exceptions rencontrées lors du rapport de section. Par l'adjonction d'un élément \(\infty\) à un corps de nombres et celle d'un point à l'infini à une droite, les deux exceptions rencontrées ont ainsi disparu. N'est-ce pas plus agréable ?</p>
+
+<p>Signalons qu'il y a évidemment d'autres manières de compléter un corps ou un espace par des éléments "à l'infini'. Cela dépend de la nature des propriétés étudiées.</p>
+
+<p>En analyse, lors de l'étude de fonctions d'une variable réelle, il est intéressant de compléter le corps (ordonné) des réels par deux éléments: +\(\infty\) et -\(\infty\).</p>
+
+<p>En géométrie, à l'occasion de l'étude de propriétés linéaires, le plan peut avantageusement être complété par une droite à l'infini; par contre, si l'on s'intéresse aux propriétés conformes, il vaut mieux lui ajouter un seul point à l'infini.</p>
+
+<p>Signalons que le <a href="../var/planhyp.htm">plan hyperbolique</a> (plan de <a href="../bio/lobachev.htm">Lobatchevski</a>) se complète parfaitement avec une conique à l'infini (2 points à l'infini sur chaque droite).</p> 
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

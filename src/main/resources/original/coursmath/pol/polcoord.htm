@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Polyèdres coordonnés - Polyèdres - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Polyèdres réguliers et coordonnées" />
+<meta name="keywords" content="coordonnées, espace euclidien" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="pol.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-12', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Polyèdres coordonnés
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Il peut être utile, dans certains problèmes relatifs aux <a href="polyedre.htm">polyèdres réguliers</a>, d'utiliser comme outil les coordonnées. Il importe dès lors de bien les choisir, de manière à simplifier au maximum les calculs.</p>
+
+<p>Le choix de l'origine ne pose guère de problème: tout polyèdre possède un unique centre (attention, pour le tétraèdre ce n'est pas un centre de symétrie !); c'est le point fixé par toutes les isométries conservant le polyèdre. <br />
+Restent à trouver les 3 directions des axes coordonnés orthogonaux.</p>
+
+<p>Le cas le plus simple est celui du cube (ou de son dual l'octaèdre); les 3 directions sont celles des arêtes (des diagonales). 
+En choisissant convenablement l'unité, les coordonnées des 8 sommets du cube seront \((\pm 1,\pm 1,\pm 1)\); (pour l'octaèdre les 6 sommets auront chacun deux coordonnées égales à \(0\) et une égale à \(\pm 1\)).</p>
+
+<p><img class="droite" alt="" src="polc/stella.gif">
+Passons au tétraèdre. Si l'on considère le symétrique du tétraèdre par rapport à son centre on obtient un second tétraèdre; l'ensemble de ces \(2\) tétraèdres forme un solide que Kepler appelait "Stella octangula"; les huit sommets sont ceux d'un cube, d'où la solution au problème des coordonnées. Il suffit de prendre les points \((\pm 1,\pm 1,\pm 1)\) avec un nombre pair de signes "-".</p>
+
+<p>Restent le dodécaèdre et son dual l'icosaèdre. 
+Remarquons tout d'abord que l'on peut inscrire un cube dans un dodécaèdre; partons d'une diagonale de face du cube et faisons lui subir, ainsi qu'à ses transformées, toutes les rotations d'1/3 de tour autour d'axes passant par le centre du cube et une de ses extrémités (et de celles de ses transformées).</p>
+
+<img class="gauche" alt="" src="polc/cubdod.gif">
+ 
+<p class="ni">On obtient ainsi les \(12\) arêtes d'un cube; le sous-groupe engendré par cet ensemble de rotations est le groupe du tétraèdre Alt(\(4\)) qui est évidemment un sous-groupe des déplacements du dodécaèdre qui est, lui, isomorphe à Alt(\(5\)) (Remarquons au passage que Alt(\(5\)) contient \(5\) sous-groupes Alt(\(4\)); on peut inscrire au total \(5\) cubes dans le dodécaèdre; à raison de \(8\) sommets par cube cela fait \(40\) sommets répartis sur les \(20\) sommets du dodécaèdre, ce qui donne 2 cubes par sommet; cela correspond au fait que par un sommet passent \(2\) triples de diagonales de face).</p>
+
+<p>Partons à présent d'un cube que nous représenterons ici comme déterminé par les 8 sommets de coordonnées \((\pm 1,\pm 1,\pm 1)\). 
+Pour transporter ce cube, attachons-lui une poignée parallèle aux arêtes d'une face; afin de pouvoir changer de main, fixons-en une autre sur une face adjacente.<br />
+Continuons, pour l'esthétique, sur chacune des faces et disposons les régulièrement (en fait prenons l'orbite sous l'action du sous-groupe Alt(\(4\)) fixant chacun des 2 tétraèdres inscrits dans le cube).</p>
+
+<p>Nous obtenons en fin de compte un solide limité par \(12\) faces qui sont des pentagones (peut-être gauches, peut-être non réguliers). 
+Soient \((a,0,b)\) avec \(a\gt0, b\gt0\) les coordonnées d'un sommet; l'autre extrémité de la poignée sera \((-a,0,b)\). 
+Exprimons à présent qu'un des pentagones est plan et régulier; par raison de symétrie tous le seront. 
+Les côtés doivent être égaux et valent 2<i>a</i>; on obtient:</p>
+
+\[ (a-1)^2+1+(b-1)^2=4a^2 \]
+
+<p>Il faut vérifier si le pentagone est plan: Pour celui représenté sur la figure, il suffit de regarder sa projection sur le plan \(Oxz\): \((a,0,b), (1,0,1)\) et \((b,0,0)\) et de vérifier que ces 3 points sont alignés. Il vient:</p>
+
+\[ a+b^2-2b=0 \]
+
+<p class="ni">ce qui nous donne 2 équations à 2 inconnues \(a, b\) :</p>
+
+\[ a+b^2-2b= 0 \\
+3a^2+2a-3-b^2+2b=0 \]
+
+<p class="ni">et par addition on arrive à : \(3a^2+2a-3+a=0\) c'est-à-dire \(a^2+a+1=0\)<br />
+La solution positive est \(a=\tau=1/2(\sqrt{5}- 1)\), b vaut \(1/\tau =1/2(\sqrt{5} + 1)\).<br />
+Les pentagones sont plans et leurs côtés sont égaux; ce n'est pas suffisant pour qu'ils soient réguliers, mais comme la solution obtenue est unique et que l'on sait que dans un dodécaèdre régulier on peut inscrire un cube, ils sont nécessairement réguliers ! et on obtient ainsi une belle description des 20 sommets: 8 sommets \((\pm 1,\pm 1,\pm 1)\); 12 sommets \((\pm\tau,\pm\tau^{-1},0)\), \((0,\pm\tau,\pm\tau^{-1})\) et \((\pm\tau^{-1},0,\pm\tau)\).</p>
+
+<p><img class="gauche" alt="" src="polc/tetraico.gif">La figure duale d'un dodécaèdre est un icosaèdre (20 faces triangulaires équilatérales).<br /> 
+La figure duale d'un cube est un octaèdre; il est donc possible d'inscrire un icosaèdre dans un octaèdre.<br />
+Voyons cela en prenant l'octaèdre dont les sommets ont deux coordonnées nulles et une égale à \({\pm}1\).<br />
+Sur chacune des 12 arêtes du cube s'appuyait une face du dodécaèdre; dualement sur chacune des 12 arêtes de l'octaèdre se trouve un sommet de l'icosaèdre. 
+Choisissons un point sur une arête: soit \((a,1-a,0)\) ses coordonnées (supposons \(a\gt 0\)); on en déduit facilement les coordonnées des 12 sommets. (C'est l'orbite d'un sommet sous l'action d'Alt(4)).</p>
+
+<p>Exprimons alors que tous les côtés sont égaux: il suffit de considérer le triangle des sommets \((0,a,1-a)\), \((0,a,-(1-a))\) et \((a,1-a, 0)\).<br />
+On obtient :</p>
+
+\[ a^2+(1-2a)^2+(1-a)^2=4(1-a)^2 \]
+d'où :
+\[ a^2+a-1=0  \]
+et
+\[  a=\tau=1/2(\sqrt{5} - 1) \]
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="polyd.htm">Polyèdres</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

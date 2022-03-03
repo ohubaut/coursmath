@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>"Voir" un plan projectif - Mathématique linéaire - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="projection centrale, coniques" />
+<meta name="keywords" content="algèbre, géométrie, plan projectif, modèle" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+"Voir" un plan projectif
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p><img class="droite" alt="ombre" src="proj/lampadaire.jpg">Sur la photo ci-contre, nous observons sur le mur, une jolie figure lumineuse: une hyperbole. Elle est dessinée par la lumière projetée par le lampadaire cylindrique.</p>
+
+<p>Le contour hyperbolique est obtenu par la projection, à partir de l'ampoule, des deux cercles qui limitent les bords supérieur et inférieur de l'abat-jour; comme l'ampoule est située au centre, la lumière émise est formée des deux nappes d'un cône de révolution. En idéalisant quelque peu la situation réelle, on peut dire qu'on a là, la projection d'un cercle à partir d'un point.</p>
+
+<p>Si le lampadaire était tenu à bout de bras horizontalement, nous verrions sur le mur un cercle lumineux; en redressant le lampadaire, ce cercle deviendrait d'abord ellipse, puis parabole et finalement hyperbole.</p>
+
+<p>La transformation qui se passe sur le plan du mur est appelée une projectivité. L'étude des projectivités conduit à la notion de plan projectif.</p>
+
+<p>La linéarité la plus parfaite est obtenue dans l'espace projectif.<br />
+Comment définir un espace projectif ? En dehors d'une voie algébrique, deux présentations sont possibles.</p>
+
+<ol>
+<li>L'espace projectif en tant qu'espace affin complété par des points "à l'infini" parfois appelés "impropres" (pourtant, ils ne sont pas malpropres ; il suffit de bien les laver!)</li>
+<li>L'espace projectif construit à partir d'un espace vectoriel.</li>
+</ol>
+
+<p>Cette deuxième approche est plus moderne, mais moins intuitive. Les points de l'espace projectif sont les sous-vectoriels à une dimension de l'espace vectoriel, les droites sont les sous-vectoriels à 2 dimensions et ainsi de suite. Cette vision est intéressante lorsque les espaces vectoriels ont été étudiés et elle permet de définir simplement les coordonnées homogènes. Puisqu'on a très (ou trop) souvent l'habitude de travailler avec des coordonnées, cette approche peut être assez utile.</p>
+
+<p>Pourtant, la vision d'un espace projectif en tant qu'espace affin complété par des points est très proche de la démarche historique de Desargues et bien plus intuitive. En gros, on part d'un espace affin et on le complète par ses "points à l'infini". Il est évidemment regrettable que des propriétés de l'espace doivent être énoncées avec des exceptions: par exemple, dans un plan, deux droites se coupent toujours en un point, sauf si elles sont parallèles. Ou bien encore: dans un espace à 3 dimensions, étant donné un plan et un point extérieur, tout plan passant par ce point coupe le plan donné en une droite à l'exception d'un seul appelé parallèle.</p>
+
+<p>Ces exceptions disparaissent lorsqu'on ajoute des points à l'infini et alors, dans un plan, deux droites distinctes sont toujours sécantes en un point, éventuellement à l'infini. De même, dans un espace à 3 dimensions, deux plans distincts se coupent toujours en une droite, éventuellement à l'infini.
+Lorsqu'on essaie de préciser, un point à l'infini est le point commun à l'ensemble des droites parallèles à une direction. Une droite à l'infini est définie par deux points à l'infini: deux directions de parallèles déterminent un ensemble de plans parallèles à ces deux directions; ces plans ont tous en commun cette droite à l'infini.<br />
+Une étape reste nécessaire à franchir: oublier l'expression "à l'infini" et traiter les points et droites ajoutés comme les autres points et droites. On obtient ainsi un espace projectif. Il y a des points, des droites, des plans; dans un plan deux droites distinctes se coupent toujours en un point et, à 3 dimensions deux plans distincts se coupent toujours selon une droite.</p>
+
+<p>Cette approche était celle suivie à la Renaissance, en particulier par les peintres. C'est à cette époque que la perspective est étudiée avec soin, notamment par Dürer, et tout naturellement les points à l'infini apparaissent dans les gravures et les peintures. Une étude très approfondie de la perspective se trouve également chez <a href="../vie/graphiq.htm">Vredeman De Vries</a>.</p>
+
+<p>Les transformations projectives diffèrent des transformations affines. Tout comme elles, les relations de linéarité sont conservées, mais le fait d'avoir ajouté des points à l'espace affin, entraîne quelques différences importantes. Deux droites parallèles se projettent généralement selon deux droites sécantes. La figure transformée d'un parallélogramme est un quadrilatère quelconque. <br />
+Malgré ces différences, une propriété essentielle subsiste: le <a href="harmoni.htm">birapport</a> (rapport des rapports de section) d'un quaterne (deux couples) de points et en particulier, dans le cas où ce birapport vaut -1; dans ce cas  le quaterne est harmonique (généralisation de la notion de milieu quand un des points est à l'infini).</p>
+
+<p>Pour s'habituer aux projectivités, nous vous conseillons de commencer par l'espace projectif à 2 dimensions, le plan projectif. Un petit appareil, fort simple à construire, vous permettra de visualiser les propriétés fondamentales du plan projectif.</p>
+
+<p>Le principe est d'obtenir une projection centrale, c'est-à-dire à partir d'un point, d'une figure. A priori, il n'y a aucune difficulté: on dessine la figure et on la projette à partir d'une source lumineuse ponctuelle. Hélas, lorsqu'on projette un point, le rayon lumineux ne forme en fait qu'une demi-droite. Pour obtenir la droite entière, il suffit de disposer une figure symétrique de la première par rapport à la source lumineuse. Cela est réalisé dans l'appareil décrit ci-dessous.<br />
+Il se compose essentiellement d'un support formé de 4 parois et ouvert aux deux extrémités avec une source lumineuse disposée au centre. Il y a intérêt à ce que le support ne soit pas trop allongé, le plus cubique possible afin d'avoir un grand angle de dispersion de la lumière.<br />
+Aux extrémités, prévoir soit des glissières, soit des supports pour pouvoir placer des caches. Elles doivent être placées symétriquement par rapport à l'ampoule; pratiquement, les caches sont identiques mais placées en faisant tourner l'une de 180° par rapport à l'autre.</p>
+
+<div><img alt="projecteur" src="proj/support.gif"></div>
+Une fois les caches mises en place, on allume l'ampoule et on projette sur un mur le plus clair possible, ou mieux, sur un écran.
+<div><img alt="projecteur" src="proj/project.gif"></div>
+
+<p>Conseil technique: la manière la plus simple de réaliser ce modèle est d'utiliser comme source lumineuse une ampoule pour torche; l'inconvénient est la faible luminosité. On renforce évidemment la luminosité en utilisant une ampoule quartz-iode mais dans ce cas, il faut tenir compte de la forte chaleur dégagée, prévoir des ouvertures d'aération (qui ne peuvent pas laisser passer la lumière) et utiliser des matériaux résistant à la chaleur.<br />
+Quelle que soit la méthode utilisée, il est bon de prévoir une poignée pour pouvoir manipuler l'appareil aisément.</p>
+
+<p>Quelques types de caches intéressants: </p>
+<table>
+<tr><td><img alt="carre" src="proj/carre.gif"></td><td><img alt="" src="../dot.png" width=50></td>
+<td><p>On savait déjà que par projection parallèle (ombre au soleil) un carré pouvait devenir un parallélogramme: le parallélisme est conservé. A présent, la projection centrale d'un carré peut être un <a href="perspec.htm">quadrilatère quelconque</a></p>.</td></tr>
+<tr><td><img alt="parallélolgramme" src="proj/parall.gif"></td><td></td>
+<td><p>La projection d'un parallélogramme et de ses diagonales est un quadrilatère quelconque. Les diagonales se coupaient en leur milieu, mais à présent, ce n'est plus vrai. On peut également s'amuser à envoyer l'une des diagonales à l'infini; qu'obtient-on alors ?</p></td></tr>
+<tr><td><img alt="quadrilatère" src="proj/quadril.gif"></td><td></td>
+<td><p>Dans un quadrilatère quelconque, les paires de cotés opposés se coupent; par projection centrale, on peut s'arranger pour que leurs points d'intersection se projettent "à l'infini". Alors, les paires de côtés opposés deviennent parallèles et le quadrilatère est un parallélogramme. Les diagonales se coupent alors en leur milieu. Au passage, remarquons que la construction du conjugué harmonique reste valable.</p></td></tr>
+<tr><td><img alt="cercle" src="proj/cercle.gif"></td><td></td>
+<td><p>La projection du cercle est une <a href="../2de/belges.htm">conique</a>. En inclinant le projecteur peu à peu, le cercle s'étire et devient une ellipse. Rien de neuf, c'était déjà le cas avec l'ombre d'un cercle. Si l'on continue à incliner le projecteur, l'ellipse s'allonge de plus en plus et devient une parabole (du moins on peut l'imaginer) et si l'on continue le mouvement du projecteur, surprise! on voit arriver une deuxième partie de l'image qui est en réalité une hyperbole.</p></td></tr>
+<tr><td><img alt="ellipse" src="proj/ellips.gif"></td><td></td>
+<td><p>On peut à nouveau, en manipulant le projecteur, obtenir une conique: ellipse, parabole, hyperbole, au choix. A présent, on constate que ni le centre (de symétrie) ni les diamètres (ensemble des milieux de cordes parallèles) ne sont conservés.</p></td></tr>
+<tr><td><img alt="triangle autopolaire" src="proj/con1.gif"></td><td></td>
+<td><p>Un <a href="../2de/conique.htm">triangle autopolaire</a> d'une conique est conservé (il s'agit de points conjugués harmoniques). Si le côté non sécant est projeté à l'infini, on obtient une ellipse et deux diamètres conjugués. Si c'est l'un des deux autres côté qui s'en va à l'infini, c'est une hyperbole.</p></td></tr>
+<tr><td><img alt="corde des contacts" src="proj/con2.gif"></td><td></td>
+<td><p>En envoyant à l'infini une tangente, on obtiendra une parabole munie d'une <a href="../2de/conaffi.htm">tangente et du diamètre conjugué</a>. Si c'est la corde des contacts qui s'en va à l'infini, on obtient une hyperbole; l'image des deux tangentes est alors formée des deux asymptotes.</p></td></tr>
+</table>
+<p>Arrêtons là, mais on peut évidemment songer à de nombreuses autres caches.</p>
+
+<p>Voila revues, avec quelques images mouvantes, les propriétés projectives principales du plan projectif et de ses coniques. On constate ainsi que l'essentiel des propriétés des coniques est de nature projective. Le fait que les figures utilisées se déforment à volonté, facilite grandement la mémorisation de toutes ces notions.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

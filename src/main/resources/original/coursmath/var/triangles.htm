@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Droites remarquables d'un triangle - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="médianes, médiatrices, bissectrices, hauteurs, homothéties" />
+<meta name="keywords" content="géométrie, médianes, médiatrices, bissectrices, hauteurs" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Droites remarquables d'un triangle
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Lorsqu'on commence l'étude de la géométrie, on se focalise assez rapidement sur l'étude des triangles.</p>
+
+<p>Pourquoi donc ? Pourtant, lorsqu'on regarde autour de soi, la figure géométrique la plus souvent rencontrée est probablement le rectangle (portes, fenêtres, table,...) Le rectangle possède pourtant des propriétés exceptionnelles: il a deux axes de symétries (ses médianes) et un centre de symétrie (leur intersection).<br />
+Bien souvent, il est utile de considérer des figures ne possédant aucune isométrie. Alors que choisir ? Un point, évidemment pas. Deux points ou un segment, c'est déjà mieux, mais cette figure possède les mêmes isométries qu'un rectangle. Alors, il faut faire un pas supplémentaire, ajouter un point extérieur au segment et on est ainsi conduit au triangle. Evidemment, il ne faut pas prendre un triangle équilatéral ou isocèle et éviter le triangle rectangle, mais prendre un triangle quelconque.</p>
+
+<p>C'est la figure la plus simple ne possédant aucune isométrie (à part l'identité bien sûr).</p>
+
+<p>De manière traditionnelle, on étudie des droites "remarquables" qu'on peut lui associer. Les premières que l'on rencontre sont les bissectrices, les médiatrices, les hauteurs et les médianes. Miraculeusement, chacun des triples de droites est constitué de trois droites concourantes. Comme il est exceptionnel que 3 droites données concourent en un même point, c'est ce qui justifie le qualificatif "remarquable" qu'on a associé à ces droites.</p>
+
+<p>Pourtant, on s'aperçoit assez rapidement qu'un type est différent des trois autres. En effet, si l'on dessine un triangle et ses 3 bissectrices, médiatrices,... sur un carreau et que l'on regarde l'ombre portée par le soleil, on constate que, bien que l'ombre du triangle soit toujours un triangle, l'ombre d'une bissectrice n'est généralement plus une bissectrice; plus visible peut-être, l'ombre d'une médiatrice ou d'une hauteur n'est pas non plus une médiatrice ni une hauteur. On voit immédiatement que l'ombre des angles droits n'est, en général, jamais un angle droit.<br />
+Par contre, les médianes d'un triangle restent des médianes. Il s'agit d'une notion affine, invariante par des transformations linéaires.</p>
+
+<p>Le fait que les trois médianes d'un triangle concourent en un point, centre de masse ou barycentre, <a href="../mat/bary.htm">se démontre aisément</a>.</p>
+
+<p>Pour les trois autres types de droites remarquables, on utilise des propriétés métriques. Le fait que médiatrices ou bissectrices soient concourantes résulte du fait qu'une médiatrice est axe de symétrie d'un segment et qu'une bissectrice est axe de symétrie d'un angle.<br />
+En ce qui concerne les hauteurs, c'est un peu moins immédiat.</p>
+
+<img src="tria/media.gif" alt="médiatrices">
+
+<p>D'habitude, par chacun des 3 sommets du triangle, on trace la parallèle au côté opposé et les hauteurs du petit triangle initial deviennent les médiatrices du triangle formé par les 3 droites et il en résulte qu'elles sont concourantes.<br />
+Comme médiatrices et bissectrices ont des propriétés fort semblables, n'y aurait-il pas moyen de trouver un lien entre hauteurs d'un triangle et bissectrices d'un nouveau triangle ?</p>
+
+<p>Partons d'un triangle et de ses trois bissectrices que nous savons concourantes. Par chaque sommet du triangle, passe une bissectrice. Construisons la perpendiculaire et remarquons qu'en fait, il s'agit de la bissectrice extérieure de l'angle.</p>
+
+<img src="tria/biss.gif" alt="bissectrices">
+
+<p>Mais la bissectrice d'un angle et les bissectrices des deux autres angles sont également concourantes et par conséquent, les bissectrices du triangle initial deviennent les hauteurs du triangle formé par les 3 perpendiculaires aux 3 bissectrices.</p>
+
+<p>Inversement, partons du triangle \(ABC\). Notons \(A',B'\) et \(C'\) les points où les hauteurs coupent respectivement \(BC,CA\) et \(AB\). Traçons les deux cercles de diamètre \(AB\) et \(AC\). </p>
+
+<img src="tria/haut.gif" alt="hauteurs">
+
+<p>Le cercle de diamètre \(AB\) passe par \(A'\) et \(B'\) et les deux angles inscrits \(ABB'\) et \(AA'B\) sont égaux car ils interceptent le même arc \((AB)\).<br />
+De même, le cercle de diamètre \(AC\) passe par \(A'\) et \(C'\) et les deux angles inscrits \(ACC'\) et \(AA'C\) sont égaux car ils interceptent le même arc \((AC)\).<br />
+Ces angles sont tous égaux à \(90°- BAC\) et \(AA'\) est donc la bissectrice de l'angle \(C'A'B'\).<br />
+On peut raisonner de même pour les autres sommets \(B'\) et \(C'\). Le triangle \(A'B'C'\) (appelé parfois triangle orthique du triangle \(ABC\)) admet donc les hauteurs du triangle \(ABC\) comme bissectrices.</p>
+
+<p>Dans chacune des constructions décrites ci-dessus, on peut évidemment montrer que si on part du "grand" triangle, on retombe sur le "petit" triangle initial.</p>
+
+<p>En résumant les observations faites plus haut, on obtient une jolie figure formée par 3 triangles emboîtés et 3 droites concourantes. Les médiatrices du grand triangle sont les hauteurs du deuxième triangle et les bissectrices du petit triangle.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

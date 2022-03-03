@@ -1,0 +1,444 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Documents - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résumés" />
+<meta name="keywords" content="groupes, musique, algèbre, géométrie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="doc.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript">
+    function pdf(fichier) 
+{window.open(fichier,'pdf','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-11', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+<br>
+<div class="droite"><a href="javascript:pdf('geo-affine.pdf');">Télécharger la version pdf (11 pages)</a></div>
+<br>
+	<div class="titre">
+<br />
+Géométrie "analytique" du plan affin
+<br />
+	</div>
+	<div class="stitre">
+par<br><br>
+<b>Xavier Hubaut</b><br><br>
+Professeur émérite - Université Libre de Bruxelles - Département de Mathématique
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<ol>
+<li><a href="#1">Système de coordonnées cartésiennes - Repère cartésien</a></li>
+<li><a href="#2">Coordonnées d'un point du plan - Coordonnées d'un vecteur.</a></li>
+<li><a href="#3">Point partageant un vecteur dans un rapport donné - Rapport de section.</a></li>
+<li><a href="#4">Equations d'une droite - Condition d'alignement de 3 points.</a></li>
+<li><a href="#5">Birapport de 4 points alignés - Relations d'harmonie.</a></li>
+<li><a href="#6">Nombres directeurs - Coefficient directeur d'une droite.</a></li>
+<li><a href="#7">Droites parallèles.</a></li>
+<li><a href="#8">Droites sécantes.</a></li>
+<li><a href="#9">Faisceaux de droites - Equation d'un faisceau.</a></li>
+<li><a href="#10">Condition nécessaire et suffisante pour que 3 droites appartiennent à un même faisceau.</a></li>
+<li><a href="#11">Régions d'une droite - Signe d'une fonction linéaire.</a></li>
+<li><a href="#12">Translation du repère - Translation du plan.</a></li>
+<li><a href="#13">Changement de base - Affinité centrée ou application linéaire.</a></li>
+<li><a href="#14">Changement de base - Affinité.</a></li>
+</ol>
+<hr style="width: 75%">
+<p><i>Une remarque préliminaire. Nous avons mis le terme analytique entre guillemets car l'analyse n'est jamais utilisée si ce n'est dans la section 11. Tout le reste ne relève que de l'algèbre ;  hélas l'expression géométrie algébrique est déjà utilisée dans une autre domaine...</i></p>
+
+<a id=1></a>
+<p class="st">1. Système de coordonnées cartésiennes - Repère cartésien</p>
+<p>Un système de coordonnées cartésiennes est déterminé par la donnée de deux droites sécantes en \(O\) (origine des coordonnées) et des points unités \(u, v\) sur chacune de ces deux droites.</p>
+
+<p>Les vecteurs de base \(Ou\) et \(Ov\) seront désignés respectivement par \(\imath,\jmath \). Ces deux vecteurs, non proportionnels, doivent être linéairement indépendants).</p>
+<p><i>Rappelons que la condition nécessaire et suffisante pour que deux vecteurs \(\imath \) et \(\jmath \) soient linéairement indépendants est</i> : \( \lambda \imath + \mu \jmath = 0 \iff \lambda = \mu = 0 \).</p>
+
+<p>Les supports des vecteurs \(Ou = \imath \) et \(Ov = \jmath \) sont appelés axes coordonnés (axe \(x'Ox\), axe \(y'Oy\)).</p>
+
+<p><i>Remarque : Pour l'étude de propriétés affines (linéaires), les deux vecteurs de base sont arbitraires. Par contre, pour l'étude de propriétés métriques, nous verrons plus tard qu'il est plus commode de choisir deux vecteurs perpendiculaires de même module.</i></p>
+
+<a id=2></a>
+<p class="st">2. Coordonnées d'un point du plan - Coordonnées d'un vecteur.</p>
+
+<img class="gauche" alt="coordonnées" src="geoa/fig1.png"><p>Etant donné un point \(p\), soient \(p_x\) et \(p_y\) ses 2 projections sur les axes coordonnés \(x'Ox\) et \(y'Oy\), parallèlement aux axes \(y'Oy\) et \(x'Ox\). Les deux vecteurs \(Op_x\) et \(Op_y\) sont les composantes du vecteur \(Op\) selon les axes coordonnés et \(Op = Op_x + Op_y\).</p>
+
+<p>Chacune des composantes du vecteur OA peut être mesurée avec les vecteurs unités correspondants : \( x = Op_x/\imath ~~~~\text{et}~~~~ y = Op_y/\jmath\).</p>
+<p>Les deux nombres (\(x,y\)) sont appelés coordonnées du point \(p\) dans le repère (\(\imath, \jmath \)); 
+<table class="n"><tr><td> \(Op = x \imath + y \jmath \) </td></tr></table>
+
+<p>Cette décomposition est unique !<br>
+En effet, si \(Op = x \imath + y \jmath \) et \(Op = x' \imath + y' \jmath\), il en résulte que \(0 = (x - x') \imath+ (y - y') \jmath\).<br>
+Or \(\imath\) et \(\jmath\) sont linéairement indépendants; il en résulte que x - x' = y - y'= 0 et par conséquent  x = x' et y = y'</p>
+
+<img class="droite" alt="composantes d'un vecteur" src="geoa/fig2.png"><p>Etant donné le vecteur \(p_1p_2\), soient (\(x_1, y_1\)) et (\(x_2, y_2\)) les coordonnées de \(p_1\) et de \(p_2\).<br>
+On a : \(p_1p_2 = Op_2 - Op_1\)<br>
+Exprimons cette relation en fonction des vecteurs de base, il vient: \(p_1p_2 = (x_2 i + y_2 j) - (x_1 i + y_1 j) =  (x_2 - x_1) i + (y_2 - y_1) j\)</p>
+<p>En posant: \(p_1p_2 = X i + Y j\), on obtient :<br>
+\[ X = x_2 - x_1 ~~~~\text{et}~~~~ Y = y_2 - y_1 \]
+
+<p>Les deux nombres \((X, Y)\) sont les coordonnées du vecteur \(p_1p_2\) dans le repère \((\imath, \jmath)\).Notons que sur le schéma ci-dessus, \(X = x_2-x_1\) est négatif.</p>
+
+<p><i>Remarque : Les deux nombres \((X, Y)\) ne définissent pas le vecteur lié \(p_1p_2\) mais l'ensemble des vecteurs qui lui sont équipollents (vecteur libre).</i></p>
+
+<p>Deux vecteurs sont équipollents si et seulement si leurs coordonnées sont égales<br>
+<p>Deux vecteurs (\(X_1,Y_1\)) et (\(X_2,Y_2\)) sont parallèles \(\iff
+\begin{vmatrix}X_1 & Y_1 \\ X_2 & Y_2 \end{vmatrix} = 0\).
+
+<a id=3></a>
+<p class="st">3. Coordonnées d'un point partageant un vecteur dans un rapport donné - Valeur du rapport de section d'un point sur un vecteur.</p>
+
+<p>Soient les deux points \(p_1(x_1,y_1)\) et \(p_2(x_2,y_2)\). Considérons le point \(m(x_0,y_0)\) dont le rapport de section sur le vecteur \(p_1p_2\) vaut \(k\).<br>
+On a \(k = mp_1/mp_2\)   d'où   \(mp_1 = kmp_2\) ; on en déduit : <br>
+\(Op_1 - Om = k(Om_2 - Om)\)   ou encore   \((1-k)Om = Op_1 - k.Op_2\)<br>
+On obtient finalement : \(Om = (Op_1 - k.Op_2)/(1 - k)\)</p>
+
+<p>En exprimant cette relation en fonction des vecteurs de base:<br>
+\(x_0 \imath + y_0 \jmath = [(x_1 i+ y_1 \jmath ) - k(x_2 \imath + y_2 \jmath )]/(1-k) = [(x_1-kx_2) \imath + (y_1-ky_2) \jmath ]/(1-k)\)<br>
+On en déduit les coordonnées du point M :
+<table class="n"><tr><td>
+\( \begin {cases} x_0  = (x_1 - kx_2)/(1-k)\\ y_0  = (y_1 - ky_2)/(1-k) \end{cases} \)
+</td></tr></table>
+<p class="ni">et la valeur de k :</p>
+<table class="centre"><tr><td style="border: 1px solid #000;padding-left:10px;padding-right:10px;">
+\[ k = \normalsize{\frac{x_1 - x_0}{x_2 - x_0}} = \normalsize{\frac{y_1 - y_0}{y_2 - y_0}} \]
+</td></tr></table>
+
+<a id=4></a>
+<p class="st">4. Equations d'une droite (paramétriques et statiques) - Condition d'alignement de 3 points.</p>
+
+<p><b>4.1. Droite passant par 2 points</b></p>
+
+<p>Etant donnés les points \(p_1, p_2\), si le rapport \(k = mp_1/mp_2\) varie, le point \(m\) décrit la droite passant par \(p_1\) et \(p_2\). Les coordonnées \((x, y)\) d'un point quelconque de la droite \(p_1 p_2\) sont:</p>
+<table class="n"><tr><td>
+\[ \begin{cases} x = \Large{\frac{x_1-kx_2}{1-k}}\\ \\ y = \Large{ \frac{y_1-ky_2}{1-k}}\end{cases} \]
+</td></tr></table>
+<p>Ces relations sont appelées <b>équations paramétriques</b> de la droite.</p>
+
+<p>A chaque valeur de \(k\), y compris \(\infty\) correspond un point de la droite et réciproquement. En particulier à \(k=0\), correspond \(p_1\), à \(k = \infty\)  correspond \(p_2\) et à \(k=1\) correspond le point à l'infini.<br>
+En éliminant le paramètre k entre ces deux équations, on obtient la relation:<br>
+\(x (y_1 - y_2) - y (x_1 - x_2) + x_1 y_2 - x_2 y_1 = 0\), qui peut s'écrire:</p>
+<table class="n"><tr><td>
+\( \begin{vmatrix}x & y & 1 \\x_1 & y_1 & 1 \\ x_2 & y_2 & 1\end{vmatrix} = 0 \)
+</td></tr></table>
+<p>Cette relation est l'<b>équation statique</b> de la droite passant par \(p_1\) et \(p_2\).<br>
+
+On en déduit la <b>condition nécessaire et suffisante d'alignement</b> de 3 points \(p_0, p_1, p_2\) :</p>
+<table class="n"><tr><td>
+\(\begin{vmatrix}x_0 & y_0 & 1 \\x_1 & y_1 & 1 \\ x_2 & y_2 & 1\end{vmatrix} = 0 \iff p_0, p_1, p_2\) sont alignés.
+</td></tr></table>
+
+<p><b>4.2. Droite définie par un point et sa direction</b></p>
+
+<img class="gauche" alt="droite de direction donnée" src="geoa/fig3.png"><p>Soit un vecteur <b>d</b>\((X, Y)\). Considérons un point \(p_0(x_0, y_0)\) et recherchons l'équation de la droite D passant par \(p_0\) ayant la direction du vecteur <b>d</b>.<br>
+\(p \in\) D \(\iff p_0p = k\)<b>d</b> \(\iff Op - Op_0 = k\)<b>d</b><br> \(\iff Op = Op_0 + k\)<b>d</b></p>
+
+<p>En fonction des vecteurs de base, on a : \( x\imath + y\jmath = x_0\imath + y_0\jmath+ k (X\imath+ Y\jmath)\), d'où:</p>
+<table class="n"><tr><td>
+\( \begin{cases} x = x_0 + kX \\ y = y_0+kY \end{cases} \)
+</td></tr></table>
+<p>Ce sont les <b>équations paramétriques</b> de la droite d passant par \(p_0(x_0, y_0)\) parallèle au vecteur de coordonnées \((X, Y)\).<br>
+En éliminant le paramètre, on trouve pour la droite d l'<b>équation statique</b> :</p>
+<table class="n"><tr><td>
+\( \begin{vmatrix}x & y & 1 \\x_0 & y_0 & 1 \\ X & Y & 0\end{vmatrix} = 0 \)
+</td></tr></table>
+<p><i>Ce résultat correspond à associer à toute direction un point à l'infini (voir les <a href="../mat/homogene.htm">coordonnées homogènes</a>)</i>
+
+<p><b>4.3. Toute relation linéaire entre \(x\) et \(y\) est l'équation d'une droite</b>.</p>
+
+<p>Dans les deux cas précédents, l'équation de la droite est de la forme \(ux + vy + w = 0\).<br>
+Nous allons montrer que réciproquement \(ux + vy + w = 0\) est l'équation d'une droite (pour autant que \(u\) et \(v\) ne soient  pas simultanément nuls).<br>
+<i>Remarque importante: Les coefficients \(u, v, w\) sont donnés à un facteur (non nul) près puisqu'il s'agit d'une équation.</i></p>
+
+<p>Soit \(u_0x + v_0y + w_0 = 0\) une relation linéaire entre \(x\) et \(y\) où \(u_0, v_0, w_0\) représentent trois nombres donnés.<br>
+Comme \(u_0\) et \(v_0\) ne sont pas simultanément nuls, il existe une infinité de couples \((x, y)\) vérifiant cette relation.  Soient \(p_1(x_1, y_1),~~ p_2(x_2, y_2),~~ p_3(x_3, y_3)\) trois points distincts dont les coordonnées satisfont à la relation \(u_0x + v_0y + w_0 = 0\); on a donc:</p>
+
+\[ \begin{cases} u_0x_1+v_0y_1+w_0 = 0 \\ u_0x_2+v_0y_2+w_0 = 0 \\ u_0x_3+v_0y_3+w_0 = 0 \end{cases}\]
+
+<p>Si nous considérons ces trois relations comme provenant d'un système de 3 équations homogènes à 3 inconnues: \(u, v, w\), elles expriment que ce système possède une solution \(u_0, v_0, w_0\) non nulle. Il en résulte que son déterminant est nul; on a :</p>
+
+\[ \begin{vmatrix} x_1 & y_1 & 1 \\ x_2 & y_2 & 1\\x_3 & y_3 & 1 \end{vmatrix} = 0 \]
+
+<p>Or cette relation exprime que les trois points \(p_1,~~ p_2,~~ p_3\) sont alignés. Trois points quelconques de l'ensemble correspondant à \(u_0x + v_0y + w_0 = 0\) sont donc alignés; cet ensemble est donc une droite et toute relation de la forme \(ux + vy + w = 0\) est l'équation d'une droite.</p>
+
+<p><i>Autre démonstration :<br>
+Considérer un point \(p_0(x_0, y_0)\) de l'ensemble défini par \(ux + vy + w = 0\) ; étant donné un second point \(p(x,y)\) de l'ensemble, calculer les coordonnées du vecteur \(p_0p\). Montrer que ce vecteur est parallèle au vecteur fixe \(d\) (v,-u).<br>
+En conclure que \(ux + vy + w = 0\) représente une droite et cette droite est parallèle au vecteur \(d(v,-u)\).</i></p>
+
+<p><b>4.4. Autre forme de l'équation d'une droite.</b></p>
+
+<p>Si une droite est définie par ses points d'intersection avec les axes coordonnés \(p(a,0)\) et \(q(0,b)\), elle a pour équation :</p>
+<table class="centre"><tr><td style="border: 1px solid #000;padding-left:10px;padding-right:10px;">
+\[ \normalsize{\frac{x}{a}} + \normalsize{\frac{y}{b}} = 1 \]
+</td></tr></table>
+<p>Les nombres \(a,~b\) sont appelés respectivement abscisse et ordonnée à l'origine.</p><br>
+
+<a id=5></a>
+<p class="st">5. Birapport de 4 points alignés - Relations d'harmonie.</p>
+
+<p>Soient \(p_1(x_1, y_1),~p_2(x_2, y_2),~p_3(x_3, y_3),~p_4(x_4, y_4)\), quatre points alignés.</p>
+<p>Leur birapport \((p_1~p_2~p_3~p_4)\) est égal au rapport des rapports de section : \((p_3~p_1/p_3~p_2)/(p_4~p_1/p_4~p_2)\)<br>
+Exprimons les rapports de section en fonction des coordonnées:<br>
+\[ \begin{align} (p_1~p_2~p_3~p_4)& = [(x_1-x_3)/(x_2-x_3)]/[(x_1-x_4)/(x_2-x_4)]\\& =  [(y_1-y_3)/(y_2-y_3)]/[(y_1-y_4)/(y_2-y_4)]\end{align} \]
+<p>On constate que : 
+<table class="n"><tr><td>
+\((p_1~p_2~p_3~p_4) = (x_1~x_2~x_3~x_4) = (y_1~y_2~y_3~y_4)\)
+</td></tr></table>
+<p>Si les 4 points sont sur la droite d'équations paramétriques:
+\[ \begin{cases} x = (x_1-kx_2)/(1-k)\\ y = (y_1-ky_2)/(1-k)\end{cases} \]
+<p class="ni">ou sur la droite d'équations paramétriques:</p>
+\( \begin{align} x =& x_0 + kX \\ y =& y_0+kY \end{align} \)
+<p class="ni">et correspondent aux valeurs \(k_1, k_2, k_3, k_4\) du paramètre \(k\) :</p>
+<table class="n"><tr><td>
+\((p_1~p_2~p_3~p_4) = (k_1~k_2~k_3~k_4) \)
+</td></tr></table>
+
+<p><b>Relation d'harmonie</b></p>
+<p>Si le  quaterne \(p_1~p_2~p_3~p_4\) est harmonique, c'est-à-dire si le birapport vaut -1 et que \(k_1,~k_2,~k_3,~k_4\) sont les 4 nombres correspondant aux 4 points, rappelons que:</p>
+\[ (k_1~k_2~k_3~k_4) = -1 \iff (k_1+ k_2)(k_3 + k_4) = 2(k_1.k_2 + k_3.k_4) \]
+
+<p><i>Cas particulier: si \(k_4 = 0\), on a: \(2/k_3 = 1/k_1 +  1/k_2\) et d'autre part, si \(k_3 + k_4 = 0\), on a: \(k_1.k_2 = k_3^2 = k_4^2\)</i></p>
+
+<a id=6></a>
+<p class="st">6. Nombres directeurs - Coefficient directeur d'une droite.</p>
+
+<p>Les coordonnées d'un vecteur parallèle à une droite donnée sont appelées nombres directeurs de la droite; ces 2 nombres sont par conséquent donnés à un facteur près.<br>
+Nous avons vu (4.4) que la droite \(ux + vy + w = 0\) est parallèle au vecteur <b>d</b>\((v, -u)\) ; par conséquent les nombres directeurs de \(ux + vy + w = 0\) sont proportionnels à \((v, -u)\)<br>
+<i>Remarque: Les nombres directeurs sont donnés à un facteur près.</i>
+
+<p>Le rapport \(m = Y/X\) des nombres directeurs est appelé coefficient directeur de la droite. Si la droite est donnée sous la forme \(ux + vy + w = 0\), son coefficient directeur est:</p>
+<table class="n"><tr><td>
+\( m = -\Large{\frac{u}{v}} \)
+</td></tr></table>
+<p>Dans le cas d'une droite définie par les 2 points \(A_1(x_1, y_1)\) et \(A_2(x_2, y_2)\), on vérifiera que les nombres directeurs sont proportionnels à \((x_2 - x_1, y_2 - y_1)\), et que son coefficient directeur est:</p>
+<table class="n"><tr><td>
+\( m = -\Large{\frac{y_2 - y_1}{x_2 - x_1}} \)
+</td></tr></table>
+<p class="ni"><i>Remarque: Le coefficient directeur est le coefficient de \(x\) lorsqu'on écrit l'équation de la droite sous la forme : \(y = mx + a\).</i><br>
+
+<a id=7></a><p class="st">7. Droites parallèles</p>
+<p><b>7.1. Condition nécessaire et suffisante de parallélisme de 2 droites:</b></p>
+
+<p>Deux droites sont parallèles lorsque les vecteurs de ces droites sont parallèles et réciproquement.</p>
+<table class="centre"><tr><td>
+\(\begin{cases}d_1\equiv u_1x+v_1y +w_1 \\ d_2\equiv u_2x+v_2y +w_2 \\ d_1\parallel d_2 \end{cases}\)
+</td><td>\(\iff\)</td><td>
+\(d_1(v_1,-u_1)\parallel d_2(v_2,-u_2)\)
+</td><td>\(\iff\)</td><td class="enc">
+\begin{align}& \begin{vmatrix}u_1 & v_1 \\u_2 & v_2\end{vmatrix} = 0\end{align}
+</td></tr></table>
+<p class="ni">est la condition nécessaire et suffisante de parallélisme de deux droites.<br>
+Autrement dit, pour que 2 droites soient parallèles, il faut et il suffit que les coefficients des termes en x et en y dans leurs équations soient proportionnels.</p>
+
+<p><b>7.2. Equation de la parallèle menée par un point à une droite.</b></p>
+
+<img class="droite" alt="parallèle" src="geoa/fig4.png"><p>Etant donnés un point \(p_0(x_0, y_0)\) et une droite \(D \equiv ux + vy + w=o\), cherchons l'équation de \(D'\parallel D\) avec \(p_0 \in D'\). Nous savons que le vecteur <b>d</b>\((v, -u)\) est parallèle à D.</p>
+<p>Soit \(p(x, y) \in D'\). Les coordonnées de \(p_0p\) sont \((x - x_0, y - y_0)\).<br>
+Exprimons que \(p_0p \parallel D\) ; on obtient : 
+<table class="n"><tr><td>
+\(u (x - x_0) + v (y - y_0) = 0 \)
+</td></tr></table>
+<p class="ni">ce qui est l'équation de la droite D'.</p>
+
+<a id=8></a>
+<p class="st">8. Droites sécantes.</p>
+
+<p>Soient les deux droites:
+\[ D_1\equiv u_1x + v_1y + w_1 = 0 \\D_2\equiv u_2x + v_2y + w_2 = 0 \]
+
+<p>Les coordonnées des points communs à \(D_1\) et \(D_2\) sont les solutions (si elles existent) du système formé par ces 2 équations.</p>
+<p>Nous savons qu'il y aura une et une seule solution (un seul point) si :</p>
+\( \begin{vmatrix}u_1 & v_1\\u_2 & v_2 \end{vmatrix} \ne 0 \) c'est-à-dire si les droites ne sont pas parallèles.
+<p>Par contre si : \( \begin{vmatrix}u_1 & v_1\\u_2 & v_2 \end{vmatrix} = 0 \) , il y aura 0 ou une infinité de solutions</p> 
+<p class="ni">selon que les équations de \(D_1\) et de \(D_2\) ne sont pas ou sont proportionnelles, c'est-à-dire suivant que \(D_1\) et \(D_2\) sont distinctes ou non.</p>
+
+<a id=9></a>
+<p class="st">9. Faisceaux de droites - Equation d'un faisceau.</p>
+
+<p>Soient <b>deux droites distinctes</b> :</p>
+\[ D_1\equiv u_1x + v_1y + w_1 = 0 \\D_2\equiv u_2x + v_2y + w_2 = 0 \]
+<p>Considérons la famille de droites: \(D \equiv \lambda (u_1x + v_1y + w_1) + \mu (u_2x + v_2y + w_2) = 0 \) ou encore \(D \equiv \lambda D_1 + \mu D_2 = 0\) avec \(\lambda\) et \(\mu \),  deux nombres donnés à un facteur (non nul) près.</p>
+<p>L'ensemble des droites D est appelé un <b>faisceau de droites</b>.</p>
+
+<p>a) Si \(D_1\) et \(D_2\) sont sécantes en un point \(p\), ce point appartient à toutes les droites du faisceau. En effet, si \(p(x_0, y_0)\),</p>
+\[ p \in D_1 \implies u_1x + v_1y + w_1 = 0 \\ p \in D_2 \implies u_2x + v_2y + w_2 = 0 \]
+<p class="ni">Dans ce cas on obtient un faisceau de sécantes passant par le point P.</p>
+<p>b) Si \(D_1 \parallel D_2\), on vérifie que les droites \(D\) sont parallèles, car elles ont les mêmes coefficients directeurs.<br>
+Dans ce cas on obtient un faisceau de parallèles.</p>
+<p>Montrons à présent que par tout point du plan \(m(x_1, y_1) \notin D_1 \cap D_2 \), il passe une et une seule droite du faisceau \(\lambda D_1 + \mu D_2 = 0 \)<br>
+Pour cela calculons \(\lambda \) et \(\mu \). Il suffit d'exprimer que \(m \in D \); on obtient :</p>
+\[ \lambda (u_1x_1 + v_1y_1 + w_1) + \mu (u_2x_1 + v_2y_1 + w_2) = 0 \]
+<p>C'est une équation du premier degré en \(\lambda \) et \(\mu \) qui possède une infinité de solutions. Comme les coefficients de \(\lambda \) et de \(μ\) ne peuvent être simultanément nuls (\(m \notin D_1 \cap D_2 \)), la valeur du rapport \(\lambda /\mu \) est bien déterminée (éventuellement \(\infty \)).
+
+<a id=10></a><p class="st">10. Condition nécessaire et suffisante pour que 3 droites appartiennent à un même faisceau.</p>
+
+<p>Soient \( D_1,~D_2,~D_3 \) , 3 droites distinctes.</p>
+<p>a) Si \(D_3\) appartient au faisceau déterminé par \(D_1\) et \(D_2\), on a :<br>
+\( D_3 \equiv u_3x + v_3y + w_3 \equiv \lambda (u_1x + v_1y + w_1) + \mu (u_2x + v_2y + w_2) = 0\) et le déterminant</p>
+<table class="n"><tr><td>
+\( E = \begin{vmatrix}u_1 & v_1 & w_1 \\u_2 & v_2 & w_2 \\ u_3 & v_3 & w_3 \end{vmatrix} = 0 \)
+</td></tr></table>
+<p>En effet le déterminant E, formé des coefficients des termes en x,y et des termes indépendants, est nul car la 3e ligne est combinaison linéaire des 2 premières.</p>
+
+<p>b) Inversément; si on suppose que ce déterminant E soit nul ; il existe alors 3 nombres \(\alpha, \beta, \gamma \) non simultanément nuls, tels que :</p>
+\[ \begin{cases} \begin{align}\alpha u_1 + \beta u_2 ~+ \gamma u_3 = 0\\ \alpha v_1 ~+ \beta v_2 ~+ \gamma v_3 = 0\\ \alpha w_1  ~+ \beta w_2 + \gamma w_3 = 0\end{align} \end{cases} \]
+
+<p>Multiplions la première relation par \(x\), la seconde par \(y\), et la troisième par \(1\). En sommant il vient: 
+\( \alpha D_1 + \beta D_2 + \gamma D_3 = 0 \)<br>
+<p class="ni">Comme \(\alpha, \beta, \gamma \) ne sont pas simultanément nuls on peut supposer que \(\gamma \) n'est pas nul. On en déduit : \(D_3 = -(\alpha D_1 + \beta D_2)/\gamma \), ce qui exprime que la droite \(D_3\) appartient au faisceau déterminé par \(D_1\) et \(D_2\).
+
+<a id=11></a>
+<p class="st">11. Régions d'une droite - Signe d'une fonction linéaire.</p>
+
+<p><img class="gauche" alt="régions" src="geoa/fig5.png">Considérons la fonction: \(f(x, y) = ux + vy + w\) et étudions son signe pour les différents points du plan.<br>
+\(f = 0\) sur la droite \(D_0\equiv ux + vy + w = 0\).<br>
+Plus généralement, \(f\) prend une valeur constante \(k\), sur les droites \(D_\lambda \equiv ux + vy + w = \lambda \), c'est-à-dire sur les parallèles à \(D_0\).</p>
+
+<p>Soient \(p(x_0, y_0) \in D_0\) et le vecteur <b>m</b>\((X, Y)\) non parallèle à \(D_0\). La droite \(L\) définie par \(p\) et <b>m</b> a pour équations:</p>
+\[ \begin{cases} x=x_0 + kX \\y= y_0 + kY \end {cases} \]
+<p>Cherchons les valeurs de \(k\) correspondant à \(p_\lambda = L \cap D_\lambda \)<br>
+<p>\( u(x_0  + kX) + v(y_0 + kY) + w = \lambda \)   ou encore   \(ux_0 + vy_0 + w + k(uX + vY) = \lambda \).<br>
+Mais \(p \in D_0 \equiv ux_0 + vy_0 + w = 0 \implies k = \lambda /(uX + vY) = \alpha\lambda \), où \(\alpha \) est une constante.<br>
+Le vecteur \(pp_\lambda \) a pour coordonnées (\(α\lambda X, α\lambda Y\)) .<br>
+<p>En posant <b>n</b> le vecteur de coordonnées (\(αX, αY\)) on a : \(pp_\lambda  = \lambda \)<b>n</b><br>
+<p>À des valeurs de \(\lambda \) de même signe correspondront des points \(p_\lambda\)  situés d'un même côté de \(p\) sur \(L\), et réciproquement. Comme la fonction est constante sur les droites \(D_\lambda \), on en déduit qu'elle garde le même signe dans chacun des demi-plans limités par \(D_0\).</p>
+
+<p>Une droite détermine deux demi-plans. Une fonction linéaire détermine deux régions, l'une positive, l'autre négative, limitées par une droite.</p>
+
+<p><i>Remarque: En pratique, étant donnée une fonction linéaire, on détermine le signe des régions en cherchant tout d'abord leur frontière D_0 et ensuite le signe de la fonction en un point du plan (origine, ou point sur un axe).</i></p>
+
+<a id=12></a>
+<p class="st">12. Translation du repère - Translation du plan.</p>
+
+<p><b>a. Translation du repère.</b></p>
+<p>Soit \(O'(x_0, y_0)\) l'origine d'un repère (\(\imath',\jmath'\)) équipollent au repère initial. Considérons un point \(p(x, y)\) et cherchons ses coordonnées (\(x', y'\)) dans le nouveau repère.<br>
+On a:</p>
+\( \begin{cases} Op & = x\imath+ y\jmath \\ O'p & = x'\imath '+ y'\jmath'\end{cases}\)<br> 
+<p class="ni">D'autre part:</p> 
+\(\begin{align} O'p & =  O'O + Op \\ & = - OO' + Op \\
+&  = - (x_0\imath + y_0\jmath) + x\imath + y\jmath
+\\ &  =  (x - x_0)\imath + (y - y_0)\jmath \end{align}\) <br>
+<p class="ni">d'où : </p>
+\[ \begin{cases} x' = x - x_0 \\y' = y - y_0 \end{cases} \]
+
+<p><b>b. Translation du plan.</b></p>
+<p>Les équations ci-dessus peuvent également être envisagées sous un autre aspect. On suppose le repère fixe; \((x, y)\) sont les coordonnées d'un point \(p\) et \((x',y')\) les coordonnées d'un point \(p'\). Dans ce cas, le point \(p'\) se déduit du point \(p\) par la translation inverse de celle ci-dessus, de vecteur \((-x_0, -y_0)\).</p>
+
+<a id=13></a>
+<p class="st">13. Changement de base - Affinité centrée ou Application linéaire.</p>
+
+<p>Considérons un nouveau repère \((\imath', \jmath')\) de même origine O.</p>
+<p>Les vecteurs \(\imath'~\text{ et } ~ \jmath'\) ont pour valeur </p>
+<div>\(\begin{cases}\imath' = a\imath + b\jmath \\ \jmath'= c\imath + d\jmath\end{cases}\)</div>
+<p class="ni">avec \( \begin{vmatrix}a & b \\c & d \end{vmatrix} \ne 0 \) car les vecteurs \(\imath'\) et \(\jmath'\) ne sont pas proportionnels.</p>
+
+<p>Soit \(p(x, y)\). Calculons les coordonnées \((x', y')\) de \(p\) dans la nouvelle base.</p>
+
+\( \begin{align} Op & = x\imath + y\jmath \\ & = x'\imath' + y'\jmath'\\& = x'(a\imath + b\jmath) + y'(c\imath + d\jmath) \\ & = (ax' + cy')\imath + (bx' + dy')\jmath \end{align}\)
+<p class="ni">d'où :</p>
+
+<table class="centre"><tr><td>\(\begin{cases}x = ax' + cy'\\ y = bx' + dy'\end{cases}\)</td>
+<td>   avec   </td>
+<td> \(\begin{vmatrix}a & c \\b & d \end{vmatrix} \not = 0\)</td></tr></table>
+
+<p>A nouveau ces formules peuvent recevoir une autre interprétation. Lorsqu'on les considère comme liant les coordonnées \((x, y)\) d'un point \(p\), et les coordonnées \((x', y')\) d'un point \(p'\) dans le même repère, les points \(p\) et \(p'\) se correspondent dans une affinité centrée. </p>
+
+<a id=14></a>
+<p class="st">14. Changement de base - Affinité.</p>
+
+<p>Le changement le plus général de repère s'obtiendra en combinant un changement de base avec un changement d'origine. Les équations seront donc:</p>
+
+<table class="centre"><tr><td>
+\(\begin{cases} x = ax' + cy' + x_0 \\ y = bx' + dy' + y_0\end{cases}\)
+</td><td>
+    avec    
+</td>
+<td>
+\(\begin{vmatrix}a & c \\b & d \end{vmatrix} \not = 0\)
+</td></tr></table>
+
+<p>Remarque : Dans la pratique les nombres \(a, b, c, d, x_0, y_0 \) sont déterminés en recherchant les nouvelles coordonnées de points particuliers (origine, points unités) ou en écrivant les équations des nouveaux axes coordonnés.<br>
+<p>Si l'on considère un repère fixe, les équations ci-dessus lient les coordonnées \((x, y)\) d'un point \(p\) aux coordonnées \((x', y')\) d'un point \(p'\) transformé de \(p\) dans une affinité.</p>
+
+<p class="st">15. Aire d'un triangle</p>
+
+<p>Soit un triangle dont les sommets \(p_1, p_2, p_3\) ont pour coordonnées:
+\((x_1, y_1), (x_2, y_2), (x_3, y_3)\)<br>
+
+Nous utiliserons comme unité d'aire, le parallélogramme construit sur les vecteurs unités \(\imath = Ou, \jmath = Ov \) et \(Oe(= \imath + \jmath)\)<br>
+De plus, nous supposerons le plan orienté de telle sorte que: Aire \(Ouev = +1\) et Aire \(Oveu = -1\).</p>
+
+<p>Effectuons la translation amenant \(p_1\) à l'origine des coordonnées.</p>
+
+<p>Le triangle \(O, p'_2(x_2 - x_1, y_2 - y_1), p'_3(x_3 - x_1, y_3 - y_1)\) a même aire que le triangle initial.</p>
+<img class="gauche" alt="triangles égaux" src="geoa/fig6.png">
+<p class="ni">Par \(p'_2\) menons la droite p parallèle à \(Op'_3\).</p>
+<p>Soit \({p''_2} = p \cap Ox\). Le triangle \(Op''_2p'_3\) est équivalent au triangle initial.</p>
+
+<p>L'abscisse de \(p''_2\) a pour valeur: \([(x_2 - x_1)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)]/(y_3 - y_1)\)</p>
+
+<p>Par \(p'_3\) menons la parallèle à \(Op''_2 = Ox\). Le triangle \(Op''_2p''_3\) est équivalent au triangle \(Op''_2p'_3\) et par suite au triangle initial.</p>
+
+<p>L'ordonnée de \(p''_3\) vaut \(y_3 - y_1\) ; l'aire du triangle vaut donc : \((Op''_2.Op''_3)/2\)<br>
+\( = [(x_2 - x_1) (y_3 - y_1) - (x_3 - x_1) (y_2 - y_1)]/2\), ce qui peut s'écrire:</p>
+
+<table class="centre"><tr><td style="border: 1px solid #000;padding-left:10px;padding-right:10px;">
+\[ \text{Aire } p_1p_2p_3 = 1/2 \begin{vmatrix}x_1 & y_1 & 1 \\x_2 & y_2 & 1\\x_3 & y_3 & 1 \end{vmatrix}\]
+</td></tr></table>
+
+<p><i>Remarque: En posant \(a = x_2 - x_1, b= y_2 - y_1, c = x_3 - x_1\) et \(d = y_3 -  y_1\), par soustraction de la première ligne, le déterminant se ramène à  \(\begin{vmatrix}a & b\\c & d \end{vmatrix}\).<br>
+On obtient ainsi l'interprétation géométrique du déterminant 2 x 2.<br>
+Sa valeur égale l'aire du parallélogramme construit sur les vecteurs \(Op'_2\) et \(Op'_3\). Cette interprétation est liée à l'application linéaire qui applique la base \((\imath, \jmath)\) sur la base \((Op'_2, Op'_3)\).</i></p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="docd.htm">Documents</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+		<div class="centre"><hr style="width:70%;"></div>
+<br>
+Pour toute remarque ou commentaire, écrire à <script type="text/javascript">
+// JavaScript pris sur le site: "http://www.java.scripts-fr.com" 
+var nom = "xhubaut";
+var domaine = "ulb.ac.be"; 
+var deb = "<";
+var fin = ">";
+document.write('<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + deb + '/a' + fin); 
+</script>.<br>
+	</div>
+</div>
+</body>
+</html>

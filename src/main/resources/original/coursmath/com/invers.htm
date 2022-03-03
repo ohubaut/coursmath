@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Inversion - Complexes - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="linérité de l'inversion !" />
+<meta name="keywords" content="inversion, cercles, droites, linearité" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="com.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-10', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Une transformation non linéaire ?
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Il existe une très belle transformation qui n'est malheureusement plus guère étudiée: l'<b>inversion</b>.</p>
+
+<p>Donnons-en la définition dans le plan (la généralisation à l'espace est évidente).<br />
+Soit un point \(o\) du plan. Le transformé \(p'\) d'un point \(p\) est aligné avec \(o\) et \(p\), et tel que le produit \(op.op'\) est une constante appelée puissance. (Remarquons que le point \(p\) est évidemment le transformé de \(p'\)).<br />
+On peut toujours "corriger" l'inversion par une homothétie de centre \(o\), de telle sorte que la puissance devienne positive. Dans ce cas il existe des points fixes situés sur un cercle dont le rayon vaut la racine carrée de la puissance de l'inversion.</p>
+
+<p>Cette transformation est bien définie sauf en ce qui concerne le point \(o\) qui est appelé pôle de l'inversion.<br />
+Lorsqu'un point se rapproche du pôle son transformé s'éloigne de plus en plus. On peut imaginer que l'on complète le plan par <u>un</u> point "à l'infini" qui sera considéré comme l'image du pôle \(o\). Dès lors l'inversion devient une bijection dans ce plan complété par un point. Il s'agit alors du plan conforme.</p>
+
+<p>Comment se présentent les équations d'une inversion de pôle \(o\) et de puissance \(k\) ?<br />
+ Si on choisit un repère orthonormé centré en \(o\), et si \((x,y)\) sont les coordonnées d'un point \(p\), les coordonnées de \(p'\) sont proportionnelles à celles de p, soit \((x',y')=(tx, ty)\). Exprimons que le produit \(op.op'\) vaut \(k\), ou encore que le produit des carrés des distances vaut \(k^2\). On a \((x^2+y^2)(t^2x^2+t^2y^2)=k^2\), d'où \(t=k/(x^2+y^2)\).</p>
+ 
+<p>Les équations de l'inversion sont donc:</p>
+
+\[ \begin{cases} x'=kx/(x^2+y^2) \\ y'=ky/(x^2+y^2) \end{cases} \]
+
+<img class="gauche" alt="" src="inve/invers.gif"><p>Cette transformation très simple a pourtant, aux yeux de certains, un gros défaut: elle n'est pas linéaire.<br />
+Une droite d'équation \(ax+by+c=0\) a pour transformée la courbe d'équation \(akx/(x^2+y^2)+bky/(x^2+y^2)+c=0\). On voit que c'est celle d'un cercle \(kax+kby+c(x^2+y^2)=0\) passant par l'origine.</p>
+
+<p>Dès lors on peut se poser la question du transformé d'un cercle quelconque:</p>
+
+\[ a(x^2+y^2)+bx+cy+d=0 \]
+
+<p>Nous avons vu plus haut comment se transformaient \(x'\) et \(y'\).<br>Calculons à présent la valeur de l'expression \((x'^2+y'^2)\) qui apparaît dans l'équation des cercles ; on  obtient :</p>
+
+\[(kx/(x^2+y^2))^2 + (ky/(x^2+y^2))^2 = k^2(x^2+y^2)/(x^2+y^2)^2 = k^2/(x^2+y^2)\]
+
+<p>La transformée du cercle \(a(x'^2+y'^2)+bx'+cy'+d=0\) est donc :</p>
+
+\[ ak^2/(x^2+y^2)+bkx/(x^2+y^2)+cky/(x^2+y^2)+d = 0 \]
+
+<p class="ni">c'est-à-dire, en multipliant par \((x^2+y^2)\) et en simplifiant :</p>
+
+\[ k^2a+kbx+kcy+d(x^2+y^2)=0 \]
+
+<p>On voit ainsi que l'ensemble des droites et des cercles, l'ensemble des cycles, est conservé. En fait l'inversion est une transformation linéaire opérant sur les <a href="../2de/puissanc.htm">cycles</a>.</p>
+
+<p>Les équations de l'inversion ressemblent fort à celles donnant les parties réelles et imaginaires de l'inverse \(x'+iy'\) d'un nombre complexe \(x+iy\). Seule l'ordonnée \(y'\) a changé de signe. L'inversion n'est autre que la transformation qui applique \(z\) sur \(1/\bar{z}\).<br />
+En utilisant le plan de Gauss, on sait que l'<a href="cycles.htm">ensemble des cycles</a> ( droites et cercles ) s'écrit:</p>
+
+\[ az\bar{z}+k\bar{z}+\bar{k}z+d=0 \]
+
+<p class="ni">avec \(a\) et \(d\) réels et il est évident que cet ensemble est conservé par inversion.</p>
+
+<p>On peut visualiser l'inversion d'une manière fort simple.</p>
+
+<p><img class="droite" alt="" src="inve/sph.gif">Soit une sphère \(S\) de centre \(o\) et deux points antipodes \(n\) et \(s\) (parlons du pôle Nord et du pôle Sud). Si \(p\) est un autre point de \(S\) en projetant à partir des pôles sur le plan de l'équateur on obtient deux projections \(p'\) et \(p''\). On voit immédiatement que ces deux points se correspondent dans une inversion de pôle \(o\) et de puissance égale au carré du rayon de \(S\). Il suffit pour celà de comparer les deux triangles semblables \(op''n\) et \(osp'\); on obtient \(op'/os = no/p''o\), c'est-à-dire \(op'.op''= R^2\)</p>
+
+<p>On compose ainsi deux <a href="../app/geogr.htm">projections stéréographiques</a>, et par conséquent l'inversion conserve les angles. C'est une transformation <a href="complexe.htm">conforme</a>.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="compld.htm">Complexes</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Probabilités - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="logique, opérateurs logiques, ensembles, opérations" />
+<meta name="keywords" content="probabilité, et, ou, non, complément, union, ensembles;, logique" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Probabilités
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Soit un événement \(P\) de probabilité \(p\).</p>
+
+<p><i>Dans les exemples nous supposerons que nous disposons d'un jeu (non truqué) de 52 cartes et que la probabilité (élémentaire) de tirer une carte donnée vaut 1/52).</i></p>
+
+<p class="st">L'événement contraire</p>
+
+<p>La probabilité de ne pas avoir \(P\) (de probabilité \(p\)), c'est-à-dire d'avoir ¬\(P\) est 1 - \(p\).</p>
+
+<p><i>Si \(p\) est la probabilité de tirer un coeur (1/4), la probabilité de <b>ne pas</b> tirer un coeur vaut \(1-p\).</i></p>
+
+<p class="st">La probabilité de P et Q</p>
+
+<p>La probabilité de \(P\land Q\) sera désignée par \(p*q\).<br />
+Dans le cas où \(P\) et \(Q\) sont des événements indépendants, la valeur \(p*q\) est égale au produit \(pq\).</p>
+
+<img class="gauche" alt="" src="prob/dcoeur.gif">
+<p><i>Prenons l'exemple d'un jeu de cartes: soit </i>\(P\)<i> l'événement qui consiste à tirer un coeur et </i>\(Q\)<i> celui qui consiste à tirer une figure (Roi, Dame ou Valet); p = 1/4 et q = 3/13; il est clair que la probabilité de tirer une carte qui soit un coeur <b>et</b> une figure vaut 1/4.3/13 = 3/52.</i></p>
+
+<p>S'il n'en est pas ainsi \(p*q\) est en général différent du produit \(pq\); en particulier \(p*p\) est la probabilité d'avoir \(P\land P\); elle vaut celle d'avoir \(P\) et donc \(p*p=p\).</p>
+
+<img class="droite" alt="" src="prob/5trefle.gif"><p><i>Soit </i>\(P\)<i> l'événement qui consiste à tirer une carte de valeur inférieure à 6 (As, 2, 3, 4 ou 5) et </i>\(Q\)<i> celui qui consiste à tirer un trèfle qui ne soit pas une figure; p = 20/52 = 5/13 et q = 10/52 = 5/26; toutefois </i>\(P\)<i> et </i>\(Q\)<i> ne sont pas indépendants et il est clair que la probabilité de tirer une carte de valeur inférieure à 6 </i><b>et</b><i> un trèfle qui n'est pas une figure vaut 5/52 et non pas 5/13.5/26!</i></p>
+
+<p class="st">La probabilité de P ou Q</p>
+
+<p>Quelle est la probabilité d'avoir \(P\lor Q\)? C'est évidemment la probabilité d'avoir \(P\) à laquelle on ajoute celle d'avoir \(Q\) en décomptant la probabilité d'avoir simultanément \(P\) et \(Q\) (elle a été comptée deux fois); c'est donc <i>p + q - p*q</i>.</p>
+
+<img class="gauche" alt="" src="prob/7carro.gif"><p><i>Si </i>\(P\)<i> consiste à tirer un carreau (p = 1/4) et </i>\(Q\)<i> une figure (q = 12/52 = 3/13), la probabilité de tirer une carte qui soit un carreau</i> <b>et</b> <i>une figure vaut 3/52.<br />
+On en déduit que la probabilité de tirer une carte qui soit un carreau</i> <b>ou</b> <i>une figure vaut 1/4 + 3/13 - 3/52 = 22/52 = 11/26).</i></p>
+
+<p>On retrouve ainsi des règles de calcul semblables à celles utilisées en logique. Dans ce cadre \(p\) ne pouvait prendre que les valeurs 0 ou 1.<br />
+En fait, la probabilité \(p\) d'un événement \(P\) est la mesure du sous-ensemble des cas où l'événement \(P\) est réalisé à l'aide de l'ensemble \(E\) pris comme unité.</p>
+
+<p class="st">La probabilité de "non (P et Q)"</p>
+
+<p>A nouveau si les événements \(P\) et \(Q\) sont indépendants, cette probabilité vaut \(1-p*q\)</p>
+
+<p><i>Si \(P\) consiste à tirer un carreau (p = 1/4) et si \(Q\) est tirer une figure (q = 12/52 = 3/13), la probabilité de tirer une carte qui ne soit <b>pas</b> une figure en carreau  vaut 1 - 1/4*3/13 = 49/52 (tout convient sauf le valet, la dame et le roi de carreau).</i></p>
+
+<p>Cette notion correspond à la "barre de Scheffer" utilisée en théorie des ensembles.</p>
+
+<p>On voit ainsi le lien étroit qui existe entre <a href="logique.htm">logique</a>, probabilités et <a href="ensem.htm">ensembles</a>.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

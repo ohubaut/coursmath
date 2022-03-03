@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Les codes à barres - Vie courante - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Que représentent ces codes-barres" />
+<meta name="keywords" content="barres, code, codage, contrôle" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="vie.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-5', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br>
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br>
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br><br>
+	</div>
+	<div class="titre">
+<br>
+	Les codes à barres
+<br>
+	</div>
+	<div class="stitre">
+Que représentent ces barres et ces chiffres ?
+	</div>
+<br><br>
+	<div class="central">
+		<div class="texte">
+<p>Les codes à barres sont de plus en plus utilisés pour identifier les produits vendus. Ils se présentent sous forme des barres et de chiffres.</p>
+<p>Dans l'élaboration d'un code-barre, une première étape se présentait. Comment représenter les 10 chiffres de \(0\) à \(9\) à l'aide de barres ?<br>
+Évidemment, on souhaite utiliser un minimum de barres chacune ne pouvant prendre qu'un nombre limité de largeurs ; toutefois on souhaite que la largeur totale d'un chiffre soit constante.<br>
+En traduisant ces conditions de manière plus "mathématique", cela revient à trouver un ensemble ordonné de \(k\) naturels non nuls dont la somme est constante et égale à \(N\).<br>
+C'est également le problème des partitions d'un ensemble de \(N\) points en \(k\) sous-ensembles. Pour le résoudre, il suffit de se représenter les \(N\) points comme ordonné. Alors une partition revient à choisir \(k-1\) intervalles parmi les \(N-1\) existants.</p>
+
+<p>On obtient une première solution pour \(N=6\) avec \(k=3\), c'est-à-dire avec \(3\) barres et une largeur totale de \(6\). Voici pour cette solution comment sont réparties les largeurs :</p>
+\(114~~~~~141~~~~~411~~~~~123~~~~~231~~~~~312~~~~~132~~~~~321~~~~~213~~~~~222\)<br>
+<p class="ni">soit dix possibilités représentées ci-dessous.</p>
+<img class="centre" alt="largeur 6" src="barc/6barres.png"> 
+<p>Nous ignorons la raison pour laquelle cette solution n'a pas été retenue. Peut-être est-ce parce que le code UPC utilisé au USA utilisait déjà une autre représentation des chiffres.</p>
+
+<p>La solution minimale suivante est obtenue pour \(N=7\) avec \(k=4\). On code chaque chiffre sur une largeur \(7\) à l'aide de \(4\) barres ; chacune des barres pourra prendre une largeur variant de \(1\) à \(4\).<br>
+En fait, cette solution conduit à plus de 10 possibilités, on dispose de \(20\) possibilités :</p>
+\[
+\begin{matrix}
+~~4111~~ & ~~1411~~ & ~~1141~~ & ~~1114~~  \\
+3112 & 1312 & 2131 & 2113  \\
+3121 & 1321 & 1231 & 1213  \\
+3211 & 2311 & 1132 & 1123  \\
+1222 & 2122 & 2212 & 2221  \\
+\end{matrix} \]
+
+<p>On remarque que les 3e et 4e colonnes s'obtiennent à partir des deux premières par symétrie gauche/droite.<br>
+De plus comme les barres doivent être de deux couleurs différentes (noir et blanc) on on voir qu'il y a en réalité 20 autres possibilités en permutant les couleurs. Nous disposons donc, au total de 40 possibilités pour le codage des 10 chiffres !!!</p>
+<p>En prenant les figures qui ont été attribuées aux chiffres de 0 à 9, vous trouverez ci-dessous les 4 jeux de représentations possibles.</p>
+<b>A</b><br>
+<img class="centre" alt="largeur 6" src="barc/cdroite.png"><br>
+<br><br>
+<b>B</b><br>
+<img class="centre" alt="largeur 6" src="barc/gauche.png"><br>
+<br><br>
+<b>C</b><br>
+<img class="centre" alt="largeur 6" src="barc/cgauche.png"><br>
+<br><br>
+<b>D</b><br>
+<img class="centre" alt="largeur 6" src="barc/droite.png"><br>
+<br><br>
+<p>Partant du jeu D, on obtient par inversion des couleurs le jeu A; les deux autres jeux se déduisent de D et A en effectuant une symétrie gauche/droite et donnent respectivement les jeux B et C.</p>
+
+<p>L'étape suivante est la construction de la suite des chiffres.<br>
+Les premiers chiffres correspondent à un ou un ensemble de pays ; ils sont suivis du numéro de l'entreprise ; les chiffres suivants identifient l'article. Au total, on obtient \(12\) chiffres auxquels on ajoute un \(13\)<sup>e</sup> chiffre de contrôle obtenu de la manière suivante : on effectue la somme \(I\) des chiffres de rang impair et \(P\) celle des chiffres de rang pair et on somme \(S=I+3P\). Le chiffre de contrôle est le nombre qu'il faut ajouter à \(S\) pour obtenir un multiple de \(10\). Un exemple si les \(12\) premiers chiffres sont \(541013803603\), on a \(I=18, P=16\) et \( S=18+48=66\) ; le chiffre de contrôle est donc \(4\) et les 13 chiffres sont \(5410138036034\) que l'on note \(5-410138-036034\).</p>
+
+<p>Ces \(13\) chiffres constituent le code \(EAN 13\) du produit (\(EAN\) signifie European Article Numbering). Comment construire le code à barres ? N'oublions pas qu'il y a 4 jeux de caractères. Lequel faut-il utiliser ? C'est ici que les choses se compliquent.<br>
+Le premier chiffre n'est pas codé ! Restent \(12\) chiffres. On remarque que, sur un code à barres, les \(12\) chiffres sont divisés en \(2\) groupes de \(6\) chiffres. Commençons par le dernier groupe de \(6\) chiffres, le groupe de droite. On utilise le jeu \(D\) (droite !). Restent le \(6\) chiffres de gauche à coder. Comme dans le jeu \(D\) chaque chiffre commence par une barre noire (et se termine par une barre blanche), pour bien distinguer les deux groupes on utilisera les jeux \(A\) et \(B\) où les chiffres commencent par une barre blanche (et se terminent par une barre noire).<br>
+Mais ... lequel des deux ? C'est ici que les choses se corsent car cela dépend du premier chiffre (rappelez-vous il n'est pas codé et il faut bien qu'il serve à quelque chose. C'est lui qui détermine le codage des \(6\) chiffres de gauche.<br>
+Maintenant, accrochez-vous !<br>
+Au fameux premier chiffre (celui qui n'est pas codé et que, pour compliquer, on appelle le "13<sup>e</sup>" chiffre !!!) on associe la liste des jeux qui seront utilisés selon un tableau donné. Nous écrivons le fameux 13<sup>e</sup> chiffre suivi de \(6\) lettres \(A\) ou \(B\) qui nous diront comment coder chacun des \(6\) chiffres.
+Si vous êtes toujours là, voici cette table magique:</p>
+\[
+\begin{matrix}
+~~~~~~  & ~&1~~&2~~&3~~&4~~&5~~&6 \\
+~~~~0~~ & ~&A~~&A~~&A~~&A~~&A~~&A \\
+~~~~1~~ & ~&A~~&A~~&B~~&A~~&B~~&B \\
+~~~~2~~ & ~&A~~&A~~&B~~&B~~&A~~&B \\
+~~~~3~~ & ~&A~~&A~~&B~~&B~~&B~~&A \\
+~~~~4~~ & ~&A~~&B~~&A~~&A~~&B~~&B \\
+~~~~5~~ & ~&A~~&B~~&B~~&A~~&A~~&B \\
+~~~~6~~ & ~&A~~&B~~&B~~&B~~&A~~&A \\
+~~~~7~~ & ~&A~~&B~~&A~~&B~~&A~~&B \\
+~~~~8~~ & ~&A~~&B~~&A~~&B~~&B~~&A \\
+~~~~9~~ & ~&A~~&B~~&B~~&A~~&B~~&A \\
+\end{matrix}
+ \]
+
+<p>Enfin, on achève le code en introduisant des barres plus longues dépassant par le bas. Elle assurent une meilleur lisibilité. Au début et à la fin, une noire suivi d'une blanche et d'une autre noire que nous noterons \(101\). Ensuite, on séparera les deux suites de \(6\) chiffres ; les \(6\) premiers se terminent par une barre noire (\(1\)) et les \(6\) derniers commencent par une barre noire (\(1\)) par une bande \(01010\). On écrit alors, en dessous et en clair, les \(13\) chiffres du code et le travail est terminé.<br>
+Le code à barres est prêt à la lecture par un scanner qui déterminera, en une fraction de seconde, si le code est correct et l'article concerné !</p>
+
+<p>On vérifiera sur l'exemple donné où les \(13\) chiffres sont \(5-410138-036034\).
+Le "\(13\)<sup>e</sup>" chiffre est un \(5\) (pays européen), le code \(54\) étant attribué au couple Belgique-Luxembourg.<br>
+Après le \(5\) qui détermine les jeux de caractères utilisés pour les \(6\) chiffres suivants (\(ABBAAB\)), on place le délimiteur \(101\) et on code ces \(6\) chiffres :</p>
+\begin{matrix}
+chiffre & jeu  & codage \\
+4 & A & 0100011 \\
+1 &	B & 0110011 \\
+0 &	B & 0100111 \\
+1 & A & 0011001 \\
+3 & A & 0111101 \\
+8 &	B & 0001001 \\
+\end{matrix}
+<p class="ni">Ensuite un délimiteur \(01010\).<br>
+Les \(6\) derniers chiffres sont alors tous codés avec le jeu de caractères \(D\) :</p>
+\begin{matrix}
+chiffre & codage \\
+0 & 1110010 \\
+3 & 1000010 \\
+6 & 1010000 \\
+0 & 1110010 \\
+3 & 1000011 \\
+4 & 1011100 \\
+\end{matrix}
+
+<p class="ni"> On termine en plaçant le délimiteur \(101\).<br>
+Les \(12\) chiffres sont écrits sous leur codage de manière à pouvoir quand même lire et utiliser le code-barres au cas où il serait illisible par le scanner.</p>
+
+<p>Voici les différentes étapes du codage :</p>
+<img alt="détails" src="barc/exemple.png">
+
+<p>Et enfin ci-dessous, le résultat obtenu après avoir mis côte à côte les codes utilisés :</p>
+<img alt="résultat" src="barc/final.png">
+
+<img class="droite" alt="" src="barc/zebre.gif">
+
+<p>Le choix du codage des chiffres, renforcé par l'existence d'un contrôle, permet alors une très grande fiabilité dans la lecture des codes à barres. Les erreurs portant sur un seul chiffre peuvent être corrigées.</p>
+
+<p>Vérifions enfin le code \(5-410138-03x034\) ; \((x\)  est supposé être un chiffre illisible).<br>
+On vérifie que :<br>
+\(I=5+1+1+8+3+0=18\)<br>
+et que :<br>
+\(P=4+0+3+0+x+3=10+x\).<br>
+On a \(I+3P=18+3(10+x)=48+3x\) ; comme le contrôle est 4, il faut donc que \(48+3x+4=52+3x\) soit multiple de \(10\). Par conséquent \(3x\) se termine par \(8\)  et vaut \(6\). Le code correct est donc \(5-410138-036034\)</p>
+
+<p>Pas la peine de calculer tout cela ; le scanner du magasin fait tout cela en une fraction de milliseconde. Évidemment, il a de l'entraînement...</p>
+
+		</div>
+	</div>
+	
+	<div class="final">
+		<br>
+		<table><tr>
+		<td><a href="vied.htm">Vie courante</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br>
+	</div>    
+</div>
+</body>
+</html>

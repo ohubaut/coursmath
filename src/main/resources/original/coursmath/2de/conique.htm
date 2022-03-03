@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Coniques projectives - 2e degré - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="forme quadratique, forme bilinéaire, conjugaison, harmonique" />
+<meta name="keywords" content="second degré, algèbre, géométrie, coniques, projectif" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="2de.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript">../util.js</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-7', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />Étude projective des coniques<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<div class="st"><b>Introduction</b></div>
+
+<p>Une conique est en fait, une section conique, c'est-à-dire une <a title="Une forme affine de conique" href="conaffi.htm">ellipse</a>, une <a title="Une autre forme affine" href="conaffi.htm">hyperbole</a>, une <a title="Le dernier cas particulier affin" href="conaffi.htm">parabole</a>, éventuellement deux droites, peut-être confondues.</p>
+
+<p>Le lien entre les définitions "classiques" d'ellipse, parabole, hyperbole et la définition étymologique "section d'un cône" est assuré par les <a title="Un lien entre diverses définitions métriques des coniques" href="belges.htm">théorèmes belges</a>.</p>
+
+<p>Si l'on utilise des coordonnées, on constate que tous les exemples mentionnés plus haut sont des ensembles de points satisfaisant une équation du second degré en \(x, y\). Par exemple :</p>
+
+\[ y=ax^2+bx+c \]
+\[ y=\frac{ax+b}{cx+d}  \]
+\[ x^2+y^2=r^2 \]
+
+<p>Remarquons que la réciproque n'est évidemment pas vraie. 
+Il est pourtant commode de définir une conique par une équation du second degré.</p>
+
+<p>D'autre part comme il s'agit de sections coniques il est évident que les propriétés les plus fondamentales, les plus profondes seront les propriétés invariantes par <a href="../mat/project.htm">projection centrale</a>, autrement dit les <b>propriétés projectives</b>. 
+Il est dès lors naturel d'utiliser les coordonnées adaptées à de telles propriétés, c'est-à-dire les <a title="Comment coordonner les points à l'infini ?" href="../mat/homogene.htm"> coordonnées homogènes</a>.</p>
+
+<div class="st"><b>Propriétés projectives</b></div>
+
+<p>Une conique \(\mathbf{C}\) peut donc raisonnablement être définie comme une équation (homogène) du second degré en les trois coordonnées homogènes \(X, Y, Z\).</p>
+
+<p>Une conique \(\mathbf{C}\) détermine une relation entre les points du plan ; cette relation, projective, est liée à celle de <a title="Plus de détails sur les conjugués harmoniques" href="../mat/harmoni.htm">conjugué harmonique</a> ; on dira que deux points \(p_1\) et \(p_2\)  sont conjugués (harmoniques) par rapport à la conique \(\mathbf{C}\) s'ils sont conjugués par rapport aux points d'intersection de la droite \(p_1p_2\)  avec \(\mathbf{C}\) ; si cette droite ne coupe pas \(\mathbf{C}\) en des points à coordonnées réelles on s'en tirera soit en passant aux nombres complexes, soit plus simplement encore en remarquant que la condition de conjugaison par rapport aux racines d'une équation du second degré s'exprime en fonction des coefficients sans que l'on ait à calculer les racines. (Signalons l'intérêt de la représentation de deux couples de nombres conjugués harmoniques dans le plan de Gauss).</p>
+
+<div class="st">Points conjugués</div>
+
+<p>Calculons (et ce sera pratiquement le seul calcul de toute la section consacrée aux coniques !) la condition pour que deux points \(p_1\) et \(p_2\) soient conjugués par rapport à la conique \(\mathbf{C}\) d'équation :</p>
+
+\[aX^2 + bY^2 + cZ^2 + 2dXY + 2eZX + 2f XY = 0\]
+
+<p>Soient \((X_1, Y_1, Z_1)\) et \((X_2, Y_2, Z_2)\)  les coordonnées des deux points \(p_1\) et \(p_2\) ; la droite qu'ils déterminent a pour équations paramétriques :</p>
+
+\[\begin{cases} X=\lambda X_1+\mu X_2\\ Y=\lambda Y_1+\mu Y_2\\ Z=\lambda Z_1+\mu Z_2\end{cases}\]
+
+<p>Les deux points \(p_1\) et \(p_2\) correspondent aux valeurs \((1,0)\) et \((0,1)\) des paramètres \(\lambda\) et \(\mu\), c'est-à-dire que leur rapport \(k\) vaut soit l'infini soit zéro ; les points d'intersection de \(\mathbf{C}\) avec la droite \(p_1p_2\) sont donnés par les couples tels que :</p>
+
+\[a(\lambda X_1 + \mu X_2)^2 + b(\lambda Y_1 + \mu Y_2)^2 + c(\lambda Z_1 + \mu Z_2)^2  +\]
+
+\[2d(\lambda Y_1 + \mu Y_2)(\lambda Z_1 + \mu Z_2) + 2e(\lambda Z_1 + \mu Z_2)(\lambda X_1 + \mu X_2)+\]
+
+\[ 2f(\lambda X_1 + \mu X_2)(\lambda Y_1 + \mu Y_2) = 0\]
+
+<p>En ordonnant l'équation par rapport aux paramètres on a :</p>
+
+\[\lambda^2(aX_1^2+bY_1^2+cZ_1^2+2dY_1Z_1+2eZ_1X_1+2fX_1Y_1)+\]
+
+\[2\lambda \mu(aX_1X_2 + bY_1Y_2 + cZ_1Z_2 + \]
+
+\[d(Y_1Z_2 + Z_1X_2) + e(Z_1X_2 + Z_2X_1) + f(X_1Y_2 + X_2Y_1))+\]
+
+\[\mu^2(aX_2^2+bY_2^2+cZ_2^2+2dY_2Z_2+2eZ_2X_2 +2fX_2Y_2)=0\]
+
+<p>Cette relation fondamentale peut s'écrire de manière condensée sous la forme :</p>
+\[\lambda^2\mathbf{C}(p_1,p_1) + 2\lambda\mu\mathbf{C}(p_1,p_2) + \mu^2\mathbf{C}(p_2,p_2)=0\]
+
+où l'on a posé :
+
+\[\mathbf{C}(p_i,p_j)=aX_iX_j + bY_iY_j + cZ_iZ_j +\]
+
+\[ d(Y_iZ_j + Z_iX_j) + e(Z_iX_j + Z_jX_i) + f(X_iY_j + X_jY_i)\]
+
+<a id="B"> </a>
+
+<p>Comme \(p_1\) et \(p_2\) correspondent aux valeurs infinie et nulle du rapport <b>k</b> des paramètres, les deux points d'intersection avec \(p_1\) et \(p_2\) seront <a title="Voila une notion fondamentale des mathématiques !" href="../mat/harmoni.htm"><b>conjugués</b></a> <b>(harmoniques)</b> s'ils correspondent à des valeurs opposées de \(k\) ; autrement dit la somme des racines de l'équation aux points d'intersection doit être nulle, donc \(\mathbf{C}(p_1,p_2) =0\).<br />
+\(\mathbf{C}(p_1, p_2)\) est la <a title="Un lien avec une équation du second degré" href="2edegre.htm#B"><b>forme bilinéaire symétrique</b></a> associée à la forme quadratique \(\mathbf{C}(p_1,p_2)\).</p>
+
+<div class="st">Notions dérivées</div>
+
+<p>A partir d'ici tout devient simple:</p>
+<ul>
+<li><b>points conjugués</b> :\(\mathbf{C}(p_i,p_j) = 0\)</li>
+<li><b>pôle</b> et <b>polaire</b> (ensemble des conjugués du pôle \(p_1\)) : \(\mathbf{C}(p_i,x) = 0\)</li>
+<li><b>tangente</b> au point \(p_1\) (avec \(\mathbf{C}(p_1,p_1)=0\)) : \(\mathbf{C}(p_i,x)=0\)</li>
+<li><b>point double</b> : il se pourrait que \(\mathbf{C}(p_i,x)=0\) ne soit pas l'équation d'une droite, que \(\mathbf{C}(p_i,x)\) soit identiquement nul.</li>
+</ul>
+
+<p>Que se passe-t-il dans ce cas ?
+Remarquons que :</p>
+
+\[\begin{cases} aX_1+fY_1+eZ_1=0\\fX_1+bY_1+dZ_1=0\\eX_1+dY_1+cZ_1=0\end{cases}\]
+
+<p>Ce système homogène admet une solution non triviale, son déterminant est nul (et réciproquement s'il en est ainsi un tel point \(p_1\) existe). 
+En utilisant les changements de coordonnées il suffit de voir ce qui se passe si  \(p_1\) a pour coordonnées \((0, 0, 1 )\) ; dans ce cas \(e = d = c = 0\) et la conique a pour équation :</p>
+
+\[aX^2+bY^2+2fXY=0\]
+
+<p>Elle est donc décomposée en deux droites se coupant précisément au point <i><b>p'</b></i>. Toute droite passant par <i><b>p'</b></i> couperait la conique en deux points confondus. Ce point est alors appelé point double.</p>
+
+<ul>
+<li><b>tangentes issues d'un point</b> : on cherche les points \(x\) tels que \(px\) soit une tangente, c'est-à-dire que les points d'intersection de la droite \(px\) avec la conique \(\mathbf{C}\) soient confondus, autrement dit le discriminant de l'équation en les paramètres doit être nul :</li>
+
+\[\mathbf{C}(p,x)^2- \mathbf{C}(p,p).\mathbf{C}(x,x)=0\]
+
+<li><b>triangle autopolaire</b> : étant donné une conique \(\mathbf{C}\) on choisit un point \(p\) qui ne lui appartient pas.</li>
+</ul>
+
+<p>La polaire de ce point coupe la conique en deux points (sauf si la conique se réduit à une droite comptée deux fois) ; on choisit alors sur cette polaire un point \(q\) n'appartenant pas à \(\mathbf{C}\), et le point \(r\) sera le point d'intersection de la polaire de \(p\) avec celle de \(q\). Il en résulte que chacun des côtés est la polaire du sommet opposé. Si on choisit les trois points \(p\), \(q\), \(r\) comme points de coordonnées \((1,0,0), (0,1,0),(0,0,1)\), l'équation de \(\mathbf{C}\) se ramène à :</p>
+
+\[aX^2+bY^2+cZ^2=0\]
+
+<img alt="" src="coni/con1.gif" width=194 height=151>
+
+<ul>
+<li>Il existe une deuxième espèce de <b>triangle autopolaire</b> : on part également d'un point \(p\), mais on prend pour points \(q\) et \(r\) les deux points d'intersection de la polaire de \(p\) avec \(\mathbf{C}\) ; ces deux points sont distincts si la conique est proprement dite, non dégénérée. Dans ce cas, en adoptant les mêmes coordonnées, l'équation de \(\mathbf{C}\) se réduit à :</li>
+\[X^2=aYZ\]
+</ul>
+
+<img alt="" src="coni/con2.gif" width=184 height=131>
+
+<p>En choisissant convenablement l'unité on peut réduire l'équation à la forme :</p>
+
+\[X^2=YZ\]
+
+<p>Sous cette forme, on obtient une paramétrisation de la conique \(\mathbf{C}\) par les équations :</p>
+
+\[\begin{cases} X=t\\ Y=1\\ Z=t^2\end{cases}\]
+
+<p>La paramétrisation est obtenue par des fonctions rationnelles (même polynomiales), et l'on dit qu'une conique est une courbe rationnelle. 
+Cette propriété est très importante et utilisée dans le calcul des <a title="On peut également utiliser de la géométrie dans le calcul intégral" href="../ana/integrat.htm">primitives</a>.</p>
+
+<p>Les deux figures ci-dessus sont particulièrement intéressantes dans la mesure où elles permettent de dégager immédiatement les <a title="Plus de renseignements sur les propriétés affines" href="conaffi.htm">propriétés affines et euclidiennes des coniques</a>.</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="2degrd.htm">Second degré</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

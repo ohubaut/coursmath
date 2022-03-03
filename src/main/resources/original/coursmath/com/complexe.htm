@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Les fonctions - Complexes - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="fonctions complexes" />
+<meta name="keywords" content="dérivées, equation, graphique plan, transformation, réseau" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="com.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript">
+    function mov(fichier) 
+{window.open(fichier,'mov','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-10', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Pas si complexe que ça !
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Soit \(Z = Z(z)\) une fonction dérivable de la variable complexe \(z=x+iy\). Le nombre complexe \(Z\) peut s'écrire \(X+iY\). La fonction qui applique \(z\) sur \(Z\) se ramène à un couple de 2 fonctions réelles de 2 variables \(X=X(x,y), Y=Y(x,y)\).</p>
+
+<p>Géométriquement, on a une application du plan \(p\) de la variable \(z\) vers le plan \(P\) de la variable \(Z\).</p>
+
+<p>\(Z\) est fonction d'une variable complexe \(z\) ; comment calculer cette dérivée ? Pour se ramener au cas de la dérivée d'une fonction d'une seule variable, il y a deux manières particulièrement simples d'y arriver. On peut imaginer deux cas particuliers :</p>
+
+<ul>
+<li>seule la partie réelle de \(z\) varie et, dans ce cas, \(x\) varie mais \(y\) reste constant</li>
+<li>seule la partie imaginaire de \(z\) varie et, dans ce cas, \(x\) reste constant et \(y\) varie.</li>
+</ul>
+
+<p>Considérons tout d'abord, le cas où seul \(x\) varie. La fonction \(Z=X+iY\) est alors une fonction d'une variable réelle et on peut obtenir la dérivée en prenant la dérivée de \(X\) plus \(i\) fois la dérivée de \(Y\). Dans le second cas, on peut procéder d'une manière analogue en calculant les dérivées des fonctions \(X\) et \(Y\) par rapport à \(y\). En fin de compte, il y aura 4 dérivées !<br />
+Pour éviter les confusions, on introduit une nouvelle terminologie ainsi qu'une nouvelle notation.</p>
+
+<p>Dans chacune des dérivées dont nous avons parlé, on n'utilise qu'une partie des variables, on dit qu'il s'agit de dérivées partielles. Concrètement, si nous dérivons \(X\) par rapport à \(x\) en supposant que \(y\) est constant, on dira qu'il s'agit de la <b>dérivée partielle de \(X\) par rapport à \(x\)</b>. Elle sera notée :</p>
+
+\[ \frac{\partial X}{\partial x} \]
+
+<p>Nous disposons donc d'une nouvelle notation qui permettra d'écrire les deux manières de dériver la fonction \(Z\) :</p>
+
+\[ \begin{cases}
+\large \frac{dZ}{dx}=\frac{\partial X}{\partial x}+i\frac{\partial Y}{\partial x}\\
+\large \frac{dZ}{dy}=\frac{\partial X}{\partial y}+i\frac{\partial Y}{\partial y}
+\end{cases} \]
+
+<p>Améliorons cela en remplaçant la dérivation par rapport à \(y\) par la dérivation par rapport à la partie imaginaire \(iy\). Rien de plus simple : il suffit de diviser la dérivée partielle par rapport à \(y\) par le nombre \(i\) ou tout simplement de multiplier par son inverse \(-i\). On obtient :</p>
+
+\[ \frac{dZ}{diy}=-i\frac{dZ}{dy}=-i\frac{\partial X}{\partial y}+\frac{\partial Y}{\partial y} \]
+
+<p>La fonction \(Z\) sera dérivable en un point si la dérivée ne dépend pas du chemin suivi. En particulier la dérivée dans une direction réelle, par rapport à \(x\), doit être égale à la dérivée dans une direction imaginaire pure, c'est-à-dire par rapport à \(y\). Par comparaison des deux valeurs, on obtient en égalant les parties réelles et imaginaires :</p>
+
+\[ \begin{cases}
+\large \frac{\partial X}{\partial x}= ~~~  \frac{\partial Y}{\partial y} \\
+\large \frac{\partial X}{\partial y}= -\frac{\partial Y}{\partial x}
+\end{cases}\]
+
+<p>Les deux fonctions \(X\) et \(Y\) ne sont donc pas quelconques; elles satisfont à ces relations appelées équations de <a title="Un grand analyste" href="../bio/cauchy.htm">Cauchy</a>-<a title="Un très grand géomètre" href="../bio/riemann.htm">Riemann</a>.</p>
+
+<p>Quelles en sont les conséquences ?</p>
+
+<p>Si, dans le plan \(p (x,y)\) nous avons une courbe \(c\) d'équations \(x=x(t)~~\text{et}~~y=y(t)\), son image dans le plan \(P (X,Y)\) est la courbe \(C\) d'équations:<br />
+\(X=X(x(t),y(t)),~Y=Y(x(t),y(t))\).<br />
+Le vecteur tangent à \(C\) s'écrit:</p>
+
+\[ \begin{cases}
+\large \frac{dX}{dt}=\frac{\partial X}{\partial x}\frac{dx}{dt}+\frac{\partial X}{\partial y}\frac {dy}{dt} \\
+\large \frac{dY}{dt}=\frac{\partial Y}{\partial x}\frac{dx}{dt}+\frac{\partial Y}{\partial y}\frac{dy}{dt}
+\end{cases} \]
+
+<p>Il est donc l'image du vecteur tangent à la courbe \(c~(dx/dt, dy/dt)\) par l'application dont la matrice est:</p>
+
+\[ \left\lgroup\matrix{
+ ~\large \frac{\partial X}{\partial x} & \large \frac{\partial X}{\partial y}\\
+ ~\large \frac{\partial Y}{\partial x} & \large \frac{\partial Y}{\partial y}}
+ \right\rgroup \]
+
+<p>Mais grâce aux équations de Cauchy-Riemann, nous voyons que cette matrice est du type:</p>
+
+\[ \left\lgroup\matrix{a & b\\-b & a}\right\rgroup \]
+
+<p class="ni">c'est-à-dire une <a href="quater.htm#S">matrice de similitude</a>. En particulier les angles formés par les directions en un point sont conservés; dans ces conditions, les transformations de \(p\) vers \(P\) sont dites transformations conformes.</p>
+
+<p>Des courbes orthogonales sont appliquées sur des courbes orthogonales et en particulier les réseaux de courbes \(x=x_0,y=y_0\) du plan \(p\) ou \(X=X_0,Y=Y_0\) du plan \(P\). Notons enfin que les fonctions \(X(x,y)\) et \(Y(x,y)\) sont dites harmoniques; elles satisfont à l'équation:</p>
+
+\[ \frac{\partial^2 X}{\partial x^2}+\frac{\partial^2 Y}{\partial y^2}=0 \]
+
+<p>Etudions à titre d'exemple la fonction appliquant \(z\) sur son carré \(Z\); on a:</p>
+
+\[ Z = X + iY = (x + iy)^2 = x^2 - y^2 + 2 ixy \]
+
+<p>La relation entre \(z\) et \(Z\) n'est pas bijective; \(z_0\) et \(-z_0\) ont même carré. Deux points symétriques par rapport à l'origine dans le plan de la variable z correspondent à un même point du plan de la fonction \(Z\). Si on désire avoir une bijection, il faut donc limiter le domaine de \(z\) à un demi-plan limité par une demi-droite. On pourrait également continuer à étudier l'application du plan entier de la variable \(z\) mais alors l'image serait formée de deux copies connectées du plan des \(Z\), la surface de Riemann associée à la fonction carré.</p>
+
+<a id="carre"> </a>
+<p>Les droites \(x=x_0\) donnent les courbes:</p>
+
+<table class="centre"><tr>
+<td>\(\begin{cases} X={x_0}^2-y^2\\Y=2{x_0}y\end{cases}\)</td>
+<td>  c'est-à-dire des paraboles: \(X={x_0}^2-(Y/2{x_0})^2\)</td>
+</tr></table>
+
+<p class="ni">et les droites \(y=y_0\) donnent les courbes:</p>
+
+<table class="centre"><tr>
+<td>\(\begin{cases} X=x^2-{y_0}^2\\Y=2x{y_0}\end{cases}\)</td>
+<td>  c'est-à-dire des paraboles: \( X=(Y/2{y_0})^2-{y_0}^2\)</td>
+</tr></table>
+
+<p>Ces deux familles de paraboles sont orthogonales:</p>
+
+<div><img alt="" src="comp/fig2.gif"></div>
+
+<p>L'image du réseau orthogonal des courbes \(x=x_0~~\text{et}~~y=y_0\) est le réseau orthogonal formé par ces deux familles de paraboles.</p>
+
+<p>Les choses se visualisent fort bien si l'on considère l'application qui envoie \(z\) sur une <a href="javascript:mov('zcar.htm');">combinaison linéaire de \(z\) et de \(Z=z^2\)</a>; les deux réseaux de droites orthogonales \(x\) et \(y\) constants sont envoyés sur les deux réseaux de paraboles orthogonales. De manière plus précise, on applique \(z\) sur \((1-\lambda)z+\lambda z^2\) avec\(\lambda\) variant de \(0\) à \(1\).</p>
+
+<a id="racine"></a>
+<p>De même, dans le plan \(P\) de la variable \(Z\), les courbes \(X=X_0\) et \(Y=Y_0\) proviennent des courbes:</p>
+
+\[ \begin{cases} x^2-y^2=X_0\\2xy=Y_0\end{cases} \]
+
+<p class="ni">c'est-à-dire de 2 familles d'hyperboles équilatères ayant pour asymptotes respectivement les bissectrices des axes et les axes eux-mêmes.<br />
+Ces deux réseaux d'hyperboles du plan de la variable \(z\) sont l'image des réseaux de droites coordonnées du plan \(Z\).</p>
+
+<p>On peut considérer la relation réciproque entre \(Z\) et \(z\) ; \(z\) une racine carrée de \(Z\). On pourrait obtenir une fonction en se limitant à la racine carrée "positive", c'est-à-dire celle dont la partie réelle est positive ou, si celle-ci est nulle, la partie imaginaire positive mais cela n'a guère de sens car le corps des complexes n'est pas ordonné.</p>
+
+<p>En fait, la relation de \(Z\) vers \(\sqrt{Z}\)  est une fonction multiforme : tout complexe \(Z\) a pour image deux complexes opposés, \(z\) et \(-z\) ou, vu géométriquement, deux points symétriques par rapport à l'origine.</p>
+
+<p>Cette fonction, qui applique \(Z\) sur ses racines carrées, transforme les deux réseaux des droites orthogonales \(X=P\) et \(Y=Q\) en les deux réseaux orthogonaux d'hyperboles équilatères.</p>
+
+<div><img alt="" src="comp/fig1.gif"></div>
+
+<p>Comme plus haut, on peut visualiser cette application de manière dynamique en considérant 
+l'application de \(Z\) sur une <a href="javascript:mov('zrac.htm');">combinaison linéaire de \(Z\) et de \(z=\sqrt{Z}\)</a>. De manière plus précise, on applique \(Z\) sur \((1- \lambda)Z+\lambda \sqrt{Z}\) avec \(\lambda \) variant de \(0\) à \(1\).</p>
+
+<p>On peut procéder de même pour d'autres fonctions d'une variable complexe, par exemple les familles de courbes associées à l'élévation aux puissances entières ou celles associées à des fonctions transcendantes, en particulier aux <a title="La généralisation aux complexes donne lieu à de belles interprétations" href="expon.htm">fonctions \(\mathbf{sin~}z\) et \(\mathbf{exp~}z\)</a>.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="compld.htm">Complexes</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

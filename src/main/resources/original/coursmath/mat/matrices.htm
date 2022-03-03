@@ -1,0 +1,185 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Les matrices - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content=" application linéaire, vectoriel, permutation, changement de base" />
+<meta name="keywords" content="algèbre linéaire, géométrie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Les matrices
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Lors de l'étude du plan vectoriel (ou affin centré) muni d'une base \((i, j)\), on rencontre souvent des équations du type:</p>
+
+\[ \begin{cases} x'=ax+by \\ y'=c x+dy \end{cases}\]
+
+<p>Nous nous placerons dans le cas général, celui où l'on peut calculer \(x \text{  et  }y\)  en fonction de \(x' \text{  et  }y'\), le cas où le système formé par les deux équations est inversible.</p>
+
+<p>Que représentent ces équations ?</p>
+
+<p>En voici une <b>première interprétation</b>.</p>
+
+<p>\(x \text{  et  }y\) représentent les coordonnées d'un vecteur (d'un point \(P\)) dans le repère donné.<br />
+\((a, b, c, d)\) définissent une permutation linéaire \(T\) et \((x', y')\) représentent les coordonnées du vecteur (du point \(P\)') transformé de \(X (x, y)\) par la transformation \(T\).</p>
+
+<p>L'<a href="applin.htm" target="ext">application linéaire</a> \(T\) est déterminée par ses coefficients \((a, b, c, d)\) que l'on peut représenter sous la forme d'un tableau dénommé matrice:</p>
+
+\[ \left \lgroup \matrix {a & b \\ c & d} \right\rgroup\]
+
+<p>Mais une matrice est bien plus qu'un simple tableau de nombres. En effet, elle est associée à une transformation et jouit par conséquent de propriétés fort intéressantes.<br />
+Or on sait que, lorsqu'on se trouve en présence de transformations, on peut les composer. Soit une première transformation \(T\) suivie d'une deuxième \(T'\):</p>
+
+<p>On a:</p>
+
+\[x'' = a' x' + b' y' = a' (a x + b y) + b' (c x + d y) = (a' a + b' c) x + (a' b + b' d) y \\ y'' = c' x' + d' y' = c' (a x + b y) + d' (c x + d y) = (c' a + d' c) x + (c' b + d' d) y \]
+
+<p> La transformation \(T''\) composée de \(T\) et de \(T'\) est bien définie et donne ainsi lieu à la définition du produit de deux matrices:</p>
+
+\[ T" = \left \lgroup \matrix {a'' & b'' \\ c'' & d''} \right\rgroup = \left \lgroup \matrix {a' & b' \\ c' & d'} \right\rgroup \circ \left \lgroup \matrix {a & b \\ c & d} \right\rgroup = T' \circ T\]
+
+<p>On retient la règle de multiplication ainsi:</p>
+
+<p><i>L'élément de la l<sup>e</sup> ligne, m<sup>e</sup> colonne du produit T" de T' et T, s'obtient en faisant la somme des produits des éléments de la l<sup>e</sup> ligne de la première matrice T' par les éléments correspondants de la m<sup>e</sup> colonne de la seconde matrice T.</i></p>
+
+<p>Quelques remarques:</p>
+
+<p>On voit que, pour faire le produit de deux matrices, il faut impérativement que le nombre de lignes de la première soit égal au nombre de colonnes de la seconde.<br />
+Cette définition du produit permet alors d'écrire très simplement la situation étudiée.<br />
+En effet, au point \(P\) de coordonnées \((x, y)\) et à son transformé \(P'\) \((x', y')\) on peut associer les matrices:</p>
+
+\[ P = \left \lgroup \matrix {x\\y} \right \rgroup \text{  et  }P' = \left \lgroup \matrix {x'\\y'} \right \rgroup \]
+
+<p class="ni">et la transformation s'écrit de manière compacte:</p>
+
+\[ P' = \left\lgroup\matrix{x'\\y'}\right\rgroup = \left\lgroup\matrix{a & b \\ c & d}\right\rgroup \left\lgroup\matrix{x\\y}\right\rgroup = TP\]
+
+<p>L'intérêt de ces notations est qu'elles peuvent s'étendre à des transformations de vectoriels ayant plus de 2 dimensions.</p>
+
+<p>Remarquons également que si \( x\) et \(y\) sont les coordonnées du vecteur \(\vec{X}\) dans la base B formée des vecteurs \(\vec {\imath} \) et \(\vec {\jmath} \), on peut écrire:</p>
+
+\[ \vec{P} =  B P = \boldsymbol{(} i    j \boldsymbol {)} \left\lgroup\matrix{x\\y}\right\rgroup  \]
+
+<p>\(B\) est une matrice formée d'une seule ligne alors que \(P\) est une matrice formée d'une seule colonne.</p>
+
+<p>Voici un exemple d'application linéaire : </p>
+
+<div><img alt="permutation linéaire" src="matr/permut_lin.png"></div>
+
+<p>Elle a pour équation :</p>
+
+\[ \begin{cases} x'= -(x+y) \\y'=(x-2y)/3 \end{cases} \]
+
+<p>Nous avons représenté le parallélogramme (rouge) construit sur les vecteurs de base ; dans le repère formé des vecteur de base \(i\) et \(j\), les sommets ont pour coordonnées \((0, 0), (1, 0), (1, 1)\) et \((0, 1)\) et le parallélogramme transformé (vert) a pour sommets les points de coordonnées \((0, 0), (-1, 1/3), (-2/3, -1/3)\) et \((-1, -2/3)\). On voit aisément comment étendre l'application linéaire. Remarquons que le <a href="determ.htm" target="ext">déterminant</a> de la matrice vaut \(1\), ce qui signifie que les aires sont conservées.</p>
+
+<p>A la relecture de cela, on peut toutefois se poser des questions.<br />
+Un élève attentif aura certainement remarqué tout au début qu'on parle d'<i>un plan vectoriel muni d'une base</i>, expression qu'il rencontre fort souvent à l'occasion d'exercices.<br />
+Très naïvement, il interrogera son professeur pour savoir qui a muni le (plan) vectoriel d'une base :<br />
+ - Mais, Monsieur, qui a donné cette base : le bon Dieu ?<br />
+ - Bien sur que non, répondra le professeur !<br />
+ - Mais alors, qui est-ce ?<br />
+ - Bon, dira le professeur excédé, disons que c'est moi.<br />
+ - Ah ! c'est donc vous, notre bon Dieu, répondra l'élève rassuré.</p>
+ 
+<p>Dès lors, notre élève studieux prendra l'initiative: "Je pourrais donc aussi choisir une base, ou bien encore une autre base". Bref notre élève aura compris que le choix d'une base est absolument libre mais que, par commodité, le mieux est de choisir celle qui rend les calculs les plus simples possibles.</p>
+
+<p>Revenant alors à sa lecture et ayant bien compris comment travailler avec des matrices, il regardera le résultat final. Il y est question d'une unique base B et de deux points, l'un P et l'autre P'. Mais, un point en valant bien un autre, pourquoi ne pas considérer que P et P' sont les mêmes points et qu'on a tout simplement choisi deux bases différentes, l'une B pour P, l'autre B' pour P'.<br />
+De plus, un changement de base correspond également à une matrice ! En effet, les nouveaux vecteurs de base i' et j' peuvent s'exprimer sous forme de combinaisons linéaires des anciens vecteurs de base. On a :</p>
+
+\[ \begin{cases} i'=a'i+b'j \\ j'=c'i+d'j \end{cases}\]
+
+<p class="ni">ce qui peut s'écrire : \(
+\boldsymbol{(} i'    j' \boldsymbol {)} = \boldsymbol{(} i    j \boldsymbol {)} 
+\left \lgroup \matrix {a' & b' \\ c' & d'} \right\rgroup \) </p>
+
+<p>Dès lors, on arrive à une <b>deuxième interprétation</b> des mêmes équations :<br />
+Elles représentent la manière de calculer les coordonnées d'un point dans une base \(B'\) connaissant celles de ce même point dans la base \(B\).</p>
+
+<p>Pour préciser cela on a :</p>
+
+\[
+\vec{P} = \boldsymbol{(} i'    j' \boldsymbol {)} \left\lgroup\matrix{x'\\y'}\right\rgroup = \boldsymbol{(} i    j \boldsymbol {)} \left\lgroup\matrix{x\\y}\right\rgroup \]
+
+d'où on déduit : 
+\( \boldsymbol{(} i    j \boldsymbol {)} \left\lgroup\matrix{a' & b'\\c' & d'}\right\rgroup \left\lgroup\matrix{x'\\y'}\right\rgroup 
+= \boldsymbol{(} i    j \boldsymbol {)} \left\lgroup\matrix{x\\y}\right\rgroup \)
+
+<p>Comme tout cela est valable quelle que soit la base, on en déduit que :</p>
+
+\[
+\left\lgroup\matrix{a & b'\\c' & d'}\right\rgroup \left\lgroup\matrix{x'\\y'}\right\rgroup 
+= \left\lgroup\matrix{x\\y}\right\rgroup \]
+
+<p class="ni">et, en posant \( T = \left\lgroup\matrix{a'& b'\\c'& d'}\right\rgroup ^{-1} \), on retrouve sur les équations initiales.</p>
+
+<p>On constate que la matrice du changement de base est l'inverse de celle de la permutation linéaire considérée dans la première interprétation.</p>
+
+<p>Signalons que les mathématiciens privilégient souvent la première interprétation. Par contre, les physiciens s'attachent plus à la seconde interprétation car les résultats des expériences doivent rester inchangés. </p>
+
+<p>Voici un exemple simple à une dimension: la relation \(x'= 100 x \) sera généralement perçue par un mathématicien comme une homothétie de rapport 100 qui multiplie les distances à l'origine par 100, alors qu'un physicien y verra un changement d'unité de mesure, un remplacement par une unité 100 fois plus petite que l'ancienne !</p>
+<p>En poursuivant l'analogie avec la physique, on sait que si un observateur (qui se croit fixe) regarde un autre en mouvement rectiligne uniforme, ce dernier (qui se croit également fixe) estimera que le premier effectue un mouvement uniforme en sens inverse.<br />
+De même, un observateur considérant sa base comme fixe estimera qu'il y a une application linéaire \(T\). Par contre, un observateur lié aux points estimera donc que ce sont les vecteurs de base qui ont subi une transformation linéaire inverse \(T^{-1}\)</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

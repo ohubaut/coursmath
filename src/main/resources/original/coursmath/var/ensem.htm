@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ensembles - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="probabilités, logique, opérations logiques" />
+<meta name="keywords" content="ensembles, réunion, intersection, complémentaire, implication, logique, probabilité" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Ensembles
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Une remarque préliminaire s'impose. Parler d'opérations sur des ensembles n'aucun sens. Il faut d'abord définir un ensemble \(E\) et alors seulement, on pourra définir des opérations sur les sous-ensembles de \(E\).</p>
+
+<p><i>Dans les exemples, nous supposerons que \(E\) est l'ensemble des quadrilatères du plan.<br />
+\(E\) possède divers sous-ensembles remarquables : les quadrilatères ayant un centre de symétrie (parallélogrammes), ceux ayant un axe de symétrie (les trapèzes isocèles et les deltoïdes), les rectangles, les losanges, les carrés...</i></p>
+
+<p class="st">Le complémentaire</p>
+
+<p>Le complémentaire d'un sous-ensemble \(P\) est noté \(\overline{P}\).</p>
+
+<img alt="" src="ense/nonp.gif">
+
+<p><i>Si \(P\) est l'ensemble des parallélogrammes, \(\overline{P}\) est l'ensemble des quadrilatères qui sont des</i> <b>non</b><i>-parallélogrammes.</i></p>
+
+<p class="st">L'intersection</p>
+
+<p>Si \(P\) et \(Q\) sont deux sous-ensembles, leur intersection est notée \(P\cap Q\).<br />
+Remarquons que \(P\cap P\) = \(P\).</p>
+
+<img alt="" src="ense/petq.gif">
+
+<p><i>Si \(P\) est l'ensemble des losanges et \(Q\) l'ensemble des rectangles, \(P\cap Q\) sera l'ensemble des quadrilatères qui sont à la fois des losanges <b>et</b> des rectangles, c'est-à-dire l'ensemble des carrés.</i></p>
+
+<p class="st">La réunion</p>
+
+<p>Nous pouvons également considérer la réunion des sous-ensembles \(P\) et \(Q\), notée \(P\cup Q\).</p>
+
+<img alt="" src="ense/pouq.gif">
+
+<p><i>Si \(P\) est l'ensemble des rectangles et \(Q\) l'ensemble des losanges, \(P\cup Q\) sera l'ensemble des quadrilatères qui sont des rectangles <b>ou</b> des losanges.</i></p>
+
+<p class="st">L'inclusion</p>
+
+<p>Si \(P\subset Q\), on peut exprimer l'inclusion de manière différente, mais équivalente : \(P\cap\bar{Q}\) est vide, ou encore \(\overline{(P\cap \overline{Q})}=E\).</p>
+<p>En particulier l'inclusion est transitive ; on a :</p>
+
+<div>Si \(P\subset Q\) et \(Q\subset R\) alors \(P\subset R\)</div>
+<br />
+
+<img alt="" src="ense/piq.gif">
+
+<p><i>Si \(P\) est l'ensemble des rectangles et \(Q\) l'ensemble des parallélogrammes, \(P\)\subset Q\) et on a l'implication : <b>si</b> \(r\) est un rectangle, <b>alors</b> \(r\) est un parallélogramme.</i></p>
+
+<p>Parmi toutes ces opérations il est naturel de se poser la question de savoir si certaines d'entre elles ne peuvent pas s'exprimer à l'aide d'autres. Par exemple il est évident qu'avec la réunion et le complémentaire on est à même de définir l'intersection. En effet, \(P\cap Q=\overline{(\overline{P}\cup \overline{Q})}\).</p>
+
+<p>Mais il y a mieux : l'opération correspondant à la "barre de Scheffer". Aux ensembles \(P\) et \(Q\) on associe l'ensemble \(P|Q\) qui est constitué de l'ensemble des éléments qui n'appartiennent pas simultanément à \(P\) et à \(Q\) :</p> 
+
+\[ P|Q=\overline{P\cap Q} \]
+
+<p><i>Dans l'exemple où \(P\) est l'ensemble des rectangles et \(Q\) l'ensemble des losanges, \(P\)|\(Q\) est l'ensemble des quadrilatères non carrés</i>.</p>
+
+<p>Une simple observation : \(P|P = \overline{P}\) montre que la barre de Scheffer permet de définir le complémentaire dans \(E\) d'un sous-ensemble \(P\). On voit ainsi comment définir toutes les opérations sur les sous-ensembles.</p>
+
+<p>A la vue des exemples ci-dessus, on voit le lien étroit qui existe entre <a href="logique.htm">logique</a>, <a href="proba.htm">probabilités</a> et ensembles.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

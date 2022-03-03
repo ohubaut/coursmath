@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Grand rhombicuboctaèdre - En 3 dimensions - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Grand rhombicuboctaèdre" />
+<meta name="keywords" content="polyèdre, semi-régulier, archimédien" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../3di/3di.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../pop.css" media="screen" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript" src="three.min.js"></script>
+<script type="text/javascript" src="WebGL.js"></script>
+<script type="text/javascript" src="OBJLoader.js"></script>
+<script type="text/javascript" src="TrackballControls.js"></script>
+<script type="text/javascript" src="renduPersp.js"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-4', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body onload="window.focus();">
+<div id="container">
+<a id="H"></a>
+<!--
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+-->
+	<div class="titre">
+<br />
+Grand rhombicuboctaèdre
+<br />
+	</div>
+	<div class="stitre">
+(famille du cube)
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<div id="polanim" class="centre" style="width:360px; height:360px; border:2px solid #f39;">
+<script>showPoly("c468.obj", "polanim",33);</script>
+</div><br />
+<p>Le plus "complet" des polyèdres de la famille du cube.</p>
+
+<p>La manière la plus rapide de le décrire est de partir d'un cuboctaèdre et d'effectuer une troncature des 12 sommets par un plan choisi à bonne distance de manière à ce que hexagones et octogones obtenus soient réguliers.<br />
+En plus de ceux-ci, la troncature donnera 12 carrés. Les 48 sommets correspondront aux 48 isométries du cube.</p>
+
+<p>En résumé : 26 faces (6 octogones, 8 hexagones et 12 carrés), 72 arêtes et 48 sommets.</p>
+		</div>
+	</div>
+	<div id="fermeture">
+<br />
+<img alt="fermer" src="../fermer.gif" OnClick="javascript=parent.close()"><br />
+<br />
+	</div>
+</div>
+</body>
+</html>

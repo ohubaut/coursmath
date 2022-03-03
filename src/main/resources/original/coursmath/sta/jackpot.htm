@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Rien ne va plus ! - Statistique - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="jeux de hasard, équitable, jackpot, espérance mathématique" />
+<meta name="keywords" content="loterie, équitable, jackpot, paradoxes" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Rien ne va plus !
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Nous sommes sollicités de toutes parts pour tenter notre chance à des jeux de hasard plus attractifs les uns que les autres: loteries, casinos, salle de jeux etc.<br />
+L'éventail de jeux proposés est très important et il importe de savoir à quoi on s'engage. Si les gains sont très clairement annoncés, rien n'est évidemment dit en ce qui concerne les risques de perte !</p>
+
+<p>Supposons que l'état organise une tombola. Dix mille billets sont mis en vente au prix de 100 €. Les lots sont les suivants:</p>
+
+<ul>
+<li>les billets se terminant par un chiffre donné gagnent 200 €
+<li>ceux se terminant par deux chiffres donnés gagnent 500 €
+<li>ceux se terminant par deux autres chiffres donnés gagnent 500 €
+<li>les billets se terminant par 3 chiffres donnés gagnent 1000 €
+<li>et on tire encore 4 fois 3 chiffres donnant droit à 1000 €
+<li>enfin le billet portant le numéro tiré au sort gagne 100000 €
+</ul>
+
+<p>Un milliardaire de passage se précipite et achète tous les billets. Il lui en coûte 10000 fois 100 € c'est-à-dire un million.<br />
+Après le tirage il se présente pour retirer ses gains. Il a:</p>
+
+<ul>
+<li>1000 billets qui gagnent 200 €
+<li>200 qui rapportent 500 €
+<li>50 qui gagnent 1000 €
+<li> 1 billet qui gagne le super-gros lot de 100000 €
+</ul>
+
+<p>Il reçoit donc la somme de: 1000.200 € + 200.500 € + 50.1000 € + 100000 € soit 450000 €<br />
+Tout déçu, il constate que chaque billet payé 100 € ne lui rapporte en moyenne que 45 € et que, tous comptes faits, si venant d'acheter les billets et sachant que l'espérance d'un billet est de 45 €, il aurait mieux valu trouver quelqu'un prêt à les lui racheter à 46 € pièce !<br />
+Il décide évidemment de ne plus jamais acheter un seul billet de tombola.</p>
+
+<p>Prenons l'exemple du "bandit manchot", cette machine à sous munie d'un levier à actionner et qui laisse astucieusement l'autre main libre pour introduire les jetons dans la fente de la machine.</p>
+
+<table class="centre"><tr>
+ <td><img alt="" src="jack/roue1.gif"></td>
+ <td><img alt="" src="jack/roue2.gif"></td>
+ <td><img alt="" src="jack/roue3.gif"></td>
+</tr></table>
+
+<p>Le jeu est très simple: les trois roues, où figurent divers dessins, sont mises en mouvement sous l'action du levier. Après avoir tourné (pas trop longtemps pour que la machine soit rentable !) les roues s'arrêtent et trois dessins sont alignés.</p>
+
+<p>Certaines combinaisons sont gagnantes; en particulier celles avec trois figures identiques. Toutefois pour ne pas décourager les "clients" on peut également gagner dans d'autres cas.<br />
+Nous avons relevé les gains suivants :</p>
+
+<ul>
+<li>une cerise: la mise est rendue 
+<li>deux cerises gagnent 2 × la mise
+<li>trois cerises rapportent 3 ×; la mise
+<li>trois fruits gagnent 5 × la mise
+<li>trois cloches rapportent 10 × la mise
+<li>trois "sept" gagnent le gros lot: 50 × la mise
+</ul>
+
+<p>Quelles sont nos chances de gagner (ou plutôt de perdre) ? Statistiquement tous les arrangements de figures ont la même probabilité de sortir. Comme il y a 6 figures :</p>
+
+<table class="centre"><tr>
+ <td><img alt="" src="jack/fig00.gif"></td>
+ <td><img alt="" src="jack/fig02.gif"></td>
+ <td><img alt="" src="jack/fig04.gif"></td>
+ <td><img alt="" src="jack/fig06.gif"></td>
+ <td><img alt="" src="jack/fig08.gif"></td>
+ <td><img alt="" src="jack/fig10.gif"></td>
+</tr></table>
+
+<p>Sur chacune des trois roues il y a 6³=216 arrangements possibles.</p>
+
+<p>Les arrangements qui ne comportent qu'une seule cerise sont au nombre de 75 (la cerise peut être à n'importe laquelle des trois positions et les deux autres figues peuvent être n'importe lesquelles des 5, d'où 3.5²=75).<br />
+Par contre les arrangements comportant 2 cerises sont moins nombreux: la figure qui n'est pas une cerise peut être n'importe laquelle des 5 autres; de plus elle peut se situer à n'importe laquelle des 3 positions. Il y en a donc 15.<br />
+Un seul de ces arrangements comporte 3 cerises, de même un seul 3 oranges, 3 prunes, 3 pastèques, 3 cloches et 3 "sept".</p>
+
+<p>Notre milliardaire fait alors le raisonnement suivant: "Je vais jouer 216 fois, j'obtiendrai tous les arrangements possibles et je gagnerai donc :<br />
+75 fois un jeton + 15 fois 2 jetons + 1 fois 3 jetons + 3 fois 5 jetons + 1 fois 10 jetons + 1 fois 50 jetons, donc un total de 183 jetons.</p>
+
+<p>Conclusion: Ce jeu est moins désavantageux que la loterie, mais pour 216 jetons mis en jeu je n'en récupère que 183. Je perds donc 33/216<sup>e</sup> de ma mise."<br />
+Ce raisonnement, bien qu'ayant une conclusion correcte est erroné. Il est clair qu'en jouant 216 fois on n'obtiendra pratiquement jamais tous des arrangements différents. (Au 216<sup>e</sup> coup la machine se souviendrait-elle des 215 coups précédents ?</p>
+
+<p>Pourtant, notre milliardaire est tout près de la vérité.</p>
+
+<p>S'il joue \(n\) fois il aura \(n_1\) fois le gain \(g_1\), \(n_2\) fois le gain \(g_2\), ... et \(n_k\) fois le gain \(g_k\); toutes les autres fois il n'aura rien gagné. Il faut être bien conscient que son gain n'est autre que ce qu'il a reçu dont il faut déduire sa mise. Autrement dit, quand il perd le gain est négatif et vaut \(-m\).<br />
+Au total il aura reçu \(\sum_{k=1}^n n_k.g_k\), et il aura dépensé \(nm\).<br />
+En divisant par \(n\) on fait apparaître les fréquences \(n_k/n\) qui sont, à la limite, les probabilités \(p_k\) de l'événement \(k\) avec gain g_k; le gain moyen est donc la somme sur k gains g_k pondérés par leur probabilité soit donc :</p>
+
+\[ E =\sum_{k=1}^n p_kg_k  \]
+
+<p>Il est évident que dans les jeux de hasard E est toujours négatif. Et paradoxalement \(E\) s'appelle l'"espérance" mathématique !</p>
+
+<p>Si cette espérance est nulle, on dit alors que le jeu est équitable, honnête. Mais, pour autant <a href="equite.htm">n'y a-t-il aucun risque ?</a></p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

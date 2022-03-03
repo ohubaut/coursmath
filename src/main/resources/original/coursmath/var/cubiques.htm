@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Quelques cubiques - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="courbes du troisième degré" />
+<meta name="keywords" content="troisième degré, axe de symétrie, point double, classification, fonction, graphique" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Quelques cubiques
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Dans cet article, nous allons étudier quelques courbes du troisième degré. Cela nous changera du second degré !</p>
+
+<p>La courbe de départ sera assez simple : une strophoïde ou plus exactement une courbe de la famille des strophoïdales. Cette courbe est décrite algébriquement par une équation du 3e degré d'équation \(x^3+x^2-y^2\).<br />
+Nous l'avons déjà rencontrée à plusieurs reprises : à  l'occasion des <a href="../ana/sqrt.htm">études de fonctions</a> ainsi que dans l'article consacré aux <a href="../ana/polaires.htm">coordonnées polaires</a>.</p>
+
+<img alt="strophoïde" src="cubi/stroph.gif">
+<p>Généralement, les cubiques ne sont pas des courbes rationnelles à moins que, comme dans le cas de la strophoïde, elles possèdent un point double c'est-à-dire un point tel que toute droite passant par ce point possède deux intersections confondues.</p>
+
+<p>Dans ce cas, dans le faisceau des droites passant par le point double, chacune des droites la coupe, puisque c'est une cubique selon 3 points : 2 des points sont confondus en le point double et le troisième point d'intersection varie (quitte à partir à l'infini !). Par conséquent, les coordonnées des points de la cubique peuvent s'exprimer en fonction rationnelle d'un paramètre. Dans le cas présent, les abscisses de l'intersection d'une droite \(y=tx\) passant par le point double sont données par l'équation du 3e degré \(x^3+x^2-t^2 x^2=0\). Elle se factorise \(x^2(x+1-t^2)=0\) et donne une solution double (\(x=0\)) correspondant au point double et une troisième solution \(x=t^2-1\).</p>
+
+<p>Cette cubique peut donc être décrite par les équations paramétriques:</p>
+
+\[ \begin{cases}x=t^2-1\\y=t^3-t\end{cases} \]
+
+<p>Lorsqu'il n'y a pas de point double, la cubique n'est plus une courbe rationnelle et ses équations paramétriques font appel à d'autres fonctions (dites elliptiques).</p>
+
+<p>L'étude de ces courbes est plus compliquée. Néanmoins, il est intéressant de voir l'allure de ces courbes. Partons du graphique de la strophoïde et "cassons" son point double ; pour ce faire, considérons les courbes d'équation \(x^3+x^2-y^2=k\), où \(k\) est un paramètre. Le point double est obtenu lorsque la valeur de \(k\) est nulle.</p>
+
+<p>Toutes ces cubiques admettent l'axe des x comme axe de symétrie. Regardons donc comment elles coupent l'axe \(Ox\) d'équation \(y=0\).<br />
+Les abscisses des intersections sont données en résolvant l'équation \(x^3+x^2=k\). Le premier membre de l'équation est une fonction de \(x\), un polynôme de degré impair. Quand \(x\) est très grand en valeur absolue (tend vers l'infini, positif ou négatif), seul le terme en \(x^3\) est important. Dans les corps des réels, nous aurons donc au moins une valeur de \(x\) qui annulera cette fonction.<br />
+Soit a une valeur de \(x\) annulant le polynôme. Il sera alors divisible par \((x-a)\) et il restera une équation du second degré. En rassemblant ces résultats, cela signifie que sur les réels, une équation du 3e degré possède soit 3 solutions (quitte à ce que certaines soient confondues), soit une seule solution.</p>
+
+<p>Comme il est malaisé de résoudre une <a href="../com/imagin.htm"> équation générale du 3e degré</a>, essayons de mieux caractériser les solutions de cette équation bien précise.<br />
+Le cas simple est celui où le paramètre k est nul. Les solutions sont \(0\) (solution double) et \(-1\). <br />
+Mais que se  passe-t-il pour les autres valeurs de \(k\) ?<br />
+L'équation qui donne les abscisses des points d'intersection de la cubique et de l'axe \(Ox\) est \(x^3+x^2=k\). Il suffit de l'écrire \(k=x^3+x^2\) pour avoir l'idée d'attaquer le problème d'une autre manière.<br />
+Notons, pour éviter la confusion, \(F(x)=x^3+x^2\).</p>
+
+<p>Le graphique de \(F(x)\) (en orange) résulte de la somme du graphique de \(x^3\) )en bleu) et de celui de \(x^2\) (en vert). </p>
+
+<table><tr><td>
+<img alt="" src="cubi/x3+x2.gif"><br />
+<br />
+\(F(x)=x^3+x^2\)
+</td><td>
+<p>On observe 5 cas possibles :</p>
+<ol>
+<li>Si \(x\) est négatif, \(x^3\) est négatif mais \(x^2\) est positif.<br />
+Tant que \(x\) est, en valeur absolue, supérieur à 1, \(x^2\) sera inférieur à \(|x^3|\) et la fonction \(F\) sera négative.</li>
+<li>Pour \(x=-1\), \(F=0\).</li>
+<li>Dès que \(x\) est, en valeur absolue, inférieur à \(1\), \(x^2\) sera supérieur à \(|x^3|\) et \(F\) devient positive.</li>
+<li>Si \(x=0\), à nouveau \(F=0\).</li>
+<li>Lorsque \(x\) devient positif les deux termes de la somme sont positifs et la fonction \(F\) est donc positive.</li>
+</ol>
+<p>En résumé:</p>
+<table>
+<tr><td><img alt="" src="../dot.png" width=60 height=1></td><td>\(x\lt -1\)</td><td><img alt="" src="../dot.png" width=30 height=1></td><td>\(F\lt 0\)</td></tr> 
+<tr><td></td><td>\(x=-1\)</td><td></td><td>\(F=0\)</td></tr>
+<tr><td></td><td>\(-1\lt x\lt 0\)</td><td></td><td>\(F\gt 0\)</td></tr>
+<tr><td></td><td>\(x=0\)</td><td></td><td>\(F=0\)</td></tr>
+<tr><td></td><td>\(x\gt 1\)</td><td></td><td>\(F\gt 0\)</td></tr>
+</table>
+</td></tr></table>
+
+<p><i>On pourrait encore préciser cette étude de fonction à l'aide des dérivées; par exemple déterminer les coordonnées du maximum relatif de \(F(x)\) dans l'intervalle \([-1,0]\) (on préciserait que ce maximum est obtenu pour \(x=-2/3\) et vaut \(4/27\)).</i></p>
+
+<p>Nous sommes à présent en mesure de répondre à la question posée plus haut : "Que peut-on dire des points d'intersection  de la courbe \(x^3+x^2-y^2=k\) avec l'axe \(Ox\) ? "</p>
+
+<p>Les abscisses de ces points étaient données par les solutions de l'équation : \(x^3+x^2-k=0\).<br />
+Les intersections du graphique de \(F(x)-k\) avec l'axe Ox seront les solutions de l'équation du 3e degré. Le graphique de \(F(x)-k\) s'obtient à partir du graphique de \(F(x)\) par une translation parallèle à l'axe \(Oy\) d'amplitude \(-k\).</p>
+
+<p>La réponse à la question posée plus haut se trouve à présent sous nos yeux.</p>
+
+<img src="cubi/eq.gif" alt="" onclick="javascript:permute_statique_anime(this);"><br />
+<i>Cliquez sur l'image pour démarrer ou arrêter l'animation.</i>
+
+<p>Détaillons le résultat (nous notons \(M\) le maximum de \(F(x)\) pour \(x \lt 0\)):</p>
+<ol>
+<li>Pour \(k \lt M\), une seule solution positive.</li>
+<li>Pour \(k = M\), nous avons deux solutions confondues en cette valeur.</li>
+<li>Ensuite, lorsque \(M \lt k \lt 0\), ces deux valeurs se dissocient jusqu'à ce que la plus grande des deux soit égale à 0.</li>
+<li>Pour \(k=0\), \(0\) est une solution double et l'autre est égale à \(-1\).</li> 
+<li>Lorsque \(k \gt 0\), il n'y a plus qu'une seule solution réelle négative.</li>
+</ol>
+
+<p>Nous avons ainsi résolu et discuté cette équation paramétrique du 3e degré. Cela nous permet maintenant de préciser l'aspect de cette famille de cubiques.<br />
+En effet, rappelons-nous que la famille des cubiques étudiées est donnée par \(y^2= x^3+x^2-k\) ou encore \(y^2=F(x)-k\). Il suffit donc de construire à partir du graphique de \(y^2\) celui de \(y\).<br />
+Nous devons donc ajouter la condition \(x^3+x^2-k \ge 0\) ou encore \(F(x)\ge k\). Pour une valeur donnée de k seule la partie du graphique située au-dessus de l'axe Ox donnera lieu à des points de la cubique.<br />
+La cubique sera obtenue en prenant la réunion des racines carrées positives et négatives du graphique de \(F(x)-k\) .</p>
+
+<p>On voit que lorsque \(M\lt k\lt 0\), la partie positive est constituée de deux intervalles disjoints. Ces deux intervalles se rejoignent pour \(k=0\) et ensuite il n'y a qu'un seul intervalle où la fonction est positive.<br />
+Comme \(y^2=x^3+x^2-k\), cela signifie que lorsque \(M\lt k\lt 0\), la courbe est donc également formée de deux parties disjointes. Pour \(k=0\), ces deux parties se rejoignent en un point double pour former la strophoïde et ensuite la courbe représentative est d'un seul tenant.</p>
+
+<p>Voici une dernière animation qui montre ces cubiques d'équation \(x^3+x^2-y^2=k\) lorsque k varie de 0.3 à -0.5; elle s'attarde sur les deux valeurs remarquables \(4/27\) où la courbe possède un point double isolé pour \(x=-2/3\) et \(0\) où elle possède un point double à tangentes distinctes à l'origine.</p>
+
+<img src="cubi/stroph.gif" alt="" onclick="javascript:permute_statique_anime(this);"><br /><i>Cliquez sur l'image pour démarrer ou arrêter l'animation.</i>
+<br /><br />
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Géométrie et applications linéaires" />
+<meta name="keywords" content="matrices, projections, projectivités, Horner, polynômes,barycentre, coordonnées homogènes" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-1', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Mathématique linéaire
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>La mathématique linéaire traite des propriétés des points, des droites et des plans de l'espace, sans faire référence aux propriétés métriques (angles, perpendicularité, distance). En particulier elle étudie les propriétés affines et projectives de l'espace.<br />
+<p>Algébriquement c'est l'étude du premier degré (équations, systèmes d'équations linéaires).<br />
+<p>Dans cette optique nous présentons:<br />
+
+<hr style="width=75%">
+<ul>
+<li><b><a href="matrices.htm">Les matrices</a></b> : Que représentent-elles ?</li>
+<li><b><a href="plan-complete.htm">Qu'y a-t-il à l'infini d'un plan ?</a></b>: La réponse n'est pas unique !</li>
+<li><b><a href="infini.htm">L'infini</a></b>: Les points à l'infini sont admis depuis plus d'un demi-millénaire, mais en algèbre, l'infini fait encore peur.</li>
+<li><b><a href="project.htm">"Voir" un plan projectif</a></b>: On en parle, mais l'avez-vous déjà vu ?</li>
+<li><b><a href="dessin.htm">Projections parallèles</a></b>: Comment dessiner? Comment représenter des figures spatiales dans un plan?</li>
+<li><b><a href="dessin2.htm">Projections orthogonales</a></b>: Comment mieux dessiner? La technique décrite ci-dessus n'est peut-être pas satisfaisante.</li>
+<li><b><a href="applin.htm">Applications linéaires</a></b>: On parle toujours d'applications linéaires, mais à quoi ressemblent-elles ?</li>
+<li><b><a href="determ.htm">Déterminants</a></b>: La vision géométrique d'un déterminant éclaire la manière de le calculer.</li>
+<li><b><a href="viviani.htm">Coordonnées trilinéaires</a></b>: Un type de coordonnées méconnu des mathématiciens.</li>
+<li><b><a href="bary.htm">Barycentre</a></b>: Physique et mathématique se rejoignent.</li>
+<li><b><a href="perspec.htm">Perspective et projections centrales</a></b>: De la perspective à l'horizon.</li>
+<li><b><a href="homogene.htm">Coordonnées homogènes</a></b>: Comment coordonner les points à l'infini.</li>
+<li><b><a title="Birapport et harmonie" href="harmoni.htm">Relation d'harmonie</a></b>: Voici la relation projective fondamentale.</li>
+<li><b><a href="desargu.htm">Desargues</a></b>: S'agit-il d'un théorème ou d'un axiome ?</li>
+<li><b><a href="carres.htm">Carrés magiques</a></b>: Comment les construire ? N'est-ce qu'un simple jeu ?</li>
+<li><b><a href="interpol.htm">Fonctions polynômes</a></b>: Comment trouver une fonction polynôme ayant un certain nombre de valeurs données; une autre base dans le vectoriel des polynômes.</li>
+<li><b><a href="horner.htm">Méthode de Horner</a></b>: Ne sert-elle qu'à vérifier la divisibilité d'un polynôme par x-a ?</li>
+<li><b><a href="derivees.htm">La dérivation: analyse ou algèbre ?</a></b>: Une dérivation sans limites.</li>
+<li><b><a href="gravite.htm">Centre de gravité d'un triangle</a></b>: Ne faudrait-il pas plutôt écrire centres de gravité ?</li>
+</ul>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		<td></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

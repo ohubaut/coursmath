@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>700 millions de p'tits Chinois, et moi,... - Statistique - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="probabilités, interprétation, pénurie" />
+<meta name="keywords" content="paradoxes, calcul probabilités, conséquences" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+700 millions de p'tits Chinois, et moi,...
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>L'humanité est en pleine expansion !</p>
+
+<p>En Chine, fin des années 60, il y avait plus de 700.000.000 d'habitants: "Sept cents millions de p'tits Chinois, et moi, et moi, et moi" chantait Jacques Dutronc.<br />
+Et cela ne faisait que croître, tout comme en Inde et les autres pays d'Asie du Sud-Est. Les pays "pauvres" ont toujours un taux de natalité supérieur à celui des pays "riches".</p>
+
+<p>Le gouvernement chinois a dû prendre des mesures afin de stabiliser la croissance de la population, mais la tâche était difficile.  En effet si la naissance d'un garçon constitue une aide, une richesse pour la famille, tout au contraire, dans la culture chinoise, la naissance d'une fille est perçue comme une charge; il faudra trouver une dot pour la marier.<br />
+Il fallait limiter le nombre d'enfants. Dans l'idéal, la population se stabilise lorsque la fécondité est légèrement supérieure à 2 enfants par couple; il faut tenir compte de la mortalité infantile et de la stérilité de certains couples.<br />
+Sachant que la mesure "deux enfants par couple" ne serait jamais respectée, la Chine a pris une mesure plus draconienne: "un enfant par couple", mais étant donné la mentalité vis-à-vis des filles, la règle a été assouplie: "un enfant par couple, mais si cet enfant est une fille, le couple peut avoir un deuxième enfant".</p>
+
+<p>Cette mesure n'a évidemment pas été respectée à la lettre, surtout pas dans les campagnes, mais elle a quand même eu un effet bénéfique sur la croissance de la population (à comparer la Chine et l'Inde, par exemple)</p>
+
+<p>Certains ont crié casse-cou !<br />
+En effet, disaient-ils, il y aura trop de garçons. Les familles auront droit à deux essais pour avoir un garçon ! A cela d'autres répliquaient qu'il y aurait un excès de filles. En fait il y aurait trois types de familles: un garçon, une fille et un garçon et deux filles, ce qui donne 3 filles pour seulement 2 garçons.</p>
+
+<p>Mais les Chinois sont bons mathématiciens et avaient choisi cette règle en tenant compte qu'il ne fallait pas déséquilibrer le rapport des sexes dans la population.</p>
+
+<p>Voyons ça de plus près.<br />
+Nous devrons préciser les hypothèses, notamment celle-ci: un couple ayant donné naissance à une fille voudra toujours un deuxième enfant dans l'espoir d'un garçon tant attendu.<br />
+Reprenons les types de familles:</p>
+
+<ol>
+<li>un garçon
+<li>une fille et un garçon
+<li>deux filles
+</ol>
+
+<p>L'erreur serait évidemment de considérer qu'il y a autant de familles de chaque type ! Il y a évidemment autant de familles de type 2 que de type 3. Ce sont celles qui ont eu comme premier enfant une fille. Soit \(N\) le nombre de telles familles (type 2 ou type 3), donc au total il y a \(2N\) familles de ces types. Il en résulte qu'il y a autant de familles (\(2N\)) qui ont eu comme premier enfant un garçon. Nous arrivons donc à la répartition:<br />
+\(2N\) familles avec un garçon, \(N\) avec une fille et un garçon et \(N\) avec deux filles.<br />
+Au total nous avons donc 3N garçons et 3N filles; l'équilibre est maintenu.</p>
+
+<img alt="chinois" src="chin/chinois.gif">
+
+<p>Reprenons le calcul dans la situation plus réaliste où la probabilité d'avoir un garçon est légèrement plus grande que celle d'avoir une fille. Soient \(g\) la probabilité de donner naissance à un garçon et \(f\) celle de d'avoir une fille. Evidemment on a \(g+f=1\).<br />
+La probabilité d'avoir une famille composée d'un garçon est \(g\); celle d'avoir comme premier enfant une fille vaut \(f\). Dans ce cas on est autorisé à avoir un second enfant. La probabilité d'avoir une famille composée d'une fille suivie d'un garçon vaut \(fg\), et enfin celle d'avoir deux filles est  \(f^2\).<br />
+L'<a href="jackpot.htm">espérance mathématique</a> d'avoir un garçon vaut \(g+fg=g(1 + f)\)<br />
+Celle d'avoir une fille est \(fg+2f^2=f(g+2f)=f(1+f)\)</p>
+
+<p>On constate donc que, compte tenu des hypothèses, les proportions relatives garçons/filles ne sont aucunement modifiées.</p>
+
+<p>Nous avons supposé que tous les couples qui ont une fille voulaient avoir un deuxième enfant dans l'espoir d'avoir un garçon. On pourrait se poser la question de savoir ce qui se passerait s'il n'en était pas ainsi.</p>
+
+<p>Supposons que la proportion de couples qui veulent avoir un deuxième enfant ne vaille pas 1 mais soit égale à \(k\).<br />
+La situation est modifiée. Si la probabilté d'avoir une famille ayant un seul garçon n'est pas modifiée et reste égale à \(g\), celle d'une famille ayant une fille unique vaut \(f(1-k)\). La probabilité d'avoir une famille composée d'une fille suivie d'un garçon vaut alors \(kfg\), et enfin celle d'avoir deux filles est \(kf^2\).</p>
+
+<p>Calculons les nouvelles espérances :<br />
+L'espérance mathématique d'avoir un garçon vaut \(g+kfg=g(1+kf)\)<br />
+Celle d'avoir une fille est :</p>
+
+\[  \begin{aligned}
+f(1-k)+kfg+2kf^2& =f(1-k+kg+2kf) \\
+& = f(1+kf)
+\end{aligned} \]
+
+<p>On constate que dans cette hypothèse, la conclusion reste la même. Le rapport garçons/filles ne sera pas modifié.<br />
+On peut également remarquer que l'espérance du nombre d'enfants vaut \(1+kf\), ce qui est insuffisant pour maintenir une population constante.</p>
+
+<p>Après tout, on se rend compte qu'on aurait pu s'épargner tous les calculs. En effet le rapport garçons/filles est le même pour l'aîné d'une famille. Et pour les familles qui ont deux enfants, ce rapport est encore toujours le même pour le cadet. Alors pourquoi tous ces calculs ?</p>
+
+<p>Ceci dit, on constate que beaucoup de familles, particulièrement dans les campagnes, ont enfreint les directives. La population chinoise a doublé et atteint 1.500 millions !</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

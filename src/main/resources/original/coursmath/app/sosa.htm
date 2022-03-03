@@ -1,0 +1,162 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Les "SOSA" - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="généalogie, arbre" />
+<meta name="keywords" content="numération binaire, arbre généalogique" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Les "SOSA"
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>"Sosa" est un terme fréquemment utilisé par les généalogistes, mais pratiquement ignoré du commun des mortels. De quoi s'agit-il ?</p>
+
+<p>Chacun a été tenté de construire son arbre généalogique. Il se situe à la "racine" de l'arbre; son père et sa mère forment les deux premières "branches", les grands parents (paternels et maternels) ramifient chacune de ces deux en deux nouvelles, soit au total quatre nouvelles branches. Ensuite.. Mais on se décourage assez rapidement. En général, on n'a pas ou peu connu ses arrières-grands-parents; de plus on se rend compte que le travail deviendra rapidement insurmontable étant donné le nombre d'aïeux qui double à chaque nouvel étage.</p>
+
+<p>Pourtant, les généalogistes ne sont pas découragés par l'ampleur de la tâche et ils effectuent de nombreuses recherches afin de compléter les branches de leur arbre. Comme les mots deviennent rapidement encombrants et difficilement compréhensibles (arrière-grand-mère paternelle) et tout simplement inadaptés, ils utilisent le terme mystérieux de "sosa" qu'ils complètent par un nombre.</p>
+
+<p>Qu'est-ce que ce "sosa" ? Ce mot est tout simplement un nom de famille. Jérome de Sosa reprit un système de numérotation des ancêtres introduit en 1590 par un historien allemand, Michel Eyzinger. Ce moine espagnol popularisa cette numérotation et l'histoire retint son nom, probablement plus simple à prononcer que celui d'Eyzinger. Par la suite, cette méthode fut peaufinée, entre autres par Kekule, un chimiste réputé, généalogiste à ses heures.</p>
+
+<p>La méthode est remarquablement simple.</p>
+
+<p><img class="droite" alt="arbre" src="sosa/arbre.png">
+On part de la racine de l'arbre (la personne dont on étudie la généalogie) et qu'on nomme d'un terme savant le "de cujus" auquel on attribue le nombre \(1\). Ensuite, on travaille par générations ascendantes: le père et la mère auxquels on attribue respectivement les nombres \(2\) et \(3\). On passe ensuite à la génération 2 (les 4 grands-parents) et on classe: d'abord le grand-père paternel et la grand-mère paternelle suivis du grand-père maternel et de la grand-mère maternelle; on leur attribue les nombres suivants: \(4, 5, 6\) et \(7\). Pour chacune de générations suivantes on procède d'une manière analogue.</p>
+
+<p>Que les féministes se rassurent; si à chaque étape, les hommes précèdent les femmes, c'est que, dans notre civilisation, le nom de famille est transmis par le père. Certes, ce système patriarcal fait également l'objet de critiques; d'ailleurs dans certains pays (Espagne, Portugal entre autres) les deux patronymes sont transmis. Toutefois, il est exclu de continuer plus loin, sinon on en doublerait le nombre à chaque génération; par la suite, il faudrait faire un choix qui s'il était libre, engendrerait souvent pas mal de désaccords.</p>
+
+<p>Voici donc comment sont numérotés les ancêtres jusqu'à la 4<sup>e</sup> génération.</p>
+
+<table class="n">
+<tr><th>4   </th><td> \(16\) </td><td> \(17\) </td><td> \(18\) </td><td> \(19\) </td><td> \(20\) </td><td> \(21\) </td><td> \(22\) </td><td> \(23\) </td><td> \(24\) </td><td> \(25\) </td><td> \(26\) </td><td> \(27\) </td><td> \(28\) </td><td> \(29\) </td><td> \(30\) </td><td> \(31\) </td></tr>
+<tr><th>3   </th><td colspan=2>\(8\)</td><td colspan=2>\(9\)</td><td colspan=2>\(10\)</td><td colspan=2>\(11\)</td><td colspan=2>\(12\)</td><td colspan=2>\(13\)</td><td colspan=2>\(14\)</td><td colspan=2>\(15\)</td></tr>
+<tr><th>2   </th><td colspan=4> \(4\)</td><td colspan=4> \(5\)</td><td colspan=4> \(6\)</td><td colspan=4> \(7\)</td></tr>
+<tr><th>1   </th><td colspan=8> \(2\)</td><td colspan=8> \(3\)</td></tr>
+<tr><th>0   </th><td colspan=16> \(1\)</td></tr>
+</table>
+
+<p>A chaque génération, le nombre de personnes double. A la 4<sup>e</sup> génération, il y a 16 individus et à la 5<sup>e</sup> il y en aura 32.</p>
+
+<p>Si l'on estime qu'une génération correspond à 20 ans, ce qui est le cas presque partout dans le monde à l'exception des pays "riches", une personne aurait donc eu 32 (= 2<sup>5</sup>)  ancêtres il y a 100 ans, 1024 (= 2<sup>10</sup>) il y a 200 ans, plus d'un million il y a 400 ans, plus d'un milliard il y a 600 ans, ...</p>
+ 
+<p>Mais où allons nous ainsi ? On sait pourtant que la population n'a cessé de croître. Au début du 20e siècle, il y avait à peine plus de 2 milliards d'êtres humains; en 2000, il y en a plus de 6 milliards. Où est le paradoxe ? A plusieurs endroits. Tout d'abord, frères et sœurs ont les mêmes ascendants et il faut donc effectuer, à chaque génération, la division par le nombre moyen d'enfants (par couple) ayant vécu assez longtemps pour s'être reproduits. Ensuite, par le fait qu'on retrouve à certaines générations les mêmes personnes: dans le temps, les déplacements étaient fort réduits et il y avait pas mal de consanguinité. Bref, autant de facteurs qui expliquent ce paradoxe apparent.</p>
+
+<p>Une petite question intéressante: combien y a-t-il d'individus au total jusqu'à la 4<sup>e</sup> génération ? La réponse est évidente puisqu'on les a tous numérotés et qu'on s'est arrêté au n°31.</p>
+
+<p>Mais on pourrait raisonner de manière plus intéressante et obtenir un résultat plus général.</p>
+
+<p>Le problème est de calculer le nombre d'individus jusqu'à la n<sup>e</sup> génération qui est égal à:</p>
+
+\[ 1+2+4+...+2^n \]
+ce qui se généralise au calcul de :<br />
+\[ 1+a+a^2+a^3+...+a^n \]
+
+<p>Si au lieu de "\(a\)" on avait écrit "\(r\)", on aurait immédiatement songer au calcul de la somme des \(n+1\) termes d'une suite géométrique de raison \(r\) dont le premier terme vaut \(1\). Au contraire, si on avait utilisé la lettre "\(x\)" au lieu de "\(a\)", on aurait reconnu une expression apparaissant dans les produits remarquables. Un bel exemple qui montre qu'il faut pouvoir se détacher des notations. Peu importe le sens de a !</p>
+
+<p>Posons \(S=1+a+a^2+a^3+...+a^n\). En multipliant \(S\) par \((a-1)\), les simplifications vont en cascade et le résultat donne \(a^{n+1}-1\); on obtient ainsi la formule générale:</p>
+
+\[ 1+a+a^2+a^3+...+a^n =(a^{n+1}-1)/(a-1) \]
+
+<p>Dans l'exemple qui nous intéresse, \(a=2\) et la somme \(1+2+2^2+2^3+...+2^n\) vaut \(2^{n+1}-1\).</p>
+
+<p>Revenons-en à cette numérotation.</p>
+
+<p>Comme chaque individu possède exactement deux parents, il est évident qu'il serait plus adapté d'écrire ces nombres en système binaire. La transformation de nombres décimaux en nombres binaires est remarquablement simple, comme expliqué dans l'article sur la <a href="../vie/magie.htm#2">magie</a>.</p>
+
+<p>Pour faciliter la lecture, limitons-nous à la 3<sup>e </sup> génération et traduisons donc le tableau précédent. Nous obtenons:</p>
+
+<table class="n">
+<tr><th> 3   </th><td>\(1000\)</td><td>\(1001\)</td><td>\(1010\)</td><td>\(1011\)</td><td>\(1100\)</td><td>\(1101\)</td><td>\(1110\)</td><td>\(1111\)</td></tr>
+<tr><th> 2   </th><td colspan=2>\(100\)</td><td colspan=2>\(101\)</td><td colspan=2>\(110\)</td><td colspan=2>\(111\)</td></tr>
+<tr><th> 1   </th><td colspan=4>\(10\)</td><td colspan=4>\(11\)</td></tr>
+<tr><th> 0   </th><td colspan=8>\(1\)</td></tr>
+</table>
+
+<p>Quelques observations sautent aux yeux.</p>
+
+<p>Dès la première génération, les hommes sont distingués des femmes; un homme est affecté d'un sosa se terminant par "\(0\)", une femme d'un sosa se terminant par "\(1\)" (les féministes sont rassurées !). Seule la racine de l'arbre, le sosa \(1\), peut représenter un être masculin ou féminin. Ce chiffre \(1\) qui se répercute à tous les étages au début de chacun des nombres binaires, n'apporte aucune information sur le sexe de la personne. Par contre, à partir du deuxième, tous les autres chiffres sont significatifs.</p>
+
+<p>Un petit exemple: le sosa \(14\) correspond au nombre \(1110\). En ôtant le premier chiffre non significatif, il reste les chiffres \(110\) qui désignent respectivement une femme, une femme et un homme. Il s'agit donc du père de la mère de la mère du "de cujus", racine de l'arbre.</p>
+
+<p>On remarque que la génération est tout simplement égale au nombre de chiffres binaires diminué d'une unité \(3\) pour le sosa \(14\) de l'exemple précédent).</p>
+
+<p>Grâce à cette numérotation binaire, il est facile de savoir le nombre de changements de patronyme qui a été nécessaire pour arriver d'un individu au "de cujus". Un changement de patronyme correspond au mariage d'une femme, donc à la présence d'un "\(1\)"; il est donc, tout simplement, égal au nombre de chiffres binaires "\(1\)" contenu dans le numéro du sosa (compte non tenu du "\(1\)" initial).</p>
+
+<p>Enfin, si l'on souhaite restreindre l'arbre à un autre individu, cela se fait très aisément à l'aide d'une simple substitution. Un exemple: l'arbre du sosa \(10\) s'obtiendra en prenant la partie supérieure à cet individu et en remplaçant partout le "\(10\)" initial par un "\(1\)".</p>
+
+<table class="n">
+<tr><td>\(10000\)</td><td>\(10001\)</td><td>\(10010\)</td><td>\(10011\)</td><td>\(10100\)</td><td>\(10101\)</td><td>\(100110\)</td><td>\(10111\)</td></tr>
+<tr><td colspan=2>\(1000\)</td><td colspan=2>\(1001\)</td><td colspan=2>\(1010\)</td><td colspan=2>\(1011\)</td></tr>
+<tr><td colspan=4>\(100\)</td><td colspan=4>\(101\)</td></tr>
+<tr><td colspan=8>\(10\)</td></tr></table>
+<br />devient<br /><br />
+<table class="n">
+<tr><td>\(1000\)</td><td>\(1001\)</td><td>\(1010\)</td><td>\(1011\)</td><td>\(1100\)</td><td>\(1101\)</td><td>\(1110\)</td><td>\(1111\)</td></tr>
+<tr><td colspan=2>\(100\)</td><td colspan=2>\(101\)</td><td colspan=2>\(110\)</td><td colspan=2>\(111\)</td></tr>
+<tr><td colspan=4>\(10\)</td><td colspan=4>\(11\)</td></tr>
+<tr><td colspan=8>\(1\)</td></tr>
+</table> 
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

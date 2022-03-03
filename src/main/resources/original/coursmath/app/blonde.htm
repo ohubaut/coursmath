@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Génétique - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="loi de Hardy-Weinberg" />
+<meta name="keywords" content="gène, dominant, récessif, hybride, loi de Mandel" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Génétique
+<br />
+	</div>
+	<div class="stitre">
+Une blonde aux yeux...?
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Nous allons dans cette section traiter de manière très simplifiée un petit problème de génétique et tenter de donner une réponse à la question:<br />
+Quelle est la probabilité que l'enfant de parents aux yeux bruns ait les yeux bleus ?</p>
+
+<p>Tout d'abord un peu de biologie. Elle nous apprend que les caractères sont déterminés par des gènes portés par des chromosomes. Pour simplifier les choses, supposons qu'en ce qui concerne la couleur des yeux il n'existe que deux gènes (la réalité est bien plus complexe !): \(B\) (correspondant aux yeux bruns) et \(b\) (correspondant aux yeux bleus). Chez un individu les chromosomes se répartissent par paires dans le noyau. Si un des deux chromosomes porte un gène, son compagnon dans la paire porte un allèle du gène, c'est-à-dire un gène ayant la même fonction. Dans notre cas on pourra donc avoir 3 types d'individus: \((B,B)\), \((B,b)\) et \((b,b)\); on dit qu'on a 3 génotypes différents. Quand 2 gènes sont en présence le caractère apparent de l'individu dépend de ceux-ci; s'il est de génotype \((B,B)\) (resp.\((b,b)\)) il est clair que l'individu aura les yeux bruns (resp.bleus). Par contre s'il est de génotype \((B,b)\), alors l'un des gènes l'emporte sur l'autre, domine l'autre (qui est dit récessif); l'individu aura les yeux bruns.</p>
+
+<p>En résumé, il y aura 2 phénotypes: yeux bruns et yeux bleus, correspondant aux génotypes \((B,B)\), \((B,b)\) d'une part et \((b,b)\) d'autre part.</p>
+
+<p>Nous allons à présent voir comment se répartit la population fille d'une telle population; nous ferons l'hypothèse que le caractère considéré (couleur des yeux) est indépendant du sexe des individus.</p>
+
+<p>Pour connaître le génotype des enfants d'un couple nous disposons de la loi de Mendel: un couple \((B,b), (B,b)\) aura 1/4 d'enfants \((B,B)\), 1/2 d'enfants \((B,b)\) et 1/4 d'enfants \((b,b)\). Schématiquement on a:</p>
+
+<img alt="" src="blon/fig1.gif">
+
+<p>Les autres cas sont encore plus évidents. Nous pouvons représenter la situation sur un schéma et nous allons évaluer les proportions d'enfants de types différents en considérant les rapports des aires des rectangles.</p>
+
+<img alt="" src="blon/fig2.gif">
+
+<p>Si nous désignons par \(D\), \(2H\) et \(R\) (initiales de dominants, hybrides et récessifs) les proportions d'individus de type \((B,B)\), \((B,b)\) et \((b,b)\) on a évidemment: \(D + 2H + R = 1\). Pour les enfants :<br />
+
+\(\small D' = D^2 + 2.(1/2.D.2H) + 1/4(2H)^2 = (D + H)^2\)<br />
+\(\small H' = 2.(1/2.D.2H) + 2DR + 2(1/2.2H.R) + 1/2(2H)^2 = (D + H).(H + R)\)<br />
+\(\small R' = 1/4(2H)^2 + 2.(1/2.R.2H) + R^2 = (H + R)^2\)</p>
+
+<p>On voit que dans la population fille on a la relation \(D ': H' : R' = \alpha^2 : \alpha\beta : \beta^2\). On peut mieux comprendre la situation en disant que \(\alpha \) est la proportion de gènes \(B\) et \(\beta \) la proportion de gènes \(b\) dans la population mère.</p>
+
+<p>À la génération suivante on aura:<br />
+\[ \small D'' = (D' + H')^2 = (\alpha^2 + \alpha\beta)^2 = \alpha^2(\alpha + \beta)^2 = \alpha^2 \\
+\small R'' = (D' + R')^2 = (\alpha\beta + \beta^2)^2 = \beta^2(\alpha + \beta)^2 = \beta^2 \\
+\small H'' = \alpha.\beta  \]
+ 
+<p>La population s'est stabilisée; c'est la loi de Hardy-Weinberg.<br />
+Remarquons que cette loi peut ne plus être valable dans d'<a href="genetic.htm">autres conditions</a>.</p>
+
+<p>Revenons à présent à notre problème initial. L'hypothèse selon laquelle les parents ont tous deux les yeux bruns nous informe que leur génotype est soit \((B,B)\), soit \((B,b)\). Schématiquement on se trouve dans la région entourée en gras.</p>
+
+<img alt="" src="blon/fig3.gif" >
+
+<p>Nous pouvons aisément calculer dans la population fille, la proportion d'individus de type \((b,b)\); elle sera de:</p>
+
+\[ \frac{H^2}{(D+2H)^2}=\frac{\beta ^2}{(\alpha+2\beta)^2}=\frac{\beta ^2}{(1+\beta)^2} \]
+
+<p>Il nous suffit donc d'estimer \(\beta \). Pour cela nous savons que dans la population totale il y a un pourcentage de \(\beta^2\) personnes aux yeux bleus qui sont nécessairement de génotype \((b,b)\). On déduit ainsi la valeur de \(\beta \) et dès lors, on obtient la solution du problème posé.</p>
+
+
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

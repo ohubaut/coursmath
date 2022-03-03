@@ -1,0 +1,190 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Applications linéaires - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="matrice, vecteur propre, application linéaire" />
+<meta name="keywords" content="algèbre, géométrie, application linéaire, vecteurs propres, classification" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Applications linéaires
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Soit une application linéaire du plan donnée par les équations:</p>
+
+\[ \begin{cases} x'=ax+by \\ y'=c x+dy \end{cases}\]
+
+<p>Ces équations peuvent s'écrire sous forme <a href="matrices.htm">matricielle</a>:</p>
+\[ \left\lgroup\matrix{x'\\y'}\right\rgroup = \left\lgroup\matrix{a & b \\ c & d}\right\rgroup \left\lgroup\matrix{x\\y}\right\rgroup \]
+
+<p>Pour être assuré d'avoir à faire avec une permutation, on doit évidemment pouvoir calculer \(x\) et \(y\) en fonction de \(x'\) et de \(y'\); le <a href="determ.htm">déterminant</a> \(D = ad-bc\) de la matrice doit donc être non nul.</p>
+
+<p>Cette permutation agit sur les points et les droites du plan. L'origine est fixée et, par conséquent toutes les droites qui passent par l'origine le sont également.<br />
+Demandons-nous si, par hasard, il n'existerait pas une droite conservée par l'application.<br />
+Pour cela il suffit que l'image de l'un de ses points soit alignée avec le point et l'origine, c'est-à-dire que les coordonnées du point-image soient proportionnelles aux coordonnées du point de départ.</p>
+
+<p>Soit un tel point de coordonnées \((x, y)\). Les coordonnées \((x', y')\) de son transformé doivent être proportionnelles.</p>
+
+\[ \begin{cases} x'=kx \\ y'=ky \end {cases}\]
+
+<p>Ses coordonnées vérifient donc un système homogène de deux équations:</p>
+
+\[ \begin{cases}ax + by = kx \\cx + dy = ky \end {cases}\]
+
+<p class="ni">ou encore</p>
+
+\[ \left\lgroup\matrix{a-k & b \\ c & d-k}\right\rgroup \left\lgroup\matrix{x\\y}\right\rgroup =0\]
+
+<p>On sait qu'un tel système n'admet en général que la solution \((0, 0)\) sauf si les deux equations sont proportionnelles, c'est-à-dire si le déterminant du système est nul.</p>
+
+<p>Le déterminant vaut: \((a-k)(d-k)-bc\) et \(k\) est donc solution de l'équation \(k^2-(a+d)k+(ad-bc)=0\)<br />
+La somme des racines vaut \(a + d\) (la somme des éléments de la diagonale, appelée trace) et le produit \(ad-bc\)  (le déterminant).<br />
+Les solutions sont appelées valeurs propres, et les directions ou vecteurs invariants, directions ou vecteurs propres.</p>
+
+<p>Soient \(k_1\) et \(k_2\), les deux solutions de cette équation, et considérons l'une d'elle (que nous noterons tout simplement \(k\)).<br />
+Comme les deux équations sont proportionnelles prenons l'une d'entre elles:<br />
+\((a-k)x+by = 0\) (si elle se ramenait à \(0=0\), on prendrait l'autre, et si c'était également le cas pour l'autre, il s'agirait tout simplement d'une homothétie !). La droite qu'elle représente est fixe.<br />
+Vérifions:</p>
+
+\[ \begin{aligned} 
+(a - k)x' + by' &  = (a - k)(ax + by) + b(cx + dy)\\
+ & = (a(a - k) + bc)x + ((a - k) + d)by\\
+ & = (a(a - k) + (a-k)(d-k))x + ((a-k) + d)by\\
+ & = (a - k)(a + d - k)x + (a - k + d)by\\
+ & = (a + d - k)((a - k)x + by)
+ \end{aligned} \]
+
+<p>On voit ainsi que le premier membre de l'équation d'une droite invariante correspondant à l'une des valeurs propres \(k\) est multiplié par \(a+d-k\), c'est-à-dire par l'autre valeur propre.<br />
+Pour chacune des deux valeurs \(k_1, k_2\) de \(k\) on obtient une direction invariante.<br />
+En posant:</p>
+
+\[ \begin{cases} X = (a-k_1)x + by \\ Y = (a-k_2)x + by \end {cases}\]
+
+<p class="ni">dans ce nouveau système de coordonnées l'application linéaire prend la forme simple:</p>
+
+\[ \begin{cases} X' = (a+d-k_1)X \\Y' = (a+d-k_2)Y\end {cases}\]
+ou
+\[ \begin{cases} X' = k_2X \\Y' = k_1Y\end {cases}\]
+
+<p>La transformation est devenue très facile à se représenter:<br />
+\(X' Y' = k_1 k_2 X Y\) le coefficient vaut précisément le déterminant \(ad-bc\) de la transformation. Si le déterminant est négatif nous remplacerons \(k_2\) par \(-k_2\) et moyennant une symétrie par rapport à l'axe X, nous aurons des équations de la même nature.</p>
+
+\[ \begin{cases} X' = \alpha X\\ Y' = \beta Y \end {cases}\]
+
+<p class="ni">avec un produit \(\alpha \beta\) positif que nous posons égal à \(h^2\). La transformation est la composée d'une homothétie de rapport \(h\) et d'une transformation d'équations:</p>
+
+<img class="droite" alt="" src="appl/rhyp.gif">
+\[ \begin{cases} X' = \lambda X\\ Y' = \lambda ^{-
+1} Y \end {cases}\]
+
+<p>Les courbes d'équations \(X Y\) = constante, c'est-à-dire les hyperboles ayant les axes coordonnés comme asymptotes sont invariantes.<br />
+Cette application linéaire est appelée "rotation hyperbolique".</p>
+
+<p>L'application linéaire générale est donc la composée d'une rotation hyperbolique, d'une homothétie et, éventuellement d'une symétrie par rapport à un axe coordonné.</p>
+
+<p>Tout cela est bien beau, mais à y regarder de plus près, pas très correct !</p>
+
+<p>Nous avons travaillé avec une équation du second degré et nous avons supposé qu'elle possédait deux solutions réelles.</p>
+
+<p>Ce n'est pas très grave, mais il faut vérifier ce qui se passe lorsque l'équation possède deux solutions égales (cas très particulier) ou deux solutions complexes conjuguées.</p>
+
+<p>Regardons d'abord rapidement le cas exceptionnel où les deux solutions sont confondues.<br />
+<img class="gauche" alt="" src="appl/cisa.gif"> Il n'y a alors qu'une direction invariante; prenons-la comme axe \(X\), et choisissons une autre direction comme axe \(Y\). Les équations deviennent:</p>
+
+\[ \begin{cases} X'=k X\\ Y'= mX+nY \end {cases}\]
+
+<p class="ni">mais comme il n'y a qu'une direction invariante \(n = k\), et que les équations sont le produit d'une homothétie de rapport k par un cisaillement parallèle à l'axe Y d'équations:</p>
+
+\[ \begin{cases} X' = X \\ Y' = pX + Y \end {cases}\]
+
+<p>Le cas où les deux solutions sont complexes conjuguées est plus amusant. Notons les deux solutions \(k\) et \(\bar k\) et remarquons que leur produit (le déterminant) est donc positif. Tous les calculs précédents restent valables et se simplifient. On a:</p>
+
+\[ \begin{cases} X = (a-k)X + bY \\Y = (a-\bar k)X + bY \end {cases}\]
+et
+\[ \begin{cases} X' = \bar k X \\Y' = k Y \end {cases}\]
+
+<p>Nous avons \(Y=\bar X\); (n'oublions pas que nous travaillons avec des axes coordonnés complexes !)<br />
+Pas de panique; posons tout simplement:</p>
+
+\(X = U + i V\)  et   \(k=r (\mathbf{cos~} \varphi + i \mathbf{sin~} \varphi)\)
+
+<img class="droite" alt="" src="appl/rell.gif"> 
+<p>En séparant partie réelle et partie imaginaire, il vient: </p>
+\[ \begin{cases} U' = r.( U\mathbf{cos~} \varphi + V\mathbf{sin~} \varphi)\\
+V' = r.(-U\mathbf{sin~} \varphi + V\mathbf{cos~} \varphi)\end{cases}\]
+
+<p>Comme dans le cas des deux racines réelles distinctes l'application est la composée d'une homothétie de rapport \(r\) et d'une rotation, non plus hyperbolique, mais elliptique. Nous retrouvons (si le repère est orthonormé) les équations d'une similitude.</p>
+
+<p>Terminons par un mot au sujet des directions.</p>
+
+<p class="ni">Si la droite n'est pas une direction propre:</p>
+
+<ul>
+<li>dans le cas de deux directions propres, ses transformées se rapprocheront de plus en plus de l'une des deux directions propres, de celle correspondant à la plus grande des 2 valeurs propres (en valeur absolue).</li>
+<li>si les deux valeurs propres sont égales, ses transformées se rapprocheront de l'unique direction propre.</li>
+<li>enfin, dans le cas où il n'y a pas de valeur propre réelle, la direction de la droite "tourne". Elle peut éventuellement revenir à sa position initiale dans le cas où l'argument du complexe k est un multiple rationnel de &pi;.</li>
+</ul>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

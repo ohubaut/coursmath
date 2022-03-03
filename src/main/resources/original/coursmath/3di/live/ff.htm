@@ -1,0 +1,23 @@
+<html>
+<body>
+
+    <APPLET ARCHIVE="live.jar" CODE="Live.class" width=600 height=600 align="left">
+    <PARAM NAME=BGCOLOR VALUE="#000000">
+    <PARAM NAME="INPUT" value="
+    Graphics3D
+    [{   EdgeForm[],
+         {{{  
+        {FaceForm [RGBColor[1, 0, 1]], Polygon[{{ 1, 1, 1}, { 1, 1,-1}, {-1, 1,-1}, {-1, 1, 1}}]},
+        {FaceForm [RGBColor[1, 0, 0]], Polygon[{{ 1, 1, 1}, { 1, -1, 1}, { 1,-1,-1}, { 1, 1,-1}}]},
+        {FaceForm [RGBColor[1, 1, 0]], Polygon[{{ 1, 1, 1}, {-1, 1, 1}, {-1,-1, 1}, { 1,-1, 1}}]},
+        {FaceForm [RGBColor[0, 1, 1]], Polygon[{{-1,-1,-1}, {-1, 1,-1}, {-1, 1, 1}, {-1,-1, 1}}]},
+        {FaceForm [RGBColor[0, 1, 0]], Polygon[{{-1,-1,-1}, {-1,-1, 1}, { 1,-1, 1}, { 1,-1,-1}}]},
+        {FaceForm [RGBColor[0, 0, 1]], Polygon[{{-1,-1,-1}, { 1,-1,-1}, { 1, 1,-1}, {-1, 1,-1}}]},
+         }}}
+    },
+        {Lighting -> False, Boxed ->False, Background -> GrayLevel[0]}
+    ]">
+    </APPLET>
+
+</body>
+</html>

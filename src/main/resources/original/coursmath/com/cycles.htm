@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Cycles - Complexes - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut">
+<meta name="description" content="plan de Gauss, comparaison droites et cercles">
+<meta name="keywords" content="imaginaires, complexes, plan, inversion">
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen">
+<link type="text/css" rel="stylesheet" href="com.css" media="screen">
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print">
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico">
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-10', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Cercles et droites
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Le module d'un <a title="Quelques rappels sur les nombres complexes" href="imagin.htm">nombre complexe</a> \(z\) est sa distance à l'origine ; si \(\bar{z}\) désigne le conjugué de \(z\), c'est la racine carrée du produit \(z\bar{z}\).</p>
+
+<p>L'ensemble des complexes tels que \(z\bar{z}=R^2\) est donc un cercle de rayon \(R\) centré à l'origine.<br />
+Si on effectue une translation on obtient \((z+k)(\bar{z}+\bar{k})=R^2\) c'est-à-dire l'ensemble de tous les cercles. L'équation des cercles est donc de la forme \(z\bar{z}+k\bar{z}+\bar{k}z+l=0\) avec \(l=k\bar{k}-R^2\), réel.<br />
+Considérons à présent la transformation appliquant \(z\) sur \(1/z\).<br />
+Le transformé du cercle est \(1+kz+\bar{k}\bar{z}+lz\bar{z}=0\). Si \(l\) n'est pas nul, c'est l'équation d'un autre cercle, sinon c'est une droite.</p>
+
+<p>Pour rendre les choses plus harmonieuses, considérons l'ensemble des droites et des cercles dont l'équation est:</p>
+
+\[ az\bar{z}+k\bar{z}+\bar{k}z+d=0 \]
+
+<p class="ni">avec \(a\) et \(d\) réels. Nous les appellerons cycles.</p>
+
+<p>Si on pose \(k=½(b+ic)\) et que l'on remplace \(z\) par \(x+iy\), on retrouve l'<a href="../2de/puissanc.htm">équation classique</a> :</p>
+
+\[ a(x^2+y^2)+bx+cy+d=0 \]
+
+<p>Cet ensemble est conservé par l'application de \(z\) sur \(z^{-1}\).<br />
+De plus l'ensemble des droites et des cercles est évidemment conservé par les transformations \(z'=az+b\).</p>
+<p>On voit ainsi que l'ensemble des droites et cercles est conservé par les transformations \(z'=(az+b)/(cz+d)\). Elles constituent le groupe conforme du plan.<br />
+Ce sont des permutations des points du plan complété par un point à l'infini, le <b>plan conforme</b>. Toute droite est complétée par le point à l'infini.<br />
+Le plan conforme possède de belles propriétés relatives à ses cycles (cercles et droites).<br />
+Trois points appartiennent toujours à un et un seul cycle. En particulier, si les trois points sont colinéaires ou si un des points est le point à l'infini, le cycle est une droite.<br />
+Si deux cycles ont un point commun et forment un angle non nul en ce point, ils ont en commun un second point (si les deux cycles sont des droites, on voit l'utilité d'avoir ajouté un point à l'infini!)</p>
+
+<p>Si l'on considère la transformation qui applique \(z\) sur \(1/\bar{z}\), elle possède une interprétation géométrique simple. Tout couple de points homologues est aligné avec l'origine; de plus le produit des distances à celle-ci est constant. C'est la transformation appelée <b>inversion</b>.<br />
+Elle conserve également l'ensemble des cycles.</p>
+
+<p>Soient deux cercles d'équations:</p>
+
+\[ a(x^2+y^2)+bx+cy+d=0 ~~~~~~\text{et}~~~~~~ a'(x^2+y^2)+b'x+c'y+d'=0 \]
+<p>L'angle de deux cercles \(C\) et \(C'\) est, par définition, l'angle de leur tangente en un point d'intersection.<br />
+<img class="droite" alt="" src="cycl/angle.gif"> Si \(p\) est un des points d'intersection de \(C\) et \(C'\), on retrouve l'angle des deux tangentes comme angle des deux rayons (la tangente est perpendiculaire au rayon). L'angle des deux cercles est l'angle des vecteurs \(\vec{pc}\) et \(\vec{pc'}\).</p>
+
+<p>On a : \(\vec{cc'}=\vec{pc'}-\vec{pc}\)<br />
+\(cc'^2=pc'^2-2\vec{pc}\vec{pc'}+pc^2= R'^2-2\vec{pc}\vec{pc'}+R^2\)</p>
+<p class="ni">on en déduit:</p>
+
+\[ \begin{align} pc.pc'& = \frac{1}{2}(R^2+R'^2-cc'^2) \\ & = \small {\frac {1}{2} \left [ 
+\frac {b^2+c^2-4ad}{4 a^2} + \frac {b'^2+c'^2-4a'd'}{4a'^2} - \left ( \frac b {2a} - \frac {b'}{2a'} \right )^2 - \left ( \frac c {2a} - \frac {c'}{2a'} \right )^2 \right ]} \\ & = \frac {bb' + cc' -2(ad'+a'd)}{2aa'} \end{align} \]
+
+<p>Si <i>θ</i> désigne l'angle des deux cercles, on a:</p>
+
+\[ \mathbf{cos~}\theta=\frac {bb'+cc'-2(ad'+a'd)}{\sqrt {b^2+c^2-4ad}\sqrt {b'^2+c'^2-4a'd'}} \] 
+
+<p>On remarque que si \(a\) ou \(a'\) est nul un ou deux des cercles deviennent des droites et on trouve la formule usuelle donnant l'angle de deux droites.</p>
+
+<p>Dans une transformation conforme du plan, on peut facilement vérifier que la forme \(b^2+c^2-4ad\) est invariante (à un facteur près). Les <a href="complexe.htm">transformations conformes</a> conservent les cycles et les angles.</p>
+
+<p>On rapprochera ainsi la formule donnant l'angle de deux cycles de celle donnant le produit scalaire de deux vecteurs du plan et l'utilisation de la <a href="../2de/2edegre.htm#B">forme bilinéaire symétrique</a> associée à la forme quadratique.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="compld.htm">Complexes</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

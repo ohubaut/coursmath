@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Stella octangula - En 3 dimensions - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Stella octangula" />
+<meta name="keywords" content="polyèdre, Kepler, cube, sous-groupes" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../3di/3di.css" media="screen" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript" src="three.min.js"></script>
+<script type="text/javascript" src="WebGL.js"></script>
+<script type="text/javascript" src="MTLLoader.js"></script>
+<script type="text/javascript" src="OBJLoader.js"></script>
+<script type="text/javascript" src="TrackballControls.js"></script>
+<script type="text/javascript" src="renduMTL.js"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-4', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body onload="window.focus();">
+<div id="container">
+<a id="H"></a>
+<!--
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+-->
+	<div class="titre">
+<br />
+Stella octangula
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Ce polyèdre, imbrication de deux tétraèdres dans un cube, a été découvert par Kepler.<br>
+Il permet d'explorer, de manière fort simple, la structure du groupe des 48 automorphismes du cube.</p>
+
+	<div id="polanim" class="centre" style="width:360px; height:360px; border:2px solid #f39;">
+<script>showPoly("stellacol.obj", "polanim",20);</script>
+	</div>
+
+	<p>Parmi ces automorphismes, on peut distinguer les déplacements et les retournements (ou antidéplacements); on peut les classer selon qu'ils conservent ou permutent les deux tétraèdres.<br>
+On aboutit ainsi à 4 classes de 12 automorphismes:</p>
+
+<ol>
+<li>les déplacements conservant les tétraèdres,<br>
+<li>les déplacements permutant les tétraèdres,<br>
+<li>les retournements conservant les tétraèdres,<br>
+<li>les retournements permutant les tétraèdres.<br>
+</ol>
+<p>Il est évident que la première classe est un sous-groupe, de même que la réunion des classes 1 et 2 (les déplacements conservant un cube), 1 et 3 (les isométries d'un tétraèdre) ainsi que 1 et 4 (groupe moins connu, mais déjà identifié par Léonard de Vinci).</p>
+		</div>
+	</div>
+	<div id="fermeture">
+<br />
+<img alt="fermer" src="../fermer.gif" OnClick="javascript=parent.close()"><br />
+<br />
+	</div>
+</div>
+</body>
+</html>

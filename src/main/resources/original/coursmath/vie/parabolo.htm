@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Origami et paraboloïde hyperbolique - Vie courante - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="quadrique, gaz parfaits, parabole, origami" />
+<meta name="keywords" content="enseignement, paraboloïde, algèbre, géométrie, applications" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="vie.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript">
+    function ppol(fichier) 
+{window.open(fichier,'polyouri','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-5', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br>
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br>
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br><br>
+	</div>
+	<div class="titre">
+<br>
+Origami et paraboloïde hyperbolique
+<br>
+	</div>
+	<div class="stitre">
+	</div>
+<br><br>
+	<div class="central">
+		<div class="texte">
+<p>L'origami, au sens strict, consiste à utiliser une feuille de papier sans la découper ; la seule opération permise est le pliage dans un sens (montagne) ou dans l'autre (vallée). Il paraît, à première vue, impossible d'obtenir des formes courbes et pourtant ...</p>
+
+<p>Voici un pliage extrêmement simple qui conduit à un <a href="javascript:ppol('../polyouri/parabo-regle.htm');">paraboloïde hyperbolique</a>. Cette surface est l'une des figures les plus simples rencontrée dans différents domaines.</p>
+
+<p>À l'école primaire, on peut faire un graphique de la "table de multiplication". On prend pour base un quadrillage dessiné sur une plaque où il est possible de planter un bâtonnet (polystyrène expansé par exemple). Les enfants habitués au jeu de combat naval se débrouilleront sans peine dans le système de coordonnées.<br>
+Chaque case est déterminée par deux informations, sa position horizontale et sa position verticale. Il suffit donc de numéroter les rangées et les colonnes, et chaque case sera repérée par deux nombres naturels. Dans la case choisie, on plante un bâtonnet dont la mesure, en centimètres, est égale au produit des deux nombres. Et voila un morceau de paraboloïde hyperbolique qui se crée.<br>
+Algébriquement, il correspond à une portion du graphique de la fonction <i>z = x*y</i>, limité aux valeurs naturelles de x et y.</p>
+
+<p>Par la suite, on passera aux entiers et on pourra aisément compléter le graphique.</p>
+
+<p>Dans l'enseignement secondaire, le cours de physique étudie les <a href="../polyouri/parabhyp.htm" target="_blank">lois des gaz parfaits</a> (Charles, Gay-Lussac, Boyle-Mariotte) et cette fois les variables <i>x, y, z</i> sont des réels positifs correspondant respectivement à la pression au volume et à la température. 
+À volume constant ou pression constante, on obtient la loi de Charles ou celle de Gay-Lussac représentées dans les plans <i>x = x<sub>0</sub></i> ou <i>y = y<sub>0</sub></i> par des droites ; la loi de Boyle-Mariotte sera décrite par des hyperboles situées dans les plans <i>z = z<sub>0</sub></i> à température constante.</p>
+
+<p>Un autre rencontre avec le paraboloïde hyperbolique se passe lors de l'étude de la <a href="../mat/bary.htm#BARY" target="ext">recherche du barycentre</a> de 4 points massiques non coplanaires.</p>
+<div align="center"><img alt="quadrilatère gauche" src="para/para.png"></div>
+<p>Dans un repère orthonormé, considérons le paraboloïde hyperbolique d'équation \(z = kxy\). Ses deux familles de droites sont données par les sections à \(x\)
+ et \(y\) constants. En projetant orthogonalement dans le plan \(0xy\), on obtient deux familles de parallèles aux axes coordonnés.<br>
+Parmi toutes les droites du plan \(z=0\), choisissons deux couples de droites symétriques délimitant un carré centré à l'origine de côté 2a. Les sommets ont pour coordonnées \((x, y) = (\pm a, \pm a)\). Ces quatre points auront donc pour coordonnée \(z, ka^2 \text{ou} -ka^2\) et délimitent un quadrilatère gauche.<br>
+Partons d'un quadrilatère gauche possédant ces propriétés de symétrie. Il définit donc un unique paraboloïde. Les segments de droites s'appuyant sur deux côtés opposés ont une longueur variable; elle est maximum sur les côtés et minimum pour le segment joignant les milieux des côtés opposés.</p>
+
+<p>Passons à l'origami et essayons de construire à l'aide d'un carré de papier un tel morceau de paraboloïde. Ses droites seront obtenues à l'aide des parallèles aux paires de côtés opposés. Toutefois, les segments de droites ne pourront pas être égaux ainsi que nous venons de le voir. La solution consiste à déformer par pliage ces segments. Voici la solution proposée.</p>
+
+<p>Prenons une feuille de papier carrée et deux familles de droites parallèles aux côtés régulièrement espacées. Dessinons ensuite les carrés concentriques obtenus. Ces carrés seront pliés le long de leurs côtés alternativement en "montagne" et "vallée" selon le schéma ci-dessous. Nous dessinerons les montagnes en rouge et les vallées (évidemment) en vert !</p>
+<div align="center"><img alt="origami" src="para/origami.png"></div>
+<p>Ce modèle une fois construit donne, par inclinaison des bords, différentes figures. On peut facilement montrer qu'elles sont toutes d'excellentes approximations de paraboloïdes hyperboliques.</p>
+
+Quelques conseils pratiques pour la réalisation de ce beau modèle.
+<ul>
+<li>Tout d'abord, utilisez, vous l'aviez deviné, du papier quadrillé mais choisissez-le assez lourd (120g/m² minimum).<br>
+<li>Si possible reproduisez, éventuellement par transparence, le dessin sur les deux faces (il est plus facile de plier selon une "montagne" que selon une "vallée").<br>
+<li>En pliant, ne dépassez surtout pas la zone à plier ; si le papier est suffisamment solide, marquez le pli en pressant le dos d'un couteau.<br>
+<li>Enfin, pour la facilité, rigidifiez les 4 bandes latérales, soit en collant une double épaisseur ou, mieux, une mince baguette de bois (comme celles utilisées pour les brochettes).
+</ul>
+
+<p>Bon amusement.</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br>
+		<table><tr>
+		<td><a href="vied.htm">Vie courante</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br>
+	</div>    
+</div>
+</body>
+</html>

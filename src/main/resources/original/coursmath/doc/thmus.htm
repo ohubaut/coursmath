@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Documents - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résumés" />
+<meta name="keywords" content="groupes, musique, algèbre, géométrie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="doc.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript">
+    function pdf(fichier) 
+{window.open(fichier,'pdf','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<style type="text/css">
+.k{background-color:#c00;}
+.p{background-color:#0c0;}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-11', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+<br>
+<div class="droite"><a href="javascript:pdf('thmus.pdf');">Télécharger la version pdf (16 pages)</a></div>
+<br>
+	<div class="titre">
+<br />
+Pourquoi n'ai-je jamais rien compris au solfège ?
+<br />
+	</div>
+	<div class="stitre">
+par<br><br>
+<b>Xavier Hubaut</b><br><br>
+Professeur émérite - Université Libre de Bruxelles - 
+Département de Mathématique
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p class="st">Prologue</p>
+<p>Do Ré Mi Fa Sol La Si Do.</p>
+<p>Jusque là tout va bien. Mais on veut tout m'expliquer et c'est là que les ennuis commencent. J'ai chanté une gamme, oui, mais je n'en connais pas la "définition".</p>
+<p>Je ne m'inquiète pas, on va m'apprendre.</p>
+
+<b><i>Tous les textes en italiques sont extraits de différents solfèges.</i></b><br>
+<ul>
+<li> <i>Une gamme est une série de notes conjointes.</i><br>
+<li> Conjointes ? Je ne comprends pas, peut-être est-ce un synonyme de consécutives, mais quand je dis des mots ils sont toujours consécutifs, donc je ne vois pas.<br>
+<li> <i>Une gamme n'utilisant que des demi-tons est une gamme chromatique.</i><br>
+<li> Et c'est quoi un demi-ton ? Probablement la moitié d'un ton.<br>
+<li> <i>Les notes conjointes d'une gamme ne sont pas toutes séparées par le même intervalle (ou la même distance).</i><br>
+<li> Il me semble en effet que la distance en ré et mi est plus grande qu'entre mi et fa. (Tiens voilà que je me mets à parler comme le professeur de solfège) et c'est quoi l'intervalle, la distance ?<br>
+<li> <i>La distance la plus grande entre deux notes conjointes est le ton.<br>
+La distance la plus petite entre deux notes conjointes est le demi-ton.<br>
+La distance qui sépare deux notes formant un ton est deux fois plus grande que celle qui sépare deux notes formant un demi-ton.<br>
+On peut donc toujours diviser un ton en deux demi-tons.</i><br>
+<li> Là, on tourne en rond. Je n'ai toujours pas compris ce qu'étaient les tons les demi-tons mais, patience, on va m'expliquer.<br>
+<li> <i>Un demi-ton est dit chromatique lorsque les deux notes qui le forment portent le même nom tout en ayant des sons différents (exemple: Fa et Fa dièse ). Un demi-ton qui n'est pas chromatique est diatonique.</i><br>
+<li> Ah oui !<br>
+<li> <i>Un demi-ton est dit diatonique quand les deux notes qui le forment ne portent pas le même nom.<br>
+Un demi-ton qui n'est pas diatonique est chromatique.</i><br>
+<li> Et vice-versa, mais je n'y comprends toujours rien. On me dit maintenant qu'il y a deux espèces de demi-ton.<br>
+<li> <i>Le comma est la plus petite division du ton.<br>
+Un ton comporte neuf commas.<br>
+En théorie, le demi-ton diatonique contient quatre commas et le demi-ton chromatique en contient cinq.<br>
+Il est évident que les instruments à clavier qui sont tempérés de façon égale ne peuvent pas rendre compte de cette différence.<br>
+En revanche, les instrumentistes à cordes sont tenus de jouer différemment les deux types de demi-tons pour ne pas jouer faux.</i><br>
+<li> La seule chose où je suis d'accord c'est que 4 + 5 = 9, mais pour le reste ? Et vraiment je ne peux pas trouver plus petit qu'un comma : un demi-comma ? Non, ce n'est pas possible. <br>
+</ul>
+<p>Changeons de professeur</p>
+<ul>
+<li> C'est quoi une gamme ?<br>
+<li> <i>Succession de notes entre lesquelles il existe des rapports déterminés.</i><br>
+<li> Ça a l'air plus sérieux ; ça me plait mieux, les choses sont déterminées, mais comment ?<br>
+<li> <i>Ainsi, dans la gamme majeure, les rapports entre les notes sont organisés par tons et par demi-tons.</i><br>
+<li> Les revoilà les demi-tons !<br>
+<li> <i>Un demi-ton est l'intervalle le plus petit de la musique européenne. Il existe deux sortes de demi-tons : le diatonique, formé par deux notes de noms différents, et le chromatique, formé de deux notes portant le même nom mais différenciées par l'altération qu'elles portent.</i><br>
+<li> Et c'est quoi la musique européenne : les groupes rocks ou bien les "vrais" compositeurs : Gershwin par exemple (ah !, non il n'est pas européen). ça ne fait rien, avançons. C'est quoi un intervalle ?<br>
+<li> <i>Distance séparant deux sons entre eux.</i><br>
+<li> Pas mal, la revoilà la distance, mais encore<br>
+<li> <i>Trois cents savarts séparent deux notes de même nom (octave) et cinquante savarts deux notes voisines.</i><br>
+<li> Tiens ! On ne m'avait pas encore parlé de ceux là. Et les demi-tons chromatiques et diatoniques ça fait combien de savarts ? Et le comma ?<br>
+<li> <i>Le comma désigne le plus petit intervalle perceptible. En fait, la mesure du comma diffère selon les théoriciens.</i><br>
+<li> Et probablement de l'acuité auditive, non ? De plus si le comma diffère selon les théoriciens, ce que m'a raconté l'autre professeur ne tient plus, les demi-tons varient, les tons varient, bref on pédale dans la semoule.<br>
+</ul>
+<p>Un troisième professeur me fera peut-être comprendre.</p>
+<ul>
+<li> <i>Il y a deux espèces de demi-tons, le demi-ton chromatique et le demi-ton diatonique.</i><br>
+<li> Oui, oui, on m'en a déjà parlé.<br>
+<li> <i>Le demi-ton chromatique se place entre deux notes qui se suivent et qui portent le même nom, mais dont l'une est altérée.</i><br>
+<li> Ah ! la pauvre<br>
+<li> <i>Le demi-ton diatonique se place entre deux notes qui se suivent et qui n'ont pas le même nom.</i><br>
+<li> Mais pourquoi deux demi-tons différents ?<br>
+<li> <i>Le ton est constitué de deux demi-tons, l'un chromatique et l'autre diatonique.</i><br>
+<li> Ah ! Voilà, on divise mal les tons. Mais on pourrait peut-être faire mieux, non ?<br>
+<li> <i>La distance entre Do et Ré est égale à un ton. Il y a un demi-ton chromatique entre Do et Do# et un demi-ton diatonique entre Do# et Ré.<br>
+D'un point de vue pratique, le demi-ton chromatique et le demi-ton diatonique sont égaux. Cependant, d'un point de vue théorique, ces deux demi-tons ne sont pas tout à fait égaux. La distance entre un demi-ton chromatique est légèrement plus grande que la distance entre un demi-ton diatonique.</i><br>
+<li> Oh la la ! Ça commence à s'embrouiller.<br>
+<li> <i>En fait, un ton peut être divisé en 9 parties égales et chacune d'entre elles est appelée un comma. Ainsi, un ton est constitué de 9 commas. Le demi-ton chromatique équivaut à 5 commas et le demi-ton diatonique équivaut à 4 commas.</i><br>
+<li> Les revoilà les commas, mais tout à l'heure on m'a dit qu'il y en avait plusieurs. Et puis c'est quoi des parties égales. Peut-être que si on commençait par me l'expliquer, ce serait plus clair.<br>
+<li> <i>Sur les instruments à clavier comme le piano, l'orgue ou la guitare, le demi-ton est tempéré, c'est-à-dire que le ton est divisé en 2 demi-tons égaux de quatre commas et demi chacun. Sur un piano ou sur la guitare, un Do dièse et un Ré bémol sont joué sur la même touche ou dans la même case. Pour cette raison, ces instruments sont qualifiés d'instruments tempérés ou à tempérament. Le tempérament consiste à diviser une octave en 12 demi-tons égaux.</i><br>
+<li> Oui mais c'est quoi égal ?<br>
+<li> <i>Par contre, sur les instruments à cordes comme le violon, les exécutants tiennent compte de la différence qui existe entre un demi-ton chromatique (5 commas) et un demi-ton diatonique (4 commas).</i><br>
+<li> Tiens ma guitare est pourtant un instrument à cordes et je ne trouve pas ça.<br>
+</ul>
+<p>Voilà pourquoi je n'ai jamais rien compris au solfège.<br>
+A présent, soyons sérieux !</p>
+
+<p class="st">Essai d'explication</p>
+
+<p>Nous allons tenter de répondre "sérieusement" à quelques questions élémentaires :
+<ul>
+<li> Pourquoi l'octave est-elle divisée en 12 intervalles (demi-tons) ; <a href="#pytha">pourquoi 12 ?</a><br>
+<li> Pourquoi y a-t-il 7 notes dans notre gamme ; <a href="#sept">pourquoi 7 ?</a><br>
+<li> Qu'en est-il de ces demi-tons chromatiques et diatoniques valant respectivement 5 et 4 commas ; <a href="#demi">pourquoi 5 et 4 ?</a><br>
+</ul>
+<p>Les sons musicaux sont principalement produits par deux types d'instruments : les instruments à cordes et les instruments à vent.<br>
+Dans les deux cas une onde se propage, dans une corde ou dans une colonne d 'air, et le son ainsi véhiculé possède diverses caractéristiques parmi lesquelles les fréquences et intensités des diverses composantes de cette onde ainsi que d'autres caractéristiques (attaque, fin) qui en font essentiellement le timbre dont nous ne nous préoccuperons pas.</p>
+<p>Que le son soit produit par frottement ou pincement d'une corde, ou par vibration d'une colonne d'air, diverses fréquences sont présentes (cf. équation des cordes vibrantes) : la fondamentale (ayant la fréquence la plus basse) ainsi que les "harmoniques"(dont la fréquence est un multiple entier de celle de la fondamentale).</p>
+<p>Ce sont ces harmoniques qui ont conduit à la construction de l'échelle de sons utilisée dans le monde occidental.</p>
+<p>L'intensité des différentes harmoniques dépend de l'instrument. Dans le cas d'une flûte (ou de la voix de Tino Rossi !), seule la fondamentale est bien perçue; les autres harmoniques ont des intensités très faibles. Par contre les cuivres ont en général des harmoniques d'intensités fort importantes, ce qui leur donne leur éclat.</p>
+<a id="harm"></a>
+<br>
+<div class="centre">
+<table class="n">
+<tr><th>Harmonique</th><th>Nom</th><th>Exemple approché</th></tr>
+<tr><td>1</td><td>Fondamentale</td><td>Do</td></tr>
+<tr><td>2</td><td>Octave (1)</td><td>Do</td></tr>
+<tr><td>3</td><td>Quinte (1)</td><td>Sol</td></tr>
+<tr><td>4</td><td>Octave(2)</td><td>Do</td></tr>
+<tr><td>5</td><td>Tierce (2)</td><td>Mi</td></tr>
+<tr><td>6</td><td>Quinte (2)</td><td>Sol</td></tr>
+<tr><td>7</td><td>Septième (2)</td><td>Sib</td></tr>
+<tr><td>8</td><td>Octave(3)</td><td>Do</td></tr>
+<tr><td>9</td><td>Seconde(3)</td><td>Ré</td></tr>
+<tr><td>10</td><td>Ré</td><td>Mi</td></tr>
+<tr><td>...</td><td>...</td><td>...</td></tr>
+</table>
+<br>
+</div>
+<p>On a principalement utilisé, outre l'octave, la 3<sup>e</sup> harmonique (quinte) depuis <a href="#pytha">Pythagore</a>, et plus tard la 5<sup>e</sup> harmonique (tierce) chez <a href="#zarlin">Zarlino</a>.</p>
+<p>La 7<sup>e</sup> harmonique a été déclarée "fausse" et n'a jamais été utilisée dans la construction d'une échelle des sons.</p>
+
+<p class="st">Généralités sur la construction d'une échelle de sons</p>
+
+<p>Pour construire une échelle de sons, Pythagore utilise le "cycle" des quintes. Cette méthode était déjà (inconsciemment) utilisée depuis fort longtemps, et a continué à être développée bien longtemps après. Quelles en sont les conséquences ?<br>
+Etant donné un son "pur", c'est-à-dire possédant une seule fréquence, le son de fréquence double est appelé l'octave et on lui attribue le même nom (bien que certaines personnes soient troublées et perçoivent comme très différente une même mélodie mais jouée à une octave inférieure !).<br>
+D'autre part, lorsqu'une foule chante, il arrive que la tonalité choisie soit trop haute (ou trop basse) pour certaines personnes, mais la baisser (ou la hausser) d'une octave rendrait le chant tout aussi difficile. On observe alors que ces personnes chantent à la quinte. On retrouve également ce type de chant très primitivement harmonisé à la quinte dans d'anciennes  chansons folkloriques qu'elles soient celtes ou corses.<br>
+La quinte est associée à la troisième harmonique, c'est-à-dire à un son d'une fréquence triple.  Si on ramène la troisième harmonique (fréquence triple) dans l'intervalle formé par le fondamental et l'octave, c'est-à-dire entre une fréquence 1 et une fréquence 2, on obtient la quinte de fréquence 3/2. Pour fixer les idées si on appelle le son de la fondamentale Do, la quinte sera dénommée Sol.</p>
+<p>Pythagore construit alors une échelle musicale en "superposant" des quintes. La quinte de la quinte sera dénommée Ré et aura une fréquence 9/4 ; ce Ré, ramené dans l'octave, aura une fréquence 9/8. De proche en proche il construit des sons dont les fréquences, ramenées dans l'octave, c'est-à-dire entre 1 et 2, ont pour valeur des quotients de puissances de 3 (quintes ou 3<sup>es</sup> harmoniques) par des puissances de 2 (pour les ramener dans l'intervalle choisi). Bien évidemment, il ne s'agit pas d'un cycle, car une telle suite ne peut redonner la valeur 1. En effet il faudrait qu'une puissance entière positive de 3 soit égale à une puissance entière positive de 2 ce qui est manifestement impossible.<br>
+L'équation 3<sup>x</sup> = 2<sup>y</sup> est évidemment impossible; un nombre impair ne peut être égal à un nombre pair ; elle est équivalente à log3/log2 = y/x et ne possède donc pas de solution rationnelle; la valeur de log3/log2 est irrationnelle et approximativement égale à 1.5849625... La signification de x est le nombre de degrés en lequel sera subdivisée l'octave.</p>
+<p>Rappelons un petit résultat élémentaire : tout nombre réel positif r peut s'écrire sous forme d'un entier (a<sub>1</sub>) plus un réel positif (r<sub>1</sub>) compris entre 0 et 1, c'est-à-dire sous la forme a<sub>1</sub> + r<sub>1</sub>. A son tour 1/r<sub>1</sub> est un réel positif supérieur à 1 et peut s'écrire sous forme a<sub>2</sub> + r<sub>2</sub>. On obtient un développement sous forme de "fraction continue" : a<sub>1</sub> + (1/(a<sub>2</sub> + 1/(a<sub>3</sub> + 1/(....))) où tous les a<sub>i</sub> sont des nombres entiers positifs. En s'arrêtant à un ordre n, on obtient une approximation du réel r, appelée réduite d'ordre n ; en augmentant la valeur n on améliore l'approximation. Développée sous forme de fraction continue log3/log2 admet pour réduites successives 1, 2, 3/2, 8/5, 19/12, 65/41, 84/53, 485/306, ....</p>
+<p>Le "cycle des quintes" ne se refermant pas, à chacune des approximations (division en 5, 12, 41, 53,...) correspond une erreur, le rapport entre la fréquence du son de départ et la fréquence du son déclaré identique (respectivement le 6<sup>e</sup>, le 13<sup>e</sup>, le 42<sup>e</sup>, le 54<sup>e</sup>,...). Ce rapport (ou son inverse) est appelé comma.</p>
+
+<p class="st">Construction d'une échelle par quintes</p>
+
+<p>Les deux premières approximations ne sont évidemment pas intéressantes. La valeur 3/2 (x=2) correspond à une division de l'octave en 2 degrés en intercalant une note, la quinte : l'échelle sera Do, Sol, Do. Bien évidemment la quinte de la quinte est très éloignée de Do. C'est un son dont la fréquence vaut 9/8 (notre Ré) : ce comma vaut 1.125</p>
+<br>
+<a id="penta"></a>
+
+<p class="st">La gamme pentatonique</p>
+<p>On obtient un bien meilleur résultat avec l'approximation suivante en divisant l'octave en 5 degrés ; 3<sup>5</sup> (= 243) est proche de 2<sup>8</sup> (= 256). Cette échelle, dite gamme pentatonique, possède également un comma valant 1.053..</p>
+<br>
+<table class="n">
+<tr><th>  Nom  </th><th>  Fréquence </th><th>  Fréquence approchée  </th><th>  Intervalle  </th><th>  Intervalle approché  </th></tr>
+<tr><td>Do</td><td>1</td><td>1</td><td> </td><td> </td></tr>
+<tr><td>Ré</td><td>9/8</td><td>1.125</td><td>9/8</td><td>1.125</td></tr>
+<tr><td>Fa</td><td>4/3</td><td>1.3333</td><td>32/27</td><td>1.185185</td></tr>
+<tr><td>Sol</td><td>3/2</td><td>1.5</td><td>9/8</td><td>1.125</td></tr>
+<tr><td>La</td><td>27/16</td><td>1.6875</td><td>9/8</td><td>1.12</td></tr>
+<tr><td>Do</td><td>2</td><td>2</td><td>32/27</td><td>1.185185</td></tr>
+</table>
+<br>
+
+<p>Pour les fréquences données nous sommes partis du Fa à partir duquel nous avons construit 4 quintes, dans l'ordre Do, Sol, Ré, La et le cycle est "quasiment" bouclé.</p>
+<p>Notons que cette échelle  pentatonique, occidentalisée sous la forme Do, Ré, Fa, Sol La, Do correspond à notre gamme amputée du Mi et du Si. Cette échelle est notamment utilisée en Chine et en Afrique centrale. Aux Etats-Unis, les esclaves noirs entendaient des mélodies européennes. En les chantant, leur système musical leur posait certains problèmes car il leur manquait le Mi et le Si ; cela explique que dans les chants des noirs d'Amérique, ces notes sont souvent altérées en Mib et Sib (notes "blues"), donnant lieu à des accords tout à fait caractéristiques de Fa7 ou de Do7.</p>
+<br>
+<a id="pytha"></a>
+
+<p class="st">L'échelle pythagoricienne</p>
+<p>Une meilleure approximation est obtenue en divisant l'octave en 12 degrés. La 12<sup>e</sup> puissance de 3 (= 531441) est très voisine de la 19<sup>e</sup> puissance de 2 (= 524288). Le quotient vaut 1,0136... et cet intervalle de fréquence est assez difficile à différencier avec l'unisson. Il est appelé comma pythagoricien.</p>
+<p>L'échelle construite par Pythagore se compose donc de 12 sons. Comme on utilise assez fréquemment des quintes inversées (Fa Do), on peut, puis qu'il y a ambiguïté due au "comma", choisir Fa comme le son dont la quinte est un Do en non pas la quinte de la quinte de la quinte...<br>
+L'échelle se présente comme une suite de quintes :</p>
+<div class="centre">..., Réb, Lab, Mib, Sib, Fa, Do, Sol, Ré, La, Mi, Si, Fa#,...</div>
+<p>( Nous notons Sib un degré intermédiaire entre La et Si : le Sib d'un piano par exemple). Les fréquences valent approximativement :<br>
+<br>
+<div class="centre">
+<table class="n">
+<tr>
+<th>  Nom  </th><th>  Fréquence relative  </th><th>  Fréquence approchée  </th><th>  Intervalle  </th><th>  Intervalle approché  </th></tr>
+<tr><td>Do</td><td>1</td><td>1</td><td> </td><td> </td></tr>
+<tr><td>Do# Réb</td><td>256/243</td><td>1.0535</td><td>256/243</td><td>1.0535</td></tr>
+<tr><td>Ré</td><td>9/8</td><td>1.125</td><td>2187/2048</td><td>1.0678</td></tr>
+<tr><td>Ré# Mib</td><td>32/27</td><td>1.1852</td><td>256/243</td><td>1.0535</td></tr>
+<tr><td>Mi</td><td>81/64</td><td>1.265</td><td>2187/2048</td><td>1.0678</td></tr>
+<tr><td>Fa</td><td>4/3</td><td>1.3333</td><td>256/243</td><td>1.0535</td></tr>
+<tr><td>Fa# Solb</td><td>729/512</td><td>1.4238</td><td>2187/2048</td><td>1.0678</td></tr>
+<tr><td>Sol</td><td>3/2</td><td>1.5</td><td>256/243</td><td>1.0535</td></tr>
+<tr><td>Sol# Lab</td><td>128/81</td><td>1.5802</td><td>256/243</td><td>1.0535</td></tr>
+<tr><td>La</td><td>27/16</td><td>1.6875</td><td>2187/2048</td><td>1.0678</td></tr>
+<tr><td>La# Sib</td><td>16/9</td><td>1.7777</td><td>256/243</td><td>1.0535</td></tr>
+<tr><td>Si</td><td>243/128</td><td>1.8984</td><td>2187/2048</td><td>1.0678</td></tr>
+<tr><td>Do</td><td>2</td><td>2</td><td>256/243</td><td>1.0535</td></tr>
+</table>
+<br>
+</div>
+<p>Pour la construction, nous sommes partis de Solb et nous avons obtenu par quintes successives Réb, Lab, Mib, Sib, Fa, Do, Sol, Ré, La, Mi, Si ; ceci afin de placer la tonique au "milieu" du cycle.<br>
+On constate que les intervalles prennent deux valeurs distinctes (256/243 et 2187/2048) dont le quotient est précisément le comma pythagoricien.<br>
+Cette solution reste, malgré tout, insatisfaisante du point de vue de la transposition. Lorsque l'on transpose une pièce musicale les intervalles ne sont pas respectés à cause de la présence de deux demi-tons de valeur 256/243 autour de la dominante.
+De plus elle possède un grave inconvénient. La cinquième harmonique (Mi, si Do est la fondamentale) est, dans la plupart des instruments, d'intensité fort importante. Sa fréquence (ramenée dans l'octave) vaut 5/4. Pythagore attribue comme fréquence 81/64. Le rapport des fréquences entre la 5<sup>e</sup> harmonique et le degré pythagoricien vaut 81/64 : 5/4 = 81/80, soit 1.0125, soit presque le comma pythagoricien, ce qui est perceptible, même à une oreille peu exercée.</p>
+<p>Nous verrons plus loin comment <a href="#zarlin">Zarlino</a> a tenté de résoudre cet inconvénient, mais auparavant, nous poursuivrons la construction d'échelle au moyen de quintes.</p>
+<p>A propos de la dénomination des notes dans certains pays latins, signalons qu'elles ont été nommés par Guido d'Arezzo en 1028 à partir des paroles de la première partie de l'hymne de St Jean dû à Paolo Diacono (env. 730 - 799) :</p>
+<div class="centre">
+<img alt="StJean" src="thmus/notes.gif">
+</div>
+<b>Ut</b> queant laxis / <b>Re</b>sonare fibris / <b>Mi</b>ra gestorum / <b>Fa</b>muli tuorum / <b>Sol</b>ve polluti / <b>La</b>bii reatum / <b>S</b>ancte <b>I</b>ohannes. <br>
+<p>Pour ceux qui ne sont pas cardinaux et qui ne parlent donc pas couramment le latin, une traduction (très) libre donne :<br>
+Que tes serviteurs chantent d'une voix vibrante les merveilles de tes actions, absous le péché des lèvres impures de ton serviteur, ô Saint Jean.</p>
+<p>Il semble qu'au début la gamme ne comptait que 6 notes et le Si n'apparut qu'au XVI<sup>e</sup> siècle grâce au moine français Anselme de Flandres.<br>
+Par la suite  Bononcini, en 1673, remplaça Ut par Do (en hommage au musicien italien Doni)<br>
+Dans les pays anglo-saxons le dénomination a toujours été bien plus simple; on utilisait l'alphabet  de A à G pour désigner les notes (en commençant par le La jusqu'au Sol)</p>
+
+<a id="extra"></a>
+<p class="st">Au-delà de l'échelle pythagoricienne</p>
+<p>On pourrait faire mieux en divisant en 41, 53,... degrés, et il existe effectivement des instruments adoptant une telle division. Pál Janko construisit à Prague des pianos dont l'octave était subdivisée en 41 degrés; la division en 53 degrés a été réalisée en 1876 par Robert H.M. Bosanquet sur un harmonium.</p>
+<p>Pourquoi s'arrêter à une subdivision en 12 ? Bien sur 41, 53, sont fort grands et il semble impraticable de construire des instruments où l'octave est divisée en 41, en 53 ou plus. Pourtant on améliore la précision. </p>
+<p>Dans une division en 12 (échelle pythagoricienne) on a 2<sup>19</sup> est à peu près égal à 3<sup>12</sup>, mais il y a une petite erreur (le comma pythagoricien valant 1.0136...). Cette erreur (le comma) peut être améliorée si l'on choisit une subdivision encore plus fine de l'octave.</p>
+
+<p>En divisant l'octave en 41, l'erreur provient de la non-égalité de 2<sup>65</sup> et 3<sup>41</sup>. Elle est plus faible : le comma vaut 1.01152....Toutefois on ne gagne pas grand chose par rapport au comma pythagoricien.</p>
+
+<p>Par contre il y a bien mieux ! En allant jusqu'à diviser l'octave en 53 intervalles (ce n'est pas tellement plus que 41) la précision augmente d'un facteur 10 ; certes 2<sup>84</sup> n'est pas égal à 3<sup>53</sup>, mais le comma est très voisin de 1 (il vaut 1.00209...).</p>
+<p>Signalons que la subdivision en 53 a été découverte en Chine par Ching Fang (45 av JC) et en Europe par Mercator (env. 1650) et Holder (1694).</p>
+
+<p>Comparons la division en 53 avec celle en 12 et en 5. Cette subdivision plus fine contient bien entendu les précédentes repérées en rouge pour la gamme pentatonique et en vert pour la gamme pythagoricienne). A nouveau les intervalles (les "commas" dont parlent les professeurs de solfège) ne sont pas égaux mais très voisins (1.0115.. et 1.0136..) et leur rapport donne le comma de cette échelle c'est-à-dire 1,00209..</p>
+<br>
+<a id="53"></a>
+<div class="centre">
+<table class="n">
+<tr><th>  Nom  </th><th>  Gamme <br>  pentatonique  </th><th>Gamme<br>
+  pythagoricienne  </th><th>  Valeur<br>approchée  </th><th>  Intervalle<br>approché  </th></tr>
+<tr><td>Do</td><td class="k"></td><td class="p"></td><td>1</td><td> </td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.013643</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.027473</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.039318</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td class="p"></td><td>1.053498</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.067871</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.082440</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.094920</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.109858</td><td>1.013643</td></tr>
+<tr><td>Ré</td><td class="k"></td><td class="p"></td><td>1.125</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.140349</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.155907</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.169233</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td class="p"></td><td>1.185185</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.201355</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.217745</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.231785</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.248590</td><td>1.013643</td></tr>
+<tr><td>Mi</td><td> </td><td class="p"></td><td>1.265625</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.282892</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.297683</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.315387</td><td>1.013643</td></tr>
+<tr><td>Fa</td><td class="k"></td><td class="p"></td><td>1.333333</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.351524</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.369964</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.385758</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.404664</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td class="p"></td><td>1.423829</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.443254</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.459893</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.479811</td><td>1.013643</td></tr>
+<tr><td>Sol</td><td class="k"></td><td class="p"></td><td>1.5</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.520465</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.541209</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.558977</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td class="p"></td><td>1.580247</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.601807</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.623661</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.642379</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.664787</td><td>1.013643</td></tr>
+<tr><td>La</td><td class="k"> </td><td class="p"> </td><td>1.6875</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.710523</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.733860</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.753850</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td class="p"> </td><td>1.777778</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.802032</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.826618</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.847677</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.872885</td><td>1.013643</td></tr>
+<tr><td>Si</td><td> </td><td class="p"> </td><td>1.898438</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.924338</td><td>1.013643</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.946524</td><td>1.011529</td></tr>
+<tr><td> </td><td> </td><td> </td><td>1.973081</td><td>1.013643</td></tr>
+<tr><td>Do</td><td class="k"> </td><td class="p"> </td><td>2</td><td>1.013643</td></tr>
+</table>
+<br>
+</div>
+(A nouveau les fréquences sont données en plaçant la tonique Do au milieu du cycle).<br>
+<p>Nous verrons plus loin que cette subdivision est à l'origine de la "légende" des demi-tons chromatiques et diatoniques.</p>
+<br>
+<a id="zarlin"></a>
+<p class="st">Echelle de Zarlino</p>
+<p>Zarlino utilise à la fois les 3<sup>es</sup> harmoniques pour les quintes et les 5<sup>es</sup> harmoniques pour les tierces.<br>
+La présence importante des 5<sup>es</sup> harmoniques (tierces) est inévitable lors de l'utilisation de la plupart des instruments à vent, et non négligeable dans le cas des instruments à cordes</p>
+<p>On obtient une situation "à deux dimensions" qui se présente comme suit (les quintes sont représentées horizontalement et les tierces verticalement)</p>
+<div class="centre">
+<table class="n">
+<tr><td> </td> <td> </td>  <td>...</td>  <td>...</td>  <td>...</td>  <td>...</td>  <td>...</td>  <td> </td>  <td> </td></tr>
+<tr>  <td> </td>  <td>...</td>  <td>Do#</td>  <td>Sol#</td>  <td>Ré#</td>  <td>La#</td>  <td>Fa</td>  <td>...</td>  <td> </td></tr>
+<tr>  <td>...</td>  <td>Ré</td>  <td>La</td>  <td>Mi</td>  <td>Si</td>  <td>Fa#</td>  <td>Do#</td>  <td>...</td>  <td> </td></tr>
+<tr>  <td>...</td>  <td>Sib</td>  <td>Fa</td>  <td>Do</td>  <td>Sol</td>  <td>Ré</td> <td>La</td>  <td>...</td>  <td> </td></tr>
+<tr>  <td>...</td>  <td>Fa#</td>  <td>Do#</td>  <td>Sol#</td>  <td>Ré#</td>  <td>La#</td>  <td>Fa</td>  <td>Do</td>  <td>...</td></tr>
+<tr>  <td> </td>  <td>...</td>  <td>...</td>  <td>...</td>  <td>...</td>  <td>...</td>  <td>...</td>  <td>...</td>  <td> </td> </tr>
+</table>
+<br>
+</div>
+<p>En choisissant les sons les plus " voisins " de Do, on obtient</p>
+<br>
+<div class="centre">
+<table class="n">
+<tr><th>  Nom  </th><th>  Fréquence relative  </th><th>  Valeur approchée  </th><th>  Intervalle  </th><th>  Intervalle approché  </th></tr>
+<tr><td>Do</td><td>1</td><td>1</td><td> </td><td> </td></tr>
+<tr><td>Do# Réb<br></td><td>16/15<br></td><td>1.0666<br></td><td>16/15<br></td><td>1.0667<br></td></tr>
+<tr><td>Ré<br></td><td>9/8<br></td><td>1.125<br></td><td>135/128<br></td><td>1.0547<br></td></tr>
+<tr><td>Ré# Mib<br></td><td>6/5<br></td><td>1.2<br></td><td>16/15<br></td><td>1.066<br></td></tr>
+<tr><td>Mi<br></td><td>5/4<br></td><td>1.25<br></td><td>25/24<br></td><td>1.0417<br></td></tr>
+<tr><td>Fa<br></td><td>4/3<br></td><td>1.3333<br></td><td>16/15<br></td><td>1.0667<br></td></tr>
+<tr><td>Fa# Solb<br></td><td>45/32<br></td><td>1.4062<br></td><td>135/128<br></td><td>1.0547<br></td></tr>
+<tr><td>Sol<br></td><td>3/2<br></td><td>1.5<br></td><td>16/15<br></td><td>1.0667<br></td></tr>
+<tr><td>Sol# Lab<br></td><td>25/16<br></td><td>1.5625<br></td><td>25/24<br></td><td>1.0417<br></td></tr>
+<tr><td>La<br></td><td>5/3<br></td><td>1.6666<br></td><td>16/15<br></td><td>1.0667<br></td></tr>
+<tr><td>La# Sib<br></td><td>16/9<br></td><td>1.7777<br></td><td>16/15<br></td><td>1.0667<br></td></tr>
+<tr><td>Si<br></td><td>15/8<br></td><td>1.875<br></td><td>135/128<br></td><td>1.0547<br></td></tr>
+<tr><td>Do<br></td><td>2<br></td><td>2<br></td><td>16/15<br></td><td>1.0667<br></td></tr>
+</table>
+<br>
+</div>
+<p>En dépit de l'amélioration apportée quant au choix de la tierce, on constate des désavantages : au lieu d'avoir 2 types d'intervalles, il y en a 3 : 16/15, 135/128, et 25/24. Le rapport entre  la plus grand et le plus petit vaut 128/125, c'est-à-dire 1.024.</p>
+<p>Par contre le comma zarlinien est plus petit que le comma pythagoricien. Partant d'un Do, on retrouve approximativement un Do en l'augmentant de 4 quintes et en le diminuant d'une tierce ( et en le ramenant dans l'octave ). Le rapport des fréquences vaut 81/80 = 1.0125, ce qui est inférieur au comma pythagoricien.</p>
+<p>Remarquons au passage que, tout comme dans le "cycle des quintes", le son le plus "éloigné" de la fondamentale Do est le Fa# ce qui explique que cet intervalle, la quarte triton, a été dénommé "quarte diabolique".</p>
+<p>Signalons enfin que les rapports de fréquences s'expriment par des fractions plus "simples", ce qui a été retenu par Helmholtz dans sa théorie de la consonance</p>
+
+<p class="st">Comment définir correctement les bases du solfège ?</p>
+
+<p>Un son "pur" correspond à une onde donnée. Par exemple un La correspond (actuellement) à une fréquence de 440Hz.</p>
+<p>Ce n'a pas toujours été le cas. On le sait  car sur d'anciennes orgues le La était nettement plus bas. Peu à peu les instrumentistes, voulant se mettre en valeur, accordèrent leur instrument un petit peu plus haut, et il y eut des surenchères qui portèrent le La à une fréquence de plus en plus élevée.</p>
+<p>Sa fréquence actuelle a est fixée conventionnellement.</p>
+<p>Un son émis par un instrument de musique (à cordes ou à vent) est généralement la superposition de plusieurs sons purs, le plus grave (correspondant à la fréquence la plus basse) étant dénommé fondamental.</p>
+<p>Un son correspond donc à une fréquence.<br>
+Partant d'un son pur, le son de fréquence double est appelé octave et porte le même nom que le son initial. Si, en changeant d'unité, la fréquence de la fondamentale vaut 1, celle de l'octave vaut 2.</p>
+<p>Un intervalle entre deux sons est le rapport de la plus haute fréquence à la plus basse. Par exemple, une quinte juste est un intervalle valant 3/2. L'intervalle séparant les deux Do vaut 2 et est appelé octave. </p>
+<p>Une bonne approximation consiste à diviser l'octave en 12 intervalles (voir plus haut les <a href="#pytha">échelles de quintes</a>). Une subdivision en 5 limiterait assez fort les possibilités tandis que des subdivisions plus fines en 41, 53 ou plus conduiraient à des situations pratiquement ingérables.</p>
+<p>En utilisant 12 quintes et en les ramenant dans l'octave, on revient presque à son point de départ. Comme aucune subdivision obtenue par un cycle de quintes n'est rigoureusement exacte, on doit faire une approximation.</p>
+<p>Historiquement on n'en est arrivé là qu'au 17<sup>e</sup> siècle (avec le tempérament). Le tempérament est évidemment inévitable pour les instruments à accord fixe tels le clavecin, le piano, la guitare et, quoi qu'ils en disent, ne devrait nullement déranger les violonistes et plus généralement tous ceux qui jouent d'instruments à cordes ; les seuls instrumentistes qui pourraient se plaindre sont ceux qui jouent d'un instrument à vent : la conception même fait qu'ils émettent par pincement des lèvres des harmoniques exactes. Mais le violon est tellement plus noble que la trompette...<br>
+Auparavant (et encore actuellement !) les intervalles étaient définis en utilisant un intervalle appelé quinte de fréquence 3/2 ; devant l'impossibilité d'arriver à une échelle musicale correcte, une tentative a été effectuée en utilisant simultanément les quintes et les tierces (intervalle valant 5/4). Toute tentative de subdivision de l'octave par de tels intervalles est évidemment vouée à l'échec, mais on peut obtenir d'assez bonnes approximations.</p>
+
+<a id="sept"></a>
+<p>Si on souhaite que tous les intervalles soient rigoureusement égaux chaque intervalle doit valoir la racine 12<sup>e</sup> de 2 (approximativement 1.0595..). Un tel intervalle est un demi-ton (tempéré)</p>
+<p>Une gamme est une suite de sons compris entre la fondamentale et l'octave ; avec l'unité choisie, ces sons ont une fréquence comprise entre 1 et 2.<br>
+Si la fondamentale est appelée Do, la gamme européenne usuelle compte 7 notes dénommées Do, Ré, Mi, Fa, Sol, La, Si.<br>
+Pourquoi ? Tout simplement parce que si l'on assimile une quinte à 7 demi-tons, et que l'on construit progressivement une suite de quintes, les intervalles obtenus sont très variés. </p>
+
+<div class="centre">
+<table class="n">
+<tr><th>Notes<br></th><th>Intervalles<br>(en demi-tons)</th></tr>
+<tr><td>Do Sol Do<br></td><td>7, 5<br></td></tr>
+<tr><td>Do Ré Sol Do<br></td><td>2, 5, 5<br></td></tr>
+<tr><td>Do Ré Sol La Do<br></td><td>2, 5, 2, 3 <br></td></tr>
+<tr><td>Do Ré Mi Sol La Do<br></td><td>2, 2, 3, 2, 3<br></td></tr>
+<tr><td>Do Ré Mi Sol La Si Do<br></td><td>2, 2, 3, 2, 2, 1<br></td></tr>
+<tr><td>Do Ré Mi Fa# Sol La Si Do<br></td><td>2, 2, 2, 1, 2, 2, 1<br></td></tr>
+</table>
+</div>
+<p>Aux 4<sup>e</sup> et 6<sup>e</sup> étapes, les intervalles se réduisent à deux</p>
+<p>Dans le premier cas, en transposant d'une quinte vers le bas, la subdivision en 5 intervalles où il n'y a que deux types d'intervalles (2 demi-tons et 3 demi-tons) on obtient Do, Ré, Fa, Sol, La, Do, une gamme composée de 5 notes distinctes (à l'octave près) appelée <a href="#penta">gamme pentatonique</a>.</p>
+<p>Dans le second cas, en transposant d'une quinte vers le bas, on obtient la gamme "naturelle" Do, Ré, Mi, Fa, Sol, La, Si, Do, composée de 7 notes distinctes (à l'octave près). Et voila enfin, l'explication des 7 notes de la gamme occidentale.</p>
+<a id="demi"></a>
+<p>La "légende" des demi-tons chromatiques et diatoniques repose sur l'excellente approximation consistant à diviser l'octave en 53 intervalles construits à partir de quintes. L'erreur de cette subdivision approximative n'est que de 2<sup>0</sup>/<sub>00</sub> (comma = 1,00209..). </p>
+<p>Si l'on utilise une division en 53, et qu'on la tempère, on y retrouve les 8 notes ( Do Ré Mi Fa Sol La Si et le Do à l'octave) définies anciennement. Elles sont séparées par 9 intervalles en ce qui concerne Do et Ré, Ré et Mi, Fa et Sol, Sol et La, La et Si, soit au total 45 intervalles. Les autres notes consécutives Mi et Fa, Si et Do sont séparés par 4 intervalles, soit 8 intervalles qui, ajoutés aux 45, nous donnent bien un total de 53 (<a href="#53">voir tableau ci-dessus</a>).</p>
+<p>C'est cette approximation qui conduit à "expliquer" qu'un ton est composé de 9 commas et un demi-ton diatonique de 4 commas. Comme on a adopté une terminologie "pseudo-mathématique" il faut bien attribuer un nom à l'autre demi-ton (de 5 commas) que l'on appelle alors chromatique. Puisque les demi-tons diatoniques séparent des notes de noms différents (Mi et Fa ou Si et Do), on invente une règle qui dit que le demi-ton diatonique est l'intervalle entre deux notes de noms différents (par exemple Do et Réb) et qu'a contrario un demi-ton chromatique est l'intervalle entre deux notes de même nom (par exemple Do et Do#). <br>
+On oublie malheureusement de se souvenir que tout cela ne résulte que d'une approximation et qu'une division exacte en 53 intervalles (racine 53<sup>e</sup> de 2), ainsi que la distinction entre demi-tons diatoniques et chromatiques, entraînerait de nouvelles difficultés en cas de transposition car il apparaîtrait des double-dièzes ou des double-bémols.</p>
+
+<p class="st">Epilogue</p>
+<p>Toute tentative de construction d'échelle basée sur des harmoniques est vouée à l'échec. La  conclusion, qui n'est pas neuve, est celle à laquelle Bach a abouti il y a plusieurs siècles. Il est impossible d'accorder "correctement un clavecin" (un piano) d'où le tempérament qui consiste à  attribuer des intervalles égaux entre les différents sons, c'est-à-dire un rapport de fréquence égale à la racine 12<sup>e</sup> de 2 soit approximativement 1.0595...</p>
+<p>Si un instrument est accordé selon les intervalles de Pythagore ou de Zarlino, un changement de tonalité modifiera la perception, d'où les notions de tonalité plus joyeuse, plus brillante, plus triste...<br>
+Heureusement, il se fait que l'oreille humaine n'est pas parfaite.</p>
+<p>Une grande différence de fréquences est perçue comme la présence de deux sons distincts ; par contre une très petite différence de fréquences, un mauvais accord d'instruments, donne lieu à un phénomène de battements fort désagréable. <br>
+Cela s'explique grâce à la formule de Simpson : cos&omega;<sub>1</sub>t + cos&omega;<sub>2</sub>t = 2cos(&omega;<sub>1</sub>+&omega;<sub>2</sub>)/2.t.cos(&omega;<sub>1</sub>-&omega;<sub>2</sub>)/2.t.  L'addition de deux sons, ici de même intensité, de fréquence &omega;<sub>1</sub> et &omega;<sub>2</sub> donne lieu à un son dont la fréquence est la moyenne (&omega;<sub>1</sub>+&omega;<sub>2</sub>)/2, modulée par une fonction cosinus de fréquence égale à la demi-différence (&omega;<sub>1</sub>-&omega;<sub>2</sub>)/2. Si les fréquences sont voisines la modulation donne une impression de battements très déplaisante.</p>
+<p>Les imperfections de l'oreille humaine permettent heureusement de faire cohabiter des instruments à accord fixe, tels piano, clavecin, orgue avec des instruments à accord semi-fixe tels les instruments à cordes et à vent.</p>
+
+<p class="st">Appendice</p>
+<ul>
+<li><p>L'importance des <a href="#harm">harmoniques</a> se remarque fort bien lorsque l'on joue simultanément plusieurs notes.</p>
+<p>Sur un piano, un Do joué à la basse et un Mi joué à l'aigu sonnent bien. Par contre leur renversement, un Mi à la basse avec un Do à l'aigu, sonne mal. La raison en est que, dans le premier cas le Do bas possède comme cinquième harmonique un Mi, de même que le Mi haut ; par contre dans l'autre cas, le Mi bas possède comme 3<sup>e</sup> harmonique (et comme 6<sup>e</sup>, 12<sup>e</sup>...) un Si trop proche du Do haut.</p>
+<li><p>On peut se demander quelle est la justification des différents modes utilisés dans notre musique occidentale.</p>
+<p>Pour le mode majeur la réponse est simple : les 4<sup>e</sup>, 5<sup>e</sup>, 6<sup>e</sup> harmoniques forment un accord majeur parfait (Do, Mi, Sol). Si l'on rajoute la 7<sup>e</sup> harmonique on est très proche d'un accord de 7<sup>e</sup> (Do, Mi, Sol, Sib).</p>
+<p>Par contre pour le mode mineur, il semble curieux d'accepter un accord tel Do, Mib, Sol alors que l'on attendrait plutôt un Mi qu'un Mib. Alors que le mode majeur résulte d'une coïncidence d'harmoniques provenant d'un son plus grave (qui détermine la tonalité), le mode mineur provient de la coïncidence d'harmoniques d'ordre supérieur (plus aiguës). En effet un Sol est obtenu à la fois : comme 3<sup>e</sup> harmonique d'un Do, comme 4<sup>e</sup> harmonique d'un Sol et comme 5<sup>e</sup> harmonique d'un Mib, et cette convergence vers un même son donne un effet agréable à l'oreille.</p><p>Remarquons que dans l'exemple donné, un accord de Do mineur (Do, Mib, Sol), la convergence vers le haut a lieu vers un Sol ce qui explique l'importance en mode mineur de la dominante (quinte) ; voila pourquoi il n'est pas exceptionnel qu'une pièce en mineur se termine sur la quinte, ce qui n'est pratiquement jamais le cas en mode majeur.</p>
+</ul>
+<br>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="docd.htm">Documents</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+		<div class="centre"><hr style="width:70%;"></div>
+<br>
+Pour toute remarque ou commentaire, écrire à <script type="text/javascript">
+// JavaScript pris sur le site: "http://www.java.scripts-fr.com" 
+var nom = "xhubaut";
+var domaine = "ulb.ac.be"; 
+var deb = "<";
+var fin = ">";
+document.write('<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + deb + '/a' + fin); 
+</script>.<br>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Déterminants - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="matrice, déterminant, aire, volume, application linéaire" />
+<meta name="keywords" content="algèbre, géométrie, déterminants, aire, volume, dépendance linéaire" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Déterminants
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Soit <b>T</b> une transformation linéaire, ou <a href="applin.htm">application linéaire</a>, d'un plan vectoriel. Elle peut être décrite par les équations donnant les coordonnées (<i>x', y'</i>) de l'image du vecteur \((x, y)\) :</p>
+
+\[ \begin{cases} x'=ax+by \\ y'=c x+dy \end{cases}\]
+
+<p>Sous forme matricielle elle s'écrit :</p>
+
+\[ \left\lgroup\matrix{x'\\y'}\right\rgroup = \left\lgroup\matrix{a & b \\ c & d}\right\rgroup \left\lgroup\matrix{x\\y}\right\rgroup \]
+
+<p>Si on préfère décrire l'application par les images des vecteurs de base \(\imath\)
+ et \(\jmath\), il suffit de regarder les images des points \((1,0)\) et \((0,1)\) qui sont les points \((a, c)\) et \((b, d)\); par conséquent, les images \(\imath'\) et \(\jmath'\) des vecteurs de base sont donc les vecteurs :</p>
+ 
+\[ \begin{cases} \imath' = a \imath + c\jmath \\ \jmath' = b \imath + d\jmath \end{cases} \]
+ 
+<p>On peut se demander quelle est l'image de plan vectoriel. Ce sera, en général, le plan lui-même sauf si, par un malencontreux hasard, les deux vecteurs images \(\imath'\) et \(\jmath'\) ne sont pas linéairement indépendants. Dans ce cas, cela signifierait que la dimension de l'image est soit 1 (\(\imath'\) et \(\jmath'\) colinéaires), soit 0 (\(\imath'\) et \(\jmath'\) nuls).
+Dans le cas général, il n'en est pas ainsi; les vecteurs \(\imath'\) et \(\jmath'\) constituent une nouvelle base.</p>
+
+<img class="gauche" alt="" src="dete/bases.gif"><img class="droite" alt="" src="dete/paral.gif"><p>Soit le plan avec l'ancienne base \((\imath, \jmath)\) et la nouvelle \((\imath', \jmath')\).<br /> Sur chacune des deux bases, on peut cons- truire un parallélo- gramme mais, en général, leur aire sera différente.</p>
+
+<p>Nous allons calculer le rapport entre ces deux aires. Pour calculer l'aire du parallélogramme construit sur \(\imath'\) et \(\jmath'\), nous utiliserons le fait que l'aire d'un parallélogramme ne varie pas, si un de ses côtés glisse sur lui-même, ce qui, en termes de vecteurs, se traduit par le fait que l'aire est invariante si on ajoute à un des deux vecteurs un multiple \(\mu\) de l'autre.<br />
+Dans le cas étudié, l'aire du parallélogramme construit sur les vecteurs \(\imath'\) et \(\jmath'\) est la même que celle d'un parallélogramme construit sur \(\imath'\) et \(\jmath' + \mu \imath'\). Comme les coordonnées des vecteurs \(\imath'\) et \(\jmath'\) constituent les colonnes de la matrice T, on voit que cela revient à ajouter à une colonne (la 2e par exemple) un multiple \(\mu\) de l'autre (ici de la première).</p>
+
+<p><img class="droite" alt="det" src="dete/determ.gif">Supposons, et c'est le cas général, qu'aucun des deux vecteurs \(\imath', \jmath'\) ne soit dirigé selon un axe coordonné.
+Nous allons choisir de remplacer le vecteur \(\jmath'\) par un vecteur dirigé suivant cet axe en lui ajoutant un multiple convenable du vecteur \(\imath'\).<br />
+Soit \(\jmath'' = \jmath' +  \mu \imath'\), le vecteur cherché. En fonction des vecteurs de base \(\imath, \jmath\) on obtient :<br />
+ \(\jmath'' = b\imath + d\jmath +  \mu(a\imath + c\jmath)= (b +  \mu a)\imath + (d +  \mu c)\jmath\).<br />
+La coordonnée de ce vecteur selon \(\imath\) doit être nulle, ce qui donne  \(\mu = -b/a\) (\(a\) n'est pas nul, sinon \(\imath'\) serait dirigé selon l'axe des \(y\), ce qui est contraire à notre hypothèse); sa coordonnée suivant \(\jmath\) vaut alors  \(d +  \mu c = d + (-b/a)c = (ad - bc)/a\).</p>
+
+<p>On doit ainsi calculer l'aire du parallélogramme construit sur \(\imath' = a\imath + c\jmath\) et \(\jmath'' = (ad - bc)/a\jmath\).<br />
+En ajoutant cette fois au vecteur \(\imath'\) un multiple de \(\jmath''\), on peut évidemment annuler la composante suivant \(\jmath\) et \(\imath'\) peut être remplacé par le vecteur \(\imath'' = a\imath \).</p>
+
+<p>Le problème est ainsi résolu: l'aire \(A(\imath'', \jmath'')\) du parallélogramme construit sur les deux vecteurs: \(\imath'' = a\imath\)  et  \(\jmath'' = (ad - bc)/a   \jmath\) est égale à \(A(\imath', \jmath')\).<br />
+Elle vaut \(a(ad - bc)/a.A(i, j) = (ad - bc).A(\imath, \jmath)\). Si nous prenons le parallélogramme construit sur \(\imath, \jmath\) comme unité d'aire, \(ad - bc\) est l'aire de son transformé par l'application linéaire \(T\).</p>
+
+<p>Il est important de remarquer que le déterminant d'une matrice 2 x 2, \(ad - bc\) est le même que celui de la matrice, dite transposée, obtenue en permutant lignes et colonnes.<br />
+Remarquons que dans le cas où la transformation n'est pas une permutation (si la matrice est de rang 1 ou 0, c'est-à-dire si les vecteurs \(\imath'\) et \(\jmath'\) sont colinéaires ou nuls) l'aire \(A(\imath', \jmath')\) est évidemment nulle.</p>
+
+<p>De même, à trois dimensions, le déterminant de la matrice 3 x 3 d'une application linéaire représente la mesure du volume \(V(\imath', \jmath', k')\) du parallélépipède construit sur les 3 vecteurs images des vecteurs de base, l'unité étant \(V(\imath, \jmath, k)\).</p>
+
+<p>Ces remarques permettent de comprendre facilement que la valeur d'un déterminant est invariante si on ajoute à une rangée une combinaison linéaire des autres. On dispose ainsi d'une manière simple d'en calculer la valeur (par exemple par triangulation).</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

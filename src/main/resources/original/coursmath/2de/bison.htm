@@ -1,0 +1,163 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Vacances et... bouchons - 2e degré - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="voitures, autoroute, second degré,vitedsse, optimale" />
+<meta name="keywords" content="second degré, algèbre, géométrie, applications, bouchons" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="2de.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-7', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a> <i>professeur émérite</i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />Bison fûté et les bouchons<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Les vacances approchent et avec elles les traditionnels "bouchons".</p>
+
+<p>Voila une réalité tout à fait concrète qui se prête à mathématisation.
+Comme dans tout modèle, la réalité est tellement complexe qu'il faudra faire quelques hypothèses simplificatrices (dont certaines pourraient éventuellement être levées par après).
+Nous supposerons donc que toutes les voitures sont pareilles, roulent à vitesse constante et à distance constante. Schématiquement voici la situation:</p>
+
+<img alt="" src="biso/bouchon.gif" width=530 height=40>
+
+<p>Quels sont les problèmes ?<br />
+Tout d'abord on veut avoir un débit maximum, c'est-à-dire que le plus grand nombre possible de voitures s'évacuent.
+Une manière de faire est de rouler très vite. Mais alors le risque de collision augmente. Il faut donc réserver une distance suffisante entre deux voitures consécutives.
+Si les voitures roulent très lentement, cette distance pourra être fort courte, mais comme la vitesse est faible peu de voitures s'écouleront.<br />
+Donc il faut augmenter la vitesse des voitures, mais alors augmenter la distance entre elles. On voit qui si on augmente trop la vitesse, comme la distance de sécurité augmente encore plus, en fin de compte le débit se ralentira. Il s'agit de trouver la vitesse optimale.
+Mettons tout cela en forme.</p>
+
+<p>Appelons \(v\) (en km/h) la vitesse des voitures, \(l\) (en m) la longueur d'une voiture et \(L\)(en m) la distance entre les arrières de deux voitures consécutives.
+A ces variables il faudra encore ajouter D, le débit, et \(t\), le temps de réflexe nécessaire pour freiner.</p>
+
+<p>Qu'est-ce que le débit D ? C'est le nombre de voitures qui franchissent une ligne fixe dans un intervalle de temps \(T\) (généralement mesuré en heures). La première voiture roule à une vitesse \(v\) et parcourt donc pendant le temps \(T\) heures la distance de \(vT\) km; comme les voitures se suivent à une distance \(L\) (en m) et au bout de \(T\) heures il y aura \(vT\) km/\(L\) m = 1000\(vT/L\) voitures qui seront passées. Notons \(D\) le débit par heure; il est donc proportionnel à \(vL\); désignons par \(C\) ce rapport. On a donc \(D = Cv/L\).
+Nous ne pouvons évidemment pas jouer sur la longueur \(l\) des voitures, mais bien la distance \(L\) entre voitures. Toutefois cette distance ne peut être inférieure à la distance de sécurité nécessaire pour le freinage.</p>
+
+<p>Un freinage efficace doit pouvoir immobiliser le véhicule, c'est-à-dire annuler son énergie cinétique. On sait que l'énergie cinétique vaut \(mv^2 /2\) et donc la distance de sécurité contiendra une partie proportionnelle au carré de la vitesse.
+Quelle sera cette distance de freinage ?
+A la partie proportionnelle au carré de la vitesse il faudra ajouter la distance parcourue suite au temps de réaction. Cette distance devra être inférieure à \(L -l\) afin de ne pas heurter, avec l'avant, l'arrière du véhicule précédent.
+Cette distance vaut \(Kv^2 + tv\) et doit être inférieure ou égale à \(L-l\).
+On a donc (au mieux !) \(Kv^2 + tv + l = L\).<br />
+Mais on sait que le débit \(D\) vaut \(Cv/L\); il vient donc:</p>
+
+\[D = Cv/(Kv^2 + tv + l)\]
+
+<p>Voila la relation entre la vitesse \(v\) des véhicules et le débit horaire \(D\). Comment optimiser les choses ?</p>
+
+<p>Pour qui connaît les dérivées les choses sont simples: on recherche le maximum de \(D\) fonction de \(v\). On trouvera ainsi la vitesse optimale \(v_{opt}\) et le débit maximum \(D_{max} \).
+Annulons la dérivée première et nous obtenons: \(v^2 = l/K\). Comme la vitesse est positive \(v_{opt}= \sqrt(l/K)\).</p>
+
+<p>Si nous ne connaissons pas les dérivées, réfléchissons un instant.
+Comment varie la fonction \(D\) en fonction de la vitesse \(v\) ? Ou plus simplement comment varie 1/\(D\) ?</p>
+
+\[1/D = (Kv^2 + tv + l)/Cv)\]
+
+<p class="ni">ou en effectuant la division :</p>
+
+\[1/D = Kv/C + t/C + l/Cv\]
+
+<p><img class="droite" alt="" src="biso/debit.gif" width=266 height=221>C'est donc la somme d'une fonction linéaire : \((Kv + t)/C\) et d'une fonction inverse \(l/Cv\).</p>
+
+<p>Représentons graphiquement en bleu une droite (de pente et d'ordonnée à l'origine positives) et une hyperbole. L'allure de la fonction \(1/D\) correspond donc schématiquement à la courbe tracée en rouge. Celle de \(D\) est représentée par celle dessinée en vert. Il y aura donc bien un débit maximum correspondant à une valeur optimale de la vitesse.</p>
+
+<p>Au lieu de nous entêter à calculer la valeur du  débit \(D\), nous pouvons plutôt nous intéresser à la vitesse \(v\). La relation entre \(v\) et \(D\) est:</p>
+
+\[KDv^2 + (Dt - C)v + Dl = 0\]
+
+<p>Nous en déduisons une <a href="2edegre.htm">équation du second degré</a> qui nous permettra de calculer \(v\).
+À première vue, y aurait-il deux solutions pour la vitesse ?</p>
+
+<p>Bien sur que non ; dans un problème réel, il faut tenir compte de la nature des grandeurs. La vitesse \(v\) doit être une grandeur positive ! Le produit des racines de l'équation du second degré donnée est positif, ce qui indique des solutions de même signe mais encore faut-il que la somme de ces solutions soit également positive.
+Cette somme vaut \(- (Dt - C)/KD\). La condition est donc \(Dt-C &lt; 0\). À moins d'avoir de très mauvais réflexes, \(t\) est très petit et cette condition sera pratiquement toujours vérifiée.</p>
+
+<p>Mais, au fait, est-on certain que l'équation possède des solutions ? Pour vérifier, calculons le discriminant qui doit être positif ou éventuellement nul:</p>
+
+\[(Dt - C)^2 - 4 K D^2  \ge 0\]   
+
+ou bien encore :
+
+\[(Dt - C)^2\ge 4 KD^2 l\]
+
+<p class="ni">et comme \(Dt - C\) doit être négatif :</p>
+
+\[Dt - C \le -2D \sqrt{Kl}\]
+
+<p>Ce résultat nous permet de calculer le débit \(D\):</p>
+
+\[D \le C/[t + 2\sqrt{Kl}]\]
+
+<p class="ni">et le débit sera maximum dans le cas de l'égalité.</p>
+
+\[D_{max} = C/[t + 2\sqrt{Kl}]\]
+
+<p>Mais dans ce cas, comme le discriminant est nul, l'équation possède deux solutions confondues. On obtient la vitesse optimale assurant le débit maximum:</p>
+
+\[v = -(Dt - C)/2KD    avec     D = D_{max} \]
+
+<p class="ni">d'où l'on déduit :</p>
+
+\[v_{opt} = \sqrt{l/K}\]
+
+<p>On connaît évidemment la longueur \(l\) des voitures, et la constante \(K\) peut être calculée en utilisant les données de la sécurité routière où l'on trouve les distances de freinage en fonction de la vitesse.</p>
+
+<p>Lorsqu'on calcule le résultat numérique, on voit qu'il y a intérêt à suivre les conseils de "Bison futé", ou alors, à ne pas être pressé !</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="2degrd.htm">Second degré</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

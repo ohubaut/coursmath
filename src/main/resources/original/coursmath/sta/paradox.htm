@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>1/2 = 1/3 = 1/4 !!? - Statistique - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="probabilités et statistique" />
+<meta name="keywords" content="paradoxes, ensemmble infini, mesure" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+1/2 = 1/3 = 1/4 !!?
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Les probabilités sont parfois déroutantes à cause de paradoxes que l'on rencontre.<br />
+Bien entendu, tout paradoxe peut s'expliquer. Certains sont étonnants car ils choquent le "bon sens commun"; nous signalons le paradoxe des <a href="lift.htm">ascenseurs</a> et celui bien plus étonnant des <a href="bigdil.htm">trois portes</a>.<br />
+Quand on aborde les situations où intervient une infinité de cas possibles les choses se corsent.</p>
+
+<p>Nous décrirons le plus célèbre d'entre eux, le <b>paradoxe de Bertrand</b>.</p>
+
+<p class="ni"><i><b>Etant donné une corde tracée au hasard dans un cercle, quelle est la probabilité que sa longueur soit supérieure au côté du triangle équilatéral inscrit</b></i><br /></p>
+
+<ul>
+<li>1<sup>ère</sup> solution:
+<img class="droite" alt="" src="para/cordhex.gif">On trace une corde à partir d'un point \(a\) choisi sur le cercle (on peut toujours par rotation amener une extrémité de la corde sur ce point).<br />
+On sait que le côté de l'hexagone régulier inscrit vaut le rayon du cercle. Par conséquent pour tout choix de l'extrémité \(b\) de la corde compris dans la partie rouge du schéma, la corde sera plus petite que le côté du triangle équilatéral; pour \(b\) choisi dans la partie verte elle sera plus grande. Comme il est clair que l'arc vert mesure 120° et l'arc rouge 240°, la probabilité cherchée vaut \(1/3\).</li>
+<br />
+<li>2<sup>e</sup> solution:<br />
+<br />
+<img class="gauche" alt="" src="para/corddiam.gif">On choisit un diamètre et par rotation on amène la corde dans la direction perpendiculaire à celui-ci.<br />
+On construit alors la corde en partant d'un point m quelconque du diamètre.<br />
+A partir de chaque extrémité du diamètre choisi, construisons le triangle équilatéral ayant un sommet en ce point.<br />
+Les côtés perpendiculaires au diamètre le coupent au 1/4 et au 3/4 de sa longueur. Pour tout point m situé dans la région verte entre ces deux extrémités la corde sera supérieure au côté du triangle équilatéral; par contre dans la région rouge elle sera plus petite. Comme ces deux régions ont la même longueur, la probabilité vaut \(1/2\).</li>
+<br />
+<li>3<sup>e</sup> solution:<br />
+<img class="droite" alt="" src="para/cordcerc.gif">On choisit un point \(m\) quelconque intérieur au cercle comme milieu de la corde à tracer.<br />
+On sait que la distance du milieu du côté du triangle équilatéral au centre du cercle est égale à la moitié du rayon de celui-ci.<br />
+Il en résulte que si le point \(m\) est dans la région verte intérieure au petit cercle, la corde sera plus grande que le côté du triangle équilatéral; par contre si le point \(m\) est à l'extérieur du petit cercle, dans la partie rouge, la corde sera plus petite.<br />
+Comme le rayon du petit cercle vaut la moitié du rayon du grand cercle l'aire du petit cercle est le quart de l'aire du grand cercle; la probabilité vaut donc \(1/4\).</li>
+</ul>
+
+<p>Ce paradoxe est devenu célèbre surtout par les valeurs simples obtenues \((1/2, 1/3, 1/4)\). Mais il existe bien d'autres paradoxes du même type où les "solutions" sont bien plus simples.<br />
+Nous en donnons un exemple:</p>
+
+<ul>
+<li>Choisissons un réel compris entre 0 et 10. Quelle est la probabilité qu'il soit supérieur à 5 ? la réponse est "évidemment" 1/2.</li>
+<li>Choisissons un réel compris entre 0 et 100. Quelle est la probabilité que sa racine carrée soit supérieure à 5 ? Comme il doit être supérieur à 25, la probabilité vaut "évidemment" 3/4.</li>
+</ul>
+
+<p>Et pourtant, si on réfléchit un instant, les deux questions posées sont les mêmes. En effet si un réel est compris entre 0 et 100, sa racine carrée positive est comprise entre 0 et 10, et réciproquement !</p>
+
+<p>Le problème réside dans le fait que, lorsque des ensembles sont infinis il est difficile de les mesurer. On voit dans notre exemple que l'on peut affirmer qu'il y a autant de réels compris entre 0 et 10 que de réels entre 0 et 100.<br />
+Pire ! Il y a autant de réels positifs que de réels compris entre 0 et 1; alors 1 = infini ? Un petit schéma le montre clairement.</p>
+
+<img alt="" src="para/01.gif">
+
+<p>La réponse à de telles questions nécessite d'avoir au préalable défini la manière dont on allait mesurer les ensembles en question. C'est suite à l'embarras provoqué par de telles questions que Kolmogorov a été amené à donner une axiomatique pour le calcul des probabilités.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

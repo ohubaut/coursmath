@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Isométries de la sinusoïde et morphisme - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="groupes, morphisme, homomorphisme, groupe de Klein" />
+<meta name="keywords" content="groupe, Klein, morphisme, isométrie, sinusoïde" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Isométries de la sinusoïde et morphisme
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Considérons le graphique de la fonction \(\mathbf{sin~}x\) (dessiné dans le plan \(\Bbb R^2\), bien qu'il existe d'<a title="Sinus, cosinus et approximations" href="../ana/sincos.htm">autres représentations</a> de cette fonction).</p>
+
+<img alt="" src="sinu/sinc.gif" onclick="javascript:permute_statique_anime(this);"><br />
+<i>Cliquez sur l'image pour démarrer ou arrêter l'animation.</i>
+
+<p>La courbe représentative présente une grande régularité et on peut sans peine recenser les isométries qui la conservent.</p>
+
+<ul>
+<li>Tout d'abord des translations \(T\): la fonction est périodique de période \(2\pi\). Son graphique est donc invariant pour toutes les translations d'un multiple entier de \(2\pi\).</li>
+<li>Il y a plus: on remarque des symétries \(S\) d'axes perpendiculaires à \(Ox\): ces axes sont distants d'un multiple entier de \(\pi\).</li>
+<li>De même on remarque des symétries centrales \(C\) dont les centres sont situés sur l'axe \(Ox\) et également distants de \(\pi\).</li>
+<li>Enfin on remarque des symétries glissées \(G\) d'axe \(Ox\) : la composante de glissement vaut \(\pi\) augmenté d'un multiple entier de \(2\pi\).</li>
+</ul>
+
+<img alt="" src="sinu/sin.gif">
+
+<p>Il est tentant de composer entre elles ces diverses isométries.<br />
+On obtient le tableau suivant:</p>
+
+<table class="centre">
+<tr><td>o</td><td>\(T\)</td><td>\(S\)</td><td>\(C\)</td><td>\(G\)</td></tr>
+<tr><td>\(T\)</td><td colspan=4 rowspan=4>
+<table class="n">
+<tr><td>\(T\)</td><td>\(S\)</td><td>\(C\)</td><td>\(G\)</td></tr>
+<tr><td>\(S\)</td><td>\(T\)</td><td>\(G\)</td><td>\(C\)</td></tr>
+<tr><td>\(C\)</td><td>\(G\)</td><td>\(T\)</td><td>\(S\)</td></tr>
+<tr><td>\(G\)</td><td>\(C\)</td><td>\(S\)</td><td>\(T\)</td></tr>
+</table>
+<tr><td>\(S\)</td></tr>
+<tr><td>\(C\)</td></tr>
+<tr><td>\(G\)</td></tr>
+</table>
+
+<p>On constate que le regroupement des isométries en 4 classes est raisonnable et que ces classes ont entre elles un comportement cohérent.</p>
+
+<p>De plus, la table de composition obtenue ressemble à celle des isométries conservant un rectangle. Ce n'est pas un hasard !</p>
+
+<p>Dans le graphique de la sinusoïde, soit un point d'abscisse \(\alpha\).</p>
+ 
+<img class="droite" alt="" src="sinu/angles.gif"> 
+
+<ul>
+<li>Sous l'action des translations \(T\), nous obtenons l'ensemble des points d'abscisse \(\alpha+2k\pi\), ce qui correspond sur le cercle goniométrique, à des angles représentés par le même point.</li>
+<li>Sous l'action des symétries \(S\), nous obtenons les points d'abscisse \(\pi-\alpha+2k\pi\).</li>
+<li>Les symétries centrales donnent les points d'abscisse \(-\alpha+2k\pi\).</li>
+<li>Enfin les symétries glissées donnent l'ensemble des points \(\pi+\alpha+2k\pi\)</li>
+</ul>
+
+<p>On voit ainsi que les translations \(T\) correspondent à la transformation identique, les symétries \(S\) à la symétrie par rapport à l'axe vertical (passage à l'angle supplémentaire), les symétries centrales \(C\) à la symétrie par rapport à l'axe horizontal (angle opposé) et enfin les symétries glissées \(G\) à la symétrie par rapport au centre du cercle (passage à l'angle antisupplémentaire).</p>
+
+<p>La table de composition de ces 4 transformations est la même que celle des isométries d'une sinusoïde.</p>
+
+<p>Les mathématiciens disent qu'il y a un (homo)morphisme du groupe des isométries conservant une sinusoïde sur le groupe des isométries d'un rectangle; on en a fait le quotient par le sous-groupe invariant \(T\) des translations.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

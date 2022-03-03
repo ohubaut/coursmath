@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Comment dessiner ? - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="projection parallèle, affinité, linéarité, Pohlke" />
+<meta name="keywords" content="algèbre, géométrie, projection, parallèle, affine, Pohlke" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Comment dessiner ?
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Une des méthodes les plus courantes pour la représentation plane de figures spatiales est l'axonométrie: 3 vecteurs de base de l'espace (généralement un trièdre orthonormé) sont représentés dans le plan et permettent ainsi de dessiner tout point de l'espace à l'aide de combinaisons linéaires de ceux-ci.</p>
+
+<p>Il est clair que par projection parallèle sur un plan un trièdre orthonormé se projette selon 3 vecteurs qui engendrent le plan. Ce qui est plus surprenant, c'est la réciproque (théorème de Pohlke):</p>
+
+<blockquote class="lh">
+<i>Tout triple de vecteurs d'un plan peut être vu, à une homothétie près, comme la projection parallèle d'un trièdre orthonormé.</i>
+</blockquote>
+
+<p>Fixons les notations: soient \( \vec{a}, \vec{b}, \vec{c} \) les 3 vecteurs orthonormés de l'espace d'origine \(o\) et \(\vec{A}, \vec{B}, \vec{C}\)  les 3 vecteurs engendrant le plan; nous les prendrons d'origine commune \(O\).<br />
+Remarquons tout d'abord qu'on peut exprimer l'un de ces trois vecteurs en fonction des deux autres; supposons que ce soit \(\vec{C}=\lambda \vec{A} + \mu \vec{B}\). On en déduit, pour autant que le théorème soit vrai, que les vecteurs \( k(\vec{c}-\lambda \vec{a} - \mu \vec{b})\) se projettent sur le vecteur nul. Cette observation permet de déduire que la direction de projection est celle du vecteur \(\vec{p} = \vec{c} -\lambda \vec{a} - \mu \vec{b}\).</p>
+
+<p>La direction de projection étant déterminée, nous pouvons amener \(O\) sur la droite de direction \(\vec{p}\) passant par \(o\). Il suffira de montrer qu'on peut orienter le plan \(P\) autour de \(O\) de telle sorte que la projection du trièdre  \(\vec{a}, \vec{b}, \vec{c}\) parallèlement à \(\vec{p}\) soit \(\vec{A}', \vec{B}', \vec{C}'\) semblable à \(\vec {A}, \vec {B}, \vec {C}\). Remarquons qu'il suffit de ne s'intéresser qu'aux vecteurs \(A\) et \(B\), étant donné que le vecteur \(C\) est lié à ces deux vecteurs par la relation  \(\vec{C}=\lambda \vec{A} + \mu \vec{B}\).</p>
+
+<div><img alt="" src="dess/fig1.gif"></div>
+
+<p>À ce stade de l'analyse, il est commode d'utiliser des coordonnées.<br />
+Pour ce faire, on choisit dans l'espace un nouveau repère dont l'un des vecteurs est dirigé selon la direction de projection.<br />
+Soit \(D\) un plan perpendiculaire à \(\vec{p}\) contenant les deux autres vecteurs de base de notre repère. Les deux vecteurs \(\vec{a}\) et \(\vec{b}\) se projettent dans \(D\) selon deux vecteurs \(\vec{a}', \vec{b}'\) de coordonnées \((a_1, a_2, 0)\) et \((b_1, b_2,0)\). La section par le plan \(P\) donnera deux vecteurs \(\vec{A}'\)et \(\vec{B}'\) de coordonnées \((a_1, a_2, x)\) et \((b_1, b_2, y)\).<br />
+Choisir la position du plan \(P\) revient à choisir \(x\) et \(y\) de telle manière que les vecteurs \(\vec{A}'\) et \(\vec{B}'\) soient semblables aux vecteurs \(\vec{A}\) et \(\vec{B}\).</p>
+
+<p>Les conditions s'écrivent:</p>
+
+\[  \mathbf{cos~} \varphi = \frac {a_1b_1 + a_2b_2 + x y} {\sqrt {a_1^2 + a_2^2 + x^2 }  \sqrt {b_1^2 + b_2^2 + y^2 }} \]
+et
+\[  k= \frac  {\sqrt {a_1^2 + a_2^2 + x^2 }}  {\sqrt {b_1^2 + b_2^2 + y^2 }} \]
+
+<p class="ni">où \(\varphi\) désigne l'angle des vecteurs \(A~et~B\), et \(k\) le rapport des longueurs de \(A\) et \(B\).</p>
+
+<p>De ces deux équations en \(x\) et\(y\) on tire :</p>
+
+\[ a_1^2 + a_2^2 + x^2 = k^2(b_1^2 + b_2^2 + y^2)\]
+et
+\[ a_1b_1 + a_2b_2 + x y = k \mathbf{cos~} \varphi (b_1^2 + b_2^2 + y^2) \]
+
+<p>Ces équations en \(x, y\) représentent dans le plan \(Oxy\) deux hyperboles centrées à l'origine: la première d'asymptotes \(x^2 = ky^2 \), la seconde d'asymptotes \(xy = ky^2 \mathbf{cos~} \varphi \).</p>
+
+<div><img alt="" src="dess/fig2.gif"></div>
+
+<p>Comme \( -1 &lt; \mathbf{cos~} \varphi &lt; 1 \), il en résulte que les deux paires d'asymptotes se séparent et que les deux hyperboles se coupent en deux points symétriques \((x, y)\) et \((-x, -y) \).</p>
+
+<p>On a donc montré que le système d'équations possède toujours des racines réelles et, par conséquent, qu'il est possible de sectionner les projetantes des vecteurs \(a, b\) parallèlement à la direction de projection \(p\) par un plan \(P\) de telle manière que les vecteurs obtenus soient semblables aux vecteurs \( A, B \). Il en résulte que tout triple de vecteurs engendrant le plan est, à une homothétie près, la projection parallèle d'un trièdre orthonormé.</p>
+
+<p>Toutefois les représentations obtenues ne sont pas les plus proches de la réalité; on peut <a title="Comment mieux dessiner ?" href="dessin2.htm">mieux</a> faire.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

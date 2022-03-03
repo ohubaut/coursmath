@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Documents - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résumés" />
+<meta name="keywords" content="groupes, musique, algèbre, géométrie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="doc.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript">
+    function pdf(fichier) 
+{window.open(fichier,'pdf','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-11', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+<br>
+<div class="droite"><a href="javascript:pdf('axiomes.pdf');">Télécharger la version pdf (5 pages)</a></div>
+<br>
+	<div class="titre">
+<br />
+Faut-il axiomatiser ?
+<br />
+	</div>
+	<div class="stitre">
+par<br><br>
+<b>Xavier Hubaut</b><br><br>
+Professeur émérite - Université Libre de Bruxelles - Département de Mathématique
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p class="st">Que sont des axiomes ?</p>
+<p>Tout simplement des règles d'un jeu. Un "jeu" qui n'intéresse pas grand monde si ce n'est les mathématiciens et leurs "règles" qui ne passionnent que les logiciens.</p>
+<p class="st">Qui donne les règles du jeu ?</p>
+<p>Jamais un mathématicien ne s'est réveillé le matin en se disant: "Aujourd'hui je vais rédiger des axiomes". Et d'ailleurs quels axiomes, de quel jeu ?<br>
+<p>Il faut d'abord avoir une idée du jeu, de l'être mathématique que l'on va axiomatiser. Parmi les plus courants, il y a les nombres (naturels, réels,...), les êtres géométriques (plan, espace,...), les structures algébriques (groupes, corps, vectoriels,...).<br>
+<p>Mais en fait, tout le monde connaît déjà ces êtres souvent avant d'en avoir eu une "définition axiomatique". Alors à quoi bon ? Pour être bien assuré de ce qu'on suppose au départ et pouvoir en faire des déductions au moyen de raisonnements logiques.<br>
+<p class="st">L'axiomatique est-elle correcte ?</p>
+<p>Comment voir si une axiomatique est correcte ? On ne connaît pas la définition précise de l'être qu'on axiomatise. Alors, au mieux, on va voir si les propriétés que l'on va déduire de l'axiomatique choisie correspondent aux propriétés que l'on connaît ou que l'on espère.<br>
+<p>Au contraire, si quelqu'un a déjà proposé une axiomatique, alors seulement on pourra dire qu'une autre axiomatique est correcte pour autant que tous les axiomes se déduisent de la première et vice-versa, bref qu'elles sont équivalentes.
+<p class="st">Un mauvais exemple</p>
+<p>Lorsqu'on a étudié les nombres entiers du point de vue additif, les nombres rationnels non nuls du point de vue multiplicatif, les translations du plan, de l'espace (mais,.. quel plan, quel espace ?), on relève des propriétés communes. Par exemple la somme de deux entiers est un entier, le produit de deux rationnels est un rationnel, la composée de deux translations est une translation; autre propriété commune: un entier additionné à 0 (zéro) ne change pas, un rationnel multiplié par 1 ne change pas, une translation composée avec 
+la translation identique ne change pas. On continue, et nous voila partis pour établir une axiomatique d'une structure algébrique, le groupe.<br>
+<p>Eh bien, non ! Dans la plupart des cas on donne des axiomes de ce que les mathématiciens appellent un groupe, mais non pas les axiomes d'un groupe commutatif. Souvent les élèves se demandent (et n'osent pas demander à leur professeur) pourquoi on n'a pas relevé le fait que la somme de deux entiers ne dépend pas de l'ordre des termes, que le produit de deux rationnels ne dépend pas de l'ordre des facteurs, que la composée de deux translations ne dépend pas de l'ordre.<br>
+<p>Il n'en faut pas plus pour qu'un élève "normal" ne comprenne plus rien aux axiomes. En effet, pourquoi avoir choisi certaines propriétés que l'on avait constatées et refuser d'en choisir une autre également constatée.<br>
+<p>Il faut donc être extrêmement prudent lorsqu'on veut introduire une axiomatique et la question à se poser est: "Les élèves vont-ils admettre et comprendre cette axiomatique ?" Bien souvent la réponse sera négative et ce sera du temps gaspillé et une manière supplémentaire de rendre les mathématiques incompréhensibles.
+<p class="st">Et si on s'entête ?</p>
+<p>Comme le dit Serge Gainsgourg dans sa célèbre chanson chantée par Jane Birkin, <i>Je t'aime, moi non plus</i>, "<b>L'axiomatique est sans issue</b>". C'est du moins ce que j'ai cru comprendre, mais le disque était fort ancien. Peut-être me suis-je trompé..!<br>
+
+<p>Continuons toutefois.<br>
+<br>
+<p>Il existe dans le cours de mathématique, un domaine où l'on peut espérer pouvoir effectuer une démarche axiomatique. C'est l'étude de l'espace à 3 dimensions (la "géométrie dans l'espace").<br>
+<p>En effet les élèves ont évidemment une connaissance intuitive de l'espace. Ce n'est pas un être abstrait, comme une structure algébrique, et ils sont à même de citer une série de propriétés de l'espace.
+<p class="st">Comment édifier une axiomatique ?</p>
+<p>La première phase consiste à récolter une vaste collection de propriétés des êtres élémentaires (points, droites, plans). Ce sera évidemment un ensemble largement surabondant. Par exemple:
+<ul>
+<li>deux points distincts appartiennent à une seule droite,
+<li>une droite et un point extérieur sont contenus dans un seul plan,
+<li>trois points non alignés appartiennent à un unique plan,
+<li>si deux points distincts appartiennent à un plan, la droite qu'ils déterminent est tout entière contenue dans ce plan,
+<li>un plan et une droite non contenue se coupent en 0 ou 1 point,
+<li>deux plans distincts n'ont aucun point commun ou bien une droite en commun,
+<li>deux droites sécantes sont contenues dans un seul plan,
+<li>...
+</ul>
+<p>Voici un beau désordre, mais peut-être des élèves remarqueront-ils qu'on peut déduire certaines propriétés à partir d'autres. Par exemple on a cité trois propriétés qui conduisent à trois manières différentes de déterminer un plan; n'est-il pas possible de démontrer l'une d'entre elles à partir des autres propriétés citées ? Si ce jeu amuse les élèves, on peut alors faire un nettoyage et supprimer des propriétés qui peuvent être démontrées à partir d'autres. (Attention la manière de faire cela n'est pas unique et peut-être certains préféreront choisir l'une des propriétés, qu'ils estiment plus "évidente", et démontrer les autres, alors que d'autres adopteront un autre choix.)<br>
+<p>En fait, à ce stade, on rencontre déjà le problème de l'équivalence de plusieurs axiomatiques.<br>
+<p>Voila un domaine où on peut établir une axiomatique très légère et à partir d'elle effectuer des petites démonstrations, qui s'apparentent à des exercices de logique.<br>
+<p class="st">Une proposition d'axiomatique</p>
+<p>L'espace est un ensemble de points; certains sous-ensembles sont particulièrement intéressants: les droites et les plans.
+<ul>
+<li>par deux points distincts passe une unique droite
+<li>par une droite et un point extérieur passe un unique plan
+<li>dès que deux plans distincts ont un point commun ils ont une droite commune
+<li>étant donné une droite et un point extérieur, il passe par ce point une et une seule droite parallèle à la droite donnée (parallèle signifiant être contenue dans le plan défini par la droite et le point et être disjointe)
+</ul>
+<p>Cela permet de démarrer l'étude de la géométrie dans l'espace. Peut-être sera-t-on prudent et ajoutera-t-on que les droites comprennent au moins deux points et que les plans comprennent au moins trois points non alignés.<br>
+<p>On aura ainsi une axiomatique assez correcte.<br>
+<p class="st">Catastrophe ! Que se passe-t-il ?</p>
+<p>Il ne sera pas difficile de travailler avec les élèves et avancer dans la démonstration de petites propriétés intéressantes et tout semblera fonctionner à merveille, quand soudain...<br>
+Un élève astucieux arrivera peut-être un jour avec un cube. Et que se passe-t-il avec l'axiomatique si l'ensemble des points est formé des 8 sommets du cube ?<br>
+<p>Idée saugrenue ? Non, pas tant que ça.<br>
+<p>Deux points appartiennent à une unique droite (mais elle ne possède que deux points !)<br>
+<p>Si on prend une droite et un point extérieur ou ce qui est équivalent, 3 points distincts (évidemment) non alignés, où est le plan qui les contient ?<br>
+<p>Si les trois points sont dans une face, le plan comprendra le quatrième de la face. Si deux points sont une arête du cube et que le troisième n'est pas sur une face passant par cette arête, alors le plan sera formé des 4 points situés sur deux arêtes opposées. Reste le cas où deux quelconques ne sont jamais situés sur une arête du cube. Alors il est facile de voir qu'ils déterminent un triangle qui se complète de manière unique en un tétraèdre. Pourquoi ne pas l'appeler "un plan" ? Donc notre axiomatique n'est pas correcte, puisque nous rencontrons un modèle qui ne correspond pas à notre intuition.<br>
+<p class="st">Une ouverture sur d'autres espaces</p>
+<p>En fait, le professeur sait qu'il a devant lui un modèle d'espace à 3 dimensions sur le corps à 2 éléments.<br>
+<p>Peut-être peut-il à cet instant risquer une digression et montrer un plan sur le corps à 2 éléments (il est sous la main et aussi un plan sur le corps à 3 éléments).<br>
+<p>Cela peut être présenté de manière ludique en représentant les 9 points par 9 petites fiches sur lesquelles on a dessiné des attributs, par exemple forme (triangle, carré, ou cercle), grandeur (grand, moyen, petit), remplissage (vide, hachuré, plein) et, couleur (noir, jaune et rouge, pourquoi pas ?, mais nous prendrons plutôt, pour la lisibilité, rouge, vert et bleu). Il faudra prendre garde à ce qu'on ne retrouve pas simultanément 2 attributs identiques sur 2 fiches différentes.<br>
+<p>On obtient:
+<div class="centre">
+<img alt="plan de 9 points" src="axio/pa3.gif"><br>
+</div>
+<p>Le jeu consistera à trouver la droite passant par deux points choisis au hasard. Bien vite les élèves admettront que ce "plan" n'a rien d'anormal. Peut-être cela donnera-t-il envie de construire un espace à 27 points ? Il ne faut pas exagérer, on peut ouvrir des portes, mais on n'est pas nécessairement obligé d'en passer le pas !
+<br>
+<p class="st">Pour ceux qui aiment ça !</p>
+<p>Nous les invitons à faire un peu d'<a href="espace.htm">axiomatique de l'espace affin</a> à 3 dimensions.
+		</div>
+	</div>
+
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="docd.htm">Documents</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+		<div class="centre"><hr style="width:70%;"></div>
+<br>
+Pour toute remarque ou commentaire, écrire à <script type="text/javascript">
+// JavaScript pris sur le site: "http://www.java.scripts-fr.com" 
+var nom = "xhubaut";
+var domaine = "ulb.ac.be"; 
+var deb = "<";
+var fin = ">";
+document.write('<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + deb + '/a' + fin); 
+</script>.<br>
+	</div>
+</div>
+</body>
+</html>

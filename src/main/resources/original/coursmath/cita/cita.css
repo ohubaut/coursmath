@@ -1,0 +1,139 @@
+#texte {
+	background: #fcfce0;
+	background:url("cadre.gif") bottom left no-repeat;
+}
+#texte .contenu	{
+	background: #fcfce0;
+	border: solid #c08000;
+	border-left-width: 2px;
+	border-bottom-width: 0px;
+	border-right-width: 5px;
+	border-top-width: 0px;
+}
+
+#texte h3 {
+	background:url("cadre.gif") top left no-repeat;
+}
+
+#texte .contenu hr {
+	color: #c08000;
+	text-align: center;
+}
+
+.ref{
+   /*font-size: 13px;*/
+   text-align: center;
+}
+
+.lesoir{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+}
+
+b.lesoir{
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+td.lesoir{
+	background-color: #f0f0f0;
+}
+
+.titcafe{
+   font-size : 13pt; 
+   font-family :  Verdana, Arial, Helvetica, Geneva, sans-serif; 
+   font-weight: bolder
+   color : black;    
+}
+.cafe {
+   font-size : 9pt; 
+   font-family :  Verdana, Arial, Helvetica, Geneva, sans-serif; 
+   color : black; 
+   margin-right : 5px; 
+   margin-bottom : 5px; 
+   margin-left : 5px;
+   background:white;
+}
+.clair {
+   background-color:#EEEBDB;
+   padding:10px;
+   text-align:justify;
+}
+.infotit{
+   font-size: 13px;
+   font-weight: bold;
+   color: #009933;
+}
+.infotxt{
+   font-size: 13px;
+}
+.infodat{
+   font-style: italic;
+   font-size: 10px;
+}
+.fetetit{
+   font-size: 15px;
+   background-color: #ff9622;
+   font-family: verdana, Arial, Helvetica, SansSerif;
+   font-weight: bold;
+}
+.fetetxt{
+   font-size: 13px;
+   font-family: verdana, Arial, Helvetica, SansSerif;
+   tex-amogn: justify;
+}
+
+.rechtit{
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+.rech{
+	font-size: 13px;
+	text-align: left;
+}
+.webmtit{
+	font-family: Comic Sans MS, Arial, sans-serif;
+	font-size: 20px;
+	text-align: center;
+	color: #ffffff;
+}
+.webm{
+	font-size: 13px;
+	text-align: left;
+	color: #ffffff;
+}
+.hachres{
+	font-size: 13px;
+}
+.hachtit{
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+.hachadr{
+	font-size: 13px;
+	font-family: "Courier New", Courier, monospace;
+	text-decoration: underline;
+}
+.hachcom{
+	font-size: 11px;
+}
+.lavallet{
+	font-size: 30px;
+}
+.lavaltit{
+	font-size: 24px;
+}
+.lavallet2{
+	font-size: 30px;
+}
+.cms{
+	font-size: 13px;
+}
+#fin{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	/*margin-left: 90px;*/
+	font-size: 13px;
+}

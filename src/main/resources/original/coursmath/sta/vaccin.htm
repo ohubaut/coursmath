@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Médecine et statistiques - Statistique - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="probabilités et statistique" />
+<meta name="keywords" content="vaccin, efficacité, test d'hypothèse, double aveugle" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Médecine et statistiques
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p><img class="droite" alt="" src="vacc/vaccin.gif">Un quart de la population a été vacciné contre une maladie contagieuse. Survient une épidémie. On constate que parmi les malades on trouve en moyenne un vacciné pour quatre non vaccinés, et parmi les vaccinés un malade sur douze.</p>
+
+<p>On voit évidemment que le vaccin ne protège pas entièrement; c'est le cas pour la plupart des vaccins. Mais, quand même, il y a pas mal de malades parmi les vaccinés !<br />
+Alors la question se pose: "Le vaccin est-il efficace ?"</p>
+
+<p>Pour qui connaît un peu de théorie, le problème n'est pas difficile. Il fait appel à la formule de Bayes, qui donne la probabilité d'un événement <b>B</b> sous condition qu'un événement <b>A</b> soit réalisé.<br />
+Voyons comment s'introduit cette formule.</p>
+
+<p><img class="gauche" alt="" src="vacc/aetb.gif">Soient deux événements <b>V</b> et <b>M</b> que nous représenterons de la manière la plus générale. La probabilité de <b>V</b> est la mesure de l'ensemble <b>V</b>; de même la probabilité de <b>M</b> est la mesure de l'ensemble <b>M</b>. Si on cherche la probabilité \(p\) (<b>M|V</b>) de <b>M</b> sachant que <b>V</b> est réalisé, on élimine les événements pour lesquels <b>V</b> n'est pas réalisé. La probabilité \(p\) (<b>M|V</b>) est le rapport entre la mesure de <b>V</b>\(\cap\)<b>M</b> et celle de <b>V</b>.</p>
+
+<p>On obtient la célèbre formule de Bayes:</p>
+
+<div class="lh"> \(p\) (<b>M|V</b>) = \(p\) (<b>V</b>\(\land \) <b>M</b>)/\(p\) <b>(V)</b><br />
+ou<br />
+\(p\) (<b>V</b> \(\land \)<b>M</b>) = \(p\) (<b>M|V</b>).\(p\) <b>(V)</b> </div>
+
+<p>Compte tenu de la symétrie du premier membre \(p\) (<b>V</b>\(\land M \))=\(p\) (<b>M</b>\(\land\) <b>V</b>) on a:</p>
+
+\(p\) (<b>M|V</b>).\(p\) (<b>V</b>) = \(p\) (<b>V|M</b>).\(p\) (<b>M</b>)
+
+<p>Dans le problème posé, soit <b>V</b> l'événement "être vacciné" et <b>M</b> celui "être malade"; les événements contraires seront notés par \(\lnot \)<b>V</b> et \(\lnot \)<b>M</b>.<br />
+On a vacciné un quart de la population, donc \(p\) (<b>V</b>)\(=1/4\); donc \(p(\lnot \)<b>V</b>\()=3/4\).<br />
+Utilisons à présent le fait que parmi les vaccinés, un sur douze avait contracté la maladie. Cela nous donne \(p\) (<b>M|V</b>) \(=1/12\).<br />
+De plus, parmi les malades, on trouve en moyenne un vacciné pour quatre non vaccinés. Cela se traduit par : \(p\) <b>(V|M)</b> \(=1/5\); il en résulte que \(p(\lnot \)<b>V|M</b>\() =4/5\).<br />
+Utilisons la relation \(p\) <b>(V|M)</b>.\(p\) <b>(M)</b> = \(p\) (<b>M|V</b>).\(p\) <b>(V)</b> qui donne après remplacement:<br />
+\(1/5.p\)<b>(M)</b>\(=1/12.1/4\) c'est à dire \(p\) (<b>M</b>) \(=5/48\).</p>
+
+<p>L'efficacité du vaccin revient à comparer:<br />
+la probabilité \(p\) (<b>M|V</b>) d'être malade ayant été vacciné<br />
+la probabilité \(p\) (<b>M</b>|\(\lnot\)<b>V</b>) d'être malade sans avoir été vacciné.</p>
+
+<p>Il reste donc à, calculer \(p\) (<b>M</b>|\(\lnot \)<b>V</b>). On a \(p\) (<b>M</b>|\(\lnot \)<b>V</b>).\(p\) (\(\lnot \)<b>V</b>) = \(p\) (\(\lnot\) <b>V|M</b>).\(p\) (<b>M</b>) qui donne, après remplacement \(p\) (<b>M</b>|\(\lnot \)<b>V</b>)\(.3/4=(4/5)(5/48)=1/12\), d'où \(p\) (<b>M</b>\(\lnot \)<b>V</b>)\(=1/9\).<br />
+On savait que \(p\) (<b>M|V</b>)\(=1/12\) et on en conclut que le vaccin n'est pas très performant.</p>
+
+<p>Mais il suffit parfois d'un petit schéma pour résoudre le problème plutôt que d'appliquer mécaniquement des formules (dont on ne se rappelle pas toujours avec précision).</p>
+
+<p>Représentons l'ensemble de la population par un carré de côté \(1\) et séparons les vaccinés et les non-vaccinés de telle manière qu'il y ait (en surface) \(1/4\) de vaccinés pour \(3/4\) de non-vaccinés.</p>
+
+<img alt="" src="vacc/pop1.gif">
+
+<p>Dans chacun des deux groupes séparons les malades en respectant les données du problème (chez les vaccinés \(1\) malade sur \(12\) et \(1\) vacciné pour \(4\) non-vaccinés).</p>
+
+<img alt="" src="vacc/pop2.gif">
+
+<p>Qu'observons-nous ?</p>
+
+<p>Les vaccinés sont représentés par un rectangle (vert) de \(1\) sur \(1/4\) et les non-vaccinés par un rectangle (bleu) de \(1\) sur \(3/4\).<br />
+Parmi les vaccinés les malades sont représentés (en jaune) par un rectangle de \(1/12\) sur \(1/4\) (1 malade sur 12). L'aire vaut donc 1/48 (c'est la probabilité \(p\) (<b>V</b>\(\cap\)<b>M</b>) d'être malade bien que vacciné). Comme chez les malades il y a \(1\) vacciné pour \(4\) non-vaccinés, l'aire des malades non vaccinés vaudra \(4/48=1/12\); ils seront donc représentés par un rectangle (rouge) de hauteur \(3/4\) et la base vaudra donc \(1/9\).</p>
+
+<p>La probabilité \(p\) (<b>M</b>|\(\lnot \)<b>V</b>) d'être malade, si on n'est pas vacciné, est donc de \(1/9\).<br />
+La probabilité \(p\) (<b>M|V</b>) d'être malade, étant vacciné, est de \(1/12\).<br />
+Le vaccin fait chuter la probabilité de \(1/9\) à \(1/12\), autrement dit il fait passer le nombre de malades de \(4\) à \(3\). Donc on peut dire que son efficacité est de \(25\)%, ce qui n'est pas fameux.</p>
+
+<p>Encore plus simple !</p>
+
+<img class="gauche" alt="" src="vacc/pop.gif">
+
+<p>Reprenons le diagramme général en reportant deux sous-ensembles: les vaccinés et les malades.<br />
+On nous dit que sur 12 vaccinés il y a 1 malade. Notons 1 dans l'ensemble <b>V</b>\(\cap \)<b>M</b> et le reste 11 dans l'ensemble <b>V</b>\(\cap\lnot \)<b>M</b>. Comme l'ensemble <b>V</b> mesure 12 et représente \(1/4\) de la population, le reste \(\lnot V\) mesurera 36. L'autre information dit que sur 5 malades il y a statistiquement 1 vacciné. L'ensemble <b>M</b> mesure \(5\) et nous pouvons porter \(4\) dans le sous-ensemble \(\lnot V\cap \)<b>M</b>. Il suffit de compléter le reste pour obtenir un total de \(48\).</p>
+
+<p>Conclusion: chez les vaccinés \(1\) malade sur \(12\), chez les non-vaccinés \(4\) malades sur \(36\) (ou \(1\) malade sur \(9\)): le vaccin est assez peu efficace.</p>
+
+<p>Et après ces calculs et ces dessins, n'êtes-vous pas plutôt convaincu de l'efficacité des schémas ?...</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

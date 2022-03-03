@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Localisation - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="localisation" />
+<meta name="keywords" content="graphe, minima, distances" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Localisation
+<br />
+	</div>
+	<div class="stitre">
+Quelle est la capitale de l'Europe ?
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>C'est évidemment la ville qui se trouve au centre de l'Europe (tout comme autrefois Philippe II avait décidé que la capitale de l'Espagne devrait se trouver au centre de l'Espagne)</p>
+
+<p>Examinons préalablement un problème plus simple. Soient n capitales situées le long d'une route rectiligne; où placer le "centre" de cet ensemble? L'avantage de cet exemple est qu'il peut plus facilement se laisser algébriser. La route sera l'axe des réels et chaque ville sera repérée par son abscisse. Nous devons trouver le "centre" d'un ensemble de nombres réels.</p>
+
+<p>Si \(x_1, x_2,..., x_n\) sont les \(n\) réels, soit \(x\) l'abscisse du centre; il semble raisonnable d'exiger que la somme des distances de \(x\) aux \(x_i\) soit minimum. La distance de \(x\) à \(x_i\) vaut \(x-x_i\), ou plus exactement valeur absolue de \(x-x_i\); il faut donc minimiser la somme des valeurs absolues.<br />
+Ce n'est pas un problème très classique car cette fonction, bien que continue, n'a pas une dérivée continue; entre deux valeurs consécutives des \(x_i\) la fonction est linéaire mais chaque fois que \(x\) franchit l'un des points \(x_i\) la pente de la droite change.<br />
+Cette fonction sera minimum en \(m\) s'il y a autant de valeurs de \(x_i\), d'un côté que de l'autre, ou s'il y a un nombre pair de \(x_i\), pour toute valeur de \(x\) telle qu'il y ait autant de \(x_i\) inférieurs que de \(x_i\) supérieurs. Cette valeur \(x\) est appelée la <a href="../sta/moyen.htm">médiane</a> des \(x_i\).</p>
+
+<p>La situation va évidemment se compliquer si dans le plan (sur une carte géographique) nous disposons de n capitales; il faudra minimiser la somme des distances, c'est-à-dire une somme de racines carrées. Nous y reviendrons plus tard.</p>
+
+<p>Cette notion de médiane, pourtant mieux adaptée dans beaucoup de problèmes (salaire moyen, taux moyen d'occupation,...) que celle de moyenne arithmétique, n'est guère utilisée en statistique et la cause réside vraisemblablement dans la difficulté technique de sa détermination à plus d'une dimension.</p>
+
+<p>Mais la <a href="../sta/moyen.htm">moyenne</a> arithmétique, si souvent utilisée, minimise-t-elle quelque chose? Eh bien! oui; elle minimise la somme des carrés des distances. En effet soit F cette somme de carrés:</p>
+
+\[ F(x_0) = \sum_{j=1}^n {(x_j - x)^2} \]
+
+<p>On en obtient le minimum en annulant la dérivée par rapport à <i>x</i>, ce qui donne:</p>
+
+\[ \sum_{j=1}^n {2(x_j - x)} = 0 \]
+
+<p class="ni">ou encore</p>
+
+\[ \sum_{j=1}^n x_j -nx = 0 \]
+
+<p class="ni">c'est-à-dire</p>
+
+\[ x = \frac 1 n \sum_{j=1}^n x_j \]
+
+<p>Le centre de gravité minimise la somme des carrés des distances pondérées.</p>
+
+<p>Revenons au cas de n points de coordonnées \((x_i, y_i)\) situés dans un plan et pour plus de généralité faisons l'hypothèse qu'ils sont pondérés par des masses \(m_i\) (ce peut dans notre cas être la population de chacun des pays).</p>
+
+<p>Désignons par \(S\) la somme des carrés des distances du point de coordonnées \((x, y)\) aux \(n\) points \((x_1, y_1), (x_2, y_2), ... (x_n, y_n)\) affectés des masses \(m_1, m_2, ..., m_n\).</p>
+
+\[ \small S = m_1 [(x-x_1)^2 + (y-y_1)^2] + m_2 [(x-x_2)^2 + (y-y_2)^2] + ...+ m_n [(x-x_n)^2 + (y-y_n)^2]\]
+
+<p>La somme \(S\) des carrés des distances sera minimum si les dérivées par rapport à \(x\) et \(y\) sont nulles.</p>
+
+\[ \small 2m_1(x-x_1) + 2m_2(x-x_2) + ... + 2m_n(x-x_n) = 0 \\
+2m_1(y-y_1) + 2m_2 (y-y_2) + ... + 2m_n (y-y_n) = 0 \]
+
+<p>On a donc:</p>
+
+\[ x = (m_1x_1+m_2x_2+...+m_nx_n)/(m_1+m_2+...+m_n) \\
+y = (m_1y_1+m_2y_2+...+m_ny_n)/(m_1+m_2+...+m_n) \]
+
+<p class="ni">et le point \((x,y)\) est le centre de gravité.</p>
+
+<p>Essayons à présent de réaliser un modèle concret. Prenons une carte de l'Europe que nous collons sur une planche horizontale et en chaque capitale nous perçons un trou; par ces trous nous passons des ficelles que nous réunissons au-dessus. A chacune des ficelles nous attachons en dessous de la planche la masse donnée. Quand tout est terminé, soulevons le point commun à toutes les ficelles et lâchons-le pour qu'il prenne sa position d'équilibre. 
+Où va-t-il se positionner ? Autrement dit quel est le point d'équilibre d'un système de n masses ?</p>
+
+<p>Soient \( l_1,l_2, ..., l_n \) les longueurs des ficelles aboutissant aux masses  \( m_1, m_2, ...m_n \) (de somme \(M\)).<br />
+Les distances du point d'équilibre aux points valent \( d_1, d_2, ...,d_n \); les \(n\) masses pendent à des distances \( h_1, h_2, ..., h_n \) de la planche.</p>
+
+<p>On a évidemment \( l_1 = d_1 + h_1, l_2 = d_2 + h_2, ..., l_n = d_n + h_n \)</p>
+
+<p>La somme des longueurs pondérées vaut \(L\) et est fixée:</p>
+\[ L = m_1l_1 + m_2l_2 + ... + m_nl_n \]
+
+<p>Si \(D = m_1d_1 + m_2d_2 + ... + m_nd_n \) et \(H = m_1h_1 + m_2h_2 + ... + m_nh_n \), la somme \(L\) vaut \(D + H\).</p>
+
+<p>La position du centre de gravité est située à une hauteur:</p>
+
+\[ h = (m_1h_1 + m_2h_2 + ... + m_nh_n)/(m_1 + m_2 + ... + m_n) = H/M \]
+
+<p>Cette distance est maximum, car le centre de gravité tend à être le plus bas possible.</p>
+
+<p>Par conséquent comme \(L\) est fixé et que \(H\) maximum, il en résulte qu'à la position d'équilibre le point du plan minimise la somme des distances pondérées \(D = m_1d_1 + m_2d_2 + ... + m_nd_n \).</p>
+
+<p>Ce point sera donc la médiane du système de points massiques. Voilà donc une curieuse manière de déterminer le "centre" géographique d'une région !</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

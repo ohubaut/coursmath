@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Pavages "à la Escher"
+ - Polyèdres - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="pavages du plan" />
+<meta name="keywords" content="groupes cristallographiques, isométries, symétries glissées,rotations" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="pol.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<style type="text/css">
+.central {background-image: url(esch/cavalier.gif);}</style>
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-12', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Pavages "à la Escher"
+
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Chacun a déjà observé des découpages réguliers du plan. 
+On connaît en particulier des pavages de nature différente, des décorations murales de type fort varié.</p>
+
+<p>En fait ces pavages sont extrêmement réguliers; non seulement les pavés sont tous pareils, mais encore ils sont tous pareils lorsqu'ils sont considérés dans leur environnement.<br /> 
+De manière précise, il existe toujours une isométrie qui amène un pavé sur un autre pavé quelconque, mais qui de plus conserve l'ensemble du pavage. De plus ce pavage s'étend à l'infini; il existe donc des translations dans des directions différentes.<br />
+On peut caractériser, partiellement, le pavage en décrivant son groupe d'automorphismes. Ce groupe contiendra toujours des translations dans plusieurs directions, mais il pourra également contenir des rotations, des symétries glissées, des symétries axiales.</p>
+
+<p>Il n'est guère difficile de montrer qu'il ne peut exister que des rotations d'ordre 2, 3, 4 ou 6. 
+(Il suffit pour cela de prendre deux centres de rotation d'ordre n à distance minimum, et de construire les transformés successifs de ceux-ci pour trouver une contradiction dans les autres cas).<br />
+Ces groupes constituent ce que l'on appelle les groupes cristallographiques par analogie avec les groupes conservant les cristaux dans l'espace euclidien à 3 dimensions. On peut montrer qu'il en existe 17 types.</p>
+
+<p>Par la considération de centres de rotations, il est très facile de construire les 5 groupes cristallographiques qui ne contiennent aucun antidéplacement; on obtient:</p>
+<ul>
+<li>le groupe noté <i><b>p1</b></i> qui ne contient que les translations,</li>
+<li>le groupe <i><b>p2</b></i> contenant des centres d'ordre 2 situés aux sommets d'un réseau de parallélogrammes,</li>
+<li>le groupe <i><b>p3</b></i> dont les centres d'ordre 3 sont aux sommets d'un réseau de triangles équilatéraux,</li>
+<li>le groupe <i><b>p4</b></i> dont les centres d'ordre 4 sont aux sommets d'un réseau de carrés et qui possède en outre des centres d'ordre 2 situés aux centres de ces carrés, et enfin </li>
+<li>le groupe <i><b>p6</b></i> contenant des centres d'ordre 6 situés aux sommets d'un réseau de triangles équilatéraux, des centres d'ordre 3 au centre de ces triangles et des centres d'ordre 2 au milieu des côtés des triangles.</li>
+</ul>
+<p class="ni">
+De plus il existe deux autres groupes cristallographiques ne contenant pas de symétrie axiale, mais seulement des symétries glissées:</p>
+<ul>
+<li>le groupe <i><b>pg</b></i> contenant des symétries glissées d'axes parallèles,</li>
+<li>le groupe <i><b>pgg</b></i> contenant deux familles de symétries glissées d'axes de direction perpendiculaires et des centres de symétrie situés aux centres des rectangles des axes de symétrie glissée.</li>
+</ul>
+
+<p>Enfin il y a 10 groupes contenant des symétries axiales.</p>
+
+<p>Etant donné un de ces groupes, on peut l'utiliser pour construire un pavage du plan. 
+En fait, il suffit de partir d'une portion du plan et de la reproduire sous l'action des différentes isométries du groupe. 
+Bien entendu si on la choisit au hasard le domaine initial, cela ne marchera pas trop bien: on aura parfois des superpositions, ou bien alors il subsistera des lacunes. 
+Pour découvrir un "bon" domaine, on peut partir d'une petite région du plan afin d'éviter des superpositions. 
+Ensuite on la fait grandir, avec précaution, jusqu'à ce que les bords d'un domaine rejoignent ceux d'un autre. 
+Cette méthode a été étudiée par H.Heesch et l'on connaît depuis 1969 les différents types de domaines adéquats.</p>
+
+<a id="P1"></a>
+<p>À titre d'exemple, prenons le groupe cristallographique le plus simple, <a href="javascript:;" onclick="window.open('esch/p1.htm','popup','menubar=0,scrollbars=0,width=400,height=450,top=0,left=0');">\(p1\)</a> composé uniquement de translations. Dans ce cas on peut démontrer que le domaine est un "hexagone", c'est-à-dire une région limitée par 6 arcs de courbes \(c1, c2, c3, c4, c5, c6\) tels qu'une paire de "côtés" opposés \(c1, c4\), \(c2, c5\) et \(c3, c6\) de l'hexagone se déduisent par une translation.</p>
+
+<p>Bien entendu toute latitude est laissée quant au choix des arcs rejoignant les 6 sommets, et un artiste peut profiter de cette liberté pour arriver à composer une figure fort agréable. 
+C'est ce qu'a fait le graveur néerlandais M.C.Escher. 
+A titre d'exemple la figure suivante montre un motif répété, mais avec de subtiles variantes, par le seul groupe des translations:</p>
+
+<img alt="" src="esch/escher.jpg">
+
+<p>En fait à chacun des groupes cristallographiques est associé un (ou exceptionnellement deux) type de domaines. 
+Nous ne les décrirons pas tous, mais nous donnerons ceux correspondant aux groupes cristallographiques ne contenant pas de symétrie axiale. 
+En effet si un groupe contient une symétrie axiale, il suffit de prendre un domaine et son image dans une symétrie par rapport à un axe qui le borde et on obtient un domaine convenant pour un groupe ayant perdu ses symétries.<br />
+Nous avons décrit plus haut le domaine correspondant au groupe <a href="javascript:;" onclick="window.open('esch/p1.htm','popup','menubar=0,scrollbars=0,width=400,height=450,top=0,left=0');">\(p1\)</a>.</p>
+
+<a id="P2"></a> 
+<p>Pour le groupe <a href="javascript:;" onclick="window.open('esch/p2.htm','popup','menubar=0,scrollbars=0,width=400,height=450,top=0,left=0');">\(p2\)</a>, le domaine est un "hexagone" limité par 6 arcs de courbes \(c1, c2, c3, c4, c5, c6\). Les arcs \(cl, c2, c4, c5\) possèdent chacun un centre de symétrie (situés aux sommets d'un parallélogramme) et les deux arcs \(c3\) et \(c6\) sont translatés l'un de l'autre.</p>
+
+<a id="P3"></a>
+<p>Pour le groupe <a href="javascript:;" onclick="window.open('esch/p3.htm','popup','menubar=0,scrollbars=0,width=400,height=450,top=0,left=0');">\(p3\)</a>, on obtient un domaine limité par un "hexagone" limité par 6 arcs de courbes \(c1, c2, c3, c4, c5, c6\); les arcs \(c1, c2\), les arcs \(c3, c4\) ainsi que les arcs \(c5 c6\) se déduisent par rotation d'un tiers de tour autour des sommets d'un triangle équilatéral.</p>
+
+<img alt="" src="esch/lezard.gif">
+
+<p><a id="P4"></a> Passons au groupe <a href="javascript:;" onclick="window.open('esch/p4.htm','popup','menubar=0,scrollbars=0,width=400,height=450,top=0,left=0');">\(p4\)</a>. Le domaine est, cette fois, constitué d'un "pentagone" limité par 5 arcs de courbes \(c1, c2, c3, c4, c5\). Les arcs \(c1, c2\) ainsi que les arcs \(c3, c4\) sont transformés l'un de l'autre par des rotations d'1/4 de tour, tandis que l'arc \(c5\) possède un centre de symétrie.</p>
+
+<img alt="" src="esch/poisson.gif">
+
+<p><a id="P6"> </a> Le dernier des groupes ne contenant que des déplacements, <a href="javascript:;" onclick="window.open('esch/p6.htm','popup','menubar=0,scrollbars=0,width=400,height=450,top=0,left=0');">\(p6\)</a>, possède un domaine constitué d'un "pentagone" limité par 5 arcs de courbes \(c1, c2, c3, c4, c5\); les arcs \(c1, c2\) se déduisent par une rotation d'1/6 de tour, \(c3, c4\) par une rotation d'1/3 de tour et \(c5\) possède un centre de symétrie.</p>
+
+<p>Passons à présent aux deux groupes, notés \(pg\) et \(pgg\) qui contiennent des symétries glissées. Pour chacun d'eux il existe deux types de domaines que nous décrivons ci-dessous: pour le groupe \(pg\), contenant des symétries glissées dans une seule direction, on peut avoir un domaine "hexagonal" limité par 6 arcs de courbes \(c1, c2, c3, c4, c5, c6\) qui possèdent une des propriétés suivantes :</p>
+
+<a id="Pg1"> </a>
+<p class="ni"> - <a href="javascript:;" onclick="window.open('esch/pg1.htm','popup','menubar=0,scrollbars=0,width=400,height=450,top=0,left=0');">\(pg1\)</a>: \(c1, c2\) et \(c4, c5\) se déduisent par symétrie glissée et les arcs \(c3\) et \(c6\) sont transformés par translation parallèlement à la direction des axes de symétrie,</p>
+
+<a id="Pg2"></a>
+<p class="ni"> - <a href="javascript:;" onclick="window.open('esch/pg2.htm','popup','menubar=0,scrollbars=0,width=400,height=450,top=0,left=0');">\(pg2\)</a>: \(c1, c5\) et \(c2, c4\) se déduisent par symétrie glissée et les arcs \(c3\) et \(c6\) sont transformés par translation perpendiculaire à la direction des axes de symétrie.</p>
+
+<p>Enfin le groupe noté \(pgg\) contient des symétries glissées dans deux directions perpendiculaires, ainsi que des symétries centrales.<br />
+Le domaine fondamental est de nouveau un "hexagone" limité par 6 arcs de courbes \(c1, c2, c3, c4, c5, c6\) tels que soit :</p>
+
+<a id="Pgg1"></a>
+<p class="ni"> - <a href="javascript:;" onclick="window.open('esch/pgg1.htm','popup','menubar=0,scrollbars=0,width=400,height=450,top=0,left=0');">\(pgg1\)</a>: \(c1, c4\) se déduisent par translation, \(c2\) et \(c3\) possèdent un centre de symétrie, et \(c5, c6\) s'obtiennent par symétrie glissée dans la direction de la translation, soit :</p>
+ 
+<a id="Pgg2"></a>
+<p class="ni"> - <a href="javascript:;" onclick="window.open('esch/pgg2.htm','popup','menubar=0,scrollbars=0,width=400,height=450,top=0,left=0');">\(pgg2\)</a>: \(c1\) et \(c3\) possèdent un centre de symétrie, \(c2, c5\) sont transformés par symétrie glissée, et \(c4, c6\) par une autre symétrie glissée d'axe perpendiculaire.</p>
+
+<p>Vous trouverez une <a href="../doc/pavages.htm">version plus détaillée</a> (avec de plus jolis exemples) parmi les <a href="../doc/docd.htm">documents téléchargables</a>.</p>
+
+<p>Il suffit à présent d'un peu (beaucoup) de sens artistique pour inventer des motifs décoratifs à la Escher!</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="polyd.htm">Polyèdres</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

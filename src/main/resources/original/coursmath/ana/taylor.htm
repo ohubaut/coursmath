@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Séries de Taylor, de MacLaurin - Analyse - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="développement, série,Taylor, MacLaurin, goniométriques, exponentielles" />
+<meta name="keywords" content="analyse, développement en série, Taylor, MacLaurin, graphiques, développement limité, sinus, exponentielle, logarithme" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Séries de Taylor et de MacLaurin
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<p>Dans l'article sur les <a href="approxi.htm">approximations</a>, nous avons vu apparaître les développements en série de <a href="../bio/taylor.htm">Taylor</a> (appelés de <a href="../bio/maclauri.htm">MacLaurin</a> lorsqu'on part de la valeur 0 de la variable).<br />
+Rappelons que si \(f(x)\) est une fonction dérivable autant de fois que l'on veut, le développement de MacLaurin est :</p>
+\[ f(x) = f(0) + f '(0) x + f ' '(0) \frac{x^2}{2!} + f ' ' '(0) \frac{x^3}{3!} + ... \]
+
+<p>Sans discuter du lien entre la fonction de départ et la série, nous nous attacherons à la convergence du développement en série.<br />
+En effet, l'idée de départ était d'obtenir une approximation d'une fonction donnée au voisinage de la valeur 0 de la variable \(x\), par une suite de polynômes en \(x\). Pour améliorer le plus possible cette approximation, on en est arrivé à considérer un polynôme de degré infini, appelé série de puissances entières de \(x\) ou, plus brièvement, <b>série entières</b> de \(x\).<br />
+Arrivé à ce stade, on peut se demander ce qu'il se passe avec cette série lorsqu'on s'écarte de cette valeur 0.</p>
+
+<p>Notre but est d'étudier la convergence (ou la divergence) de certaines séries entières sans faire au préalable une étude générale de la convergence ce type de séries, ce qui est manifestement hors programme.</p>
+
+<p>Nous avons rencontré le développement de 4 fonctions fondamentales en série de MacLaurin, à savoir, les fonctions sinus, cosinus, exponentielle et sa réciproque, logarithme.
+Nous vous conseillons, dans chacun des cas, de garder à l'écran le graphique correspondant à la fonction étudiée.</p>
+<a id="trigo"> </a>
+<p>Commençons par les fonctions goniométriques dont les séries sont très semblables : sinus et cosinus.</p>
+\[ \mathbf{sin~}x = x - \frac {x^3} {3!} + \frac {x^5} {5!} - \frac {x^7} {7!} + \frac {x^9} {9!} - \frac {x^{11}} {11!} + \frac {x^{13}} {13!} - \frac {x^{15}} {15!} + \frac {x^{17}} {17!} - \frac {x^{19}} {19!} + ...\]
+et
+\[\mathbf{cos~}x = 1 - \frac {x^2} {2!} + \frac {x^4} {4!} - \frac {x^6} {6!} + \frac {x^8} {8!} - \frac {x^{10}} {10!} + \frac {x^{12}} {12!} - \frac {x^{14}} {14!} + \frac {x^{16}} {16!} - \frac {x^{18}} {18!} + ...\]
+
+<p>Pour visualiser les approximations successives, vous pouvez afficher le développement en série de ces deux fonctions, la fonction <a href="taylor/sin.htm">sinus</a> et la fonction <a href="taylor/cos.htm">cosinus</a>.<br />
+Dans chacun des deux cas la suite des polynômes (séries limitées) semble épouser de mieux en mieux l'allure de la courbe représentative de la fonction. Les deux séries associées semblent bien toutes deux converger. Encore faut-il le démontrer !</p>
+
+<p>Une première remarque : la valeur de \(x\) étant choisie, il existe un rang à partir duquel les valeurs absolues de termes de la série décroissent et tendent vers 0. En effet, tous les termes sont de la forme \(|x|^n/n!\) (avec les n tous impairs ou les n tous pairs). Dès que \(n>|x|\), ces valeurs absolues vont en décroissant ; en effet, \(|x|^n/n!\) est évidemment supérieur à \(|x|^{n+2}/(n+2)!\) ; de plus, ils tendent vers 0.<br />
+Malheureusement, nous savons bien que ce n'est pas encore suffisant pour assurer la convergence (voir l'exemple de la <a href="limites.htm#HARM">suite harmonique</a>)</p>
+
+<p>Une autre observation : nous constatons qu'il s'agit dans les deux cas de séries alternées, c'est-à-dire formées de termes consécutifs de signe opposés.<br />
+Mais alors, pour une valeur donnée de \(x\), il existe une valeur de n (dans le cas considéré ici, dès que \(n>|x|\) à partir de laquelle les valeurs absolues des termes commencent à décroître et à tendre vers 0.</p>
+
+<img alt="" src="taylor/alt.gif" width=332 height=57>
+
+<p>Pour une valeur donnée de \(x\), nous représentons qualitativement ci-dessus les valeurs successives de \(f(x)\) en fonction de \(n\).<br />
+Les corrections successives se font à chaque étape par addition de termes de signe contraire et la différence entre deux approximations consécutives est à chaque fois égale au terme ajouté ; cette différence tend donc vers 0. Les valeurs de \(f(x)\) successivement obtenues enserreront donc de plus en plus une valeur limite.<br />
+On en conclut que chacune des deux séries sera convergente pour toute valeur de \(x\).</p>
+<a id="exp"> </a>
+<p>Passons à présent à la série de MacLaurin de l'<a href="taylor/exp.htm">exponentielle</a>.</p>
+\[ \mathbf{exp~}x = 1 + x + \frac {x^2} {2!} + \frac {x^3} {3!} + \frac {x^4} {4!} + \frac {x^5} {5!} + \frac {x^6} {6!} + \frac {x^7} {7!} + \frac {x^8} {8!} + \frac {x^9} {9!} + ...\]
+
+<p>Les termes de la série sont du même type que précédemment. Donc certaines des conclusions restent valables.<br />
+Pour une valeur donnée de \(x\), à partir d'un certain rang (en fait dès que \(n&gt;|x|\) ) la valeur absolue des termes va en décroissant.<br />
+Si \(x&lt;0\), la série est à nouveau alternée, et convergera donc.</p>
+
+<p>Par contre si \(x &gt; 0\), bien que le graphique semble nous rassurer,  la convergence n'est pas encore assurée ; il faut la démontrer rigoureusement.</p>
+
+<p>Pour cela, il nous faut trouver d'autres armes. Connaissons-nous une série convergente dont tous les termes sont positifs ? Mais oui, la série géométrique dont la raison r est en valeur absolue inférieure à 1 ! Nous savons que la série \(1 + r + r² + r³ + ...\) converge vers \(1/(1 - r)\).</p>
+
+<p>Nous allons procéder par comparaison avec cette série convergente. Soit une valeur positive de \(x\)  et \(n\) un naturel supérieur à \(x\). Nous allons examiner la série partielle commençant à \(x^n/n!\). Nous pouvons écrire cette série : \(x^n/n! (1 + x/(n+1) + x²/(n+1)(n+2) + ...)\). Chacun des termes peut être majoré par un autre plus simple ; on a évidemment :</p>
+\[x^k/((n+1)(n+2)...(n+k) &lt; x^k/n^k = (x/n)^k\] 
+
+<p>La parenthèse est ainsi majorée par une série géométrique de raison \(x/n &lt; 1\) qui est convergente. Cela entraîne immédiatement la  convergence de la suite partielle et de là celle de la série de MacLaurin de l'exponentielle.</p>
+
+<p>En résumé la série est convergente quelque soit pour tout \(x\).</p>
+<a id="log"> </a>
+
+<p>Passons au dernier exemple rencontré, la série de MacLaurin associée à la fonction <a href="taylor/ln.htm">logarithme</a> (népérien) de \(1 + x\) :</p>
+\[ \mathbf{ln~}(1+x) = x - \frac {x^2} {2} + \frac {x^3} {3} - \frac {x^4} {4} + \frac {x^5} {5} - \frac {x^6} {6} + \frac {x^7} {7} - \frac {x^8} {8} + \frac {x^9} {9} - \frac{x^{10}}{10} ...\]
+
+<p>En regardant attentivement les approximations successives, le doute commence à nous envahir !</p>
+
+<p>Si pour les valeurs \(-1 \lt x \le 0\), tout semble bien se passer, il n'en n'est pas de même pour \(x \gt 0\) ; jusqu'à la valeur 1, le tracé des approximations successives de la série colle de plus à celui de la fonction ; au delà de la valeur 1, au contraire, la convergence semble complètement déraper. Comment cela est-il possible ? Tout fonctionnait remarquablement bien jusqu'à présent et la série de MacLaurin n'est pas tellement différente des précédentes.</p>
+
+<p>A nouveau, pour les valeurs positives de \(x\), la série est alternée.</p>
+
+<p>Mais..., contrairement à ce qui se passait dans les autres cas, le terme général ne tend pas vers 0 et c'est cela qui nous empêche de raisonner comme avant. Pour \(x\le 1\), les termes décroissent et tendent vers 0, mais dès que \(x\) dépasse la valeur 1, les numérateurs des fractions successives croissent trop rapidement et les termes deviennent de plus en plus grands (en valeur absolue). Conclusion : pour \(0 \le x \le 1\) la série converge ; par contre, elle diverge si \(1 \lt x\). Il ne nous reste qu'à vérifier la convergence pour \(-1 \lt x \lt 0\). Nous pouvons procéder par comparaison de la série opposée \(-x + x²/2 - x³/3 + ...\) avec la série géométrique \(|x| + |x|^2 + |x|^3 - ...\) Tous les termes de notre série sont positifs et majorés par ceux de la série géométrique choisie qui converge puisque \(|x| \lt 1\) ; il en résulte que notre série converge lorsque \(-1 \lt x \le 0\).</p>
+
+<p>En résumé, alors que les 3 premières séries de MacLaurin, \(\mathbf{sin~}x, \mathbf{cos~}x, \mathbf{exp~}x\), convergent pour toutes les valeurs de \(x\), la dernière, celle de \(\mathbf{ln~}(1+x)\), converge uniquement lorsque \(x \in  ]-1, +1]\).
+L'intervalle de convergence, s'il est centré, porte le nom de "rayon de convergence".</p>
+
+<p>Dans les cas étudiés plus haut, le "rayon de convergence" est infini dans les 3 premiers cas, alors qu'il est centré en 0 et égal à 1 dans le dernier cas.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Plan hyperbolique - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="géométrie non-euclidienne, hyperbolique, elliptique, Riemann, Lobatchevski, postulat d'Euclidei" />
+<meta name="keywords" content="géométrie, non-euclidienne, parallèles, Riemann, Lobatchevski" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Plan hyperbolique
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Pendant de nombreux siècles, la géométrie euclidienne a été utilisée sans que l'on mette en doute sa validité; c'est à l'époque où les philosophes se posaient la question de l'unicité de l'espace que les recherches "parallèles" de <a title="Biographie" href="../bio/gauss.htm">Gauss</a>, <a title="Biographie" href="../bio/bolyai.htm">Bolyai</a> et <a title="Biographie" href="../bio/lobachev.htm">Lobatchevski</a> ont conduit à la découverte de la géométrie hyperbolique; peu après les travaux de <a title="Biographie" href="../bio/riemann.htm">Riemann</a> allaient mener à la géométrie elliptique.<br />
+Depuis lors, <a title="Biographie" href="../bio/klein.htm">Klein</a> a donné une interprétation qui unifiait les 3 types de géométries métriques, euclidienne, elliptique et hyperbolique.</p>
+
+<p>Rappelons le modèle de Klein relatif à la géométrie hyperbolique, c'est-à-dire la géométrie d'un plan possédant "presque toutes" les propriétés du plan euclidien, mis à part le fait que par un point extérieur à une droite on peut mener plusieurs parallèles.</p>
+
+<p>Les points du plan sont les points intérieurs à une conique d'un plan projectif. Les droites sont les segments de droite intérieurs à la conique.</p>
+
+<img alt="" src="plan/klein1.gif"> 
+
+<p><a title="Biographie" href="../bio/poincare.htm">Poincaré</a>, dans un tout autre contexte, a donné un modèle de la géométrie hyperbolique 
+dans le plan de la variable complexe.<br />
+Les points du plan sont les nombres complexes à partie imaginaire strictement positive, c'est-à-dire le demi-plan complexe supérieur ouvert. 
+Les droites sont les cercles centrés sur l'axe réel; ces cercles sont par conséquent orthogonaux à la frontière.</p>
+
+<img alt="" src="plan/poincar1.gif"> 
+
+<p>On obtient une variante du modèle de Poincaré en utilisant une transformation homographique appliquant \(z\) sur \((az+b)/(cz+d)\), avec \(a,b,c,d\) complexes: l'axe réel se transforme en un cercle; de plus comme cette transformation est conforme, les "droites" se transforment en cercles orthogonaux, d'où une variante: les points du plan hyperbolique sont les points intérieurs à un cercle et les droites les cercles qui lui sont perpendiculaires.</p>
+
+<img alt="" src="plan/poincar2.gif"> 
+
+<p>Le groupe des projectivités conservant une conique est isomorphe au groupe des transformations homographiques, d'où une première démonstration de l'isomorphisme des deux modèles.<br />
+Chacun de ces deux modèles présente des avantages et des inconvénients:</p>
+
+<ul>
+<li>le modèle de <a title="Biographie" href="../bio/poincare.htm">Poincaré</a> 
+est conforme; les angles sont respectés; par contre les droites se présentent 
+sous l'aspect de cercles;</li>
+<li>le modèle de <a title="Biographie" href="../bio/klein.htm">Klein</a> 
+est linéaire; les droites sont respectées, mais les angles sont déformés.</li>
+</ul>
+
+<p>On peut montrer de manière élémentaire l'équivalence de ces deux modèles par construction d'un troisième modèle.<br />
+Il est obtenu à partir d'une demi-sphère; les points du plan hyperbolique sont les points de la demi-sphère ouverte, et les droites sont les sections circulaires situées dans des plans perpendiculaires au plan limitant la demi-sphère.</p>
+
+<img alt="" src="plan/poinklei.gif"> 
+
+<p>À partir de ce modèle on retrouve les deux modèles décrits plus haut. 
+En effectuant une projection parallèle orthogonalement au plan du cercle limite, on retrouve le modèle de Klein. 
+Par contre si l'on projette stéréographiquement à partir d'un point de l'autre demi-sphère, on retrouve le modèle de Poincaré.</p>
+
+<p>De même que le plan elliptique peut se représenter par une sphère, ou plus précisément par une sphère dont on identifie les points antipodes, on peut montrer un modèle métrique du plan hyperbolique (ou d'un morceau de plan hyperbolique) en construisant une surface à courbure constante négative, par exemple une pseudo-sphère (surface engendrée par la rotation d'une tractrice autour de son asymptote).</p>
+
+<img alt="" src="plan/tractr.gif"> 
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,258 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mathémagique - Vie courante - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Tours de magie basés sur les maths" />
+<meta name="keywords" content="tour de cartes, calcul binaire, coordonnées" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="vie.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-5', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Mathémagique
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Voici une manière fort simple de multiplier deux nombres (naturels).<br />
+On affirme que cette méthode est éthiopienne, égyptienne, caucasienne,... bref on ne sait pas trop d'où elle vient.<br />
+Voyons comment on procède, en prenant un exemple.</p>
+
+<p>Soit à calculer le produit de \(57\) par \(146\).<br />
+On tracera deux colonnes: la première commence par le premier facteur \(57\), la deuxième par le second facteur \(146\). Ensuite dans la première colonne on écrit le résultat de la division par \(2\) du précédent (plus exactement la partie entière); dans la deuxième colonne on écrit le résultat du produit du précédent par \(2\). Et on poursuit de la même manière. Dans notre exemple cela donne:</p>
+
+<table class="centre"><tr><td>
+\(57\)<br />\(28\)<br />\(14\)<br />\( 7\)<br />\( 3\)<br />\( 1\)<br />
+</td><td>
+\(|\)<br />\(|\)<br />\(|\)<br />\(|\)<br />\(|\)<br />\(|\)<br />
+</td><td>
+\( 146\)<br />\( 292\)<br />\( 584\)<br />\(1168\)<br />\(2368\)<br />\(4672\)<br /></td></tr></table>
+
+<p>Ensuite on barre, on supprime, les lignes contenant un nombre pair en première colonne et on effectue la somme des nombres figurant dans la deuxième colonne. Il reste:</p>
+
+<table class="centre"><tr><td>
+\(57\)<br />\( 7\)<br />\( 3\)<br />\( 1\)<br />\(\)<br />\(\)<br />
+</td><td>
+\(|\)<br />\(|\)<br />\(|\)<br />\(|\)<br />\(|\)<br />\(|\)<br />
+</td><td>
+ \(146\)<br />\( 1168\)<br />\( 2368\)<br />\( 4672\)<br />____<br />\( 8322\)<br />
+</td></tr></table>
+
+<p class=ni>ce qui est égal au produit de \(57\) par \(146\).</p>
+
+<p>D'où vient ce miracle?</p>
+
+<a id="2"> </a>
+<p>Il suffit de réfléchir à la manière utilisée pour écrire un nombre en base 2 (57 dans notre exemple). 
+Deux méthodes sont possibles:</p>
+
+<ul>
+<li>En commençant par la gauche, le premier 1 utilisé correspond à la plus grande puissance de \(2\) contenue dans le nombre (dans notre cas \(64\gt 57\gt 32\), c'est donc \(32\)); il reste \(25\); la puissance suivante de \(2\) (\(16\)) est contenue dans \(25\); on écrit \(1\); il reste \(9\). La puissance suivante (\(8\)) est encore contenue et on écrit \(1\) et il reste \(9-8=1\). Par contre les deux suivantes (\(4\) et \(2\)) ne sont pas contenues et on écrit deux \(0\). Enfin il reste \(1\) et l'écriture binaire de \(57\) est donc \(111001\).<br />
+<li>Par contre en commençant par la droite, on prend d'abord le reste de la division par \(2\); en bref on écrit \(1\) si le nombre est impair ou \(0\) s'il est pair. Ensuite on prend le quotient obtenu et on recommence de la même manière. Dans notre exemple \(57\) est impair: on écrit \(1\) comme dernier chiffre; le quotient est \(28\): on écrit \(0\), et ainsi de suite. Bien entendu on obtient le même résultat \(111001\).<br />
+</ul>
+
+<p>Si la deuxième méthode est plus rapide, il ne faut toutefois pas négliger la première qui a l'avantage de donner immédiatement un ordre de grandeur du nombre considéré.</p>
+
+<p>La seconde méthode nous donne la clé de la multiplication miraculeuse. La première colonne est la suite des quotients successifs; à chaque quotient impair correspondra un chiffre 1 et à chaque quotient pair un chiffre 0. C'est pourquoi on supprime les lignes commençant par un nombre pair. Le résultat du produit est tout simplement la somme des autres nombres.</p>
+
+
+<table class="centre">
+<tr><td>
+\(1\)<br />\(0\)<br />\(0\)<br />\(1\)<br />\(1\)<br />\(1\)<br />\( \)<br /><br />
+</td><td>
+\( | \)<br />\( | \)<br />\( | \)<br />\( | \)<br />\( | \)<br />\( \)<br /> 
+</td><td>
+\(57\)<br />\(28\)<br />\(14\)<br />\(7\)<br />\(3\)<br />\(1\)<br />\( \)<br /><br />
+</td><td>
+\( | \)<br />\( | \)<br />\( | \)<br />\( | \)<br />\( | \)<br />\( | \)<br />\( \)<br />
+</td><td>
+\(146\)<br />\(292\)<br />\(584\)<br />\(1168\)<br />\(2336\)<br />\(4672\)<br />____<br />\(8322\)
+</td></tr>
+</table>
+<br />
+<hr>
+<br />
+<p class="st">La divination</p>
+
+<p>Voici 6 cartes:</p>
+
+<table class="centre">
+<tr><td>
+<table class="enc"><tr>
+<td>\( 1\)<br />\( 9\)<br />\(17\)<br />\(25\)<br />\(33\)<br />\(41\)<br />\(49\)<br />\(57\)</td>
+<td>\( 3\)<br />\(11\)<br />\(19\)<br />\(27\)<br />\(35\)<br />\(43\)<br />\(51\)<br />\(59\)</td>
+<td>\( 5\)<br />\(13\)<br />\(21\)<br />\(29\)<br />\(37\)<br />\(45\)<br />\(53\)<br />\(61\)</td>
+<td>\( 7\)<br />\(15\)<br />\(23\)<br />\(31\)<br />\(39\)<br />\(47\)<br />\(55\)<br />\(63\)</td>
+</tr></table>
+</td><td><img alt="" src="../dot.png" width=15></td><td>
+<table class="enc"><tr>
+<td>\( 2\)<br />\(10\)<br />\(18\)<br />\(26\)<br />\(34\)<br />\(42\)<br />\(50\)<br />\(58\)</td>
+<td>\( 3\)<br />\(11\)<br />\(19\)<br />\(27\)<br />\(35\)<br />\(43\)<br />\(51\)<br />\(59\)</td>
+<td>\( 6\)<br />\(14\)<br />\(22\)<br />\(30\)<br />\(38\)<br />\(46\)<br />\(54\)<br />\(62\)</td>
+<td>\( 7\)<br />\(15\)<br />\(23\)<br />\(31\)<br />\(39\)<br />\(47\)<br />\(55\)<br />\(63\)</td>
+</tr></table>
+</td><td><img alt="" src="../dot.png" width=15></td><td>
+<table class="enc"><tr>
+<td>\( 4\)<br />\(12\)<br />\(20\)<br />\(28\)<br />\(36\)<br />\(44\)<br />\(52\)<br />\(60\)</td>
+<td>\( 5\)<br />\(13\)<br />\(21\)<br />\(29\)<br />\(37\)<br />\(45\)<br />\(53\)<br />\(61\)</td>
+<td>\( 6\)<br />\(14\)<br />\(22\)<br />\(30\)<br />\(38\)<br />\(46\)<br />\(54\)<br />\(62\)</td>
+<td>\( 7\)<br />\(15\)<br />\(23\)<br />\(31\)<br />\(39\)<br />\(47\)<br />\(55\)<br />\(63\)</td>
+</tr></table>
+</td></tr>
+</table>
+<br />
+<table class="centre">
+<tr><td>
+<table class="enc"><tr>
+<td>\( 8\)<br />\(12\)<br />\(24\)<br />\(28\)<br />\(40\)<br />\(44\)<br />\(56\)<br />\(60\)</td>
+<td>\( 9\)<br />\(13\)<br />\(25\)<br />\(29\)<br />\(41\)<br />\(45\)<br />\(57\)<br />\(61\)</td>
+<td>\(10\)<br />\(14\)<br />\(26\)<br />\(30\)<br />\(42\)<br />\(46\)<br />\(58\)<br />\(62\)</td>
+<td>\(11\)<br />\(15\)<br />\(27\)<br />\(31\)<br />\(43\)<br />\(47\)<br />\(59\)<br />\(63\)</td>
+</tr></table>
+</td><td><img alt="" src="../dot.png" width=15></td><td>
+<table class="enc"><tr>
+<td>\(16\)<br />\(20\)<br />\(24\)<br />\(28\)<br />\(48\)<br />\(52\)<br />\(56\)<br />\(60\)</td>
+<td>\(17\)<br />\(21\)<br />\(25\)<br />\(29\)<br />\(49\)<br />\(53\)<br />\(57\)<br />\(61\)</td>
+<td>\(18\)<br />\(22\)<br />\(26\)<br />\(30\)<br />\(50\)<br />\(54\)<br />\(58\)<br />\(62\)</td>
+<td>\(19\)<br />\(23\)<br />\(27\)<br />\(31\)<br />\(51\)<br />\(55\)<br />\(59\)<br />\(63\)</td>
+</tr></table>
+</td><td><img alt="" src="../dot.png" width=15></td><td>
+<table class="enc"><tr>
+<td>\(32\)<br />\(36\)<br />\(40\)<br />\(44\)<br />\(48\)<br />\(52\)<br />\(56\)<br />\(60\)</td>
+<td>\(33\)<br />\(37\)<br />\(41\)<br />\(45\)<br />\(49\)<br />\(53\)<br />\(57\)<br />\(61\)</td>
+<td>\(34\)<br />\(38\)<br />\(42\)<br />\(46\)<br />\(50\)<br />\(54\)<br />\(58\)<br />\(62\)</td>
+<td>\(35\)<br />\(39\)<br />\(43\)<br />\(47\)<br />\(51\)<br />\(55\)<br />\(59\)<br />\(63\)</td>
+</tr></table>
+</td></tr></table>
+<br />
+<p><img class="gauche" alt="" src="magi/chapeau.gif">Sur ces 6 cartes sont notés des nombres. Le spectateur doit choisir (en secret) un nombre et désigner les cartes sur lesquelles le nombre figure. En un éclair le magicien devine le nombre choisi.<br />
+L'écriture binaire des nombres nous donnera la clé de l'énigme.</p>
+
+<p>Prenons ceux dont l'écriture ne nécessite qu'un maximum de 6 chiffres binaires (donc inférieur à 64); sur une carte écrivons (en décimal !) tous ceux se terminant (en binaire) par 1 (donc en particulier le nombre 1); sur une autre carte tous ceux dont l'écriture binaire fait apparaître un 1 en avant-dernière position (donc en particulier le nombre 2), et ainsi de suite jusqu'à tous ceux ayant comme premier des six chiffres un 1 (en particulier 32). De cette manière sur chaque carte figure un ensemble de nombres dont le plus petit est une puissance de 2.</p>
+
+<p>Quand le spectateur indique toutes les cartes où figure le nombre choisi, il désigne ainsi la manière dont ce nombre s'écrit en numération binaire. Pour le reconstituer il suffit de faire la somme des puissances de 2 figurant sur les cartes désignées, et c'est fort simple puisque ces puissances figurent en première position sur chacune des cartes.</p>
+
+<p><b><i>Note</i></b>: pour rendre les choses moins évidentes, vous aurez intérêt à mélanger les nombres écrits sur chacune des cartes. Pour ne pas trop vous compliquer la vie, gardez le nombre-clé (celui qui vous permettra de reconstituer le nombre choisi) en une position fixe de telle manière à le localiser aisément (par exemple le 3<sup>e</sup> nombre de l'avant-dernière ligne).</p>
+<br />
+<hr>
+<br />
+<p class="st">Par élimination</p>
+
+<img class="gauche" alt="" src="magi/dcoeur.gif">
+<p>Dans un tour de cartes, on s'arrange généralement par une petite manipulation, à faire passer la carte choisie par le spectateur au-dessus ou en dessous du paquet. Ensuite il faut faire apparaître cette carte de manière plus ou moins surprenante.<br />
+Nous allons dévoiler le "truc" qui s'explique simplement par les mathématiques.</p>
+
+<p>On demande au spectateur de choisir un nombre de cartes (donc inférieur à 52, mais dans la pratique pas trop grand afin d'éviter la monotonie). Ceci dit, on distribue sur un paquet le nombre de cartes choisi par le spectateur. On prend ce paquet et en prenant la première carte on dit "C'est vraiment très improbable que ce soit votre carte, donc je ne la conserve pas". 
+On la jette et on prend la deuxième carte en disant: "Je ne peux pas, pour chaque carte dire la même chose ! Sinon il ne m'en restera aucune. Donc je la conserve et je la place en réserve sous le paquet".<br />
+Pour la carte suivante, on invente un boniment qui aboutit à l'écarter; la suivante est placée sous le paquet. Pour varier, on donne le paquet au spectateur qui est invité à poursuivre (très soigneusement) le scénario. Le paquet conservé diminue jusqu'à ce qu'il ne reste qu'une seule carte, qui, miracle !, est celle choisie.</p>
+
+<p>Comme pour tout miracle il y a une explication, et dans ce cas nous la connaissons.</p>
+
+<p>Tout d'abord, nous avons (très légèrement) triché en comptant le nombre de cartes choisi par le spectateur. Si \(N\) est le nombre choisi, mentalement nous prenons la puissance de \(2\) immédiatement inférieure à \(N\), nous la retranchons de \(N\) et nous doublons le résultat. Ce nombre donnera la position où il nous faudra placer la carte. Par exemple si \(N=13\), on calcule \(13-2^3=5\), \(2.5=10\): la carte devra être en \(10^e\) position. Je compte sur vos dons d'improvisation pour y arriver. Tout est prêt; essayez, cela fonctionne. Reste à trouver l'explication.</p>
+
+<p>Comme nous éliminons une carte sur \(2\), nous nous doutons que la numération binaire peut être d'une grande utilité. Numérotons (mentalement) les cartes en notation binaire de \(1\) à \(1101\) (13). Que se passe-t-il lorsque nous éliminons la première, la 3e carte, etc. ? Les cartes dont le numéro d'ordre se termine par \(1\) seront éliminées. Lorsque nous arrivons à la \(N^e\) carte, celle-ci sera écartée ou conservée selon que N est pair ou impair. Nous nous trouvons alors avec un paquet contenant des cartes dont l'écriture binaire se termine par \(0\) (dans notre cas \(10, 100,\) \( 110,\) \(1000, 1010, 1100\)) et<br />
+ - si \(N\) est pair, nous éliminons la première de ces cartes et ainsi de suite pour toutes les cartes en position impaire<br />
+ - si \(N\) est impair (c'est notre exemple), nous gardons la première, et nous éliminons toutes celles en position paire.</p>
+
+<p>Traduisons cela en numération binaire.<br />
+Après une première passe, toutes celles se terminant par \(1\) ont été écartées. Ensuite<br />
+ - si \(N\) est pair (se termine par \(0\)), nous éliminons toutes celles dont l'avant-dernier chiffre est un \(1\) et nous gardons celles dont l'avant-dernier chiffre est un \(0\)<br />
+ - si \(N\) est impair (se termine par \(1\), et c'est le cas de notre exemple), nous éliminons toutes celles dont l'avant-dernier chiffre est un 0 et nous conservons celles dont l'avant-dernier chiffre est un \(1\).<br />
+Donc, dans notre cas, nous conservons les cartes numérotées \(10, 110, 1010\).</p>
+
+<p>La conclusion est qu'après la deuxième passe, nous avons conservé les cartes se terminant par un \(0\) précédé du dernier chiffre de \(N\).<br />
+Continuons ainsi, et la dernière carte conservée sera celle terminée par un \(0\) précédé du dernier chiffre de \(N\), précédé de l'avant-dernier chiffre de \(N\), et ainsi de suite. Si \(N\) s'écrit avec \(k\) chiffres, le numéro de la carte est formé des \(k-1\) derniers chiffres de \(N\) suivis d'un \(0\).</p>
+
+<p>À titre d'exemple, prenons \(N=13\); en binaire \(13\) s'écrit \(1101\).<br />
+Au premier tour on conserve \(0010, 0100, 0110, 1000, 1010, 1100\). La dernière carte éliminée est \(1101\).<br />
+Au deuxième tour on élimine celles de rang pair et on conserve \(0010, 0110, 1010\), la dernière carte éliminée est \(1100\).<br />
+Donc au troisième tour on élimine celles de rang impair et on conserve \(0010\) et \(1010\); la dernière carte éliminée est \(0110\).<br />
+Enfin au dernier tour on élimine \(0010\) et il reste \(1010\).<br />
+Les 3 derniers chiffres de l'écriture binaire de 13 sont \(101\) et la carte conservée sera celle en position \(1010\).<br />
+Le nombre formé par les \(k-1\) derniers chiffres est obtenu en soustrayant de \(N\) la plus haute puissance de \(2\), et le \(0\) qui termine signifie qu'on double le résultat de la soustraction.</p>
+
+<p>Remarquons qu'à chaque passe on élimine la moitié des cartes (éventuellement arrondie à l'unité supérieure); c'est à rapprocher du codage binaire utilisé dans la multiplication décrite plus haut.</p>
+<br />
+<hr>
+<br />
+<p class="st">Les coordonnées</p>
+
+<p>Ce tour ressemble à un tour très classique se déroulant avec \(21\) cartes</p>
+
+<img class="gauche" alt="" src="magi/25.gif"><p>Le magicien dispose sur la table \(25\) cartes en déposant les \(5\) premières horizontalement, les \(5\) suivantes sur les \(5\) premières et ainsi de suite jusqu'à ce qu'il ait constitué \(5\) colonnes de \(5\) cartes.<br />
+Il demande à un spectateur de choisir en secret une des \(25\) cartes et de lui dire dans quelle colonne elle se trouve.<br />
+Il ramasse les \(5\) colonnes en encadrant la colonne choisie par deux des colonnes restantes.<br />
+Il redispose les cartes sur table de la même manière que la première fois et demande au spectateur de lui indiquer la colonne dans laquelle se trouve la carte choisie. Il ramasse les cartes de la même manière que précédemment.<br />
+Alors dit-il, entre \(1\) et \(25\) il existe exactement un nombre magique qui porte bonheur: c'est \(13\) ! Il compte une à une les cartes et, miracle, la \(13^e\) carte est celle choisie par le spectateur.</p>
+
+<p>Miracle ? Voire ! Le titre devrait vous donner la solution.</p>
+
+<p>Remplaçons \(25\) par un autre nombre (non premier) par exemple \(28=4.7\).<br />
+Etalons les cartes sur table en formant \(4\) colonnes de \(7\) cartes. Chaque carte est repérée par ses deux coordonnées: la colonne, son abscisse (variant de \(1\) à \(4\)) et la rangée, son ordonnée (variant de \(1\) à \(7\)). Lorsque la colonne (par exemple la \(k^e\)) est désignée, on ramasse dans l'ordre les \(4\) colonnes. </p>
+
+<p>On redispose les cartes en formant cette fois \(7 \)colonnes de \(4\) cartes. La carte choisie se trouve en k<sup>e</sup> position dans l'une des \(7\) colonnes. Lorsque le spectateur désigne la colonne, on connaît alors la carte. La suite n'est que poudre aux yeux.<br />
+Malheureusement le spectateur se pose des questions: pourquoi a-t-on d'abord fait \(4\) colonnes de \(7\) cartes et ensuite \(7\) colonnes de \(4\) cartes ? Cela le met sur la voie de la solution. C'est pourquoi il faut prendre un nombre de cartes qui est un carré et \(25 \) est fort raisonnable: ce n'est ni trop grand ni trop petit. 
+Ensuite il vaut mieux ne pas ramasser les colonnes dans l'ordre; il vaut mieux faire brouillon (tout en retenant la position dans laquelle la colonne choisie a été remise). De même la deuxième fois. Cela permet de connaître la position exacte de la carte choisie. Le reste n'est que mise en scène, baratin, improvisation pour faire apparaître la carte choisie.</p>
+
+<p>Bon amusement !</p>
+
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="vied.htm">Vie courante</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

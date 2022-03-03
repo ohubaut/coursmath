@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tore - Surfaces - En 3 dimensions - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Le Tore" />
+<meta name="keywords" content="rectangle, ruban de Möbius, Klein" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../3di/3di.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript" src="three.min.js"></script>
+<script type="text/javascript" src="WebGL.js"></script>
+<script type="text/javascript" src="OBJLoader.js"></script>
+<script type="text/javascript" src="TrackballControls.js"></script>
+<script type="text/javascript" src="renduPersp.js"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-4', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Le tore
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<br>
+<div id="polanim" class="gauche" style="width:360px; height:360px; border:2px solid #f39;">
+<script>showPoly("tore.obj", "polanim", 28);</script>
+</div>
+<p>On peut voir cette surface comme un cylindre flexible que l'on aurait courbé pour recoller les deux bases.</p>
+
+<p>Il s'agit ici d'une surface engendrée par la rotation d'un cercle autour d'un axe non sécant situé dans son plan.</p>
+
+<p>C'est une surface du 4e degré, dont les sections par des plans parallèles à l'axe de révolution donnent des courbes remarquables: ovales de Cassini, lemniscate de Bernoulli.<br>
+Une section tout-à-fait intéressante: celle obtenue par un plan bitangent: elle est constituée de deux cercles imbriqués.</p>
+<p>Les équations paramétriques peuvent s'écrire :</p>
+
+\[ \small \begin{cases} x = (R +r~\mathbf{cos~}(v))~\mathbf{cos~}(u) \\ 
+y = (R +r~\mathbf{cos~}(v))~\mathbf{sin~}(u) \\ 
+z = r~\mathbf{sin~}(v) \end {cases}   \]
+
+
+<br>
+		</div>
+	</div>
+	<div id="fermeture">
+<br />
+<img alt="fermer" src="../fermer.gif" OnClick="javascript=parent.close()"><br />
+<br />
+	</div></div>
+</body>
+</html>

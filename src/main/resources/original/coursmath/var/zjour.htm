@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Durée du jour - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut">
+<meta name="description" content="Cours de mathématique pour les futurs enseignants du secondaire">
+<meta name="keywords" content="durée, jour, nuit, latitude, longitude">
+<meta name="index" content="Mathématiques Agrégation Maths Mathématique">
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen">
+<link type="text/css" rel="stylesheet" href="var.css" media="screen">
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print">
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+<div id="container">
+<a name="H"></a>
+
+	<div id="logo">
+<br><a href="../somm.htm"><img alt="Mathématique du secondaire" src="../titre_simple.gif" border=0></a><br><br>
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut</a>, <i>professeur émérite</i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a><br><br>
+	</div>
+
+	<div id="ref">
+Xavier Hubaut - Professeur émérite de l'Université Libre de Bruxelles
+	</div>
+
+	<div id="titre">
+<br>
+Le jour et la nuit<br>
+<br>
+	</div>
+
+	<div id="texte">
+<h3> </h3>
+
+		<div class="contenu">
+<table align="center" width="95%" style="text-align:justify;" ><tr><td>
+<p>Nous allons nous intéresser à la durée du jour, plus exactement à la portion de journée où nous sommes éclairés par le soleil, par rapport à la nuit où nous nous trouvons dans l'ombre.<br>
+
+<p>La terre tourne autour du soleil et décrit une orbite presque circulaire (en réalité une ellipse); en même temps elle tourne sur elle-même autour de son axe qui est incliné d'environ 23°27' par rapport à la verticale sur le plan de son orbite (l'écliptique).<br>
+<br>
+<div align="center">
+<img alt="terre" src="jour/terre_sol.gif">
+</div>
+
+<p><i>Une remarque préliminaire: il est évident qu'étant donnée la complexité du problème, nous le simplifierons: nous prendrons une orbite circulaire, nous ne nous occuperons pas des variations (précession, nutation) de l'axe de rotation de la terre, nous supposerons que le soleil est réduit à un point (pas d'aurore, ni de crépuscule, etc.)</i><br>
+
+<p>Représentons la terre avec son axe de rotation vertical; en conséquence l'équateur sera situé dans un plan horizontal.<br>
+
+<p>Supposons que ce jour-là, la terre soit dans une position telle que les rayons du soleil forment un angle &alpha; avec le plan de l'équateur. Les spécialistes diront que l'angle &alpha; mesure la "hauteur" de l'écliptique (plan de rotation du soleil) par rapport au plan de l'horizon. Remarquons que cet angle &alpha; sera toujours compris entre -23°27' et + 23°27'.<br>
+Pour que les choses soient plus gaies, nous avons choisi un des jours de l'année où &alpha; est positif. Dans l'hémisphère nord, nous sommes proches du solstice d'été !<br>
+
+<p>Quelle sera la durée du jour à un endroit situé à une latitude &lambda; ? Pour fixer les idées, plaçons-nous dans les environs de Bruxelles à 50° de latitude Nord.<br>
+
+<p><img alt="jour et nuit" src="jour/jour_nuit.gif" align=right>
+Désignons par <b>C</b> le centre de la terre, et <b>O</b> le centre du parallèle de Bruxelles.<br>
+Fixons un instant et désignons par <b>M</b> (matin) et <b>S</b> (soir) les deux points du parallèle de Bruxelles où le soleil se lève et se couche, tandis que <b>J</b> (jour) et <b>N</b> (nuit) seront ceux où il est respectivement midi et minuit.<br>
+<b>P</b> sera le point où le plan du méridien de midi coupe la droite <b>MS</b><br>
+Enfin, &gamma; désignera l'angle <b>MOS</b> qui sous-tend la partie éclairée par le soleil.<br>
+Pour simplifier le problème, supposons que pendant 24 heures la terre tourne sur elle-même sans modifier la position de son axe par rapport au soleil.<br>
+
+<p>L'angle &gamma; peut se calculer en remarquant que <b>OP</b> vaut, en valeur absolue, r*cos(&pi;-&gamma;/2) où r représente le rayon du parallèle de Bruxelles.<br>
+Connaissant la latitude &lambda; de Bruxelles, on peut calculer r = <b>OJ</b> = R*cos&lambda; où R désigne le rayon terrestre.<br>
+On a aussi <b>CO</b> = R*sin&lambda; et dans le triangle <b>COP</b>, on a la relation <b>OP</b> = <b>CO</b>*tan&alpha; = R*sin&lambda;*tan&alpha;.<br>
+Enfin, en comparant les valeurs obtenues pour <b>OP</b>, on obtient: R*cos&lambda;*cos(&pi;-&gamma;/2) = R*sin&lambda;*tan&alpha; et &gamma; est donné par la relation:<br>
+<div align="center">cos(&pi;-&gamma;/2) = tan&lambda;*tan&alpha;</div>
+ou encore<br>
+<div align="center">&gamma; = -2arccos(tan&lambda;*tan&alpha;)</div>
+</div>
+
+<p>Aux équinoxes &alpha; = 0 et &pi;-&gamma;/2 = &pi;/2 c'est-à-dire &gamma; = &pi;. La durée du jour est bien égale à celle de la nuit.<br>
+
+<p>Au solstice d'été, &alpha; = 23°27'. La latitude &lambda; de Bruxelles est 50°<br>
+tan&lambda;*tan&alpha; = 0,51695... = cos(&pi;-&gamma;/2) ce qui donne approximativement 180°-&gamma;/2 = 58°52' et &gamma; = 242°16', ce qui, traduit en nombre d'heures, vaut 16h 9 minutes.<br>
+
+<p>En résumé pour calculer la durée du jour, il suffit de connaître deux choses: la latitude du lieu et l'angle &alpha; selon lequel le soleil tombe sur le plan de l'équateur à la date choisie. La valeur de cet angle est bien connue aux équinoxes (il vaut 0°) et aux solstices (il vaut +23°27' et -23°27').<br>
+Mais aux autres dates ?<br>
+
+<p>La réponse est fort simple. Imaginons-nous, assis sur le soleil (rassurez-vous ce n'est qu'une fiction) regardant tout au long de l'année en direction du centre de la terre.<br>
+Au cours de sa rotation autour du soleil, l'axe de rotation de la terre conserve son inclinaison sur l'écliptique. Vu du soleil, cet axe tournera autour d'une normale au plan de l'écliptique et décrira donc un cône dont le demi-angle au sommet vaut 23°27'.<br>
+
+<p>L'angle d'attaque &alpha; des rayons solaires sur le plan de l'équateur variera en fonction de la date &delta; (nous associons à la date, l'angle &delta; parcouru par la terre sur son orbite, comptée à partir de sa position à l'équinoxe de printemps)<br>
+Par conséquent, l'angle &alpha; variera en fonction de la date &delta; de manière sinusoïdale, c'est-à-dire sin&alpha; = K*sin&delta;. Comme les valeurs extrêmes de &alpha; sont obtenues aux solstices (&delta; = ± &pi;/2) et valent ± 23°27', K est donc égal à sin(23°27') et:<br>
+<div align="center">
+sin&alpha; = sin(23°27')*sin&delta;<br>
+</div>
+
+<p>Pour ceux qui ne seraient pas convaincus par ce raisonnement semi-intuitif, voici une autre démonstration.<br>
+Pour la lisibilité du schéma, nous avons fortement exagéré l'angle formé par l'axe de rotation de la terre avec l'écliptique.<br>
+
+<img alt="angle" src="jour/angle.gif" align="left">
+Soit <b>C</b> le centre de la terre, <b>A</b> l'extrémité du vecteur unité <b>CA</b> dirigé suivant l'axe de rotation de la terre (dessiné en bleu) et <b>CS</b> un vecteur unité dirigé vers le soleil. Au cours de sa rotation autour du soleil, <b>CA</b> décrit le cône (dessiné en rouge).<br>
+Rappelons que &alpha; est l'angle formé par les rayons solaires, dirigés suivant le vecteur <b>CS</b> et l'équateur.<br>
+Il est plus facile de travailler avec la perpendiculaire <b>CA</b> au plan de l'équateur qui forme avec le vecteur <b>CS</b> l'angle complémentaire de &alpha; que nous noterons &beta;.<br>
+On peut donc écrire <b>CS.CA</b> = cos&beta; = sin&alpha;. Décomposons le vecteur <b>CA</b> en la somme de <b>CA'</b> dirigé perpendiculairement au plan de l'écliptique (dessiné en vert) et de <b>CA"</b> situé dans le plan de l'écliptique.<br>
+<b>CS.CA</b> = <b>CS.CA'</b> + <b>CS.CA"</b> = <b>CS.CA"</b>; le module du vecteur <b>CA"</b> vaut sin(23°27').<br>
+Le produit scalaire <b>CS.CA"</b> vaut donc sin(23°27')*cos(<b>BCA"</b>). Mais cos(<b>BCA"</b>) = sin&delta;. On obtient:
+<div align="center">
+<br>
+sin&alpha; = sin(23°27')*sin&delta;<br>
+</div>
+ou encore <br>
+<div align="center">
+sin&alpha; = 0,3979*sin&delta;.<br>
+<br>
+</div>
+<p>À présent le problème est résolu et la durée du jour sera fonction de deux variables: la date &delta; et la latitude &lambda;.<br>
+On aboutit à l'affreuse formule:<br>
+<div align="center">
+<br>
+&gamma; = -2arccos(tan&lambda;*tan(arcsin(0,3979*sin&delta;)))<br>
+<br>
+</div>
+<p>Heureusement, les outils informatiques sont à notre disposition pour calculer la valeur de &gamma;. Nous représenterons ci-dessous les variations de la durée du jour sur une année à des latitudes allant de 0 à 90° réparties de 10 en 10°<br>
+<div align="center">
+<img alt="durée du jour" src="jour/jour.gif">
+</div>
+<p>À partir de la latitude du cercle polaire, nous observons, en été, des périodes avec soleil ininterrompu (soleil de minuit) et, en hiver, des journées entières de nuit.<br>
+Pour Bruxelles (latitude=50°) on voit sur le graphique que la durée du jour varie approximativement entre les valeurs de 16h (solstice d'été) et 8h (solstice d'hiver).<br>
+
+<p align="right">voir également l'article de <a href="http://mapage.noos.fr/r.ferreol/atelecharger/textes/jour/duree%20du%20jour.html" target="lien">Robert Ferréol</a>.</p>
+</td></tr></table>
+		</div>
+	</div>
+</div>
+<div id="fin">
+		<br>
+		<table width=700 align="center" border=0><tr>
+		<td align=left width="35%"><a href="variad.htm">Insolites</a></td>
+		<td align=center width="30%"><a href="#H">Haut de la page</a></td>
+		<td align=right width="35%"><a href="../somm.htm">Sommaire</a></td>
+		</table>
+		<br>
+  <p>
+    <a href="http://validator.w3.org/check?uri=referer" target="verif"><img
+        src="http://www.w3.org/Icons/valid-html401"
+        alt="Valid HTML 4.01 Transitional" height="31" width="88" border="0"></a>
+  </p>
+</div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2637570-14";
+urchinTracker();
+</script>
+
+</body>
+</html>

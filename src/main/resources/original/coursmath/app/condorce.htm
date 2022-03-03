@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Jeux Olympiques - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="sports, jeux olympiques" />
+<meta name="keywords" content="Condorcet, agrégation, préférences, classement" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Jeux Olympiques
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Les Jeux Olympiques sont terminés. Les concurrents de toutes nationalités se sont partagé les médailles d'or, d'argent et de bronze.</p>
+
+<p>Dans certaines disciplines, l'attribution ne pose aucun problème; en athlétisme, en natation, en judo, en boxe, en équitation, en escrime, en voile,...</p>
+
+<p>Il suffit de voir qui a couru, nagé le plus rapidement, qui a gagné tous ses matches, etc. Mais il n'en est pas de même dans d'autres disciplines où le classement n'est pas objectif. Par exemple la gymnastique, le plongeon, le patinage artistique,...</p>
+
+<p>Dans ces disciplines, comment procède-t-on pour trouver le vainqueur ? On a recours à un jury qui note les différent(e)s concurrent(e)s. Là se posent déjà certains problèmes. On a constaté que certains membres du jury n'étaient pas impartiaux et favorisaient certains concurrents ou, au contraire, sous-cotaient les adversaires de leur favori. On a pris certaines mesures visant à éliminer de tels agissements. Parfois on écarte la meilleure et la moins bonne note, parfois on procède différemment. Mais quelle que soit la conduite tenue, il y a toujours des mécontentements.</p>
+
+<p>On adopte dans de nombreuses disciplines une simple cotation (sur 6 ou sur 10) et on fait ensuite la moyenne des notes obtenues. Cette méthode est-elle satisfaisante ? Un petit exemple nous montrera le contraire. Supposons que 2 concurrents <b>A, B</b> soient en compétition devant un jury de 5 juges <b>1, 2, 3, 4, 5</b> notant les concurrents de 0 à 10.</p>
+
+<p>Les résultats sont:</p>
+
+<table class="n">
+<tr><th></th><th>A</th><th>B</th></tr>
+<tr><th>1</th><td>9</td><td>6</td></tr>
+<tr><th>2</th><td>8</td><td>9</td></tr>
+<tr><th>3</th><td>9</td><td>2</td></tr>
+<tr><th>4</th><td>9</td><td>10</td></tr>
+<tr><th>5</th><td>7</td><td>8</td></tr>
+<tr><th>Total  </th><td> 42 </td><td> 35 </td></tr>
+</table>
+<p>And the winner is...le concurrent <b>A</b>. Avec raison(?), indignation de <b>B</b>, mais également des juges <b>2, 4</b> et <b>5</b>.</p>
+
+<p>Trois des cinq juges avaient classé le concurrent <b>B</b> en première position, et la médaille est attribuée à <b>A</b> !</p>
+
+<p>Examinons un autre type de notation utilisé dans certaines compétitions. On attribue 5 points au premier, 3 au deuxième, 2 au troisième et 1 au quatrième. Rien pour les autres. Supposons que 5 concurrents <b>A, B, C, D, E</b> soient en lice et notés par un jury composé de 5 juges <b>1, 2, 3, 4, 5</b> et qu'on récolte les résultats suivants:<br></p>
+
+<table class="n">
+<tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+<tr><th>1</th><td>3</td><td>2</td><td>5</td><td>0</td><td>1</td></tr>
+<tr><th>2</th><td>1</td><td>2</td><td>5</td><td>0</td><td>3</td></tr>
+<tr><th>3</th><td>5</td><td>2</td><td>1</td><td>3</td><td>0</td></tr>
+<tr><th>4</th><td>0</td><td>1</td><td>5</td><td>3</td><td>2</td></tr>
+<tr><th>5</th><td>1</td><td>0</td><td>5</td><td>2</td><td>3</td></tr>
+<tr><th>Total  </th><td> 10 </td><td>  7 </td><td> 21 </td><td>  8 </td><td>  9 </td></tr></table>
+
+<p>Le classement est donc <b>C, A, E, D, B</b></p>
+
+<p>Après le contrôle antidoping, on s'aperçoit que le gagnant, le concurrent <b>C</b>, doit être disqualifié. Le concurrent <b>A</b>, qui se doutait du dopage, est tout heureux; il recevra la médaille d'or. Les points sont donc redistribués et l'on obtient les résultats suivants:</p>
+
+<table class="n">
+<tr><th> </th><th>A</th><th>B</th><th>D</th><th>E</th></tr>
+<tr><th>1</th><td>5</td><td>3</td><td>1</td><td>2</td></tr>
+<tr><th>2</th><td>2</td><td>3</td><td>1</td><td>5</td></tr>
+<tr><th>3</th><td>5</td><td>2</td><td>3</td><td>1</td></tr>
+<tr><th>4</th><td>1</td><td>2</td><td>5</td><td>3</td></tr>
+<tr><th>5</th><td>2</td><td>1</td><td>3</td><td>5</td></tr>
+<tr><th>Total  </th><td> 15 </td><td> 11 </td><td> 13 </td><td> 16 </td></tr>
+</table>
+
+<p class="ni">et le classement modifié est <b>E, A, D, B</b>.</p>
+
+<p>A nouveau déception et indignation du concurrent <b>A</b> qui voit la médaille d'or lui échapper au profit du concurrent <b>E</b> !</p>
+
+<p>Ce système ne convient donc pas et ne doit pas non plus être utilisé. Encore un mauvais système ! Mais alors comment faire ?</p>
+
+<p>Posons bien les conditions du problème.</p>
+
+<p>Nous devons établir un classement de plusieurs concurrents (remarquons qu'il peut s'agir de candidats à une élection, le problème est identique). Pour ce faire, on fait appel à un jury (ce peuvent être les électeurs) et chaque membre du jury établit son classement personnel. Mais un classement peut varier du plus rudimentaire au plus évolué. Le plus rudimentaire consiste à établir un simple rangement (qualitatif) où l'on classe par ordre de préférence les différents concurrents. On peut raffiner en mesurant mieux l'écart de préférence entre ceux-ci; cela revient à ajouter une notion quantitative et se traduit par l'attribution de notes. Puis surgit le problème crucial. Comment, à partir de ces classements personnels, en déduire un classement collectif qui satisferait aux exigences les plus élémentaires.</p>
+
+<p><img class="droite enc" alt="condorcet" src="cond/condorce.jpg">Les difficultés liées à ce problème ont été mises en lumière pour la première fois par Condorcet en 1785 dans un ouvrage intitulé <i><b>"Essai sur l'application de l'analyse à la probabilité des décisions rendues à la pluralité des voix"</b></i>.</p>
+
+<img class="enc" alt="" src="cond/condorcet.jpg">
+
+<p>Dans cet ouvrage, il montre un exemple fort perturbant: trois candidats <b>A, B, C</b> se présentent et 60 personnes procèdent à un classement. On enregistre les résultats suivants:</p>
+
+<ul>
+<li>23 classent <b>A > C > B</b>
+<li>19 classent <b>B > C > A</b>
+<li>16 classent <b>C > B > A</b>
+<li> 2 classent <b>C > A > B</b>
+</ul>
+<p>Que faut-il en déduire ?</p>
+
+<p>Prenons les candidats par paire. Nous constatons que pour la paire (<b>A, B</b>) 35 classent <b>B</b> > <b>A</b>, pour la paire (<b>B, C</b>) 41 classent <b>C</b> > <b>B</b> et enfin, que pour la paire (<b>C, A</b>) 37 classent <b>C</b> > <b>A</b>. Il est donc clair qu'une majorité préfère <b>C</b> à <b>B</b>, une majorité <b>B</b> à <b>A</b> et évidemment (pourquoi évidemment ?) une majorité préfère <b>C</b> à <b>A</b>. Le classement doit être <b>C > B > A</b>. Et pourtant, si on avait demandé aux 60 personnes de choisir le "meilleur" candidat, le classement aurait été: <b>A</b> (avec 23 voix) devant <b>B</b> (19 voix) et <b>C</b> (18 voix).</p>
+
+<p>Cela fait réfléchir à la manière d'établir un <a href="elect.htm">règlement électoral</a>.</p>
+
+<p>Autre cas encore plus gênant. Modifions les chiffres:</p>
+
+<ul>
+<li>23 classent <b>A > B > C</b></li>
+<li> 2 classent <b>B > A > C</b></li>
+<li>17 classent <b>B > C > A</b></li>
+<li> 8 classent <b>C > B > A</b></li>
+<li>10 classent <b>C > A > B</b></li>
+</ul>
+
+<p>Les comparaisons par paire donnent: la majorité (33) classe <b>A > B</b>, la majorité (42) classe <b>B > C</b> mais, surprise !, la majorité (35) classe <b>C > A</b> ! Que faire ?</p>
+
+<p>Compte tenu de ces quelques exemples, quels sont les enseignements que nous pouvons en tirer et quelles devraient être les conditions raisonnables à imposer à une bonne synthèse des classements individuels ?</p>
+
+<ul>
+<li>principe d'<b>unanimité</b>: si <u>tout</u> le monde classe <b>A > B</b> alors il faut que dans le classement collectif <b>A > B</b>.</li>
+<li>principe de <b>non-dictature</b>: il va de soi qu'on ne peut prendre le classement d'un seul individu sans tenir compte des autres.</li>
+<li>principe d'<b>indépendance</b>: si un des candidats (ou compétiteurs) est écarté, cela ne doit pas entraîner de modification pour les autres.</li>
+<li>principe de <b>transitivité</b>: si dans le résultat de la consultation, <b>A > B</b> et <b>B > C</b>, alors <b>A > C</b>.</li>
+<li>principe d'<b>universalité</b>: le classement résultant ne peut pas dépendre des individus qui ont établi les classements.</li>
+</ul>
+
+<p>Voila semble-t-il des exigences minimales à respecter.</p>
+
+<p>En 1951, l'économiste Kenneth J. Arrow (prix Nobel d'économie 1972) démontre qu'il est <b>impossible d'y satisfaire dès qu'il y a plus de deux candidats</b>. Résultat surprenant s'il en est !</p>
+
+<p>Pour la petite histoire, signalons que si le théorème énoncé est vrai, la démonstration qu'Arrow en donne n'est pas correcte. Heureusement des mathématiciens ont pu la corriger.</p>
+
+<p>Il est ahurissant que l'existence de ce théorème ne soit pas connue dans le monde sportif où l'on tente encore toujours de trouver une méthode de classement qui ne donnerait prise à aucune critique. Mais de nos jours encore, certains n'espèrent-ils pas trouver la quadrature du cercle ? Compte-tenu de ce résultat, on peut se demander si de tels "sports" ont bien leur place aux Jeux Olympiques ou s'ils doivent plutôt être considérés comme des spectacles que chacun appréciera selon son propre goût.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

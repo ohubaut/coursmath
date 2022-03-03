@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Où se trouve le porte-bonheur ? - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="probabilités et paradoxe" />
+<meta name="keywords" content="probabilité, modification, information, paradoxes" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Où se trouve le porte-bonheur ?
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Un célèbre jeu télévisé américain "Let's make a Deal" a suscité une énorme controverse, tant chez les téléspectateurs que dans le monde "scientifique".<br>
+
+<p>Décrivons brièvement ce jeu très intellectuel:
+<blockquote>
+<p><i>Un candidat ayant brillament réussi une série d'épreuves "difficiles" gagne un prix; mais il peut le remettre en jeu pour tenter de gagner le super lot: une voiture.<br>
+Il y a 3 portes (ou rideaux) et derrière l'un d'elles se trouve une voiture et derrière les deux autres une chèvre !?! (qu'on pourrait remplacer par un lot de consolation assez dérisoire).<br>
+Le candidat choisit une porte.<br>
+Pour augmenter le suspense le présentateur (qui sait où se trouve la voiture) ouvre une des deux autres portes et découvre une chèvre. Il demande alors au candidat s'il veut ou non modifier son choix.</i></p>
+</blockquote>
+
+<p>Que doit faire le candidat?</p>
+
+<p>La réponse est évidente; c'est du bon sens.<br>
+Le candidat n'a obtenu aucune information, puisque parmi les deux portes restantes il y en a toujours une derrière laquelle se trouve une chèvre, qu'il maintienne son choix ou le modifie, dans tous les cas il a maintenant une chance sur deux de gagner la voiture.</p>
+
+<p>Eh bien non&nbsp;! Méfiez-vous du "bon sens" irréfléchi.</p>
+
+<p>Supposons, sans nuire à la généralité que le candidat choisisse la porte A. Calculons la probabilité de trouver la voiture, après que le présentateur ait ouvert une des deux autres portes.</p>
+
+<table class="n">
+<tr><td colspan=2>la voiture est derrière</td><td>A</td><td>B</td><td>C</td></tr>
+<tr><td>le présentateur<br>a ouvert B</td><td>1/2</td><td>1/6</td><td>0</td><td>1/3</td></tr>
+<tr><td>le présentateur<br>a ouvert C</td><td>1/2</td><td>1/6</td><td>1/3</td><td>0</td></tr>
+</table>
+
+<p>On voit donc que, quelle que soit la porte (B ou C) ouverte par le présentateur, le candidat a tout intérêt à modifier son choix: il double ses chances.</p>
+
+<p>Un petit schéma rendra peut être les choses plus claires:<br>
+Supposons, sans nuire à la généralité que la voiture est derrière la porte A.<br>
+
+<table class="centre">
+<tr>
+<td><img alt="" src="../dot.png" width="120" height="1"></td>
+<td><img alt="" src="../dot.png" width="140" height="1"></td>
+<td> </td>
+<td><img alt="" src="../dot.png" width="100" height="1"></td>
+<td>On ouvre:</td>
+<td>  prob.  </td>
+</tr>
+<tr><td> </td><td> </td><td> </td><td rowspan=3><img alt="" src="3prt/choix.gif"></td><td> B<img alt="" src="../dot.png" width="40" height="1"></td><td>1/6</td></tr>
+<tr><td> </td><td rowspan=7><img alt="" src="3prt/gchoix.gif"></td><td>A</td><td> </td><td></td></tr>
+<tr><td> </td><td> </td><td> C<img alt="" src="../dot.png" width="40" height="1"></td><td>1/6</td></tr>
+<tr><td> </td><td> </td><td rowspan=3><img alt="" src="3prt/choixa.gif"></td><td> A<img alt="" src="../dot.png" width="40" height="1"></td><td>0</td></tr>
+<tr><td width="120">Choix du candidat</td><td>B</td><td> </td><td></td></tr>
+<tr><td> </td><td> </td><td> C<img alt="" src="../dot.png" width="40" height="1"></td><td>1/3</td></tr>
+<tr><td> </td><td> </td><td rowspan=3><img alt="" src="3prt/choixa.gif"></td><td> A<img alt="" src="../dot.png" width="40" height="1"></td><td>0</td></tr>
+<tr><td> </td><td>C</td><td> </td><td></td></tr>
+<tr><td> </td><td> </td><td> </td><td> B<img alt="" src="../dot.png" width="40" height="1"></td><td>1/3</td></tr>
+</table>
+
+<p>Il est donc évident que le candidat, s'il modifie son choix, a maintenant 2/3 de gagner.</p>
+
+<p>Pour ceux qui n'y croient toujours pas: de deux choses (non équiprobables) l'une:</p>
+<ul>
+<li>Le candidat a choisi la bonne porte (une chance sur trois). S'il modifie son choix il perd.</li>
+<li>Le candidat a choisi une mauvaise porte (deux chances sur trois). S'il modifie son choix il gagne.</li>
+</ul>
+
+<p>Si vous n'êtes toujours pas convaincus, imaginez qu'il y a 100 portes, vous en choisissez une et le présentateur en ouvre 98 (derrière lesquelles il n'y a évidemment rien !)</p>
+
+<p>Enfin pour les derniers sceptiques, remarquez que l'ouverture des portes n'apporte aucune information, puisque le présentateur sait où se trouve la voiture. Supposez donc que le présentateur n'ouvre aucune porte, mais vous propose :</p>
+
+<ul>
+<li>soit de conserver votre choix initial,
+<li>soit de choisir l'ensemble de <u>toutes</u> les autres portes.
+</ul>
+
+<p>Il est vrai que la réponse au problème initial heurte le "bon sens", mais j'espère qu'à présent vous êtes convaincus. Sinon relisez les démonstrations un peu plus tard et consolez-vous en pensant qu'à l'heure actuelle il existe encore des mathématiciens qui n'ont pas compris !</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Théorèmes belges - 2e degré - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="coniques, foyer, directrice, excentricité, section, cône" />
+<meta name="keywords" content="second degré, algèbre, géométrie, coniques, Dandelin, Quételet" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="2de.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-7', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />Les théorèmes belges<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Il est curieux que les théorèmes de <a title="Un mathématicien belge méconnu" href="../bio/dandelin.htm">Dandelin</a> et <a title="Un des fondateurs de la statistique" href="../bio/quetelet.htm">Quételet</a>, tous deux mathématiciens belges, soient enseignés à l'étranger sous le nom de théorèmes belges et ignorés dans notre pays. Peut-être le secret de cette méconnaissance réside-t-il tout simplement dans le fait que, pour être enseignés efficacement, ils nécessitent soit la construction d'un petit modèle soit la réalisation d'un dessin assez soigné.</p>
+
+<p>Ces théorèmes relient en fait les définitions de coniques, section d'un cône, avec celle d'ellipse(hyperbole) ensemble des points dont la somme (différence) des distances à deux points fixes est constante ainsi que celle des trois coniques définies comme ensemble des points dont le rapport des distances à un point (foyer) et une droite (directrice) est une constante <i>e</i> appelée <a href="../ana/polaires.htm#E"><b>excentricité</b></a>.</p>
+
+<p><img class="gauche" alt="" src="belg/dandelin.png" width=400 height=515>Partons d'un cône (de révolution), et soit \(E\) un plan de section ; pour la commodité dessinons le cas où cette section est une ellipse. On peut dans ce cône trouver deux sphères \(S\), \(S'\) tangentes au cône le long d'un cercle \(C, C'\) et tangentes à \(E\) de part et d'autre de celui-ci ; \(f\) et \(f'\) désigneront les points de contact des sphères avec le plan. Nous noterons enfin \(P\) et \(P'\) les plans des cercles \(C\) et \(C'\) et \(d\) et \(d'\) les droites d'intersection de ces plans avec le plan \(E\). (Jusqu'ici le dessin peut se faire dans un plan perpendiculaire à \(p\) et la détermination des 2 sphères \(S\) et \(S'\) se ramène à la détermination de 2 cercles inscrits dans un angle au sommet d'un triangle).</p>
+
+<p>Choisissons un point quelconque \(p\) de la section conique. Par ce point \(p\) menons la génératrice du cône qui coupe \(C\) et \(C'\) en \(S\) et \(S'\).
+On a évidemment pf = ps ; ce sont deux segments tangents à une sphère \(S\) ; de même \(pf' = ps'\), d'où \(pf+ pf' = ps + ps' = ss'\) c'est-à-dire la partie de génératrice comprise entre les plans \(P\) et \(P'\).<br />
+Et bien évidemment, cette longueur est une constante indépendante du choix du point \(p\).</p>
+
+<p>On retrouve donc la définition usuelle de l'ellipse comme ensemble des points dont la somme des distances à deux points fixes \(( f, f')\)  est constante.
+On procéderait de même si la section était hyperbolique, la somme des distances serait tout simplement remplacée par la différence de celles-ci.</p>
+
+<p>Que se passe-t-il si la section est parabolique ? Dans ce cas, la sphère \(S\) reste bien définie, la deuxième sphère \(S4\) est rejetée à l'infini (de même que son point de contact \(f'\)). Il faut alors songer à une propriété ne faisant intervenir que l'un des deux foyers.</p>
+
+<p><img class="droite" alt="" src="belg/direc.png" width=357 height=295>Reprenons, en l'agrandissant légèrement, la figure de départ et portons notre attention sur la région située au voisinage du foyer \(f\).</p>
+
+<p>Soit \(p\) un point quelconque de la conique. Sa projection orthogonale sur le plan \(P\) sera notée \(q\) et \(r\) désignera sa projection orthogonale sur la droite \(d\) ; le point \(s\) est sur la génératrice du cône passant par \(p\). En observant que l'angle \(spq\) vaut la moitié de l'angle \(\alpha\) au sommet du cône on a :</p>
+
+\[pf = ps ;~~pq = ps.\mathbf{cos~}(\alpha/2)~~;~~pq = pr.\mathbf{sin~}\beta\]
+
+<p class="ni">où \(\beta\) désigne l'angle des plans \(P\) et \(E\).</p>
+
+<p>On en déduit :</p>
+
+\[ pf = pr.\frac{\mathbf{sin~}\beta}{\mathbf{cos~}(\alpha/2)}\]
+
+<p class="ni">ce qui montre que quel que soit \(p\) sur la section, le rapport de ses distances à \(f\) à la droite \(d\) est constante. Cette constante est l'excentricité \(\varepsilon\) de la conique.</p>
+
+<p>Remarquons que dans le cas de la parabole, \(\beta\) et \(\alpha/2\) sont complémentaires et que la constante vaut \(1\) ; on retrouve la définition classique de la parabole ensemble des points équidistants d'une droite et d'un point.</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="2degrd.htm">Second degré</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

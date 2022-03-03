@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Documents - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résumés" />
+<meta name="keywords" content="groupes, musique, algèbre, géométrie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="doc.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript">
+    function pdf(fichier) 
+{window.open(fichier,'pdf','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<style type="text/css">
+.k{background-color:#c00;}
+.p{background-color:#0c0;}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<body>
+<div id="container">
+	<div class="titre">
+<br />
+GROUPES CRISTALOGRAPHIQUES DU PLAN
+<br />
+	</div>
+	<div class="stitre">
+par<br>
+<b>Xavier Hubaut</b><br><br>
+Professeur émérite - Université Libre de Bruxelles <br>(Département de Mathématique)
+	</div>
+	<div class="central">
+		<div class="texte">
+
+<!-- COPIER LE CONTENU DU FICHIER HTML ICI -->
+
+<p class="st">Déplacements et isométries du plan</p>
+<p>Parmi les isométries du plan on peut distinguer celles qui conservent l'orientation (déplacements) et celles qui inversent l'orientation (antidéplacements ou retournements)<br>
+<br>
+<p class="st">Déplacements</p>
+<p class="ni">Commençons par les déplacements. Ils sont de deux types:</p>
+<ul>
+<li>les rotations (c'est le cas général)
+<li>les translations
+</ul>
+<p>Se donner un point <b>p</b> et son image <b>p'</b> est évidemment insuffisant. Il existe bien des rotations amenant <b>p</b> sur <b>p'</b>.<br>
+On peut préciser en donnant une demi-droite D issue de <b>p</b> et son image D' (une demi-droite issue de <b>p'</b>). Dès lors le déplacement est bien déterminé.<br>
+<p>Remarquons que la donnée de l'image d'un point et d'une demi-droite est équivalente à se donner deux points <b>p</b>, <b>q</b> et leurs images <b>p'</b>, <b>q'</b> (avec <b>pq</b> = <b>p'q'</b>); ces données sont souvent plus aisées à manier.<br>
+<br>
+<img class="gauche enc" alt="rotation" src="cristal/rota.gif">Comment trouver le déplacement amenant <b>pq</b> sur <b>p'q'</b> ?<br>
+
+Le centre de la rotation est situé sur la médiatrice de <b>pp'</b>.<br>
+Il se trouve également sur celle de <b>qq'</b>.<br>
+C'est donc le point d'intersection <b>o</b> de ces deux droites.<br>
+
+Toutefois le raisonnement est un peu rapide. En effet est-on assuré que ces deux droites se coupent en un point? Elles pourraient être parallèles, voire confondues. Nous devons examiner ces cas séparément.<br>
+Qu'elles soient parallèles ou confondues, cela signifie que <b>pp'</b> et <b>qq'</b> sont également parallèles. De plus <b>pq</b> = <b>p'q'</b>. Le quadrilatère <b>pp'q'q</b> est donc soit un trapèze isocèle, soit un parallélogramme.<br>
+<br>
+<img class="gauche enc" alt="" src="cristal/trap.gif">
+<img class="droite enc" alt="" src="cristal/para.gif">
+<p><br>Dans le cas d'un trapèze isocèle il s'agit d'une rotation ayant pour centre le point d'intersection des côtés non-parallèles. Si c'est un parallélogramme il s'agit d'une translation d'amplitude <b>pp'</b><br>
+<br>
+<p class="st">Antidéplacements</p>
+<p>Les antidéplacements sont moins bien connus que les déplacements. Pourtant c'est aussi simple; il y en a deux classes:
+<ul>
+<li>les symétries glissées (cas général)
+<li> les symétries axiales
+</ul>
+<p>Une symétrie glissée est généralement décrite comme une symétrie axiale suivie (ou précédée, c'est commutatif) d'une translation parallèle à l'axe de symétrie. C'est la complication de cette définition qui fait que d'habitude on ne s'intéresse guère aux symétries glissées "puisque c'est la composée de deux transformations". Cet argument est évidemment stupide puisqu'une rotation peut également s'obtenir comme produit de deux transformations (symétries axiales).<br>
+<p>Une manière simple de se représenter cette transformation est de regarder des traces de pas dans la neige. Pour mieux sentir qu'il s'agit d'"une" transformation, on peut couper en son milieu un bouchon. Le tire-bouchon, en vissant, a laissé comme empreinte dans un plan médian une symétrie glissée; c'est la trace, dans le plan, d'un mouvement hélicoïdal.<br>
+<br>
+<p>Dans un antidéplacement l'orientation est inversée. Tout comme un déplacement, il est déterminé par la donnée d'une demi-droite D issue d'un point <b>p</b> et de son image D' (demi-droite issue de <b>p'</b>). Comme plus haut on peut également se donner deux points <b>p</b>, <b>q</b> et leurs images <b>p'</b>, <b>q'</b> (avec <b>pq</b> = <b>p'q'</b>).<br>
+
+<p>Comment trouver la symétrie (glissée ou non) qui correspond à cet antidéplacement ?<br>
+<br>
+<img class="gauche enc" alt="" src="cristal/sg.gif"> Si le segment <b>pq</b> tourne autour du point <b>p</b>, l'image, le segment <b>p'q'</b>, tourne autour de <b>p'</b>, mais en sens inverse (il s'agit d'un antidéplacement, on change l'orientation). Donc il existera deux positions (opposées) où le vecteur <b>pq</b> sera parallèle au vecteur <b>p'q'</b>.<br>
+Il suffit alors de prendre la parallèle à cette direction passant par le milieu de <b>pp'</b>. Ce sera l'axe de la symétrie; on voit immédiatement que l'amplitude de la translation est égale à la projection de <b>pp'</b> sur l'axe de la symétrie glissée.<br>
+
+<p>Donc en résumé, nous avons la situation suivante:<br>
+<br>
+<table class="n" style="width:70%;">
+<tr><td colspan="4">
+<b>Isométries du plan</b>
+</td></tr>
+<tr><td colspan="2">
+  Déplacements  
+</td><td colspan="2">
+Antidéplacements
+</td></tr>
+<tr><td>
+Rotations
+</td><td>
+Translations
+</td><td>
+Symétries glissées
+</td><td>
+Symétries axiales
+</td></tr>
+</table>
+
+<p class="st">C'est quoi un groupe de permutations ?</p>
+<p>À plusieurs reprises, nous avons utilisé le terme groupe sans le définir. Dans son sens usuel ce serait tout simplement un ensemble; mais quand les mathématiciens parlent de groupe ils y voient un ensemble possédant de belles propriétés.<br>
+<p>Considérons un ensemble de permutations, par exemple un ensemble d'isométries. Une figure et sa transformée seront dites équivalentes; dans l'exemple on dira isométriques.<br>
+Mais pour que les choses fonctionnent correctement il faut que deux figures équivalentes à une même troisième soient équivalentes entre elles. C'est, dans le cas des isométries, un des axiomes d'Euclide.<br>
+<p>Cette exigence a des implications sur l'ensemble de permutations considéré. En effet si deux figures <b>F<sub>1</sub></b> et <b>F<sub>2</sub></b> sont équivalentes à une même figure <b>F</b> (c'est-à-dire que ces figures soient les transformées de <b>F</b> par deux permutations <b>P<sub>1</sub></b> et <b>P<sub>2</sub></b>) on souhaite que <b>F<sub>1</sub></b> et <b>F<sub>2</sub></b> soient équivalentes c'est-à-dire qu'il existe parmi les permutations de l'ensemble une permutation qui applique <b>F<sub>1</sub></b> sur <b>F<sub>2</sub></b>. Une telle permutation peut être obtenue en composant celle appliquant <b>F<sub>1</sub></b> sur <b>F</b> avec celle appliquant <b>F</b> sur <b>F<sub>2</sub></b>.<br>
+<p>Il faut donc qu'étant données deux permutations quelconques <b>P<sub>1</sub></b> et <b>P<sub>2</sub></b>, la permutation obtenue en composant la permutation inverse de <b>P<sub>1</sub></b> avec <b>P<sub>2</sub></b>, c'est-à-dire la permutation <b>P<sub>2</sub></b><img alt="o" src="../o.png"><b>P<sub>1</sub></b><sup>-1</sup>, appartienne à l'ensemble. Si cette condition est toujours vérifiée, quelles que soient les deux permutations <b>P<sub>1</sub></b> et <b>P<sub>2</sub></b>, on dit qu'il s'agit d'un <b>groupe de permutations</b>.</p>
+
+<p>Cette définition a de nombreuses conséquences. Par exemple :
+<ul>
+<li>si on prend <b>P<sub>1</sub></b> = <b>P<sub>2</sub></b>, on obtient la <i>permutation identique</i> <b>I</b> qui soit appartenir à l'ensemble.
+<li>si on prend <b>P<sub>2</sub></b> = <b>I</b>, on obtient la <i>permutation inverse</i> <b>P<sub>1</sub></b><sup>-1</sup> qui appartient également à l'ensemble.
+<li>étant donnée la permutation <b>P<sub>3</sub></b>, si on prend <b>P<sub>1</sub></b> = <b>P<sub>3</sub></b><sup>-1</sup>, la <i>permutation composée</i> <b>P<sub>2</sub></b><img alt="o" src="../o.png"><b>P<sub>3</sub></b> appartient à l'ensemble.
+</ul>
+<p>On peut évidemment utiliser ces conséquences pour formuler des définitions équivalentes d'un groupe de permutations. Mais l'essentiel est de sentir qu'un groupe de permutations est un ensemble "harmonieux", "cohérent", "complet", ... de permutations.<br>
+Après tout, avez-vous besoin d'une définition précise pour savoir ce qu'est un chien ?...
+
+<p class="st">Transformée d'une permutation</p>
+<p>Soit un permutation <b>P</b> que nous souhaitons transformer par la permutation <b>T</b>.<br />
+Est-il difficile de voir le résultat ?<br />
+Pas du tout et, en tout cas c'est bien plus simple que de déterminer la composée de <b>P</b> avec <b>T</b>.</p>
+
+<p>Prenons un exemple.<br>
+<p><b>P</b> est une rotation de 45° autour du point <i>p</i> et <b>T</b> est une rotation de 60° autour du point <i>t</i>. La transformée de <b>P</b> par <b>T</b> est tout simplement la rotation <b>P'</b> de 45° dont le centre est le point <i>p'</i> transformé de <i>p</i> par <b>T</b>.<br>
+Comment exprimer <b>P'</b> en fonction de <b>P</b> et <b>T</b> ?<br>
+<p>Si on cherche la transformée d'une figure <b>F</b>, on peut se ramener à la figure transformée de <b>F</b> par <b>T</b><sup>-1</sup>, ensuite effectuer la permutation <b>P</b> et enfin transformer le résultat par <b>T</b>. En fin de compte on a effectué la permutation <b>T</b><img alt="o" src="../o.png"><b>P</b><img alt="o" src="../o.png"><b>T</b><sup>-1</sup>. Cette expression "compliquée" masque une réalité simple. C'est pourquoi on la note plutôt <b>P</b><sup><b>T</b></sup><br>
+<p>Si vous n'êtes pas convaincus, essayez de trouver la composée des deux rotations mentionnées plus haut (c'est évidemment une rotation de 45° + 60°), mais où est son centre...?<br>
+<br>
+<p>Cette notion simple de transformée s'avère être un outil très efficace dans l'étude des groupes de permutations, puis qu'évidemment la transformée d'un permutation du groupe par une autre doit également appartenir au groupe.<br>
+
+<p class="st">Groupes cristallographiques</p>
+<p class="st">Translations d'un groupe cristallographique</p>
+<p>Ces groupes d'isométries sont ainsi dénommés car leur classification résulte d'un problème physique, celui de la classification des cristaux.<br>
+On remarque en effet que dans les cristaux on trouve périodiquement les mêmes structures atomiques répétées par translation. C'est cette caractéristique qui est utilisée pour définir un groupe cristallographique.<br>
+
+<p>Un groupe cristallographique du plan contient des translations dans au moins deux directions différentes (puisqu'on va remplir un plan), mais comme les pièces, morceaux de plan, qui vont se répéter ne se chevauchent pas, les translations doivent être telles qu'étant donné un point et tous ses transformés, chacun doit pouvoir être isolé (dans un petit cercle par exemple); les mathématiciens parlent alors d'un groupe <i>discret</i> de translations.<br>
+<p>Cet ensemble de translations peut dans certains cas être complété par d'autres isométries: rotations, symétries glissées ou symétries axiales.<br>
+<br>
+<p class="st">Quelles translations ?</p>
+<p>D'après ce que nous venons de dire les images d'un point <i>p</i> par les isométries sont toutes isolées. Limitons nous pour l'instant aux translations.<br>
+<p>Parmi toutes les images translatées du point <i>p</i> choisissons un point <i>q</i> tel qu'il n'y ait aucune autre image dans le segment <i>pq</i> ; <i>p</i> et <i>q</i> sont dits voisins. <img class="gauche enc" alt="" src="cristal/trans.gif">Bien entendu comme il existe une translation qui amène <i>p</i> sur <i>q</i>, sur la droite <i>pq</i> on trouve toute une échelle de points transformés.<br>
+Déplaçons la droite <i>pq</i> parallèlement à elle même jusqu'à ce que nous rencontrions un point <i>r</i> (peut-être plusieurs) ! Toutes les translations peuvent être obtenues en combinant la translation de vecteur <i>pq</i> et celle de vecteur <i>pr</i>. On obtient pour transformés de <i>p</i> tous les sommets d'un réseau de parallélogrammes et le groupe des translations est formés de toutes celles ayant pour vecteur <i>px</i> où <i>x</i> est un sommet quelconque du "parallélogrammage".<br>
+<p>Il ne peut y avoir d'autres points; tout autre point serait sur le bord ou intérieur de l'un de ces parallélogrammes et cette situation contredirait:<br>
+ - soit l'hypothèse que <i>p</i> et <i>q</i> sont voisins,<br>
+ - soit qu'il n'y a pas d'autres points entre <i>pq</i> et la parallèle par <i>r</i>.<br>
+<p class="st">Des rotations ? Oui, mais lesquelles ?</p>
+<p>A priori, on pourrait avoir des rotations dont l'angle est un multiple rationnel de 2<i>&pi;</i>. En fait on aurait chaque fois un groupe de rotations obtenu par répétition d'une rotation de <i>&pi;</i>/<i>n</i>. Heureusement <i>n</i> n'est pas quelconque !<br>
+<p>Nous allons, pour montrer cela, utiliser les transformées d'une rotation par les translations.<br>
+<p>Supposons qu'il y ait une rotation de 2<i>&pi;</i>/<i>n</i> autour d'un point; il y a d'ailleurs tous les multiples de cette rotation. On dit que ce point est un centre de rotation d'ordre <i>n</i>.<br>
+<img class="droite enc" alt="" src="cristal/rota8.gif">
+<p>En transformant ce centre par les translations nous en trouvons une infinité d'autres. Mais peut-être y en a-t-il encore plus...<br>
+De toutes manières, prenons deux centres d'ordre <i>n</i> à distance minimum, soit <i>p</i> et <i>q</i>. Transformons les rotations autour de <i>q</i> par celles autour de <i>p</i> ; nous obtenons une série de centres de rotations d'ordre <i>n</i>: <i>q</i> <sub>1</sub>, <i>q</i> <sub>2</sub>,...,<i>q</i> <sub>n</sub>= <i>q</i> , disposés sur un <i>n</i>-gone régulier inscrit fans un cercle de centre <i>p</i>. La distance séparant deux centres consécutifs vaut le côté du <i>n</i>-gone.<br>
+<p>Or si <i>n</i> &gt; 6 le côté est supérieur au rayon. Cela contredit notre choix de départ où nous avions pris deux centres à distance minimale. Il ne peut donc y avoir de centre de rotation d'ordre supérieur à 6.<br>
+Voila qui limite sérieusement les possibilités !<br>
+<p>Mais il y a mieux.<br>
+<p><img class="gauche enc" alt="" src="cristal/rota5.gif">
+Supposons qu'il existe des rotations d'ordre 5. Comme précédemment choisissons deux centres d'ordre 5, <i>p</i> et <i>q</i>, à distance minimum. En transformant par les rotations autour de <i>p</i>, nous obtenons 5 centres de rotations <i>q</i> <sub><i>i</i></sub> avec <i>i</i> allant de 1 à 5. Ici il n'y a plus de contradiction car le côté du pentagone est supérieur au rayon du cercle circonscrit. Mais...<br>
+<p>Recommençons à transformer cette fois les rotations autour de <i>p</i> par celles autour de <i>q</i> et nous obtenons des nouveaux centres d'ordre 5 parmi lesquels <i>p</i> <sub>4</sub>. Or <i>p</i> <sub>4</sub> et <i>q</i> <sub>1</sub> sont situés à une distance inférieure à <i>pq</i>, d'où, à nouveau, une contradiction.<br>
+
+<p>En résumé, les seules rotations possibles correspondent à des centres d'ordre 2, 3, 4 ou 6.<br> 
+<p class="st">Position des centres de rotations</p>
+<p>Nous distinguerons 4 cas en considérant successivement les cas où les rotations sont au maximum d'ordre 2, 3, 4 ou 6.
+<ol>
+<li>uniquement des rotations d'ordre 2 (demis-tours, ou encore symétries centrales)<br>
+<br>
+<img class="droite enc" alt="" src="cristal/p2s.gif">
+<p>Si nous partons de deux centres voisins par symétries successives nous obtenons une échelle de centres.<br>
+En choisissant un des centres le plus proche de la droite qui supporte l'échelle, on construit tout le réseau des centres.<br>
+<p>Nous avons utilisé 4 couleurs différentes; tous les transformés d'un centre sont de même couleur; il y a 4 types de centres de rotation d'ordre 2.<br>
+<br>
+<li>au plus des rotations d'ordre 3<br>
+
+<p><img class="droite enc" alt="" src="cristal/p3s.gif"><img class="droite enc" alt="" src="cristal/p3sa.gif">
+A nouveau on part de deux centres de rotations d'ordre 3 voisins et on les transforme l'un par l'autre en répétant l'opération avec les nouvelles rotations obtenues. On complète en ajoutant les produits de ces rotations et on obtient une troisième famille de centres.<br>
+<br>
+<li>au plus des rotations d'ordre 4<br>
+
+<p><img class="droite enc" alt="" src="cristal/p4s.gif"><img class="droite enc" alt="" src="cristal/p4sa.gif">
+De même on part de deux centres d'ordre 4 à distance minimale. On ajoute tous les transformés successifs que l'on peut obtenir.<br>
+Aucun autre centre d'ordre 4 ne peut exister sans qu'il contredise l'hypothèse de minimalité.<br>
+<p>Nous avons ajouté les centres d'ordre 2 que le groupe comporte.<br>
+<br>
+<li>au plus des rotations d'ordre 6<br>
+<br>
+<img class="droite enc" alt="" src="cristal/p6s.gif"><img class="droite enc" alt="" src="cristal/p6sa.gif">
+En procédant de manière analogue on obtient tous les centres de rotations d'ordre 6 disposés aux sommets d'un découpage en triangles équilatéraux.<br>
+Nous ajoutons les centres d'ordre 2 et 3 qui font partie du groupe.<br>
+</ol>
+<p>En résumé si on se borne aux groupes cristallographiques ne contenant que des déplacements (et pas d'antidéplacement), on obtient 5 groupes notés p1, p2, p3, p4, p6 qui contiennent tous bien entendu des translations. De plus le groupe pi contient également des rotations d'ordre maximum i.<br>
+<br>
+<p class="st">Et si on ajoute les antidéplacements ?</p>
+<p>Les antidéplacements sont, soit des symétries glissées, soit des symétries axiales. Ils doivent évidemment conserver l'ensemble des centres de rotations ce qui limite très fortement la position de leurs axes.<br>
+Une étude cas par cas, facile mais fastidieuse, donne:
+<ul>
+<li>pour le groupe p1, on peut ajouter des symétries (glissées ou non) dans une seule direction (autrement la composée de deux symétries d'axes non parallèles donnerait une rotation). On obtient des groupes notés pm, pg, cm
+<li>pour le groupe p2, les axes des symétries ou symétries glissées doivent être situés dans deux directions perpendiculaires. On obtient les groupes notés pgg, pmm, pmg, cmm
+<li>en partant du groupe p3, les conditions sont plus fortes et on n'obtient que deux groupes notés p3m1 et p31m
+<li>le groupe p4 livre également deux groupes notés p4m et p4g
+<li>enfin p6 ne donne qu'un seul groupe noté p6m
+</ul>
+<p>En totalisant on a obtenu 12 groupes cristallographiques contenant des antidéplacements. Il existe donc au total <b>17 groupes cristallographiques</b>. <p>Ce résultat date de la fin du XIX<sup>e</sup> siècle; les notations, bien que curieuses, sont standard et adoptées par tous les cristallographes.<br>
+
+<p>Signalons que le problème réel (classification des groupes cristallographiques de l'espace à 3 dimensions) a été résolu à la même époque et donne lieu à 232 groupes !
+<p>Pour bien visualiser les choses, nous donnons un <a href="17.htm">tableau</a> montrant les 17 groupes opérant sur une figure ne possédant aucune symétrie (nous avons choisi la lettre F, initiale de figure).<br>
+
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

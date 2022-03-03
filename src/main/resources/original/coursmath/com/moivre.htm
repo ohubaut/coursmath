@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Formule de Moivre - Complexes - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut">
+<meta name="description" content="Nombres complexes, modules et arguments">
+<meta name="keywords" content="formule de Moivre, exponentielle, module, argument, Moivre">
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen">
+<link type="text/css" rel="stylesheet" href="com.css" media="screen">
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print">
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico">
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-10', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Formule de Moivre
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Si la représentation des nombres complexes sous la forme z = x + iy est très utile pour l'addition, elle l'est moins pour la multiplication. Il existe une autre représentation pour les nombres complexes qui est plus commode pour la multiplication. C'est ce qu'on appelle, la forme goniométrique due à <a href="../bio/moivre.htm">Moivre</a> :</p>
+
+\[ z=\mathbf{r}(\mathbf{cos~}\omega + \mathbf{sin~}\omega) \]
+
+<p>Dans cette formule, \(\mathbf{r}\) est appelé <b>module</b> ; il est égal à la distance du point de coordonnées \((x, y)\) à l'origine.<br />
+L'angle \(\omega\) est appelé <b>argument</b>; c'est l'angle formé par la demi-droite passant par l'origine et de point \((x,y)\) avec l'axe des \(x\) positifs.</p>
+
+<p><i>Attention, il ne faut pas confondre le couple \((\mathbf{r},\omega)\) avec les <a href="../ana/polaires.htm">coordonnées polaires</a> \((\rho,\theta)\) d'un point du plan;. le module \(\mathbf{r}\) est toujours positif alors qu'en coordonnées polaires \(\rho \) peut être négatif !</i></p>
+
+<p>Calculons le produit de deux nombres complexes écrit sous cette forme, on obtient:</p>
+
+\[ \mathbf{r}_1(\mathbf{cos~}\omega_1 + i\mathbf{sin~}\omega_1).\mathbf{r}_2(\mathbf{cos~}\omega_2 + i\mathbf{sin~}\omega_2)=\mathbf{r}_1\mathbf{r}_2(\mathbf{cos~}(\omega_1+\omega_2)+i\mathbf{sin~}(\omega_1+\omega_2)) \]
+
+<p>La règle est simple:</p>
+
+<ul>
+<li>les modules se multiplient,</li>
+<li>les arguments s'additionnent.</li>
+</ul>
+
+<p>On pourrait regretter qu'il y ait deux règles différentes, une pour les modules, une autre pour les arguments.</p>
+
+<p>Cependant nous connaissons des fonctions qui permettent de transformer une somme en produit et vice-versa. Les logarithmes ont été inventés pour ça ! Comme les modules sont des réels positifs, on pourra donc toujours les écrire sous la forme \(\mathbf{r}=a^b\) (pour l'instant ne choisissons pas encore le nombre \(a > 1\))<br />
+Maintenant, lors d'une multiplication, tant les arguments \(\omega \) que les exposants b s'additionnent; c'est déjà mieux.</p>
+
+<p>Mais alors, une autre idée surgit.</p>
+
+<p>Puisque nous avons écrit le module sous forme d'une exponentielle, pourquoi ne pas faire la même chose pour \(\mathbf{cos~}\omega + i\mathbf{sin~}\omega \) ?<br />
+Malheureusement, nous ne savons pas comment définir \(a^b\) lorsque b est complexe. N'abandonnons pas trop rapidement.</p>
+
+<p>Nous avons vu le développement en série des fonctions sinus, cosinus, exponentielle; d'une variable réelle bien sûr, mais le calcul avec des complexes ressemble très fort à celui avec les réels. Alors pourquoi ne pas voir se qui se passe.</p>
+
+<p>La <a href="expon.htm">fonction exponentielle</a> \(e^x\) ou \(\mathbf{exp~}x\), possède un <a href="../ana/taylor.htm">développement en série</a> très simple:</p>
+
+\[ \mathbf{exp~}x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!}+... \]
+
+<p>Remplaçons x par ix et nous obtenons :</p>
+
+\[ \mathbf{exp~}ix=1+ix-\frac{x^2}{2!}-i\frac{x^3}{3!}+\frac{x^4}{4!}+i\frac{x^5}{5!}+... \]
+
+<p class="ni">et en regroupant les termes réels et imaginaires purs:</p>
+
+\[ \mathbf{exp~}ix=1-\frac{x^2}{2!}+\frac{x^4}{4!}+...+ i(x-\frac{x^3}{3!}+\frac{x^5}{5!}+...) \]
+
+<p>Nous voyons alors apparaître les développements en série de sinus et cosinus et on peut donc écrire:</p>
+
+\[ \mathbf{exp~}ix=\mathbf{cos~}x+i\mathbf{sin~}x \]
+
+<p>Une petite remarque: \(e^{ix}\) n'est un nombre réel que si \(x\) est un multiple (entier) de \(\pi \). D'où la relation remarquable entre le nombre \(e\) et le nombre \(\pi \) due à Euler:</p>
+
+\[ e^{i\pi} +1=0 \]
+
+<p>Nous voyons ainsi apparaître de manière naturelle le nombre \(e\). Nous choisirons évidemment d'écrire le module \(\mathbf{r}\) sous la forme \(e^k\).<br />
+Dès lors, tout nombre complexe (non nul) pourra se mettre sous la forme:</p>
+
+\[ z=x+iy=\mathbf{r}\mathbf{cos~}\omega+i\mathbf{sin~}\omega=e^{k+i\omega} \]
+
+<p>N'est-ce pas plus joli ainsi ?</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="compld.htm">Complexes</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Polyèdres réguliers - Polyèdres - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Solides platoniciens" />
+<meta name="keywords" content="cube, tétraèdre, octaèdre, dodécaèdre, icosaèdre" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="pol.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-12', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Polyèdres réguliers
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>On connaît les cinq polyèdres réguliers depuis la plus haute antiquité; après avoir été étudiés par Théétète et <a title="Biographie" href="../bio/platon.htm">Platon</A>, ils constituent l'aboutissement des "Eléments" d'<a title="Biographie" href="../bio/euclide.htm">Euclide</a> (IIIe siècle av.J.C.).</p>
+
+<p>On pourrait définir un polyèdre régulier comme polyèdre convexe dont toutes les faces sont des polygones réguliers ; cela donnerait, entre autres, des <a href="archim.htm">polyèdres semi-réguliers</a>. Mais on peut être plus strict et préciser que toutes les faces sont congruentes à un même polygone régulier et que tous les sommets appartiennent à un même nombre de faces.<br />
+Il est dès lors très facile de voir qu'il n'existe que fort peu de possibilités de réalisation d'une telle figure. En effet pour constituer un sommet il faut au minimum 3 faces; de plus pour que l'étoile d'un sommet soit convexe, la somme des angles doit certainement être inférieure à 360°.</p>
+
+<p>Si les faces sont des triangles équilatéraux (angle 60°) chaque sommet peut appartenir à 3, 4 ou 5 triangles (6 triangles donneraient un pavage du plan); si les faces sont des carrés (angle 90°) chaque sommet doit appartenir à 3 faces (4 carrés donneraient un pavage du plan); dans le cas de pentagones (angle 108°) on a au plus 3 faces par sommet; le cas d'hexagones (angle 120°) est impossible, 3 hexagones par sommet donneraient un pavage du plan.</p>
+
+<p>Il se fait que les 5 cas possibles sont effectivement réalisables et donnent lieu aux 5 polyèdres classiques: tétraèdre, octaèdre, icosaèdre, cube ou hexaèdre et dodécaèdre.<br />
+Il est également remarquable de constater que la régularité combinatoire exigée pour les sommets est également une régularité groupale; en effet le groupe d'automorphismes de ces polyèdres est transitif sur les sommets ainsi d'ailleurs que sur les faces, les arêtes et les drapeaux (sommet, arête et face incidents).</p>
+
+<img alt="" src="poly/tetra.gif"><br />
+<br />
+<img alt="" src="poly/hexa.gif">
+<img alt="" src="../dot.png" width=85> 
+<img alt="" src="poly/octa.gif"><br />
+<br />
+<img alt="" src="poly/dodeca.gif">
+<img alt="" src="../dot.png" width=200 height=1> 
+<img alt="" src="poly/ico.gif">
+
+<p>Comptons à présent le nombre de faces, arêtes et sommets des cinq polyèdres réguliers; on obtient:</p>
+
+<table class="n">
+<tr>
+<th> </th><th> Tétraèdre </th><th> Hexaèdre </th><th> Octaèdre </th><th> Dodécaèdre </th><th> Icosaèdre </th>
+</tr>
+<tr>
+<th>Faces</th><td>\(4\)</td><td>\(6\)</td><td>\(8\)</td><td>\(12\)</td><td>\(20\)</td>
+</tr>
+<tr>
+<th>Arêtes</th><td>\(6\)</td><td>\(12\)</td><td>\(12\)</td><td>\(30\)</td><td>\(30\)</td>
+</tr>
+<tr>
+<th>Sommets</th><td>\(4\)</td><td>\(8\)</td><td>\(6\)</td><td>\(20\)</td><td>\(12\)</td>
+</tr>
+</table>
+
+<p>Sur ces exemples on observe une relation entre le nombre F de faces, A d'arêtes et S de sommets: F - A + S = 2; c'est la relation d'Euler. 
+Il est dès lors intéressant d'envisager d'autres figures, prismes, pyramides, antiprismes etc. et de voir si cette relation reste satisfaite et, le cas échéant, de la démontrer en voyant bien les hypothèses qui sont nécessaires à sa validité.</p>
+
+<p>Une autre remarque qui ressort de la lecture du tableau, est le couplage cube-octaèdre et icosaèdre-dodécaèdre; on inverse le nombre de faces et de sommets.<br />
+De là l'idée de les relier géométriquement: les centres des faces de l'un deviennent les sommets de l'autre: ces polyèdres sont duaux (le tétraèdre est, lui, auto dual).</p>
+
+<p>On voit ainsi que si on s'intéresse à l'aspect groupal, il y a exactement 3 groupes distincts dont on calcule aisément les ordres (en remarquant par exemple qu'ils sont strictement transitifs sur les drapeaux):</p>
+
+<table class="centre">
+<tr><th>Tétraèdre                       </th><td>\(24\)</td></tr>
+<tr><th>Cube-Octaèdre              </th><td>\(48\)</td></tr>
+<tr><th>Dodécaèdre-Icosaèdre  </th><td>\(120\)</td></tr>
+</table>
+
+<p>Ces groupes d'isométries contiennent évidemment les sous-groupes invariants de déplacements d'ordre \(12, 24\) et \(60\).</p>
+
+<p>Pour le tétraèdre, le groupe des \(24\) isométries permute de toutes les manières possibles les \(4\) sommets; c'est Sym(\(4\)); le sous-groupe des \(12\) déplacements induit sur les \(4\) sommets les permutations paires, c'est Alt(\(4\)).</p>
+
+<p>Dans un cube les \(4\) diagonales sont permutées de toutes les manières par les \(24\) déplacements; le groupe des déplacements du cube est Sym(\(4\)).</p>
+
+<img class="droite" alt="" src="poly/5t.gif">
+
+<p>Enfin dans un dodécaèdre il y a \(5\) triples de paires d'arêtes 2 à 2 orthogonales. Sur ces \(5\) objets le groupe des déplacements du dodécaèdre induit toutes les permutations paires: il est donc isomorphe à Alt(\(5\)).</p>
+
+<p>On peut encore mieux visualiser cette propriété en remarquant qu'on peut inscrire un tétraèdre en joignant un sommet à ceux à distance 3.<br />
+En fait il y a deux possibilités. Si l'on choisit un de ces deux tétraèdres, on peut en déduire 4 autres obtenus par déplacements.<br />
+C'est sur cet objet composé de 5 tétraèdres que le groupe opère comme le groupe Alt(\(5\)).</p>
+
+<p>Le cube et le dodécaèdre possèdent tous deux un centre de symétrie.<br />
+La symétrie centrale est un antidéplacement qui commute avec tous les déplacements; les groupes des isométries du cube et du dodécaèdre sont donc respectivement isomorphes aux produits directs Sym(\(4\)) × C(\(2\)) et Alt(\(5\)) × C(\(2\)).</p>
+
+<p>Pour ceux qui désirent voir et manipuler ces polyèdres, nous leur recommandons de visiter le chapitre <a href="../3di/polyed.htm">Polyèdres</a> de la section <a href="../3di/3dd.htm">"En 3 dimensions"</a>.
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="polyd.htm">Polyèdres</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

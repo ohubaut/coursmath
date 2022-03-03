@@ -1,0 +1,172 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Informatique - Y.Hubaut</title>
+<meta name="author" content="Youri Hubaut" />
+<meta name="description" content="Collections d'articles informatiques sur des problèmes choisis d'algorithmie" />
+<meta name="keywords" content="informatique;master;algorithmics" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="info.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script type="text/javascript" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="https://youri.hubaut.info/" target="ext">Youri Hubaut,  </a><i>développeur</i>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Régularisation: Ridge, Lasso et Elastic Net
+<br />
+	</div>
+	<div class="stitre">
+		Comment réduire l'erreur de généralisation dans les modèles linéaires grâce à la régularisation ?
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+			<div>
+				<h2>Introduction</h2>
+				<p>Dans le contexte de la statistique et en particulier de l’apprentissage automatique, la régularisation est le nom donné à un processus visant principalement à réduire des problèmes liés au surapprentissage. Et ce, au travers d’une réduction de la variance ou d’une sélection du nombre de paramètres employés. Ce processus n’est pas neutre puisqu’il consiste à introduire une nouvelle information au problème, dans l’objectif de le "simplifier", que ce soit en introduisant une pénalité d’autant plus grande que la complexité du modèle l’est ou en "imposant" une distribution a priori des paramètres du modèle.</p>
+				<p>Le principe général de la régularisation consiste à pénaliser les valeurs extrêmes des paramètres (ce qui conduit souvent à la variance du surapprentissage). On cherche alors à minimiser à la fois le modèle par rapport à notre métrique de choix ainsi qu’une métrique sur la taille et le nombre de paramètres employés.</p>
+				<p>Dans cet article, nous allons nous attarder sur une famille d’outils de régularisation liée aux modèles linéaires, nommément: ridge, lasso et elastic net. Mais il existe évidemment d’autres outils adaptés pour d’autres problématiques, nous pensons notamment aux AIC/BIC (Akaike information criterion/Bayesian information criterion), PCR (Principal component regression), PLS (Partial least squares), LARS (Least-angle regression), …</p>
+				<p>Ce billet fait l’hypothèse que vous ayez déjà une certaine compréhension de la manière dont fonctionnent les modèles linéaires, les concepts de biais et variance dans l’apprentissage automatique, ainsi que l’importance de la validation croisée dans ce domaine.</p>
+			</div>
+			<div>
+				<h2 id="m-thode-des-moindres-carr-s">Méthode des moindres carrés</h1>
+				<p>Tout d'abord, nous allons revenir sur la méthode des moindres carrés. Comme son nom l'indique, elle consiste à minimiser l'erreur entre les données réelles et prédites par le modèle. Supposons le jeu de données suivant contenant dix observations (numérotées de 1 à 10) et dont la mesure est proportionnelle à:</p>
+
+				<p>$$X \sim x * 1.5 + \mathcal{N}(\mu = 0,\,\sigma^{2} = 1)$$</p>
+
+				<p>Nous obtenons le graphique suivant:</p>
+
+				<figure>
+					<img alt="Droite des moindres carrés" src="regularisation_elastic_net_lasso_ridge/Droite des moindres carrés.png">
+					<figcaption>
+						Représentation de la droite des moindres carrés en rouge, et en bleu, celles passant par ces deux points
+					</figcaption>
+				</figure>
+
+				<p>Une observation devrait sauter aux yeux sur ce graphique, en fonction de la population d'entraînement, on peut avoir une très grande différence au niveau des capacités prédictives du modèle, c'est ce qu'on appelle la variance liée au surapprentissage. Ici, la ligne en bleu est construite uniquement sur la base de deux points et non sur tous (comme en rouge).</p>
+				<p>D'autre part, on peut se demander comment l'erreur (des moindres carrés) évolue lorsque l'on fait varier le coefficient directeur (la pente) de la droite de régression mais sans modifier l'ordonnée à l'origine. Donc, en calculant: $mean((y - slope * x + ols\$Intercept)^{2})$. On peut alors obtenir un graphique comme celui-ci:</p>
+
+				<figure>
+					<img alt="Variation de l'erreur quadratique moyenne en fonction de la pente" src="regularisation_elastic_net_lasso_ridge/Variation de l'erreur quadratique moyenne en fonction de la pente.png">
+					<figcaption>
+						Variation de l'erreur quadratique moyenne en fonction de la pente, plus on se rapproche de 1.5, plus cette erreur diminue.
+					</figcaption>
+				</figure>
+			</div>
+			<div>
+				<h2 id="r-gularisation">Régularisation</h1>
+				<p>Nous l'avons dit en introduction, le principe de la régularisation consiste à simplifier un modèle en cherchant souvent à pénaliser des valeurs extrêmes dans les paramètres ou en cherchant les paramètres expliquant au mieux les résultats obtenus, les plus explicatifs. Pour cela, on définit une métrique qui peut mesurer tant les valeurs des paramètres que leur nombre; et l'on préférera un modèle contenant "moins" de paramètres s'il parvient à des résultats similaires à un autre plus complexe.</p>
+				<p>Le processus consiste alors à minimiser deux expressions en même temps:</p>
+				<ul>
+				<li>La somme des résidus quadratiques liés au modèle en lui-même.</li>
+				<li>Une expression combinant les coefficients du modèle.</li>
+				</ul>
+
+				<h3 id="ridge-regression">Ridge regression</h2>
+				<p>La régression qualifiée de "Ridge" consiste à minimiser la somme des carrées des coefficients, le tout pondéré par un facteur (noté $\lambda$).</p>
+				<p>On se retrouve avec à minimiser l'expression suivante:</p>
+				<p class="centre">Somme des résidus quadratiques (RSS) + $\lambda$ * (somme des carrés des coefficients - $\|.\|^{2}$)</p>
+				<p>Ce paramètre $\lambda$ est utilisé afin de pondérer plus ou moins l'importance de la minimisation du modèle en lui-même ou celle des coefficients.</p>
+				<ul>
+					<li>Lorsqu'il est égale à $0$, on retombe sur le même résultat que la méthode des moindres carrés classique.</li>
+					<li>Et lorsqu'il tend vers l'infini ($+\infty$), les coefficients vont tendre vers $0$ (mais sans jamais l'atteindre).</li>
+					<li>Pour les valeurs intermédiaires, les coefficients vont être plus petits que dans le modèle non-régularisé.</li>
+					<li>Et plus la valeur de $\lambda$ augmente, au plus la complexité générale du modèle diminue.</li>
+				</ul>
+				<h3 id="lasso-regression">Lasso regression</h2>
+				<p>La régression qualifiée de "Lasso" consiste à minimiser la somme des valeurs absolues des coefficients, le tout pondéré par un facteur (noté $\lambda$).</p>
+				<p>On se retrouve avec à minimiser l'expression suivante:</p>
+				<p class="centre">Somme des résidus quadratiques (RSS) + $\lambda$ * (somme des valeurs absolues des coefficients - $\|.\|^{1}$)</p>
+				<p>Les propriétés sont assez similaires entre la régression Ridge et Lasso, les différences fondamentales consistent en:</p>
+				<ul>
+				<li>Lorsque $\lambda$ tend vers l'infini ($+\infty$), les coefficients vont tendre vers $0$ (mais sans jamais l'atteindre) dans le cadre de "Ridge" mais pourront atteindre $0$ pour "Lasso".</li>
+				<li>"Ridge" est davantage adapté dans le cadre où les variables indépendantes sont fortement corrélées. Alors que "Lasso" permet de "sélectionner" les covariables en vue de rendre le modèle plus simple (vu que les coefficients peuvent devenir nuls).</li>
+				<li>Vu que la norme $L_{1}$ est employée, cela a des répercussions sur les techniques d'optimisations possibles en vue de minimiser ce système.</li>
+				</ul>
+				<h3 id="elastic-net">Elastic net</h2>
+				<p>La régularisation de type "Elastic net" consiste à combiner les deux régularisations précédentes (Ridge et Lasso) afin d'éviter la sélectivité trop forte que peut proposer Lasso tout en conservant possiblement des variables fortement corrélées.</p>
+				<p class="centre">Somme des résidus quadratiques (RSS) + <br>
+					$\lambda_{1}$ * (somme des valeurs absolues des coefficients - $\|.\|^{1}$) + <br>
+					$\lambda_{2}$ * (somme des carrés des coefficients - $\|.\|^{2}$)
+				</p>
+				<p>Dans les trois cas, le modèle est intrinsèquement changé, mais nous l'espérons pour un mieux ! Il reste néanmoins à trouver les valeurs pour $\lambda$ les plus appropriées, et pour cela, la validation croisée peut s'avérer plus que nécessaire.</p>
+				<p>Mais dans le fond, quel est l'impact de ces régularisations sur notre problème:</p>
+
+				<figure>
+					<img alt="Ridge-Lasso évolution du MSE en fonction de la pente" src="regularisation_elastic_net_lasso_ridge/Ridge-Lasso évolution du MSE en fonction de la pente.png">
+					<figcaption>
+						Évolution du MSE en fonction de la pente selon les méthodes de régularisation Ridge et Lasso.
+					</figcaption>
+				</figure>
+
+				<p>Naturellement, nous voyons l'erreur moyenne augmentée d'autant plus que le paramètre $\lambda$ est grand. Mais nous comprenons également que l'erreur sera d'autant plus minimisée que la pente sera nulle. Dans le cadre de la régularisation de type Lasso, nous voyons de plus en plus fort une cassure de la courbe, liée à la norme $L_{1}$.</p>
+				<hr>
+			</div>
+
+			<div>
+				<h2>
+				Conclusions
+				</h2>
+				<p>Dans notre propos, nous n’avons évoqué que les modèles "linéaires" mais il est possible d’étendre les résultats, notamment aux variables discrètes (en considérant qu’on essaye de minimiser la distance entre toutes les observations liées à ces variables discrètes). Ainsi qu’aux régressions logistiques où l’on essaye de prédire une variable discrète en essayant d’optimiser le "maximum-likelihood".</p>
+				<p>L’un des grands avantages de la régularisation est lié à la facilité d’entraînement lorsqu’il n’y a pas assez de données. En effet, comment entraîner un modèle prédictif contenant des milliers de paramètres si nous ne possédons qu’une centaine d’exemples ? Il y a trop grande variabilité dans les résultats qui pourraient être obtenus et l’emploi du Lasso, par exemple, permettrait de facilement évincer tous les paramètres "inutiles" au modèle a priori.</p>
+				<p>On espère que ce billet aura su répondre aux questions que vous vous posiez sur ces notions, dans quels cas il est utile d’appliquer une régularisation. Quels sont les avantages et inconvénients d’une telle pratique sur les données et les hypothèses liées.</p>
+			</div>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="infod.htm">Informatique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

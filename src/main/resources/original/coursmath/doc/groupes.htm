@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Documents - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résumés" />
+<meta name="keywords" content="groupes, musique, algèbre, géométrie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="doc.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript">
+    function pdf(fichier) 
+{window.open(fichier,'pdf','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-11', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+<br>
+<div class="droite"><a href="javascript:pdf('groupes.pdf');">Télécharger la version pdf (5 pages)</a></div>
+<br>
+	<div class="titre">
+<br />
+Groupes et groupes de permutations
+<br />
+	</div>
+	<div class="stitre">
+par<br><br>
+<b>Xavier Hubaut</b><br><br>
+Professeur émérite - Université Libre de Bruxelles - Département de Mathématique
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Lors de l'étude des ensembles de nombres, on est amené à utiliser le mot "groupe" à propos des propriétés des opérations qui y sont définies.
+<blockquote class="lh"><i>Dans les entiers, l'addition a une structure de groupe commutatif; par contre, la multiplication ne possède pas cette structure (on ne peut en général pas diviser). Par contre, dans les rationnels, la multiplication possède, à condition d'exclure 0, une structure de groupe</i>.</blockquote>
+<p>De même en géométrie, on utilise également le mot "groupe".</p>
+<blockquote><i>L'ensemble des isométries du plan possède une structure de groupe non commutatif</i></blockquote>
+<p>Voici des phrases qu'on peut lire ou entendre et qui sont livrées aux élèves généralement trop tôt. Dès lors, il n'est pas étonnant que, faute d'une quantité suffisante d'exemples et de contre-exemples, tout cela reste mal compris. </p>
+<p>
+En fait, le terme groupe est utilisé dans deux sens différents. Dans le premier cas, il s'agit de "groupes" (parfois qualifiés d'abstraits) et dans le second, de "groupes de permutations" mais on n'explicite généralement pas la distinction mais aussi les liens entre ces deux notions.</p>
+<p>
+On nous dit que la notion de groupe a été introduite en mathématiques, suite aux travaux d'un génial mathématicien français, Evariste Galois.</p>
+<p>
+Voyons cela de plus près.</p>
+<p>
+Très jeune, Galois s'est intéressé au problème de la résolution d'équations algébriques.<br>
+On sait qu'il existe certaines fonctions des racines (ou solutions) qu'on peut calculer sans résoudre l'équation. L'exemple classique est celui de l'équation du second degré dont on peut calculer la somme et le produit des racines sans résoudre l'équation; même si, lors d'une première étude sur les réels, on se trouve en présence d'une équation qui ne possède pas de solution ! Ces deux grandeurs S = x<sub>1</sub> + x<sub>2</sub> et P = x<sub>1</sub>.x<sub>2</sub> sont invariantes si on permute les racines et ne nécessitent donc pas l'identification de chacune d'elles.<br>
+Quand le degré de l'équation augmente, il y a davantage de fonctions calculables sans résolution de l'équation. Par ailleurs, il y a plus de manières de permuter les racines.</p>
+<p>
+Il arrive que l'équation possède des propriétés particulières; une équation sans terme de degré impair (alors si x<sub>1</sub> est solution, -x<sub>1</sub> l'est également), une équation réciproque (si x<sub>1</sub> est solution, 1/x<sub>1</sub> l'est aussi),... Dans ces cas, on ne peut plus permuter les racines n'importe comment; elles sont deux à deux liées par paire.</p>
+<p>
+Bref, Galois a constaté l'existence de permutations "admissibles" des solutions et a montré que le problème de la résolution était lié à la structure de l'ensemble de ces permutations. Il parle alors du "groupe de substitutions" associé à l'équation. Le terme "substitution" a par la suite fait place à "permutation" et actuellement, nous parlons du groupe de permutations.</p>
+<p>
+Galois étudie ces groupes et en généralise l'étude à d'autres ensembles d'éléments. Il initie ainsi le développement de la théorie des groupes de permutations. Il faut noter que, dans la plupart des cas, les groupes de permutations considérés par Galois sont finis (ils opèrent sur un ensemble fini d'éléments).</p>
+<p>
+Ces travaux, ainsi que plusieurs autres, dans le domaine de l'analyse, restèrent incompris pendant de longues années; ils ne furent publiés qu'en 1846 par Liouville, soit 14 ans après la mort de Galois.</p>
+<p>
+Revenons aux groupes de permutations étudiés par Galois.<br>
+Soit P un ensemble de permutations des éléments d'un ensemble E.<br>
+Il est toujours possible de composer deux permutations p<sub>1</sub> et p<sub>2</sub><img alt="" src="../isin.png">P mais, en général, on n'est pas assuré que la composée de p<sub>1</sub> suivie de p<sub>2</sub>, notée p<sub>2</sub><img alt="" src="../o.png">p<sub>1</sub>, appartienne encore à P.<br>
+Mais ici, E est l'ensemble des solutions de l'équation et Galois étudie toutes leurs permutations "admissibles", c'est-à-dire toutes celles qui conservent les relations existantes. Dans ce cas, il est évident que:</p>
+<table class="n"><tr><td>
+Pour tout couple p<sub>1</sub>, p<sub>2</sub><img alt="" src="../isin.png"> P,  p<sub>2</sub><img alt="" src="../o.png">p<sub>1</sub><img alt="" src="../isin.png">P.
+</td></tr></table>
+<p>
+Lorsque l'ensemble E est fini, P est alors également un ensemble fini.<br>
+Si P est un ensemble fini de permutations, pour toute permutation p<img alt="" src="../isin.png">P, il existe certainement une puissance naturelle (n) de p, telle que p<sup>n</sup> = I, la permutation identique. On appelle ordre de la permutation p, la valeur minimum de n. Dans ce cas, on a p<sup>n-1</sup><img alt="" src="../o.png">p = I et p<sup>n-1</sup> est la permutation réciproque de p.<br>
+Dans ce cas, on dit qu'un ensemble fini de permutations P satisfaisant la condition ci-dessus, constitue un groupe de permutations.</p>
+<p>
+Que se passe-t-il si P est infini ? Dans ce cas la démonstration n'est plus valable. Toutefois, dans les problèmes étudiés par Galois, la réciproque de toute permutation p "admissible" l'est également et appartient à l'ensemble P.</p>
+<table class="n"><tr><td>Pour tout p<img alt="" src="../isin.png">P, p<sup>-1</sup><img alt="" src="../isin.png">P</td></tr></table>
+<p>
+Cela conduit Galois à parler de groupes de permutations:</p>
+<table class="n"><tr><td class="lh">
+Un ensemble P de permutations est un <b>groupe de permutations</b><br>
+si et seulement s'il contient<br>
+<b>la composée de tout couple</b> de permutations de P et<br>
+<b>la réciproque</b> de toute permutation de P .<br>
+<i style="font-size:'80%'">Si P est fini, la seconde condition est automatiquement vérifiée.</i>
+</td></tr></table>
+<p>Si, dans un groupe de permutations, on considère <u>toutes</u> celles qui conservent quelque "chose" (que ce soit un sous-ensemble, des propriétés, une structure donnée,...), elles formeront automatiquement un groupe de permutations.</p>
+<p>
+Quoi de plus simple !<br>
+Cette simplicité est due au fait que dans un ensemble E, la composition de deux permutations, la permutation identique, la réciproque d'une permutation sont toutes des notions bien définies.</p>
+<p>
+Remarque: L'associativité, dont on parle parfois, ne doit jamais être vérifiée quand il s'agit de permutations. En effet vérifier que  p<sub>3</sub><img alt="" src="../o.png">(p<sub>2</sub><img alt="" src="../o.png">p<sub>1</sub>) = (p<sub>3</sub><img alt="" src="../o.png">p<sub>2</sub>)<img alt="" src="../o.png">p<sub>1</sub> revient à vérifier qu'effectuer  p<sub>1</sub> suivi de  p<sub>2</sub>, suivi de  p<sub>3</sub> est la même chose qu'effectuer  p<sub>1</sub>, suivi de  p<sub>2</sub> suivi de  p<sub>3</sub>. Qu'y a-t-il de différent ? La position de la virgule quand on écrit, celle de la respiration lorsqu'on parle !</p>
+<p>
+Revenons à l'histoire.<br>
+Trente ans après Galois, le mathématicien britannique Cayley se pose une question intéressante.<br>
+Lorsqu'on est en présence d'un groupe fini P de permutations, on peut écrire la "table de multiplication" ou plutôt de composition, des éléments de P. Comme un groupe de permutations contient nécessairement la permutation identique, Cayley l'écrit en tête des lignes et colonnes; il constate quelques propriétés évidentes mais remarquables.<br>
+Si P possède n éléments dans chaque rangée (ligne ou colonne) de la table, tout élément de P s'y retrouve une et une seule fois. Toutefois, cette condition ne caractérise pas la table d'un ensemble de permutations. Cayley produit d'ailleurs un contre-exemple avec un ensemble de 5 éléments.</p>
+<p>
+Quelle condition faut-il poser pour être assuré qu'une table puisse être considérée comme la table de composition d'un groupe de permutations ?<br>
+Voici comment procède Cayley.</p>
+<p>
+Il remarque que chaque rangée de la table de composition constitue une permutation des éléments de la rangée initiale. A partir de là, il fait correspondre à tout élément a la permutation p<sub>a</sub> qui opère désormais sur les éléments de la table: si la loi de "multiplication" est notée *, la permutation p<sub>a</sub> applique tout élément x sur a*x.<br>
+Si la table est représentative d'un groupe de permutations, il faut évidemment que l'ensemble des permutations p<sub>a</sub> forme un groupe de permutations et par conséquent la composée de deux quelconques doit appartenir à l'ensemble.<br>
+Soit p<sub>a</sub> et p<sub>b</sub> deux permutations correspondant aux éléments a et b. En calculant la composée de ces deux permutations, on voit qu'un élément quelconque x est appliqué sur a*x par p<sub>a</sub>; ensuite p<sub>b</sub> l'applique sur b*(a*x). Il faut que la composée des deux appartienne également à l'ensemble, autrement dit que p<sub>b</sub><img alt="o" src="../o.png">p<sub>a</sub> soit une permutation p<sub>c</sub>. Cela implique que pour tout x, il faut que b*(a*x) = c*x ; en particulier pour x = 1, on doit avoir b*a = c. La condition s'écrit donc : b*(a*x) = (b*a)*x et doit être valable pour tous a, b et x. En d'autres termes, la loi * doit être associative.</p>
+<p>
+En résumé, Cayley obtient les conditions pour qu'un ensemble d'éléments muni d'une loi de composition corresponde à un groupe de permutations. Il lui suffit d'exprimer les premières constatations qu'il avait faites sur les tables de "multiplication" et d'ajouter la condition d'associativité.</p>
+<table class="n"><tr><td class="lh">
+Un ensemble muni d'une <b>loi interne</b>; possédant <b>un élément neutre</b> et <br>où <b>tout élément possède un inverse</b>, est un <b>groupe</b><br> si et seulement si <br>la loi est <b>associative</b>.
+</td></tr></table>
+<p>
+Voici les conditions pour qu'un ensemble d'éléments muni d'une loi * soit un (ou possède une structure de) groupe.<br>
+Remarque: On constate que la condition d'associativité correspond à la traduction de la première propriété rencontrée avec un groupe de permutations, à savoir: la composée appartient encore à l'ensemble.</p>
+<p>
+On voit ainsi que les notions de <b>groupe de permutations</b> et de <b>groupe</b> sont à la fois différentes mais intimement liées. Tout groupe de permutations possède une structure de groupe (mais il ne faut évidemment pas en vérifier tous les axiomes!) et tout groupe (abstrait) peut être muni d'une structure de groupe de permutations.</p>
+<p>
+Terminons comme nous avons commencé, par l'histoire.</p>
+<p>
+Dans les Eléments d'Euclide, il est demandé que deux figures "égales" à une même troisième soient "égales" entre elles; actuellement, nous remplacerions "égale" par "isométrique".<br>
+Que signifie cet axiome explicité par Euclide ?</p>
+<p>
+En termes modernes, il demande qu'étant donné trois figures F<sub>1</sub>, F<sub>2</sub>, F<sub>3</sub> s'il existe une isométrie T<sub>1</sub> appliquant F<sub>1</sub> sur F<sub>3</sub> et une isométrie T<sub>2</sub> appliquant F<sub>2</sub> sur F<sub>3</sub>, alors il existe une isométrie appliquant F<sub>1</sub> sur F<sub>2</sub>.<br>
+Quelle est donc cette isométrie ? Il suffit d'effectuer T<sub>1</sub> suivi de la réciproque de T<sub>2</sub>.<br>
+<img class="droite" alt="" src="group/euclide.png">
+<br><img class="gauche" alt="" src="../dot.png" width=40 height=200><br><i>Sur le schéma ci-contre, la figure F<sub>1</sub> est appliquée sur F<sub>3</sub> par la rotation T<sub>1</sub> de 180°; la figure F<sub>2</sub> est appliquée sur F<sub>3</sub> par la rotation T<sub>2</sub> de 120°. On voit que T<sub>3</sub> obtenue en composant T<sub>1</sub> avec T<sub>2</sub><sup>-1</sup> applique F<sub>1</sub> sur F<sub>2</sub>. T<sub>3</sub> est la composée d'une rotation de 180°suivie d'une rotation de -120°, donc une rotation de 60°.</i><br></p>
+<br>
+<p>
+En langage moderne, Euclide demande donc qu'étant donné deux isométries, le quotient (produit de l'une par l'inverse de l'autre) (T<sub>2</sub>)<sup>-1</sup><img alt="o" src="../o.png">T<sub>1</sub> soit encore une isométrie. N'est-ce pas là tout simplement exprimer que l'ensemble des isométries est un groupe de permutations ?<br>
+<br>
+En effet, vérifier l'équivalence des deux définitions n'est qu'un simple exercice de logique:</p>
+<blockquote class="lh"> 
+si T<sub>1</sub>=T<sub>2</sub> alors le quotient vaut I (l'identité);<br>
+si T<sub>1</sub>=I, cela signifie de la réciproque de T<sub>2</sub> est également une isométrie;<br>
+enfin le produit de T<sub>1</sub> et T<sub>2</sub> n'est autre que le quotient de T<sub>1</sub> par (T<sub>2</sub>)<sup>-1</sup>.</blockquote>
+<p>
+Nous pouvons dire:</p>
+<table class="n"><tr><td class="lh">
+Un ensemble P de permutations est un <b>groupe de permutations</b><br>
+si et seulement si<br><b>le quotient de deux quelconques</b> appartient à P.
+</td></tr></table>
+<p>
+Un seul axiome suffisait à Euclide pour définir un groupe de permutations ! ...</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="docd.htm">Documents</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+		<div class="centre"><hr style="width:70%;"></div>
+<br>
+Pour toute remarque ou commentaire, écrire à <script type="text/javascript">
+// JavaScript pris sur le site: "http://www.java.scripts-fr.com" 
+var nom = "xhubaut";
+var domaine = "ulb.ac.be"; 
+var deb = "<";
+var fin = ">";
+document.write('<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + deb + '/a' + fin); 
+</script>.<br>
+	</div>
+</div>
+</body>
+</html>

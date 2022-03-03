@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Jouons avec les nombres naturels - Analyse - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="test, intelligence, logique, récurrence, induction" />
+<meta name="keywords" content="analyse, suites, suite de différences, induction, récurrence" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Jouons avec les nombres naturels
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<p>Avez-vous déjà passé des tests ?</p>
+
+<p>Une série des questions, favorites des "bons" en maths, consiste à compléter des suites de nombres, pour la plupart du temps des suites de naturels :
+1, 2, 4, ...
+1, 4, 9, 16, ...
+Facile me direz-vous. Mais est-ce vraiment le cas ?</p>
+
+<p>Prenons la première. La réponse semble évidente : 8. 
+Mais pourquoi critiquer celui qui répond 7 ? Peut-être a-t-il remarqué qu'en ajoutant 1 au premier terme on obtient 2, le deuxième terme ; ensuite, en ajoutant 2, on obtient 4, le troisième terme ; donc il ajoute 3 pour obtenir 7, le quatrième terme !
+La réponse 5 peut aussi se justifier simplement : il s'agit de la liste des naturels non divisibles par 3.
+Mais alors ? On peut répondre n'importe quoi ! Eh bien oui ! Et même, en se justifiant d'une manière fort simple.</p>
+
+<p>Si l'on songe aux approximations d'une fonction, on peut imaginer que les nombres donnés constituent les valeurs de la fonction pour quelques valeurs de la variable. Comment trouver ces fonctions, ou tout au moins quelques-unes d'entre elles : les fonctions polynômes.</p>
+
+<p>Pour ne pas développer de trop longs calculs, prenons tout simplement le début de la suite 1, 2, 4, ... et cherchons les fonctions polynômes \(f(n)\) telles que \(f(1)=1, f(2)=2 \text{ et } f(3)=4 \).
+Evidemment un polynôme du premier degré ne peut pas convenir, il faut passer au moins au deuxième degré. Cherchons les fonctions f(n) = an² + bn + c répondant à nos conditions. On obtient le système d'équations :</p>
+
+\[ \left\{\begin{array}{l l}
+f(1)  =   a + b +c = 1\\
+f(2)  =  4a + 2b +c = 2\\
+f(3)  =  9a + 3b +c = 4\\
+ \end{array}\right.\] 
+
+<p>La solution est \(a = 1/2, b = -1/2, c = 1\) et le polynôme \((n^2- n + 2)/2\) répond à la question. Pour n=4 il vaut 7.</p>
+
+<p>Remarquons au passage qu'il constitue la réponse au problème du nombre maximum de régions déterminées dans le plan (ou à l'intérieur d'un cercle) par \(n-1\) droites.</p>
+
+	<div id="question1" style="display:block;">
+<a href="#" onclick="affiche('reponse1'); cache('question1'); return false;"><img alt="voir" src="../plus.gif" width=11 height=11></a>
+En savoir plus</div>
+
+	<div id="reponse1" style="display:none;">
+	<a href="#" onclick="cache('reponse1');affiche('question1');return false;"><img alt="cacher" src="../moins.gif" width=11 height=11></a>
+Refermer<br /><br />
+	
+<div style="background-color:#f8ffe0; padding: 10px; border:1px solid black;">
+<p>Une droite partage le plan en 2 régions. Une deuxième droite (non parallèle) ajoute deux nouvelles régions, soit au total 4.</p>
+
+<p>Puisqu'on cherche le nombre maximum de régions, toute nouvelle droite ajoutée ne peut pas être parallèle à une droite et ne peut pas non plus passer par un point d'intersection de deux droites. Cette nouvelle droite est donc coupée par les \(n-1\) droites existantes en \(n-1\) points distincts et partagée en \(n\) segments (\(n-2\) segments au sens usuel et 2 demi-droites). Ces n segments partagent chacune des n régions traversées en 2 ; il s'ajoute ainsi n nouvelles régions. La 3<sup>e</sup> droite conduit à 4 + 3 = 7 régions ; la 4<sup>e</sup> à 11, et ainsi de suite.</p>
+
+<p>Si pour \(n-1\) droites, le nombre de régions vaut \(P(n-1)=(n^2- n + 2)/2\), en ajoutant une \(n\)<sup>e</sup> droite on obtiendra \((n^2- n + 2)/2 + n\) régions.<br />
+Mais \((n^2- n + 2)/2 + n = (n^2 + n + 2)/2 = [(n + 1)^2 - (n + 1) + 2]/2\).<br />
+On a donc \(P(n) = P(n-1) + n\). Le résultat est donc valable pour toutes les valeurs de \(n\).</p>
+</div>
+	</div>
+<br />
+<p>Arrêtons-nous un instant pour constater que si l'on connaît k valeurs, il est toujours possible de trouver un polynôme de degré \(k-1\) qui prend ces valeurs pour k nombres de la suite, même non consécutifs. Le système est toujours déterminé ; son déterminant est un <a href="../ana/approxi.htm">déterminant de Vandermonde</a> qui n'est jamais nul.</p>
+
+<p>Donc, si l'on répond au problème posé par n'importe quel nombre, il existera toujours un polynôme du 3<sub>e</sub> degré qui pourra justifier la réponse. 
+En particulier, si l'on a répondu 8, outre la justification par les puissances de 2, on peut trouver le polynôme \(n(n^2-3n + 8)/6\) qui prend les bonnes valeurs.
+Moralité : ces tests ne sont pas à faire par écrit ; on n'imagine pas toujours ce qui peut se passer dans la tête de celui qui répond.</p>
+
+<p>Revenons maintenant aux suites construites à partir d'un polynôme \(P(x)\) de degré m. Chacun des éléments, \(a_n\) de la suite est tout simplement la valeur de \(P(n)\).
+Comme nous l'avons fait à propos des <a href="../ana/suites.htm">suites</a> considérons la suite des différences des éléments de cette suite. Elle est formée de polynômes \(Q(n) = P(n + 1) - P(n)\). Les termes en \(n^m\) se détruisent et les polynômes \(Q(n)\) sont de degré \(m-1\). Si nous recommençons à calculer les différences de cette nouvelle suite déterminée par les \(Q(n)\), on obtiendra des polynômes de degré inférieur et en itérant l'opération, on arrivera à de polynômes de degré 0, ce qui signifie que la différence m<sup>e</sup> sera constante.
+Illustrons cela par un exemple. Soit la suite donnée par le polynôme \(n(n^2 -3n + 8)/6\):</p>
+
+<pre>
+1       2        4       8      15       26      42      ...
+    1       2        4       7      11       16      ...    
+        1        2       3       4        5      ...        
+            1        1       1       1       ...            
+</pre>
+
+<p>La réciproque est également valable. Si la différence \(m\)<sup>e</sup> est constante, la suite initiale est obtenue à partir d'un polynôme d'ordre \(m\).
+Il suffit de raisonner "dans l'autre sens". Si la constante vaut a, la  différence \(m-1\)<sup>e</sup> est obtenue à partir du polynôme \(an + b\) ; la  différence \((m-2)\)<sup>e</sup> est obtenue à partir du polynôme \((a/2)n^2 + (b-a^2/4)n + c\), et ainsi de suite.
+Voyons quelques suites intéressantes :</p>
+
+<p>Suite des sommes de carrés :</p>
+
+<pre>
+0       1       5      14      30      55      91      14      ...
+    1       4       9      16      25      36      49      ...    
+        3       5       7       9      11      13      ...        
+            2       2       2       2       2      ...            
+</pre>
+
+<p>On devine alors que la somme des carrés est donnée par un polynôme du 3<sup>e</sup> degré.<br />
+On procède comme tout à l'heure et à l'aide des 4 premières équations on obtient : \(P(n) = (2n^3 + 3n^2 + n)/6\).
+Est-ce correct ? Peut-être, mais nous avons supposé que la différence 3<sup>e</sup> était constante mais cela n'a pas été prouvé. La formule est pourtant vraie pour \(n = 1, 2, 3, 4\) ; comment achever la démonstration ? Tout simplement par induction.</p>
+
+<p>Supposons qu'elle soit valable pour la somme des carrés de \(n\) premiers naturels (ce qui est vrai jusqu'à 4).On a donc :</p>
+
+<p class="ni">\(1^2 + 2^2 + 3^2 + ... + n^2 = (2n^3 + 3n^2 + n)/6 = 1/6 n(n + 1)(2n + 1)= P(n)\).
+Reste-t-elle vraie si l'on ajoute \((n + 1)²\) ?<br/>
+Le second membre devient :</p>
+
+\[ \begin{align}
+P(n)+(n+1)^2 & = 1/6 n(n + 1)(2n + 1) + (n + 1)^2 \\
+& = 1/6(n + 1)[n(2n + 1) + 6(n + 1)] \\
+& = 1/6 (n + 1)[2n^2 + n + 6n + 6] \\
+& = 1/6 (n + 1)[2n^2 + 7n + 6] \\
+& = 1/6 (n + 1)(n+2)(2n+3) \\
+& = P(n+1)
+\end{align} \]
+
+<p>Cette formule est donc correcte et valable pour toutes les valeurs de n. Pour la somme des cubes on peut procéder d'une manière analogue.<br />
+On a  :</p>
+
+<pre>
+0       1      9      36      100     225     441      ...
+    1      8      27      64      125     216      ...    
+        7     19      37      61      91       ...        
+          12      18      24       30     ...             
+               6       6       6     ...                  
+</pre>
+
+<p>A présent la formule sera donnée (sous réserve d'une vérification comme ci-dessus) par un polynôme du 4<sup>e</sup> degré. Mais avant de calculer ce polynôme, que remarquons-nous ? La somme des cubes semble toujours être égale à un carré.
+En effet, on obtient successivement les carrés de 0, 1, 3, 6, 10, 15, 21, ...
+Cette suite est intéressante ; c'est ce que les Grecs appelaient les nombres triangulaires.</p>
+
+	<div id="question2" style="display:block;">
+<a href="#" onclick="affiche('reponse2') ; cache('question2') ; return false ;"><img alt="voir" src="../plus.gif" width=11 height=11></a> Mais que sont au juste "les nombres triangulaires" ?<br />
+	</div>
+	<div id="reponse2" style="display:none;">
+<a href="#" onclick="cache('reponse2') ; affiche('question2') ; return false ;"><img alt="cacher" src="../moins.gif" width=11 height=11></a> Refermer<br />
+<br />
+<div style="background-color:#f8ffe0; padding: 10px; border:1px solid black;">
+<p>On les obtient en considérant le nombre d'éléments contenus dans chacun des triangles équilatéraux obtenus à partir du premier sommet jusqu'à une des lignes horizontales.</p>
+
+<img alt="nombres triangulaires" src="enti/triangles.gif" width=314 height=279>
+
+<p>Le n<sup>e</sup> nombre triangulaire (sur le dessin n=6) est donc égal à la somme des n premiers naturels (non nul) ; le terme général de cette suite est donnée par une formule très simple : \(n(n + 1)/2\).
+Cette formule possède une démonstration géométrique fort simple, découverte par Gauss à l'âge 7 ans.</p>
+
+<p>Prenons, par exemple le 4<sup>e</sup> nombre triangulaire et disposons les points d'une manière légèrement différente. En rajoutant une figure identique (tournée de 180°) on obtient un rectangle de 4 x (4+1), ce qui justifie la formule.</p>
+
+<img alt="somme" src="enti/somme.gif" width=297 height=203>
+
+</div>
+<br />
+	</div>
+
+	<p>Si nous avons bien deviné, la somme des n premiers cubes est égale au carré de la somme du n<sup>e</sup> nombre triangulaire :</p>
+
+\[1^3 + 2^3 + 3^3 + ... + n^3 = [n(n + 1)/2]^2\]
+
+<p>La vérification est une simple démonstration par induction. Il existe toutefois une manière assez jolie de voir géométriquement cette égalité :</p>
+
+<img alt="carres" src="enti/cube-carre.gif" width=388 height=384>
+
+<p>Le nombre de cases d'une même couleur (claire ou foncée) est égal au cube du nombre correspondant.
+Pour les nombres n impairs, on trouve, traversant la diagonale, un carré du nombre (couleur foncée) formé de \(n^2\) petits carrés et, en assemblant les rectangles (couleur claire) deux à deux (à chaque fois le plus grand avec le plus petit), on obtient \((n-1)\) carrés égaux, donc au total \(n^2 + (n-1)n^2 = n^3\) petits carrés.
+Pour les nombres n pairs, on trouve également le carré du nombre (couleur foncée) formé de n² petits carrés et, en assemblant les rectangles (couleur claire) deux à deux (à chaque fois le plus grand avec le plus petit), on obtient \((n-2)\) carrés égaux ; il reste deux rectangles \(n/2 x n\) qui, assemblés, fournissent le carré manquant. Au total \(n^2 + (n-2)n^2 + n^2 = n^3\) petits carrés.</p>
+
+<p>Et, me direz-vous, à quoi tout cela sert-il ? A rien évidemment. Mais si vous êtes arrivés jusqu'ici, c'est que ce qui précède vous a intéressé et que ces problèmes sont jolis.</p>
+
+<p>Plus sérieusement, les Grecs s'en sont occupés dans l'antiquité. De plus, vous aurez probablement remarqué l'analogie entre les suites et les différences successives, d'une part et les fonctions polynômes et les dérivées successives d'autre part. Tout cela, bien que directement inutile, a conduit à bien des développements mathématiques.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

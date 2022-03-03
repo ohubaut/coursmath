@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mais, c'est évident ! - Analyse - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="paradoxes, intuition von Koch, fractale " />
+<meta name="keywords" content="analyse, paradoxes, intuition, fractale, von Koch" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Mais, c'est évident !
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<p>En mathématique, comme dans toute autre discipline, il est bon d'avoir une certaine intuition des situations rencontrées. Toutefois il faut rester conscient qu'une intuition n'est jamais une preuve.</p>
+
+<p>A titre d'exemple, nous mentionnerons deux "curiosités" qui nous feront réfléchir quant à la qualité de notre intuition.</p>
+
+<p>Tout d'abord la longueur d'une courbe. Chacun sait qu'<a title="Biographie" href="../bio/archimed.htm">Archimède</a> a calculé avec grande précision la longueur de la circonférence en utilisant les polygones inscrits et circonscrits. Il est "évident" que le périmètre d'un polygone inscrit est inférieur à la circonférence et que lorsque le nombre de côtés du polygone augmente indéfiniment, le périmètre tend vers la circonférence.</p>
+
+<p>Voici un exemple où l'on considère un segment de droite. Sur ce segment pris comme hypoténuse, on construit un triangle rectangle. Si le segment a pour longueur \(l\), la somme des longueurs des deux autres côtés vaudra \(l\sqrt{2}\).
+<img class="droite" alt="" src="koch/droite.gif" width=258 height=146> Subdivisons à présent en deux chacun des côtés du triangle, et joignons le milieu de l'hypoténuse aux milieux des côtés de l'angle droit. La somme des longueurs des 4 segments inclinés à 45° sur l'hypoténuse reste constante (et vaut \(l \sqrt {2}\)). En répétant l'opération, on obtient une courbe en "zigzag" formée de 8 segments, de 16 segments,... qui tend manifestement vers le segment de droite.</p>
+
+<p>Et pourtant! La longueur de cette courbe en "zigzag" reste constante et égale à \(l\sqrt {2}\).</p>
+
+<p>Que se passe-t-il? Tout simplement ce zigzag ne tend pas "convenablement" vers le segment de droite. Si nous regardons la tangente en un point d'abscisse fixée, nous voyons qu'elle est inclinée à 45° vers la droite ou vers la gauche, mais qu'elle ne tend pas à devenir horizontale.</p>
+
+<p>Montrons à présent une autre courbe "paradoxale". Soit un triangle équilatéral de coté \(c\). Son périmètre vaut \(3 c\).
+<img class="droite" alt="" src="koch/zz.gif" width=271 height=85>
+Décidons à présent de modifier cette courbe de la manière suivante.
+Nous remplaçons tout segment par la figure formée de 4 petits segments et pour qu'il n'y ait pas d'ambiguïté nous dirigerons la pointe vers l'extérieur. </p>
+
+<p><img class="gauche" alt="" src="koch/koch.gif" width=333 height=319><br />
+A la première étape nous obtenons une étoile de David. Si nous en calculons le périmètre, il suffira de partir du périmètre de la courbe initiale (le triangle équilatéral) et de remarquer que chaque segment a été remplacé par une figure dont la longueur en vaut les 4/3. 
+Le périmètre de l'étoile vaudra donc \(4 c\). En recommençant, nous obtenons une courbe formée de 12 x 4 segments dont le périmètre vaudra \(16 c/3\).</p>
+
+<p>En répétant indéfiniment l'opération, ce polygone tend vers une courbe dont la longueur aura, à chaque étape, été multipliée par 4/3, donc une courbe de longueur infinie.</p>
+
+
+<p>Et pourtant !
+Cette courbe, due au mathématicien von Koch, reste entièrement comprise à l'intérieur d'un cercle. Voila donc un domaine d'aire finie limité par une courbe de longueur infinie.</p>
+
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

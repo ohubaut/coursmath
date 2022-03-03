@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>La règle à calcul - Vie courante - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="La règle à calcul, sans batterie, précision" />
+<meta name="keywords" content="instrument, logarithmes, calcul numérique" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="vie.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-5', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+La règle à calcul
+<br />
+	</div>
+	<div class="stitre">
+( fonctionne sans batterie ! ) 
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Bien que remplacée par une petite calculatrice plus discrète, la règle à calcul est restée très à la mode jusqu'au début des années 1980. Sa taille, une bonne vingtaine de centimètres de long, était à la fois assez petite pour qu'elle puisse se glisser dans la pochette extérieure d'un veston mais suffisamment grande pour qu'elle en dépasse quelque peu de telle sorte qu'on remarquait immédiatement la qualité d'ingénieur ou d'architecte de son possesseur.</p>
+
+<img alt="règle à calcul" src="regl/regle.png">
+
+<p>Plus sérieusement, il s'agissait d'un outil très ingénieux permettant d'effectuer des calculs compliqués en quelques secondes. Quelques glissements d'une réglette mobile à gauche, à droite, et le résultat était obtenu avec une bonne précision. Son secret : l'utilisation des échelles logarithmiques.</p>
+
+<p>Encore une invention datant de plus d'un demi-millénaire !</p>
+
+<p><img class="droite" alt="logarithmes" src="regl/napier1620.jpg">En effet, <a href="../bio/napier.htm">Napier</a> publia en 1616 un travail d'une soixantaine de pages expliquant sa construction d'un outil destiné à simplifier les calculs et appelé logarithme ; l'ouvrage était suivi d'une table de logarithmes à 7 décimales de 90 pages.<br />
+Son but était de simplifier les calculs compliqués que les astronomes (ou leurs calculateurs) devaient effectuer. Il existait des tables de sinus à 7 décimales mais une seule multiplication ou pire, une division de deux tels nombres était longue et fastidieuse.</p>
+
+<p>La méthode utilisée par Napier pour introduire des logarithmes est fort curieuse et mérite d'être brièvement décrite.<br />
+Napier compare deux mouvements :</p>
+
+<ol>
+<li>Un mouvement rectiligne sur une demi-droite à vitesse constante ;
+<li>Un mouvement rectiligne sur un segment où la vitesse est proportionnelle à la distance séparant le mobile de l'extrémité du segment.
+</ol>
+
+<p>Traduisons en langage moderne la démarche suivie par Napier :<br />
+Dans le cas du mouvement uniforme de vitesse \(v,~ x = v.t\).<br />
+Pour le second cas, supposons que le mobile soit au départ situé au point de coordonnée \(1\) et se dirige vers le point d'arrivée de coordonnée \(0\). Sa vitesse au point de coordonnée \(y\) vaut \(k.y\) avec \(k\) constant ; sa position sera donnée par la résolution de l'équation \(dy/dt=k.y\) ou encore \(dy/y=k.dt\) qui a pour solution \(\mathbf{ln~}y=kt+C\). Si au temps \(t=0\) le point est en \(y=1\), la constante d'intégration \(C\) est nulle et \(\mathbf{ln~}y=kt\).<br />
+La relation entre les positions est tout simplement \(\mathbf{ln~}y=(k/v)x\).</p>
+
+<p>Une remarque : étant donné la nature du problème qu'il étudie (les logarithmes des sinus), Napier utilise d'autres unités. Par exemple, il n'aime pas les nombres décimaux ; il multiplie donc toutes les valeurs des sinus de sa table à 7 décimales par 10<sup>7</sup> ! Cela n'altère en rien la validité des résultats mais il faut les interpréter.</p>
+
+<p>A partir de là, on peut construire une échelle logarithmique et retrouver la  propriété essentielle des <a href="../ana/logarith.htm">logarithmes</a> : <b>ln</b>(a.b) = <b>ln</b>(a) + <b>ln</b>(b).</p>
+
+<div><img alt="échelle logarithmique" src="regl/log.png"></div>
+
+<p>Cette propriété ramène le calcul d'un produit à celui d'une addition, ou géométriquement, remplace une homothétie par une translation, ce qui est bien plus simple et mécaniquement réalisable. Il suffit d'avoir deux échelles logarithmiques et de translater l'une par rapport à l'autre, comme le montre la figure ci-dessous.</p>
+
+<div><img alt="échelle logarithmique" src="regl/prod.png"></div>
+
+<p>Ces <b>règles à calcul</b> étaient construites en bois ancien (buis, poirier, acajou, ébène, ...) afin de pouvoir coulisser sans problème. Par la suite, le bois a été remplacé par du métal (voir les <a href="vernier.htm">pieds à coulisse</a>) puis par divers plastiques. Par commodité, les règles à calcul sont généralement pourvues de plusieurs échelles et, entre autres, d'une échelle des inverses, ce qui peut être utile pour les divisions. On trouve également d'autres échelles, carrés, cubes, sinus, ...</p>
+
+<p>Sur les règles à calcul, on ne lit généralement que les 3 ou 4 premiers chiffres significatifs. Comme les règlettes sont plusieurs fois glissées lors d'un calcul, il existe des règles permettant de savoir le nombre de 0 à ajouter (ou à enlever) du résultat lu sur l'échelle. Pour ne pas s'encombrer l'esprit, il est toutefois préférable de faire mentalement une estimation du résultat.</p>
+
+<p>Étant donné que les échelles logarithmiques se retrouvent identiques après une multiplication (ou division) par 10, signalons qu'il existe des <b>cercles à calcul</b>. Bien qu'un peu plus encombrants et possédant moins d'échelles, il sont plus faciles à manipuler.</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="vied.htm">Vie courante</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Limites - Analyse - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="paradoxes, Achille, Zelée, intuition, infini" />
+<meta name="keywords" content="analyse, paradoxes, séries, intuition" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Et à la fin...?
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<p>Voici quelques exemples où apparaît la notion de limite, les deux premiers font partie de la "culture générale", les deux suivants sont moins courants mais font partie de la vie courante et le dernier attire l'attention sur les dangers d'une intuition non contrôlée.</p>
+
+<p class="st">La tortue</p>
+
+<p>Chacun connaît le paradoxe d'Achille et de la tortue. Achille court 10 fois plus vite que la tortue, mais elle possède 10 mètres d'avance sur lui. (Peut-être n'était-ce pas 10 mètres, mais 10 stades, mais qu'importe)
+Il est clair qu'Achille ne la rattrapera jamais !
+En effet, quand il aura parcouru 10 mètres, la tortue aura avancé d'un mètre. Si Achille parcourt ce mètre, la tortue aura encore avancé de 10 cm et ainsi de suite.
+Donc Achille ne la rattrapera jamais.</p>
+
+<p class="st">La flèche</p>
+
+<p>De même on cite souvent le paradoxe de Zénon.
+Une flèche lancée n'atteindra jamais son but!
+En effet, pour y arriver, elle devra parcourir la moitié du trajet. Quand elle y sera arrivée, elle devra parcourir la moitié du trajet restant et ainsi de suite, indéfiniment.
+Donc une flèche n'atteint jamais son but.</p>
+
+<p class="st">Le gâteau</p>
+
+<p>Pour fêter la réussite de son examen de math, Natacha a apporté un splendide gâteau qu'elle veut partager avec son frère Olivier.
+Olivier, qui se sert le premier (et est gourmand !), prend la moitié du gâteau.
+Natacha, remplie de scrupules (ou qui veut garder sa ligne ?), n'ose pas prendre ce qui reste; elle ne prend que la moitié du reste (le quart) et chacun déguste sa portion.
+En veux-tu encore un peu, demande Natacha. Bien sur, répond Olivier et il prend la moitié du reste. Natacha, qui dans le fond n'a pas tellement faim, prend la moitié de ce qui reste.
+Et le petit jeu continue... </p>
+
+<p>En fait qu'ont mangé chacun des deux ?
+Facile, dit Natacha qui est forte en math ; il suffit de faire la somme de nos parts, c'est-à-dire:</p>
+
+<div style="line-height:1.5em;">
+pour Olivier: 1/2 + 1/8 + 1/32 + 1/128 + ....<br />
+et pour moi: 1/4 + 1/16 + 1/64 + ...
+</div>
+
+<img class="droite" alt="" src="limi/tarte.gif" width=183 height=184><p>Dans les deux cas il s'agit d'une progression géométrique de raison 1/4 et il me semble bien avoir vu une formule qui donnait la somme des termes d'une telle progression. Malheureusement je ne m'en souviens plus. Mais cela n'a pas d'importance, dit-elle à son frère, de toutes façons tu n'y comprendrais rien, tu n'as pas revu les limites.</p>
+
+<p>C'est vrai, dit Olivier, mais à chaque fois j'ai mangé le double de toi, n'est-ce pas? Dès lors puisque nous avons terminé le gâteau j'en ai mangé les deux tiers et toi un tiers. Qu'en penses-tu ?</p>
+
+<p class="st">Promotion</p>
+
+<p>Un fabricant de desserts savoureux (y en a-t-il d'autres?) a lancé une campagne promotionnelle.
+Chaque dessert est accompagné d'un point. Quatre points donnent droit à un dessert gratuit. Cela constitue une manière déguisée et ludique d'offrir une réduction. Mais au fait à combien se monte cette réduction ?
+Une première réponse, intuitive, consiste à dire qu'avec 4 desserts achetés, on obtient 4 points donc un des 4 desserts est gratuit. Il y a donc une réduction de 25%.</p>
+
+<p>Supposons que le prix d'achat d'un dessert soit N. Puisqu'il nous faut quatre points pour obtenir un dessert gratuit, nous grouperons nos achats par 4.</p>
+
+<table class="n">
+<tr>
+<th>Nombre de desserts</th><th>Prix total</th><th>Prix unitaire</th></tr>
+<tr><td>4</td><td>4N</td><td>N</td></tr>
+<tr><td>8</td><td>8N - N = 7N</td><td>7/8.N</td></tr>
+<tr><td>12</td><td>12N - 2N = 10N</td><td>5/6.N</td></tr>
+<tr><td>16</td><td>16N - 3N = 13N</td><td>13/16.N</td></tr>
+<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>4<i>k</i></td><td>4<i>k</i>N - (<i>k</i> - 1)N = (3<i>k</i> - 1)N</td><td>(3<i>k</i> - 1)/4<i>k</i>.N</td></tr>
+</table>
+
+<p>On voit ainsi que la réduction n'est pas de 25%, mais tend vers cette valeur.
+Au plus vous en mangerez, au plus la réduction sera forte. Bon appétit !</p>
+
+
+<a id="HARM"> </a>
+<p class="st">De moins en moins, de plus en plus</p>
+
+
+<p>Soit la somme 1 + 1/2 + 1/3 + 1/4 + 1/5+...
+Combien vaut sa limite ?</p>
+
+<p>Cette série est appelée série <a href="../mat/harmoni.htm">harmonique</a>. Il semble "<i>évident</i>" que l'on ajoute quelque chose de plus en plus petit, et qu'à la limite on obtiendra une valeur bien déterminée.
+Un exemple concret est donné par la situation suivante:
+On pose une brique. <u>Sous</u> cette brique on dépose une deuxième brique que l'on décale le plus possible (son <a href="../mat/bary.htm">centre de gravité</a> de la première doit reposer sur la deuxième et elle ne peut donc être décalée que de la moitié d'une brique. Prenons cette distance comme unité.
+On pose ensuite <u>sous</u> l'ensemble une troisième brique que l'on décale le plus possible. Attention, il faut cette fois que le centre de gravité de l'ensemble des deux briques repose sur la troisième; on ne peut plus la décaler que d'1/2 unité.
+Continuons à poser <u>sous</u> l'ensemble une quatrième brique que nous décalons le plus possible.</p>
+
+<p><img class="droite" alt="" src="limi/briques.gif" width=212 height=168>
+De combien pouvons-nous décaler la troisième brique ?
+Choisissons pour origine l'extrémité de la troisième brique et pour unité une demi-brique; calculons la coordonnée du centre de gravité des trois premières briques. Le centre de gravité des deux premières a pour coordonnée 0 (nous sommes en équilibre au-dessus de la troisième brique) et celui de la troisième a pour coordonnée 1. L'abscisse du centre de gravité de l'ensemble aura pour coordonnée (2.0 + 1.1)/3 = 1/3. Nous pourrons décaler l'ensemble des 3 briques d'une distance égale à 1/3.</p>
+
+<p>Nous pouvons généraliser le calcul qui précède.
+Supposons que nous ayons superposé <i>n</i> briques. Calculons la coordonnée du centre de gravité en choisissant pour origine l'extrémité de la dernière brique (la <i>n</i>-ème). Sa coordonnée vaudra ((<i>n</i> - 1).0 + 1.1)/<i>n</i> = 1/<i>n</i>. L'ensemble pourra donc être décalé de 1/<i>n</i>.
+Les briques vont de moins en moins se décaler et il est clair qu'elles ne pourront se décaler au-delà de toute limite sous peine de faire effondrer l'édifice.</p>
+
+<p>Et pourtant...</p>
+
+<p>On peut remplacer dans cette somme certains termes par des termes plus petits; cela ne fera que diminuer la valeur.
+Remplaçons 1/3 par 1/4, 1/5, 1/6 et 1/7 par 1/8 et ainsi de suite pour nous ramener à une somme de fractions dont le dénominateur est une puissance de 2.
+La somme:</p>
+
+<div>1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6 + 1/7 + 1/8 + 1/9 +...</div>
+
+<p class="ni">est supérieure à la somme:</p>
+
+<div style="line-height:1.5em;">1 + 1/2 + 1/4 + 1/4 + 1/8 + 1/8 + 1/8 + 1/8 + 1/16 +... <br />
+= 1 + 1/2 + 2.(1/4) + 4.(1/8) + 8.(1/16) +...<br />
+= 1 + 1/2 + 1/2 + 1/2 + ....
+</div>
+
+<p class="ni">qui tend manifestement vers l'infini.</p>
+
+<p>Il faut se méfier des apparences !</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

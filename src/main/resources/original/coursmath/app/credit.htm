@@ -1,0 +1,150 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Achat à crédit - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="taux d'intérêt, mensualité, rachat" />
+<meta name="keywords" content="emprunt, mensualité, annuité; hypothèque" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Achat à crédit
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Tôt ou tard, chacun d'entre nous est amené à emprunter de l'agent que ce soit pour effectuer l'achat d'une voiture, de mobilier ou alors d'un appartement, d'une maison.</p>
+
+<p>On s'adresse alors à une institution de crédit pour obtenir un prêt remboursable, mensuellement s'il s'agit d'une "petite" somme ou annuellement si le montant est plus important. Il est évident que l'on souhait trouver la solution la moins onéreuse, mais les conditions de prêt ne sont pas toujours (et pour cause) énoncées clairement. Il faut en fait trouver l'organisme financier où le taux de chargement est le plus bas possible.</p>
+
+<p>Supposons ce taux connu, et pour faciliter les calculs, prenons un exemple où le taux annuel est de \(10%\) ! Supposons que je souhaite emprunter \(100000\) €; que je rembourserai en \(6\) ans. Un de mes amis dispose de cette somme et est disposé à me la prêter, mais il ne veut pas me faire de cadeau. </p>
+
+<p>S'il plaçait son argent en banque il recevrait (sans rien faire; que c'est immoral !) \(110000\) € après la première année, \(121000\) € après la deuxième année et ainsi de suite; à la fin de la sixième année il serait à la tête d'un capital de \(177156\) €.</p>
+
+<p><img class="droite" alt="" src="cred/credit.gif">Il est donc d'accord pour me prêter \(100000\) € que je lui rembourserai en \(6\) annuités de même montant, mais il ne veut rien perdre. Pour cela il placera le premier versement qui lui rapportera des intérêts pendant \(5\) ans, ensuite le deuxième versement qui produira des intérêts pendant \(4\) ans et ainsi de suite; il recevra enfin le sixième et dernier versement.</p>
+
+<p>Bien entendu à la fin des \(6\) ans il souhaite disposer de \(177156\) € comme s'il avait placé son capital initial au taux annuel de \(10%\).</p>
+
+<p>Les zones grisées représentent l'évolution du capital emprunté et les zones colorées celle des montants remboursés.</p>
+
+<p>Si \(A\) désigne le montant du remboursement annuel, au bout des six années mon ami disposera, en posant r=10%, de: \(A.(1+r)^5 + A.(1+r)^4 + ... + A = 7,71561.A\). Cette somme doit être égale à \(177156,1\) € et il est donc facile de calculer \(A=177156,1\) €/\(7,71561~=~22960,7..\) €.</p>
+
+<p>Pour envisager toutes les hypothèses, supposons qu'au cours de la troisième année je gagne à la loterie (plus exactement que je perde un peu moins que d'habitude !). Je souhaite alors m'acquitter de ma dette. Combien dois-je payer à la fin de cette troisième année ?</p>
+
+<p>Au bout de \(3\) années de crédit mon ami aurait disposé sur son compte en banque de \(133100\) €. Il possède déjà \(22960,7\) € qui ont produit des intérêts pendant \(2\) ans et de \(22960,7\) € qui ont porté intérêt pendant un an. Cela représente \(22960,7\) €.\((1+r)^2 + 22960,7\) €.\((1+r)\) = \(27782,5\) € \(+ 25256,8\) € \(= 53039,3\)€. Il reste donc à lui payer la différence, soit \(133100\) € \(- 53039,3\) € \(= 80060,7\) €. Cela représente la valeur du rachat de ma dette.</p>
+
+<p>Essayons à présent de généraliser cette situation en imaginant un prêt d'un capital C au taux de <i>r</i> (par période) remboursable en <i>n</i> périodes par versement d'un montant A.</p>
+
+<p>Désignons par \(u=1+r\) le coefficient par lequel un capital est multiplié au bout d'une période.</p>
+
+<p>La valeur \(V\) du capital \(C\) au bout des \(n\) périodes sera: \(V=C.u^n\)</p>
+
+<p>Le premier versement rapporte des intérêts pendant \(n-1\) périodes, le deuxième pendant \(n-2\) périodes, et ainsi de suite. Au total la valeur \(V'\) des versements sera égale à:</p>
+
+\[ V' = A.u^{n-1} + A.u^{n-2} + ... + A.u + A \]
+
+ou encore:
+
+\[ V' =A.(u^n-1)/(u-1) \]
+
+<p>Pour que le prêt soit équitable, il doit y avoir égalité: \(V = V'\), c'est-à-dire :</p>
+
+\[ C.u^n = A(u^n-1)/(u-1) \]
+
+<p>Cette équation permet de déterminer \(A\) connaissant le capital emprunté \(C\), le nombre de remboursements \(n\) et le taux d'intérêt \(r\) \((u =1+r)\).</p>
+
+<p>A titre d'exemple, voici un tableau donnant les annuités pour un capital de \(100000 €\) en fonction de la durée du prêt et du taux d'intérêt.</p>
+
+<table class="n">
+<tr><th> </th><th>5%</th><th>6%</th><th>7%</th><th>8%</th><th>9%</th><th>10%</th></tr>
+<tr><th> 10 ans </th><td> 12951 </td><td> 13587 </td><td> 14238 </td><td> 14903 </td><td> 15582 </td><td> 16275 </td></tr>
+<tr><th> 15 ans </th><td>  9634 </td><td> 10296 </td><td> 10980 </td><td> 11683 </td><td> 12406 </td><td> 13147 </td></tr>
+<tr><th> 20 ans</th><td>  8024 </td><td>  8719 </td><td>  9439 </td><td> 10185 </td><td> 10955 </td><td> 11746 </td></tr>
+</table>
+
+<p>et un tableau donnant les mensualités pour un prêt de \(10000 €\) à court terme:</p>
+
+<table class="n">
+<tr><th> </th><th>4%</th><th>6%</th><th>8%</th><th>10%</th><th>12%</th><th>14%</th></tr>
+<tr><th> 12 mois </th><td> 867 </td><td> 883 </td><td> 900 </td><td> 917 </td><td> 933 </td><td> 950 </td></tr>
+<tr><th> 24 mois </th><td> 450 </td><td> 467 </td><td> 483 </td><td> 500 </td><td> 517 </td><td> 530 </td></tr>
+<tr><th> 36 mois </th><td> 311 </td><td> 328 </td><td> 345 </td><td> 361 </td><td> 378 </td><td> 395 </td></tr>
+</table>
+
+<p>Dans la pratique, les prêteurs donnent souvent pour un capital \(C\) et un nombre \(n\) de remboursements le montant \(A\) à payer et dissimulent soigneusement (et pour cause !) la valeur de \(r\). Certains vont même jusqu'à faire le calcul suivant: "Vous remboursez au total \(n.A\) pour un emprunt de \(C\); les intérêts s'élèvent à \(n.A - C\) et le taux vaut donc \((n.A-C)/n\).</p>
+
+<p>Dans l'exemple initial ils calculent de la manière suivante: 6 remboursements de \(22960,7 € = 137764,4 €\), donc \(37764,4 €\) d'intérêt en \(6\) ans ou \(6294,1 €\) par an. L'intérêt ne serait donc que de \(6.29\)% !!!</p>
+
+<p>Enfin comment calculer le remboursement anticipé, la valeur de rachat de l'emprunt?</p>
+
+<p>Si <i>k</i> remboursements ont été effectués, le montant B à verser doit être tel que:</p>
+
+\[ C.u^n = A.u^{n-1} + A.u^{n-2} + ... + A.u^{n-k} + B.u^{n-k-1} \]
+
+ou encore
+
+\[ C.u^n = A.(u^{n-1} + u^{n-2} + ... + u^{n-k}) + B.u^{n-k-1} \]
+
+d'où
+
+\[ B = C.u^{k+1} - A.u.(u^k-1)/(u-1) \]
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

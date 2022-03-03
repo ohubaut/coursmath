@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Le principe de la contrariété maximum - Statistique - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="probabilités" />
+<meta name="keywords" content="paradoxes, ascenseurs" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Le principe de la contrariété maximum
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Un de mes amis est affolé; il en devient complètement parano: les ascenseurs lui en veulent !</p>
+
+<blockquote>
+<p><i>Tous les jours, m'explique-t-il, je vais au bureau et je commence par voir mon chef qui est au 9<sup>e</sup> étage, pour y recevoir les directives pour la journée.<br />
+Bien entendu, au rez-de-chaussée je prends l'ascenseur et je monte jusqu'au 9<sup>e</sup> ( il y a 10 étages dans le bâtiment).<br />
+Aucun problème.<br />
+<img class="droite" alt="" src="lift/asc.gif">Mon directeur me donne les instructions pour la journée et je redescends chez la secrétaire qui est au 1<sup>er</sup> et... c'est là que les ennuis commencent.</i></p>
+
+<p><i>J'attends l'ascenseur pour descendre et, tu ne me croiras pas, 9 fois sur 10 l'ascenseur qui arrive monte vers le 10<sup>e</sup>. J'en suis absolument certain; j'ai même fait des statistiques qui portent sur près d'un an: 9 fois sur 10 il monte.<br />
+Attends, attends, ce n'est pas tout.<br />
+Quand, enfin, j'arrive à en avoir un qui descend, je passe chez la secrétaire pour lui donner son boulot et reprendre le travail de la veille. Ensuite je remonte le porter à mon chef au 9<sup>e</sup>. Eh bien! tu me croiras encore moins: 9 fois sur 10 l'ascenseur descend !</i></p>
+
+<p><i>Et dire que je sais que quand j'aurai terminé au 9<sup>e</sup> et que je voudrai descendre, l'ascenseur va monter.<br />
+Avoue qu'il y a un problème !<br />
+J'en ai parlé aux informaticiens de la compagnie, aux comptables et tout le monde s'est moqué de moi. Peux-tu m'aider ?</i></p></blockquote>
+
+<p>Ecoute lui dis-je, pourquoi n'es-tu pas venu me voir plus tôt. Je t"aurais fait un petit schéma et tu aurais tout de suite compris.</p>
+
+<p>Supposons que, comme il y a beaucoup de circulation dans le bâtiment, l'ascenseur voyage sans arrêt entre le rez-de-chaussée et le 10<sup>e</sup>. Nous allons faire un petit graphique, et pour simplifier les choses, nous négligerons les temps d'arrêt aux étages.</p>
+
+<img alt="" src="lift/graf.gif">
+
+<p>Pour te simplifier les choses, j'ai choisi comme unité de temps la durée nécessaire pour monter (ou descendre) d'un étage.<br />
+Quand tu es au 9<sup>e</sup>, j'ai représenté en rouge l'intervalle de temps pendant lequel l'ascenseur qui arrivera montera vers le 10<sup>e</sup> et en vert celui pendant lequel l'ascenseur qui arrivera descendra vers le rez-de-chaussée. Quand tu es au 1<sup>er</sup>, j'ai mis en rouge la période pendant laquelle l'ascenseur qui se présente descendra et en vert celle pendant laquelle l'ascenseur qui arrive montera.</p>
+
+<p>Que constates-tu&nbsp;? Un phénomène tout à fait normal.<br />
+Tes statistiques sont exactes, quand tu es au 9<sup>e</sup> l'intervalle de temps "défavorable" est 9 fois plus long que l'intervalle "favorable"; il y a donc 9 chances sur 10 que l'ascenseur qui arrive à l'étage monte vers le 10<sup>e</sup> et 1 chance sur 10 qu'il descende. D'ailleurs si tu avais un peu réfléchi, quand tu es au rez-de-chaussée, il y a 10 chances sur 10 que l'ascenseur monte. Heureusement, n'est-ce pas !</p>
+
+<p>Voilà, ne t'inquiète plus. Où que tu sois, il y aura toujours autant d'ascenseurs qui montent que d'ascenseurs qui descendent; ils ne disparaîtront ni dans le ciel ni en enfer, mais les temps d'attente pour le "bon" ascenseur varieront selon l'étage où tu te trouves.<br />
+Dans ton cas, c'était ce que les physiciens humoristes appellent le 4<sup>e</sup>principe de la thermodynamique, celui de <i>la contrariété maximum</i></p>
+
+<p>J'espère qu'à présent tu es rassuré !</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

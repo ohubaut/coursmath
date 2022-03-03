@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Pourquoi faire simple quand on peut... - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="compliqué, Roland Garros, championnat, sport, probabilités" />
+<meta name="keywords" content="simple, compliqué, dénombrement, tennis, cartes" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Pourquoi faire simple quand on peut...
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Bien souvent, entraîné par un drill, il arrive que l'on suive une voie, certes correcte, mais parfois fort éloignée de la simplicité.</p>
+
+<p>Voici trois exemples typiques.</p>
+
+<p class="st">Les tournois de tennis</p>
+
+<p><img class="droite" alt="" src="faci/tennis.gif">73 concurrents sont inscrits  au tournoi de Roland-Garros. Quel est le nombre total de matches à organiser ?</p>
+
+<p>Voilà un problème simple où l'on peut donner une réponse compliquée.</p>
+
+<p>En effet si le nombre de concurrents était une puissance de 2, (32 par exemple), on pourrait prévoir 16 seizièmes de finale, 8 huitièmes de finale, 4 quarts de finale, 2 demi-finales et enfin la finale, soit un totale de 32 + 16 + 8 + 4 + 2 + 1 matches.<br />
+Hélas 73 n'est pas une puissance de 2. Que faire ?<br />
+On imagine le scénario suivant. 73 est compris entre 64 et 128. On imagine qu'il y a 128 concurrents et la situation est alors très simple: on organise d'abord 64 matches. Toutefois, comme il n'y a que 73 concurrents, on peut se borner à organiser un tour préliminaire de 73 - 64 = 9 matches mettant en jeu 18 concurrents et qualifier d'office les 55 autres. Au second tour on trouve, face à ces 55 qualifiés d'office les 9 vainqueurs du tour préliminaire.</p>
+
+<p>On se trouve alors dans la situation idéale où le nombre de participants est une puissance de 2.<br />
+Le calcul est simple (73 - 64) + 32 + 16 + 8 + 4 + 2 + 1 matches.<br />
+Il n'est guère difficile de généraliser à n concurrents.</p>
+
+<p>Mais n'y a-t-il pas plus simple ?</p>
+
+	<div id="question1" style="display:block;">
+Afficher la réponse <a href="#" onclick="affiche('reponse1'); cache('question1');return false;"><img alt="voir" src="../plus.gif"></a><br /><br />
+	</div>
+	<div id="reponse1" style="display: none;">
+Cacher la réponse <a href="#" onclick="cache('reponse1'); affiche('question1'); return false;"><img alt="cacher" src="../moins.gif"></a><br /><br />
+<div style="margin:auto; width:450px; background-color: #eff; border:1px solid #000; padding:0 30px;"><p>Chaque match élimine un concurrent; il ne doit rester qu'un vainqueur. Il faut donc organiser 72 matches.</p></div>
+	</div>
+
+<p class="st">Le piéton, la mouche et le cycliste</p>
+
+<p>Cela pourrait être le titre d'une fable de La Fontaine, mais à son époque il n'y avait pas encore de vélo; il s'agit d'un problème mathématique (ou physique).<br />
+Un piéton et un cycliste sont distants de 100 km. Le piéton marche à 5 km/h, le cycliste roule à du 20km/h.<br />
+Au départ une mouche se trouve sur le nez du piéton; elle s'envole vers le cycliste. Quand elle atteint le nez du cycliste elle fait demi-tour et vole vers le piéton ... et ainsi de suite. Sachant qu'elle vole à 100 km/h, quelle distance aura-t-elle parcouru avant d'être écrasée entre les deux nez.</p>
+
+<img alt="" src="faci/mouche.gif">
+
+<p>En fait, elle fait un trajet piéton - cycliste - piéton et recommence chaque fois un trajet du même type; le seul paramètre qui est modifié c'est la distance séparant le piéton du cycliste.</p>
+
+<p>On peut faire le calcul en supposant piéton et cycliste séparés par une distance \(D\): le piéton (et la mouche) part(ent) de la borne kilométrique \(0\) et le cycliste de la borne \(D\) (qui vaut initialement \(100\)). Voyons d'abord où aura lieu la rencontre de la mouche et du cycliste.<br />
+Si elle se passe à la borne \(d\), on aura l'égalité des temps mis par la mouche \(d/100\) et le cycliste \((D-d)/20\), d'où \(120d=100D\) c'est-à-dire \(d=5D/6\).<br />
+Où sera le piéton ? Pendant le temps \(d/100=D/120\) il sera arrivé à la borne \(D/24\).<br />
+Cherchons à présent l'endroit où la mouche retrouvera son piéton.<br />
+Le piéton est en \(D/24\), le cycliste (et la mouche) en \(5D/6\). Appelons d' l'endroit où aura lieu la rencontre du piéton et de la mouche. En égalant les temps mis par chacun d'eux, on a \((d'-D/24)/5=(5D/6-d')/100\).<br />
+Cette dernière relation permet de calculer \(d'=5D/63\).</p>
+
+<p>Courage nous y arrivons !<br />
+Il suffit de voir où se trouve le cycliste; il est parti de la borne \(5D/6\) et a parcouru \(20(5D/6-d')/100\), ou encore \(19D/126\).<br />
+Il se trouve donc en \(5D/6-19D/126=43D/63\).<br />
+On est ramené au problème initial, mais la distance séparant piéton et cycliste est réduite à \(43D/63-5D/63=38D/63\); elle a donc été multipliée par le facteur \(38/63\) et le trajet effectué par la mouche vaut \(d+(d-d')=100D/63\).</p>
+
+<p>Le problème est alors "tout simple".<br />
+On a une suite géométrique de raison \(38/63\) dont le premier terme vaut \(100D/63\). 
+La somme infinie de cette suite vaut \(100D/63(1/(1-38/63))=(100D/63)/(25/63)=4D\). Dans notre problème \(D=100 km\) et la mouche vole donc \(400 km\).</p>
+
+<p>Ouf ! A nouveau on aurait pu traiter le problème de manière générale en appelant \(u\) et \(v\) les vitesses du piéton et du cycliste et \(V\) la vitesse de la mouche. Mais à quoi bon s'il y a plus simple ?</p>
+
+	<div id="question2" style="display:block;">
+Afficher la réponse <a href="#" onclick="affiche('reponse2'); cache('question2');return false;"><img alt="voir" src="../plus.gif"></a><br /><br />
+	</div>
+	<div id="reponse2" style="display: none;">
+Cacher la réponse <a href="#" onclick="cache('reponse2'); affiche('question2'); return false;"><img alt="cacher" src="../moins.gif"></a> <br /><br />
+<div style="margin:auto; width:450px; background-color: #eff; border:1px solid #000; padding:0 30px;"><p>Le piéton et le cycliste se rapprochent de \(20 km+5 km=25 km\) par heure. Ils se rencontreront donc au bout de \(4\) heures, pendant lesquelles la mouche aura parcouru \(400 km\).</p></div>
+	</div>
+
+<p class="st">La dame de coeur</p>
+
+<p><img class="droite" alt="" src="faci/dcoeur.gif">Dans un jeu (non truqué)  de 52 cartes on tire successivement 2 cartes. Quelle est la probabilité  de tirer la dame de coeur ?</p>
+
+<p>Voici la résolution très scientifique de ce problème.</p>
+
+<p>Il y a deux possibilités exclusives de réussite: la première carte est la dame de coeur et la deuxième carte est la dame de coeur. Calculons chacune des deux probabilités.<br />
+Dans le premier cas la probabilité est évidement \(1/52\).<br />
+Le deuxième cas est un peu plus délicat. La première carte tirée ne peut pas être la dame de coeur (il n'y en a qu'une seule dans le jeu !); donc la probabilité de tirer une première carte différente de la dame de coeur vaut \(51/52\). La deuxième carte doit être la dame de coeur; mais comme il ne reste plus que \(51\) cartes dans le jeu la probabilité de tirer cette dame vaut \(1/51\). Il en résulte que la probabilité de tirer comme deuxième carte la dame de coeur vaut \(51/52.1/51=1/52\).</p>
+
+<p>Comme les deux événements (tirer la dame en premier et la tirer en second) sont exclusifs, on additionne les probabilités et on obtient \(1/52+1/52=1/26\).</p>
+
+<p>Pourtant, il y a plus simple.</p>
+
+	<div id="question3" style="display:block;">
+Afficher la réponse <a href="#" onclick="affiche('reponse3'); cache('question3');return false;"><img alt="voir" src="../plus.gif"></a><br /><br />
+	</div>
+	<div id="reponse3" style="display: none;">
+Cacher la réponse <a href="#" onclick="cache('reponse3'); affiche('question3'); return false;"><img alt="cacher" src="../moins.gif"></a><br /><br />
+<div style="margin:auto; width:450px; background-color: #eff; border:1px solid #000; padding:0 30px;"><p>Y a-t-il vraiment une première et une deuxième carte; on pourrait les tirer simultanément n'est-ce-pas ?...Donc on a tiré deux cartes parmi les \(52\) et la probabilité de tirer la carte désirée vaut \(2/52=1/26\).</p></div>
+	</div>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Comment mieux dessiner ! - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="perspective, cavalière, isométrique, trièdre, orthonormé" />
+<meta name="keywords" content="algèbre, géométrie, projection, perspective cavalière" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','µ'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Comment mieux dessiner !
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Il est évident que si on utilise une axonométrie quelconque on est, en général, choqué par la représentation obtenue.<br />
+Examinons, à titre d'exemple, la représentation la plus usuelle, la perspective cavalière, et regardons comment se représente une sphère.</p>
+
+<p>Établissons tout d'abord les équations d'une telle projection. 
+Le point de coordonnées $(x, y, z)µ est représenté par le point $(X, Y) = (x - kz, y - kz)µ où $kµ représente un rapport de réduction sur l'axe $zµ (dans la pratique $kµ vaut souvent soit $½µ, soit $\sqrt{2}/2µ
+
+<p>Soit la sphère $x^2+y^2+z^2=R^2µ. Une famille de plans parallèles au plan $oxyµ sectionnera la sphère selon des cercles dont les centres s'échelonnent sur l'axe $ozµ ; chacun de ces cercles se projettera en vraie grandeur et l'image de la sphère sera l'enveloppe de la famille des cercles.</p>
+
+<p>On a:</p>
+
+<div class="lh">$X = x - kzµ,   et   $Y = y - kzµ<br />
+d'où<br />
+$x = X + kzµ   et   $y = Y + kzµ.</div>
+
+<p>La sphère d'équation $x^2+y^2+z^2=R^2µ donne $(X + kz)^2 + (Y + kz)^2 + z^2 = R^2µ</p>
+<br />
+c'est-à-dire:<br />
+
+\[ (2k^2 + 1)z^2 + 2k(X + Y)z + X^2 + Y^2 - R^2 = 0 \]
+
+<p>Pour chaque valeur de <i>z</i> on a bien un cercle.<br />
+Toutefois on ne doit prendre en considération que les points $(X, Y)µ correspondant à des valeurs réelles de $zµ ; il faut donc que l'équation du second degré en $zµ admette des racines réelles. 
+On a donc:</p>
+
+\[ k^2(X + Y)^2 - (2k^2 + 1)(X^2 + Y^2 - R^2) \ge 0 \]
+ou<br>
+\[ - (k^2 + 1)(X^2 + Y^2) + 2k^2XY + R^2(2k^2 + 1) \ge 0 \]
+
+<p class="ni">c'est-à-dire l'équation de l'intérieur d'une ellipse; cette ellipse est l'enveloppe des cercles et les 2 cercles de rayon nul (réduits à un point) sont les foyers de celle-ci.</p>
+
+<div><img alt="" src="des2/ppc.gif"></div>
+
+<p>Il est gênant de voir une sphère représentée par une ellipse; on s'attendrait plutôt à un cercle. 
+Cela est dû au fait que la projection que nous utilisons n'est pas une projection orthogonale sur un plan.</p>
+
+<p>Quand on regarde à une distance suffisamment grande un objet de petite taille, on peut assimiler l'image sur la rétine à une projection orthogonale sur un plan; d'où la question: "Comment caractériser les trièdres plans qui sont projection orthogonale d'un trièdre orthonormé ?"</p>
+
+<p><img class="droite" alt="" src="des2/fig2.gif"> Soit un trièdre orthonormé $oabcµ et $pµ la projetante passant par $oµ.<br /> 
+Sur les axes coordonnés, nous choisirons le sens des vecteurs unités $oa,  ob,  ocµ de manière à ce que la droite $opµ soit intérieure à l'angle solide formé par les vecteurs unités.</p>
+
+<p>Un plan perpendiculaire à $pµ coupe respectivement les axes coordonnés $oa,  ob,  ocµ en $r,  s,  tµ. Le point de percée $hµ de $pµ dans ce plan est l'orthocentre (point de rencontre des hauteurs) du triangle $rstµ.<br />
+En effet, $rsµ est dans un plan perpendiculaire à $opµ et à $ocµ; le plan $ohcµ est donc perpendiculaire à $rsµ, et µhtµ est donc une hauteur du triangle $rstµ. 
+Nous concluons donc que les supports des 3 vecteurs du trièdre orthonormé se projettent sur les 3 hauteurs d'un triangle.</p>
+
+<p>À présent se pose la question de savoir si 3 droites quelconques concourantes en h peuvent être considérées comme les 3 hauteurs d'un triangle. Partons d'un point quelconque de l'une d'elles et traçons-lui la perpendiculaire; celle-ci rencontre les deux autres droites en $rµ et $sµ; les 2 perpendiculaires menées de $rµ et $sµ concourent en $tµ, situé sur la troisième droite, car $tµ est l'orthocentre du triangle $hrsµ. On remarque là une propriété intéressante liant les trois sommets d'un triangle et son <a title="Une généralisation de la relation de Stewart" href="../2de/orthoc.htm">orthocentre</a>.</p>
+
+<p>Ce point étant acquis, nous voyons que 3 droites concourantes peuvent toujours être considérées comme les trois hauteurs d'un triangle. De plus, nous avons choisi les vecteurs unités de façon à ce que l'orthocentre $hµ soit intérieur au triangle $rstµ; le triangle $rstµ ne peut donc pas avoir d'angle obtus; les angles obtus formés par les paires de hauteurs doivent être tels que la réunion des secteurs donne le plan tout entier.</p>
+<p>Il reste à déterminer la projection des points unités sur chacun des trois axes. Pour cela, dessinons un triangle $rstµ dont les trois droites données sont les hauteurs et construisons le développement de la pyramide $orstµ en faisant pivoter chacune des 3 faces latérales $orsµ, $ostµ et $otrµ le long des côtés du triangle <b>rst</b>. Nous obtenons un schéma du type dessiné ci-dessous</p>
+
+<div><img alt="" src="des2/fig3.gif"></div>
+
+<p>Sur chacun des côtés $st, tr, rsµ on a un triangle rectangle en $oµ; de plus les 3 triangles $sto',  tro'',  rso'''µ se replient en $oµ (qui se projette sur $hµ) et par conséquent les points $o',  o''µ et $o'''µ sont situés sur les hauteurs du triangle $rstµ. 
+Maintenant que le développement est construit il ne reste qu'à reporter des longueurs égales (unités) sur chacun des côtés et à les rabattre sur les hauteurs.</p>
+
+<p>En résumé, il suffit de connaître les directions des projections des trois vecteurs $oa, ob, ocµ pour reconstituer le trièdre orthonormé.</p>
+<p>Signalons que si les trois directions forment des angles égaux (= 120°), les projections des vecteurs unités ont toutes trois même longueur et la perspective est dite isométrique.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>La dérivation: analyse ou algèbre ? - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="limites, analyse, fonction, variation, taux, algèbre, application linéaire" />
+<meta name="keywords" content="dérivées, fonctions, algébrique, calcul, analyse" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+La dérivation: analyse ou algèbre ?
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>On a coutume de ranger la dérivation dans le tiroir "analyse" de l'armoire "mathématique".</p>
+
+<p>Il est incontestable qu'historiquement, la dérivation a pour origine la physique et en particulier la mécanique. En ce sens, elle a sa place en analyse.<br />
+Pourtant, la théorie de <a href="../bio/galois.htm">Galois</a> provient de l'étude de groupes de permutations, c'est-à-dire de la géométrie, et on range la théorie des groupes dans le tiroir algèbre !<br />
+C'est dire combien sont fragiles les cloisons entre les différentes branches de la mathématique.</p>
+
+<p>Une des principales propriétés des dérivées consiste en leur lien avec les tangentes d'une courbe.<br />
+Si on se limite aux courbes algébriques, il est évident que ces êtres existent sur n'importe quel corps commutatif. En particulier les coniques existent sur les corps finis, par exemple sur les entiers modulo p. Or là, il n'existe pas d'ordre, pas de limites, et pourtant les tangentes sont bien présentes et leur équation peut être écrite à partir des dérivées.<br />
+Une tangente à une courbe possède une définition analytique : "la tangente est la limite de la sécante passant par ce point et un autre point de la courbe, quand le second tend vers le premier".<br />
+Mais pour des courbes algébriques, la notion "tendre vers" est inutile : la tangente est une droite, passant par ce point, qui possède en ce point une intersection supplémentaire avec celle-ci; par exemple si le point est double, il faudra alors une troisième intersection.<br />
+A côté de cet aspect de la dérivée liée aux courbes, on sait également (voir la divisibilité par \(x-a\) ) qu'une équation algébrique \(P(x)=0\), avec \(P(x)\) un polynôme en \(x\), admet une racine double \(a\) si et seulement si \(x-a\) est un diviseur commun de \(P(x)\) et de son dérivé \(P'(x)\).<br />
+On voit bien que la dérivée est une notion algébrique pour les fonctions algébriques et également analytiques pour les autres fonctions.<br />
+Précisons cela.</p>
+
+<p>On introduit généralement la dérivée en physique, lors de l'étude du mouvement rectiligne uniforme ou uniformément accéléré. L'équation du mouvement est donnée par \(e=e(t)\) où \(e(t)\) désigne la position du mobile à l'instant \(t\).<br /> 
+On peut facilement parler de vitesse moyenne dans l'intervalle de temps \([t,T]\). Si \(e(t)\) et \(e(T)\) sont les positions correspondantes, la vitesse moyenne est donnée par la valeur du rapport \([e(T)-e(t)]/(T-t)\).</p>
+
+<p>Prenons l'exemple du mouvement uniformément accéléré. On arrive par une expérience ou par toute autre manière, à l'équation du mouvement: \(e(t)=e+vt+½at^2\); \(a\) est l'accélération, \(e\) et \(v\) désignent la position et la vitesse à l'instant \(t=0\).<br />
+Fixons un instant \(T\) et calculons la vitesse moyenne dans l'intervalle de temps \([T,t]\).<br />
+\(e(T)=e+vT+½aT^2\) et on a donc \(e(T)-e(t)=v(T-t)+½a(T^2-t^2)\).<br />
+Il va de soi que le bon élève factorisera cette expression sous la forme :<br /> 
+\(e(T)-e(t)=(T-t)[v + ½a(T + t)]\).<br />
+Ensuite, il faut calculer le quotient \([e(T)-e(t)]/(T-t)\); cela tombe bien car on a réussi à mettre en évidence \((T-t)\).<br />
+On obtient comme vitesse moyenne à partir de \(T\) : \(v + ½a(T + t)\), une fonction de \(t\) et \(T\).<br />
+Si on souhaite préciser non pas la vitesse moyenne mais la vitesse à un instant précis, il faut prendre un intervalle de temps \([t,T]\) le plus petit possible afin d'augmenter la précision et mettre hors-jeu la fluctuation de la vitesse dans l'intervalle de temps considéré. Le mieux est évidemment de prendre \(T=t\).<br />
+La vitesse à l'instant \(t\) sera donc \(v+at\).</p>
+
+<p>Parfait. Mais si on reprend la suite des calculs, on remarque qu'on a simplifié par \(T-t\).<br />
+On a remplacé \((T-t)/(T-t)\) par \(1\). Qu'y a-t-il de mal à cela ? Horreur: si \(T=t\) on a divisé par \(0\) ce qui est <a href="infini.htm">rigoureusement interdit !</a> Que faire alors ?<br />
+Pour compliquer une question dont la réponse est pourtant évidente, on a soin de changer quelque peu les notations; on pose \(T=t+\Delta t\). Utiliser des lettres grecques, cela fait plus sérieux !<br />
+Du coup, la vitesse moyenne vaut  \(\Delta t[v+½a(2t+\Delta t)]/\Delta t\) et si \(T=t\), \(\Delta t=0\) et voila le satanique 0 en dénominateur.<br />
+On introduit alors les notions de voisinages, de limites et après beaucoup d'efforts, on arrive à écrire le résultat, la "vraie valeur"... ce qui avait déjà été trouvé depuis belle lurette par l'élève.</p>
+
+<p>Bien entendu, on aura expliqué que tout cela permettait de définir la dérivée de la fonction \(e(t)\) (ici celle de \(e+vt+½at^2\) qui vaut \(v+at\)).<br />
+Parfait ; mais quand même, que tout cela semble bien compliqué. Et de plus, nous avions obtenu le bon résultat !<br />
+Pourquoi ? Tout simplement parce que la fonction \(e(t)\) était une fonction algébrique : un polynôme du second degré en t.</p>
+
+<p>Or, il existe une notion bien connue des mathématiciens: la <b>dérivée algébrique</b>. Elle provient de la définition historique de la dérivée, mais elle s'applique parfaitement et de manière bien plus simple aux fonctions algébriques.</p>
+
+<p>Prenons \(f(x)\), une fonction algébrique de \(x\) et calculons le taux de variation entre \(f(x)\) et \(f(a)\) qui se définit par le rapport \([f(x)-f(a)]/(x-a)\).<br />
+Évidemment, si \(x=a\), il semble y avoir un problème : numérateur et dénominateur sont nuls et la valeur semble indéterminée. Simplifions encore un peu et supposons que \(f(x)\) est un polynôme de degré quelconque en \(x\).</p>
+
+<p>Voila une situation qui nous rappelle une propriété fondamentale : un polynôme en \(P(x)\) est divisible par \((x - a)\) si et seulement si \(P(a)\) s'annule pour \(x=a\).<br />
+Or, le numérateur, \(f(x)-f(a)\), est un polynôme en \(x\) qui s'annule évidemment pour \(x=a\). Il est donc divisible par \(x-a\). On nous a toujours habitués à simplifier les fractions; effectuons la mise en facteur de \((x-a)\) et simplifions avec le dénominateur. Le taux de variation devient alors un polynôme en \(x\) et \(a\) et il n'y a plus aucun problème pour le calculer pour \(x=a\).</p>
+
+<p>On montre que cette méthode peut être appliquée pour toute fonction \(f\) algébrique.<br />
+Prenons un exemple (compliqué) où \(f\) est la racine cubique de \(x\), \(f(x)=x^{1/3}\).<br />
+On calcule le taux de variation \(\frac{x^{1/3}-a^{1/3}}{x-a}\). Pour la facilité posons \(y=x^{1/3}\) et \(b=a^{1/3}\). Il suffit donc de calculer \(\frac{y-b}{y^3-b^3}\). En se rappelant les produits remarquables on obtient : \(\frac{1}{y^2+by+y^2}\).<br /> Lorsque \(a\) sera égal à \(x\), \(b\) vaudra \(y\). Le rapport devient et ce rapport sera égal à \(1/3y^2\) et en remplaçant \(y\) par sa valeur \(x^{1/3}\), on obtient finalement \(1/3x^{2/3}\) ou, si l'on préfère, \(\frac{1}{3}x^{-2/3}\).</p>
+
+<p>Etant donné deux fonctions algébriques, on peut également définir le produit fg qui est encore une fonction algébrique. Un petit calcul classique basé sur l'identité:</p>
+
+\[ \small f(x)g(x) - f(a)g(a) = f(x)g(x) - f(x)g(a) + f(x)g(a) - f(a)g(a)\\f(x)[g(x)-g(a)] + [f(x)-f(a)]g(a)\]
+
+<p class="ni">permet d'écrire le taux de variation du produit \(f(x)g(x)\) sous la forme :</p>
+
+\[ \small \frac{f(x)g(x)-f(a)g(a)}{x-a}=f(x)\frac{g(x)-g(a)}{x-a}+\frac{f(x)-f(a)}{x-a}g(a)\]
+
+<p class="ni">et si on note \(f'\) la dérivée de \(f\), on obtient \((fg)'=fg'+f'g\).</p>
+
+<p>L'ensemble des fonctions algébriques en la variable \(x\) est un espace vectoriel. On peut y définir une application \(D\) qui applique toute fonction \(f(x)\) sur  la valeur de \([f(x) - f(a)]/(x - a)\) calculée pour a = x. Cette application est évidemment linéaire :</p>
+
+\[D(\lambda f + \mu g) = \lambda Df + \mu Dg\]
+
+<p class="ni">et de plus, D applique le produit fg sur :</p>
+
+\[D(fg) = f.Dg + Df.g\]
+
+<p>D'une manière générale, dans un vectoriel, toute application linéaire \(D\) satisfaisant à cette formule (dite de Leibniz) est appelée une <b>dérivation</b>.</p>
+
+<p>Remarquons déjà au passage que cette condition implique que si \(k\) est un scalaire, \(D(k)=0\).<br />
+En posant \(D(x)=1\), afin de préciser la variable par rapport à laquelle on dérive, notons \(Df(x)=f'(x)\). On retrouve ainsi la dérivée usuelle des fonctions algébriques.</p>
+
+<p>Par exemple: \((x^2)'=(x.x)'=x.x'+x'.x=2x\)  et par induction \((x^n)'=n.x^{n-1}\).</p>
+
+<p>Si \(f=x^{1/n}, f^n=x\) ; en dérivant les deux membres de l'égalité on a : 
+\(n.f^{n-1}f'=1\) et \(f'=1/(n.f^{n-1})\). Et ainsi de suite. En combinant les résultats, on obtient finalement:</p>
+
+\[ (x^{\frac{m}{n}})'=\frac{m}{n}x^{\frac{m}{n}-1} \]
+
+<p>Voila comment on peut définir et calculer les dérivées sans utiliser les limites. Pour les fonctions algébriques, il suffit de calculer la valeur du taux de variation :</p>
+
+\[ \frac{f(x)-f(a)}{x-a} \text{  pour  } x=a\]
+
+<p class="ni">en n'oubliant pas de simplifier au  préalable la valeur obtenue !</p>
+
+<p>Certes, étudier les dérivées est extrêmement important, mais pourquoi cela est-il souvent si difficile ? Pourquoi alors compliquer les choses en parlant de voisinages, de limites ? <br />
+La réponse est simple. Nous avons fait de l'algèbre en étudiant les fonctions algébriques et tous les problèmes de division par 0 se résolvent de manière évidente.</p>
+
+<p>Par contre, la dérivation des fonctions transcendantes, telles les fonctions goniométriques (sinus, cosinus et tangente), les fonctions exponentielles et les fonctions logarithmiques qui interviennent dans pas mal de problèmes de physique, nécessite d'autres outils.</p>
+
+<p>Songeons à la manière, peu rigoureuse, utilisée pour calculer \(\mathbf{sin~}x/x\) lorsque \(x\) tend vers 0; de même, celle, peu rigoureuse, utilisée pour définir une puissance non rationnelle de \(x\) !<br />
+Lorsqu'il s'agit de fonctions transcendantes, une étude correcte nécessiterait l'utilisation des propriétés particulières des réels, en particulier celles de voisinage, basées sur l'ordre.</p>
+
+<p>Étant donné la difficulté conceptuelle et le manque de temps, il faut être bien conscient que l'analyse, tout au moins à ses débuts, ne peut généralement être enseignée que de manière intuitive.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

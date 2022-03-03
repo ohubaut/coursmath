@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Exponentielle et sinus - Complexes - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Fonctions sinus et exponentielle définie sur les complexes" />
+<meta name="keywords" content="transformation conforme, plan de Gauss, fonctions, " />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="com.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript">
+    function mov(fichier) 
+{window.open(fichier,'mov','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-10', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Exponentielle et sinus
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>La fonction exponentielle \(\mathbf{exp~}x\) peut notamment être définie par son développement en série de <a title="Biographie" href="../bio/maclauri.htm">MacLaurin</a>. On a :</p>
+
+\[ \mathbf{exp~}x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!} +...\]
+
+<p>À partir de cette formule, on démontre aisément les propriétés essentielles de la fonction exponentielle: \(\mathbf{exp~}0=1\); \(\mathbf{exp~}(-x) = 1/\mathbf{exp~}(x)\) ; un peu plus difficile, la relation \(\mathbf{exp~}x.\mathbf{exp~}y=\mathbf{exp~}(x + y)\).</p>
+
+<p>Ces propriétés ne font appel qu'aux propriétés additives et multiplicatives des variables \(x\) et \(x\), c'est-à-dire qu'elles utilisent uniquement le fait que \(x\) et \(y\) sont des éléments d'un corps commutatif. Rien n'empêche donc de parler de la fonction \(\mathbf{exp~}z\), où \(z\) est un élément du corps des complexes.<br />
+On a:</p>
+
+\[ \mathbf{exp~}ix=1+ix-\frac{x^2}{2!}-i\frac{x^3}{3!}+\frac{x^4}{4!}+i\frac{x^5}{5!}+... \]
+
+<p class="ni">ou, en regroupant (sans trop de précautions !) les termes réels et imaginaires:</p>
+
+\[ \mathbf{exp~}ix=1-\frac{x^2}{2!}+\frac{x^4}{4!}+...+ i(x-\frac{x^3}{3!}+\frac{x^5}{5!}+...) \]
+
+<p>On reconnaît les développements en série de MacLaurin des fonctions \(\mathbf{cos~}x\) et \(\mathbf{sin~}x\). On peut donc écrire:</p>
+
+\[ \mathbf{exp~}ix=\mathbf{cos~}x+i\mathbf{sin~}x \]
+
+<p>Comme les propriétés des exponentielles restent valables on a, en particulier :</p>
+
+\[ \mathbf{exp~}(ix + iy) = \mathbf{exp~}(ix).\mathbf{exp~}(iy) \]
+
+<p>On retrouve les formules classiques d'addition des angles par identification des parties réelles et imaginaires :</p>
+
+\[ \mathbf{cos~}(x+y)=\mathbf{cos~}x.\mathbf{cos~}y - \mathbf{sin~}x.\mathbf{sin~}y \]
+
+<p class="ni">et</p>
+
+\[ \mathbf{sin~}(x+y)=\mathbf{sin~}x.\mathbf{cos~}y + \mathbf{cos~}x.\mathbf{sin~}y \]
+
+<p>De même, on a la formule de <a title="Biographie" href="../bio/moivre.htm">Moivre</a>:</p>
+
+\[ (\mathbf{cos~}\omega+i\mathbf{sin~}\omega)^n= \mathbf{cos~}n\omega+i\mathbf{sin~}n\omega \]
+
+<p>Les nombres complexes représentés par \(\mathbf{exp~}ix\) sont situés sur le cercle unité; ils sont de module 1.</p>
+
+<p>Un nombre complexe quelconque peut donc s'écrire comme produit d'un complexe de module 1 et d'un réel positif. On retrouve ainsi la représentation goniométrique des nombres complexes: \(a + ib = \mathbf{r}(\mathbf{cos~}\omega+i\mathbf{sin~}\omega)\) avec \(\mathbf{r} > 0\). Comme la parenthèse vaut \(\mathbf{exp~}i\omega \), il est bien tentant d'écrire \(\mathbf{r}=\mathbf{exp~}\rho \), ce qui assure le fait que \(\mathbf{r}\) est un réel positif.</p>
+
+<p>En résumé, le nombre \(a+ib\) peut s'écrire sous la forme \(\mathbf{exp~}(\rho+i\omega)\).<br />
+Il est intéressant de regarder la fonction \(Z(z)\) qui applique \(x+iy\) sur \(\mathbf{exp~}(x+iy)=X+iY\).</p>
+
+<a id="exponentielle"> </a>
+<p>La fonction \(Z\) s'exprime sous la forme \(Z(z)=\mathbf{exp~}(x+iy)=\mathbf{exp~}x(\mathbf{cos~}y+i\mathbf{sin~}y)\) ; les lignes coordonnées \(x=x_0\) et \(y=y_0\) sont donc respectivement appliquées sur les cercles centrés à l'origine et sur les demi-droites issues de l'origine.</p>
+
+<div><img alt="" src="expo/exp21.gif"></div>
+
+<p>Cette <a href="complexe.htm">transformation conserve les angles</a> et des courbes orthogonales sont appliquées sur des courbes orthogonales. Remarquons que, suite à la périodicité de la fonction \(\mathbf{exp~}z\), une bande horizontale de largeur \(2\pi\) est appliquée sur tout le plan \(Z\).</p>
+
+<p>Cette application peut être vue de manière dynamique en considérant l'<a href="javascript:mov('zexp.htm');"> application de \(z\) sur une combinaison de \(z\) et de \(\mathbf{exp~}z\)</a>.</p>
+
+<p>Une autre fonction intéressante à représenter est la fonction \(\mathbf{sin~}z\). Utilisons la formule donnant le cosinus d'une somme: \(\mathbf{sin~}z=\mathbf{sin~}(x+iy)=\mathbf{sin~}x.\mathbf{cos~}iy+\mathbf{cos~}x.\mathbf{sin~}iy\).</p>
+
+<p>Il s'agit à présent de voir le sens à attribuer à \(\mathbf{sin~}iy\) et à \(\mathbf{sin~}iy\). Prenons comme précédemment le développement en série de MacLaurin et nous obtenons:</p>
+
+\[ \mathbf{cos~}iy=1+\frac{y^2}{2!}+\frac{y^4}{4!}+ \frac{y^6}{6!}+ ...\]
+
+<p class="ni">ce qui peut s'écrire :</p>
+
+\(\mathbf{cos~}iy=\frac{1}{2}i(\mathbf{exp~}y+\mathbf{exp~}(-y)\)
+
+<p class="ni">De même on a:</p>
+
+\[ \mathbf{sin ~}iy=i(y+\frac{y^3}{3!}+\frac{y^5}{5!}+\frac{y^7}{7!}+...) \]
+
+<p class="ni">ce qui s'écrit : \(\mathbf{sin~}iy=\frac{1}{2}i(\mathbf{exp~}y-\mathbf{exp~}(-y)\)</p>
+
+<p>En utilisant ces résultats on peut réécrire la formule :</p>
+
+\[ \small\mathbf{sin~}z=\mathbf{sin~}x.\mathbf{cos~}iy + \mathbf{cos~}x.\mathbf{sin~}iy=
+1/2(\mathbf{sin~}x.(\mathbf{exp~}y+\mathbf{exp~}(-y)) +i\mathbf{cos~}x.(\mathbf{exp~}y-\mathbf{exp~}(-y))) \]
+
+<p>L'application de \(z\) sur \(\mathbf{sin~}z\) donne donc lieu à la transformation :</p>
+
+\[ X=1/2(\mathbf{sin~}x.(\mathbf{exp~}y+\mathbf{exp~}(-y))\\
+Y=1/2(\mathbf{cos~}x.(\mathbf{exp~}y-\mathbf{exp~}(-y)) \]
+
+<a id="sinus"> </a>
+<p>Les lignes coordonnées \(x=x_0\) et \(y=y_0\) sont respectivement appliquées sur des ellipses et des hyperboles ayant mêmes foyers. Ces deux familles de coniques sont <a href="complexe.htm">orthogonales</a>.</p>
+
+<p>En fait, étant donné la périodicité de la fonction, on applique une portion du plan de la variable \(z=x+iy\) à savoir la bande limitée par les droites \(x=-\pi/2\) et \(x=\pi/2\) sur le plan \(Z=X+iY\).</p>
+
+<div><img alt="" src="expo/fig1.gif"></div>
+
+<p>Dans le cas de l'application d'une bande du plan de la variable \(z\) sur tout le plan de la fonction \(Z\), cette application peut être mieux comprise en regardant l'<a href="javascript:mov('zsin.htm');">application \(Z=(1-\lambda)z+\lambda\mathbf{sin~}z\)</a> et en faisant varier \(\lambda\) de \(0\) à \(1\). On obtient ainsi une application des deux réseaux de droites orthogonales sur des ellipses et hyperboles homofocales.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="compld.htm">Complexes</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

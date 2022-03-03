@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Surface de Boy - Surfaces - En 3 dimensions - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="surface de Boy" />
+<meta name="keywords" content="ruban de Möbius, self-intersection, tore, Klein " />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../3di/3di.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript" src="three.min.js"></script>
+<script type="text/javascript" src="WebGL.js"></script>
+<script type="text/javascript" src="OBJLoader.js"></script>
+<script type="text/javascript" src="TrackballControls.js"></script>
+<script type="text/javascript" src="rendu.js"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-4', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+La surface de Boy
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<br />
+<div id="polanim" class="gauche" style="width:360px; height:360px; border:2px solid #f39;">
+<script>showPoly("boy.obj", "polanim",15);</script>
+</div> <p>La surface de Boy, élève de Hilbert, a été découverte en 1902.</p>
+
+<p>Cette surface est obtenue à partir d'un ruban de Möbius en contractant son unique bord, ou ce qui revient au même, en y recollant un disque.<br />
+La surface de Boy ne possède donc qu'une seule face, est non-orientable.</p>
+
+<p>Elle possède la même structure topologique que celle d'un <a href="../mat/homogene.htm">plan  projectif</a>.</p>
+
+<p>La première représentation analytique semble avoir été donnée en 1981 par Jean-Pierre Petit et Jérôme Souriau (voir le Topologicon: édition Belin).</p>
+
+<p>On peut trouver des équations pour cette surface, par exemple celles ci-dssous, qui dépendent d'un paramètre positif a inférieur à \(\sqrt{2}\) ; nous avons choisi a = 1 :</p>
+
+<p>
+\[ \small \begin{cases}
+x = \sqrt{2}~\mathbf{cos~}(2u)~\mathbf{cos~}^2(v) + \mathbf{cos~}(u)~\mathbf{sin }(2v)~/~(2~-~a~\mathbf{sin~}(3u)~\mathbf{sin~}(2v)) \\
+y = \sqrt{2}~\mathbf{sin~}(2u)~\mathbf{cos~}^2(v) - \mathbf{sin~}(u)~\mathbf{sin~}(2v)~/~(2~-~a~\mathbf{sin~}(3u)~\mathbf{sin~}(2v)) \\
+z = 3\mathbf{cos~}^2(v)~/~(2-a~\mathbf{sin~}(3u)~\mathbf{sin~}(2v))
+\end{cases}  \]
+</p>
+		</div>
+	</div>
+	<div id="fermeture">
+<br />
+<img alt="fermer" src="../fermer.gif" OnClick="javascript=parent.close()"><br />
+<br />
+	</div></div>
+</body>
+</html>

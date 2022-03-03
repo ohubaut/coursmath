@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Un billet de 243 euros ! - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="billets et pièces euro" />
+<meta name="keywords" content="monnaie, change, euro, billet, pièce" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Un billet de 243 euros !
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Une nouvelle monnaie a vu le jour en 2002. Bien entendu, il faut battre monnaie, frapper des pièces et imprimer des billets. Mais quelle valeur donner à ces pièces et à ces billets. Les solutions adoptées varient selon les pays. Bien souvent, conditionné par l'écriture décimale, on adoptera des diviseurs de \(10 (1, 2 ~\text{et}~ 5)\) ainsi que leurs multiples par \(10, 100, 1000,\)...Mais est-ce une bonne solution ?</p>
+
+<p>Bien entendu pour pouvoir payer une somme (que nous supposerons entière), il suffira de posséder des pièces de \(1\), mais c'est peu commode; d'autres valeurs améliorent la situation.</p>
+
+<p>Si l'on connaît la numération binaire, une solution consiste en l'émission de pièces et de billets de \(1, 2, 4, 8, 16,...\) c'est à dire de toutes les puissances de \(2\).</p>
+
+<p>On pourrait, à première vue, trouver absurde d'utiliser des pièces de \(16\) unités. Pourtant, si nous utilisions l'écriture en numération binaire nous serions tout aussi étonnés de voir circuler des pièces de \(10100\) unités (des pièces de \(20\)) et des billets de \(111110100\) (des billets de \(500\)) !</p>
+
+<p>En <a title="Ce système est utilisé dans les codes" href="codes.htm">notation binaire</a>, tout entier est représenté par un nombre formé de \(0\) et de \(1\). Il suffira donc de disposer d'une pièce de chaque valeur pour être à même de payer n'importe quelle somme.</p>
+
+<p>Toutefois, lors d'une transaction, deux personnes et non une seule sont concernées: le vendeur et l'acheteur. L'acheteur paie, mais il se peut que, n'ayant pas la somme exacte, le vendeur doive lui rendre l'excédent. Dans ce cas chaque pièce peut être soit non utilisée, soit donnée, soit reçue. Il y a donc trois possibilités.</p>
+
+<p><img class="droite" alt="" src="monn/27euro.gif"> Dès lors, utilisons la numération ternaire et frappons des pièces et imprimons des billets de \(1, 3, 9, 27, 81, 243...\) c'est-à-dire de toutes les puissances de \(3\). En numération ternaire un nombre entier s'écrit à l'aide de \(0\) de \(1\) et de \(2\). Il est inutile de rappeler les deux manières de procéder pour écrire dans un système de numération, ternaire en l'occurrence:</p>
+
+<ul>
+<li>soit diviser par \(3\) et prendre le reste comme chiffre des unités. Recommencer avec le quotient et prendre le reste comme chiffre des dizaines (ou plutôt des troisaines!) etc...
+<li>soit prendre la plus grande puissance de \(3\) inférieure à l'entier proposé et effectuer la division, ce qui donne le chiffre de gauche et recommencer le même processus avec le reste...
+</ul>
+
+<img class="gauche" alt="" src="monn/243euro.gif">
+<p>Pour fixer les idées supposons que nous devions payer un montant de \(43\). Ce nombre s'écrit \(1121\) en notation ternaire (\(1.27 + 1.9 + 2.3 + 1.1)\). Il faut donc utiliser \(1\) pièce de \(27\), \(1\) de \(9\), \(2\) de \(3\) et \(1\) de \(1\).</p>
+
+<p>Dans l'autre système (le binaire) il suffisait de posséder une seule pièce de chaque valeur pour s'en tirer. Ici il en faut soit une, soit deux. Donc pour être toujours capable de payer, il faudrait posséder deux pièces de chaque valeur.</p>
+
+<p>Mais nous avons oublié que le vendeur peut nous remettre la monnaie.</p>
+
+<p>Ajoutons, en commençant par la droite, un nombre écrit à l'aide de 0 et de 1 afin de faire disparaître par addition le premier (en lisant par la droite) chiffre 2 figurant dans le montant à payer <br />
+\(1121 + 10 = 1201\)<br />
+On recommence:<br />
+\(1201 + 100 = 2001\);<br />
+\(2001 + 1000 = 10001\)</p>
+
+<p>On est ainsi arrivé à construire un nombre qui s'écrit en système ternaire uniquement à l'aide de \(1\) et de \(0\) : ce nombre \((10001)\) est la somme du montant à payer \((1121)\) et de ce qui lui a été ajouté \((1110)\).</p>
+
+<p>L'acheteur peut régler la transaction en donnant une somme de \(10001\) (en décimal \(82\)), formée d'une pièce de \(81\) et d'une pièce de \(1\): le vendeur lui remettra la monnaie, soit \(1110\) (en décimal \(39\)) sous forme d'une pièce de \(27\), une de \(9\) et une de \(3\). Cette solution permet de régler facilement les paiements à l'aide de très peu de pièces de valeurs différentes. Il suffit que chacune des parties possède une pièce de chaque valeur pour pouvoir régler n'importe quel montant.</p>
+
+<p>On peut avoir une idée du nombre de pièces nécessaires. Pour un montant donné il suffit d'estimer le nombre de chiffres nécessaires pour l'écrire soit en numération binaire, soit en numération ternaire, ce qui est lié à son logarithme en base \(2\) ou \(3\).</p>
+
+
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

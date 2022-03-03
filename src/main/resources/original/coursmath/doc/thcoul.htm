@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Documents - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résumés" />
+<meta name="keywords" content="groupes, musique, algèbre, géométrie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="doc.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript">
+    function pdf(fichier) 
+{window.open(fichier,'pdf','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-11', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+<br>
+<div class="droite"><a href="javascript:pdf('thcoul.pdf');">Télécharger la version pdf (7 pages)</a></div>
+<br>
+	<div class="titre">
+<br />
+Théorie des couleurs
+<br />
+	</div>
+	<div class="stitre">
+par<br><br>
+<b>Xavier Hubaut</b><br><br>
+Professeur émérite - Université Libre de Bruxelles - 
+Département de Mathématique
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p class="st">Qu'est ce qu'une couleur</p>
+<p>Répondre à la question "Qu'est-ce qu'une couleur ?" n'est pas simple.</p>
+<p>Combien y a-t-il de couleurs ?<br>
+On pense d'abord aux sept couleurs de l'arc-en-ciel, mais pourquoi sept? Peut-être parce que sept était un nombre "magique": il y a les sept merveilles du monde, les sept collines de Rome, le chandelier à sept branches, les sept jours de la semaine, les <a title="Un système de coordonnées insuffisamment connu" href="thmus.htm">sept notes</a> de la gamme et aussi les sept péchés capitaux !</p>
+
+<p>Les spectroscopistes ont une réponse: dans le spectre de la lumière blanche, chaque couleur correspond à une longueur d'onde; donc une couleur c'est une longueur d'onde.</p>
+<p>C'est peut-être oublier que dans ce cas ni le blanc, ni le noir, ni les gris, ni bien d'autres ne sont des couleurs. On peut toutefois parer aisément à cette objection. La longueur d'onde définit, non pas une couleur, mais une teinte; ensuite cette teinte peut varier du plus clair au plus foncé.<br>
+Cette définition est effectivement utilisée et nous en verrons plus loin la justification.</p>
+<p>La langue française est extrêmement riche en termes désignant les couleurs; outre les qualificatifs clair, foncé, délavé, diapré, étincelant, pastel,... les suffixes "âtre" (rougeâtre, verdâtre,...) il existe plusieurs centaines de termes désignant les couleurs. Bornons-nous à celles proches du rouge:<br>
+acajou, amarante, auburn, bordeaux, bourgogne, brique, capucine, cardinal, carmin, cerise, cinabre, coquelicot, cramoisi, écarlate, écrevisse, fraise, fraise écrasée, framboise, garance, grenat, gueules (en héraldique), incarnat, nacarat, passe-velours, ponceau, pourpre, rouge, rouge anglais, rouge d'alizarine, rouge d'Andrinople, rouge de Mars, rubicond, sang, sanguine, tomate, vermillon... et probablement bien d'autres.</p>
+
+<p class="st">Synthèse additive et soustractive</p>
+
+<p>Toutefois, dans la pratique, les choses sont plus simples. On utilise trois couleurs dites fondamentales. Mais quelles sont-elles ?</p>
+<ul>
+<li>L'écran de votre PC ou de votre téléviseur est éclairé par 3 couleurs.
+<li>Une illustration est composée à partir de 3 couleurs, bien qu'on parle de quadrichromie.
+</ul>
+<p>Mais ces 3 couleurs ne sont pas les mêmes dans les deux cas. Il faut distinguer la manière dont s'effectue la synthèse des couleurs.<br>
+L'écran de TV est <b><i>éclairé</i></b> par ces couleurs, alors que, dans le cas d'une illustration, le papier (généralement blanc) est <b><i>assombri</i></b> par les couleurs utilisées.</p>
+<p>Dans le premier cas on dit que les couleurs sont reconstituées par synthèse additive (on part du noir et on l'éclaire par des couleurs). Dans l'autre cas, la synthèse est soustractive (on part du blanc et on l'obscurcit au moyen de couleurs).</p>
+
+<p>Pour une synthèse additive les trois couleurs fondamentales sont le <b>rouge</b> (<b>R</b>), le <b>vert</b> (<b>G</b> pour green) et le <b>bleu</b> (<b>B</b>), ce qui s'abrège en RGB, sigle que l'on retrouve assez souvent.</p>
+<img class="gauche enc" alt="" src="thcoul/add.gif"> 
+<p>Considérons tout d'abord le premier cas; c'est celui qui est utilisé en télévision ou sur le moniteur de votre ordinateur.<br>
+L'éclairement simultané par du rouge et du vert donne du <b>jaune</b> (<b>Y</b> pour Yellow); du bleu et du vert donnent une couleur turquoise appelée <b>cyan</b> (<b>C</b>) et enfin le rouge et le bleu se combinent pour donner un violet appelé <b>magenta</b> (<b>M</b>).<br>
+Enfin un éclairement simultané par les trois couleurs de base donne du <b>blanc</b> (<b>W</b> pour White). Au départ on avait du <b>noir</b> (<b>K</b> de blacK, puisque l'initiale est déjà utilisée pour une le bleu).<br>
+Bien entendu, on peut régler l'intensité de chacune des trois couleurs fondamentales et obtenir ainsi toutes les couleurs possibles. Par exemple un rouge intense combiné à un vert peu intense donnera de l'orange; si on assombrit cet orange en diminuant à la fois l'intensité du rouge et celle du vert, on obtient du brun. Ainsi en jouant sur l'intensité des trois couleurs fondamentales on reconstitue toutes les couleurs.</p>
+<p>
+Comment un éclairement simultané de rouge et de vert est-il perçu comme du jaune, plus généralement, comment peut-on obtenir n'importe quelle teinte par dosage des éclairements des trois couleurs fondamentales, c'est aux physiologistes (et peut-être aux physiciens) de l'expliquer.</p>
+
+<p>Passons maintenant à la synthèse soustractive des couleurs. C'est ce qui se passe lorsqu'on dessine avec des crayons de couleurs, qu'on peint à l'aquarelle ou qu'on imprime en couleurs.</p>
+<img class="droite enc" alt="" src="thcoul/soust.gif"> <p>Cette fois les couleurs "fondamentales" sont le <b>jaune</b>, le <b>cyan</b> et le <b>magenta</b>. En superposant du jaune et du magenta on obtiendra du rouge (le jaune "mange" le bleu du magenta); de même du jaune et du cyan donneront du vert et la superposition du magenta et du cyan donnera du bleu. Enfin la superposition des trois couleurs fondamentales donnera du noir. On peut comme précédemment définir chaque couleur à l'aide des pourcentages relatifs de chacun des composants.</p>
+
+<img class="gauche enc" alt="" src="thcoul/rgb.jpg">
+<p>En retournant à la définition par <b>RGB</b>, les couleurs sont représentées par les points d'un cube, un des sommets correspond au noir (0, 0, 0) et le sommet opposé au blanc (1, 1, 1). Nous avons choisi l'unité correspondant aux 3 couleurs fondamentales dans leur intensité maximum.<br><br>
+Le lien entre <b>R, G, B</b> et <b>C, M, Y</b> est évident:</p>
+<b>R</b> + <b>C</b> = 1<br>
+<b>G</b> + <b>M</b> = 1<br>
+<b>B</b> + <b>Y</b> = 1<br>
+<p>Ces relations permettent de passer de manière simple de la représentation additive (<b>R, G, B</b>) à la représentation soustractive (<b>C, M, Y</b>)</p>
+
+<p class="st">Teinte, saturation, brillance ou luminance</p>
+
+<p>Il existe d'autres moyens de représenter les différentes couleurs.</p>
+<p>On peut par exemple en donner la teinte (hue) et ensuite son degré de luminosité (brillance) et de saturation. C'est la représentation <b>HSB</b> ou <b>HSL</b>, en français <b>TSB</b> ou <b>TSL</b>.</p>
+<p>Comment définir la teinte ?</p>
+<img class="droite" alt="" src="thcoul/hue.png" width=300 height=300>
+<p>Notre œil perçoit les couleurs lorsque leur longueur d'onde est approximativement comprise entre 400 et 800 nanomètres.
+En termes de fréquences, cela va du simple au double; les extrêmes correspondent à un rouge violacé. De même qu'en <a href="thmus.htm">musique</a> un son et celui de fréquence double nous donnent la même impression (nous leur attribuons d'ailleurs le même nom) les deux couleurs extrêmes du spectre visible ont des fréquences telles que nous leur donnons le même nom.</p>
+<p>Le spectre visible, partant du rouge violacé, violet, indigo, bleu, vert, jaune, orange, rouge, rouge violacé, se referme ainsi et peut être représenté sur un cercle. Chaque teinte est définie par un angle.</p>
+<p>Généralement on convient qu'à l'angle 0 correspond la couleur rouge. Prenons une couleur quelconque définie par <b>R, G, B</b>. Il faut calculer l'angle formé par le demi-plan passant par la diagonale et le point (<b>R, G, B</b>) avec le demi-plan de référence, c'est-à-dire celui passant par la diagonale et le point (1, 0, 0).</p>
+<p>Un petit calcul préliminaire nous aidera. Soit les deux vecteurs d'origine (0, 0, 0) dont les extrémités sont repectivement (1, 1, 1), le vecteur dirigé selon la grande diagonale du cube, et (<b>R, G, B</b>), le vecteur aboutissant au point représentatif de la couleur donnée.<br>
+Calculons les coordonnées d'un vecteur perpendiculaire au plan (0, 0, 0), (1, 1, 1), (<b>R, G, B</b>), en prenant, par exemple, le produit vectoriel. On obtient le vecteur d'extrémité (<b>B - G, R - B, G - R</b>). Pour la couleur rouge, correspondant à (<b>R, G, B</b>) = (1, 0, 0), on a (0, 1, -1).
+Une couleur donnée donnera le vecteur (<b>B - G, R - B, G - R</b>). L'angle des deux demi-plans est égal à celui des deux vecteurs et donc son cosinus vaut:</p> 
+<div class="centre">
+cos(&theta;) = (2<b>R - B - G</b>)/<img alt="" src="../radic.png">2.<img alt="" src="../radic.png">[(<b>B-G</b>)² + (<b>R-B</b>)² + (<b>G-R</b>)²].
+</div>
+<p>Par exemple pour le vert, (<b>R, G, B</b>) = ((0, 1, 0) et on obtient:</p>
+<div class="centre">cos(&theta;) = (-1)/<img alt="" src="../radic.png">2.<img alt="" src="../radic.png">2 = -1/2.</div>
+<p>L'angle vaut donc 120° ou 240°; pour lever l'ambiguïté, il suffit de comparer l'amplitude de la composante bleue et verte. Si <b>G &gt; B</b> l'angle est inférieur à 180° ; il est supérieur dans le cas contraire.</p>
+<p>Aux couleurs fondamentales dans la synthèse additive sont associés les trois angles 0°, 120°, 240° et aux trois couleurs fondamentales dans la synthèse soustractive sont associés les angles de 60°, 180° et 300°.</p>
+<img class="droite enc" alt="" src="thcoul/triangle.gif">
+<p>On peut également s'en rendre compte en regardant le cube des couleurs à partir du sommet correspondant au noir.</p>
+<p>Un cube, vu à partir d'un de ses sommets, donne un triangle équilatéral dont les sommets correspondent aux extrémités des arêtes partant du noir (le rouge, le vert et le bleu). Entre ces sommets on trouve les trois couleurs complémentaires (le jaune, le cyan et le magenta), et au milieu du triangle, le blanc.</p>
+<p>On peut ainsi les représenter en donnant la contribution de chacune des trois couleurs fondamentales (p.ex. pour de l'orange 67% <b>R</b>, 33% <b>G</b>, 0% <b>B</b>). On peut ainsi représenter les couleurs à l'aide de <a title="Un système de coordonnées insuffisamment connu" href="../mat/viviani.htm">coordonnées trilinéaires</a>. Bien entendu l'intensité des couleurs n'est pas définie: 100% de rouge peut donner un rouge vif mais aussi un rouge plus clair voire un rose très pâle !</p>
+<img class="gauche enc" alt="" src="thcoul/cubesat.gif">
+<p>Songeons à une couleur quelconque représentée par (<b>R, G, B</b>). Si nous éclairons un écran par les 3 projecteurs RGB en augmentant progressivement (et dans le même rapport) leur intensité, nous obtiendrons, à partir de cette couleur au départ assez sombre, une couleur de plus en plus intense, jusqu'à ce que les projecteurs atteignent leur intensité maximum. La couleur sera alors à son maximum de brillance. Les trois nombres <b>R, G, B</b> auront été multipliés par une même constante, jusqu'à ce que le plus grand d'entre eux atteigne la valeur maximum 1.</p>
+<p>Nous aurons en fait parcouru un segment situé sur une droite issue de l'origine, passant par les points (<b>kR, kG, kB</b>) et aboutissant dans l'une des trois faces opposées. Si <b>R&gt;G&gt;B</b>, on aboutit dans la face <b>R</b>=1 (pour <b>k</b>=1/<b>R</b>) et la couleur la plus saturée correspond à (<b>1, G/R, B/R</b>).</p>
+<p>Etant donnée cette même couleur (<b>R, G, B</b>), on peut progressivement la délaver. Pour cela, maintenons inchangé le projecteur de plus grande intensité (supposons <b>R&gt;G&gt;B</b> et laissons donc fixe le projecteur rouge); augmentons l'intensité des deux autres de telle manière à obtenir la même intensité (<b>R = G = B</b>). Nous sommes restés dans un plan parallèle à l'un des 3 plans coordonnés (dans ce cas le plan <b>R</b>=constante) et nous sommes partis du point (<b>R, G, B</b>) pour aboutir sur la grande diagonale du cube au point (<b>R, R, R</b>). Le support de ce segment perce un des plans coordonnés (<b>B</b> = 0 en l'occurrence) en un point correspondant à la couleur la plus saturée située sur ce segment.</p>
+<p>Pour fixer les idées si le point de départ correspond à (<b>R, G, B</b>) = (0.60, 0.36, 0.12), on aboutit sur la diagonale au point (0.60, 0.60, 0.60), et en parcourant ce segment en sens inverse on perce le cube au point (0.60, 0.30, 0).</p>
+<img class="gauche" alt="" src="thcoul/satubrig.gif" width=220 height=220>
+<p>On peut considérer le demi-plan passant par la grande diagonale du cube et le point correspondant à la couleur et le caractériser par son angle avec un demi-plan de référence, <b>R</b>=0, par exemple.</p>
+
+<p><img class="droite" alt="" src="thcoul/orange.gif" width=220 height=220>
+Choisissons une couleur <b>C</b> nuance d'orange, correspondant à (<b>R, G, B</b>) =<br>(0.60, 0.36, 0.12); elle est la somme de (0.48, 0.24, 0) et du gris (0.12, 0.12, 0.12).<br>
+<br>
+Voici toutes les nuances de la teinte orange (2/3 de rouge 1/3 de vert): <b>T</b> (ou <b>H</b>: Hue)=30°.</p>
+
+<p>Il reste à préciser la brillance, la saturation <b>S</b> et la luminance <b>L</b>.<br>
+Soit <b>M</b>, le maximum de <b>R,G et B</b> et <b>m</b> leur minimum.<br>
+La brillance sera égale au maximum <b>M</b>, la luminance <b>L</b> = (<b>M + m</b>)/2. La brillance est maximale lorsque la couleur est pure. En d'autres termes la brillance sera considérée comme maximale lorsque le point représentatif se trouvera sur l'une des 3 faces du cube pour lesquelles une couleur fondamentale est maximum; la saturation <b>S</b> mesure l'écart entre l'intensité de la composante la plus grande et celle de la plus faible. Etant donné une couleur on peut toujours annuler la composante la plus faible en lui retranchant du gris; dans l'exemple choisi, (<b>R, G, B</b>) = (0.60, 0.36, 0.12) on retire un gris (0.12, 0.12, 0.12) et il reste la couleur (0.48, 0.24, 0) de même saturation.</p>
+
+<p>Dans le modèle <b>TSB</b>, la saturation <b>S</b> = <b>M - m</b>. Elle exprime l' "écart" entre les intensités des différentes composantes et donc l'écart entre un gris neutre (<b>M - m</b> = 0 ) et une couleur pure.</p>
+
+<p>Dans le modèle <b>TSL</b>, la saturation <b>S</b> est définie de manière différente:<br>
+si <b>L</B><img alt="" src="../le.png">1/2, <b>S</b> = (<b>M - m</b>)/2<b>L</b>;<br>
+si <b>L</B><img alt="" src="../ge.png">1/2, <b>S</b> = (<b>M - m</b>)/2(1-<b>L</b>)<br>
+En fait, dans ce modèle, les couleurs extrêmes sont le noir sont le noir et le blanc.</p>
+
+<p>La luminance <b>L</b> = (<b>M + m</b>)/2 est constante sur les parallèles au côté blanc-orange et vaut, pour la teinte <b>C</b> choisie 0.60.<br>
+La saturation <b>S</b> = 1 - (min(<b>R, G, B</b>))/<b>L</b>; elle est constante sur les droites issues du sommet correspondant au noir; dans notre exemple elle vaut 0.80.<br>
+</p>
+<p>On obtient ainsi une autre représentation de l'ensemble des couleurs.<br>
+
+<p class="st">Justification a posteriori</p>
+
+<p>Les trois couleurs fondamentales en synthèse additive ont été découvertes empiriquement.</p>
+<p>A l'heure actuelle on possède une justification objective basée sur la nature des cellules de notre rétine.<br>
+La rétine de notre œil est tapissée de cellules photosensibles. Il y en a de deux types dénommés cônes et bâtonnets (à cause de leur forme).</p>
+<p>Les bâtonnets sont sensibles aux contrastes, alors que les cônes sont sensibles aux couleurs. En cas d'éclairement très faible, la nuit par exemple, seuls les bâtonnets nous donnent une information; les cônes sont pratiquement inactifs. C'est pourquoi il est fort difficile de préciser la couleur des objets que nous distinguons pourtant fort bien.</p>
+<p>Si l'éclairement est meilleur, ce sont alors les cônes qui transmettent l'essentiel de l'information et nous distinguons avec grande précision les couleurs. Parmi les cônes on en distingue encore trois types; chacun d'eux possède un maximum de sensibilité chromatique pour une couleur; ce sont précisément pour les trois couleurs fondamentales, le rouge le vert et le bleu.</p>
+<p>On voit ainsi que notre oeil perçoit également une image en "quadrichromie", rouge, vert, bleu donné par les cônes et blanc donné par les bâtonnets.</p>
+<p>Depuis fort longtemps les imprimeurs utilisent la quadrichromie comme procédé d'impression couleur. Ils effectuent une "séparation" en cyan, magenta, et jaune ainsi qu'une image en noir et blanc (plus précisément avec une gamme de gris), ce dernier cliché correspondant aux densités des diverses couleurs. Ce cliché en gamme de gris pourrait être réalisé en utilisant les trois couleurs fondamentales (cette fois le jaune, le cyan et le magenta) en quantités égales mais en densités différentes. Toutefois il est plus économique d'utiliser de l'encre noire que des encres de couleur.<br>
+Pour fixer les idées, si une couleur (l'orange décrit plus haut) est définie par (<b>R, G, B</b>) = (0.60, 0.36, 0.12), on a (<b>C, M, Y</b>) = (0.40, 0.64, 0.88); l'imprimeur utilisera la plus grande quantité possible de noir <b>N</b>, c'est-à-dire 0.40, qu'il déduira des couleurs; on aura (<b>C, M, Y, K</b>) = (0.00, 0.24, 0.48, 0.40).</p>
+<p>Il est à remarquer que cette technique d'impression couleur était utilisée avant qu'elle ne soit justifiée par les biologistes.</p>
+
+<p class="st">Les légendes ont la vie dure</p>
+
+<p>A l'<b>école primaire</b>, on enseigne encore parfois que les couleurs fondamentales sont le <b>jaune</b>, le <b>bleu</b> et le <b>rouge</b>. (Cette théorie de Young date de 1801; à l'époque il songeait à une synthèse soustractive, mais il se rendit compte de son erreur et passa à une synthèse additive où il préconisa en 1807 le rouge, le vert et le violet !)<br>
+Pour la synthèse soustractive il faut évidemment prendre le jaune, le cyan (non pas le bleu) et le magenta (non pas le rouge). Le problème est que ces mots ne font pas partie du vocabulaire usuel des enfants. Remplacer magenta par mauve ou violet et cyan par turquoise n'est pas une solution car ces termes ne font pas non plus partie du vocabulaire courant des enfants; c'est pourquoi on continue à parler de jaune, bleu et rouge !</p>
+
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="docd.htm">Documents</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+		<div class="centre"><hr style="width:70%;"></div>
+<br>
+Pour toute remarque ou commentaire, écrire à <script type="text/javascript">
+// JavaScript pris sur le site: "http://www.java.scripts-fr.com" 
+var nom = "xhubaut";
+var domaine = "ulb.ac.be"; 
+var deb = "<";
+var fin = ">";
+document.write('<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + deb + '/a' + fin); 
+</script>.<br>
+	</div>
+</div>
+</body>
+</html>

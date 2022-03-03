@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Droite d'Euler et cercle de Feuerbach - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="cercle des neuf points, homothéties, points eulériens, orthocentre, barycentre" />
+<meta name="keywords" content="triangle, droite, Euler, cercle, Feuerbach, homothéties" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite</i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Droite d'Euler et cercle de Feuerbach
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Voici une petite curiosité qu'il serait dommage d'oublier, d'autant plus que lui sont associés les noms de deux mathématiciens, dont le célèbre <a title="Biographie" href="../bio/euler.htm">Euler</a>.</p>
+
+<p>Soit un triangle de sommets \(p_1,p_2\) et \(p_3\).<br />
+A ce triangle sont associés de nombreux points "remarquables". Accordons notre attention à 3 d'entre eux:</p>
+
+<ul>
+ <li>\(o\), le centre du cercle circonscrit, intersection des 3 médiatrices,</li>
+ <li>\(g\), le centre de gravité (<a title="Centre de masse" href="../mat/bary.htm">barycentre</a>), intersection des 3 médianes, et </li>
+ <li>\(h\), l'orthocentre, intersection des 3 hauteurs.</li>
+</ul>
+
+<p>S'il est très simple de montrer que les 3 médiatrices et que les 3 médianes sont concourantes, il est moins direct de montrer que <a href="triangles.htm">les trois hauteurs d'un triangle concourent</a> en un même point.</p>
+
+<p>Pour cela on utilise une petite astuce. On remarque que les 3 médiatrices sont les 3 hauteurs du triangle ayant pour sommets \(m_1, m_2\) et \(m_3\), les 3 mileux des côtés du triangle initial. Il suffit alors de remarquer que l'on passe du grand triangle au petit par une homothétie de rapport \(-1/2\), dont le centre est situé au point \(g\), intersection des 3 médianes.</p>
+
+<p>On voit ainsi que ce point \(g\) est aligné avec \(o\) et \(h\). La droite \(ogh\) est appelée droite d'<a title="Biographie" href="../bio/euler.htm">Euler</a>. 
+De plus, comme le rapport d'homothétie vaut \(-1/2\), \(hg\) est le double de \(go\).</p>
+
+<img alt="" src="eule/9pts.gif">
+
+<p>Sur cette figure on remarque également un cercle circonscrit au triangle \(m_1 m_2 m_3\).</p>
+
+<table><tr><td>
+<img alt="" src="eule/med.gif" onclick="javascript:permute_statique_anime(this);"><br />
+<i>Cliquez sur l'image pour démarrer l'animation.</i>
+</td><td>
+<p>On peut y voir des propriétés remarquables.<br />
+Tout d'abord, ce cercle se déduit du cercle circonscrit au triangle \(p_1 p_2 p_3\) par une homothétie de rapport \(-1/2\) et de centre \(g\). Mais où est situé le centre \(f\) de ce cercle ? C'est évidemment l'image de \(o\) dans l'homothétie de centre \(g\) et de rapport \(-1/2\).<br />
+On a déjà remarqué que \(hg=2go\), mais de plus \(fg=-1/2go\).</p>
+</td></tr></table>
+
+<p>On a donc la configuration suivante:</p>
+
+<img alt="" src="eule/droite.gif">
+
+<p class="ni">et le centre \(f\) est donc situé au milieu de \(ho\).<br />
+Considérons à présent une homothétie de centre \(h\) et de rapport \(+1/2\).</p>
+
+<table><tr><td>
+<img alt="" src="eule/eul.gif" onclick="javascript:permute_statique_anime(this);">
+<i>Cliquez sur la figure pour démarrer l'animation.</i>
+</td><td>
+<p>Cette homothétie transformera le cercle circonscrit à \(p_1 p_2 p_3\) en cercle de centre \(c\) et dont le rayon sera la moitié du cercle de départ. C'est donc le même cercle que le précédent !<br />
+Le triangle \(p_1 p_2 p_3\) a pour image le triangle \(e_1 e_2 e_3\) déterminé par les milieux de segments joignant chaque sommet à l'orthocentre; ces points sont appelés points eulériens.</p>
+
+<p>Il en résulte que les six points \(m_1, m_2, m_3\) et \(e_1, e_2, e_3\) sont situés sur un même cercle, ce qui est déjà fort remarquable.</p>
+</td></tr></table>
+
+<p>Mais il y a plus&nbsp;! Revenons à la figure initiale:</p>
+
+<img alt="" src="eule/9pts.gif">
+
+<p>Le triangle \(e_1 e_2 e_3\) et le triangle \(m_1 m_2 m_3\) sont tous deux homothétiques au triangle \(p_1 p_2 p_3\). Les rapports d'homothétie valent respectivement \(+1/2\) et \(-1/2\). Ils sont donc homothétiques entre eux de rapport \(-1\), ce qui est équivalent à dire qu'ils se correspondent dans une symétrie centrale. De plus, le centre de symétrie est précisément le point \(f\).<br />
+On voit donc que les points eulériens sont diamétralement opposés aux milieux des côtés du triangle et, par suite, les droites \(e_im_i\) qui les joignent sont des diamètres du petit cercle.<br />
+Les triangles \(e_i, h_i, m_i\), pour \(i=1,2,3\) sont rectangles en \(h_i\) et il en résulte que les 3 points \(h_i\) sont également situés sur ce cercle. On a donc 9 points sur un même cercle !</p>
+
+<p>Ce cercle des 9 points est également dénommé cercle de <a title="Biographie" href="../bio/feuerbac.htm">Feuerbach</a> en l'honneur du mathématicien qui remarqua cette propriété.</p>
+
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

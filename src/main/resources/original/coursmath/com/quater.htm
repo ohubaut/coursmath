@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Quaternions - Complexes - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Corps des quaternions" />
+<meta name="keywords" content="matrices, complexes, non-commutatif, quaternions" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="com.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-10', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Quaternions
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Nous avons vu comment les <a href="imagin.htm">nombres complexes</a> avaient été introduits.</p>
+
+<p>Ils ont tout d'abord été utilisés sous leur aspect algébrique en les écrivant sous la forme \(z=x+iy\). C'est au 19e siècle que plusieurs mathématiciens tentèrent de leur donner une interprétation géométrique.</p>
+
+<p>Il est habituel de représenter les nombres réels comme points d'une droite graduée. Les opérations algébriques y ont leur interprétation géométrique: l'addition est une translation, la multiplication une homothétie centrée à l'origine.<br />
+En particulier on peut parler de la "racine carrée d'une transformation". Une translation d'amplitude \(a\) peut être obtenue comme l'itération d'une translation d'amplitude \(a/2\). De même une homothétie de rapport \(a\) peut être obtenue comme l'itérée d'une homothétie de rapport \(\sqrt{a}\). En particulier une homothétie de rapport 9 est la composée de deux homothéties de rapport 3 ( ou -3 ).</p>
+
+<p>La racine carrée prend alors un sens géométrique. Mais qu'en est-il de la racine carrée de nombres négatifs ?</p>
+
+<p>En particulier la racine carrée de -1 ?</p>
+
+<p>Une homothétie de rapport \(-1\) peut être vue comme une symétrie par rapport à l'origine; toutefois si l'on veut voir cette transformation d'une manière continue, force nous est de placer la droite dans un plan. Dès lors une homothétie de rapport \(-1\) peut être vue comme une rotation de 180° autour de l'origine.<br />
+Du coup, le problème de la racine carrée se simplifie. En effet il n'est guère difficile de décomposer une rotation de 180° en deux transformations: on peut répéter soit une rotation de 90° soit une rotation de -90°. L'image de 1 sera la racine carrée de -1 (\(i\)) est située sur une perpendiculaire à l'origine à une distance 1 soit vers le haut soit vers le bas.<br />
+Ayant réussi à positionner le nombre \(i\) il n'est plus guère difficile de disposer les autres nombres complexes dans un plan ( le plan de <a title="Biographie" href="../bio/gauss.htm">Gauss</a>, d'Argand ou de Wessel ).<br />
+On peut ainsi associer à \(2i\) le produit de l'homothétie de rapport 2 par la rotation de centre \(0\) et d'angle \(\pi/2\), soit une similitude centrée à l'origine.</p>
+
+<p>Dans ce plan réel toute opération sur les complexes prend un sens géométrique. L'addition \(z'=z+a\) correspond à une translation. Quant à la multiplication par un nombre \(z'=a.z\), elle est représentée par une similitude: \(0\) reste évidemment fixe et \(1\) est appliqué sur \(a\)</p>
+
+<a id="S"> </a>
+<p>Tout nombre complexe est ainsi associé, par le biais de la multiplication, à une similitude: l'amplitude de la similitude est son argument, le rapport de la similitude est son module.</p>
+
+<p>D'une manière algébrique, il est souvent utile d'écrire le nombre complexe \(c=a+ib\) sous la forme \(z=\rho(\mathbf{cos~}\omega+i\mathbf{sin~}\omega)\).<br />
+À la multiplication par \(z\) est associée la similitude de rapport \(\rho\) et d'angle \(\omega\). Si \(x\) et \(y\) représentent les parties réelles et imaginaires de \(z\) la multiplication par c est une similitude dont les équations s'écrivent:</p>
+
+\[ \begin{cases} x'=\rho.(x\mathbf{cos~}\omega-y\mathbf{sin~}\omega) \\ y'=\rho.(x\mathbf{sin~}\omega+y\mathbf{cos~}\omega)\end{cases} \]
+
+<p>La matrice de cette transformation est du type:</p>
+
+\[ \left\lgroup\matrix{a & -b\\ b & a}\right\rgroup \]
+
+<p class="ni">où <i>a</i> et <i>b</i> sont précisément les parties réelles et imaginaires de <i>c</i>.</p>
+
+<p>Cette représentation matricielle peut, à son tour, être prise comme définition des nombres complexes. Il est évident de définir sur ces matrices l'addition, et la multiplication. De plus toute matrice de ce type possède un inverse ( à l'exception de la matrice nulle ) car \(a^2+b^2\) est toujours positif (sauf si \(a\) et \(b\) sont simultanément nuls).</p>
+
+<p>On peut représenter ces matrices sous la forme \(aE+bI\), avec </p>
+
+<table class="centre"><tr>
+<td>E =</td><td>\(\left\lgroup\matrix{1 & 0\\0 & 1}\right\rgroup\)</td><td>   I = </td><td>\(\left\lgroup\matrix{0 & -1\\1& 0}\right\rgroup\)</td>
+</tr></table>
+
+<p>La matrice \(E\) est la matrice identité et le carré de la matrice \(I\) vaut \(-E\). En posant \(E=1\) et \(I=i\), on retrouve les complexes sous la forme \(a+ib\) : on a bouclé la boucle.</p>
+
+<p>Lorsqu'on a vu les nombres complexes de cette manière, une nouvelle idée surgit. Ne peut-on pas recommencer la construction en considérant les mêmes matrices mais où cette fois \(a\) et \(b\) sont des nombres complexes ?</p>
+
+<p>Au début tout semble bien marcher. L'addition ne pose pas de problème, et la multiplication fonctionne bien. Toutefois un problème surgit quand il s'agit de prendre l'inverse d'une matrice. On n'a plus la propriété \(a^2+b^2=0\) si et seulement si \(a\) et \(b\) sont simultanément nuls. Par contre dans les complexes le carré du module est un réel positif qui ne s'annule que si le nombre est nul. Dès lors l'idée est de remplacer la fonction \(a^2+b^2\) par \(a\bar{a}+b\bar{b}\), où \(\bar{a}\) est le conjugué de \(a\). Cela nous conduit à modifier légèrement les matrices et à considérer des matrices à coefficients complexes de la forme:</p>
+
+\[ \left\lgroup\matrix{a & -b\\ \bar{b} & \bar{a}}\right\rgroup \]
+
+<p>On obtient alors un corps; toute matrice de ce type possède un inverse sauf la matrice nulle. De même que pour les complexes, on peut représenter ces matrices sous forme de combinaisons linéaires à coefficients réels de 4 matrices de base: si \(\alpha, \beta \) sont les parties réelles et imaginaires de \(a\) et \(\gamma,\delta \) celles de \(b\), toute matrice se représente sous la forme \(\alpha E+\beta I+\gamma J+\delta K\), où</p>
+<table class="centre"><tr>
+<td>\(E\) = </td><td>\(\left\lgroup\matrix{1 & 0\\0 & 1}\right\rgroup \)</td>
+<td>  \(I\) = </td><td>\(\left\lgroup\matrix{i & 0\\0 & -i}\right\rgroup \)</td>
+<td>  \(J\) = \(\left\lgroup\matrix{0 & -1\\1 & 0}\right\rgroup \)</td> 
+<td>   et     \(K\) = \(\left\lgroup\matrix{0 & -i\\-i & 0}\right\rgroup \)</td>
+</tr></table>
+<p>Le carré de chacune des matrices \(I, J, K\) vaut \(-E\) et on vérifie que \(IJ = K = -JI,~~JK = I = -KJ\) et \(KI = J = -IK\). En posant comme plus haut E=1, I = \(i\), J = \(j\) et K = \(k\), on obtient les nombres de la forme \(\alpha+\beta i+\gamma j+\delta k\) qui forment un <b>corps non commutatif</b>.</p>
+
+<p>Ce sont les quaternions découverts par <a title="Biographie" href="../bio/hamilton.htm">Hamilton</a>. Il est curieux de noter qu'Hamilton est arrivé aux quaternions en tentant de généraliser les propriétés des nombres complexes qui, dans le plan, permettent de représenter les similitudes. Il espérait pouvoir représenter les similitudes de l'espace à 3 dimensions à l'aide de nombre du type \(a+bi+cj\); en fait il découvrit, non pas des "ternions", mais bien les quaternions.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="compld.htm">Complexes</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

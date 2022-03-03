@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Nombres et théorème de Pythagore - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="trigonométrie, tangente, angle, moitié" />
+<meta name="keywords" content="nombres entiers, naturels, tangente, angle-demi" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Nombres et théorème de Pythagore
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Il est inutile de rappeler ici le théorème de <a title="Biographie" href="../bio/pythagor.htm">Pythagore</a>; signalons toutefois quelques démonstrations particulièrement élégantes.</p>
+
+<p>a) démonstration dite "chinoise" représentée ci-dessous:</p>
+
+<img alt="" src="pyth/pythch.gif">
+
+<p>b) démonstration due à <a title="Biographie" href="../bio/lebesgue.htm">Lebesgue</a>, basée sur la remarque que seul importe le fait que les carrés soient des 
+figures semblables; il suffit de remplacer les carrés par des triangles 
+semblables au triangle initial.</p>
+
+<img alt="" src="pyth/pythleb.gif">
+
+<p>c) Cas particulier, dans le cas d'un triangle rectangle, du théorème 
+affirmant que les rectangles de même couleur sont équivalents (commutativité 
+du <a href="../2de/scalaire.htm">produit scalaire</a>).</p>
+
+<img alt="" src="pyth/pythsc.gif">
+
+<a id="anim"> </a>
+<p>d) Signalons également une  <a href="pythanim.htm">démonstration animée</a>.</p>
+
+<p>Si on a fait choix d'une unité de longueur, le théorème devient numérique et on a \(a^2=b^2+c^2\) où \(a,b,c\) sont les 3 nombres réels mesurant les côtés du triangle. 
+Chacun connaît la solution \((a,b,c)=(5,4,3)\); mais y a-t-il d'autres solutions entières? Bien entendu \((10,8,6),(15,12,9)...\) mais on peut alors se restreindre aux solutions naturelles où \(a,b,c\) n'ont pas de facteur commun.</p>
+
+<p>Si \(a^2=b^2+c^2\), \(a,b\) et \(c\) ne sont pas simultanément pairs.<br />
+Que \(a\) soit pair ou impair, \(a^2\) le sera également et un des deux carrés \(b^2\) ou \(c^2\) sera impair; supposons donc que ce soit \(b^2\) (et donc \(b\)) qui est impair.<br />
+On peut écrire \(b^2=a^2-c^2=(a+c)(a-c)\).<br />
+Décomposons le nombre impair \(b\) en facteurs premiers (2 n'apparaîtra pas) et notons \(p\) l'un de ses facteurs premiers. \(p\) ne pourra jamais diviser à la fois \(a+c\) et \(a-c\), sinon il diviserait leur somme \(2a\) (et donc \(a\)) et leur différence \(2c\) (et donc \(c\)); cela serait contraire au fait que \(a,b,c\) n'ont pas de facteur commun.<br />
+Les facteurs premiers de \(b^2\) (avec leurs exposants pairs) se répartiront soit dans \(a+c\), soit dans \(a-c\) et par conséquent, chacun de ces deux nombres sera un carré.<br />
+En posant \(a+c=m^2\) et \(a-c=n^2\), on obtiendra:</p>
+
+\[ a=\frac{m^2+n^2}{2}~~~~~c=\frac{m^2-n^2}{2}~~~~~b=mn \]
+
+<p>Remarquons que \(m^2\) et \(n^2\) diffèrent de \(2c\) et ont par conséquent même parité; \(a\) et \(c\) sont donc bien des naturels.</p>
+
+<p>Pour tout couple de naturels premiers entre eux de même parité (donc tous deux impairs) avec \(m &gt; n\), on obtient une solution (3 nombres naturels vérifiant la relation de Pythagore). On détermine ainsi toutes les solutions naturelles.<br />
+Les premières sont:</p>
+
+\[
+\begin{matrix}
+m & n & a & b & c\\
+3 & 1 & 5 & 3 & 4\\
+5 & 1 & 13 & 5 & 12\\
+5 & 3 & 17 & 15 & 18\\
+7 & 1 & 25 & 7 & 24\\
+7 & 3 & 29 & 21 & 20\\
+... & ... & ... & ... & ...
+\end{matrix} \]
+
+<p>La plus petite solution entière est donc le triangle d'hypoténuse \(5\) dont les côtés de l'angle droit valent \(3\) et \(4\), dont le périmètre vaut \(12\).</p>
+
+<p>De là est née la <a href="13noeuds.htm">"<i>corde à 13 noeuds</i>"</a> (comportant \(12\) intervalles) qui a été utilisée dans l'antiquité par les architectes.</p>
+
+<img alt="corde à 13 noeuds" src="pyth/13noeuds.gif">
+<a id="R"></a>
+
+<p>Le théorème de Pythagore est lié à la formule \(\mathbf{sin~}^2 \varphi+\mathbf{cos~}^2 \varphi=1\); on a \((\frac{b}{a})^2+(\frac{c}{a})^2=1\).
+Par conséquent on a résolu le problème de la détermination des angles dont les sinus et cosinus sont tous deux rationnels.<br />
+On a:</p>
+
+\[ \mathbf{sin~}\varphi= \frac{2mn}{m^2+n^2}~~~~\text{et}~~~~\mathbf{cos~}\varphi= \frac{m^2-n^2}{m^2+n^2} \]
+
+<p>En divisant numérateur et dénominateur par \(m^2\) et en posant \(n/m=t\) on obtient :</p>
+
+\[ \mathbf{sin~}\varphi= \frac{2t}{1+t^2}~~~~\text{et}~~~~\mathbf{cos~}\varphi= \frac{1-t^2}{1+t^2} \]
+
+<p class="ni">et on retrouve ainsi les formules donnant le sinus et le cosinus d'un angle en <a href="../ana/integrat.htm#R">fonctions rationnelles</a> de 
+la tangente de l'angle moitié.</p>
+
+<p>Il est évident que si la tangente de l'angle-demi est rationnelle alors les sinus et cosinus le sont également.</p>
+
+<p>La réciproque nécessite un petit calcul : si \(\mathbf{cos~}\varphi\) est rationnel alors \(t^2\) est également rationnel; mais si \(t^2\) et \(\mathbf{sin~}\varphi\) sont rationnels alors \(t\) l'est également. La condition est donc nécessaire et suffisante. 
+Les sinus et cosinus d'un angle sont rationnels si et seulement si la tangente de l'angle demi est rationnelle.</p>
+
+<p><img class="droite" alt="" src="pyth/fig.gif">Si l'on regarde les choses géométriquement il est évident que si \(\mathbf{sin~}\varphi\) et \(\mathbf{cos~}\varphi\) sont rationnels \(\mathbf{tan~}(\varphi/2)\) l'est également, puisque dans le cercle trigonométrique, \(\mathbf{tan~}(\varphi/2)=ut/2\) et que \(t\) est l'intersection d'une droite \(op\) de pente rationnelle avec la droite \(x=1\).</p>
+
+<p>Géométriquement c'est la réciproque qui nécessite réflexion. 
+Si \(\mathbf{tan~}(\varphi/2)\) est rationnel c'est-à-dire si les coordonnées de \(t\) le sont, \(p\) est un des points d'intersection de la droite \(o't\), à coefficients rationnels, avec le cercle. 
+Mais les coordonnées des points d'intersection avec le cercle sont données par une équation du 2e degré à coefficients rationnels dont une des racines (celle correspondant à \(o'\)) est rationnelle; par conséquent l'autre l'est également. 
+La condition est bien nécessaire et suffisante.</p>
+
+<p>Cet exemple montre combien il est utile d'étudier un problème sous différents "angles".</p>
+
+<p>Dans la question que nous avons traitée, la condition est évidemment suffisante lorsqu'on voit les choses algébriquement; elle est tout aussi évidemment nécessaire lorsqu'on adopte une vision géométrique. Par contre algébriquement on ne voit pas immédiatement que la condition est nécessaire et géométriquement il faut un peu réfléchir pour se rendre compte qu'elle est suffisante.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

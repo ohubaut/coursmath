@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Sinusoïdes et cosinusoïdes - Analyse - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="coordonnées polaires, cylindre,approximation, fontion goniométrique" />
+<meta name="keywords" content="analyse, fonctions goniométriques, approximations, développement" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>	</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Sinusoïdes et cosinusoïdes
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>On représente toujours, par habitude, les fonctions <a title="La sinusoïde, une courbe très symétrique" href="../var/sinus.htm">sinus</a> et cosinus par des graphiques dessinés dans le plan \(\Bbb R^2\).</p>
+
+<div>
+<img alt="" src="sinc/sinc.gif" width=488 height=111 onClick="javascript :permute_statique_anime(this) ;"><br />
+<i>Cliquez sur l'image pour démarrer ou arrêter l'animation.</i>
+</div>
+
+<p>Pourtant ces fonctions associent une valeur réelle \(y\) à un angle \(x\). Il serait dès lors plus logique de faire un graphique où la variable est un angle qui varie autour d'un point ou sur un cercle (lorsqu'on assimile l'arc à l'angle au centre intercepté).</p>
+
+<p>Dans le premier cas on est conduit au graphique en <a href="polaires.htm">coordonnées polaires</a>.</p>
+
+<img alt="" src="sinc/sinp.gif" width=220 height=172 onClick="javascript :permute_statique_anime(this) ;"><br />
+<i>Cliquez sur l'image pour démarrer ou arrêter l'animation.</i>
+
+<p>On peut faire de même pour la fonction cosinus ; ce sera également un cercle. Si ensuite par une rotation de \(\pi /2\), on fait coïncider ces deux cercles on obtient la figure ci-dessous.</p>
+
+<img alt="" src="sinc/pol.gif" width=202 height=166><img alt="" src="../dot.png" width=120 height=1><img alt="" src="sinc/sc.gif" width=156 height=140>
+
+<p>Comme l'angle \(x\) se retrouve à deux endroits, le triangle \(Osc\) est rectangle en \(O\), son hypoténuse est le diamètre et on retrouve le théorème de Pythagore \(\mathbf{sin~}^2 x + \mathbf{cos~}^2 x = 1\).</p>
+
+<p><img class="gauche" alt="" src="sinc/cyl.gif" width=209 height=244>Considérons le cas où le graphique se fait sur le produit d'un cercle par une droite, c'est-à-dire sur un cylindre et supposons le rayon du cercle égal à 1.</p>
+
+<p>Si \(O\) est l'origine des arcs et le point \(\boldsymbol{a}\) l'extrémité d'un arc correspondant à l'angle au centre \(x\), \(\boldsymbol{pa}\) vaut le sinus de \(x\). On reporte \(\boldsymbol {qa = pa}\) sur une génératrice.<br />
+Le triangle \(\boldsymbol {paq}\) est rectangle isocèle et \(\boldsymbol{q}\) est situé dans un plan passant par le diamètre et faisant un angle de 45° avec le plan du cercle.
+On en conclut que le graphique est une section plane du cylindre, c'est-à-dire une ellipse.</p>
+
+<p>On peut, bien entendu, retrouver le graphique usuel en "déroulant" le cylindre sur le plan tangent en <i><b>O</b></i>. De plus on voit que si on projette orthogonalement le cylindre sur ce plan on obtient, au voisinage de <i><b>O</b></i> une approximation qui est une droite inclinée à 45°.</p>
+
+<img alt="" src="sinc/s1.gif" width=64 height=81><img alt="" src:"../dot.png" width=80 height=1><img alt="" src="sinc/a1.gif" width=59 height=78>
+
+<p>La projection a pour équation \(z = x\), qui approche \(z = \mathbf{sin~}x\). On peut alors avoir l'idée d'améliorer l'approximation en enroulant la sinusoïde sur un cylindre plus large et en projetant sur le plan tangent.</p>
+
+<p>Pour que la projection sur le plan <i><b>Oxy</b></i> superpose les points 2 à 2 on voit que le rayon du cylindre doit valoir un entier impair 1, 3, 5,... 2n + 1. Examinons les premiers cas ; on a les équations :</p>
+
+\[ \begin{cases} x = 3~\mathbf{sin~}\theta \\ y = 3~\mathbf{cos~}\theta \\ z = \mathbf{sin~}3\theta \end{cases} 
+\hskip5em
+\begin{cases} x = 5~\mathbf{sin~}\theta \\ y = 5~\mathbf{cos~}\theta \\ z = \mathbf{sin~}5\theta \end{cases} \]
+
+<p>En utilisant la formule de Moivre on obtient :</p>
+
+\[ \hskip8em
+\begin{cases} x = 3~\mathbf{sin~}\theta\\ y = 3~\mathbf{cos~}\theta\\z =3 \mathbf{sin~}\theta - 4~\mathbf{sin~}^3 \theta \end{cases}
+\hskip4em 
+\begin{cases} x = 5~\mathbf{sin~}\theta\\ y = 5~\mathbf{cos~}\theta\\z =5~\mathbf{sin~}\theta - 20~\mathbf{sin~}^3 \theta + 16~\mathbf{sin~}^5 \theta \end{cases}\] 
+
+<img alt="" src:"../dot.png" width=80 height=1><img alt="" src="sinc/s3.gif" width=140 height=90><img alt="" src:"../dot.png" width=100 height=1><img alt="" src="sinc/s5.gif" width=200 height=85>
+<p class="ni">et les projections orthogonales sur le plan <b><i>Oxz</i></b> donnent les approximations :</p>
+
+\[  \hskip4em z = x - \frac {4}{27} x^3   \hskip8em z = x - \frac{4}{25} x^3 + \frac{16}{3125} x^5 \]  
+
+<img alt="" src:"../dot.png" width=90 height=1><img alt="" src="sinc/a3.gif" width=133 height=70><img alt="" src:"../dot.png" width=110 height=1><img alt="" src="sinc/a5.gif" width=205 height=73> 
+
+<p>Ces approximations sont de plus en plus précises ; ce sont des polynômes impairs, en fait, des polynomes de Tchebychev. Remarquons qu'il ne s'agit pas des développements de MacLaurin limités, mais les coefficients tendent vers ceux de la série lorsque le degré du polynôme augmente.</p>
+
+<p>Si l'on veut obtenir de semblables approximations pour la fonction cosinus, il suffit de projeter la sinusoïde enroulée sur un cylindre de rayon pair. On obtient de manière analogue :</p>
+
+\[  \begin{cases} x = 2~\mathbf{sin~}\theta \\ y = 2~\mathbf{cos~}\theta\\z = \mathbf{cos~}2\theta \end{cases}  \hskip5em 
+\begin{cases} x = 4~\mathbf{sin~}\theta \\ y = 4~\mathbf{cos~}\theta\\z = \mathbf{cos~}4\theta \end{cases} \] 
+
+<p>En utilisant à nouveau la formule de Moivre on a :</p>
+
+\[ \hskip6em \begin{cases} x = 2~\mathbf{sin} \theta \\ y = 2~\mathbf{cos~}\theta \\ z = 1- 2~\mathbf{sin~}^2 \theta \end{cases} 
+\hskip5em  
+\begin{cases} x = 4~\mathbf\sin \theta\\y = 4~\mathbf\cos \theta\\z = 1 - 8 \mathbf{sin~}^2 \theta + 8~\mathbf{sin~}^4 \theta \end{cases}\] 
+
+<img alt="" src="../dot.png" width=80 height=1><img alt="" src="sinc/s2.gif" width=105 height=92><img alt="" src:"../dot.png" width=80 height=1><img alt="" src="sinc/s4.gif" width=176 height=98>
+
+<p class="ni">ce qui donne pour projections orthogonales sur le plan <i>xz</i> les courbes d'équations :</p>
+
+\[ \hskip4em 1- \frac {1}{2}x^2 \hskip6em 1- \frac {1}{2}x^2 + \frac {1}{32}x^4 \] 
+
+<img alt="" src:"../dot.png" width=80 height=1><img alt="" src="sinc/a2.gif" width=97 height=67><img alt="" src:"../dot.png" width=80 height=1><img alt="" src="sinc/a4.gif" width=165 height=71>
+
+<p class="ni">qui constituent de bonnes <a title="Développement en série" href="approxi.htm">approximations</a> de la fonction cosinus (à comparer au développement de <a href="../bio/maclauri.htm">MacLaurin</a>).</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>La moyenne. D'accord, mais laquelle ? - Statistique - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Diverses moyennes" />
+<meta name="keywords" content="arithmétique, géométrique, harmonique" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="sta.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-13', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+La moyenne. D'accord, mais laquelle ?
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>La notion de moyenne nous semble très familière et nous en parlons beaucoup sans nous poser de question. Pourtant il existe divers qualificatifs: <b>arithmétique, géométrique, harmonique</b>.<br />
+Voila déjà trois types de moyenne. Mais à quoi servent-elles et,surtout, laquelle utiliser ?</p>
+
+<p>Sans conteste c'est la <b>moyenne arithmétique</b> qui est la plus courante; depuis toujours nous savons que si nous avons eu un 7/20, il faudra un 13/20 pour le contrebalancer ! Quand il y a des problèmes, nous calculons notre "moyenne" et, si nécessaire, nous faisons un effort là où elle est trop basse. Tout cela est devenu une sorte de réflexe nous adoptons l'équivalence entre moyenne et moyenne <b>arithmétique</b>. Et pourtant !</p>
+
+<p>Un exemple intéressant nous est fourni par le règlement appliqué pour déterminer les records de vitesse sur terre. Les voitures (il faudrait peut-être mieux dire les fusées sur roues) sont chronométrées durant deux trajets d'un mile (1609 m, nous sommes aux USA !) effectués dans les sens opposés. C'est normal, car à ces vitesses très élevées l'aérodynamisme, la résistance de l'air, joue un rôle déterminant et il faut compenser l'action d'un vent favorable par un vent défavorable. Jusque là tout est logique.<br />
+Quand le véhicule a effectué ses deux miles on calcule la vitesse sur le premier, puis la vitesse sur le second et on fait la moyenne. Logique.<br />
+Logique ? Pas du tout.</p>
+
+<p>Supposons un instant que le véhicule ait un accident lors du second parcours (cela arrive bien souvent). Quel est le temps mis pour parcourir les deux miles ? Infini, puisqu'il n'y est pas arrivé; donc la vitesse moyenne est nulle. Pourtant ce n'est pas ce qu'on obtient en calculant la moyenne des vitesses (une première non nulle et une seconde nulle). Ce règlement a donc été fait par des gens ignorant ce qu'était une moyenne.</p>
+
+<p>Critiquer est bien, améliorer est mieux.</p>
+
+<p>Le problème est simple à résoudre: une distance \(d\) est parcourue dans un sens à la vitesse \(v_1\) et dans l'autre à la vitesse \(v_2\). La vitesse moyenne s'obtiendra en divisant la distance totale \(2d\) par le temps mis à la parcourir: \(v = 2d/t\).<br />
+Calculons le temps mis lorsqu'on parcourt \(d\) avec une vitesse \(v_i\) : c'est tout simplement le quotient \(t_i=d/v_i\). Le temps total vaut donc \(t=t_1+t_2=d/v_1+d/v_2\).<br />
+La vitesse moyenne est:</p>
+
+\[ v = \frac{2d}{(d/v_1+d/v_2)}  \]
+
+<p>ou encore</p>
+
+\[ \large\frac{1}{v} =\frac {\frac{1}{v_1}+\frac{1}{v_2}}{2} \]
+</div>
+
+<p>On reconnaît la <a href="../mat/harmoni.htm#Ha">moyenne <b>harmonique</b></a> 
+ de \(v_1\) et \(v_2\).</p>
+ 
+<p>Nous avions rencontré une troisième moyenne, la <a href="../mat/harmoni.htm#G">moyenne <b>géométrique</b></a>. Quand trouve-t-elle une application ?</p>
+
+<p>Supposons qu'une banque offre une possibilité de placement et prévoit pour la première année un intérêt de \(3\)%, mais pour la deuxième année un intérêt de \(7\)%. Au même moment une autre banque offre un intérêt constant pour deux ans: \(5\)%. C'est pareil, dira-t-on un peu rapidement.<br />
+En fait les deux placements n'ont pas la même rentabilité.<br />
+Dans la première banque, un capital <b>C</b> deviendra au bout de la première année \(1,03\).<b>C</b> et la seconde année \((1,07)(1,03)\)<b>C</b>.<br />
+Dans l'autre banque on aura au bout d'un an \(1,05\)<b>C</b> et après la seconde année \((1,05).(1,05)\)<b>C</b>.<br />
+Comparons: dans la première le capital sera devenu \(1,1021\)<b>C</b> alors que dans la seconde on aura \(1,1025\)<b>C</b> !<br />
+\(5\)% n'est pas la moyenne de \(3\)% et \(7\)%. En effet, posons les facteurs multiplicatifs \(r_k=1+i_k\).</p>
+
+<p>Quelle est en fait la valeur moyenne de \(r\) ?<br />
+Au bout de deux ans le capital doit être multiplié par \(r_1.r_2\). Si la moyenne vaut \(r\) il est multiplié par \(r^2\). On a donc la relation:</p>
+
+\[ r^2 = r_1.r_2 ~~~~\text{ou}~~~~r=\sqrt{r_1.r_2}\]
+
+<p>Le facteur de multiplication r est la <a href="../mat/harmoni.htm#G">moyenne  <b>géométrique</b></a> des deux facteurs.<br />
+Dans l'exemple choisi \(r=1,0498...\) et l'intérêt moyen (\(4,98\)%) est donc légèrement inférieur à \(5\)%.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="statid.htm">Statistique</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

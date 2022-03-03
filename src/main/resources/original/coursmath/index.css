@@ -1,0 +1,26 @@
+﻿#container {
+	text-align:left;
+	background-color : #fffff0;
+	position: relative;
+}
+.texte {
+	background: #fffff0;
+	font-family: "Times New Roman", Times, serif;"
+	font-size : 1.2em;
+}
+.texte hr {
+	color: #ff0000; 
+}
+.texte table tr td {
+	/*font-family: "Times New Roman", Times, serif;"*/
+	font-size : 1em;
+	/*background: #fffff0;*/
+}
+.texte sup {
+	font-size: 70%;
+ 	vertical-align: super;
+ 	}
+.texte sub {
+	font-size: 70%;
+ 	vertical-align: sub;
+ }

@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Coniques affines - 2e degré - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="propriétés affines, projectif, métrique, euclidien" />
+<meta name="keywords" content="second degré, algèbre, géométrie, coniques, affine, métrique" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="2de.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-7', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />Coniques affines et métriques<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<div class="st">Propriétés affines</div>
+
+<p>Tout d'abord remarquons qu'en général, une conique possède un centre de symétrie ; il se trouve au milieu de tous les diamètres, ou encore ses <a title="De plus amples informations sur les conjugués harmoniques" href="../mat/harmoni.htm">conjugués harmoniques</a> sont tous <a href="../mat/project.htm">à l'infini</a>.</p>
+
+<ul>
+<li>Le <b>centre</b> d'une conique a pour polaire la droite de l'infini (la réciproque est-elle vraie ?).</li>
+<li>Un <b>diamètre</b> est le pôle d'un point à l'infini.</li>
+<li>Deux diamètres seront dits <b>conjugués</b> si leurs points à l'infini le sont.</li>
+<li>Enfin une tangente à l'infini sera appelée <b>asymptote</b></li>
+</ul>
+
+<p>Soit tout d'abord un <a title="Voir une étude projective des coniques" href="conique.htm">triangle autopolaire</a> formé de deux sécantes et d'une non sécante.</p>
+
+<img alt="" src="cona/con1.gif" width=194 height=151>
+
+<p>- Si la droite non sécante est la droite de l'infini, la conique est une ellipse, \(r\) est son centre ; \(pr\) et \(qr\) sont deux diamètres conjugués.</p>
+
+<img alt="" src="cona/fig1a.gif" width=224 height=154>
+
+<p>- Si au contraire c'est une sécante (par exemple \(qr\)) qui est la droite de l'infini, la conique est une hyperbole centrée en \(p\) rapportée à deux diamètres conjugués \(pq\) et \(pr\).</p>
+<img alt="" src="cona/fig1b.gif" width=215 height=162>
+
+<p>Soit à présent un <a title="Ce repère est très indiqué pour paramétriser une conique" href="conique.htm">triangle autopolaire</a> formé de deux tangentes et de la corde de contact.</p>
+
+<img alt="" src="cona/con2.gif" width=184 height=131>
+
+<p>- Si la sécante \(qr\) est la droite de l'infini, la conique est une hyperbole centrée en \(p\) et les deux tangentes aux points \(q\) et \(r\) à l'infini sont les deux asymptotes.</p>
+
+<img alt="" src="cona/fig2a.gif" width=231 height=148>
+
+<p>- Si au contraire c'est une tangente (par exemple \(pq\)) qui est la droite de l'infini, la conique est une parabole ramenée à une tangente \(pr\) et à son diamètre conjugué \(qr\).</p>
+
+<img alt="" src="cona/fig2b.gif" width=162 height=157>
+
+<hr />
+
+<div class="st">Propriétés euclidiennes</div>
+
+<p>Si l'on désire étudier quelques propriétés euclidiennes, il suffit d'introduire la métrique (ou le produit scalaire). Il n'y a aucune difficulté à résoudre alors tous les problèmes.</p>
+
+<p>A titre d'<a title="Le cercle orthoptique de Monge" href="exercice.htm">exemple</a>, sans toutefois attacher d'importance particulière à ce théorème qui relève plutôt des curiosités mathématiques, pour montrer la puissance des résultats généraux obtenus, citons la détermination de l'ensemble des points desquels on voit une ellipse sous un angle droit, le très "classique" <b>cercle de Monge</b> appelé encore cercle orthoptique.</p>
+
+<p>En considérant l'ensemble des cercles on est conduit à parler des points (imaginaires à l'infini) cycliques. On remarque alors que deux directions sont perpendiculaires si leurs points à l'infini sont conjugués par rapport aux points cycliques (lien entre une forme quadratique et la forme bilinéaire associée).</p>
+
+<p>Après avoir introduit les conditions d'orthogonalité, il n'est plus guère difficile de rechercher les axes (de symétrie) d'une conique ainsi que les foyers et directrices.</p>
+<hr />
+
+<div class="st">Conclusion</div>
+
+<p>On en conclut qu'une étude <a title="Voir les propriétés projectives des coniques" href="conique.htm">générale</a> (propriétés projectives) des coniques permet un énorme gain de temps pour l'étude détaillée de chacun des types affins de coniques (ellipses, paraboles et hyperboles).</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="2degrd.htm">Second degré</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

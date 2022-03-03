@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Décathlon - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Décathlon" />
+<meta name="keywords" content="performances, table" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Décathlon
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Bientôt se disputeront les championnats nationaux de décathlon.<br />
+Avez-vous déjà réfléchi à la manière dont on peut comparer les athlètes participant à cette merveilleuse épreuve. En effet ces champions doivent courir (100m, 400m, 1500m), sauter (longueur, hauteur, perche), combiner les deux (110m haies) et lancer (disque, javelot, poids). Et tout cela en deux jours ! Certains sont plus doués pour certaines épreuves. Comment comparer un athlète meilleur qu'un autre au lancer du poids, mais moins bon au saut en longueur ? Voilà le problème auquel la fédération internationale d'athlétisme "amateur" est confrontée depuis les débuts de l'existence de cette épreuve.</p>
+
+<p>En fait, à chaque performance est attribué un certain nombre de points que l'on trouve dans une table régulièrement mise à jour par l'IAAF (actuellement la table "hongroise", anciennement la table "finlandaise"). La question est de savoir comment établir ces tables, comment comparer un saut de 7m60 en longueur avec un jet de 18m50 au poids. C'est ici que les statistiques pourraient intervenir.</p>
+
+<p>On sait que, sous des conditions fort générales, un ensemble de données obéit à la <a href="../sta/normale.htm">loi normale</a>. On peut supposer qu'il en va ainsi pour les résultats des athlètes pour un sport donné. A ce moment, il sera possible de calculer la moyenne et l'écart-type des scores obtenus. Si \(m\) désigne cette moyenne, et \(\sigma\) l'écart-type, la distribution \(F(x)\) de \(x\) obéit à la loi:</p>
+
+\[ F(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\frac{(x-m)^2}{\sigma}} \]
+
+<p>On peut normaliser en effectuant un changement d'origine de telle sorte que la moyenne vaille 0 et un changement d'unité pour que l'écart vaille 1.</p>
+
+<img alt="" src="deca/fig.gif">
+\[ F(x) = \lambda  e^{-\frac {x^2}{2} } \]
+
+<p>Chacune des épreuves sera alors représentée par la même loi <i>F</i>(<i>x</i>) et on pourra alors comparer les résultats; il ne reste plus qu'à faire choix d'une échelle.</p>
+
+<p>Cette méthode, quasi impartiale, n'est hélas pas encore utilisée.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

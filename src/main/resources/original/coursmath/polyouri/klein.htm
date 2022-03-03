@@ -1,0 +1,100 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tore (ou bouteille) de Klein - Surfaces - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Polyèdres semi-réguliers" />
+<meta name="keywords" content="platoniciens, archimédiens, faces régulières" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../3di/3di.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript" src="three.min.js"></script>
+<script type="text/javascript" src="WebGL.js"></script>
+<script type="text/javascript" src="OBJLoader.js"></script>
+<script type="text/javascript" src="TrackballControls.js"></script>
+<script type="text/javascript" src="rendu.js"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-4', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Le tore de Klein
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<br>
+<div id="polanim" class="droite" style="width:360px; height:360px; border:2px solid #f39;">
+<script>showPoly("klein.obj", "polanim",16);</script>
+</div> 
+<p>Tout comme le ruban de Möbius, il s'agit d'une surface unilatère. Cette fois la surface est fermée et ne possède pas de bord.</p>
+
+<p>Elle est obtenue à partir d'un ruban de Möbius en recollant les (ou plus exactement le) bord.</p>
+
+<p>Si le ruban n'était pas tordu, on aurait tout simplement obtenu un tore; mais ici ce sera une sorte de tore qui s'interpénètre pour donner la surface représentée ci-contre.</p>
+
+<p>Tout comme le tore peut être vu comme un cercle tournant autour d'un axe, on peut, tout comme pour le ruban de Möbius,  imaginer un chiffre 8 tournant autour d'un axe tout en tournant autour de son centre pour se recoller au bout d'un tour, n'ayant fait qu'un demi-tour.</p>
+
+Les équations paramétriques de cette surface sont :<br />
+
+\[ \small \begin{cases}
+x = (a + (\mathbf{cos~}(u/2)~\mathbf{sin~}(v) - \mathbf{sin~}(u/2)\mathbf{sin~}(2v))\mathbf{cos~}(u)  \\
+y = (a + (\mathbf{cos~}(u/2)~\mathbf{sin~}(v) - \mathbf{sin }(u/2)\mathbf{sin~}(2v))\mathbf{sin~}(u)  \\
+z = \mathbf{sin~}(u/2)~\mathbf{sin~}(v )+ \mathbf{cos~}(u/2)~\mathbf{sin~}(2v)
+\end{cases}  \]
+
+<p> Elles dépendent d'un paramètre \(a\) que nous avons choisi égal à 1.</p>
+
+<img class="gauche" alt="bouteille" src="../3di/kbouteille.png"><br /><p>On parle parfois de la "bouteille" de Klein ; il s'agit de la curieuse surface ci-contre ; elle a la même structure topologique. Regardez-la bien nous n'arriverez pas à la remplir ; pourtant une mouche peut arriver à l'intérieur ! <br /><br /> 
+		</div>
+	</div>
+	<div id="fermeture">
+<br />
+<img alt="fermer" src="../fermer.gif" OnClick="javascript=parent.close()"><br />
+<br />
+	</div></div>
+</body>
+</html>

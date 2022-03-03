@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Cône et sphère - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="aire, volume, cylindre, cône, sphère, Archimède, Cavalieri" />
+<meta name="keywords" content="cylindre, cône, sphère, Archimède, Cavalieri" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Cône et sphère
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p><a title="Biographie" href="../bio/archimed.htm">Archimède</a> s'intéressa aux aires et volumes d'êtres géométriques. Il est célèbre pour sa détermination approchée de la valeur de \(\pi\) qu'il encadre par les valeurs 3 1/7 et 3 10/71. 
+Il obtient ces valeurs à partir du calcul des périmètres de polygones inscrits et circonscrits à un cercle.<br />
+Mais il calcula bien d'autres choses.<br />
+En particulier il détermina le volume du cône et de la sphère. A l'heure actuelle ces résultats sont obtenus à l'aide du calcul intégral. Pourtant bien avant l'introduction de celui-ci, <a title="Biographie" href="../bio/cavalier.htm">Cavalieri</a> énonça un principe qui permettait de retrouver les résultats obtenus par Archimède.</p>
+ 
+<p>Voyons comment plusieurs siècles plus tôt Archimède avait procédé.</p>
+
+<p>Pour calculer le volume d'un cône, Archimède ne fait rien d'autre que d'utiliser la formule donnant le volume d'une pyramide de base \(B\) et de hauteur \(h\), soit \(1/3Bh\).</p>
+
+<p>Comment arrive-t-on à cette formule?</p>
+
+<p>Considérons un carré. Il est possible, en utilisant une diagonale, de le partager en 2 triangles égaux; l'aire de chacun d'eux vaut \(1/2Bh\).</p>
+
+<img class="gauche" alt="" src="sphe/3p.gif"><p>De même, un cube peut, à l'aide d'une diagonale être partagé en 3 pyramides égales; le volume de chacune d'elles est \(1/3Bh\).</p>
+<p><img class="droite" alt="" src="sphe/patron.gif">Vous trouverez ci-contre le patron d'une de ces pyramides. Elle possède un carré de côté \(a\) et 4 faces triangulaires: 2 triangles rectangles isocèles de base \(a\sqrt{2}\) et deux autres triangles rectangles de côtés \(a, a\sqrt{2}\) et \(a\sqrt{3}\).</p>
+
+<p>Attention ! En fait, nous ne prouvons la formule du volume de la pyramide \(V=1/3a^2\) que dans le cas où sa hauteur \(a\) est égale au côté du cube.<br />
+Comment généraliser cette formule à une pyramide quelconque ? En remarquant deux choses:</p>
+
+<ul>
+<li>Si la hauteur est multipliée par un facteur k, le volume l'est également;</li>
+<li>Si les bases sont équivalentes, les volumes sont égaux.</li>
+</ul>
+
+<p>Cette dernière propriété est connue sous le nom du <b>principe de Cavalieri</b>. 
+Cette propriété bien connue des Grecs a été énoncée par <a title="Biographie" href="../bio/cavalier.htm">Cavalieri</a> et est actuellement démontrée à l'aide du calcul intégral.<br />
+En fait, il suffit de s'imaginer deux volumes reposant sur un plan horizontal et découpés en fines tranches par une famille de plans horizontaux. Si les sections homologues sont équivalentes il est clair que les volumes sont égaux.</p>
+
+<p>C'est en fait ce principe qu'Archimède utilisa pour calculer le volume d'une sphère<br />
+Considérons une demi-sphère de rayon \(R\) reposant sur un plan \(\alpha \) sur ce même plan soit un cylindre de rayon \(R\) et de hauteur \(R\); à l'intérieur de ce cylindre plaçons un cône dont le sommet est situé au centre de la base et qui projette le cercle supérieur du cylindre.</p>
+
+<img alt="" src="sphe/sphere.gif"><img alt="" src="../dot.png" width=80><img alt="" src="sphe/cylin.gif">
+
+<p>Si nous sectionnons ces deux volumes par un plan horizontal situé à une hauteur \(x\), nous obtenons dans la sphère un cercle, et dans l'autre volume un anneau.</p>
+
+<img alt="" src="sphe/ssphere.gif"><img alt="" src="../dot.png" width=80><img alt="" src="sphe/scylin.gif">
+
+<p>Calculons les aires de chacune des deux surfaces.</p>
+
+<p>Tout d'abord le cercle, section dans la sphère. à l'aide du <a title="Le théorème fondamental de la géométrie métrique" href="pytha.htm">théorème de Pythagore</a>, on voit que son rayon \(r\) satisfait à \(r^2+x^2=R^2\), d'où \(r^2=R^2-x^2\). L'aire de la section vaut donc \(\pi(R^2-x^2)\)</p>
+
+<img alt="" src="sphe/ssph.gif"><img alt="" src="../dot.png" width=80><img alt="" src="sphe/scyl.gif">
+
+<p>Passons à l'anneau. C'est la différence entre l'aire du cercle extérieur qui vaut \(\pi R^2\) et celle du cercle intérieur; ce dernier a pour rayon \(x\). On obtient ainsi l'aire de l'anneau: \(\pi R^2-\pi x^2\).<br />
+Les sections par les plans horizontaux ont donc toujours même aire, et on en déduit que les volumes sont égaux.<br />
+Par conséquent le volume de la demi-sphère équivaut à la différence entre celui du cylindre et celui du cône, c'est-à-dire \(\pi R^2.R - 1/3\pi R.R\) ou encore \(2/3\pi R^2\). Le volume de la sphère est donc égal à \(4/3\pi R^3\).</p>
+
+<p>Connaissant le volume d'une sphère de rayon \(R\), il n'est guère difficile d'en trouver l'aire.<br />
+Une variation du rayon entraîne une variation de volume égale, en première approximation au produit de l'aire de la sphère par la variation du rayon.
+Cette remarque nous montre, par une simple application de la définition de la dérivée (qu'Archimède appliquait il y a plus de 2000 ans), que l'aire de la sphère est égale à la dérivée de son volume par rapport au rayon \(R\) et vaut \(4\pi R^2\).</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

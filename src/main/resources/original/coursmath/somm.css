@@ -1,0 +1,134 @@
+﻿/*___________________________ TITRE ________________________*/
+
+.titre {
+	color: #080;
+}
+
+.stitre {
+	color: #080;
+}
+
+/*___________________________ CENTRAL ________________________*/
+
+.central {
+	background: #ffffe0;
+	border: 2px solid #f00; 
+}
+#container {
+	width: 850px;
+	padding: 0;
+	margin: 0 auto;
+}
+a:hover {
+	text-decoration: none;
+}
+.tableauSommaire {
+	width: 215px;
+	border: 2px solid black;
+	border-radius: 30px;
+	background-color: #fffff0;
+}
+#menu
+{
+	list-style-type: none;
+	padding: 0;
+}
+#menu  li {
+	line-height: 50px;
+	width: 215px;
+}
+#menu li a{
+	font-size: 1.25em; /* Change la taille des caractères dans le menu */
+	display: block;
+}
+
+#menu .menuderoulant {
+	font-size: 0.65em; /* Change la taille des caractères dans le menu déroulé */
+	width: 309px; /* largeur sous-menu */
+	display: none;
+	list-style-type: none;
+	margin: -35px 0 0 172px;
+	padding: 0;
+	position: absolute; 
+}
+#menu .menuderoulant li
+{
+	line-height: 1.5em; /* Change la hauteur de ligne des caractères dans le menu déroulé */
+	float: right;
+	width: 260px;
+	border: 1px solid;
+}
+#menu .menuderoulant li a
+{
+    background-color:rgb(255, 255, 240);
+    background-color:rgba(255, 255, 240, 1); /*réglage transparence*/
+}
+#menu li:hover > .menuderoulant 
+{ 
+	display: block; 
+}
+
+#menu .menuderoulant.deb li a
+{color: #999;}
+#menu .menuderoulant.deb li a:hover
+{color: #fff; background-color: #999;}
+
+#menu .menuderoulant.mat li a
+{color: #f00;}
+#menu .menuderoulant.mat li a:hover
+{color: #fff; background-color: #f00;}
+
+#menu .menuderoulant.sec li a
+{color: #e73;}
+#menu .menuderoulant.sec li a:hover
+{color: #fff; background-color: #e73;}
+
+#menu .menuderoulant.com li a
+{color: #c80;}
+#menu .menuderoulant.com li a:hover
+{color: #fff; background-color: #c80;}
+
+#menu .menuderoulant.pol li a
+{color: #eb0;}
+#menu .menuderoulant.pol li a:hover
+{color: #fff; background-color: #eb0;}
+
+#menu .menuderoulant.ana li a
+{color: #6c0;}
+#menu .menuderoulant.ana li a:hover
+{color: #fff; background-color: #6c0;}
+
+#menu .menuderoulant.sta li a
+{color: #0c6;}
+#menu .menuderoulant.sta li a:hover
+{color: #fff; background-color: #0c6;}
+
+#menu .menuderoulant.var li a
+{color: #099;}
+#menu .menuderoulant.var li a:hover
+{color: #fff; background-color: #099;}
+
+#menu .menuderoulant.app li a
+{color: #06f;}
+#menu .menuderoulant.app li a:hover
+{color: #fff; background-color: #06f;}
+
+#menu .menuderoulant.vie li a
+{color: #c3f;}
+#menu .menuderoulant.vie li a:hover
+{color: #fff; background-color: #c3f;}
+
+#menu .menuderoulant.info li a
+{color: #400080;}
+#menu .menuderoulant.info li a:hover
+{color: #fff; background-color: #400080;}
+
+#menu .menuderoulant.tdi li a
+{color: #f39;}
+#menu .menuderoulant.tdi li a:hover
+{color: #fff; background-color: #f39;}
+
+#menu .menuderoulant.doc li a
+{color: #666;}
+#menu .menuderoulant.doc li a:hover
+{color: #fff; background-color: #666;}

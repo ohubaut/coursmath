@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Desargues: théorème ou axiome ? - Mathématique linéaire - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="plan projectif, axiome, homologie, plan non-arguésien" />
+<meta name="keywords" content="géométrie, Desargues, théorème, axiome, plan, espace, triangles homologiques" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="mat.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript">
+    function ppol(fichier) 
+{window.open(fichier,'polyouri','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-6', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Desargues: théorème ou axiome ?
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Un des théorèmes les plus importants de la géométrie plane (peut-être faudrait-il dire le théorème le plus fondamental) est le théorème de <a title="Biographie" href="../bio/desargue.htm">Desargues</a>. 
+Il est habituellement énoncé sous la forme suivante:</p> 
+
+<blockquote class="lh">
+<p><i>Si les droites joignant les sommets homologues de deux triangles sont concourantes, les points d'intersection de leurs côtés homologues sont alignés, et réciproquement.</i></p>
+</blockquote>
+
+<p>Cet énoncé est clairement auto-dual. 
+La configuration correspondante est représentée ci-dessous.</p>
+
+<div><img alt="" src="desa/desarg.gif"> </div>
+
+<p>Si l'on montre ce dessin à un non-mathématicien, il y a gros à parier qu'il y verra deux triangles situés dans l'espace, projetés à partir d'un point, et il ne trouvera pas très remarquable que les plans de ces deux triangles se coupent en une droite.</p>
+
+<p>Toutefois le théorème de Desargues est, en mathématiques, énoncé dans le plan. 
+La remarque faite ci-dessus aidera à la démonstration en plongeant le plan dans l'espace et en faisant appel à un troisième triangle auxiliaire.<br />
+Cependant si l'on s'interdit de sortir du plan, la démonstration devient plus ardue, voire impossible, et il convient de faire un soigneux bilan des axiomes qui ont été admis jusqu'alors. 
+Ce bilan fait, il devient, selon les cas, possible ou impossible de démontrer ce "théorème".</p>
+
+<p>Une analyse un peu plus approfondie montre que la "bonne" solution, la solution de bon sens, consiste à prendre le "théorème" de Desargues comme axiome quitte à supprimer certaines propriétés déjà admises précédemment et qui en découlent tout naturellement, telle l'existence de translations, d'homothéties, etc.</p>
+
+<p>Venons-en à la démonstration du théorème (il s'agit cette fois d'un théorème) de Desargues pour un plan plongé dans l'espace (les propriétés admises sont uniquement les propriétés linéaires).<br />
+Il y a bien entendu celle suggérée plus haut, mais il y a plus joli !</p>
+
+<p>La configuration peut également suggérer non pas deux triangles projetés à partir d'un même point, mais aussi deux projections d'un même triangle à partir de deux points différents. Représentons cette situation:</p>
+
+<div><img alt="" src="desa/fig2.gif"></div>
+
+<p>Soit le triangle \(abc\) projeté dans le plan \(P\) en \(a'b'c'\) à partir du point \(d\), et en \(a''b''c''\) à partir du point \(e\). 
+Les droites joignant les sommets homologues \(a'a'', b'b'', c'c''\) concourent en le point \(o\) de percée de la droite de dans \(P\) ; les côtés homologues se coupent en les trois points \(p, q, r\) situés sur la droite d'intersection du plan du triangle abc avec le plan de projection \(P\).</p> 
+
+<p>Toutefois cette démonstration nous apprend plus. Nous nous trouvons en fait en présence de 5 points dans l'espace tels que 4 quelconques ne sont pas situés dans un même plan.<br />
+Ces 5 points, pris 2 à 2 déterminent 10 droites; pris 3 à 3 ils déterminent 10 plans. 
+Bien entendu à toute droite correspond un plan et vice-versa. Dans chaque plan il y a trois droites et chaque droite est contenue dans trois plans.</p>
+
+<p>Si on sectionne cette figure spatiale par un plan non particulier, on obtient 10 points et 10 droites tels que par chaque point passent trois droites et que chaque droite contienne trois points: c'est la <a href="javascript:ppol('../polyouri/desargue.htm');">configuration de Desargues.</a></p>
+
+<p>Toutefois nous avons appris que chacun des dix points joue le même rôle et qu'à chaque point est associé une droite. 
+Cela modifie donc notre vision du théorème de Desargues et nous incite plus à parler d'une configuration de points et de droites plutôt que de deux triangles homologues.</p>
+
+<p>De plus comme les 5 points de l'espace jouent un rôle équivalent, on en déduit que le groupe de la configuration de Desargues (ou plus précisément de sa structure d'incidence) est précisément le groupe Sym(5).</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="mathlind.htm">Mathématique linéaire</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

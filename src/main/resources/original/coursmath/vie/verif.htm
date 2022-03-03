@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Que de chiffres ! - Vie courante - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Les codes numériques vérificateurs" />
+<meta name="keywords" content="code à barres, cede IBAN, ISBN, ISSN, EAN13, code parfait" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="vie.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-5', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Que de chiffres !
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Dans un texte, dans un mot, on voit facilement si l'orthographe est correcte. Par contre lorsqu'on nous communique un nombre, comment vérifier qu'il n'y a pas d'erreur ? Et comme les nombres envahissent notre vie...</p>
+
+<p>Quelles sont les erreurs les plus courantes que nous pouvons faire lorsque nous transmettons un nombre:</p>
+
+<ul>
+<li>transmettre un chiffre erroné<br />
+<li>intervertir deux chiffres (la plupart du temps consécutifs)<br />
+<li>transmettre un chiffre "illisible"<br />
+</ul>
+
+<p>Il s'agit de <a href="../app/codes.htm">détecter une erreur</a> possible; les méthodes de vérification devront donc essentiellement tenir compte de ces deux types d'erreur. Elles sont généralement basées sur le calcul d'un reste d'une division par un nombre N astucieusement choisi.</p>
+
+<p class="st">Les comptes en banque</p>
+
+<p>La vérification se fait en calculant le reste d'une division par un nombre \(N\). 
+Les erreurs les plus fréquentes sont soit un chiffre erroné, soit l'interversion de deux chiffres.<br />
+S'il y a erreur sur un chiffre la différence entre la valeur correcte et la valeur erronée sera \(10^n(a-b)\), où \(a\) représente le chiffre correct et \(b\) le chiffre erroné.  Par conséquent on doit éviter de choisir \(N\) multiple de \(a-b\) ou N diviseur de \(10^n\).<br />
+Si on a interverti deux chiffres \(a\) et \(b\), la différence entre le nombre exact et le nombre erroné vaudra \((a.10^n+b.10^m)-(b.10^n+a.10^m)\). Cette différence vaut \(10^m.(a-b).(10^{n-m}-1)\).<br />
+Il faudra donc, pour le choix de N, éviter un nombre inférieur ou égal à 10 ou un diviseur de 9, 99, 999,....</p>
+
+<p>Le plus sur est de prendre \(N\) un nombre premier supérieur à \(10\). En pratique on estime qu'on peut choisir \(N\) plus petit que \(100\) et on prend \(N=97\). Le nombre formé par les deux derniers chiffres est donc le reste de la division par \(97\), avec toutefois une exception ! Si le reste est nul (on a encore toujours <a href="../mat/infini.htm">peur du zéro</a>, voyez les ascenseurs...) on le remplace par \(97\).</p>
+
+<p>Comme vérification, prenons le compte \(001-0314779-90\).<br />
+Le résultat de la division de \(0010314779\) par \(97\) vaut \(106337 (106337*97 = 10314689)\), et le reste vaut bien \(90\).<br />
+Le numéro est correct (c'est le mien, vous y versez ce que vous voulez !)</p>
+
+<p>On a récemment introduit l'<b>IBAN</b> (International Bank Account number). On espérait enfin voir une vraie uniformisation des comptes bancaires avec un système de contrôle simple. Malheureusement, ce n'est pas le cas et chaque pays a adopté sa propre structure.<br />
+Comment est construit cet IBAN ?<br />
+Il se compose d'abord de 4 caractères: 2 lettres (la codification ISO du pays, BE=Belgique, FR=France, CH=Suisse,...) suivies de 2 chiffres qui constituent le contrôle. On poursuit avec l'identification de l'établissement financier (caractères alpha-numériques) suivi du BAN (Bank Account number).</p>
+
+<p>Pour fixer les idées, mon ancien numéro de compte figure plus haut: 001-0314779-90. Je suis belge (code \(BE\)); mon établissement financier est codé 001. Comment, à partir de ces données, reconstituer l'IBAN ?</p>
+
+<p>On écrit \(BE00\) (le code pays suivi de \(2\) zéros) puis le code de l'établissement financier suivi du numéro de compte, ce qui donne:</p>
+
+\[ BE00001031477990 \]
+
+<p>Il reste à calculer les deux chiffres de contrôle figurant après le code pays. Pour cela on transpose les 4 premiers caractères vers la fin, ce qui donne:</p>
+
+\[ 001031477990BE00 \]
+
+<p>Malheureusement figurent des lettres (dans le code pays et parfois dans le numéro de compte bancaire). On les remplace avec la règle A=10, B=11, C=12,....Z=35. Cela nous donne:</p>
+
+\[ 001031477990111400 \]
+
+<p>Ensuite on effectue, comme anciennement une division par \(97\). Le contrôle sera égal à \(98\) moins le reste de cette division entière.</p>
+
+<p>Dans l'exemple le quotient entier vaut \(10633793712488\) et le reste vaut \(64\). En effet \(10633793712488*97 = 1031477990111336\). Le contrôle est la différence entre \(98\) et ce reste, c'est-à-dire \(34\). Mon IBAN est donc:</p>
+
+\[ BE34001031477990 \]
+
+<p>Pour plus de facilités, cet IBAN est décomposé en tranches de 4 caractères, c'est-à-dire :</p>
+
+\[ BE34-0010-3147-7990 \]
+
+<p>Ouf ! Voilà pour les lecteurs de l'étranger !</p>
+
+<p class="st">L'ISBN</p>
+
+<p>Actuellement tous les livres possèdent un numéro d'identification de \(10\) caractères appelé ISBN (International Standard Book Number); pour les périodiques il s'agit d'un nombre de 8 caractères appelé ISSN (International Standard Serial Number). Là encore le dernier caractère est présent afin de vérifier la validité des précédents.</p>
+
+<p>De même que pour les comptes en banque on veut éviter les erreurs les plus courantes.</p>
+
+<p>La méthode utilisée ici consiste à multiplier le premier chiffre (en partant de la droite) par \(1\), le deuxième chiffre par \(2\), le troisième par \(3\), le quatrième par \(4...\) et d'en faire la somme. Plus formellement si les chiffres, en partant de la droite, sont désignés par \(a_1, a_2, a_3,...\) on effectue la somme \(\Sigma_{k=1}^n k.a_ k\) (depuis \(k=1\) jusqu'à \(k=n\) avec \(n=10\) ou \(8\))), et le contrôle s'effectuera en calculant le reste de la division de cette somme par \(N\).<br />
+Si on commet un erreur sur un chiffre (p.ex. le chiffre \(a_k\)), le résultat de la somme sera affecté d'une erreur multiple de \(k\) fois la différence entre le chiffre correct et le chiffre erroné. Si on a par erreur permuté deux chiffres (p.ex. \(a_k\) et \(a_l\)), là encore le résultat sera affecté d'une erreur produit de la différence \((k-l)(a_k-a_l)\), c'est-à-dire un produit de deux facteurs inférieurs à \(10\).</p>
+
+<p>Il suffit donc de choisir pour \(N\) un nombre premier supérieur à \(9\). Mais comme on n'autorise qu'un chiffre de contrôle, il faudrait prendre le reste de la division par un nombre au plus égal à \(10\). Cela ne permet pas de satisfaire aux exigences. L'astuce consiste à choisir comme diviseur \(N=11\). Mais au cas où il faudrait prendre \(10\) comme dernier chiffre, on se souvient que \(10\) s'écrit \(X\) en chiffres romains.</p>
+
+<p>On voit ainsi que le dernier chiffre (contrôle) se calcule à partir des \(9\) (ou \(7\)) précédents: on part du fait que \(\Sigma{k.a_k}\) est un multiple de \(11\); on en déduit que \(a_1\) est le naturel inférieur à \(11\) qu'il faut ajouter à \Sigma^{k.a_k}\), \(k\) variant de \(2\) à \(10\) (ou \(8\)), pour obtenir un multiple de \(11\).</p>
+
+<p>Le chiffre de contrôle, dernier chiffre de l'ISBN (ou de l'ISSN), peut donc varier de \(0\) à \(10\) (noté \(X\)).</p>
+
+<p>A titre d'exemple vérifions que l'ISBN \(2-87262137-7\) est correct.<br />
+On calcule \(1.7+2.7+3.3+4.1+5.2+6.6+7.2+8.7+9.8+10.2=242\) qui est bien divisible par \(11\). L'ISBN est donc exact (sous réserves qu'il n'y ait pas eu d'erreurs autres que celles prévues).</p>
+
+<p class="st">Les Codes à barres</p>
+
+<p>Il existe différents types de cades à barres. Nous décrirons celui couramment utilisé dans le commerce (EAN-\(8\) ou EAN-\(13\)) EAN sont les initiales de "European Article Numbering". La méthode de contrôle est bien plus élémentaire.<br />
+Pour les codes EAN-\(8\), on calcule la somme \(P\) des chiffres de rang pair et celle \(I\) des chiffres de rang impair. On effectue \(P+3*I\) et on doit obtenir un multiple de 10.</p>
+
+<p>Pour les codes EAN-\(13\), le premier chiffre sert de contrôle, pour les \(12\) suivants on calcule les sommes \(I\) et \(P\); le chiffre contrôle est le chiffre qui ajouté à \(P+3*I\) donne un multiple de \(10\).</p>
+
+<p>Ce type de contrôle ne permet que la détection d'un chiffre erroné; toutefois il permet de reconstituer un chiffre effacé (ou mal lu). La fiabilité est obtenue en codant astucieusement les chiffres par des traits. Ceux-ci sont obtenus en sélectionnant des barres dans un ensemble de largeur \(7\) (p.ex. une barre noire de largeur \(2\), une blanche de largeur \(3\), une noire de largeur \(1\) et une blanche de largeur \(1\)).<br />
+On distingue sur les étiquettes deux types d'information: le producteur et le produit. Pour le codage EAN-\(8\), les chiffres producteur-produit (\(4\) chiffres chacun) sont codés de manière complémentaire. Pour le codage EAN-\(13\) (préfixe \(2\) chiffres - producteur \(5\) chiffres - produit \(5\) chiffres et \(1\) chiffre contrôle) il existe un codage inverse pour le producteur mais nous n'entrerons pas dans ces détails.</p>
+
+<div>
+Codage producteur<br />
+<img alt="" src="veri/barcodeA.gif"> 
+<br />
+Codage produit<br />
+<img alt="" src="veri/barcodeC.gif">
+</div>
+
+<p>Pourquoi une largeur \(7\) ?<br />
+<img class="droite" alt="" src="veri/zebre.gif">A la lecture une erreur peut se produire; nous devons coder 2 fois 10 chiffres (producteur et produit); si on choisit une largeur \(n\), une lecture correcte ou affectée d'une simple erreur donne lieu à \(n+1\) possibilités. On choisit \(n\) le plus petit possible mais permettant la détection d'une erreur. Les 20 "mots" du code doivent tous être à distance au moins égale à 2 (voir <a href="../app/codes.htm">codes détecteurs</a>). De plus on souhaite commencer (ou terminer) le codage de chaque chiffre par un blanc. Il n'est alors pas difficile de voir que la meilleure valeur de \(n\) vaut \(7\). <br />
+Le choix du codage des chiffres, renforcé par l'existence d'un contrôle, permet alors une très grande fiabilité dans la lecture des codes à barres.</p>
+
+<p>Testons le code \(5400-4207\) (EAN-\(8\)); \(\small I=5+0+4+0=9, P=4+0+2+7=13\); on a \(\small 3*I+P=27+13=40\) ce qui est bien un multiple de \(10\).</p>
+
+<p>Prenons à présent les codes à \(13\) chiffres (EAN-\(13\)). Le code \(5-410013-100003\) est-il correct ? \(\small I=4+0+1+1+0+0=6, P=1+0+3+0+0+3=7\); on a \(\small 3.I+P=18+7=25,\) il faut donc ajouter 5 pour obtenir un multiple de 10; ce chiffre est placé en tête du code.<br />
+Prenons le code \(x-379671-182511\) ; \(x\) est le chiffre contrôle supposé inconnu. On a \(\small I=3+9+7+1+2+1=23,~~ P=7+6+1+8+5+1=28\); on a \(\small 3*I+P=69+28=97\); le contrôle est donc \(3\) : le code à barres complet est \(3-379671-182511\).<br />
+Vérifions enfin le code \(8-076800-3769x9\) (\(x\) est supposé être un chiffre illisible). On vérifie que \(\small I=15+x\) et \(\small P=40\) ; on a \(\small 3*I+P=45+3*x+40=85+3.x\); le contrôle vaut \(8\). Il faut donc que \(\small 85+3*x+8=93+3.x\) soit multiple de \(\small 10\); par conséquent \(\small 3*x\) se termine par \(\small 7\) et vaut \(\small 27\). On détermine ainsi le chiffre manquant \(x\) qui vaut \(9\). Le code correct est donc \(8-076800-376999\)</p>
+
+<p>Pas la peine de calculer tout cela ; le scanner du magasin fait tout cela en une fraction de milliseconde. Évidemment, il a de l'entraînement...</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="vied.htm">Vie courante</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

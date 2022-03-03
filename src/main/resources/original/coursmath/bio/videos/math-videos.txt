@@ -1,0 +1,56 @@
+<html><body>
+Hist-caltec:
+1 - http://www.youtube.com/watch?v=sE0HpRtkRB4
+
+<a href="http://youtu.be/sE0HpRtkRB4">video1</a>
+ou
+<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/sE0HpRtkRB4"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/sE0HpRtkRB4" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object>
+
+2 - http://www.youtube.com/watch?v=Grcs-jvPhmI
+
+<a href="http://youtu.be/Grcs-jvPhmI">video2</a>
+ou
+<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/Grcs-jvPhmI"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Grcs-jvPhmI" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object>
+
+3 - http://www.youtube.com/watch?v=cNyW_-dMIZc
+
+<a href="http//youtu/cNyW_-dMIZc">video3</a>
+ou
+<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/cNyW_-dMIZc"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/cNyW_-dMIZc" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object>
+
+
+Hist-math
+1 - http://www.dailymotion.com/video/x5l7dn_histoire-des-mathematiques-partie-1_tech
+
+<iframe frameborder="0" width="480" height="360" src="http://www.dailymotion.com/embed/video/x5l7dn"></iframe><br /><a href="http://www.dailymotion.com/video/x5l7dn_histoire-des-mathematiques-partie-1_tech" target="_blank">Histoire des Math&eacute;matiques partie 1/2</a> <i>par <a href="http://www.dailymotion.com/fusionfroide" target="_blank">fusionfroide</a></i> 
+ou
+<object width="480" height="360">
+<param name="movie" value="http://www.dailymotion.com/swf/video/x5l7dn"></param>
+<param name="allowFullScreen" value="true"></param>
+<param name="allowScriptAccess" value="always"></param>
+<embed type="application/x-shockwave-flash" src="http://www.dailymotion.com/swf/video/x5l7dn" width="480" height="360" allowfullscreen="true" allowscriptaccess="always"></embed>
+</object>
+
+2 - http://www.dailymotion.com/video/x5l7k5_histoire-des-mathematiques-partie-2_tech
+
+<iframe frameborder="0" width="480" height="360" src="http://www.dailymotion.com/embed/video/x5l7k5"></iframe><br /><a href="http://www.dailymotion.com/video/x5l7k5_histoire-des-mathematiques-partie-2_tech" target="_blank">Histoire des Math&eacute;matiques  partie 2/2</a> <i>par <a href="http://www.dailymotion.com/fusionfroide" target="_blank">fusionfroide</a></i>	
+ou
+<object width="480" height="360">
+<param name="movie" value="http://www.dailymotion.com/swf/video/x5l7k5"></param>
+<param name="allowFullScreen" value="true"></param>
+<param name="allowScriptAccess" value="always"></param>
+<embed type="application/x-shockwave-flash" src="http://www.dailymotion.com/swf/video/x5l7k5" width="480" height="360" allowfullscreen="true" allowscriptaccess="always"></embed>
+</object>
+
+Piero delle Francesca
+
+<iframe frameborder="0" width="480" height="360" src="http://www.dailymotion.com/embed/video/xc655y"></iframe><br /><a href="http://www.dailymotion.com/video/xc655y_piero-della-francesca-mathematiques_school" target="_blank">Piero della Francesca : math&eacute;matiques et arts</a> <i>par <a href="http://www.dailymotion.com/Montaigu-Vendee" target="_blank">Montaigu-Vendee</a></i>
+ou
+<object width="480" height="360">
+<param name="movie" value="http://www.dailymotion.com/swf/video/xc655y"></param>
+<param name="allowFullScreen" value="true"></param>
+<param name="allowScriptAccess" value="always"></param>
+<embed type="application/x-shockwave-flash" src="http://www.dailymotion.com/swf/video/xc655y" width="480" height="360" allowfullscreen="true" allowscriptaccess="always"></embed>
+
+</body></html>
+</object>

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Des arrondis - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="calcul numérique, approximations, valeur numérique" />
+<meta name="keywords" content="erreurs, arrondis, équations" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Des arrondis
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Nous avons rencontré les <a href="../mat/viviani.htm">coordonnées trilinéaires</a> et nous les avons notamment utilisées en <a href="nefast.htm">diététique</a>. Prenons donc l'exemple des valeurs énergétiques des aliments.</p>
+
+<p>Sur la plupart des emballages figure la composition (pour 100g) en protides, lipides, glucides ainsi que la valeur énergétique en Kcal. Cette dernière valeur se calcule évidemment à partir des quantités de protides, lipides et glucides. Il suffit de connaître les valeurs énergétiques \(P,L,G\) (en kilocalories) de 1g de chacune des trois substances. Mais, comment les connaître ?.. Trois inconnues, donc trois équations (indépendantes si possible !). Choisissons trois produits.</p>
+
+<p>Comme je suis occupé à me préparer des spaghetti, je prends la bouteille d'huile et je trouve, ce qui était évident, qu'il n'y a ni glucides, ni protides; \(100 g\) d'huile donnent \(900Kcal\), donc voila déjà un problème réglé. Un gramme de lipides contribue à raison de \(9 Kcal\). On a déjà \(L=9\)</p>
+
+<p>Sur la viande aucune indication.</p>
+
+<p>Passons à la sauce tomate et nous trouvons la composition suivante: \(1,3 g\) de protides, \(3,9 g\) de glucides, \(0,0 g\) de lipides; valeur énergétique \(20 Kcal\). L'équation est donc \(1,3P + 3,9G = 20\)</p>
+
+<p>Pour les pâtes, nous trouvons: \(13 g\) de protides, \(1,5 g\) de lipides et \(71 g\) de glucides, pour une valeur énergétique de \(350 Kcal\). Voici notre troisième équation: \(13P + 1,5L + 71G = 350\) que nous pouvons transformer, sachant que \(L=9\), \(13P + 71G = 336,5\)</p>
+
+<p>Nous avons donc un système de deux équations à deux inconnues:</p>
+
+\[ 1,3P + 3,9G = 20 \\ 13P + 71G = 336,5 \]
+
+<p>Nous avons beaucoup de chance; en multipliant la première équation par 10 et en la soustrayant de la seconde on a: \(32G = 136,5\), d'où \(G = 273/64\) et en remplaçant \(G\) par sa valeur dans l'une des deux équations on trouve \(P= 2153/832\). On obtient donc la solution:<br />
+\(P=2153/832, L=9, G=273/64\)<br />
+(Notons au passage qu'on ne <b><i>résout</i></b> pas un système, on le remplace par un système équivalent <b><i>plus simple</i></b>)</p>
+
+<p>A tout hasard prenons un autre produit pour vérifier; par exemple des tortellini (encore des pâtes !) Pour \(100 g\) il y a \(16 g\) de protides, \(13 g\) de lipides et \(53 g\) de glucides dont la valeur énergétique vaut \(393 Kcal\).<br />
+Vérifions: \(16.2153/832 + 13*9 + 53.273/64\) soit environ \(384 Kcal\).</p>
+
+<p>Que se passe-t-il ? Les fabricants sont-ils des charlatans ? Les mathématiques sont-elles inconsistantes ?</p>
+
+<p>Rien de tout cela, car ici nous sommes en présence de la réalité. Or quand on mesure une grandeur (une masse en l'occurrence) on ne trouve évidemment jamais un nombre exact; la mesure est nécessairement entâchée d'une erreur (que l'on peut parfois estimer). De plus, on n'affiche qu'au maximum une décimale pour ne pas alourdir l'étiquetage (d'ailleurs qui lit ça ?); en fait, on arrondit les valeurs.</p>
+
+<p>Mais qu'en est-il de la résolution d'un système de deux équations à deux inconnues lorsque l'on sait que les coefficients numériques qui y figurent sont des arrondis.
+Soit le système:</p>
+
+\[ \begin{cases}
+ax+by=p \\ cx+dy=q
+\end{cases} \]
+
+<p>Dans le plan \(Oxy\), il s'agit de trouver les coordonnées \((x,y)\) du point d'intersection des deux droites représentatives de chacune des équations. Pour être plus concret, prenons des données numériques: \(a=1,4 b=2,1 p=3,5\) et \(c=3,0 d=1,8 q=4,5\)</p>
+
+<img alt="" src="arro/fig1.gif">
+
+<p>Mais ici s'agit-il de droites ?</p>
+
+<p>Supposons, comme dans l'exemple que les coefficients soient tous positifs. Essayons de représenter la "droite" \(ax+by=p\). Cette droite coupe l'axe \(x\) au point d'abscisse \(p/a\) et l'axe \(y\) au point d'ordonnée \(p/b\).</p>
+
+<p>Etant donné l'imprécision des valeurs \(a, b, p\) (supposées positives) on a en réalité \(a_m\lt a\lt a_M, b_m\lt b\lt b_M\) et \(p_m\lt p\lt p_M\). On voit que l'abscisse à l'origine \(x\) est comprise entre \(x_m=p_m/a_M\) et \(x_M = p_M/a_m\); de même l'ordonnée à l'origine \(y\) est comprise entre \(y_m = p_m/b_M\) et _\(M = p_M/b_m\)</p>
+
+<p>On voit ainsi qu'étant donné l'imprécision affectant les mesures, il s'agit non pas d'une droite, mais d'un ensemble de droites.</p>
+
+<p>Dans notre exemple numérique, \(1,35\lt a\lt 1,45\), \(2,05\lt b\lt 2,15\) et \(3,45\lt p\lt 3,55\) ce qui nous donne une abscisse à l'origine comprise entre \(2,38\) et \(2,63\) (valeurs arrondies au centième) et une ordonnée à l'origine comprise entre \(1,60\) et \(1,73\).</p>
+
+<img alt="" src="arro/fig2.gif">
+
+<p>Il en est évidemment de même pour la deuxième "droite" correspondant à la deuxième équation et la résolution du système revient à trouver les points figurant dans l'intersection, et par conséquent il n'y a pas <b>une</b> solution, mais bien un ensemble de solutions correspondant aux coordonnées des points situés dans l'intersection.</p>
+
+<img alt="" src="arro/fig3.gif">
+
+<p>Si on veut améliorer la précision des valeurs, on ajoutera d'autres équations, ce qui limitera un peu plus le domaine des solutions.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

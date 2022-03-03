@@ -1,0 +1,128 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Graphiques de fonctions - Analyse - Mathématique du secondaire - X.Hubaut ULB</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="graphique, courbe, asymptote, comportement asymptotique, fonctions" />
+<meta name="keywords" content="analyse, fonctions, graphiques, asymptotes, comportement asymptotique" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Graphiques de fonctions
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<p>Que de fois ne voit-on pas ici, en Belgique, une étude de fonction établie sur un canevas bien précis avec notamment étude du signe des dérivées première et seconde (pourquoi pas deuxième ?) et en fin du travail: pas de graphique par manque de temps !</p>
+
+<p>La recherche des asymptotes est presque toujours limitée aux droites. Pourtant il serait utile de se poser d'autres questions. En effet dans la pratique, les fonctions étudiées représentent des phénomènes physiques et bien souvent la variable \(x\) n'est autre que le temps. Dès lors on comprend l'importance du comportement asymptotique des fonctions.</p>
+
+<p>L'étude du signe des dérivées conduit à la résolution d'équations généralement insoluble par les méthodes connues des élèves. Alors, on utilise une calculette pour trouver des solutions approchées. Dès lors, si on accepte le recours à l'informatique, pourquoi ne pas utiliser un petit logiciel de traçage ? Il va de soi que, si on désire un graphique bien précis, il existe des outils informatiques adaptés à ce genre de problème.</p>
+
+<p>Ce qu'on est en droit d'exiger, sans intervention informatique, c'est la description de l'allure du graphique.<br />
+Outre l'étude du comportement asymptotique, il est également fort utile de pouvoir construire le graphique d'une fonction à partir d'autres plus simples.</p>
+
+<p>Nous prendrons deux exemples fort différents.</p>
+
+<p>Tout d'abord une fonction algébrique, tout ce qu'il y a de plus classique:</p>
+
+\[f(x) = (x^3 + 2)/(x-1)\]
+
+<p>Pas grand chose à dire sur le domaine de définition, sinon qu'il n'existe qu'une seule valeur critique \(x = 1\) pour laquelle seul le dénominateur s'annule et la fonction est donc infinie et il y a une asymptote verticale. On peut encore préciser qu'à gauche de 1 elle est négative et à droite elle est positive, donc elle sautera de \(-\infty\) à \(+\infty\). Elle s'annule quand \(x\) égale la racine cubique de -2. Pas d'asymptote, ni horizontale, ni oblique.</p>
+
+<p>Passons donc à la <a href="../mat/derivees.htm">dérivée</a> première.<br />
+ Après calcul on trouve \(f'(x) = (2x^3 - 3x^2 -2)/(x - 1)^2\). Pas de chance s'il n'y a aucun problème avec le dénominateur toujours positif sur le domaine de définition, par contre le numérateur est un polynôme du 3e degré et il n'est pas évident de trouver les valeurs de x qui l'annulent; en tâtonnant, il semble y avoir un zéro dans l'intervalle \(]0, 1[\). Peut-être aura-t-on le temps de préciser, mais voila, Il faut encore s'attaquer à la dérivée seconde qui s'annonce encore plus corsée. Saura-t-on l'étudier ? Et cela ne fait que commencer: il faudra encore tracer le graphique. Autant jeter l'éponge tout de suite !</p>
+
+<p>Voyons si l'on ne peut pas s'en tirer autrement. Il s'agit d'un quotient de deux polynômes. Pourquoi ne pas le calculer ?<br />
+On obtient comme quotient \(x^2 + x + 1\) avec un reste égal à 3. La fonction peut se réécrire \(f(x) = x^2 + x + 1 + 3/(x - 1)\); voila qui est plus sympathique. On peut alors écrire \(f(x) = g(x) + h(x)\) avec \(g(x) = x^2 + x + 1\) et \(h(x) =  3/(x - 1)\).<br />
+La fonction \(g(x)\) a pour graphique une parabole possédant un minimum en \(x = -1/2\) égal à 3/4; avec un ou deux points supplémentaires il n'y a plus aucune difficulté pour tracer son graphique. De plus, si l'on souhaite plus de précision, n'oublions pas que le calcul d'un point pour \(x = x_0\) donne automatiquement un second point pour \(x = -1-x_0\).<br />
+Passons à \(h(x)\). Il n'y a aucune difficulté pour en tracer le graphique. En décalant l'axe \(y\)  sur \(x = 1\) (l'asymptote verticale), on se ramène à une fonction du type \(3/x'\) , c'est-à-dire au graphique de \(1/x\) multiplié par 3. C'est une hyperbole ayant pour asymptote verticale \(x = 1\) et l'axe des \(x\) comme asymptote horizontale. Si la variable \(x\) tend vers l'infini (positif ou négatif) \(h(x)\) tend vers 0 et \(f(x)\) tend vers \(g(x)\). Cela signifie que lorsque \(x\) tend vers l'infini, le graphique de la fonction tend vers la parabole. N'est-ce pas là une asymptote ? C'est ce qu'on appelle une courbe asymptote.</p>
+
+<!--<img alt="" src="fonc/f1.png" width="50%">-->
+<img alt="" src="fonc/f1.png" width="447" height="365">
+
+<p>Pour achever le graphique il suffit de dessiner la parabole et de la "corriger" en ajoutant l'hyperbole dont la contribution est négligeable quand \(x\) est assez grand en valeur absolue, mais par contre très importante au voisinage de \(x = 1\).</p>
+
+<p>Une remarque importante: nous venons d'obtenir une courbe asymptote, c'est-à-dire une fonction g(x) telle que la différence entre \(f(x)\) et \(g(x)\) tend vers 0 lorsque \(x\) tend vers l'infini (positif ou négatif dans notre cas).</p>
+
+<p>Au cas où il n'existerait pas de courbe asymptote, il est également important de reconnaître le type de croissance asymptotique de la fonction: elle se comporte comme un polynôme de degré 2, 3, ... n, comme une exponentielle, un logarithme, une sinusoïde, ...  Cela signifie qu'il faut trouver une fonction \(k(x)\) (une des plus simples) telle que le rapport \(f(x)/k(x)\) tende vers 1 lorsque \(x\) tend vers l'infini. Un exemple: si \(f(x)\) est un polynôme de degré \(n, ax^n +...\) , tous les polynômes de degré n ayant le même terme en \(x^n\) répondent à la question, mais on choisira évidemment \(k(x) = ax^n\).</p>
+
+<p>Certes, il s'en trouvera pour critiquer cet exemple. Et si l'on avait pris la fonction \((x - 1)/(x³ + 2)\), la méthode aurait-elle échoué ? Pas certain. Il est vrai que le calcul de la division n'est plus possible, mais alors il suffit d'inverser la fonction et on se retrouve dans la situation qui vient d'être étudiée. Dès lors, il n'est pas difficile d'évaluer le graphique de la fonction donnée à partir de celui trouvé plus haut.</p>
+
+<p>Pour d'autres fonctions algébriques comprenant une racine carrée, voir la <a href="sqrt.htm">suite</a> !</p>
+
+<p>Voici à présent une autre fonction, moins traditionnelle, mais fort simple: \(f(x) = x².cos x\).</p>
+
+<p>A nouveau, aucune difficulté ni pour le domaine de définition, ni pour les zéros.<br />
+Calculons la dérivée première; \(f'(x) = 2x.cos x - x².sin x\) et ses zéros. On trouve immédiatement \(x = 0\) et les autres sont solutions de l'équation \(2cos x -x.sinx = 0\). Nous voilà à nouveau coincés car nous ne pouvons obtenir les solutions que par approximation. Inutile d'aller plus loin.<br />
+Ne serait-il pas plus simple d'écrire \(f(x) = g(x).h(x)\) avec \(g(x) = x²\) et \(h(x) = cos x\) ? Nous sommes alors face à deux fonctions \(g\) et \(h\) que nous connaissons bien. Le graphique de \(g\) est une parabole, celui de \(h\) une cosinusoïde. La fonction \(f\) est le produit des deux. Comme \(cos x\) oscille entre -1 et +1, le graphe sera compris entre ceux de \(x^2\) et \(-x^2\). Cette remarque nous permet d'en déduire l'allure du graphique de \(f(x)\).</p>
+
+<img alt="" src="fonc/f2a.png" width="429" height="365">
+
+<p>Pour des petites valeurs de \(x\), ce graphique est évidemment imprécis. Il suffit alors de le faire de manière plus affinée en utilisant soigneusement les graphiques des fonctions \(g\) et \(h\).</p>
+
+<img alt="" src="fonc/f2.png" width="447" height="365">
+
+<p> Dans cet exemple, les dérivées, même la dérivée première, ne nous auront donc été d'aucune utilité !</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

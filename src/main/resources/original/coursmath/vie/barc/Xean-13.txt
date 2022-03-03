@@ -1,0 +1,78 @@
+﻿http://mp.cpgedupuydelome.fr/document.php?doc=Article%20-%20Les%20codes%20barres.txt
+http://dsaurel.free.fr/Code_barre/cb.htm
+http://rouxjeanbernard.ch/AM/html/amch7.html
+
+pour choisir
+http://www.codebarre.be/image-code-barre.php?vtype=2
+
+
+A	commençant par un blanc à gauche  (G)
+1	2221	BBNNBBN
+2	2122	BBNBBNN
+3	1411	BNNNNBN
+4	1132	BNBBBNN
+5	1231	BNNBBBN
+6	1114	BNBNNNN
+7	1312	BNNNBNN
+8	1213	BNNBNNN
+9	3112	BBBNBNN
+0	3211	BBBNNBN
+
+C	complémentaire de A (on échange noir et blanc)  (D)
+1	2221	NNBBNNB
+2	2122	NNBNNBB
+3	1411	NBBBBNB
+4	1132	NBNNNBB
+5	1231	NBBNNNB
+6	1114	NBNBBBB
+7	1312	NBBBNBB
+8	1213	NBBNBBB
+9	3112	NNNBNBB
+0	3211	NNNBBNB
+
+B	symétrique de C	(G')
+1	1222	BNNBBNN
+2	2212	BBNNBNN
+3	1141	BNBBBBN
+4	2311	BBNNNBN
+5	1321	BNNNBBN
+6	4111	BBBBNBN
+7	2131	BBNBBBN
+8	3121	BBBNBBN
+9	2113	BBNBNNN
+0	1123	BNBBNNN
+
+Des 13 chiffres que nous devons coder, nous isolons le premier et séparons les restant en deux blocs de six chiffres qui constitueront les portions gauche et droite de notre code barre. 
+
+Les chiffres de la portion droite seront simplement transformés en barres par le code D . 
+Pour la portion gauche c'est plus compliqué, ce sont les codes G  et G ′   qui vont être utilisés. 
+Plus précisément, le premier chiffre que nous avons isolé détermine la position des chiffres qui seront codés par le code G , les autres étant codés par G ′ . 
+Par exemple, si le premier chiffre du code barre est égal à 3, il est convenu que les six chiffres de la portion gauche seront codés en
+
+G∣ ∣ G∣ ∣ G ′ ∣ ∣ G ′ ∣ ∣ G ′ ∣ ∣ G 
+
+ou  AABBBA
+
+premier chiffre donne le codage des 6 chiffres suivants
+
+0	AAAAAA
+1	AABABB
+2	AABBAB
+3	AABBBA
+4	ABAABB
+5	ABBAAB
+6	ABBBAA
+7	ABABAB
+8	ABABBA
+9	ABBABA
+
+Chiffre de contrôle
+
+Dans les 13 chiffres définissant un code barre, le dernier est un chiffre de contrôle permettant de vérifier l'intégrité de la lecture du code c'est-à-dire de vérifier qu'il n'y a pas eu (trop) d'erreurs lors du décryptage du code. Ce dernier chiffre est calculé de la façon suivante :
+
+- on somme les chiffres de rang impair ce qui donne S 1   ;
+- on somme les chiffres de rang pair, S 2   ;
+- on détermine le chiffre C  des unités de S 1 +3S 2  .
+Le dernier chiffre du code vaut alors 10−C .
+
+

@@ -1,0 +1,65 @@
+﻿.source {
+	font-size:1.2em;
+	font-weight: bold;
+	color:#000;
+}
+.titre {
+	color: #eb0;
+	font-size: 2.4em;
+	font-weight: bolder;
+}
+.stitre {
+	color: #eb0;
+	font-size: 1.8em;
+	font-weight: bolder;
+}
+.central {
+	background: #ffd;
+	border: 2px solid #eb0; 
+	padding: 30px 50px;
+	border-radius: 50px;
+}
+.st {	
+	font-size: 1.1em;
+	font-weight:bold;
+}
+p, li {
+	line-height: 1.5em;
+	text-align: justify;
+}
+p {
+	text-indent: 1.7em;
+}
+.ni {
+	text-indent: 0;
+}
+.droite {
+	margin-left: 20px;
+	float: right;
+}
+.gauche {
+	margin-right: 20px;
+	float: left;
+}
+.mid {
+	vertical-align:middle; 
+}
+.final { 
+	width: 800px;
+	align: center;
+}
+.fin1 {
+	width:200px;
+	text-align:left;
+}
+.fin2 {
+	width:200px;
+	text-align:center;
+}
+.fin3 {
+	width:200px;
+	text-align:right;
+}
+.fin0 {	
+	width:100px;
+}

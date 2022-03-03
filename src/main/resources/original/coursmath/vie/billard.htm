@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Billard et symétries  - Vie courante - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Le billard utilise les symétries" />
+<meta name="keywords" content="billard, snooker, symétrie, axe, centre" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="vie.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-5', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Billard et symétries 
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>On distingue plusieurs types de billards, le billard "français", le plus courant dans la "vieille Europe", le snooker très prisé en Grande-Bretagne, et une variante simplifiée aux USA.<br />
+A part cela il existe des billards "virtuels" inventés par les mathématiciens: le billard circulaire, le billard elliptique, etc.</p>
+
+<p>Nous nous bornerons à considérer ici le billard français, appelé encore carambole.</p>
+
+<p>Il s'agit d'une surface plane rectangulaire de 2,84m x 1,42m recouverte d'un tapis de feutre et cernée par quatre bandes de caoutchouc sur lesquelles la boule rebondit avec un maximum d'élasticité. Il y a trois billes (ou dit parfois boules), une rouge et deux autres destinées aux deux joueurs. Généralement celles-ci sont blanches et distinguées par la présence d'un petit point, mais parfois l'une est blanche et l'autre jaune pâle. Le but du jeu est de heurter sa bille de telle manière qu'elle s'en aille cogner les deux autres et réaliser un carambolage et de marquer ainsi un point. La réalisation du point permet au joueur de continuer; s'il échoue la main passe à son adversaire.</p>
+
+<p>Le joueur heurte sa bille avec une queue. Le choc peut être dirigé à divers endroits et peut provoquer ce qu'on appelle un "effet"; la bille tournoie et ce mouvement de rotation modifie le rebond lors des chocs. L'étude de ce problème est assez compliquée; nous supposerons que le joueur heurte la bille par un choc dirigé vers le centre de celle-ci.</p>
+
+<p>En décomposant le problème il faut donc, avec sa bille, heurter d'abord une des deux autres billes.</p>
+
+<p style="st"><b>Rebond sur une bande</b></p>
+
+<img class="gauche" alt="" src="bill/billard1.gif">
+
+<p>Comment se produit un rebond ? Tout simplement de la même manière que la réflexion de la lumière sur un miroir. La bille rebondit sur la bande en faisant un angle égal à l'angle sous lequel elle l'a touchée; en fait cette trajectoire <a href="../app/minima.htm">minimise la distance</a> parcourue. Si nous voulons toucher une bille en utilisant une seule bande, il nous faudra donc viser le symétrique de la bille par rapport à la bande choisie.</p>
+
+<p>Le joueur est souvent aidé par la présence sur le bord du billard de différentes marques qui lui servent de points de repère pour mieux estimer la position de la symétrique de la bille visée.</p>
+
+<p style="st"><b>Rebond sur deux bandes</b></p>
+
+<img class="droite" alt="" src="bill/billard2.gif">
+
+<p>Il peut arriver que la disposition des billes impose au joueur de toucher une bille après deux rebonds. Cela peut se passer sur deux bandes parallèles ou deux bandes perpendiculaires.</p>
+
+<p>Si les deux bandes sont perpendiculaires il s'agira de viser la symétrique de la symétrique de la bille. Or le produit de deux symétries d'axes perpendiculaires est rotation d'un demi-tour autour du point d'intersection (qui est tout simplement un angle du billard). La bille à viser est donc la symétrique par rapport au point a de la bille réelle.</p>
+
+<p>Au cas où le joueur doit utiliser deux rebonds sur deux bandes parallèles, le produit des symétries est une translation dont l'amplitude vaut le double de la distance séparant les bandes.</p>
+
+<p class="st"><b>Rebond sur trois bandes</b></p>
+
+
+<img class="gauche" alt="" src="bill/billard3.gif">
+
+<p>Nous regarderons ce qui se passe dans le cas le plus fréquent où les 3 bandes sont consécutives.<br />
+Il faut donc faire le produit de trois symétries axiales. Nous venons de voir que le produit des deux premières est une rotation d'un demi-tour. Cette rotation, combinée avec une troisième symétrie axiale donnera une symétrie glissée. </p>
+
+<p>Le joueur devra alors faire preuve d'un peu plus d'imagination pour visualiser la position de la bille à viser; il doit imaginer la position de la symétrique par rapport à \(ab\), ensuite la symétrique de celle-ci par rapport à \(a'd'\) (mais il peut s'aider du fait que c'est la symétrique de la bille par rapport au point a) et enfin la symétrique par rapport à \(c''d''\). En fait c'est le résultat d'un symétrie glissée d'axe \(da\) d'amplitude égale au double de la distance \(da\).</p>
+
+<p>Tout cela paraît un peu compliqué, mais les joueurs sont tellement exercés qu'il a fallu créer un type de compétition dénommé "le trois bandes" qui leur impose de ne pouvoir réaliser le point qu'après avoir touché au minimum trois bandes ! Sans cela les joueurs très expérimentés réalisaient des centaines de points consécutifs.</p>
+
+<p>Tout ceci ne concerne que le cas où la bille est heurtée centralement, et de plus uniquement la visée de la première bille ! Le problème général est bien plus compliqué et il est remarquable de voir comment les joueurs s'en tirent uniquement par leur expérience.</p>
+
+<p>Les mathématiques ne constituent, au billard, qu'un tout premier pas...</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="vied.htm">Vie courante</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

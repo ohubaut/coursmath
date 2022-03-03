@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Itérations - Analyse - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="convergence, racine carrée, approximation" />
+<meta name="keywords" content="analyse, itération;, racine carrée, approximations" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Itérations
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<p>Une méthode mathématique, souvent utilisée pour résoudre des problèmes pour lesquels il n'existe pas de méthode exacte directe, est la méthode d'itération.</p>
+
+<p>Le principe de cette méthode est fort simple: on part d'une valeur (approchée, estimée) et, à partir d'une formule qui permet de l'améliorer, on construit une nouvelle valeur plus précise. On répète cette opération, autant de fois que nécessaire pour arriver à une précision suffisante.
+Un exemple est celui de la recherche de solutions d'une équation.</p>
+
+<p>Nous avons déjà rencontré cette démarche lors de la recherche de la <a href="racine2.htm">racine carrée</a> (méthode de Platon, méthode de Héron) ainsi que celle de la recherche d'une racine n<sup>ème</sup> (méthode de Newton).
+Rappelons brièvement la méthode de Héron, dont la convergence est fort rapide.</p>
+
+<p>Soit à calculer la racine carrée de \(n\) (évidemment > 0). On part d'une valeur approchée \(x_1\). Une manière de vérifier la vraisemblance de cette valeur est de calculer \(n/x_1\). Si le résultat est supérieur, nous avons sous-estimé cette racine, s'il est inférieur, nous l'avons surestimée. L'amélioration consiste à prendre alors une nouvelle valeur comprise dans l'intervalle déterminé par \(x_1\) et \(n/x_1\), par exemple la moyenne arithmétique. La nouvelle approximation \(x_2  = ( x_1 + n/x_1)/2 = (x_1^2 + n)/2x_1\).</p>
+
+<p>Comment visualiser cette situation ?</p>
+
+<p>Considérons tout d'abord la fonction \(y = (x^2 + n)/2x\) .  En effectuant la division par \(2x\), on obtient \(y = x /2 + n/2x\).
+La fonction est donc la somme de \(y = x/2\) et de \(y = n/2x\). On peut utiliser cette information pour en <a href="fonction.htm">construire le graphique</a>.
+Pour simplifier la suite du dessin nous choisirons \(n=2\).</p>
+
+<img src="iter/somme.gif" alt="" width=300 height=302>
+
+<p>Dès que \(x\) est "grand" la fonction est proche de \(y = x/2\). La droite \(y = x/2\) représente la fonction asymptote. Par contre, au voisinage de \(x = 0\) il y aura une forte perturbation : la fonction sera infinie (positive) pour \(x&gt;0\) ; ensuite elle sera décroissante et poursuivra son tracé en s'approchant de son asymptote \(y = x/2\).</p>
+
+<img src="iter/fonct.gif" alt="" width=300 height=300>
+
+<p>Le processus d'itération s'effectue de la manière suivante.</p>
+
+<p>Partant de \(x_1\) on calcule la valeur \(y_1\) de cette fonction. Ensuite on prend \(x_2 = y_1\), c'est-à-dire qu'on utilise une deuxième fonction \(y = x\). On recommence l'opération avec la valeur \(x_2\) et ainsi de suite.</p>
+
+<p>Représentons les choses graphiquement.</p>
+
+<p>Evidemment, il n'y aucun problème pour représenter la fonction \(y = x\).
+Nous sommes maintenant à même de visualiser l'itération.
+Choisissons une valeur quelconque \(x_1 = 4\); à cette valeur correspond \(y_1 = 2,25\);</p>
+
+<img src="iter/rac2.gif" alt="" width=424 height=424>
+
+<p>Essayons à présent \(x_2 = y_1 = 2.25\); on obtient \(x_3 = 1.5694444...\).
+En poursuivant on a:<br />
+\(x_4 = 1.42189036..., x_5 = 1.41423428...\)</p>
+
+<p>On obtient ainsi une suite de segments qui convergent vers le point de coordonnées \((a, a)\), solution du problème.
+Remarquons que ce point correspond au minimum de la fonction qui, on le vérifie facilement, est \(\sqrt{2}\).</p>
+
+<p>Dans l'exemple choisi, on est certain d'aboutir à une valeur aussi précise que possible; cela se devine aisément à la vue du graphique. Cependant, ce n'est pas la panacée. Dans d'autres problèmes, la convergence n'est pas toujours assurée et il convient toujours de rester prudent.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

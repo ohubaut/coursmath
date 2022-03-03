@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Graphiques de fonctions (2) - Analyse - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="fontions, comportement, asymptotique, graphique, dérivée, inflexion" />
+<meta name="keywords" content="analyse, fonctions, graphiques, asymptotes, comportement asymptotique" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico">
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Graphiques de fonctions (suite)
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<p>Dans le premier article consacré aux <a href="fonction.htm">graphiques de fonctions</a>, nous avons choisi des exemples de fonctions d'une variable \(x\) ne contenant pas de racines carrées.</p>
+
+<p>Nous allons ici considérer quelques fonctions simples \(y = f(x)\) où \(f(x)\) contient la racine carrée d'une fonction de \(x\).</p>
+
+<p>Commençons par un exemple :</p>
+
+\[y = \sqrt{ax² + bx +c}\]
+
+<p>Nous connaissons bien les propriétés et le graphique de la fonction du 2e degré. On distingue essentiellement 3 cas :</p>
+
+<ul>
+<li>le discriminant est négatif : \(b² - 4ac &lt; 0\). Aucune valeur de \(x\) n'annule le trinôme \(ax² + bx +c\) ; il conserve toujours son signe. Si \(a &lt; 0\), il n'y a pas de solution réelle ; si \(a &gt; 0\), il y aura un graphique que nous regarderons dans un instant.</li>
+<li>le discriminant est nul ; \(b² - 4ac = 0\). Le trinôme peut alors s'écrire \(a(x-\alpha)^2\). Si a  est négatif, il n'y aura aucune racine réelle à l'exception de \(x =\alpha\), valeur pour laquelle \(y = 0\). Par contre, si \(a\) est positif, le graphique est formé de deux demi-droites se coupant au point de coordonnées \(( \alpha, 0)\)</li>
+<li>le discriminant est positif : \(b² - 4ac &gt; 0\). Deux valeurs de \(x\) annulent le trinôme et ce dernier sera positif à l'extérieur de ces valeurs si \(a &gt; 0\) ou positif entre ces valeurs si \(a &lt; 0\). Il y aura donc deux types de graphiques.</li>
+</ul>
+
+<p>Nous donnons ci-dessous 4 graphiques correspondant à 4 types de trinômes.</p>
+
+<table class="centre"><tr>
+<td>1<br /> <img class="enc" alt="a" src="sqrt/a.gif" width=139 height=126><img alt="" src="../dot.png" width=20 height=20><br /><br />
+\(y = \sqrt{x^2 + x + 1}\)</td>
+<td>2<br /> <img class="enc" alt="b" src="sqrt/b.gif" width=139 height=126><img alt="" src="../dot.png" width=20 height=20><br /><br />
+\(y = \sqrt{x^2 + 2x + 1}\)</td>
+<td>3<br /> <img class="enc" alt="c" src="sqrt/c.gif" width=139 height=126><img alt="" src="../dot.png" width=20 height=20><br /><br />
+\(y = \sqrt{x^2- x - 2}\)</td>
+<td>4<br /> <img class="enc" alt="d" src="sqrt/d.gif" width=139 height=126><img alt="" src="../dot.png" width=20 height=20><br /><br />
+\(y = \sqrt{-x^2+ x + 2}\)</td>
+</tr></table>
+<p>Passons ces 4 cas en revue.</p>
+
+<ul>
+<li>lorsque x est très grand, le terme le plus important est le terme en x² et la racine carrée vaut soit - x, soit + x ; le graphique possède deux asymptotes obliques de pente ± 1.</li>
+<li>les deux demi-droites ont pour équations \(y = \pm(x + 1)\).</li>
+<li>le graphique est situé à l'extérieur de l'intervalle [-1, +2] et à nouveau il possède 2 asymptotes obliques de pente ± 1.</li>
+<li>le graphique est situé à l'intérieur de l'intervalle [-1, +2].</li>
+</ul>
+<p>Enfin, dans les cas 3 et 4, on vérifie qu'aux points x = -1 et x = +2, les tangentes sont verticales (la dérivée est infinie).</p>
+
+<p>Mais réfléchissons un instant.</p>
+
+<p>Nous connaissons les nombres complexes et là, tout nombre possède deux racines carrées opposées (sauf 0 qui a deux racines carrées confondues). Mais on ne peut plus parler de racine positive ! Par exemple les racines carrées de -1 sont \(i\) et \(-i\), mais <a href="../com/imagin.htm#POS"> \(i\) n'est ni positif, ni négatif</a>. Peut-être, serait-il alors intéressant d'étudier l'ensemble des deux fonctions :</p>
+
+\(y = \sqrt{ax^2 + bx +c}\)      ainsi que      \(y = - \sqrt{ax^2 + bx +c}\)<br>
+
+<p>On obtient alors :</p>
+
+<table class="centre"><tr>
+<td> <img class="enc" alt="aa" src="sqrt/aa.gif" width=139 height=187><img alt="" src="../dot.png" height=20 width=20><br /><br />
+\(y = \pm \sqrt{x² + x + 1}\)</td>
+<td> <img class="enc" alt="b" src="sqrt/bb.gif" width=139 height=187><img alt="" src="../dot.png" height=20 width=20><br /><br />
+\(y = \pm \sqrt{x² + 2x + 1}\)</td>
+<td> <img class="enc" alt="cc" src="sqrt/cc.gif" width=139 height=187><img alt="" src="../dot.png" height=20 width=20><br /><br />
+\(y = \pm \sqrt{x²- x - 2}\)</td>
+<td> <img class="enc" alt="dd" src="sqrt/dd.gif" width=139 height=187><img alt="" src="../dot.png" height=20 width=20><br /><br />
+\(y = \pm \sqrt{-x²+ x + 2}\)</td>
+</tr></table>
+
+<p>Il semble qu'on reconnaisse alors une hyperbole, deux droites sécantes, une autre hyperbole et enfin une ellipse.</p>
+
+<p>Effectivement, il n'est pas compliqué de vérifier cela. Prenons l'équation générale d'une conique, c'est-à-dire un polynôme du 2e degré en les variables x et y. Soit l'équation générale :</p>
+
+\[ax^2 + 2bxy + cy^2 + 2dx + 2ey + f = 0\]
+
+<p class="ni">en ordonnant par rapport à y, on obtient :</p>
+
+\[cy² + 2(bx + e)y + (ax² + 2dx + f) = 0\]
+
+<p class="ni">et en résolvant par rapport à y, on obtient selon le signe choisi deux fonctions :</p>
+
+\[y = - (bx + e) ± \sqrt{\frac{(bx + e)² - c(ax² + 2dx + f)}{c}}\]
+
+<p class="ni">c'est-à-dire une fonction linéaire : \(y = - (bx + e)\), dont le graphique est une droite à laquelle on ajoute (ou retranche) la racine carrée d'un trinôme du 2e degré dont le graphique est du type de l'un de ceux que nous venons de rencontrer.</p>
+
+<p>Prenons un exemple :</p>
+
+\[y = - x + 1 \pm \sqrt{- x² - x + 2}\]
+
+<p>Tout d'abord, les graphiques de chacune des deux fonctions.</p>
+
+<div>
+<img class="enc" alt="" src="sqrt/dr+rac.gif" width=282 height=287>      <img class="enc" alt="" src="sqrt/dr-rac.gif" width=282 height=287></div>
+
+<p>Sur les deux graphiques, on a tracé en vert la droite \(y_1 = - x + 1\) et en violet \(y_2 = \sqrt{- x² - x + 2}\) sur le premier et \(y_2 = - \sqrt{- x² - x + 2}\) sur le second.<br />
+La somme de ces deux fonctions est dessinée en rouge sur le premier et en bleu sur le deuxième.</p>
+
+<p>Dessinons à présent ces deux fonctions sur un même graphique :</p>
+
+<img class="enc" alt="" src="sqrt/12.gif" width=282 height=287>
+
+<p class="ni">et nous obtenons celui de \(y = - x + 1 \pm \sqrt{- x^2 - x + 2}\)  que l'on peut encore écrire sous la forme :</p>
+
+\[(y + x - 1)^2 = - x^2 - x + 2\]
+
+<p>On reconnaît mieux ainsi l'équation d'une conique ; on peut encore l'écrire sous forme d'un polynôme du 2e degré en x et y :</p>
+
+\[2x^2 + 2xy + y^2 - x - 2y - 1 = 0\]
+
+<p>Terminons par une remarque.</p>
+
+<p>De même que \(y = ax + b\) représente une droite, mais qu'inversement toutes les droites ne sont pas représentées par une équation de ce type (il manque les droites d'équation \(x = a)\), une équation du type \(y = - (bx + e) ± \sqrt{[(bx + e)² - c(ax² + 2dx + f)]/c}\) représente une conique, on n'obtient pas l'ensemble de ces coniques.<br />
+Si \(c = 0\), la conique s'écrit \(y = - (ax² + 2dx + f)/2(bx + e)\) à condition que \(b \text{  et  }e\) ne soient pas simultanément nuls. L'étude des coniques sous forme de fonctions n'est pas bien adaptée à ce problème.</p>
+
+<p>Prenons un autre exemple, la "célèbre" fonction :</p>
+
+\[y = \sqrt{x^2 (x + 1)}\]
+
+<p>Son graphique se présente ainsi :</p>
+
+<img class="enc" alt="cisspos" src="sqrt/cisspos.gif" height=270 width=287>
+
+<p>Nous avons dit "célèbre", car c'est presque toujours la fonction donnée en exemple d'une fonction pour laquelle les dérivées à gauche et à droite de l'origine existent mais sont différentes.
+En effet, lorsqu'on calcule cette dérivée, on est amené à extraire la racine carrée de x². Elle vaut x lorsque x est positif et -x quand x est négatif.</p>
+
+<p>Comme dans le premier cas étudié, le graphique de cette fonction serait plus harmonieux si on le complétait par celui de sa "sœur siamoise" (en prenant l'autre racine carrée) et considérons l'ensemble des deux fonctions :</p>
+
+\[y = \pm \sqrt{x^2 (x + 1)}\]
+
+<p>Dessinons cette fois, les 2 fonctions dans la même couleur et nous obtenons :</p>
+
+<img class="enc" alt="strophoide" src="sqrt/strophoide.gif" height=270 width=287></div>
+
+<p>N'est-ce pas bien plus joli ?</p>
+
+<p>Nous sommes maintenant en présence d'une belle courbe, nommée strophoïde, avec une tangente donc la pente varie de manière parfaitement continue. Nous avons perdu le caractère "fonction" (on dit pourtant qu'il s'agit d'une fonction multiforme) et cette courbe représente les points de coordonnées \((x, y)\) tels que \(y = \pm \sqrt{x²(x + 1)}\) ce qui est équivalent à \(y² = x²(x + 1)\) ou encore le graphique de la courbe :</p>
+
+\[x^3 + x^2 - y^2= 0\]
+
+<p>Il s'agit d'une courbe du 3<sup>e</sup> degré qui est coupée par une droite en au plus 3 points. En particulier, il est intéressant de regarder les intersections avec les droites passant par l'origine. Chacune de ces droites la coupe en deux points confondus à l'origine et un troisième qui varie en fonction de la pente de la droite.
+Soit l'équation \(y = \lambda x\) d'une droite passant par l'origine. On obtient les abscisses des intersections en remplaçant dans l'équation de la courbe \(y\) par \(\lambda x\) ; cela conduit à :</p>
+
+\[x^3 + x^2 - \lambda^2 x^2= 0 \text{ ou encore }  x^3 + (1 - \lambda^2)x^2 = 0\]
+
+<p>On observe deux solutions confondues en \(x = 0\) et une 3<sup>e</sup> solution \(x = \lambda² - 1\). Cela conduit aux équations paramétriques fort simples de cette courbe :</p>
+
+
+
+\[ \begin{cases} x = \lambda^2 - 1 \\ y=\lambda^3 - \lambda \end{cases}\]
+
+<p>À propos des tangentes à l'origine, que peut-on en dire ? En valeur absolue, les points de la courbe voisins de l'origine ont des coordonnées \(x\) et \(y\) fort petites (certainement plus petites que 1 !) ; évidemment \(x^2\) et \(y^2\) sont encore plus petits et x³ et y³ encore plus petits. Éliminons les termes les plus petits et au voisinage de l'origine, la courbe est donc très proche de \(x^2 - y^2 = 0\) ou encore \((x + y) (x - y) = 0\). Les deux tangentes sont donc \(y = x\) et \(y = -x\).</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

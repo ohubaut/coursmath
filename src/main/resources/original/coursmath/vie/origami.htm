@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Origami - Vie courante - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="Objets obtenus par pliage du papier" />
+<meta name="keywords" content="carré, pentagone, ruban de Möbius" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="vie.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-5', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Origami
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>L'origami consiste en une manière de plier ( "ori" = plier = <img alt="" src="orig/ori.gif"> ) du papier ("gami" = papier = <img alt="" src="orig/gami.gif"> ) pour construire des figures plus élaborées.<br />
+Une des règles du jeu est de s'interdire de découper ou de coller le papier, ce qui limite évidemment les marges de manœuvre.<br />
+Cependant l'ingéniosité de certains a permis de réaliser des petites merveilles.</p>
+
+<p>Partons d'une feuille quelconque. Il n'est guère difficile de construire un rectangle, un carré, un losange. En effet un pli dans une feuille de papier correspond d'une part à une droite, d'autre part à une symétrie axiale. Dès lors on peut construire les axes de symétrie d'une droite et par suite les perpendiculaires. Donc faire un angle droit n'est guère difficile. De plus construire une parallèle est également fort simple.<br />
+On arrive donc très facilement à construire les quadrilatères ci-dessus.</p>
+
+<p>De plus on peut aisément reporter des longueurs égales: un pliage amène une extrémité du segment sur la correspondante et un deuxième pliage achève d'amener l'autre extrémité en place. En fait, on peut pratiquement faire avec des pliages tout ce que l'on peut construire avec une latte et un compas.</p>
+
+<p>Partons d'un carré. Est-il possible de construire un carré dont l'aire est la moitié de celle du carré de départ ? Très simple: il suffit de replier les 4 sommets sur le centre du carré.<br />
+Peut-être est-ce plus difficile de construire un carré valant le tiers du carré initial ? Mais ce n'est pas impossible.<br />
+Si on demande un carré valant le quart cela redevient simple. Bien sûr, on peut faire compliqué en se disant: "Puisqu'on sait construire la moitié, il suffit de prendre la moitié de la moitié." Mais évidemment il y a plus simple on replie le carré initial suivant ses médianes.<br />
+<img class="droite" alt="" src="orig/5carre.gif">Et si on demandait un carré égal au cinquième du carré initial ?<br />
+Là encore on peut s'en tirer facilement. Il suffit de construire les médianes, et de replier suivant une droite joignant un sommet au milieu du côté opposé, comme le montre la figure.<br />
+On voit immédiatement la carré central; la juxtaposition d'un trapèze avec un triangle donne un carré égal. Au total 5 carrés (attention un seul est obtenu sans découpage !) égaux.<br />
+Un autre manière de le démontrer consiste à calculer le côté du carré central et le <a href="../var/pytha.htm">théorème de Pythagore</a> est là pour nous donner un sérieux coup de main. Par exemple, si on prend pour unité un demi-côté du carré initial, le segment joignant un sommet au milieu du côté opposé vaut \(\sqrt{5}\). D'autre part dans le triangle rectangle \(abc\), la hauteur \(db\) le partage en 2 nouveaux triangles rectangles semblables. En particulier le triangle \(abd\) est semblable à \(acb\) et le rapport \(ab/ac=ad/ab\). On en déduit \(ad=ab^2/ac=4/\sqrt{5}\).<br />
+Le côté du petit carré en vaut la moitié \((2/\sqrt{5}\)) et son aire est égale à \(4/5\), c'est-à-dire le cinquième de celle du grand carré.<br />
+Cette seconde démonstration est plus compliquée que la première, mais elle met en lumière l'importance du théorème de Pythagore et montre que grâce à son usage répété, on peut aisément construire les racines carrées de tout naturel.</p>
+
+<p><img class="gauche" alt="" src="orig/5gone.gif">Un autre exemple est de partir d'une bande de papier (assez étroite) et de former un nœud que l'on aplatit. On obtient ainsi quelque chose qui ressemble à un pentagone régulier. Reste à le démontrer...</p>
+
+<p><img class="droite" alt="" src="orig/5gone1.gif">Il suffit tout d'abord d'observer la symétrie de la figure et ensuite de s'intéresser à l'intersection de deux bandes de même largeur. On obtient comme intersection un losange, d'où de nombreuses égalités de segments et d'angles.</p>
+
+<p>Ces deux exemples montrent comment réaliser simplement de petites constructions. De nombreuses autres peuvent être ainsi faites de manière fort élémentaire.</p>
+
+<p>Sortant légèrement des règles de l'origami, autorisons-nous à recoller les extrémités de la bandelette de papier.<br />
+Si nous recollons les extrémités soigneusement, en évitant que la bande ne soit tordue, nous obtenons évidemment un cylindre.<br />
+Par contre, si nous recollons après lui avoir fait faire un demi-tour, le résultat est un <a href="../3di/surfd.htm">ruban de Möbius</a>, curieuse surface qui ne possède qu'une seule face et un seul bord.<br />
+On peut ensuite poursuivre l'expérience en recollant après un tour, un tour et demi... et examiner les diverses surfaces obtenues.</p>
+
+<p>Imaginons ensuite que l'on découpe longitudinalement en son milieu l'objet obtenu. Qu'obtient-on ?<br />
+Pour le cylindre c'est assez évident: deux petits cylindres.<br />
+Quant au ruban de Möbius, il vaut mieux réfléchir avant de répondre. Ensuite on peut vérifier à l'aide d'une paire de ciseaux (ce n'est bien entendu plus de l'origami !). Le résultat est surprenant.<br />
+Compliquons légèrement les choses et coupons la bandelette longitudinalement à partir de son tiers. Quel sera le résultat ? Et ainsi de suite.</p>
+
+<p>Bref voila de quoi s'occuper une après-midi pluvieuse !...</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="vied.htm">Vie courante</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

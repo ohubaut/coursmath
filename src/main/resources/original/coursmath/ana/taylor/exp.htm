@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Développement de Taylor de exp x</title>
+<link type="text/css" rel="stylesheet" href="../../commun.css" media="screen, projection">
+<link type="text/css" rel="stylesheet" href="../ana.css" media="screen, projection">
+<script type="text/javascript">
+<!--
+//PLF-http://www.jejavascript.net/
+var bauto = 0;
+var dossier="";
+var numero = 1;
+	function objet() {
+this.length = objet.arguments.length
+for (var i = 0; i < this.length; i++) this[i+1] = objet.arguments[i]
+}
+var nom = new objet ("exp.gif", "exp01.gif", "exp02.gif", "exp03.gif", "exp04.gif", "exp05.gif", "exp06.gif", "exp07.gif", "exp08.gif", "exp09.gif", "exp10.gif");
+	function suivante() {
+numero += 1;
+if (numero == nom.length + 1) numero = 1;
+document.image.src = dossier+nom[numero];
+}
+	function precedente() {
+numero -= 1;
+if (numero == 0) numero = nom.length; 
+document.image.src = dossier+nom[numero];
+}
+	function changer() {
+numero += 1;
+if (numero == nom.length + 1) numero = 1;
+document.image.src = dossier+nom[numero];
+roll=setTimeout("changer()", 1000);
+}
+	function initial() {
+window.clearTimeout(roll);
+document.image.src = dossier+nom[numero];
+}
+	function initauto() {
+numero -= 1;
+if (numero == 0) numero = nom.length; 
+document.image.src = dossier+nom[numero];
+window.clearTimeout(roll);
+document.image.src = dossier+nom[numero];
+}
+//-->
+</script> 
+
+</head>
+<body onLoad="changer();initauto();window.focus();">
+<div id="container">
+	<div class="titre">
+	<br />
+Fonction exp (<i>x</i>)
+	<br />
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<table class="centre">
+<tr><td colspan=3>
+<img alt="cosinus" src="exp.gif" name="image"><br />
+</td></tr>
+<tr><td>
+<a href="javascript:initial();precedente();"><img alt="avant" src="prec.gif"  title="Precedente" width=20 height=20><br />
+précédente</a>
+</td><td>
+<a href="javascript:initauto();changer();"><img alt="auto" src="auto.gif" title="Automatique" width=20 height=20><br />
+automatique</a>
+</td><td>
+<a href="javascript:initial();suivante();"><img alt="après" src="suiv.gif" title="Suivante" width=20 height=20><br />
+  suivante  </a>
+</td></tr>
+</table>
+		</div>
+	</div>
+	<div id="fermeture">
+<br />
+<a href="../taylor.htm#exp"><img alt="retour" src="../../retour.gif"></a><br />
+<br />
+	</div>
+</div>
+
+</body>

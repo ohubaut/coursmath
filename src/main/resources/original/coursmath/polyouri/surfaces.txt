@@ -1,0 +1,23 @@
+•x = (1+cos(u/2)*sin(v) - sin(u/2)*sin(2*v))*cos(u) 
+•y = (1+cos(u/2)*sin(v) - sin(u/2)*sin(2*v))*sin(u) 
+•z = sin(u/2)*sin(v) + cos(u/2)*sin(2*v)
+
+
+
+x(u,v) = (2.5+cos(u/2)*sin(v)-sin(u/2)*sin(2*v))*cos(u) 
+ 
+y(u,v) = (2.5+cos(u/2)*sin(v)-sin(u/2)*sin(2*v))*sin(u) 
+ 
+z(u,v) = sin(u/2)*sin(v)+cos(u/2)*sin(2*v) 
+
+
+x = (1.41*cos(v)*cos(v)*cos(2*u)+cos(u)*sin(2*v))/(2-1.41*sin(3*u)*sin(2*v)) 
+ 
+ 
+y = (1.41*cos(v)*cos(v)*sin(2*u)-sin(u)*sin(2*v))/(2-1.41*sin(3*u)*sin(2*v))  
+
+ 
+z = 3*cos(v)*cos(v)/(2-1.14*sin(3*u)*sin(2*v)) 
+
+u [-pi/2,  +pi/2]
+v[0, pi]

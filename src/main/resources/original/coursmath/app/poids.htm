@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Lancement du poids - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="balistique, athlétisme, lancers" />
+<meta name="keywords" content="athlétisme, lancer du poids, artillerie, tir" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Lancement du poids
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Natacha apprend à lancer le poids. Ce sport n'est peut-être pas très féminin, mais elle s'entête.<br />
+Cette fois je l'ai lancé trop verticalement, et évidemment il est retombé tout près de moi. (Heureusement que je ne l'ai pas lancé à la verticale, ce serait vraiment dangereux !)<br />
+Maintenant c'est beaucoup mieux: je l'ai lancé beaucoup plus horizontalement et le poids est retombé plus loin.<br />
+Toutefois je ne dois pas le lancer trop horizontalement; il faut lui donner la chance de monter pour redescendre plus loin. Comment faire ? Si je faisais la moyenne entre la verticale (angle de 90°) et l'horizontale (angle de 0°) ?<br />
+Cette fois je vais le lancer à 45°. Ça y est ! J'ai battu mon record.</p>
+
+<p>D'accord c'est la bonne solution, mais la démonstration n'est pas très scientifique. Comment poser le problème ?</p>
+
+<p>Supposons que le lanceur soit infatigable et qu'à chaque tentative il lance le poids avec la même vitesse initiale \(V\) et que cette vitesse forme un angle \(\varphi\) avec l'horizontale. Plaçons la coordonnée \(x\) horizontale et la coordonnée \(y\) verticale et supposons le poids lancé à partir du point de coordonnées \((0, h)\). Calculons le mouvement.
+Regardons les composantes de l'accélération:</p>
+
+\[ \begin{array} {ll}  a_x= 0 \\ a_y=-g \end{array} \]
+
+<p>À partir de l'accélération nous pouvons calculer les composantes de la vitesse. Puisque l'accélération est la dérivée de la vitesse par rapport au temps, il suffit d'intégrer les valeurs de l'accélération. De plus si \(t = 0\), alors la composante \(v_x\) vaut \(V\mathbf{cos~}\varphi \) et la composante \(v_y=V\mathbf{sin~}\varphi \).<br /> 
+On obtient:</p>
+
+\[ \begin{array} {ll} v_x = V\mathbf{cos~}\varphi \\ v_y = -gt + V\mathbf{sin~}\varphi \end{array}\]
+
+<p>Voilà en ce qui concerne la vitesse. Si on désire obtenir les coordonnées, il suffit d'intégrer la vitesse, puisque la vitesse est la dérivée de l'espace par rapport au temps.</p>
+
+\[ \begin{array} {ll} x = Vt\mathbf{cos~} \varphi \\ 
+y = -gt^2/2 + Vt\mathbf{sin~}\varphi + h \end{array}  \]
+
+<p>Pour simplifier les choses supposons qu'à l'instant initial \(t = 0, h\) soit nul: cela signifie que le poids part du sol, ce qui est inexact mais proche de la réalité (songeons que cela peut également s'appliquer au lancement du marteau, du javelot...).
+
+Les équations se simplifient et on obtient:</p>
+
+\[ \begin{array} {ll} x = Vt\mathbf{cos~}\varphi \\ 
+y = -gt^2/2 + Vt\mathbf{sin~}\varphi \end{array}  \]
+
+<p>La trajectoire décrite par le poids est une parabole dont on obtient l'équation en éliminant le paramètre t entre les deux équations.</p>
+
+\[ y= -gx^2/2V^2\mathbf{cos~}^2\varphi + x\mathbf{sin~}\varphi/\mathbf{cos~} \varphi \]
+
+<img class="gauche" alt="" src="poid/tirs.gif"><p>Voici comment se présentent les trajectoires lorsque l'angle \(\varphi \) varie.<br />
+On voit qu'effectivement il semble que la meilleure manière de lancer le poids est de faire un compromis entre le lancement à la verticale et le lancement à l'horizontale. Mais nous pouvons préciser cette constatation.</p>
+
+<p>Le poids retombe lorsque \(y=0\) ; on a donc l'équation:</p>
+
+\[  -gx^2/2V^2\mathbf{cos~}^2\varphi + x\mathbf{sin~}\varphi /\mathbf{cos~}\varphi =0 \] 
+
+<p>Cette équation du second degré possède deux solutions: d'une part \(x=0\)(évidemment) et la solution qui nous intéresse :</p>
+
+\[ x=2V^2\mathbf{sin~}\varphi .\mathbf{cos~} \varphi /g=0 \]
+
+<p>Dès lors il est facile d'optimiser l'angle du lancer: \(2\mathbf{sin~}\varphi .\mathbf{cos~} \varphi \) doit être maximum ou encore \(\mathbf{sin~}2\varphi \) doit être maximum. On doit donc avoir \(2\varphi = 90°\) ou \(\varphi = 45°\) (la solution comprise entre 0° et 90°).</p>
+
+<p>On remarque sur le graphique que toutes les paraboles correspondant aux différents angles de lancer "enveloppent" une courbe.
+
+<p>Pour préciser cette constatation, nous allons rechercher l'enveloppe d'une famille de courbes \(y=F(x,\lambda)\) où \(\lambda\) est un paramètre variable. Si l'équation de l'une d'elle est \(y=F(x,\lambda_0)\), on obtient le (ou les) point(s) de l'enveloppe situé sur cette courbe en recherchant son intersection avec une courbe voisine correspondant à une valeur \(\lambda_0+d\lambda \). Il faut donc résoudre le système des équations:</p>
+
+\[ \begin{array} {ll} y= F(x,\lambda_0) \\ y= F(x,\lambda_0+d\lambda)\end{array} \]
+
+En soustrayant membre à membre et en divisant par \(d\lambda \), on obtient un nouveau système:
+
+\[ \begin{array} {ll} y= F(x,\lambda_0) \\ 0= \frac {dF}{d\lambda}(x,\lambda_0) \end{array} \]
+
+<p>Pour chacune des valeurs de \(\lambda \) on obtient le (ou les) points de l'enveloppe. Pour obtenir l'équation de l'enveloppe il suffit donc d'éliminer le paramètre \(\lambda \).</p>
+
+<p>Dans notre exemple, le paramètre est \(\varphi \). Nous obtenons le système d'équations:</p>
+
+\[ \begin{array} {ll} y = -gx^2/2V^2\mathbf{cos~}^2 \varphi + x\mathbf{sin~}\varphi/ \mathbf{cos~} \varphi  \\ 0 = -gx^2\mathbf{sin~}\varphi/V^2\mathbf{cos~}^3\varphi + x/\mathbf{cos~}^2\varphi \end{array} \]
+
+<p>Une astuce de calcul simplifie les choses: il suffit d'utiliser comme variable \(\mathbf{tan~}\varphi \) et d'utiliser la formule \(1/\mathbf{cos~}^2\varphi =1+\mathbf{tan~}^2\varphi \).<br />
+Le système d'équations devient:</p>
+
+\[ \begin{array} {ll}
+y=-gx^2(1 + \mathbf{tan~}^2\varphi)/2V^2 + x\mathbf{tan~}\varphi \\0=-gx \mathbf{tan~}\varphi/V^2+1 \end{array} \]
+
+<p class="ni">et en éliminant \(\mathbf{tan~}\varphi \) on obtient:</p>
+
+\[ y = -g/2V^2 x^2 + V^2/2g \]
+
+<p class="ni">ce qui est l'équation d'une parabole.</p>
+
+<img alt="" src="poid/secur.gif">
+
+<p>Cette courbe est connue depuis fort longtemps et est appelée <b>parabole de sécurité</b>.<br />
+Le problème avait été étudié par les artilleurs, non point dans le cadre du lancement du poids, mais lors du tir de projectiles à partir d'un canon. Cette courbe délimite une zone en dehors de laquelle on est à l'abri du tir quelle qu'en soit la direction.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

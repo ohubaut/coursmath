@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>PGCD ou PGCM - Insolites - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="diviseur commun, grandeurs commensurables, mesure, unité de mesure" />
+<meta name="keywords" content="diviseur, commun, commensurable, mesure" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="var.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-14', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+PGCD ou PGCM
+<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Rappelons brièvement la manière dont on calcule le PGCD de deux naturels à l'aide de l'algorithme d'Euclide.</p>
+
+<p>Si \(a\) et \(b\) sont deux naturels avec \(a&gt;b\), on divise \(a\) par \(b\). Si le quotient est exact, \(b\) est le PGCD; sinon on obtient un reste \(c&lt;b\); le PGCD de \(a\) et \(b\) divise évidemment \(c\). 
+On recommence avec les 2 naturels \(b\) et \(c\) et on répète l'opération jusqu'à ce que l'on aboutisse à une division exacte. Le dernier diviseur utilisé est le PGCD des 2 naturels \(a\) et \(b\).</p>
+
+<p>En analysant cet algorithme on se rend compte que le fait que \(a\) et \(b\) soient deux naturels n'est pas essentiel. En effet, effectuer un quotient revient à soustraire plusieurs fois et il n'y a pas de reste lorsque le quotient est un entier. L'algorithme peut donc s'appliquer à plusieurs grandeurs de même nature par exemple 2 segments, 2 réels,...</p>
+
+<p>En fait, on recherche une unité de mesure telle que les mesures des 2 grandeurs s'expriment par des entiers; il serait peut-être plus indiqué de parler de PGCM (plus grande commune mesure)! C'est l'opération que l'on effectue lorsque l'on calcule la fréquence \(\omega\) de la somme de 2 phénomènes périodiques: on recherche le PGCD des fréquences de chaque composante; 
+\(a~\mathbf{cos~}\omega_1 t+b~\mathbf{cos~}\omega_2 t\) est une fonction périodique de période \(2\pi/\omega\) où \(\omega\) est le PGCD de \(\omega_1\) et \(\omega_2\).</p>
+
+<p>Vu sous cet angle la recherche du PGCD prend un nouvel intérêt; alors qu'il était évidemment toujours défini dans le cas de 2 naturels, il n'est pas clair qu'il le soit dans le cas de 2 grandeurs, en particulier de 2 segments. De ce fait s'il existe, en mesurant les 2 grandeurs à l'aide du PGCD on obtient 2 naturels et le rapport de deux grandeurs est rationnel; elles sont dites commensurables. 
+Dans le cas contraire il n'existe pas de PGCD (ou pas de plus grande commune mesure); elles sont incommensurables, et le rapport des 2 grandeurs est irrationnel. C'est sous cette optique que sont apparus les premiers irrationnels.</p>
+
+<p>Voyons tout d'abord une manière de géométriser les choses. 
+Soit un rectangle de côtés \(a\) et \(b\) avec \(a&gt;b\). 
+On se demande s'il est possible de paver le rectangle à l'aide de carrés tous égaux.</p>
+
+<img alt="" src="pgcd/pav.gif">
+
+<p>S'il en est ainsi on peut retrancher des carrés de côté b jusqu'à obtenir un rectangle de grand côté b et de petit côté c égal à a moins le plus grand multiple entier possible de b. On répète l'opération. 
+Si à un certain moment elle se termine, on a trouvé (à la dernière étape) un carré, le plus grand carré, qui pave le rectangle. Le côté de ce carré est le PGCD de \(a\) et \(b\).</p>
+
+<p>On peut visualiser les choses en imaginant un rectangle dont les côtés sont des miroirs; on introduit par un sommet un faisceau lumineux incliné à 45°; si par réflexions successives la lumière ressort par le sommet, alors le pavage par carrés est possible et les côtés a et b sont commensurables. 
+Le nombre de réflexions sur chacune des paires de côtés parallèles du rectangle est égal au quotient de chacun des côtés par sa PGCM diminué d'une unité.</p>
+
+<img alt="" src="pgcd/lum.gif">
+<br />
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="variad.htm">Insolites</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

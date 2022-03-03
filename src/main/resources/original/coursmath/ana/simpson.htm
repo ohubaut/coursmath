@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Formules de Simpson - Analyse - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="goniométrie, trigonométrie, formules, somme, produit, application" />
+<meta name="keywords" content="analyse, goniométrie, formules, Simpson, battements" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Formules de Simpson
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<p>On enseigne en goniométrie les célèbres formules de Simpson:</p>
+
+\[ \mathbf {sin~}p+\mathbf {sin~}q=2~\mathbf {sin~}\frac{p+q}{2}\mathbf {cos~}\frac{p-q}{2}\]
+\[ \mathbf {sin~}p-\mathbf {sin~}q=2~\mathbf {cos~}\frac{p+q}{2}\mathbf {sin~}\frac{p-q}{2}\]
+\[ \mathbf {cos~}p+\mathbf {cos~}q=2~\mathbf {cos~}\frac{p+q}{2}\mathbf {cos~}\frac{p-q}{2}\]
+\[ \mathbf {cos~}p-\mathbf {cos~} q=-2~\mathbf {sin~}\frac{p+q}{2}\mathbf {sin~}\frac{p-q}{2}\]
+
+<p>Mais pourquoi donc ces formules sont-elles célèbres ?</p>
+
+<p>Avant l'invention des machines à calculer et autres calculettes, les mathématiciens travaillaient avec un calculateur, un assistant qui effectuait les calculs numériques; ceux-ci se faisaient à l'époque de Simpson à l'aide de tables logarithmiques et goniométriques. Or si les logarithmes étaient des outils efficaces pour les calculs de produits et puissances, ils n'étaient pas adaptés lorsqu'intervenaient des sommes. Alors grâce à ces merveilleuses formules, on passait de sommes (ou de différences) à des produits qui, eux, devenaient calculables à l'aide de logarithmes.</p>
+
+<p>Parfait, mais mis à part les exercices conçus dans le but de les utiliser (!), quel est encore l'intérêt de ces formules ?
+Fort réduit, mais en cherchant bien on peut encore trouver deux applications intéressantes, l'une concernant les oreilles, l'autre les yeux.</p>
+
+<p class="st">Les oreilles</p>
+
+<p>Un son parvient à nos oreilles porté par une onde sinusoïdale dont la fréquence vaut \(\omega\). Que se passe-t-il si l'on perçoit simultanément deux sons de fréquences voisines ? C'est ce qui se passe lorsque l'on accorde un instrument par rapport à un autre.</p>
+
+<p>Supposons que les deux sons soient de même amplitude de fréquences \( \omega_1\) et \(\omega_2\). On perçoit donc la somme de deux ondes proportionnelles à \(\mathbf {sin~}\omega_1\) et \(\mathbf {sin~}\omega_2\). En appliquant les fameuses formules de Simpson, on obtient:</p>
+
+\[\mathbf {sin~}\omega_1 t +\mathbf {sin~}\omega_2 t = 2\mathbf {sin~}\frac{\omega_1+\omega_2}{2}t \mathbf {cos~}\frac{\omega_1-\omega_2}{2}t\]
+
+<p>On voit ainsi que si les deux instruments sont parfaitement accordés, c'est-à-dire \(\omega_1 = \omega_2\), l'onde sonore est simplement d'une amplitude double.
+Par contre si les instruments ne sont pas exactement accordés, c'est-à-dire s'il existe une légère différence entre \( \omega_1 \text{ et  }\omega_2\), le premier facteur donne un son proche des sons émis, mais le deuxième facteur affecte l'amplitude d'une variation appelée battement.</p>
+
+<img alt="" src="simp/batman.gif" width=581 height=282><br />
+<i>Nous avons représenté en bleu la somme des deux fonctions (sin 20x en vert et sin 21x en rouge)</i><br>
+<p>Voici : <br>
+ 1. un son de "La" normalisé à 440hz : 
+  
+<a href="#" title="Lancer la lecture"><img src="play.png" alt="Lecture" id="btnplay440"></a>
+<a href="#" title="Mettre en pause"><img src="pause.png" alt="Pause" id="btnpause440"></a>
+
+<audio style="display:none" id="player440"><source src="simp/440.mp3" type="audio/mpeg"></audio>
+
+<script>
+document.getElementById('btnplay440').onclick = function() {
+  document.getElementById('player440').play();
+  return false;
+}
+document.getElementById('btnpause440').onclick = function() {
+  document.getElementById('player440').pause();
+  return false;
+}
+</script>
+<br>
+ 2. un son de "La" à 441hz : 
+  
+<a href="#" title="Lancer la lecture"><img src="play.png" alt="Lecture" id="btnplay441"></a>
+<a href="#" title="Mettre en pause"><img src="pause.png" alt="Pause" id="btnpause441"></a>
+
+<audio style="display:none" id="player441"><source src="simp/441.mp3" type="audio/mpeg"></audio>
+
+<script>
+document.getElementById('btnplay441').onclick = function() {
+  document.getElementById('player441').play();
+  return false;
+}
+document.getElementById('btnpause441').onclick = function() {
+  document.getElementById('player441').pause();
+  return false;
+}
+</script>
+<br>
+Vous pouvez faire jouer simultanément les deux premiers sons et vous obtenez ainsi :<br>
+ 3. les deux sons émis simultanément :
+ <a href="#" title="Lancer la lecture"><img src="play.png" alt="Lecture" id="btnplay44"></a>
+<a href="#" title="Mettre en pause"><img src="pause.png" alt="Pause" id="btnpause44"></a>
+
+<audio style="display:none" id="player44"><source src="simp/batman.mp3" type="audio/mpeg"></audio>
+
+<script>
+document.getElementById('btnplay44').onclick = function() {
+  document.getElementById('player44').play();
+  return false;
+}
+document.getElementById('btnpause44').onclick = function() {
+  document.getElementById('player44').pause();
+  return false;
+}
+</script>
+<br>
+
+ <p>Au fur et à mesure que l'on ajustera l'accord des deux instruments, la fréquence ( \(\omega_1-\omega_2\)) du battement  diminuera jusqu'à devenir nulle, c'est-à-dire que le battement disparaîtra.</p>
+
+<p class="st">Les yeux</p>
+
+<p>Le phénomène de battement peut également être visualisé.</p>
+
+<p>Lorsqu'on circule sur autoroute, il arrive que l'on rencontre un pont qui la surplombe. Lorsque ce pont possède des garde-fous formés de grilles verticales on peut observer un phénomène analogue au phénomène de battement.
+Lorsqu'on est fort loin du pont, on voit les deux grilles décalées l'une par rapport à l'autre. L'écart entre les barreaux de la grille avant est pratiquement le même que celui entre les barreaux de la grille arrière.</p>
+
+<img alt="" src="simp/pont.gif" width=738 height=183>
+
+<p>Lorsqu'on se rapproche du pont, l'effet de perspective commence à jouer; l'écartement entre les barreaux de la grille avant (plus proche) nous paraît plus grand que celui entre les barreaux de la grille arrière (plus éloignée). On a en quelque sorte une superposition de deux phénomènes périodiques de fréquences légèrement différentes (on suppose pour simplifier les choses que l'écartement des barreaux de chacun des deux parapets nous apparaît constant) et l'on perçoit l'ensemble des barreaux des deux grilles avec un phénomène périodique de barreaux rapprochés et de barreaux éloignés.</p>
+
+<p>Voilà donc une version visuelle des fameuses formules de Simpson.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

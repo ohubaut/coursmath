@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Codes correcteurs  - Applications - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="codes correcteurs" />
+<meta name="keywords" content="codes, code à barre, erreur, détection, correction" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="app.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-9', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+Codes correcteurs 
+<br />
+	</div>
+	<div class="stitre">
+Allo Mars ? Ici la lune ! 
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Lors de l'envoi des premières <a href="satellit.htm">sondes spatiales</a>, (Lunik 1, Lunik 2, ...), le problème des transmissions à (très) longue distance s'est posé de manière aiguë. En effet, jusqu'alors les transmissions radio ne dépassaient guère quelques milliers de kilomètres, et les stations émettrices disposaient de toute la puissance nécessaire.</p>
+
+<p>Dans les missions spatiales, les distances étaient bien plus importantes et on était limité (par le poids) en ce qui concernait la puissance des émetteurs. Dès lors il fallait trouver le moyen de pallier aux erreurs inévitables de transmission.</p>
+
+<p>Les informations recueillies sont transmises par des signaux binaires (0 ou 1), mais des erreurs sont possibles. Il faut donc pouvoir les <a href="../vie/verif.htm">détecter</a>, et mieux encore pouvoir les corriger.</p>
+
+<p>Une manière, pas très maligne, consiste à redoubler chaque signal; si on reçoit 0,0 ou 1,1 tout est en ordre, mais par contre 0,1 ou 1,0 ne peut provenir que d'une erreur. Mais comment la corriger ?</p>
+
+<p>Si on détriple chaque signal, cela devient possible; 1,1,1 ou 0,0,0 est correct (ou alors il y a du y avoir 3 erreurs consécutives) par contre tout autre signal est du à une erreur de transmission. Si on reçoit par exemple 0,1,1 il est clair qu'il y a eu une erreur; en écartant l'hypothèse fort improbable de 2 erreurs, on corrige le signal en 1,1,1. Cela résout le problème de la détection et de la correction d'erreurs, mais quel gaspillage ! On a alors recherché d'autres méthodes.</p>
+
+<p>Nous allons décrire une très jolie solution du problème de détection et correction d'erreur.</p>
+
+<p>Partons d'un cube, et introduisons des <a title="Comment coordonner un polyèdre ?" href="../pol/polcoord.htm">coordonnées</a>. Il serait logique d'utiliser le centre du cube comme origine et les trois directions d'arêtes comme directions des axes coordonnées.</p>
+
+<p><img class="gauche" alt="" src="code/cube.gif">Toutefois nous allons procéder autrement. Choisissons un des sommets du cube comme origine et les trois arêtes par ce sommet comme axes coordonnés, et l'arête comme unité. Les 7 autres sommets ont leurs 3 coordonnées non simultanément nulles et égales à 0 ou 1. Nous pouvons définir sur ces 7 sommets un ensemble de triples tel que 2 sommets déterminent un triple qui est déterminé par 2 quelconques de ses éléments.</p>
+
+<p>Comment procéder ?</p>
+
+<p>En général (nous verrons qu'il y a une exception) deux des 7 sommets déterminent avec l'origine un plan qui contient un troisième sommet. Il est évident que de triple de sommet est déterminé par 2 quelconques. Prenons quelques exemples:</p>
+
+<p class="ni">
+les sommets \((0,1,0)\) et \((0,0,1)\) déterminent le sommet \((0,1,1)\)<br />
+les sommets \((1,0,1)\) et \((1,0,0)\) déterminent le sommet \((0,0,1)\)<br />
+et ainsi de suite...</p>
+
+<p>D'une manière assez simple il suffit d'additionner les coordonnées des deux premiers sommets pour obtenir celles du troisième avec la règle \(1+1=0\) (songez à impair + impair = pair). Autrement dit, cela revient à travailler modulo 2.</p>
+
+<img class="droite" alt="" src="code/pp.gif"><p>Venons-en à l'exception: les sommets \((1,1,0)\) et \((0,1,1)\) déterminent avec l'origine un plan qui ne contient pas d'autre sommet !  Qu'importe. Utilisons la règle constatée précédemment et additionnons les coordonnées, nous obtenons \((1,0,1)\) et on vérifie que ce triple est déterminé par 2 quelconques de ses éléments. Nous avons ainsi construit sur les 7 sommets du cube une <i>structure linéaire</i> de 7 <i>points</i> munie de 7 <i>droites</i>, où toutes les droites ont trois <i>points</i>.</p>
+
+<p>Nous sommes maintenant en mesure de construire un <b>code</b>.</p>
+
+<p>Il s'agira d'un ensemble de <b>mots</b> qui constitueront le langage utilisé dans une transmission; chaque <b>mot</b> est constitué de <b>lettres</b> qui sont 0 ou 1. Tout <b>mot</b> différent sera le résultat d'erreurs et on supposera qu'il n'y a pas plus d'une erreur possible. Numérotons les sommets du cube de 1 à 7 de la manière suivante:<br />
+\(1,0,0\) est le sommet \(1\)<br />
+\(0,1,0\) est le sommet \(2\)<br />
+\(0,0,1\) est le sommet \(3\)<br />
+\(1,1,0\) est le sommet \(4\)</p>
+
+<p>A ce moment nous voyons que les <i>points</i> 1, 2, 4 sont situés sur une <i>droite</i>; supposons que par permutation circulaire nous obtenons les autres droites: 2,3,5 est une droite; dès lors<br />
+\(0,1,1\) est le sommet \(5\)<br />
+et ainsi de suite<br />
+\(1,1,1\) est le sommet \(6\)<br />
+\(1,0,1\) est le sommet \(7\).</p>
+
+<p>Nous allons représenter chaque <i>droite</i> en indiquant 1 sur les <i>points</i> utilisés et 0 sur les autres; on obtient:<br />
+pour la <i>droite</i> formée des <i>points</i> \(1, 2, 4\):</p>
+
+\(1  1  0  1  0  0  0\) <br />
+<p class="ni">pour la <i>droite</i> \(2, 3, 5\) on a:</p>
+\(0  1  1  0  1  0  0\)
+
+<p>On obtient ainsi \(7\) <b>mots</b> de \(7\) <b>lettres</b>.</p>
+
+<p>Adjoignons-y le <b>mot</b> formé de tous des \(0\) ainsi que les complémentaires obtenus en remplaçant les \(0\) par des \(1\) et les \(1\) par des \(0\). On obtient finalement les \(16\) <b>mots</b> qui définiront notre <b>code</b>: </p>
+
+<div><pre>
+0 0 0 0 0 0 0          1 1 1 1 1 1 1
+1 1 0 1 0 0 0          0 0 1 0 1 1 1
+0 1 1 0 1 0 0          1 0 0 1 0 1 1
+0 0 1 1 0 1 0          1 1 0 0 1 0 1
+0 0 0 1 1 0 1          1 1 1 0 0 1 0
+1 0 0 0 1 1 0          0 1 1 1 0 0 1
+0 1 0 0 0 1 1          1 0 1 1 1 0 0
+1 0 1 0 0 0 1          0 1 0 1 1 1 0
+</pre></div>
+
+<p>Sur les \(2^7=128\) <b>mots</b> de \(7\) <b>lettres</b> que l'on peut construire à l'aide des <b>lettres</b> \(0\) et \(1\), il n'y en a que \(16\) qui font partie du <b>code</b>.</p>
+
+<p>Maintenant, c'est un simple exercice de vérifier que deux <b>mots</b> diffèrent par au moins \(3\) <b>lettres</b>. Il en résulte que non seulement nous pouvons détecter une erreur, mais nous pouvons également la corriger.</p>
+
+<p>Il suffit de remarquer que si \(x_1, x_2, x_3, ...\) désignent respectivement la première, la deuxième, la troisème ... <b>lettre</b> du <b>mot</b>, on a toujours:</p>
+
+<div class="lh">
+\(x_3 + x_5 + x_6 + x_7 = 0\),<br />
+ainsi que:<br />
+\(x_4 + x_6 + x_7 + x_1 = 0\),<br />
+\(x_5 + x_7 + x_1 + x_2 = 0\),<br />
+</div>
+
+<p class="ni">et les conséquences de ces 3 équations. Si ces équations ne sont pas satisfaites, il y a erreur et suivant la valeur du second membre on en déduit quelle est la <b>lettre</b> erronée du <b>mot</b> transmis.</p>
+
+<p>Donnons un exemple: supposons avoir reçu le <b>mot</b> \(0 1 1 1 1 0 1\). Il ne figure pas dans notre code. On calcule le second membre des 3 équations et on obtient respectivement \(1, 0, 1\).<br />
+Il y a donc eu une erreur de transmission. La seule manière de corriger <b>une seule lettre</b> est de modifier la cinquième <b>lettre</b>; on obtient ainsi le mot: \(0 1 1 1 0 0 1\) qui fait partie du <b>code</b>.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="appld.htm">Applications</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

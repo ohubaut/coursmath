@@ -1,0 +1,438 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Documents - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résumés" />
+<meta name="keywords" content="groupes, musique, algèbre, géométrie" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="doc.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript">
+    function pdf(fichier) 
+{window.open(fichier,'pdf','scrollbars=yes,resizable=yes,width=800,height=800,top=0,left=20'); window.focus();}
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-11', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+<br>
+<div class="droite"><a href="javascript:pdf('espace.pdf');">Télécharger la version pdf (10 pages)</a></div>
+<br>
+	<div class="titre">
+<br />
+Propriétés linéaires de l'espace
+<br />
+	</div>
+	<div class="stitre">
+par<br><br>
+<b>Xavier Hubaut</b><br><br>
+Professeur émérite - Université Libre de Bruxelles - Département de Mathématique
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Nous connaissons par expérience de nombreuses figures de l'espace et certaines de leurs propriétés. Nous allons reprendre l'étude de celles-ci d'une manière plus rigoureuse. Pour les démontrer, il est indispensable de se baser sur certaines propriétés élémentaires que l'on accepte au départ. Ce sont des axiomes.</p>
+<p>Nous étudierons dans cette section quelques propriétés affines de l'espace.</p>
+<p>Tout d'abord livrons-nous à quelques observations:</p>
+
+<p>L'espace est un ensemble de points; certains sous-ensembles sont particulièrement intéressants: les droites et les plans.<br>
+Pour éviter les ambiguïtés, précisons la terminologie utilisée.<br>
+Deux <b>droites</b> sont dites <b>parallèles</b> si elles sont soit confondues, soit situées dans un même plan et sans point commun.<br>
+De même deux <b>plans</b> sont dits <b>parallèles</b> s'ils sont soit confondus, soit sans point commun.<br>
+Enfin deux <b>droites</b> non coplanaires sans point commun sont dites <b>gauches</b>.</p>
+
+<p>Par un point passent plusieurs droites; si nous fixons un deuxième point, nous obtenons une droite unique passant par ces 2 points. Par cette droite passent plusieurs plans; si nous choisissons un point extérieur à la droite, nous obtenons un plan unique contenant la droite et le point.<br>
+Considérons à présent un plan p et un point extérieur P. Chaque droite de p détermine avec P un plan a. Si la droite se déplace dans le plan p, le plan a varie autour du point P, et inversement, chaque fois que nous prenons un plan passant par P nous aurons une droite dans le plan p.<br>
+Il y a cependant une exception: il existe un plan passant par P ne rencontrant pas le plan p: c'est le plan parallèle.<br>
+Nous connaissions déjà cette exception dans le plan: étant donné une droite d et un point extérieur P, toutes les droites du plan passant par P coupent D à l'exception de la parallèle.<br>
+Prenons à présent deux droites. Elles peuvent être situées dans un même plan; elles sont alors sécantes ou parallèles. Si elles ne sont pas situées dans un même plan, nous dirons qu'elles sont gauches.<br>
+Soient d et d' deux droites gauches. Un point P situé sur d' détermine avec d un plan d. Si le point P se déplace sur d', le plan d tourne autour de d; à chaque position de d correspondra un point P avec toutefois une exception: il y a un plan passant par d qui ne rencontre pas d'; c'est le plan parallèle à d'.</p>
+<p>Rassemblons les principales propriétés rencontrées:</p>
+
+<ol>
+<li><b>Par deux points distincts passe une et une seule droite.</b><br>
+<li><b>Par une droite et un point extérieur passe un et un seul plan.</b><br>
+<li><b>L'intersection de deux plans distincts non parallèles est une droite (ou dès que deux plans distincts ont un point commun ils ont une droite commune).</b><br>
+<li><b>Par un point passe une et une seule droite parallèle à une droite donnée.</b><br>
+</ol>
+
+Remarque<br>
+
+<p>Les <a href="axiomes.htm">axiomes</a> que nous avons choisis constituent des propriétés simples de l'espace; nous aurions pu en choisir d'autres, par exemple: par trois points non alignés passe un unique plan.<br>
+Par contre, en ce qui concerne le parallélisme, l'axiome 4 n'est pas équivalent à "Par un point passe un et un seul plan parallèle à un plan donné" (exercice: chercher un contre exemple).<br> 
+Des axiomes ne constituent pas un absolu; ils peuvent être remplacés par d'autres qui leur sont équivalents.</p>
+
+<p>Nous admettrons donc les propriétés 1 à 4 en tant qu'axiomes et, ayant acceptés ces "règles du jeu" sans démonstration, nous les utiliserons pour démontrer d'autres propriétés.</p>
+<p>Pour être tout à fait correct, ajoutons un axiome:</p>
+
+<p>5. <b>Les droites comprennent au moins deux points et les plans comprennent au moins trois points non alignés.</b></p>
+
+<p><i>Par la suite, pour étudier d'autres propriétés de l'espace, les propriétés métriques, nous serions amenés à introduire des axiomes supplémentaires exprimant les relations entre plans et droites perpendiculaires.</i></p>
+
+<p>I. <b>Si un plan contient deux points d'une droite, il la contient tout entière.</b></p>
+<table>
+<tr><td>
+A et B<img alt="appartient" src="../isin.png">d<br>
+A et B<img alt="appartient" src="../isin.png">&pi;
+</td><td>
+<span style="font-size:1.6em;">}</span><img alt="implique" src="../rArr.png">
+</td><td>
+d<img alt="contenu dans" src="../sub.png">&pi;
+</td></tr>
+</table>
+<br>
+
+<p>Soit le point P<img alt="n'appartenant" src="../notin.png">&pi;; P et d déterminent le plan &pi;' qui est distinct de &pi; par construction; &pi; et &pi;' ont un point commun; ils ont donc une droite commune (Ax.3); cette droite contient les points A et B; c'est donc la droite d (Ax.1); donc d = &pi;<img alt="inter" src="../cap.png">&pi;'<img alt="implique" src="../rArr.png">d<img alt="contenu dans" src="../sub.png">&pi;</p>
+<p>II. <b>Par trois points non alignés passe un et un seul plan.</b></p>
+<p>Soient A, B, C trois points non alignés.<br>
+a) Par A et B passe une droite d (Ax.1); par d et C passe un plan &pi; (Ax.2). Il existe donc un plan passant par A, B et C.<br>
+b) Supposons qu'il existe deux plans distincts &pi; et &pi;', contenant A, B et C: &pi;<img alt="inter" src="../cap.png">&pi;' = i (Ax.3); A, B et C<img alt="appartient" src="../isin.png">i, donc ils sont alignés, ce qui est contraire à notre hypothèse. Le plan &pi; est donc unique!</p>
+
+<p>III. <b>Par deux droites sécantes passe un et un seul plan.</b></p>
+<p>Soient a et b deux droites et I = a<img alt="inter" src="../cap.png">b.<br>
+a) Soient A<img alt="appartient" src="../isin.png">a et B<img alt="appartient" src="../isin.png">b, supposés distincts de I.<br>
+Les trois points A, B, I déterminent un plan &pi; (Th.II)<br>
+Le plan &pi; contient A et I, donc &pi; contient a (Th. I)<br>
+Le plan &pi; contient B et I, donc &pi; contient b (Th. I)<br>
+b) Ce plan est unique (Application: démontrer par l'absurde que &pi; est unique)</p>
+
+<p>IV. <b>Par un point extérieur à un plan passe un seul plan parallèle.</b></p>
+<p>Soit le plan &pi; et le point P<img alt="n'appartient pas à" src="../notin.png">&pi;.<br>
+a) Montrons tout d'abord qu'il y a au plus un plan parallèle. Soient &pi;' et &pi;" deux plans parallèles à &pi; par P. &pi;' et &pi;" ont en commun le point P; ils se rencontrent donc en une droite i (Ax.3).<br>
+Soit &alpha; un plan passant par P, mais pas par i, et rencontrant &pi;.<br>
+On aurait &alpha;<img alt="inter" src="../cap.png">&pi; =  d , &alpha;<img alt="inter" src="../cap.png">&pi;' =  d' et &alpha;<img alt="inter" src="../cap.png">&pi;" = d".<br>
+Dans le plan &alpha; on aurait par le point P deux parallèles d et d', ce qui contredirait l'axiome 4.<br>
+b) Démontrons à présent l'existence de ce plan parallèle; prenons deux sécantes d et d' du plan &pi;.<br>
+Dans les plans &alpha; = (d, P) et &alpha;' = (d', P), menons les uniques droites l et l' parallèles à d et à d' (Ax.4). Ces deux droites sécantes en P appartiennent à une unique plan &pi;' (Th.III). Si &pi;<img alt="inter" src="../cap.png">&pi;'<img alt="différent de" src="../ne.png"><img alt="vide" src="../empty.png">; alors soit i = &pi;<img alt="inter" src="../cap.png">&pi;' (Ax.3) Cette droite i doit rencontrer soit d, soit d' (Ax.4). Soit Q = d<img alt="inter" src="../cap.png">i;  Q<img alt="appartient" src="../isin.png">&alpha; , or Q<img alt="appartient" src="../isin.png">&pi;' ; donc  Q<img alt="appartient" src="../isin.png">l = &alpha;<img alt="inter" src="../cap.png">&pi;', ce qui contredit le parallélisme de d et l.</p>
+
+<p>V. <b>Par deux parallèles passe un et un seul plan.</b><br>
+<br>
+(Application: le démontrer)</p>
+
+<p>VI. <b>Si trois plans distincts se coupent 2 à 2, leurs intersections sont soit concourantes, soit parallèles 2 à 2, soit confondues.</b><br>
+<p>Soient &alpha;, &beta;, &gamma; trois plans et a = &beta;<img alt="inter" src="../cap.png">&gamma;, b = &gamma;<img alt="inter" src="../cap.png">&alpha;, c = &alpha;<img alt="inter" src="../cap.png">&beta;;<br>
+a<img alt="inter" src="../cap.png">b = (&beta;<img alt="inter" src="../cap.png">&gamma;)<img alt="inter" src="../cap.png">(&gamma;<img alt="inter" src="../cap.png">&alpha;) = &alpha;<img alt="inter" src="../cap.png">&beta;<img alt="inter" src="../cap.png">&gamma;<br>
+De même b<img alt="inter" src="../cap.png">c = c<img alt="inter" src="../cap.png">a = a<img alt="inter" src="../cap.png">b = &alpha;<img alt="inter" src="../cap.png">&beta;<img alt="inter" src="../cap.png">&gamma;<br>
+Les droites b et c sont contenues dans &alpha;; trois cas sont donc possibles:<br>
+a) b<img alt="inter" src="../cap.png">c = {P}: les droites a, b, c concourent en P.<br>
+b) b<img alt="inter" src="../cap.png">c = <img alt="vide" src="../empty.png"> : donc c<img alt="inter" src="../cap.png">a = a<img alt="inter" src="../cap.png">b = <img alt="vide" src="../empty.png">; les droites étant situées 2 à 2 dans un même plan, elles sont parallèles 2 à 2.<br>
+c) b = c: alors a = b = c = &alpha;<img alt="inter" src="../cap.png">&beta;<img alt="inter" src="../cap.png">&gamma;</p>
+
+<p>VII. <b>Toute droite parallèle à une droite d'un plan est parallèle à celui-ci.</b></p>
+<p>Si la droite est contenue dans le plan le théorème est évident.<br>
+Supposons a//b<img alt="contenu dans" src="../sub.png">&pi; ; a<img alt="non contenu dans" src="../nsub.png">&pi;. Soit &alpha; le plan (a, b). Comme a<img alt="contenu dans" src="../sub.png">&alpha;, en coupant par le plan &pi; on obtient a <img alt="inter" src="../cap.png">&pi;<img alt="contenu dans" src="../sub.png">&alpha;<img alt="inter" src="../cap.png">&pi; donc il en résulte que a<img alt="inter" src="../cap.png">&pi;<img alt="contenu dans" src="../sub.png">b.<br>
+En coupant par la droite a, on obtient a<img alt="inter" src="../cap.png">&pi;<img alt="contenu dans" src="../sub.png">a<img alt="inter" src="../cap.png">b = <img alt="vide" src="../empty.png">, puisque par hypothèse a//b, donc a//&pi;<br>
+<br>
+Exercice: le démontrer par l'absurde.</p>
+
+<p>VIII. <b>Etant donné deux droites gauches, par l'une d'elle passe un et un seul plan parallèle à l'autre.</b></p>
+<p>Soient a et b  deux droites gauches: a<img alt="inter" src="../cap.png">b = <img alt="vide" src="../empty.png">.<br>
+Choisissons P<img alt="appartient" src="../isin.png">a et désignons par &beta; le plan contenant P et b (Ax.2).<br>
+Soit b' la droite telle que P<img alt="appartient" src="../isin.png">b'//b  (Ax.4) et &alpha; l'unique plan tel que a<img alt="est contenu dans" src="../sub.png">&alpha; et b'<img alt="est contenu dans" src="../sub.png">&alpha; (Th.III).<br>
+En vertu du Th.VII, b//b' et b'<img alt="contenu dans" src="../sub.png">&alpha;<img alt="implique" src="../rArr.png">b//&alpha;.<br>
+<br>
+Exercice: démontrer l'unicité par l'absurde.</p>
+
+<p>IX. <b>Si deux droites sont parallèles, tout plan coupant l'une coupe l'autre.</b><br>
+<p>Soient a et b les 2 parallèles: elles déterminent un plan &pi;.<br>
+Soit &alpha; un plan quelconque rencontrant a en A<img alt="appartient" src="../isin.png">d = &alpha;<img alt="inter" src="../cap.png">&pi;.<br>
+Si d ne rencontrait pas b, par le point A nous pourrions mener deux parallèles à b, la droite a et la droite d.<br>
+Les droites d et b se rencontrent en B<img alt="appartient" src="../isin.png">d<img alt="contenu dans" src="../sub.png">&alpha; et B<img alt="appartient" src="../isin.png">&alpha;<br>
+
+<p>X. <b>Si deux plans sont parallèles, tout plan coupant l'un coupe l'autre et leurs intersections sont parallèles.</b><br>
+<p>(application: le démontrer par l'absurde)</p>
+
+<p>XI. <b>Deux parallèles à une droite sont parallèles entre elles.</b></p>
+
+<table>
+<tr><td>
+a//d<br>
+b//d
+</td><td>
+<span style="font-size:1.6em;">}</span>
+</td><td>
+<img alt="implique" src="../rArr.png">a//b
+</td></tr>
+</table>
+<p>Nous pouvons supposer que a, b, d ne sont pas dans un même plan. (Dans ce cas la démonstration serait immédiate)<br>
+Soit &alpha; le plan (a, d) et &beta; le plan (b, d).<br>
+Soit &gamma; un plan passant par a et un point P<img alt="appartient" src="../isin.png">b, P<img alt="appartient" src="../notin.png">d.<br>
+&alpha;, &beta;, &gamma; sont trois plans distincts se coupant 2 à 2.
+&alpha;<img alt="inter" src="../cap.png">&beta; = d, &alpha;<img alt="inter" src="../cap.png">&gamma; = a.<br>
+Comme a//d, en vertu de la propriété VI, b//a.</p>
+
+<p>XII. <b>Si une droite est parallèle à un plan, tout plan (non parallèle au premier) passant par cette droite coupe le premier plan suivant une parallèle à la droite.</b></p>
+<p class="ni">
+a//&pi;, &alpha;<img alt="inter" src="../cap.png">&pi;<img alt="différent" src="../ne.png"><img alt="vide" src="../empty.png"></p>
+<table>
+<tr><td> 
+a<img alt="est contenu dans" src="../sub.png">&alpha;<br>
+b = &alpha;<img alt="inter" src="../cap.png">&pi;
+</td><td>
+<span style="font-size:1.6em;">}</span>
+</td><td>
+<img alt="implique" src="../rArr.png">a//b
+</td></tr></table>
+<p>Si a <img alt="contenu dans" src="../sub.png"> &pi;, le théorème est évident; supposons donc a <img alt="inter" src="../cap.png"> &pi; = <img alt="vide" src="../empty.png"> et soit {I}= a <img alt="inter" src="../cap.png"> b.<br>
+<table>
+<tr><td> 
+I<img alt="appartient" src="../isin.png">a<br>
+I<img alt="appartient" src="../isin.png">b<img alt="contenu dans" src="../sub.png">&pi;
+</td><td>
+<span style="font-size:1.6em;">}</span>
+</td><td>
+<img alt="implique" src="../rArr.png">I<img alt="appartient" src="../isin.png">a<img alt="inter" src="../cap.png">&pi;
+</td></tr>
+</table>
+<p>Mais ceci est contraire à notre hypothèse.<br>
+Conclusion:<br>
+Les théorèmes VII et XII nous permettent d'énoncer un critère de parallélisme pour une droite et un plan:<br>
+
+<p>XIII. <b>Pour qu'une droite soit parallèle à un plan, il faut et il suffit qu'elle soit parallèle à une droite de ce plan.</b></p>
+
+<p>XIV. <b>Deux plans parallèles à un même troisième sont parallèles entre eux.</b><br>
+<br>
+(à démontrer).</p>
+<br>
+
+<p>XV. <b>Si un plan contient deux droites respectivement parallèles à deux sécantes d'un autre plan, les deux plans sont parallèles, et réciproquement.</b><br>
+<br>
+Les hypothèses sont:<br>
+a<img alt="est contenu dans" src="../sub.png">&pi;, b<img alt="est contenu dans" src="../sub.png">&pi;, a<img alt="inter" src="../cap.png">b = {P}<br>
+a'<img alt="est contenu dans" src="../sub.png">&pi;', b'<img alt="est contenu dans" src="../sub.png">&pi;', a'//a, b'//b<br>
+et la thèse est: &pi;//&pi;'<br>
+D'après le théorème VII, a//a'<img alt="implique" src="../rArr.png">a//&pi;' ; de même: b//&pi;'<br>
+Si &pi; non//&pi;', d'après le théorème XII, &pi;<img alt="est contenu dans" src="../sub.png">a//&pi;'<img alt="implique" src="../rArr.png">&pi;<img alt="inter" src="../cap.png">&pi;'//a et &pi;<img alt="est contenu dans" src="../sub.png">b//&pi;'<img alt="implique" src="../rArr.png">&pi;<img alt="inter" src="../cap.png">&pi;'//b<br>
+Comme a et b sont sécantes, cela contredirait Ax.4 . Donc &pi;//&pi;'<br>
+<br>
+On démontrera aisément la réciproque de ce théorème.<br>
+<br>
+Conclusion<br>
+<p>XVI. <b>Pour que deux plans soient parallèles, il faut et il suffit que l'un contienne deux droites respectivement parallèles à deux sécantes de l'autre.</b></p>
+<p>XVII. <b>Le rapport de section se conserve par projection parallèlement à un plan.</b><br>
+ou: <b>Un faisceau de plans parallèles détermine sur deux droites gauches des segments homologues proportionnels (Théorème de Thalès).</b></p>
+<p>
+Soient d et d' deux droites gauches, &alpha;, &beta; et &gamma; trois plans parallèles rencontrant d en A, B, C et d' en A', B', C'.<br>
+Menons une droite quelconque d" s'appuyant sur d et d'; elle rencontre &alpha;, &beta;, &gamma; en A", B", C".<br>
+Le plan (d, d") coupe &alpha;, &beta; et &gamma; suivant trois parallèles.<br>
+On a: (CA/CB)=(C"A"/C"B") (Théorème de Thalès dans le plan).<br>
+Le plan (d', d") coupe &alpha;, &beta; et &gamma; suivant trois parallèles.<br>
+On a: (C'A'/C'B')=(C"A"/C"B")<br>
+Par conséquent: (CA/CB)=(C'A'/C'B')<br>
+<br>
+Sur base de la remarque mentionnée en VIII, nous avons admis et utilisé la version plane du théorème de Thalès.</p>
+
+<p>XVIII. <b>L'ensemble des points partageant dans un rapport donné les vecteurs liés ayant pour origine les points d'un plan et pour extrémité ceux d'un plan parallèle est un plan parallèle à ces deux plans. (Réciproque du théorème de Thalès).</b><br>
+<br>
+(A démontrer).</p>
+
+<p><b>Vecteurs dans l'espace</b></p>
+
+<p>Tout ce qui a été vu relativement aux propriétés vectorielles du plan reste valable dans l'espace.<br>
+A titre d'exemple nous résoudrons l'exercice suivant:</p>
+
+<b>Les médianes d'un quadrilatère gauche se coupent en leur milieu.</b><br>
+<br>
+<p>Soient K, L, M, N les milieux des côtés AB, BC, CD, DA du quadrilatère gauche.<br>
+Choisissons un point quelconque O.<br>
+OK = (OA+OB)/2, OL = (OB+OC)/2, OM = (OC+OD)/2, et ON = (OD+OA)/2<br>
+Le milieu P de la médiane KM est tel que OP = (OK+OM)/2 = (OA+OB+OC+OD)/4<br>
+Le milieu Q de la médiane LN est tel que OQ = (OL+ON)/2 = (OB+OC+OD+OA)/4<br>
+Par conséquent P et Q sont confondus et le théorème est démontré.</p>
+
+<p>Exercices de géométrie de l'espace<br>
+<br>
+1°) Déterminer une droite s'appuyant sur 3 droites gauches données. Construire un modèle représentant les trois droites gauches ainsi que quelques droites s'y appuyant.<br>
+<br>
+2°) Etant donnés 5 points tels que 4 quelconques d'entre eux ne soient pas coplanaires,<br>
+a) combien de droites déterminent-ils deux à deux ?<br>
+b) combien de plans déterminent-ils trois à trois ?<br>
+c) combien de ces droites chacun de ces plans contient-il ?<br>
+d) combien passe-t-il de ces plans par chacune de ces droites ?<br>
+On coupe la figure formée de ces droites et de ces plans par un plan quelconque. Quelle est la figure obtenue dans de plan de section ? Faire un modèle.<br>
+<br>
+3°) A l'aide de l'exercice 2°), démontrer le théorème de Desargues: si les droites joignant les sommets homologues de 2 triangles sont concourantes, les points d' intersection des côtés homologues sont alignés et réciproquement.<br>
+<br>
+4°) On considère un plan &pi;, deux points fixes A et B, n'appartenant pas à &pi; et un point M variable n'appartenant pas à &pi;. Les droites MA et MB rencontrent respectivement le plan &pi; aux points A' et B'. Montrer que, lorsque le point M varie, la droite A'B' passe, en général, par un point fixe.<br>
+<br>
+5°) Deux droites d et d' se coupent en un point I. Une droite d rencontre en A le plan &pi; = (d, d'). Soient un point M<img alt="appartient" src="../isin.png">d, et les plans &alpha; = (M, d) et &alpha;' = (M,d'). Montrer que la droite d' = &alpha;<img alt="inter" src="../cap.png">&alpha;' passe par un point fixe lorsque M décrit d. Quel est l'ensemble des positions de d' ?<br>
+<br>
+6°) Les lettres latines désignent des droites, les lettres grecques des plans, est-il vrai que:<br>
+l//m, l coupe n<img alt="implique" src="../rArr.png">m coupe n<br>
+l//m, l coupe n<img alt="implique" src="../rArr.png">m non // n<br>
+l coupe m, m coupe n<img alt="implique" src="../rArr.png">l coupe n<br>
+l//m, m coupe n<img alt="implique" src="../rArr.png">l coupe n<br>
+l<img alt="contenu dans" src="../sub.png"> &alpha;, &alpha;//&beta;<img alt="implique" src="../rArr.png">l//&alpha;<br>
+l//&alpha;, m <img alt="contenu dans" src="../sub.png"> &alpha; <img alt="implique" src="../rArr.png"> l//m<br>
+l<img alt="contenu dans" src="../sub.png">&alpha;, l//&beta;<img alt="implique" src="../rArr.png">&alpha;//&beta;<br>
+&alpha;//&beta;, l<img alt="contenu dans" src="../sub.png">&alpha;, m<img alt="contenu dans" src="../sub.png">&beta;<img alt="implique" src="../rArr.png">l//m ou l coupe m<br>
+l//m, m//&alpha;<img alt="implique" src="../rArr.png">l//&alpha;<br>
+l coupe &alpha;, m<img alt="contenu dans" src="../sub.png">&alpha;<img alt="implique" src="../rArr.png">l non//m<br>
+l//&alpha;, l//&beta;<img alt="implique" src="../rArr.png">&alpha;//&beta;<br>
+l gauche avec m, &alpha;//l<img alt="implique" src="../rArr.png">&alpha; coupe m<br>
+l<img alt="contenu dans" src="../sub.png">&alpha;, &alpha; coupe &beta;, l coupe &alpha;<img alt="inter" src="../cap.png">&beta;<br>
+l<img alt="contenu dans" src="../sub.png">&alpha;, &alpha; coupe &beta;, m<img alt="contenu dans" src="../sub.png">&beta;<img alt="implique" src="../rArr.png">l non//m<br>
+<br>
+7°) On considère un plan &pi; et deux droites a et b qui rencontrent ce plan respectivement en A et B.<br>
+a) Soit M<img alt="appartient" src="../isin.png">a. La parallèle à b par M rencontre &pi; en M'. Quel est l'ensemble des positions de M' quand M décrit a ?<br>
+b) Le plan mené par M parallèlement à &pi; rencontre la droite b en N. Quelle est la nature du quadrilatère MM'NN'?<br>
+<br>
+8°) Soient deux plans &alpha; et &beta; se coupant suivant d, et un point A n'appartenant ni à &alpha; ni à &beta;. On considère deux plans &alpha;'//&alpha; et &beta;'//&beta; passant par A.<br>
+a) Que peut-on dire de d' = &alpha;<img alt="inter" src="../cap.png">&beta;' ?<br>
+b) Quel est l'ensemble des positions de d' lorsque A décrit une droite d?<br>
+<br>
+9°) Dans l'exercice 2, quelle est la figure obtenue dans le plan de section lorsque celui-ci est parallèle à un des plans déterminés par 3 des 5 points ? Que devient cette figure lorsque, de plus, la droite déterminée par les deux autres points est parallèle au plan de section ?<br>
+<br>
+10°) Généraliser pour un tétraèdre les notions de médiane d'un triangle et de médiane d'un quadrilatère. Montrer que les 7 médianes d'un tétraèdre sont concourantes. Préciser la position de leur point de rencontre.<br>
+<br>
+11°) Etant donné un quadrilatère gauche:<br>
+<br>
+a) Démontrer que les droites joignant les milieux des côtés opposés sont concourantes.<br>
+b) Démontrer que les droites joignant les point et partageant côtés opposés dans un même rapport sont parallèles à un même plan &pi;. il en sera de même pour les droites joignant les points partageant dans un même rapport les deux autres côtés. Soit &pi;' un plan parallèle à la deuxième famille de droites.<br>
+c) Montrer qu'une droite de la première famille rencontre toutes les droites de la deuxième famille et inversement.<br>
+d) 0n projette la figure formée par les deux familles de droites parallèlement à i = &pi; <img alt="inter" src="../cap.png"> &pi;' sur un plan non parallèle à i. Qu'obtient-on ?<br>
+e) Réaliser le modèle.<br>
+<br>
+12°) On considère 3 axes coordonnés (non coplanaires) Ox, Oy et Oz. Définir les coordonnées (x, y, z) d'un point de l'espace dans un tel repère. Quels sont les ensembles de points définis respectivement par les équations;<br>
+<table><tr><td>
+x = a,<br>
+y = b,<br>
+z = c,<br>
+ax + by = 0,<br>
+ax + by = c,<br>
+ax + by + cz = 0,<br>
+ax + by + cz + d = 0<br>
+</td></tr></table>
+<br>
+<p>Faire un modèle.<br>
+<br>
+Interpréter géométriquement la résolution d'un système de 3 équations linéaires à 3 inconnues et discuter les différents cas possibles.<br>
+<br>
+13°) On considère l'ensemble E d'équation z = xy.<br>
+a) Qu'obtient-on en le coupant par les plans x = constante?<br>
+b) Qu'obtient-on en le coupant par les plans y = constante?<br>
+c) Qu'obtient-on en le coupant par les plans z = constante?<br>
+d) On considère la figure formée par les axes Ox, Oy, les sections de E par un plan x = a et un plan y = b. A l'aide de l'exercice 11, caractériser l'ensemble E.<br>
+e) Comparer à la loi des gaz parfaits pv = kT et aux lois à pression constante, à volume constant et à température constante.<br>
+<br>
+14°) Démontrer qu'étant donnés 2 triangles OXY et O'X'Y' (2 systèmes d'axes coordonnés) situés dans 2 plans &pi; et &pi;', il est possible de passer par une suite de projections parallèles du premier triangle au second. (On considérera des plans intermédiaires, p.ex. un plan passant par O' et un plan passant par O'X').</p>
+<p>
+<b>Ceci dit, avons-nous fait de la géométrie ?</b></p>
+<p>Tout au mieux, nous avons fait quelques petits exercices de logique. Mais à aucun moment nous n'avons dessiné, ni fait, à deux exceptions près, de petits modèles dans l'espace. Bref nous avons fait de la logique, ce qui n'est pas mauvais, mais il importe de faire également de la géométrie.<br>
+Nous conseillons d'ajouter pour les nombreuses propriétés démontrées plus haut un petit schéma.</p>
+<p>Une alternative à cette étude fort austère est la suivante:<br>
+Nous proposons quelques petits exercices de dessin dans le plan. (Il n'est malheureusement pas commode de faire en classe des petits modèles tridimensionnels, ce qui serait préférable.)<br>
+Nous dessinerons les figures dans un dièdre formé des plans &alpha; horizontal et &beta; vertical.<br>
+Nous représenterons en <b>rouge</b> les figures situées dans le <b>plan horizontal</b> et en <b>vert</b> celles situées dans le <b>plan vertical</b>.</p>
+<p>Chaque étape de la solution doit être justifiée correctement.</p>
+<table class="centre" style="width:570px;">
+<tr><td><img alt="" src="../dot.png" width=268 height=1>
+</td><td><img alt="" src="../dot.png" width=34 height=1>
+</td><td><img alt="" src="../dot.png" width=268 height=1>
+</td></tr>
+<tr><td>
+<img alt="" src="espace/a.gif">
+</td><td>
+</td><td>
+<p class="ni lh">Trouver l'intersection du plan &pi; déterminé par la droite d et le point P avec le plan horizontal &alpha;
+</td></tr>
+<tr><td>
+<img alt="" src="espace/b.gif">
+</td><td>
+</td><td>
+<p class="ni lh">Trouver l'intersection du plan &pi; déterminé par la droite d et le point P avec les plans horizontaux et verticaux.
+</td></tr>
+<tr><td>
+<img alt="" src="espace/c.gif">
+</td><td>
+</td><td>
+<p class="ni lh">Trouver l'intersection de la droite PQ du plan &pi;, déterminé par la droite d et P, avec le plan horizontal &alpha;
+</td></tr>
+<tr><td>
+<img alt="" src="espace/d.gif">
+</td><td>
+</td><td>
+<p class="ni lh">Trouver l'intersection du plan déterminé par les droites d et d' avec le plan déterminé par les deux sécantes AB et CD.
+</td></tr>
+<tr><td>
+<img alt="" src="espace/e.gif">
+</td><td>
+</td><td>
+<p class="ni lh">Dessiner l'intersection du plan PQR avec le tétraèdre ABCD.
+</td></tr>
+<tr><td>
+<img alt="" src="espace/f.gif">
+</td><td>
+</td><td>
+<p class="ni lh">R est situé dans la face BCEF. Dessiner l'intersection du plan PQR avec le prisme ABCDEF.
+</td></tr>
+<tr><td>
+<img alt="" src="espace/g.gif">
+</td><td>
+</td><td>
+<p class="ni lh">P est dans le plan ABC, Q est dans le plan ACD et R est dans le plan ABD<br>
+Tracer l'intersection du plan PQR avec les trois plans ABC, ABD et ACD<br>
+Terminer en traçant l'intersection de ce plan avec le plan BCD.
+</td></tr>
+</table>
+
+<p class="st">Et maintenant ?</p>
+<p>Que préférez-vous ?</p>
+<p>Si vous n'êtes pas convaincu par la méthode graphique et que vous préférez encore la méthode logique, nous vous donnons comme exercice: "Démontrer la théorème de Desargues". (Il va sans dire qu'il vous est interdit de tracer une figure !).</p>
+<p>Bonne chance.</p>
+
+<p class="st">Epilogue</p>
+<p>Sommes-nous bien certains d'avoir une bonne axiomatique qui correspond fort bien à nos sensations de l'espace habituel ?<br>
+Pourtant nous n'avons rien demandé aux droites. Ont-elles un nombre fini ou infini de points ? Si oui, sont-elles ordonnées ?</p>
+<p>Eh oui ! Ce n'est pas si simple l'axiomatique.</p>
+		</div>
+	</div>
+
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="docd.htm">Documents</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+		<div class="centre"><hr style="width:70%;"></div>
+<br>
+Pour toute remarque ou commentaire, écrire à <script type="text/javascript">
+// JavaScript pris sur le site: "http://www.java.scripts-fr.com" 
+var nom = "xhubaut";
+var domaine = "ulb.ac.be"; 
+var deb = "<";
+var fin = ">";
+document.write('<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + deb + '/a' + fin); 
+</script>.<br>
+	</div>
+</div>
+</body>
+</html>

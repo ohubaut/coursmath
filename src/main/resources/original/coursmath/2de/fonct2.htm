@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ensemble des équations - 2e degré - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="abaque, conjugué harmonique, résolution, graphique" />
+<meta name="keywords" content="second degré, algèbre, géométrie, résolution, abaque" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="2de.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-7', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />Ensemble des équations<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+<p>Si on parle beaucoup de l'équation du second degré on s'intéresse fort peu à l'ensemble des équations du second degré.</p>
+
+<p>Une équation du second degré \( ax^2 + bx + c = 0\) est un triple de nombres \(a, b, c\) donnés à un facteur près (non nul évidemment). 
+On reconnaît là des coordonnées homogènes dans le plan.</p>
+
+<p>Si l'on préfère travailler avec des coordonnées cartésiennes, on peut remarquer que si l'on ne s'intéresse qu'aux "vraies" équations du 2e degré, le coefficient a n'est pas nul et l'équation peut s'écrire sous la forme \(x^2 + px + q = 0\). 
+Une équation du deuxième degré proprement dite peut donc être représentée par un point de coordonnées \((p, q)\) dans le plan.</p>
+
+<p>Il y a trois types d'équations du 2e degré suivant le signe du discriminant \(D = p^2 - 4q\). 
+En particulier si \(p^2 = 4q\), les équations possèdent une racine double valant \(-p/2\). 
+Elles sont représentées par les points d'une parabole.</p>
+
+<img alt="" src="fonc/para.gif" width=325 height=180>
+
+<p>Les points intérieurs représentent les équations à \(D &lt; 0\), c'est-à-dire les équations n'ayant pas de racine (réelle) ; les points extérieurs, celles à \(D > 0\), représentent les équations possédant 2 racines distinctes.</p>
+
+<p>Soit \(a\) un tel point de coordonnées \((p', q')\) ; par \(a\) on peut mener 2 tangentes distinctes à la parabole \(p^2 - 4q = 0\). Ces tangentes ont deux points de contact \(r, s\) correspondant à deux équations du 2e degré ayant chacune une racine double (puisque \(p^2 - 4q = 0\)).</p>
+
+<p>Il n'est dès lors guère difficile de vérifier que ces racines sont celles de l'équation du 2e degré considérée. On peut également le démontrer en remarquant que les deux points \(r, s\) de contact sont sur la polaire de  \(a\) dont l'équation est \(pp' - 4(q + q')/2 = 0\). 
+Il s'agit précisément de la condition de <a href="../mat/harmoni.htm">conjugaison</a> des racines de <a href="2edegre.htm">deux équations du 2e degré</a> ; les solutions (confondues) des équations correspondant aux points \(r\) et \(s\) sont donc les racines de l'équation correspondant au point \(a\), car deux points confondus sont conjugués par rapport à un couple de points distincts si et seulement s'ils sont confondus avec l'un d'eux.</p>
+
+<p>On peut utiliser cette représentation pour construire un abaque permettant de résoudre graphiquement les équations du 2e degré.</p>
+<br />
+<img alt="" src="fonc/fig.gif" width=325 height=205>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="2degrd.htm">Second degré</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

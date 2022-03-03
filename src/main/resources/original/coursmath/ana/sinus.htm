@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Une limite aux conséquences illimitées - Analyse - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="trigonométrie, fonction goniométrique, dérivées, limite" />
+<meta name="keywords" content="limites, sinus, radian" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="ana.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-8', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />
+La limite de sin x / x
+<br />
+	</div>
+<br />
+	<div class="stitre">
+	</div>
+<br />
+	<div class="central">
+		<div class="texte">
+<p>Le calcul des dérivées de fonctions algébriques ne présente guère de difficultés. Quand on rencontre la forme 0/0, cela résulte tout simplement du fait que numérateur et dénominateur ont un facteur commun. Il suffit alors de simplifier par celui-ci. Il n'en est pas de même lorsqu'on étudie d'autres fonctions (goniométriques, exponentielles, ...).</p>
+
+<p>Le premier exemple se présente lors de la recherche de la dérivée de la fonction \(\mathbf{sin~}x\). On est confronté à la détermination de la valeur d'une forme 0/0 provenant de \(\mathbf{sin~}x /x \) qui doit être calculée pour \(x = 0\). C'est, en fait, un des premiers contacts avec l'analyse. Une introduction à la notion de limite et de ses règles de calcul s'impose.</p>
+
+<p>Lorsque l'on parcourt des forums (francophones), on reste ahuri en voyant les commentaires relatifs à la limite de \(\mathbf{sin~}x /x \) lorsque \(x\) tend vers 0.
+Peut-être en a-t-on oublié la démonstration ? C'est pardonnable, d'autant plus, que par la suite, on ne parle plus jamais de cette fameuse limite. Par contre, ce qui est plus grave, c'est d'avoir oublié qu'il a été indispensable de calculer sa valeur afin de pouvoir établir les dérivées des fonctions goniométriques ; de plus, on a utilisé une hypothèse bien précise : l'angle \(x\) doit être exprimé en radians !
+On peut lire :</p>
+
+<blockquote><p><i>"C'est évident : il te suffit d'appliquer la règle de l'Hospital"</i></p>
+
+<p><i>"Utilise le développement en série de MacLaurin et simplifie"...</i></p>
+
+</blockquote>
+
+<p>Serait-ce aussi simple ? Mauvaises réponses, cercles vicieux ; elles demandent toutes la connaissance de la dérivée de \(\mathbf{sin~}x\) !</p>
+
+<p>Une réponse, plus "moderne", un rien meilleure, propose l'utilisation d'une calculette : on prend x très petit (0,1 0,01 ou 0,001... mais également -0,1 -0,01 ou -0,001...) et on constate que la valeur de \(\mathbf{sin} x /x \) se rapproche plus en plus de la valeur 1.
+Mais seul un expérimentateur se contenterait d'une telle réponse !</p>
+
+<p><i>Au passage, signalons que, pour arriver à ce résultat, il faudra avoir choisi sur sa calculette le radian pour unité de mesure des angles !</i></p>
+
+<p>Certaines calculettes permettront même d'en avoir la "preuve" en affichant le graphique de cette fonction :</p>
+
+<img alt="(sin x)/x" src="sinu/sin_x_div_x.gif" width=639 height=324>
+
+<p>Mais un dessin n'a jamais constitué une preuve. Que faire avec cette fonction sinus ?</p>
+
+<p>Rappelons-nous la définition du sinus d'un angle (ou de l'arc qui lui est associé). Tout se passe dans un cercle - d'orientation anti-horaire - dont le rayon est choisi pour unité de mesure : le cercle trigonométrique.</p>
+
+<img alt="" src="sinu/trigo.gif" width=270 height=244>
+
+<p>Le sinus de l'angle \(x\), ou de l'arc associé UX, est la mesure du segment AX. Autrement dit, le sinus de l'angle \(x\) est l'ordonnée du point X dans le repère donné. Ensuite on passe facilement à la définition des autres fonctions goniométriques : le cosinus de \(x\) est égal à l'abscisse OA du point X. Ensuite la tangente de l'angle \(x\) est le rapport de \(\mathbf{sin~}~x\) à \(\mathbf{cos~} x\) avec une belle interprétation géométrique, \(\mathbf{tan} x\) est l'ordonnée du point T de la tangente en U.</p>
+
+<p>De là, on conclut rapidement que AX &lt; UX &lt; UT et, en exprimant les mesures de ces grandeurs en fonction de \(x\), on obtient : \(\mathbf{sin~}x\) &lt;\(x\) &lt; \(\mathbf{tan~}x\). On divise ces inégalités par \(\mathbf{sin~}x\) et on obtient avec \(x\) positif : \(1 &lt; x/\mathbf{sin~} x &lt; 1/\mathbf{cos~}x\). On constate alors que si \(x\)> tend vers 0, \(\mathbf{cos~}x\) tend vers 1 et  \(x/\mathbf{sin~}x\) est "coincé" entre ces deux valeurs. Par conséquent, la limite de \(\mathbf{sin~} x /x \) vaut 1. C'est ce que nos amis français appellent, avec humour, le théorème des gendarmes ! Par prudence, on vérifie évidemment que tout va bien si \(x\) est négatif, et on achève, ainsi, la démonstration.
+Sauf que...</p>
+
+<p>Il est simple de prouver que le segment AX est plus court que l'arc UX. En effet, l'arc UX est plus grand que le segment UX (le plus court chemin) et de plus une oblique UX issue de X est plus grande que la perpendiculaire AX. Par contre, il n'est pas évident que l'arc UX soit plus court que le segment UT. Bien sûr, cela se "voit", mais encore faudrait-il le démontrer.</p>
+
+<p>Encore une démonstration insatisfaisante.</p>
+
+<p>Nous serions peut-être plus convaincus en considérant les aires.</p>
+
+<p>Le triangle OAX est plus petit que le secteur OXU qui est lui même plus petit que le triangle OTU.
+Exprimons ces aires : l'aire d'un triangle vaut la moitié du produit de la base par la hauteur. L'aire d'un cercle (d'angle au centre \(2\pi\)) vaut \(\pi R^2\). L'aire d'un secteur d'angle \(x\) vaut \((x/2\pi).\pi R^2\), ce qui dans le cas du cercle trigonométrique donne  \(x/2\).<br />
+On a donc : \((\mathbf{sin~}x.\mathbf{cos~} x)/2 &lt; x/2 &lt; (\mathbf{tan~}x )/2\). A présent il suffit de multiplier cette inégalité par 2 et de la diviser, comme plus haut, par <b>sin</b> <i>x</i>. Les gendarmes qui entourent la fonction <i>x</i>/<b>sin</b> <i>x</i> nous offrent la démonstration de la valeur de la limite cherchée.</p>
+
+<p>Démonstration ? Vraiment ? </p>
+
+<p>Nous avons raisonné sur une figure peut-être incorrecte. Bien pire, nous avons admis que l'aire d'un cercle de rayon \(R\) vaut \(\pi R^2\) mais ce résultat, bien connu depuis l'école primaire et même depuis plus de deux millénaires par Archimède, ne sera malheureusement établi "rigoureusement" en classe que plus tard à l'aide du calcul intégral, c'est-à-dire moyennant la connaissance des dérivées des fonctions goniométriques.</p>
+
+<p>Le fameux cercle vicieux réapparaît car la dérivée de \(\mathbf{sin} x\) dépend de la limite de \(\mathbf{sin} x /x \) lorsque \(x\) tend vers 0.</p>
+
+<p>Où trouve-t-on de la rigueur dans tout cela ? Nulle part, mais est-ce bien nécessaire d'être un "intégriste" de la rigueur ? Bien sûr que non ; il suffit d'être réaliste et de signaler que le résultat obtenu par la simple contemplation d'une figure ne constitue pas une démonstration, mais sera toutefois admis.</p>
+
+<p>Ceci dit, que faut-il retenir de tout cela ?</p>
+
+<p>Le résultat trouvé : </p>
+
+\[\lim_{x\to 0}\frac{\mathbf{sin} x}{x}\]
+
+<p class="ni">est obtenu sous la condition que \(x\) <b>est exprimé en radians</b>.
+Donc la conséquence en est que le calcul de la dérivée de \(\mathbf{sin} x\) qui vaut \(\mathbf{cos} x\) n'est valable que lorsque \(x\) est exprimé en radians. En conséquence, les valeurs obtenues pour les dérivées des autres fonctions goniométriques, ne seront valables que si \(x\) est exprimé en radians. Cela s'oublie d'autant plus vite que le calcul de cette fameuse limite n'apparaît pratiquement plus jamais par la suite !</p>
+
+<p>On s'en rend pourtant compte lorsque l'on songe à l'interprétation géométrique de la dérivée en un point \(x\) : c'est la pente de la tangente au graphique de la fonction en ce point.
+Si \(x\) est  exprimé en radians, la dérivée de la fonction \(\mathbf{sin} x\), qui est égale à \(\mathbf{cos} x\), vaudra 1 à l'origine, ce qui signifie que la tangente au graphique de la fonction \(\mathbf{sin} x\) sera inclinée à 45°, ainsi qu'on peut le constater sur le graphique ci-dessous.</p>
+
+<img alt="sin x" src="sinu/sinus.gif" width=610 height=208>
+
+<p>Au cas où la variable \(x\) est exprimée en d'autres unités, telles le degré ou le tour, il faudra tenir compte d'un facteur correctif.</p>
+
+<p>A titre de comparaison voici le graphique de la fonction \(\mathbf{sin} x\) lorsque \(x\) est exprimé en nombre de tours.</p>
+
+<img alt="sin x" src="sinu/sinus-tour.gif" width=481 height=223>
+
+<p>Il est clair que la dérivée à l'origine est différente de 1 ! Le facteur correctif vaut \(2\pi\). Dans ce cas la dérivée de \(\mathbf{sin} x\) vaut \(2\pi \mathbf{cos} x\).</p>
+
+<p>Au cas où l'angle \(x\) est exprimé en degrés, le facteur correctif vaudrait  \(\pi/180  (= 2\pi/360)\).</p>
+
+<p>La simplicité des dérivées des fonctions goniométriques justifie enfin le choix, curieux aux yeux des non-mathématiciens, du radian comme unité de mesure des angles.
+À ce propos, signalons qu'une situation analogue se produira un peu plus tard lors de l'étude des dérivées des fonctions exponentielles et logarithmiques. On verra comment le choix d'un nombre bizarre : le nombre \(e\) (=2,718...) pour base de logarithmes, simplifiera à nouveau toutes les formules de dérivation.</p>
+		</div>
+	</div>
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="analyd.htm">Analyse</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Cercle de Monge - 2e degré - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="forme, bilinéaire, symétrique, ellipse, orthoptique" />
+<meta name="keywords" content="second degré, algèbre, géométrie, coniques, cercle, Monge, métrique" />
+<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="2de.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  if (location.protocol!='file:')
+  {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2637570-7', 'auto');
+  ga('send', 'pageview');
+  }
+
+</script>
+</head>
+
+<div id="container">
+<a id="H"></a>
+
+	<div id="logo">
+<br />
+		<div class="ban">
+<a href="../somm.htm">Mathématique du secondaire</a>
+		</div>
+<br />
+		<div class="source">
+<a href="http://xavier.hubaut.info/" target="ext">Xavier Hubaut,  </a><i>professeur émérite </i> - <a href="http://www.ulb.ac.be/" target="ext">Université Libre de Bruxelles</a>
+		</div>
+<br /><br />
+	</div>
+	<div class="titre">
+<br />Un exercice: le cercle de Monge<br />
+	</div>
+	<div class="stitre">
+	</div>
+<br /><br />
+	<div class="central">
+		<div class="texte">
+		
+<p>A titre d'exemple traitons un petit exercice typiquement métrique: quel est l'ensemble des points d'où l'on voit une ellipse sous un angle droit ?<br />
+Soit \(\mathbf{C}\) l'ellipse en question d'équation :</p>
+
+\[ ax^2 + by^2 = 1\]
+ou
+\[\mathbf{C}(x,x) \equiv ax^2+by^2-1=0 \]
+
+<p class="ni">et un point \(P\) de coordonnées \((x_0,y_0)\)</p>
+
+<p>Rappel des notations:</p>
+
+<p>Si \(P\) désigne un point donné de coordonnées \((x_0,y_0)\) et \(X\) un point quelconque de coordonnées \((x,y)\), on désigne par \(\mathbf{C}(X,X)\) une forme quadratique en \(x,y\) et \(\mathbf{C}(P,P)\) la valeur de cette forme au point \((x_0,y_0)\) ; enfin \(\mathbf{C}(X,P)\) est la valeur de la forme bilinéaire symétrique associée à la forme quadratique \(\mathbf{C}\) pour les points \((x_0,y_0)\) et \((x,y)\).</p>
+
+<p>On obtient la forme bilinéaire symétrique en remplaçant dans la forme quadratique:</p>
+
+<ul>
+<li>les carrés du type \(x^2\) par les produits \(x_0x\)</li>
+<li>les termes produits de type \(xy\) par les sommes \(\frac{1}{2}(x_0y+xy_0)\),</li>
+<li>les termes linéaires du type \(x\) par les sommes \(\frac{1}{2}(x_0+x)\).</li>
+</ul>
+
+<p>Nous avons vu que les <a href="conique.htm">tangentes issues de ce point</a> ont pour équations:</p>
+
+\[\mathbf{C}^2(P,X) - \mathbf{C}(P,P).\mathbf{C}(X,X) = 0\]
+
+c'est-à-dire dans notre cas:
+
+\[(axx_0+byy_0-1)^2-(ax_0^2+by_0^2-1)(ax^2+by^2-1)=0\]
+
+<p>Les termes du second degré de cette équation sont:</p>
+
+\[ax^2(by_0^2-1)-2abx_0y_0xy+by^2(ax_0^2-1)\]
+
+<p>Les droites correspondantes seront perpendiculaires si la somme des coefficients des termes carrés en \(x\) et \(y\) est nulle; on obtient donc:</p>
+\[aby_0^2-a+bax_0^2-b=0\]
+<p class="ni">cela signifie que le point \(P\) de coordonnées \((x_0,y_0)\) est soumis à la condition:</p>
+\[x_0^2+y_0^2=\frac{a+b}{ab}\]
+
+<p class="ni">et l'on constate qu'il s'agit d'un cercle ; il est appelé cercle orthoptique, ou cercle de <a title="Le père de la géométrie descriptive" href="../bio/monge.htm">Monge</a>.</p>
+
+<img alt="" src="exer/des.gif" width=290 height=291>
+
+<p>Cet exemple montre combien une étude préliminaire générale des coniques permet de regagner dans la suite le temps qui aurait été nécessaire à une étude détaillée et séparée de chacun des types de coniques.</p>
+		</div>
+	</div>
+	
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="2degrd.htm">Second degré</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+	</div>    
+</div>
+</body>
+</html>

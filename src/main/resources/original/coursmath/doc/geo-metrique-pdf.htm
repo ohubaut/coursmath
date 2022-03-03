@@ -1,0 +1,445 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Documents - Mathématique du secondaire</title>
+<meta name="author" content="Xavier Hubaut" />
+<meta name="description" content="résumés" />
+<meta name="keywords" content="groupes, musique, algèbre, géométrie" />
+<!--<link type="text/css" rel="stylesheet" href="../commun.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="doc.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../impr.css" media="print" />
+-->
+<style type="text/css">
+
+body {
+	text-align: center;
+	background-color: #fffff0;
+	font-family: "Times New Roman", Times, serif; 
+	font-size: 1.1em;
+}
+
+#container {
+	width: 800px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+a:link {
+	color:#000;
+	text-decoration: none;
+}
+a:visited {
+	color:#000;
+	text-decoration: none;
+}
+a:active {
+	/*color:#ff0000;*/
+	text-decoration: none;
+}
+a:hover {
+	/*color:#ff0000;*/
+	text-decoration: underline;
+}
+
+/*___________________________ LOGO ________________________*/
+
+#logo{
+	background-color: transparent;
+	font-weight: bold;
+	border-bottom: solid;
+	border-width: 2px;
+	border-color: #ff0000;
+}
+
+#logo a {
+	color: red;
+	text-decoration: none; 
+}
+
+.ban {
+	font-size: 3em; 
+	text-shadow: 4px 4px 3px #666
+}
+
+.source {
+	font-size: 1.2em;
+}
+
+/*___________________________ TITRE ________________________*/
+
+.titre {
+	font-size: 2.4em;
+	font-weight: bolder;
+}
+
+.stitre {
+	font-size:1.1em; 
+	font-weight:normal;
+	color: #000;
+}
+/*___________________________ CENTRAL ________________________*/
+
+.central {
+	background: #fff;
+	padding: 30px 50px;
+}
+/*___________________________ TEXTE ________________________*/
+
+.texte li {
+	line-height: 1.5em;
+	text-align: justify;
+}
+p {
+	line-height: 1.5em;
+	text-indent: 1.7em;
+	text-align: justify;
+}
+
+p.ni {
+	text-indent: 0;
+}
+.st {	
+	font-weight: bold;
+}
+.lh {
+	line-height: 1.5em;
+}
+.gauche {
+	margin-right: 20px;
+	float: left;
+}
+.droite {
+	margin-left: 20px;
+	float: right;
+}
+.enc {
+	border: 1px solid #000;
+}
+.rouge {
+	color: #f00;
+}
+sub { 
+	font-size: .7em;
+	line-height: .8em; 
+}
+sup { 
+	font-size: .7em;
+	line-height: .8em; 
+}
+
+/*___________________________ TABLE ________________________*/
+
+.centre {
+	margin: auto;
+}
+
+.n { 	/* table normale */
+	margin:auto;
+	border-collapse: collapse;
+}
+
+.n td {
+	padding: 0.3em;
+	border: 1px solid black;
+}
+
+/*___________________________ FINAL ________________________*/
+
+.final td { 
+	width: 266px; /* 800 / 3 */
+}
+
+</style>
+<link rel="shortcut icon" type="images/x-icon" href="../favicon.ico" />
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!--<script type="text/javascript">-->
+<!--
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2637570-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+-->
+<!--</script>-->
+</head>
+
+<body>
+<div id="container">
+	<div class="central">
+		<div class="texte">
+<!-- page 1-->
+
+<a id="H"></a>
+<br>
+
+
+	<div class="titre">
+Géométrie "analytique" plan métrique
+<br />
+
+
+	</div>
+	<div class="stitre">
+par<br><br>
+<b>Xavier Hubaut</b><br><br>
+Professeur émérite - Université Libre de Bruxelles - Département de Mathématique
+	</div>
+<br>
+
+
+<ol>
+<li><a href="#1">Produit scalaire de deux vecteurs - Vecteurs orthogonaux - Repère orthonormé</a></li>
+<li><a href="#2">Distance de deux points</a></li>
+<li><a href="#3">Equation normale d'une droite</a></li>
+<li><a href="#4">Distance d'un point à une droite</a></li>
+<li><a href="#5">Coefficient angulaire</a></li>
+<li><a href="#6">Equations paramétriques d'une droite</a></li>
+<li><a href="#7">Angle de deux droites - condition de perpendicularité</a></li>
+<li><a href="#8">Rotation du repère - Rotation du plan</a></li>
+<li><a href="#9">Déplacement des axes - Déplacement du plan</a></li>
+<li><a href="#10">Cercle - Centre - Rayon - Equations</a></li>
+<li><a href="#11">Intersection avec une droite - Tangente</a></li>
+<li><a href="#12">Puissance d'un point par rapport à un cercle - Axe radical</a></li>
+<li><a href="#13">Angle de deux cercles</a></li>
+<li><a href="#14">Autres configurations intéressantes</a></li>
+</ol>
+<br><hr style="width: 75%"><br>
+
+<a id="1"> </a>
+<p class="st">1. Produit scalaire de deux vecteurs - Vecteurs orthogonaux - Repère orthonormé</p>
+
+<p>Soit \(v_1, v_2\) deux vecteurs de coordonnées \((x_1, y_1)\) et \((x_2, y_2)\).<br>
+Calculons leur produit scalaire en tenant compte de la bilinéarité de ce produit.</p>
+\(\begin{align} v_1.v_2 =& (x_1\imath + y_1\jmath).(x_2\imath + y_2\jmath) \\
+=& x_1.y_1\imath^2 + (x_1.y_2 + x_2.y_1) \imath.\jmath + x_2.y_2\jmath^2\end{align}\)
+<p><img class="gauche" alt="produit scalaire" src="geom/fig1.png">
+Pour calculer cete expression il faut donc connaître \(\imath^2,\jmath^2 \) ainsi que \(\imath.\jmath \), c'est-à-dire le carré de la longueur des vecteurs de base ainsi que leur produit scalaire.</p>
+<p>Il sera donc commode, quand il s'agit de traiter des propriétés métriques, de choisir un repère formé de deux vecteurs perpendiculaires et de longueur \(1.\)</p>
+
+<p>Leur produit scalaire \(\imath.\jmath = 0\) et le carré de leur longueur \(\imath^2 = \jmath^2  = 1 \).<br>
+<br>
+<p>Dans ce cas l'expression ci-dessus devient:</p>
+\( v_1.v_2 = (x_1\imath + y_1\jmath).(x_2\imath + y_2\jmath) = x_1y_1+ x_2y_2 \).
+<p>Le repère est dit orthonormé. Dans la suite nous utiliserons toujours un repère de ce type.</p>
+
+<a id="2"> </a>
+<p class="st">2. Distance de deux points</p>
+<p>Soit les deux points \(a_1 (x_1,y_1)\) et \(a_2 (x_2,y_2)\).<br>
+Les coordonnées de \(a_1a_2\) sont \((x_2-x_1, y_2-y_1)\). Si \(\delta\) désigne le module du vecteur, on a:<br> \(\delta^2= {a_1a_2}^2 = (x_2-x_1)^2 +(y_2-y_1)^2\). On a donc :</p>
+<table class="n"><tr><td>\(\delta=\sqrt{(x_2-x_1)^2 +(y_2-y_1)^2}\)</td></tr></table>
+
+<a id="3"> </a>
+<p class="st">3. Equation normale d'une droite</p>
+<p><img class="droite" alt="equation" src="geom/fig2.png"> Soit une droite \(D\). Menons par l'origine O la perpendiculaire \(P\) à \(D\) désignons par \(p\) le point d'intersection de \(P\) et \(D\). Si \(q\) est un point quelconque de \(D\), on a \(Oq = Op+pq.\) Multiplions scalairement cette égalité par un vecteur unité \(u\) de la droite \(P\) et compte tenu que \(pq\) est perpendiculaire à \(u\), on obtient :</p>
+\(Oq.u = Op.u+pq.u = Op.u \).<br>
+<p>Les coordonnées de \(Oq\) sont \((x,y)\) ; la vecteur \(u\) a pour coordonnées \((\mathbf{cos~}\varphi ,\mathbf{sin~}\varphi)\) où \(\varphi\) désigne l'angle que fait \(P\) avec l'axe \(Ox\) ; \(Op = \mathbf{d}~u\) où \( \mathbf{d}\) désigne la distance de l'origine à la droite. En remplaçant dans la relation ci-dessus, on obtient:</p>
+\(x~\mathbf{cos~}\varphi + y~\mathbf{sin~}\varphi =\mathbf{d}\)   ou   \(x~\mathbf{cos~}\varphi + y~\mathbf{sin~}\varphi - \mathbf{d}=0\)<br>
+<p class="ni">ce qui est appelé l'<b>équation normale</b> de la droite \(D\) </p>
+<p><i>On remarque que la comme des carrés des coefficients de \(x\) et \(y\) vaut \(1\).<br>
+Pour normaliser l'équation d'une droite \(ux+vy+w=0\), il suffit de diviser par \(\sqrt{u^2+v^2}\)</i></p>
+<table class="n"><tr><td>\[ \frac{ ux+vy+w}{ \sqrt{u^2+v^2}} = 0\] </td></tr></table>
+
+<a id="4"> </a>
+<p class="st">4. Distance d'un point à une droite</p>
+<p><img class="gauche" alt="distance point-droite" src="geom/fig3.png">Soit la droite \(D\) et le point \(p_0(x_0,y_0)\) et traçons  \(p_0q\perp D\). On a </p>
+\( Oq = Op + pq = Op_0 + p_0q \)
+<p class="ni">Multiplions les deux derniers membres de cette égalité par le vecteur \(u\) de \(P\). On obtient : \( Op.u + pq.u = Op_0.u +p_0q.u \)</p>
+<br>
+
+<p>Compte tenu que \(Op.u=\mathbf{d} \) et que \(pq.u=0\), en remplaçant \(Op_0\) par sa valeur \(x_0~\mathbf{cos~}\varphi + y_0~\mathbf{sin~}\varphi \), on obtient:
+\[\mathbf{d} = x_0~\mathbf{cos~}\varphi + y_0~\mathbf{sin~}\varphi + p_0q.u \]
+<p class="ni">Or \(p_0q.u \) est, en valeur absolue, précisément la distance \(\delta \) du point \(p_0\) à la droite \(D\) ; on obtient finalement:
+<table class="n"><tr><td>\( \delta = |~x_0~\mathbf{cos~}\varphi + y_0~\mathbf{sin~}\varphi - \mathbf{d}~| = \Large{|~\frac{ ux_0+vy_0+w}{ \sqrt{u^2+v^2}}~|} \)</td></tr></table>
+<p class="ni">On voit qu'il suffit de remplacer dans le premier membre de l'équation normale de la droite \(x,~y\) par les coordonnées \(x_0,~y_0\) du point \(p\).
+
+<a id="5"> </a>
+<p class="st">5. Coefficient angulaire</p>
+<p><img class="gauche" alt="angle de la droite avec l'axe x" src="geom/fig4.png">Etant donné une droite \( ux + vy + w = 0 \), le ceofficient angulaire \(m = \large -\frac{u}{v} \). Dans un repère orthonormé, \(\large -\frac{u}{v}\)\( = \mathbf{tan~}\varphi \) où \(\varphi \) est l'angle formé par la droite avec l'axe des \(x\). Le coefficient directeur prend alors le nom de coefficient angulaire (ou pente) de la droite.</p>
+<br><br>
+
+<a id="6"> </a>
+<p class="st">6. Equations paramétriques d'une droite</p>
+<p><img class="droite" alt="multiple du vecteur directeur" src="geom/fig5.png">Soit une droite, \(D\) faisant un angle de \( \varphi \) avec l'axe  \(Ox\), passant par le point \( p_0~(x_0,y_0) \). Un vecteur unité de la droite a pour coordonnées \( (\mathbf{cos~}\varphi , \mathbf{sin~}\varphi) \). Les équations paramétriques de la droite sont donc:</p>
+<table class="n"><tr><td> \( \begin{align} x =& x_0 + t~\mathbf{cos~}\varphi \\ y =& y_0 + t~\mathbf{sin~}\varphi \end{align} \) </td></tr></table>
+
+<a id="7"> </a>
+<p class="st">7. Angle de deux droites - condition de perpendicularité</p>
+
+<p class="st">7.1 Angle de deux droites orientées</p>
+<p> Soit 2 droites d'équation :</p>
+\( D_1 \equiv u_1 x + v_1 y +w_1 = 0 \\
+D_2 \equiv u_2 x + v_2 y +w_2 = 0 \)
+<p><img class="gauche" alt="angle de droites orientées" src="geom/fig6.png"><br>Les vecteurs \( d_1 (v_1, -u_1) \) et  \( d_2 (v_2, -u_2) \) sont des vecteurs directeurs respectivement de \( D_1 \) et de \( D_2 \).<br>
+Le produit scalaire \( d_1.d_2  = | d_1 | | d_2 | \mathbf{cos~}\varphi \) ; par conséquent \( \mathbf{cos~}\varphi = \large \frac{d_1.d_2}{| d_1 | | d_2 | } \). On peut donc écrire :</p>
+<br><br>
+<p>
+<table class="n"><tr><td>\( \mathbf{cos~}\varphi =\Large \frac{u_1 u_2 + v_1 v_2}{\sqrt{u_1^2 + v_1^2}\sqrt{u_2^2 + v_2^2} } \)</td></tr></table>
+<p>La condition de perpendicularité est tout simplement :</p>
+<table class="n"><tr><td>\( D_1\perp D_2~~\iff~~\mathbf{cos~}\varphi = 0~~\iff~~u_1 u_2 + v_1 v_2 = 0 \)</td></tr></table>
+
+<p class="st">7.2 Angle orienté de deux droites</p>
+<p>On appelle angle orienté de deux droites \(D_1, D_2\) et on note \((d_1,d_2)\), l'angle dont il faut faire tourner \(D_1\) pour l'amener sur \(D_2\); cet angle est donné à \(\pi\) près.</p>
+<p class="ni"><img class="gauche" alt="angle orienté" src="geom/fig7.png">Dans ce cas il sera commode de travailler avec les coefficients angulaires \(m_1\) et \(m_2\) des deux droites. Soit \(m_1 = \mathbf{tan~}\varphi_1\) et \(m_2 = \mathbf{tan~}\varphi_12\).</p>
+<p>L'angle \(\varphi = (d_1,d_2) = \varphi_2 - \varphi_1\).<br>
+On a donc : \( \mathbf{tan~}\varphi = \mathbf{tan~}(\varphi_2 - \varphi_1) = \large \frac{\mathbf{tan~}\varphi_2 - \mathbf{tan~} \varphi_1}{1+\mathbf{tan~} \varphi_1 \mathbf{tan~}\varphi_2 } \) </p>
+<br>
+<table class="n"><tr><td>\( \mathbf{tan~}\varphi = \large \frac{m_2-m_1}{1+m_1m_2} \)</td></tr></table>
+<p>La condition de perpendicularité est tout simplement :</p>
+<table class="n"><tr><td>\( D_1\perp D_2~~\iff~~\mathbf{tan~}\varphi = \infty~~\iff~~m_1 m_2 = -1 \)</td></tr></table>
+
+<a id="8"> </a>
+<p class="st">8. Rotation du repère - Rotation du plan</p>
+<p><img class="gauche" alt="rotation du repère" src="geom/fig8.png">Soit un repère \( (\imath, \jmath) \) d'origine O. Considérons le repère \( (\imath', \jmath') \) image du premier par une rotation d'angle \(\varphi\) autour du poin O. On a :</p>
+\(  \begin{align} \imath'~~=&~~\mathbf{cos~}\varphi~\imath + \mathbf{sin~}\varphi~\jmath \\ \jmath'~~=& -\mathbf{sin~}\varphi~\imath + \mathbf{cos~}\varphi~\jmath \end{align} \)
+<p>Prenons un point \(p\) de coordonnées \((x,y)\) et calculons ses coordonnées dans le nouveau repère. On a :</p>
+\( \begin{align} 
+Op =&~~ x'~\imath' + y'~\jmath'\\
+=&~~ x'(\mathbf{cos~}\varphi~\imath + \mathbf{sin~}\varphi~\jmath ) + y' (-\mathbf{sin~}\varphi~\imath + \mathbf{cos~}\varphi~\jmath)\\
+=&~~(x'\mathbf{cos~}\varphi~\imath - y'\mathbf{sin~}\varphi)~\imath + (x'\mathbf{sin~}\varphi + y'\mathbf{cos~}\varphi)~\jmath \\ 
+=&~~x~\imath + y~\jmath 
+\end{align} \)
+<p>Les équations d'un changement de repère seront données par:</p>
+<table class="n"><tr><td>\( \begin{align} x =&~~x'\mathbf{cos~}\varphi - y'\mathbf{sin~}\varphi \\
+y =&~~x'\mathbf{sin~}\varphi + y'\mathbf{cos~}\varphi \end{align}
+\)</td></tr></table>
+<p>Si on considère ces équations comme liant les coordonnées d'un point \(p(x,y)\) et celles de son transformé \(p'(x',y')\) dans un même repère, on obtient les équations d'une rotation d'un angle \(-\varphi\) autour de l'origine.</p>
+
+<a id="9"> </a>
+<p class="st">9. Déplacement des axes - Déplacement du plan</p>
+<p>Un déplacement du plan peut toujours se décomposer en une rotation autour d'un point quelconque suivi d'une translation.<br>
+On a donc de manière analogue les équations d'un changement de repère en composant les résultats obtenus ci-dessus avec une translation.</p>
+<table class="n"><tr><td>\( \begin{align} x =&~~x'\mathbf{cos~}\varphi - y'\mathbf{sin~}\varphi + x_0\\
+y =&~~x'\mathbf{sin~}\varphi + y'\mathbf{cos~}\varphi + y_0\end{align}
+\)</td></tr></table>
+<p>Il y a de nouveau une double interprétation :
+<ul>
+<li>soit comme lien entre nouvelles et anciennes coordonnées d'un point après déplacement du repère
+<li>soit comme les coordonnées d'un point et de son transformé par déplacement dans un repère fixe.</ul>
+
+<a id="10"> </a>
+<p class="st">10. Cercle - Centre - Rayon - Equations</p>
+<p><img class="gauche" alt="cercle" src="geom/fig9.png">Le cercle \(\gamma\) est défini par son centre \(c~(x_0, y_0)\) et son rayon \(r\). Un point \(p~(x,y)\) appartiendra au cercle \(\gamma\) lorsque le carré de sa distance sera égal au carré du rayon.<br>
+L'équation vectorielle du cercle sera :</p>
+<table class="n"><tr><td>\(cp^2 = r^2\)</td></tr></table>
+<p>Le vecteur \(cp\) a pour coordonnées \((x-x_0, y-y_0)\) ; par conséquent l'équation du cercle \(\gamma\) peut s'écrire :</p>
+<table class="n"><tr><td>\( (x-x_0)^2 + (y-y_0)^2 = r^2 \)</td></tr></table>
+<p>Si le cercle est centré à l'origine des coordonnées l'équation est tout simplement \(x^2+y^2=r^2\).<br>
+Dans le cas général, l'équation devient : \( x^2 -2x_0x+x_0^2 + y^2 -2y_0y+y_0^2=r^2\).</p> <p>Réciproquement, étant donné une équation de la forme \( a(x^2+y^2)+2bx+2cy+d=0 \), vérifions s'il s'agit bien d'un cercle en essayant de la ramener à la forme générale.<br>
+Tout d'abord, il faut évidemment que \( a\neq 0 \) sinon l'équation sera celle d'une droite (si \(b\) et \(c\) ne sont pas simultanément nuls). Dans ce cas divisons par \(a\) et l'équation peut s'écrire sous la forme :</p>
+\( (x+\large\frac{b}{a})^2 + (y+\large\frac{c}{a})^2=\large \frac{b^2+c^2-ad}{a^2}\)
+<p class="ni">et l'équation représente un cercle de centre \( c~(-b/a, -c/a) \) de rayon \(r^2=\large \frac{b^2+c^2-ad}{a^2} \). Toutefois, il faut que cette valeur de \(r^2\) soit positive !</p>
+<p><br>On en conclut que cette équation représente un cercle de rayon \(r=\sqrt{\large \frac{b^2+c^2-ad}{a^2}}\) ; au cas où  elle est nulle, le cercle est de rayon nul et se réduit à un point et enfin lorsqu'elle est négative, le cercle ne possède aucun point réel.</p>
+<p>Lorsque le premier membre de l'équation du cercle est écrit de manière que le coefficient de \(x^2+y^2\) vaut \(1\), l'équation du cercle est écrite sous forme <b>normale</b>.</p>
+<p><img class="droite" alt="cercle donné par un diamètre" src="geom/fig10.png">Dans le cas où un cercle \(\gamma\) est donné par un diamètre d'extrémités \(m_1~(x_1,y_1)\) et \(m_2~(x_2,y_2)\), pour qu'un point \(p\) appartienne à \(\gamma\), il faut et il suffit que le produit scalaire \(m_1p.m_2p = 0\).  Son équation sera donc :</p>
+<table class="n"><tr><td>\( (x-x_1)(x-x_2) + (y-y_1)(y-y_2) = 0 \)</td></tr></table>
+<p>Le cercle peut être également décrit par des équations paramétriques.<br>Soit \(\varphi\) l'angle du vecteur \(cp\) avec l'axe \(Ox\). Le vecteur \(Op = Oc + cp\) et le module de \(cp = r\). On obtient donc les équations :</p>
+<table class="n"><tr><td>\( \begin{align} x =&~~x_0 + r~\mathbf{cos~}\varphi \\ y =&~~y_0 + r~\mathbf{sin~}\varphi \end{align} \)</td></tr></table>
+
+<a id="11"> </a>
+<p class="st">11. Intersection avec une droite - Tangente</p>
+<p><img class="gauche" alt="cercle et tangente de direction donnée" src="geom/fig11.png">Soit le cercle \(\gamma\) de centre \(c\) et de rayon r\(\). Cherchons les poins d'intersection avec la droite \(D\) définie par un de ses points \(p\) et un vecteur unité \(u\). On doit résoudre le système des équations :</p> \(q \in \gamma \iff cq^2=r^2 \\ q \in D \iff pq=\delta~u \)
+<p>Or en remplaçant cq par sa valeur :</p>
+ \(r^2 = cq^2 = (cp+pq)^2 = (cp +\delta~u)^2 = cp^2 + 2cp~\delta~u + \delta^2~\)
+<p class="ni">et on obtient les valeurs de \(\delta\) ( correspondant aux points d'intersection \(q\) ) données par l'équation:</p>
+\(\delta^2+2\delta~u.cp+cp^2-r^2 = 0\)
+<p>Cette équation du second degré peut avoir, selon les  données 2 solutions, une solution double ou aucune solution réelle : cela correspond respectivement aux cas où la droite est sécante, tangente ou non-sécante au cercle.<br>
+Supposons que le point \(p~(x_1,y_1)\) appartienne au cercle. Dans ce cas \(cp^2=r^2\) et le terme indépendant de l'équation est nul. Une des solution est évidemment \(0\). La droite est sécante ou tangent. Si elle est tangente l'autre solution doit également être nulle et le coefficient du terme du premier degré est nul; autrement dit le produit scalaire \(cp.u=0\) ce qui montre que le rayon cp est perpendiculaire au vecteur u dirigé selon la droite.</p>
+<p><img class="droite" alt="tangente en un point d'un cercle" src="geom/fig12.png">Soit \(T\) la tangente au cercle en un point \(p~(x_1,y_1)\). Pour tout point \(q\) de \(T\), \(cq=cp+pq\). Comme \(pq\) est perpendiculaire à \(cp\), le produit scalaire \(cp.cq = cp^2=r^2\).<br>
+L'équation vectorielle de la tangente en \(p\) est donc :
+<table class="n"><tr><td>\( cp.cq=r^2 \)</td></tr></table>
+<p class="ni"> en remplaçant \(cp~(x_1-x_0, y_1-y_0)\)  et \(cq~(x-x_0, y-y_0)\) par leurs coordonnées, on obtient l'équation cartésienne de la tangente :</p>
+<table class="n"><tr><td>\( (x-x_0)(x_1-x_0) + (y-y_0)(y_1-y_0) = r^2 \)</td></tr></table>
+<br>
+
+<a id="12"> </a>
+<p class="st">12. Puissance d'un point par rapport à un cercle - Axe radical</p>
+<p>Reprenons l'équation qui donne les points d'intersection d'un cercle de rayon \(r\) avec une droite passant par \(p~(x_1, y_1)\) de direction \(u\). Les valeurs de \(d\) sont données par l'équation</p>
+\(\delta^2+2\delta~u.cp+cp^2-r^2 = 0\)
+<p class="ni">On constate que le produit des racines est constant. Quel que soit le vecteur \(u\), c'est-à-dire la direction de la droite, le produit \(P\) des distances du point \(p\) aux points d'intersection \(q_1\) et \(q_2\) est constant et vaut<br>
+<table class="n"><tr><td>\( P =cp^2-r^2 \)</td></tr></table>
+<p class="ni">Cette grandeur \(P\) est appelée <b>puissance du point</b> \(p\) par rapport au cercle \(\gamma\).</p>
+<p><img class="droite" alt="puissance d'un point par rapport à un cercle" src="geom/fig13.png">L'équation vectorielle \(cp^2-r^2=0\) exprime que le point \(p~(x,y)\) est situé sur un cercle de centre \(c\) de rayon \(r\). La puissance \(P\) d'un point \(p_1~(x_1,y_1)\) s'obtient donc en remplaçant dans l'équation du cercle \(x\) et \(y\) par les coordonnées du point \(p_1\). En coordonnées cartésiennes, la <b>puissance</b> \(P\) d'un point par rapport à un cercle s'obtient donc en remplaçant  \((x,y)\) par les coordonnées \((x_1,y_1)\) du point \(p_1\) dans l'<b>équation normale</b> du cercle \(\gamma\).<br>
+<br>
+Cette situation est à rapprocher de celle qui donnait la distance d'un point par rapport à une droite.</p>
+<p>Etant donné deux cercles, on peut rechercher l'ensemble des points ayant la même puissance par rapport à ces deux cercles.<br>
+<br>
+Nous venons de voir que la puissance s'obtient en remplaçant les coordonnées \((x, y)\) par les coordonnées du point \((x_1,y_1)\) dans l'équation normale du cercle. En égalant les puissances, les termes du second degré \((x_1^2+y_1^2)\) vont disparaître et on obtiendra une relation linéaire entre les coordonnées. L'ensemble des points d'égale puissance sera donc une droite appelée <b>axe radical</b> des deux cercles.<br>
+<br>
+
+<a id="13"> </a>
+<br>
+<p class="st">13. Angle de deux cercles</p>
+<p>Soit deux cercles :</p>
+\( \gamma_1 \equiv a_1 (x^2+y^2)+2b_1x+2c_1y+d_1=0 \\
+\gamma_2 \equiv a_2 (x^2+y^2)+2b_2x+2c_2y+d_2=0 \)
+<p><img class="gauche" alt="angle de deux cercles" src="geom/fig14.png">L'angle \(\theta\) de deux cercles est, par définition, l'angle formé par les tangentes en leurs points d'intersection. Comme la tangente est perpendiculaire au rayon, si les cercles sont centrés en \(O_1\) et \(O_2\) et que \(p\) un des points d'intersection, l'angle des cercles est égal à l'angle des 2 vecteurs \(pO_1\) et \(pO_2\). Les modules de ces vecteurs sont respectivement égaux à \(r_1\) et \(r_2\) et on a donc \(pO_1.pO_2=r_1.r_2\mathbf{cos~}\theta\).<br>
+Pour faire apparaître ce produit scalaire, il suffit de remarquer que \(O_1O_2=O_1p+pO_2\) et de calculer le carré de cette relation:</p>
+\(O_1O_2^2=(O_1p+pO_2)^2=pO_1^2+pO_2^2-2pO_1.pO_2\)
+<p class="ni">On en déduit</p>
+\(2pO_1.pO_2=pO_1^2+pO_2^2-O_1O_2^2\)<br><br>
+ou<br><br>
+\(2r_1r_2\mathbf{cos~}\theta=r_1^2+r_2^2-O_1O_2^2\)
+<p>En remplaçant les coordonnées du centre et la valeur des rayons par leurs valeurs \(o_i=\large(-\frac{b_i}{a_i},-\frac{c_i}{a_i})\) et \(r_i=\large\sqrt{\frac{b_i^2+c_i^2-a_id_i}{a_i^2}}\), on obtient</p>
+\(2r_1r_2\mathbf{cos~}\theta=1/2[\large \frac{b_1^2+c_1^2-a_1d_1}{a_1^2}+\frac{b_2^2+c_2^2-a_2d_2}{a_2^2}-(\frac{b_1}{a_1}-\frac{b_2}{a_2})^2-(\frac{c_1}{a_1}-\frac{c_2}{a_2})^2]\)
+<p class="ni">Après de nombreuses simplifications, on obtient</p>
+\(2r_1r_2\mathbf{cos~}\theta=\frac{1}{\large a_1a_2}[b_1b_2+c_1c_2-1/2(a_1d_2+a_2d_1)]\)
+<p class="ni">et finalement</p> 
+<table class="n"><tr><td>
+\(\mathbf{cos~}\theta=\Large \frac{b_1b_2+c_1c_2-1/2(a_1d_2+a_2d_1)}{\sqrt{b_1^2+c_1^2-a_1d_1}\sqrt{b_2^2+c_2^2-a_2d_2}}\)
+</td></tr></table>
+<p>Cette formule est facile à mémoriser car elle découle de la forme quadratique \(b^2+c^2-ad\) et de la forme bilinéaire associée.</p>
+<p><i>On remarque également que si un ou deux des cercles sont remplacés par des droites la formule reste valable bien que la démonstration ne le soit plus !</i></p>
+<br><br>
+
+<a id="14"> </a>
+<p class="st">14. Autres configurations intéressantes</p>
+<p>Nous ne développerons pas ce point. Nous nous bornerons à signaler quelques sujets d'étude intéressants.</p>
+<p>L'étude des propriétés de cercles orthogonaux, cercles dont les tangentes aux points d'intersection sont perpendiculaires.</p>
+<p>Tout comme on a étudié les faisceaux de droites on peut étudier le faisceaux de cercles. On distingue plusieurs types de faisceaux. Mis à part les faisceaux de cercles concentriques, les cercles peuvent être sécants, tangents ou disjoints. Dans chacun des 3 derniers cas, le faisceau contient une droite qui est l'axe radical commun à toutes les paires de cercles du faisceau.<p>
+<p>On peut également étudier l'ensemble des cercles orthogonaux à un faisceau de cercles. On constatera que les cercles orthogonaux à un faisceau de cercles sécants constituent un faisceau de cercles disjoints et réciproquement. S'il s'agit d'un faisceau de cercles tangents, on obtiendra également un faisceau du même type.</p>
+<br>
+<table class="centre"><tr>
+<td><img alt="cercles sécants" src="geom/faisc1.png"></td>
+<td><img alt="" src="../dot.png" height=1 width=40>
+<td><img alt="cercles tangents" src="geom/faisc2.png"></td>
+</tr></table><br><br>
+
+		</div>
+	</div>
+
+	<!--
+	<div class="final">
+		<br />
+		<table><tr>
+		<td><a href="docd.htm">Documents</a></td>
+		<td><a href="#H">Haut de la page</a></td>
+		<td><a href="../somm.htm">Sommaire</a></td>
+		</tr></table>
+		<br />
+		<div class="centre"><hr style="width:70%;"></div>
+<br>
+Pour toute remarque ou commentaire, écrire à <script type="text/javascript">
+// JavaScript pris sur le site: "http://www.java.scripts-fr.com" 
+var nom = "xhubaut";
+var domaine = "ulb.ac.be"; 
+var deb = "<";
+var fin = ">";
+document.write('<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + deb + '/a' + fin); 
+</script>.<br>
+	</div>
+	-->
+</div>
+</body>
+</html>

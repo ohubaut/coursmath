@@ -1,0 +1,15 @@
+body {
+	font-size: 1.4em;
+	font-weight: bold;
+	text-align: center;
+	color:#fb5;
+	background-color: #ffd;
+}
+/*.st { 	font-size: 1.4em;
+	font-weight: bold;
+	color:#fb5;
+}*/
+.boite{
+	margin: 20px 10px;
+	border: 1px solid black;
+}
