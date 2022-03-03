@@ -1,0 +1,11 @@
+{{ define "title" }}
+    {{- .Title -}}
+{{ end }}
+{{ define "meta" }}
+    {{ range .Params.meta -}}
+        <meta name="{{ .name }}" content="{{ .value }}">
+    {{- end }}
+{{ end }}
+{{ define "body" }}
+    {{- .Content | safeHTML -}}
+{{ end }}

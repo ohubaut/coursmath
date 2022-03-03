@@ -1,0 +1,7 @@
+baseURL: http://example.org/
+languageCode: fr
+title: Mathématique du secondaire
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
