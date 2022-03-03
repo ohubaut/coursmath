@@ -28,6 +28,7 @@ public class HugoConverter implements FileVisitor<Path> {
     private final Path output;
     private final Map<String, Path> folders = new HashMap<>();
     private final Dump yamlDump;
+    private final Map<String, String> tagLinks = Map.of("a", "href", "img", "src");
 
     public HugoConverter(Path baseDir, Path output) {
         this.baseDir = baseDir;
@@ -79,14 +80,15 @@ public class HugoConverter implements FileVisitor<Path> {
 
     private void convertContent(Path file, Path outputFolder) throws IOException {
         Document document = Jsoup.parse(Files.newInputStream(file), StandardCharsets.UTF_8.name(), "");
-        String frontMatter = generateFrontMatter(document, getRelativePath(file));
+        Path relativePath = getRelativePath(file);
+        String frontMatter = generateFrontMatter(document, relativePath);
         Elements elements = document.select(".central > .texte");
         if (elements.isEmpty()) {
             System.out.println("No main content for " + file);
         } else if (elements.size() > 1) {
             System.out.println("More than one main content for " + file);
         } else {
-            Element content = elements.first();
+            Element content = adjustContent(elements, relativePath);
             Path outputPath = computeOutputPath(file, outputFolder);
             try (BufferedWriter writer = Files.newBufferedWriter(outputPath, StandardOpenOption.CREATE,
                     StandardOpenOption.TRUNCATE_EXISTING)) {
@@ -98,6 +100,26 @@ public class HugoConverter implements FileVisitor<Path> {
                 writer.append(content.html());
             }
         }
+    }
+
+    private Element adjustContent(Elements elements, Path originalPath) {
+        Element content = elements.first();
+        Path currentDirectory = originalPath.getParent();
+        if (currentDirectory != null) {
+            // We are not at the root folder. Let's make all the paths explicit.
+            tagLinks.forEach((key, value) -> {
+                        Elements links = content.select(key);
+                        links.stream()
+                             .filter(element -> !element.attr(value).contains(":"))
+                             .forEach(element -> {
+                                 String originalHref = element.attr(value);
+                                 Path newHref = currentDirectory.resolve(originalHref).normalize();
+                                 element.attr(value, newHref.toString());
+                             });
+                    }
+            );
+        }
+        return content;
     }
 
     private String generateFrontMatter(Document document, Path originalPath) {
