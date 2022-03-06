@@ -25,14 +25,15 @@ import java.util.Map;
 public class HugoConverter implements FileVisitor<Path> {
 
     private final Path baseDir;
-    private final Path output;
-    private final Map<String, Path> folders = new HashMap<>();
+    private final Path baseOutput;
+    private final Map<String, Path> staticFolders = new HashMap<>();
+    private final Map<String, Path> contentFolders = new HashMap<>();
     private final Dump yamlDump;
-    private final Map<String, String> tagLinks = Map.of("a", "href", "img", "src");
+    private final Map<String, String> contentTagLinks = Map.of("a", "href", "img", "src");
 
     public HugoConverter(Path baseDir, Path output) {
         this.baseDir = baseDir;
-        this.output = output;
+        this.baseOutput = output;
         DumpSettings dumpSettings = DumpSettings.builder()
                                                 .setDefaultFlowStyle(FlowStyle.BLOCK)
                                                 .build();
@@ -50,13 +51,12 @@ public class HugoConverter implements FileVisitor<Path> {
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-        Path outputFolder = getOutputFolder(file);
         if (file.toFile()
                 .getName()
                 .matches(".*\\.htm(l?)")) {
-            convertContent(file, outputFolder);
+            convertContent(file, getOutputFolder(file, true));
         } else {
-            transfer(file, outputFolder);
+            transfer(file, getOutputFolder(file, false));
         }
         return FileVisitResult.CONTINUE;
     }
@@ -82,7 +82,7 @@ public class HugoConverter implements FileVisitor<Path> {
         Document document = Jsoup.parse(Files.newInputStream(file), StandardCharsets.UTF_8.name(), "");
         Path relativePath = getRelativePath(file);
         String frontMatter = generateFrontMatter(document, relativePath);
-        Elements elements = document.select(".central > .texte");
+        Elements elements = document.select(".central .texte");
         if (elements.isEmpty()) {
             System.out.println("No main content for " + file);
         } else if (elements.size() > 1) {
@@ -107,7 +107,7 @@ public class HugoConverter implements FileVisitor<Path> {
         Path currentDirectory = originalPath.getParent();
         if (currentDirectory != null) {
             // We are not at the root folder. Let's make all the paths explicit.
-            tagLinks.forEach((key, value) -> {
+            contentTagLinks.forEach((key, value) -> {
                         Elements links = content.select(key);
                         links.stream()
                              .filter(element -> !element.attr(value).contains(":"))
@@ -123,6 +123,7 @@ public class HugoConverter implements FileVisitor<Path> {
     }
 
     private String generateFrontMatter(Document document, Path originalPath) {
+        Path currentDirectory = originalPath.getParent();
         Map<String, Object> frontMatter = new HashMap<>();
         List<Map<String, String>> metadata = document.head()
                                                      .select("meta")
@@ -130,12 +131,30 @@ public class HugoConverter implements FileVisitor<Path> {
                                                      .filter(element -> element.hasAttr("name"))
                                                      .map(element -> Map.of("name", element.attr("name"), "value", element.attr("content")))
                                                      .toList();
+        List<String> scripts = document.head().select("script")
+                                       .stream()
+                                       .filter(element -> !element.attr("src").contains(":"))
+                                       .filter(element -> element.hasAttr("src"))
+                                       .map(element -> element.attr("src"))
+                                       .map(path -> currentDirectory != null
+                                               ? currentDirectory.resolve(path).normalize().toString()
+                                               : path)
+                                       .toList();
         Map<String, Object> genericData = Map.of(
                 "title", document.title(),
-                "meta", metadata);
+                "meta", metadata,
+                "scripts", scripts);
         frontMatter.putAll(genericData);
         if (!isIndexPage(originalPath)) {
             frontMatter.put("aliases", List.of("/" + originalPath));
+        }
+        Element pageTitle = document.selectFirst(".titre");
+        if (pageTitle != null) {
+            frontMatter.put("pageTitle", pageTitle.text());
+            Element pageSubtitle = document.selectFirst(".stitre");
+            if (pageSubtitle != null) {
+                frontMatter.put("pageSubtitle", pageSubtitle.text());
+            }
         }
         return yamlDump.dumpToString(frontMatter);
     }
@@ -148,12 +167,19 @@ public class HugoConverter implements FileVisitor<Path> {
         return outputFolder.resolve(newName);
     }
 
-    private Path getOutputFolder(Path file) {
+    private Path getOutputFolder(Path file, boolean html) throws IOException {
+        Path output = html ? baseOutput.resolve("content") : baseOutput.resolve("static");
+        if (!Files.exists(output)) {
+            Files.createDirectory(output);
+        }
         Path relativePath = getRelativePath(file);
         Path parentPath = relativePath.getParent();
-        return parentPath == null
-                ? output
-                : folders.computeIfAbsent(parentPath.toString(), this::createOutputFolder);
+        if (parentPath == null) {
+            return output;
+        }
+        return html
+                ? contentFolders.computeIfAbsent(parentPath.toString(), folder -> this.createOutputFolder(folder, output))
+                : staticFolders.computeIfAbsent(parentPath.toString(), folder -> this.createOutputFolder(folder, output));
     }
 
     private boolean isIndexPage(Path file) {
@@ -165,7 +191,7 @@ public class HugoConverter implements FileVisitor<Path> {
         return baseDir.relativize(file);
     }
 
-    private Path createOutputFolder(String relativeFolder) {
+    private Path createOutputFolder(String relativeFolder, Path output) {
         Path outputFolder = output.resolve(relativeFolder);
         try {
             Files.createDirectories(outputFolder);

@@ -1,0 +1,7 @@
+{{ if .Params.pageTitle }}
+    <h1>{{ .Params.pageTitle }}</h1>
+{{ end }}
+{{ if .Params.pageSubtitle }}
+    <h2>{{ .Params.pageSubtitle }}</h2>
+{{ end }}
+{{ .Content }}

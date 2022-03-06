@@ -16,7 +16,7 @@ public class SiteConverter {
         SiteConverter converter = new SiteConverter();
         URL inputURL = SiteConverter.class.getResource("/original/coursmath");
         Path inputPath = Paths.get(inputURL.toURI());
-        Path output = Files.createDirectories(Path.of("site", "content"));
+        Path output = Files.createDirectories(Path.of("site"));
         converter.convertToHugo(inputPath, output);
         Instant after = Instant.now();
         System.out.println("Conversion finished in " + Duration.between(before, after));
