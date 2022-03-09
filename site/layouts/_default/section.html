@@ -1,11 +1,14 @@
 {{ define "title" }}
     {{- .Title -}}
 {{ end }}
-{{ define "meta" }}
-    {{ range .Params.meta -}}
-        <meta name="{{ .name }}" content="{{ .value }}">
-    {{- end }}
-{{ end }}
 {{ define "body" }}
     {{ partial "contentBody.html" . }}
+    <hr style="width: 75%;">
+    <ul>
+        {{- range .Pages }}
+            {{- if .Weight }}
+                <li><a href="{{ .Permalink }}">{{ .Params.pageName | safeHTML }}</a>&nbsp;{{ .Summary }}</li>
+            {{- end }}
+        {{- end }}
+    </ul>
 {{ end }}

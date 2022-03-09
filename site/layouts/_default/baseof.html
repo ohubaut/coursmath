@@ -5,7 +5,7 @@
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    {{ block "meta" . }}{{ end }}
+    {{- partial "genericMeta.html" . }}
     <script type="text/javascript" async
             src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
@@ -14,11 +14,14 @@
         tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
         });
 
+
     </script>
+    {{ template "_internal/google_analytics.html" . }}
     <base href="{{ .Site.BaseURL }}">
     {{ block "scripts" . }}{{ end }}
     <link type="text/css" rel="stylesheet" href="commun.css">
     <link type="text/css" rel="stylesheet" href="impr.css" media="print">
+    <link rel="shortcut icon" type="images/x-icon" href="favicon.ico"/>
     <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
 </head>
 <body>

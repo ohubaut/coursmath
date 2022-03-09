@@ -4,9 +4,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.snakeyaml.engine.v2.api.Dump;
-import org.snakeyaml.engine.v2.api.DumpSettings;
-import org.snakeyaml.engine.v2.common.FlowStyle;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -28,19 +25,19 @@ public class HugoConverter implements FileVisitor<Path> {
     private final Path baseOutput;
     private final Map<String, Path> staticFolders = new HashMap<>();
     private final Map<String, Path> contentFolders = new HashMap<>();
-    private final Dump yamlDump;
     private final Map<String, String> contentTagLinks = Map.of("a", "href", "img", "src");
+    private final SectionConverter sectionConverter;
+    private final FrontMatterHelper frontMatterHelper;
 
     public HugoConverter(Path baseDir, Path output) {
         this.baseDir = baseDir;
         this.baseOutput = output;
-        DumpSettings dumpSettings = DumpSettings.builder()
-                                                .setDefaultFlowStyle(FlowStyle.BLOCK)
-                                                .build();
-        yamlDump = new Dump(dumpSettings);
+        frontMatterHelper = new FrontMatterHelper();
+        sectionConverter = new SectionConverter(baseDir, baseOutput);
     }
 
     public void convert() throws IOException {
+        sectionConverter.convert();
         Files.walkFileTree(baseDir, this);
     }
 
@@ -53,7 +50,8 @@ public class HugoConverter implements FileVisitor<Path> {
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
         if (file.toFile()
                 .getName()
-                .matches(".*\\.htm(l?)")) {
+                .matches(".*\\.htm(l?)")
+                && !sectionConverter.isSectionPage(file)) {
             convertContent(file, getOutputFolder(file, true));
         } else {
             transfer(file, getOutputFolder(file, false));
@@ -92,11 +90,7 @@ public class HugoConverter implements FileVisitor<Path> {
             Path outputPath = computeOutputPath(file, outputFolder);
             try (BufferedWriter writer = Files.newBufferedWriter(outputPath, StandardOpenOption.CREATE,
                     StandardOpenOption.TRUNCATE_EXISTING)) {
-                writer.append("---");
-                writer.newLine();
                 writer.append(frontMatter);
-                writer.append("---");
-                writer.newLine();
                 writer.append(content.html());
             }
         }
@@ -124,39 +118,26 @@ public class HugoConverter implements FileVisitor<Path> {
 
     private String generateFrontMatter(Document document, Path originalPath) {
         Path currentDirectory = originalPath.getParent();
-        Map<String, Object> frontMatter = new HashMap<>();
-        List<Map<String, String>> metadata = document.head()
-                                                     .select("meta")
-                                                     .stream()
-                                                     .filter(element -> element.hasAttr("name"))
-                                                     .map(element -> Map.of("name", element.attr("name"), "value", element.attr("content")))
-                                                     .toList();
-        List<String> scripts = document.head().select("script")
-                                       .stream()
-                                       .filter(element -> !element.attr("src").contains(":"))
-                                       .filter(element -> element.hasAttr("src"))
-                                       .map(element -> element.attr("src"))
-                                       .map(path -> currentDirectory != null
-                                               ? currentDirectory.resolve(path).normalize().toString()
-                                               : path)
-                                       .toList();
-        Map<String, Object> genericData = Map.of(
-                "title", document.title(),
-                "meta", metadata,
-                "scripts", scripts);
-        frontMatter.putAll(genericData);
+        frontMatterHelper.addTitle(document.title());
+        frontMatterHelper.addMeta(document.head().select("meta"));
+        frontMatterHelper.addScripts(document.head().select("script"), currentDirectory);
+
+        Map<String, Object> extras = new HashMap<>();
         if (!isIndexPage(originalPath)) {
-            frontMatter.put("aliases", List.of("/" + originalPath));
+            extras.put("aliases", List.of("/" + originalPath));
         }
         Element pageTitle = document.selectFirst(".titre");
         if (pageTitle != null) {
-            frontMatter.put("pageTitle", pageTitle.text());
+            extras.put("pageTitle", pageTitle.text());
             Element pageSubtitle = document.selectFirst(".stitre");
             if (pageSubtitle != null) {
-                frontMatter.put("pageSubtitle", pageSubtitle.text());
+                extras.put("pageSubtitle", pageSubtitle.text());
             }
         }
-        return yamlDump.dumpToString(frontMatter);
+        frontMatterHelper.addExtras(extras);
+        sectionConverter.get(originalPath)
+                        .ifPresent(frontMatterHelper::addSectionPageMetadata);
+        return frontMatterHelper.convert();
     }
 
     private Path computeOutputPath(Path file, Path outputFolder) {

@@ -1,0 +1,9 @@
+{{- if .Keywords }}
+    <meta name="keywords" content="{{ .Keywords }}">
+{{- end }}
+{{- if .Description }}
+    <meta name="description" content="{{ .Description }}">
+{{- end }}
+{{- if .Params.author }}
+    <meta name="author" content="{{ .Params.author }}">
+{{- end }}

@@ -6,11 +6,6 @@
         <script type="text/javascript" src="{{ . }}"></script>
     {{- end }}
 {{ end }}
-{{ define "meta" }}
-    {{ range .Params.meta -}}
-        <meta name="{{ .name }}" content="{{ .value }}">
-    {{- end }}
-{{ end }}
 {{ define "body" }}
     {{ partial "contentBody.html" . }}
 {{ end }}

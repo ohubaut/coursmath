@@ -1,7 +1,51 @@
 baseURL: https://xavier.hubaut.info/coursmath/
 languageCode: fr
 title: Mathématique du secondaire
+googleAnalytics: UA-2637570-7
 markup:
   goldmark:
     renderer:
       unsafe: true
+sectionPagesMenu: main
+#menu:
+#  main:
+#    - name: Accueil
+#      url: /intro
+#      weight: 1
+#    - identifier: mat
+#      name: Mathématique linéaire
+#      url: /mat
+#      weight: 2
+#    - name: Second degré
+#      url: /2de
+#      weight: 3
+#    - name: Nombres complexes
+#      url: /com
+#      weight: 4
+#    - name: Polyèdres
+#      url: /pol
+#      weight: 5
+#    - name: Analyse
+#      url: /ana
+#      weight: 6
+#    - name: Statistique
+#      url: /sta
+#      weight: 7
+#    - name: Insolites
+#      url: /var
+#      weight: 8
+#    - name: Applications
+#      url: /app
+#      weight: 9
+#    - name: Vie courante
+#      url: /vie
+#      weight: 10
+#    - name: Informatique
+#      url: /info
+#      weight: 11
+#    - name: En 3 dimensions
+#      url: /3di
+#      weight: 12
+#    - name: Documents
+#      url: /doc
+#      weight: 13
