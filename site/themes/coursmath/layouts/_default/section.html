@@ -1,6 +1,5 @@
-{{ define "body" }}
-    {{/* partial "menu.html" . */}}
-    {{ partial "contentBody.html" . }}
+{{ define "main" }}
+    {{ .Content }}
     <hr style="width: 75%;">
     {{ $currentPage := . }}
     {{- range .Site.Menus.main }}

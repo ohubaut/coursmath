@@ -1,0 +1,111 @@
+a {
+    text-decoration: none;
+}
+
+.menu {
+    --menu-border: 1px solid lightgray;
+    position: absolute;
+}
+
+.menu > ul {
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    display: inline-block;
+}
+
+.menu input {
+    display: none;
+}
+
+.menu__switcher {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: .5em;
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+}
+
+.menu__switcher::before {
+    top: 5px;
+}
+
+.menu__switcher::after {
+    top: -5px;
+}
+
+.menu__switcher::before,
+.menu__switcher::after {
+    background: #333;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease-out;
+}
+
+.menu__main-menu {
+    transform: translateX(120%);
+    background: white;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+
+.menu > input:checked ~ .menu__main-menu {
+    transform: translateX(0%);
+}
+
+.menu__section:first-of-type {
+    border-top: var(--menu-border);
+}
+
+.menu__section {
+    text-align: right;
+    line-height: 1.8em;
+    border-bottom: var(--menu-border);
+}
+
+.menu__section > a {
+    padding-right: .5em;
+}
+
+.menu__sub-menu {
+    padding-right: 2em;
+    transition: height .5s ease;
+    height: 0;
+    overflow: hidden;
+}
+
+.menu__sub-menu a {
+    border-right: var(--menu-border);
+    padding-right: .5em;
+}
+
+.menu__expander {
+    cursor: pointer;
+}
+
+.menu__expander::after {
+    content: "+";
+    display: inline-block;
+    text-align: center;
+    width: 2em;
+    border-left: var(--menu-border);
+}
+
+.menu__section input:checked + label .menu__expander::after {
+    content: "-";
+}
+
+.menu__section input:checked ~ .menu__sub-menu {
+    height: max-content;
+}

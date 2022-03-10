@@ -3,6 +3,8 @@ languageCode: fr
 title: Mathématique du secondaire
 author:
   name: Xavier Hubaut
+theme:
+  - coursmath
 googleAnalytics: UA-2637570-7
 markup:
   goldmark:

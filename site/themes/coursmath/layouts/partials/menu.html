@@ -1,0 +1,27 @@
+<nav class="menu">
+    <input type="checkbox" id="main_menu">
+    <label for="main_menu">
+        <span class="menu__switcher" aria-label="Menu"></span>
+    </label>
+    <ul class="menu__main-menu">
+        {{- $currentPage := .Page -}}
+        {{ range .Site.Menus.main }}
+            <li class="menu__section">
+                <a href="{{ .URL }}"
+                   {{ if $currentPage.HasMenuCurrent "main" . }}class="active"{{ end }}>{{ .Page.Title }}</a>
+                <input type="checkbox" id="menu_{{ .Name | lower }}"
+                       {{ if $currentPage.HasMenuCurrent "main" . }}checked{{ end }}>
+                <label for="menu_{{ .Name | lower }}">
+                    <span class="menu__expander" aria-label="Sous-menu"></span>
+                </label>
+                <ul class="menu__sub-menu">
+                    {{ range .Children }}
+                        <li><a href="{{ .URL }}"
+                               {{ if $currentPage.IsMenuCurrent "main" .}}class="active"{{ end }}>{{ .Name | safeHTML}}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </li>
+        {{ end }}
+    </ul>
+</nav>

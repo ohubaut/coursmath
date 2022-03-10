@@ -1,11 +1,9 @@
-<!doctype html>
-<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    {{- partial "genericMeta.html" . }}
+    {{- partial "meta.html" . }}
     <script type="text/javascript" async
             src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
@@ -20,12 +18,7 @@
     {{ range .Params.scripts -}}
         <script type="text/javascript" src="{{ . }}"></script>
     {{- end }}
-    <link type="text/css" rel="stylesheet" href="commun.css">
-    <link type="text/css" rel="stylesheet" href="impr.css" media="print">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" type="images/x-icon" href="favicon.ico"/>
     <title>{{ .Title }} - {{ .Site.Title }} - {{ .Site.Author.name }}</title>
 </head>
-<body>
-{{ block "body" . }}{{ end }}
-</body>
-</html>
