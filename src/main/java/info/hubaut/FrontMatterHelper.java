@@ -1,5 +1,7 @@
 package info.hubaut;
 
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.snakeyaml.engine.v2.api.Dump;
 import org.snakeyaml.engine.v2.api.DumpSettings;
@@ -28,8 +30,11 @@ public class FrontMatterHelper {
             .forEach(element -> frontMatter.put(element.attr("name"), element.attr("content")));
     }
 
-    public void addTitle(String title) {
-        frontMatter.put("title", title);
+    public void addTitle(Document document) {
+        Element titleElement = document.selectFirst(".titre");
+        if (titleElement != null) {
+            frontMatter.put("title", titleElement.text());
+        }
     }
 
     public void addExtras(Map<String, Object> extras) {
@@ -54,9 +59,17 @@ public class FrontMatterHelper {
         return result;
     }
 
-    public void addSectionPageMetadata(PageMetadata pageMetadata) {
-        frontMatter.put("pageName", pageMetadata.pageName());
-        frontMatter.put("weight", pageMetadata.weight());
+    public void addMenu(PageMetadata pageMetadata) {
+        frontMatter.put("menu", Map.of("main", Map.of(
+                "parent", pageMetadata.section(),
+                "name", pageMetadata.pageName(),
+                "weight", pageMetadata.weight())));
         frontMatter.put("summary", pageMetadata.summary());
+    }
+
+    public void addMenu(String section) {
+        frontMatter.put("menu", Map.of("main", Map.of(
+                "identifier", section
+        )));
     }
 }

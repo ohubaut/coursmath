@@ -1,14 +1,15 @@
-{{ define "title" }}
-    {{- .Title -}}
-{{ end }}
 {{ define "body" }}
+    {{/* partial "menu.html" . */}}
     {{ partial "contentBody.html" . }}
     <hr style="width: 75%;">
-    <ul>
-        {{- range .Pages }}
-            {{- if .Weight }}
-                <li><a href="{{ .Permalink }}">{{ .Params.pageName | safeHTML }}</a>&nbsp;{{ .Summary }}</li>
-            {{- end }}
-        {{- end }}
-    </ul>
+    {{ $currentPage := . }}
+    {{- range .Site.Menus.main }}
+        {{ if $currentPage.IsMenuCurrent "main" . }}
+            <ul>
+                {{ range .Children }}
+                    <li><a href="{{ .URL }}">{{ .Page.Title }}</a>&nbsp;{{ .Page.Summary }}</li>
+                {{ end }}
+            </ul>
+        {{ end }}
+    {{- end }}
 {{ end }}

@@ -1,5 +1,17 @@
 <ul>
     {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a> - {{ . }}</li>
+        {{ $title := .Name}}
+        {{ if .Page }}
+            {{ $title = .Page.Params.PageTitle }}
+        {{ end }}
+        {{ if $title }}
+            <li><a href="{{ .URL }}">{{ $title }}</a>
+                <ul>
+                    {{ range .Children }}
+                        <li><a href="{{ .URL }}">{{ .Name | safeHTML}}</a></li>
+                    {{ end }}
+                </ul>
+            </li>
+        {{ end }}
     {{ end }}
 </ul>

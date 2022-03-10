@@ -1,7 +1,5 @@
-{{ if .Params.pageTitle }}
-    <h1>{{ .Params.pageTitle }}</h1>
-{{ end }}
-{{ if .Params.pageSubtitle }}
-    <h2>{{ .Params.pageSubtitle }}</h2>
+<h1>{{ .Title }}</h1>
+{{ if .Params.subtitle }}
+    <h2>{{ .Params.subtitle }}</h2>
 {{ end }}
 {{ .Content }}

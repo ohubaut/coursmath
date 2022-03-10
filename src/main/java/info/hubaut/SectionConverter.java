@@ -83,11 +83,12 @@ public class SectionConverter implements FileVisitor<Path> {
 
     private void convertContent(Path file, Path outputFolder) throws IOException {
         Document document = Jsoup.parse(Files.newInputStream(file), StandardCharsets.UTF_8.name(), "");
-        String frontMatter = generateFrontMatter(document);
         Element container = document.selectFirst(".central .texte");
+        String section = file.getParent().getFileName().toString();
+        String frontMatter = generateFrontMatter(section, document);
         String content = extractContent(container);
-        Map<String, PageMetadata> metadataMap = extractSectionPages(container);
-        sectionPages.put(file.getParent().getFileName().toString(), metadataMap);
+        Map<String, PageMetadata> metadataMap = extractSectionPages(section, container);
+        sectionPages.put(section, metadataMap);
 
         Path outputPath = computeOutputPath(file, outputFolder);
         try (BufferedWriter writer = Files.newBufferedWriter(outputPath, StandardOpenOption.CREATE,
@@ -97,13 +98,13 @@ public class SectionConverter implements FileVisitor<Path> {
         }
     }
 
-    private Map<String, PageMetadata> extractSectionPages(Element container) {
+    private Map<String, PageMetadata> extractSectionPages(String section, Element container) {
         Map<String, PageMetadata> result = new HashMap<>();
         Elements items = container.select("li");
         for (int i = 0; i < items.size(); i++) {
             Element item = items.get(i);
             Element link = item.selectFirst("a");
-            result.put(link.attr("href"), new PageMetadata(link.html(), i + 1, item.ownText()));
+            result.put(link.attr("href"), new PageMetadata(section, link.html(), i + 1, item.ownText()));
         }
         return result;
     }
@@ -115,12 +116,11 @@ public class SectionConverter implements FileVisitor<Path> {
                       .collect(Collectors.joining("\n\n"));
     }
 
-    private String generateFrontMatter(Document document) {
-        frontMatterHelper.addTitle(document.title());
+    private String generateFrontMatter(String section, Document document) {
+        frontMatterHelper.addTitle(document);
         frontMatterHelper.addMeta(document.head()
                                           .select("meta"));
-        frontMatterHelper.addExtras(Map.of(
-                "pageTitle", document.selectFirst(".titre").text()));
+        frontMatterHelper.addMenu(section);
         return frontMatterHelper.convert();
     }
 

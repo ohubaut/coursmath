@@ -1,11 +1,3 @@
-{{ define "title" }}
-    {{- .Title -}}
-{{ end }}
-{{ define "scripts" }}
-    {{ range .Params.scripts -}}
-        <script type="text/javascript" src="{{ . }}"></script>
-    {{- end }}
-{{ end }}
 {{ define "body" }}
     {{ partial "contentBody.html" . }}
 {{ end }}

@@ -14,15 +14,16 @@
         tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
         });
 
-
     </script>
     {{ template "_internal/google_analytics.html" . }}
     <base href="{{ .Site.BaseURL }}">
-    {{ block "scripts" . }}{{ end }}
+    {{ range .Params.scripts -}}
+        <script type="text/javascript" src="{{ . }}"></script>
+    {{- end }}
     <link type="text/css" rel="stylesheet" href="commun.css">
     <link type="text/css" rel="stylesheet" href="impr.css" media="print">
     <link rel="shortcut icon" type="images/x-icon" href="favicon.ico"/>
-    <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
+    <title>{{ .Title }} - {{ .Site.Title }} - {{ .Site.Author.name }}</title>
 </head>
 <body>
 {{ block "body" . }}{{ end }}

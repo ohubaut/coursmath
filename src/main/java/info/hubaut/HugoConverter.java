@@ -118,7 +118,7 @@ public class HugoConverter implements FileVisitor<Path> {
 
     private String generateFrontMatter(Document document, Path originalPath) {
         Path currentDirectory = originalPath.getParent();
-        frontMatterHelper.addTitle(document.title());
+        frontMatterHelper.addTitle(document);
         frontMatterHelper.addMeta(document.head().select("meta"));
         frontMatterHelper.addScripts(document.head().select("script"), currentDirectory);
 
@@ -126,17 +126,13 @@ public class HugoConverter implements FileVisitor<Path> {
         if (!isIndexPage(originalPath)) {
             extras.put("aliases", List.of("/" + originalPath));
         }
-        Element pageTitle = document.selectFirst(".titre");
-        if (pageTitle != null) {
-            extras.put("pageTitle", pageTitle.text());
-            Element pageSubtitle = document.selectFirst(".stitre");
-            if (pageSubtitle != null) {
-                extras.put("pageSubtitle", pageSubtitle.text());
-            }
+        Element pageSubtitle = document.selectFirst(".stitre");
+        if (pageSubtitle != null) {
+            extras.put("subtitle", pageSubtitle.text());
         }
         frontMatterHelper.addExtras(extras);
         sectionConverter.get(originalPath)
-                        .ifPresent(frontMatterHelper::addSectionPageMetadata);
+                        .ifPresent(frontMatterHelper::addMenu);
         return frontMatterHelper.convert();
     }
 

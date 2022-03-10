@@ -1,4 +1,4 @@
 package info.hubaut;
 
-public record PageMetadata(String pageName, int weight, String summary) {
+public record PageMetadata(String section, String pageName, int weight, String summary) {
 }
