@@ -67,9 +67,10 @@ public class FrontMatterHelper {
         frontMatter.put("summary", pageMetadata.summary());
     }
 
-    public void addMenu(String section) {
+    public void addMenu(String section, Map<String, Integer> sectionOrder) {
         frontMatter.put("menu", Map.of("main", Map.of(
-                "identifier", section
+                "identifier", section,
+                "weight", sectionOrder.getOrDefault(section, 0)
         )));
     }
 }

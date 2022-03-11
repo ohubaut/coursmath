@@ -25,6 +25,20 @@ public class SectionConverter implements FileVisitor<Path> {
     private final Path baseDir;
     private final Path baseOutput;
     private final Set<String> invalidSections = Set.of("coursmath", "bio", "cita", "midi", "jpol", "videos");
+    private final Map<String, Integer> sectionOrder = new HashMap<>() {{
+        put("mat", 2);
+        put("2de", 3);
+        put("com", 4);
+        put("pol", 5);
+        put("ana", 6);
+        put("sta", 7);
+        put("var", 8);
+        put("app", 9);
+        put("vie", 10);
+        put("info", 11);
+        put("3di", 12);
+        put("doc", 13);
+    }};
     private final Map<String, Map<String, PageMetadata>> sectionPages = new HashMap<>();
     private final FrontMatterHelper frontMatterHelper;
 
@@ -120,7 +134,7 @@ public class SectionConverter implements FileVisitor<Path> {
         frontMatterHelper.addTitle(document);
         frontMatterHelper.addMeta(document.head()
                                           .select("meta"));
-        frontMatterHelper.addMenu(section);
+        frontMatterHelper.addMenu(section, sectionOrder);
         return frontMatterHelper.convert();
     }
 
